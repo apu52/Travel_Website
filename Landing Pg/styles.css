@@ -67,6 +67,9 @@ a {
 img {
   width: 100%;
   display: block;
+  height: 16rem;
+  object-fit: cover;
+  object-position: center;
 }
 
 body {
@@ -308,6 +311,7 @@ header {
 }
 
 .trip__card {
+ 
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
