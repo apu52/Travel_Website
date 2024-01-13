@@ -159,11 +159,11 @@ git push origin YourBranchName
 
 <h2>Contributing Guidelines📑</h2>
 
-Read our [Contributing Guidelines]() to learn about our development process, how to propose bugfixes and improvements of our Project
+Read our [Contributing Guidelines](https://github.com/apu52/Travel_Website/blob/main/CONTRIBUTING.md) to learn about our development process, how to propose bugfixes and improvements of our Project
 
 <h2>Code Of Conduct📑</h2>
 
-This project and everyone participating in it is governed by the [Code of Conduct](). By participating, you are expected to uphold this code.
+This project and everyone participating in it is governed by the [Code of Conduct](https://github.com/apu52/Travel_Website/blob/main/Code_of_conduct.md). By participating, you are expected to uphold this code.
 
 </br>
 <p align = "center">
