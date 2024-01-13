@@ -72,7 +72,7 @@
 
 <div align="center">
   
-  <img src="img/JWOC 2k24.png" width="70%">
+  <img src="img/JWOC.png" width="50%">
 </div>
 
 <h2>Getting Started💥</h2>
