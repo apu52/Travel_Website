@@ -14,7 +14,7 @@ Contributors can enhance the project by implementing new features or improvement
 ![Line](https://user-images.githubusercontent.com/85225156/171937799-8fc9e255-9889-4642-9c92-6df85fb86e82.gif)
 
  ## How to Contribute?
-- Drop a Star in this repo
+- Drop a Star ⭐ in this repo
 - Take a look at the existing [Issues](https://github.com/apu52/Travel_Website/issues). 
 - Fork the Repo & create a branch for any issue that you are working on and commit your work.
 - At first raise an issue in which you want to work
