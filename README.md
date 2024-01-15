@@ -186,9 +186,8 @@ Show some ❤️&nbsp; by giving <img src="https://imgur.com/o7ncZFp.jpg" height
 </div>
 
 ## Contributing is fun🧡
-
 <p align ="center">
-  <img src="https://api.vaunt.dev/v1/github/entities/apu52/repositories/Travel_Website/contributors?format=svg&limit=54" width="700" height= "250" />
+  <img src="https://github.com/shruti-sen2004/Travel_Website/assets/115914670/d544fd3b-aed2-4a05-a2f8-0b7a2ff9014f" width="700" height= "250" />
 </p>
 <a href="https://github.com/apu52/Travel_Website/graphs/contributors">
 <p align = "center" ><img src="https://contrib.rocks/image?repo=apu52/Travel_Website" /></p>
