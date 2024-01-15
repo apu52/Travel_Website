@@ -546,6 +546,7 @@ header {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+<<<<<<< HEAD
 /* doing changes */
 #goToTopBtn {
   display: none;
@@ -563,3 +564,42 @@ header {
 #goToTopBtn:hover {
   background-color: #0056b3;
 }
+=======
+
+
+
+.contact-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-form .left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form .right {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.right .form-control {
+  width: 100%;
+  max-width: 600px; /* Adjust the maximum width as needed */
+}
+
+/* Additional styling for responsiveness */
+@media (max-width: 768px) {
+  .contact-form {
+    flex-direction: column;
+  }
+
+  .contact-form .right {
+    padding-left: 0;
+    margin-top: 10px; /* Adjust as needed */
+  }
+}
+>>>>>>> 376263b (built complete functional contact us section)
