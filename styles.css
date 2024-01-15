@@ -442,6 +442,7 @@ header {
 }
 
 .footer {
+  width: 100%;
   background-color: var(--text-dark);
 }
 
