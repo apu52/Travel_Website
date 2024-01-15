@@ -311,6 +311,11 @@ header {
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  transition: 2s;
+}
+.trip__card:hover {
+  transform:scale(1.1);
+  cursor: zoom-in;
 }
 
 .trip__details {
