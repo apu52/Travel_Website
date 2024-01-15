@@ -9,6 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./Image-Gallery/style.css">
     <title>Arpan Codes | Tourguide</title>
   </head>
   <body>
@@ -147,7 +148,7 @@
     </section>
 
     <section class="gallary">
-      <div class="section__container gallary__container">
+      <div class="section__container gallary__container" id="originalDiv">
         <div class="image__gallary">
           <div class="gallary__col">
             <img src="https://i.ibb.co/ZYDJ6vv/pexels-spencer-davis-4356144.jpg" alt="gallary" />
@@ -166,10 +167,49 @@
               Explore your suitable and dream places around the world. Here you
               can find your right destination.
             </p>
-            <button class="btn">View All</button>
+            <button class="btn" id="btn-page" onclick="replaceDivs()">View All</button>
           </div>
         </div>
       </div>
+        <!-- New div components (hidden initially) -->
+        <div id="newDiv" style="display: none;">
+          <div class="image-container">
+            <span style="--i : 1">
+                <img src="./img/pexels-ajay-donga-2174656.jpg">
+            </span>
+          <span style="--i : 2">
+                <img src="./img/pexels-alex-azabache-3214958.jpg">
+            </span>
+          <span style="--i : 3">
+                <img src="./img/pexels-andrei-tanase-1271619.jpg">
+            </span>
+          <span style="--i : 4">
+                <img src="./img/pexels-josh-hild-2422259.jpg">
+            </span>
+          <span style="--i : 5">
+                <img src="./img/pexels-paulo-marcelo-martins-2412606.jpg">
+            </span>
+          <span style="--i : 6">
+              <img src="./img/pexels-quang-nguyen-vinh-2132126.jpg">
+            </span>
+            <span style="--i : 7">
+              <img src="./img/pexels-sam-kolder-2387871.jpg">
+            </span>
+              <span style="--i : 8">
+              <img src="./img/pexels-spencer-davis-4356144.jpg">
+            </span>
+              <span style="--i : 9">
+              <img src="./img/pexels-stijn-dijkstra-2499699.jpg">
+            </span>
+              <span style="--i : 10">
+              <img src="./img/pexels-zakaria-boumliha-2827374.jpg">
+            </span>
+            </div>
+            <div class="btn-container">
+                <button class="btn" id="prev">Prev</button>
+                <button class="btn" id="next">Next</button>
+            </div>
+        </div>
     </section>
 
     <section class="subscribe">
@@ -245,4 +285,21 @@
       }
     </script>
   </body>
+  <script>
+    function replaceDivs() {
+      // Get references to the original and new divs
+      var originalDiv = document.getElementById("originalDiv");
+      var newDiv = document.getElementById("newDiv");
+
+      // Check if the original div exists
+      if (originalDiv) {
+          // Hide the original div
+          originalDiv.style.display = "none";
+
+          // Show the new div
+          newDiv.style.display = "block";
+      }
+  }
+  </script>
+  <script src="./Image-Gallery/script.js"></script>
 </html>
