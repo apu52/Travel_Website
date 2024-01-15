@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,20 +11,27 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <title>Arpan Codes | Tourguide</title>
+
+  <style>
+  html {
+    scroll-behavior: smooth;
+  }
+  </style>
+
   </head>
   <body>
     <nav>
       <div class="nav__logo">Tourguide<span>.</span></div>
       <ul class="nav__links">
-        <li class="link"><a href="#">Home</a></li>
-        <li class="link"><a href="#">Destinations</a></li>
-        <li class="link"><a href="#">Pricing</a></li>
-        <li class="link"><a href="#">Reviews</a></li>
+        <li class="link"><a href="#Home">Home</a></li>
+        <li class="link"><a href="#Destinations">Destinations</a></li>
+        <li class="link"><a href="#trip">Pricing</a></li>
+        <li class="link"><a href="#ReviewGallery">Reviews</a></li>
       </ul>
-      <button class="btn">Contact Us</button>
+      <a href="#Contact" class="btn">Contact Us</a>
     </nav>
     <header>
-      <div class="section__container header__container">
+      <section class="section__container header__container" id="Home">
         <div class="header__image">
           <img src="https://i.ibb.co/88Qnjxg/pexels-josh-hild-2422259.jpg" alt="header" />
           <img src="https://i.ibb.co/w4Jqjdf/pexels-andrei-tanase-1271619.jpg" alt="header" />
@@ -49,10 +57,10 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </header>
 
-    <section class="section__container destination__container">
+    <section class="section__container destination__container" id="Destinations">
       <div class="section__header">
         <div>
           <h2 class="section__title">Explore top destinations</h2>
@@ -98,7 +106,7 @@
       </div>
     </section>
 
-    <section class="trip">
+    <section class="trip" id="trip">
       <div class="section__container trip__container">
         <h2 class="section__title">Best trip package</h2>
         <p class="section__subtitle">
@@ -146,7 +154,7 @@
       </div>
     </section>
 
-    <section class="gallary">
+    <section class="gallary" id="ReviewGallery">
       <div class="section__container gallary__container">
         <div class="image__gallary">
           <div class="gallary__col">
@@ -172,7 +180,7 @@
       </div>
     </section>
 
-    <section class="subscribe">
+    <section class="subscribe" id="Contact">
       <div class="section__container subscribe__container">
         <div class="subscribe__content">
           <h2 class="section__title">Subscribe to get special prize</h2>

@@ -58,6 +58,7 @@
 
 .btn:hover {
   background-color: var(--primary-color-dark);
+  font-weight: 600;
 }
 
 a {
@@ -74,8 +75,10 @@ body {
 }
 
 nav {
+  /*background-color: #FAFCFF*/
   padding: 1rem;
-  position: absolute;
+  /*position: absolute;*/
+  position: fixed; /*Making the navigation bar fixed at the top*/
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -84,7 +87,11 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 1001;
+  resize: horizontal; /* Allow horizontal resizing */
+  overflow-x: auto; 
 }
+
 
 .nav__logo {
   font-size: 1.2rem;
@@ -95,6 +102,10 @@ nav {
 
 .nav__logo span {
   color: var(--primary-color);
+}
+
+.nav__logo:hover {
+  transform: scale(1.3);
 }
 
 .nav__links {
@@ -112,10 +123,12 @@ nav {
 
 .link a:hover {
   color: var(--primary-color);
+  font-weight: 600;
 }
 
 header {
   background-color: var(--secondary-color);
+  
 }
 
 .header__container {
