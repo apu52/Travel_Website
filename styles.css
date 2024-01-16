@@ -58,6 +58,7 @@
 
 .btn:hover {
   background-color: var(--primary-color-dark);
+  font-weight: 600;
 }
 
 a {
@@ -74,8 +75,10 @@ body {
 }
 
 nav {
+  /*background-color: #FAFCFF*/
   padding: 1rem;
-  position: absolute;
+  /*position: absolute;*/
+  position: fixed; /*Making the navigation bar fixed at the top*/
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -84,7 +87,11 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 1001;
+  resize: horizontal; /* Allow horizontal resizing */
+  overflow-x: auto; 
 }
+
 
 .nav__logo {
   font-size: 1.2rem;
@@ -95,6 +102,10 @@ nav {
 
 .nav__logo span {
   color: var(--primary-color);
+}
+
+.nav__logo:hover {
+  transform: scale(1.3);
 }
 
 .nav__links {
@@ -112,10 +123,12 @@ nav {
 
 .link a:hover {
   color: var(--primary-color);
+  font-weight: 600;
 }
 
 header {
   background-color: var(--secondary-color);
+  
 }
 
 .header__container {
@@ -191,7 +204,7 @@ header {
   position: relative;
 }
 
-.video video {
+.video img {
   width: 60px;
   height: 60px;
   border-radius: 100%;
@@ -311,6 +324,11 @@ header {
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  transition: 2s;
+}
+.trip__card:hover {
+  transform:scale(1.1);
+  cursor: zoom-in;
 }
 
 .trip__details {
@@ -429,6 +447,7 @@ header {
 }
 
 .footer {
+  width: 100%;
   background-color: var(--text-dark);
 }
 
@@ -530,5 +549,59 @@ header {
 
   .footer__container {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* doing changes */
+#goToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#goToTopBtn:hover {
+  background-color: #0056b3;
+}
+
+
+
+.contact-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-form .left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form .right {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.right .form-control {
+  width: 100%;
+  max-width: 600px; /* Adjust the maximum width as needed */
+}
+
+/* Additional styling for responsiveness */
+@media (max-width: 768px) {
+  .contact-form {
+    flex-direction: column;
+  }
+
+  .contact-form .right {
+    padding-left: 0;
+    margin-top: 10px; /* Adjust as needed */
   }
 }
