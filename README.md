@@ -189,10 +189,18 @@ Show some ❤️&nbsp; by giving <img src="https://imgur.com/o7ncZFp.jpg" height
 <p align ="center">
   <img src="https://github.com/shruti-sen2004/Travel_Website/assets/115914670/d544fd3b-aed2-4a05-a2f8-0b7a2ff9014f" width="700" height= "250" />
 </p>
+
 <a href="https://github.com/apu52/Travel_Website/graphs/contributors">
-<p align = "center" ><img src="https://contrib.rocks/image?repo=apu52/Travel_Website" /></p>
-</a>
-<div align="center">
+  <img align="center" src="https://contrib.rocks/image?max=100&repo=apu52/Travel_Website" />
+</a> 
+<br><br>
+Thank you to all the amazing contributors who have made this project possible!!💝
+
+## License 
+<img src = "https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge">
+
+<p align="right"><a href="#top"><img src="https://img.shields.io/badge/Move%20to%20top-Blue?style=plastic" alt="Back To Top"></a></p>
+
 
 
 
