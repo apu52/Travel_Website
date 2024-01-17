@@ -56,6 +56,12 @@
   transition: 0.3s;
 }
 
+#send {
+  border-top-right-radius: 5rem; 
+  border-bottom-right-radius: 5rem; 
+}
+
+
 .btn:hover {
   background-color: var(--primary-color-dark);
   font-weight: 600;
