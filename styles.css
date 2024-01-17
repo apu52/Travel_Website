@@ -75,7 +75,7 @@ body {
 }
 
 nav {
-  /*background-color: #FAFCFF*/
+  background-color:#95d1def9;
   padding: 1rem;
   /*position: absolute;*/
   position: fixed; /*Making the navigation bar fixed at the top*/
@@ -83,7 +83,7 @@ nav {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: var(--max-width);
+  /* max-width: var(--max-width); */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -412,6 +412,25 @@ header {
   margin-bottom: 2rem;
 }
 
+.trip-gallery-container{
+  width: 100%;
+  margin: 100px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.trip-gallery-container img{
+  width: 100%;
+}
+
+.trip-gallery-container img:hover{
+  transform: scale(0.8) rotate(-10deg);
+  border-radius: 20px;
+  box-shadow: 0 32px 7px rgba(68,77,136,0.2);
+}
+
+
 .subscribe {
   background-color: var(--secondary-color);
 }
@@ -551,6 +570,7 @@ header {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 /* doing changes */
 #goToTopBtn {
   display: none;
@@ -569,7 +589,11 @@ header {
   background-color: #0056b3;
 }
 
-
+/*contact section overlapping with nav fixed*/
+#contact{
+  margin-top: 30px;
+  padding-top: 100px;
+}
 
 .contact-form {
   display: flex;
