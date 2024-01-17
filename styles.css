@@ -75,7 +75,7 @@ body {
 }
 
 nav {
-  /*background-color: #FAFCFF*/
+  background-color:#95d1def9;
   padding: 1rem;
   /*position: absolute;*/
   position: fixed; /*Making the navigation bar fixed at the top*/
@@ -83,7 +83,7 @@ nav {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: var(--max-width);
+  /* max-width: var(--max-width); */
   display: flex;
   align-items: center;
   justify-content: space-between;
