@@ -569,7 +569,11 @@ header {
   background-color: #0056b3;
 }
 
-
+/*contact section overlapping with nav fixed*/
+#contact{
+  margin-top: 30px;
+  padding-top: 100px;
+}
 
 .contact-form {
   display: flex;
