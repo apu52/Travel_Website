@@ -3,12 +3,23 @@
 :root {
   --primary-color: #3685fb;
   --primary-color-dark: #2f73d9;
-  --secondary-color: #fafcff;
-  --text-dark: #0d213f;
   --text-light: #767268;
   --extra-light: #ffffff;
+  --foot-light:#0d213f;
+        --arr-light:#3685fb;
+        --body-light:#ffffff;
+        --secondary-color: #fafcff; 
+        --text-dark: #0d213f; 
   --max-width: 1200px;
 }
+/* My change */
+.dark-theme{
+  --secondary-color: black;
+  --text-dark: #ffffff;
+  --arr-light:white;
+  --body-light:black;
+}
+/* My change */
 
 * {
   padding: 0;
@@ -56,6 +67,20 @@
   transition: 0.3s;
 }
 
+/* my change */
+#toggle{
+  padding: 0.75rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--extra-light);
+  background-color: var(--primary-color);
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+/* my change */
+
 .btn:hover {
   background-color: var(--primary-color-dark);
 }
@@ -71,6 +96,7 @@ img {
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: var(--body-light);
 }
 
 nav {
@@ -220,6 +246,14 @@ header {
   color: var(--text-dark);
 }
 
+section{
+  background-color: var(--secondary-color);
+}
+/* .section__container{
+  background-color: var(--secondary-color);
+}
+ */
+
 .destination__nav {
   display: flex;
   gap: 1rem;
@@ -230,8 +264,8 @@ header {
   height: 30px;
   display: grid;
   place-content: center;
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  color: var(--arr-light);
+  border: 1px solid var(--arr-light);
   border-radius: 100%;
   font-size: 1.5rem;
   cursor: pointer;
@@ -360,6 +394,9 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  /* my change */
+  background-color: var(--secondary-color);
+  /* my change */
 }
 
 .image__gallary {
@@ -429,14 +466,14 @@ header {
 }
 
 .footer {
-  background-color: var(--text-dark);
+  background-color: var(--foot-light);
 }
 
 .footer__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5rem;
-  color: var(--secondary-color);
+  color: var(--extra-light);
 }
 
 .footer__col h3 {
@@ -476,7 +513,8 @@ header {
   padding: 0.5rem;
   text-align: center;
   font-size: 0.8rem;
-  color: var(--secondary-color);
+  /* color: var(--secondary-color); */
+  color: var(--extra-light);
   border-top: 1px solid var(--text-light);
 }
 
