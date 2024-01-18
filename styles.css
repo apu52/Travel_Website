@@ -579,7 +579,7 @@ header {
 }
 
 /* doing changes */
-#goToTopBtn {
+.top-btn {
   display: none;
   position: fixed;
   bottom: 20px;
@@ -592,8 +592,32 @@ header {
   cursor: pointer;
 }
 
-#goToTopBtn:hover {
+.top-btn:hover {
   background-color: #0056b3;
+}
+
+
+.top-btn {
+  display: inline-block;
+  border-radius: 50px;
+  transition: all .4s ease-in-out;
+  padding: 10px 27px;
+  background-color: transparent;
+  border: 2px solid #c6c9d8bf;
+  color: #c6c9d8bf;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 2px;
+  position: fixed;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+.top-btn:hover {
+  background-color: #ff0000;
+  border-color: #ff0000;
+  color: #fff;
 }
 
 /*contact section overlapping with nav fixed*/

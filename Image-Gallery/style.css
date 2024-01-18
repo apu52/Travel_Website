@@ -42,7 +42,7 @@ body {
 
 .btn {
   bottom: -80px;
-  background-color: slateblue;
+  background-color: rgb(47, 20, 227);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -53,6 +53,29 @@ body {
 .btn:hover {
   filter: brightness(1.5);
 }
+
+
+#btn-style {
+    display: inline-block;
+    border-radius: 50px;
+    transition: all .4s ease-in-out;
+    padding: 10px 27px;
+    background-color: transparent;
+    border: 2px solid #c6c9d8bf;
+    color: #c6c9d8bf;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+#btn-style:hover {
+    background-color: #ff0000; 
+    border-color: #ff0000;
+    color: #fff;
+}
+
+
 
 #prev {
   left: 0%;
