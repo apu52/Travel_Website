@@ -81,23 +81,18 @@ body {
 }
 
 nav {
-  background-color:#95d1def9;
+  background-color: #95d1def9;
   padding: 1rem;
-  /*position: absolute;*/
-  position: fixed; /*Making the navigation bar fixed at the top*/
+  position: fixed; /* Making the navigation bar fixed at the top */
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  /* max-width: var(--max-width); */
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 1001;
-  resize: horizontal; /* Allow horizontal resizing */
-  overflow-x: auto; 
 }
-
 
 .nav__logo {
   font-size: 1.2rem;
@@ -134,8 +129,8 @@ nav {
 
 header {
   background-color: var(--secondary-color);
-  
 }
+
 
 .header__container {
   min-height: 100vh;
