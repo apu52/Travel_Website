@@ -119,6 +119,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-top: 10px;
 }
 
 .link a {
@@ -129,7 +130,6 @@ nav {
 
 .link a:hover {
   color: var(--primary-color);
-
 }
 
 header {
