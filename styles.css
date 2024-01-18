@@ -81,33 +81,30 @@ body {
 }
 
 nav {
-  background-color:#95d1def9;
-  padding: 1rem;
-  /*position: absolute;*/
-  position: fixed; /*Making the navigation bar fixed at the top*/
+  background-color: #091020;
+  padding: 0.8rem 1rem; /* Adjusted padding for top and bottom */
+  position: fixed;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  /* max-width: var(--max-width); */
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 1001;
-  resize: horizontal; /* Allow horizontal resizing */
-  overflow-x: auto; 
+  overflow-x: auto;
 }
 
-
 .nav__logo {
-  font-size: 1.2rem;
+  font-size: 1.8rem; /* Increased font size for the logo */
   font-weight: 600;
-  color: var(--text-dark);
+  color: #ffffff;
   cursor: pointer;
+  padding-left: 20px;
 }
 
 .nav__logo span {
-  color: var(--primary-color);
+  color: #3685fb; /* Assuming this is your primary color */
 }
 
 .nav__logo:hover {
@@ -118,17 +115,18 @@ nav {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem; /* Increased gap between links */
+  font-size: 1.2rem; /* Increased font size for the links */
 }
 
 .link a {
-  padding: 0 1rem;
-  color: var(--text-dark);
+  padding: 0.5rem 1rem; /* Adjusted padding for links */
+  color: #ffffff;
   transition: 0.3s;
 }
 
 .link a:hover {
-  color: var(--primary-color);
+  color: #ff0000;
   font-weight: 600;
 }
 
@@ -473,7 +471,8 @@ header {
 
 .footer {
   width: 100%;
-  background-color: var(--text-dark);
+  /* background-color: var(--text-dark); */
+  background-color: #091020;
 }
 
 .footer__container {
@@ -501,7 +500,9 @@ header {
 }
 
 .footer__col p:hover {
-  color: var(--primary-color);
+  /* color: var(--primary-color); */
+  color: #ff0000;
+  font-size: 1rem;  
 }
 
 .footer__col p span {
