@@ -82,8 +82,7 @@ body {
 
 nav {
   background-color: #091020;
-  padding: 0.8rem 1rem; /* Adjusted padding for top and bottom */
-  position: fixed;
+  padding:1rem; /* Adjusted padding for top and bottom */
   top: 0;
   left: 50%;
   transform: translateX(-50%);
