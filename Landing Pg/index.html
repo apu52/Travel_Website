@@ -20,6 +20,9 @@
         <li class="link"><a href="#">Pricing</a></li>
         <li class="link"><a href="#">Reviews</a></li>
       </ul>
+      <!--       my change -->
+      <button id="toggle">Dark Theme</button>
+      <!--       my change -->
       <button class="btn">Contact Us</button>
     </nav>
     <header>
@@ -219,5 +222,20 @@
         Copyright © 2023 Arpan Chowdhury. All rights reserved.
       </div>
     </footer>
+    <!--       my change -->
+        <script>
+        var ToggleBtn=document.getElementById("toggle");
+        ToggleBtn.onclick=function(){
+          document.body.classList.toggle("dark-theme");
+          if(document.body.classList.contains("dark-theme")){
+            ToggleBtn.textContent="Light theme";
+          }
+          else{
+            ToggleBtn.textContent="Dark theme";
+          }
+        }
+    </script>
+
+    <!--       my change -->
   </body>
 </html>
