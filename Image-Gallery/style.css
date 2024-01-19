@@ -5,7 +5,11 @@ body {
   text-align: center;
   justify-content: center;
 }
-
+.gallery-rotate-image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .image-container {
   position: relative;
   width: 200px;
@@ -36,7 +40,7 @@ body {
 .btn-container {
   margin-top: 300px;
   position: relative;
-  width: 80%;
+  width: 100%;
   justify-content: space-between;
 }
 
