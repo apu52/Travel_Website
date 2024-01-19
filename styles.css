@@ -649,4 +649,31 @@ header {
     margin-top: 10px; /* Adjust as needed */
   }
 }
+/* Custom scrollbar for WebKit browsers */
+body::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
 
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color); /* Color of the scrollbar thumb */
+  border-radius: 6px; /* Rounded corners of the thumb */
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--extra-light); /* Color of the scrollbar track */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-color-dark); /* Color of the thumb on hover */
+}
+
+/* Custom scrollbar for Firefox */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) var(--extra-light);
+}
+
+body:hover {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color-dark) var(--extra-light);
+}
