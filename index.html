@@ -47,6 +47,7 @@
 
         <li class="link"><a href="login.html">Login</a></li>
       </ul>
+      <button id="toggle">Dark Theme</button>
       <a href="#contact"><button class="btn">Contact Us</button></a>
     </nav>
     <header>
@@ -421,6 +422,19 @@
         document.documentElement.scrollTop = 0; 
       }
     </script>
+    <script>
+        var ToggleBtn=document.getElementById("toggle");
+        ToggleBtn.onclick=function(){
+          document.body.classList.toggle("dark-theme");
+          if(document.body.classList.contains("dark-theme")){
+            ToggleBtn.textContent="Light theme";
+          }
+          else{
+            ToggleBtn.textContent="Dark theme";
+          }
+        }
+    </script>
+
   </body>
   <script>
     function replaceDivs() {
