@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
@@ -35,44 +36,44 @@
   </head>
   <body>
     <nav>
-      <div class="nav__logo">Tourguide<span>.</span></div>
+      <div class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></div>
       <ul class="nav__links">
-        <li class="link"><a href="#Home">Home</a></li>
-        <li class="link"><a href="#Destinations">Destinations</a></li>
-        <li class="link"><a href="#trip">Pricing</a></li>
-        <li class="link"><a href="#testimonials">Testimonials</a></li>
-        <li class="link"><a href="#ReviewGallery">Reviews</a></li>
+        <li class="link" data-aos="fade-down"><a href="#Home">Home</a></li>
+        <li class="link" data-aos="fade-down"><a href="#Destinations">Destinations</a></li>
+        <li class="link" data-aos="fade-down"><a href="#trip">Pricing</a></li>
+        <li class="link" data-aos="fade-down"><a href="#testimonials">Testimonials</a></li>
+        <li class="link" data-aos="fade-down"><a href="#ReviewGallery">Reviews</a></li>
 
-        <li class="link"><a href="feedback.html">Rate Us?</a></li>
+        <li class="link" data-aos="fade-down"><a href="feedback.html">Rate Us?</a></li>
 
-        <li class="link"><a href="login.html">Login</a></li>
+        <li class="link" data-aos="fade-down"><a href="login.html">Login</a></li>
       </ul>
-      <button id="toggle">Dark Theme</button>
-      <a href="#contact"><button class="btn">Contact Us</button></a>
+      <button id="toggle" data-aos="fade-down">Dark Theme</button>
+      <a href="#contact" data-aos="fade-down"><button class="btn">Contact Us</button></a>
     </nav>
     <header>
       <section class="section__container header__container" id="Home">
-        <div class="header__image">
+        <div class="header__image" data-aos="fade-down-right">
           <img src="https://i.ibb.co/88Qnjxg/pexels-josh-hild-2422259.jpg" alt="header" />
           <img src="https://i.ibb.co/w4Jqjdf/pexels-andrei-tanase-1271619.jpg" alt="header" />
         </div>
         <div class="header__content">
           <div>
-            <p class="sub__header">Book Now</p>
-            <h1>Find Your Perfect Getaway<br />Discover the World's Best Kept Secrets</h1>
-            <p class="section__subtitle">
+            <p class="sub__header" data-aos="fade-in">Book Now</p>
+            <h1 data-aos="fade-in">Find Your Perfect Getaway<br />Discover the World's Best Kept Secrets</h1>
+            <p class="section__subtitle" data-aos="fade-in">
               Make your travel more enjoyable with us. We are the best travel
               agency and we are providing the best travel services for our
               clients.
             </p>
             <div class="action__btns">
-              <button class="btn">Plan a Trip</button>
+              <button class="btn" data-aos="fade-in">Plan a Trip</button>
               <div class="story">
                 <div class="video">
-                  <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" type="video/mp4"></img> 
-                  <span><i class="ri-play-fill"></i></span>
+                  <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" type="video/mp4" data-aos="fade-in"></img> 
+                  <span data-aos="fade-in"><i class="ri-play-fill"></i></span>
                 </div>
-                <span>Watch our story</span>
+                <span data-aos="fade-in">Watch our story</span>
               </div>
             </div>
           </div>
@@ -83,27 +84,27 @@
     <section class="section__container destination__container" id="Destinations">
       <div class="section__header">
         <div>
-          <h2 class="section__title">Explore top destinations</h2>
-          <p class="section__subtitle">
+          <h2 class="section__title" data-aos="fade-in">Explore top destinations</h2>
+          <p class="section__subtitle" data-aos="fade-in">
             Explore your suitable and dream places around the world. Here you
             can find your right destination.
           </p>
         </div>
         <div class="destination__nav">
-          <span><i class="ri-arrow-left-s-line"></i></span>
-          <span><i class="ri-arrow-right-s-line"></i></span>
+          <span data-aos="fade-in"><i class="ri-arrow-left-s-line"></i></span>
+          <span data-aos="fade-in"><i class="ri-arrow-right-s-line"></i></span>
         </div>
       </div>
       <div class="destination__grid">
         <div class="destination__card">
-          <img src="https://i.ibb.co/kQ2s7bH/pexels-paulo-marcelo-martins-2412606.jpg" alt="destination" />
+          <img src="https://i.ibb.co/kQ2s7bH/pexels-paulo-marcelo-martins-2412606.jpg" alt="destination" data-aos="fade-in"/>
           <div class="destination__details">
             <p class="destination__title">Eiffel Tower</p>
             <p class="destination__subtitle">Paris</p>
           </div>
         </div>
         <div class="destination__card">
-          <img src="https://i.ibb.co/s248xRX/pexels-quang-nguyen-vinh-2132126.jpg" alt="destination" />
+          <img src="https://i.ibb.co/s248xRX/pexels-quang-nguyen-vinh-2132126.jpg" alt="destination" data-aos="fade-in"/>
           <div class="destination__details">
             <p class="destination__title">Ho Chi Minn</p>
             <p class="destination__subtitle">Vietnam</p>
@@ -111,7 +112,7 @@
         </div>
         <!-- make hieght to 400px -->
         <div class="destination__card">
-          <img src="https://i.ibb.co/Z2FMDPZ/pexels-sam-kolder-2387871.jpg" alt="destination" height="400px" />
+          <img src="https://i.ibb.co/Z2FMDPZ/pexels-sam-kolder-2387871.jpg" alt="destination" height="400px" data-aos="fade-in"/>
           <div class="destination__details">
             <p class="destination__title">Tajmahal</p>
             <p class="destination__subtitle">Agra</p>
@@ -119,7 +120,7 @@
         </div>
         <!-- make hieght to 400px -->
         <div class="destination__card">
-          <img src="https://i.ibb.co/gj3DM28/pexels-alex-azabache-3214958.jpg" alt="destination" height="400px"/>
+          <img src="https://i.ibb.co/gj3DM28/pexels-alex-azabache-3214958.jpg" alt="destination" height="400px" data-aos="fade-in"/>
           <div class="destination__details">
             <p class="destination__title">Wadi Musa</p>
             <p class="destination__subtitle">Jordan</p>
@@ -128,7 +129,7 @@
       </div>
     </section>
 
-    <section class="trip" id="trip">
+    <section class="trip" id="trip" data-aos="zoom-in" data-aos-offset="100">
       <div class="section__container trip__container">
         <h2 class="section__title">Best trip package</h2>
         <p class="section__subtitle">
@@ -181,31 +182,31 @@
       <div class="section__container gallary__container">
         <div class="section__container gallary__container" id="originalDiv">
         <div class="image__gallary">
-          <div class="gallary__col">
+          <div class="gallary__col" data-aos="zoom-in">
             <img src="https://i.ibb.co/ZYDJ6vv/pexels-spencer-davis-4356144.jpg" alt="gallary" />
           </div>
-          <div class="gallary__col">
+          <div class="gallary__col" data-aos="zoom-in">
             <img src="https://i.ibb.co/W3HTbYG/pexels-zakaria-boumliha-2827374.jpg" alt="gallary" />
             <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" alt="gallary" />
           </div>
         </div>
         <div class="gallary__content">
           <div>
-            <h2 class="section__title">
+            <h2 class="section__title" data-aos="zoom-in">
               Our trip gallary that will inspire you
             </h2>
-            <p class="section__subtitle">
+            <p class="section__subtitle" data-aos="zoom-in">
               Explore your suitable and dream places around the world. Here you
               can find your right destination.
             </p>
-            <button class="btn" id="btn-page" onclick="replaceDivs()">View All</button>
+            <button class="btn" id="btn-page" onclick="replaceDivs()" data-aos="zoom-in">View All</button>
           </div>
         </div>
         </div>
       </div>
     </section><br><br>
     <!-- New div components (hidden initially) -->
-    <div id="newDiv" style="display: none;">
+    <div id="newDiv" style="display: none;" data-aos="zoom-in">
       <!-- Sliding Animated Gallery -->
       <div class="gallery-rotate-image">
         <div class="image-container">
@@ -270,82 +271,94 @@
 
 
     <section class="Testimonials" id="testimonials">
-      <h2 class="section__title" align-items="center">Testimonials</h2>
+      <h2 class="section__title" align-items="center" data-aos="fade-in">Testimonials</h2>
       <br>
       <br>
-    <div class="container marketing">
-
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-4">
-          <img class="rounded-circle" width="5" height="350" preserveAspectRatio="xMidYMid slice" src="./img/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg">
-          <h2 class="fw-normal">Joseph</h2>
-          <p>"TourGuide made our dream vacation a reality! From the breathtaking landscapes to the seamless logistics, every moment was a new adventure. The personalized itinerary and expert guides added a special touch to our journey. We can't wait to book our next trip with TourGuide!"</p>
-          
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="rounded-circle" width="5" height="350" preserveAspectRatio="xMidYMid slice" src="./img/Abhisek Tamang.jpg">
-          <h2 class="fw-normal">Charles</h2>
-          <p>"Our cultural tour with TourGuide exceeded all expectations. The immersive experiences, knowledgeable guides, and carefully curated activities allowed us to connect with the local culture in a way we never thought possible. Thanks to TourGuide."</p>
-          
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="rounded-circle" width="5" height="350" preserveAspectRatio="xMidYMid slice" src="./img/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg">
-          <h2 class="fw-normal">Katie</h2>
-          <p>"Traveling with the family has never been easier! TourGuide took care of every detail, ensuring a stress-free and enjoyable vacation for all. The kid-friendly activities and family-oriented guides made our trip unforgettable."</p>
-          
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
+      <div class="container marketing">
   
-    </div>
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-up">
+            <img class="rounded-circle" width="5" height="350" preserveAspectRatio="xMidYMid slice"
+              src="./img/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg">
+            <h2 class="fw-normal">Joseph</h2>
+            <p data-aos="fade-in">"TourGuide made our dream vacation a reality! From the breathtaking landscapes to the seamless logistics,
+              every moment was a new adventure. The personalized itinerary and expert guides added a special touch to our
+              journey. We can't wait to book our next trip with TourGuide!"</p>
+  
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4" data-aos="fade-up">
+            <img class="rounded-circle" width="5" height="350" preserveAspectRatio="xMidYMid slice"
+              src="./img/Abhisek Tamang.jpg">
+            <h2 class="fw-normal">Charles</h2>
+            <p data-aos="fade-in">"Our cultural tour with TourGuide exceeded all expectations. The immersive experiences, knowledgeable
+              guides, and carefully curated activities allowed us to connect with the local culture in a way we never
+              thought possible. Thanks to TourGuide."</p>
+  
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4" data-aos="fade-up">
+            <img class="rounded-circle" width="5" height="350" preserveAspectRatio="xMidYMid slice"
+              src="./img/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg">
+            <h2 class="fw-normal">Katie</h2>
+            <p data-aos="fade-in">"Traveling with the family has never been easier! TourGuide took care of every detail, ensuring a
+              stress-free and enjoyable vacation for all. The kid-friendly activities and family-oriented guides made our
+              trip unforgettable."</p>
+  
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+  
+      </div>
     </section>
 
 
     <section class="contact" id="contact">
-      <h2 class="section__title" align-items="center">Contact Us</h2>
-      <div class="contact-form">
+      <h2 class="section__title" align-items="center" data-aos="slide-right">Contact Us</h2>
+      <div class="contact-form" data-aos="fade-in">
         <div class="left">
           <!-- Add your image here -->
-        <img src="./img/flat-design-illustration-customer-support_23-2148887720.avif" alt="Contact Image" style="max-width: 100%; width: 500px;">
-      </div>
-      <div class="right">
-        <form>
-          <div class="mb-3">
-            <label for="exampleInputName" class="form-label text-light">Name</label>
-            <input type="text" class="form-control" id="exampleInputName" placeholder="Enter your name">
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail2" class="form-label text-light">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Enter your email">
-            <div id="emailHelp" class="form-text text-light">We'll never share your email with anyone else.</div>
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputMessage" class="form-label text-light">Message</label>
-            <textarea class="form-control" id="exampleInputMessage" rows="4" placeholder="feel free to ask your queries!"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary"  onclick="sendMail()">Submit</button>
-        </form>
+          <img src="./img/flat-design-illustration-customer-support_23-2148887720.avif" alt="Contact Image"
+            style="max-width: 100%; width: 500px;">
+        </div>
+        <div class="right">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputName" class="form-label text-light">Name</label>
+              <input type="text" class="form-control" id="exampleInputName" placeholder="Enter your name">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail2" class="form-label text-light">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp"
+                placeholder="Enter your email">
+              <div id="emailHelp" class="form-text text-light">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputMessage" class="form-label text-light">Message</label>
+              <textarea class="form-control" id="exampleInputMessage" rows="4"
+                placeholder="feel free to ask your queries!"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="sendMail()">Submit</button>
+          </form>
         </div>
       </div>
-
-      
-        
+  
+  
+  
     </section>
-
-
-
-
-
+  
+  
+  
+  
+  
     <section class="subscribe" id="Contact">
       <div class="section__container subscribe__container">
         <div class="subscribe__content">
-          <h2 class="section__title">Subscribe to get special prize</h2>
-          <p class="section__subtitle">
+          <h2 class="section__title" data-aos="fade-up">Subscribe to get special prize</h2>
+          <p class="section__subtitle" data-aos="fade-up">
             Explore your suitable and dream places around the world. Here you
             can find your right destination.
           </p>
         </div>
-        <div class="subscribe__form">
+        <div class="subscribe__form" data-aos="fade-up">
           <form>
             <input type="email" placeholder="Your email here" />
             <button class="btn" id="send" type="submit">Send</button>
@@ -353,14 +366,14 @@
         </div>
       </div>
     </section>
-
-    <footer class="footer">
+  
+    <footer class="footer" data-aos="fade-up">
       <div class="section__container footer__container">
         <div class="footer__col">
           <h3>Tourguide<span>.</span></h3>
           <p>
-            Explore your suitable and dream places around the world.
-            Here you can find your right destination.
+            Explore your suitable and dream places around the world. Here you
+            can find your right destination.
           </p>
         </div>
         <div class="footer__col">
@@ -373,24 +386,10 @@
         <div class="footer__col">
           <h4>Address</h4>
           <p>
-            <span>Address:</span> 3/2 Wellington Street, Kolkata , West Bengal , India 
+            <span>Address:</span> 3/2 Wellington Street, Kolkata , West Bengal , India
           </p>
           <p><span>Email:</span> tour@tourguide.com</p>
           <p><span>Phone:</span> +91 8562145852</p>
-        </div>
-        <div class="footer__col">
-          <h4>Explore</h4>
-          <p>Write a review</p>
-          <p>Traveller's choice</p>
-          <p>Travel articles</p>
-          <p>Add a Place</p>
-        </div>
-        <div class="footer__col">
-          <h4>Connect With Us</h4>
-          <p>Facebook</p>
-          <p>Twitter</p>
-          <p>Youtube</p>
-          <p>Instagram</p>
         </div>
       </div>
       <div class="footer__bar">
@@ -399,15 +398,16 @@
     </footer>
     <!-- adding a btn -->
     <button id="goToTopBtn" onclick="goToTop()">Go to Top</button>
+  
     <script>
       // Get the button
       var mybutton = document.getElementById("goToTopBtn");
-    
+  
       // When the user scrolls down 20px from the top of the document, show the button
       window.onscroll = function () {
         scrollFunction();
       };
-    
+  
       function scrollFunction() {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
           mybutton.style.display = "block";
@@ -415,26 +415,25 @@
           mybutton.style.display = "none";
         }
       }
-    
+  
       // When the user clicks on the button, scroll to the top of the document
       function goToTop() {
-        document.body.scrollTop = 0; 
-        document.documentElement.scrollTop = 0; 
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
       }
     </script>
+  
+  
+  
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        var ToggleBtn=document.getElementById("toggle");
-        ToggleBtn.onclick=function(){
-          document.body.classList.toggle("dark-theme");
-          if(document.body.classList.contains("dark-theme")){
-            ToggleBtn.textContent="Light theme";
-          }
-          else{
-            ToggleBtn.textContent="Dark theme";
-          }
-        }
+      AOS.init({
+        duration: 1500,
+        offset: 120
+      });
     </script>
-
+  
+  
   </body>
   <script>
     function replaceDivs() {
