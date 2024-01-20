@@ -3,10 +3,13 @@
 :root {
   --primary-color: #3685fb;
   --primary-color-dark: #2f73d9;
-  --secondary-color: #fafcff;
-  --text-dark: #0d213f;
   --text-light: #767268;
   --extra-light: #ffffff;
+  --foot-light:#0d213f;
+        --arr-light:#3685fb;
+        --body-light:#ffffff;
+        --secondary-color: #fafcff; 
+        --text-dark: #0d213f; 
   --max-width: 1200px;
 }
 
@@ -14,6 +17,24 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.dark-theme{
+  --secondary-color: black;
+  --text-dark: #ffffff;
+  --arr-light:white;
+  --body-light:black;
+}
+#toggle{
+  padding: 0.75rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--extra-light);
+  background-color: var(--primary-color);
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .section__container {
@@ -381,13 +402,13 @@ header {
   background-color: var(--primary-color);
 }
 
-.section__container .gallary__container {
+.gallary__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
+  /* my change */
+  background-color: var(--secondary-color);
+  /* my change */
 }
 
 .image__gallary {
@@ -548,7 +569,8 @@ header {
   padding: 0.5rem;
   text-align: center;
   font-size: 0.8rem;
-  color: var(--secondary-color);
+/*   color: var(--secondary-color); */
+    color: var(--extra-light);
   border-top: 1px solid var(--text-light);
 }
 
