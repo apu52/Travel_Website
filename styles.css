@@ -46,9 +46,10 @@
   text-align: right;
 }
 
-.section__header .section__subtitle{
+.section__header .section__subtitle {
   text-align: left;
 }
+
 .btn {
   padding: 0.75rem 2rem;
   outline: none;
@@ -62,8 +63,8 @@
 }
 
 #send {
-  border-top-right-radius: 5rem; 
-  border-bottom-right-radius: 5rem; 
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
 }
 
 
@@ -88,7 +89,8 @@ body {
 nav {
   background-color: #95d1def9;
   padding: 1rem;
-  position: fixed; /* Making the navigation bar fixed at the top */
+  position: fixed;
+  /* Making the navigation bar fixed at the top */
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -173,7 +175,7 @@ header {
   justify-content: center;
 }
 
-.header__content > div {
+.header__content>div {
   max-width: 400px;
   display: grid;
   gap: 1rem;
@@ -234,7 +236,7 @@ header {
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
 }
 
-.story > span {
+.story>span {
   font-size: 1rem;
   font-weight: 600;
   color: var(--text-dark);
@@ -333,8 +335,9 @@ header {
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
   transition: 2s;
 }
+
 .trip__card:hover {
-  transform:scale(1.1);
+  transform: scale(1.1);
   cursor: zoom-in;
 }
 
@@ -414,11 +417,11 @@ header {
   flex-direction: column;
 }
 
-.gallary__content > div {
+.gallary__content>div {
   max-width: 400px;
 }
 
-.gallary__content h2{
+.gallary__content h2 {
   text-align: right;
 }
 
@@ -427,7 +430,7 @@ header {
   text-align: right;
 }
 
-.trip-gallery-container{
+.trip-gallery-container {
   width: 100%;
   margin: 100px auto 50px;
   display: grid;
@@ -435,14 +438,14 @@ header {
   grid-gap: 30px;
 }
 
-.trip-gallery-container img{
+.trip-gallery-container img {
   width: 100%;
 }
 
-.trip-gallery-container img:hover{
+.trip-gallery-container img:hover {
   transform: scale(0.8) rotate(-10deg);
   border-radius: 20px;
-  box-shadow: 0 32px 7px rgba(68,77,136,0.2);
+  box-shadow: 0 32px 7px rgba(68, 77, 136, 0.2);
 }
 
 
@@ -455,12 +458,15 @@ header {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
-.subscribe__container .subscribe__content .section__title{
+
+.subscribe__container .subscribe__content .section__title {
   text-align: left;
 }
-.subscribe__container .subscribe__content .section__subtitle{
+
+.subscribe__container .subscribe__content .section__subtitle {
   text-align: left;
 }
+
 .subscribe__form {
   display: flex;
   align-items: center;
@@ -556,6 +562,7 @@ header {
   .header__container {
     grid-template-columns: repeat(1, 1fr);
   }
+
   .header__image {
     min-height: 500px;
   }
@@ -610,7 +617,7 @@ header {
 }
 
 /*contact section overlapping with nav fixed*/
-#contact{
+#contact {
   margin-top: 30px;
   padding-top: 100px;
 }
@@ -635,7 +642,8 @@ header {
 
 .right .form-control {
   width: 100%;
-  max-width: 600px; /* Adjust the maximum width as needed */
+  max-width: 600px;
+  /* Adjust the maximum width as needed */
 }
 
 /* Additional styling for responsiveness */
@@ -646,25 +654,32 @@ header {
 
   .contact-form .right {
     padding-left: 0;
-    margin-top: 10px; /* Adjust as needed */
+    margin-top: 10px;
+    /* Adjust as needed */
   }
 }
+
 /* Custom scrollbar for WebKit browsers */
 body::-webkit-scrollbar {
-  width: 8px; /* Width of the scrollbar */
+  width: 8px;
+  /* Width of the scrollbar */
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color); /* Color of the scrollbar thumb */
-  border-radius: 6px; /* Rounded corners of the thumb */
+  background-color: var(--primary-color);
+  /* Color of the scrollbar thumb */
+  border-radius: 6px;
+  /* Rounded corners of the thumb */
 }
 
 body::-webkit-scrollbar-track {
-  background-color: var(--extra-light); /* Color of the scrollbar track */
+  background-color: var(--extra-light);
+  /* Color of the scrollbar track */
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background-color: var(--primary-color-dark); /* Color of the thumb on hover */
+  background-color: var(--primary-color-dark);
+  /* Color of the thumb on hover */
 }
 
 /* Custom scrollbar for Firefox */
