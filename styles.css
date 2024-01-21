@@ -93,6 +93,21 @@
   font-weight: 600;
 }
 
+/* ensures no box or shadow for the video button */
+.btn_video {
+  background: none;       
+  color: inherit;         
+  border: none;           
+  padding: 0;            
+  margin: 0;              
+  font: inherit;          
+  cursor: pointer;        
+  outline: inherit;       
+  box-shadow: none;       
+  text-align: inherit;    
+  display: inline;        
+}
+
 a {
   text-decoration: none;
 }
@@ -254,6 +269,15 @@ header {
   border-radius: 100%;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
 }
+
+.video-player {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+
 
 .story > span {
   font-size: 1rem;
