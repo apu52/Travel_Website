@@ -69,21 +69,9 @@ main{
 .registration, .login{
     min-height: 30rem;
     min-width: 40vw;
-    /* background-color: aqua; */
+    background-color: aqua;
     margin-left: 100px;
 }
-.login-btn {
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  .login-btn:hover {
-    background-color: black;
-  }
-  
 .grid-two--column{
     display: grid;
     grid-template-columns: repeat(2,1fr);
