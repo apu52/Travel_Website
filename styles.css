@@ -127,8 +127,9 @@ nav {
   color: var(--text-dark);
   transition: 0.3s;
 }
-
-
+.link a:hover {
+  color: var(--primary-color);
+}
 
 header {
   background-color: var(--secondary-color);
@@ -753,38 +754,6 @@ body:hover {
   font-size: medium;
   font-style:oblique;
 }
-
-
-
-/* .aboutcon {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-
-.aboutcontent {
-  text-align: center;
-}
-
-.aboutcontent svg {
-  
-  margin-bottom: 8px; 
-}
-
-
-@media screen and (max-width: 640px) {
-  .aboutcon {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .aboutcontent {
-    width: 100%;
-    max-width: 300px; 
-  }
-}
- */
  .box1{
   height: 175px;
   width: 500px;
@@ -801,7 +770,5 @@ body:hover {
  .color{
   background-color:#b9c9d7;
  }
- .link a:hover {
-  color: var(--primary-color);
-}
+ 
 
