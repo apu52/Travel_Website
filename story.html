@@ -44,130 +44,19 @@
       </ul>
       <a href="#contact"><button class="btn">Contact Us</button></a>
     </nav>
-    <header>
-        <div class="video-player">
-          <video width="560" height="315" controls>
-            <source src="img/travel_video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
 
+    <!-- inserted a video in the header section to reflect "watch our story" -->
+    <header>
+      <section class="section__container" style="margin-top: 75px;">
+        <video class="sized-video" autoplay controls>
+          <source src="img/travel_video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        </div>
+      </section>
     </header>
 
-
-
-    <section class="contact" id="contact">
-      <h2 class="section__title" align-items="center">Contact Us</h2>
-      <div class="contact-form">
-        <div class="left">
-          <!-- Add your image here -->
-        <img src="./img/flat-design-illustration-customer-support_23-2148887720.avif" alt="Contact Image" style="max-width: 100%; width: 500px;">
-      </div>
-      <div class="right">
-        <form>
-          <div class="mb-3">
-            <label for="exampleInputName" class="form-label text-light">Name</label>
-            <input type="text" class="form-control" id="exampleInputName" placeholder="Enter your name">
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail2" class="form-label text-light">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Enter your email">
-            <div id="emailHelp" class="form-text text-light">We'll never share your email with anyone else.</div>
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputMessage" class="form-label text-light">Message</label>
-            <textarea class="form-control" id="exampleInputMessage" rows="4" placeholder="feel free to ask your queries!"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary"  onclick="sendMail()">Submit</button>
-        </form>
-        </div>
-      </div>
-
-      
-        <!-- New div components (hidden initially) -->
-        <div id="newDiv" style="display: none;">
-           <!-- Sliding Animated Gallery -->
-          <div class="image-container">
-            <span style="--i : 1">
-                <img src="./img/pexels-ajay-donga-2174656.jpg">
-            </span>
-          <span style="--i : 2">
-                <img src="./img/pexels-alex-azabache-3214958.jpg">
-            </span>
-          <span style="--i : 3">
-                <img src="./img/pexels-andrei-tanase-1271619.jpg">
-            </span>
-          <span style="--i : 4">
-                <img src="./img/pexels-josh-hild-2422259.jpg">
-            </span>
-          <span style="--i : 5">
-                <img src="./img/pexels-paulo-marcelo-martins-2412606.jpg">
-            </span>
-          <span style="--i : 6">
-              <img src="./img/pexels-quang-nguyen-vinh-2132126.jpg">
-            </span>
-            <span style="--i : 7">
-              <img src="./img/pexels-sam-kolder-2387871.jpg">
-            </span>
-              <span style="--i : 8">
-              <img src="./img/pexels-spencer-davis-4356144.jpg">
-            </span>
-              <span style="--i : 9">
-              <img src="./img/pexels-stijn-dijkstra-2499699.jpg">
-            </span>
-              <span style="--i : 10">
-              <img src="./img/pexels-zakaria-boumliha-2827374.jpg">
-            </span>
-            </div>
-            <div class="btn-container">
-                <button class="btn" id="prev">Prev</button>
-                <button class="btn" id="next">Next</button>
-          </div>
-          <!-- Trip Photo Gallery -->
-          <div class="trip-gallery-container">
-            <img src="./img/Trip_Photos/photo1.png" height="250" width="200">
-            <img src="./img/Trip_Photos/photo2.png" height="250" width="200">
-            <img src="./img/Trip_Photos/photo3.jpg" height="250" width="200">
-            <img src="./img/Trip_Photos/photo4.png" height="250" width="200">
-            <img src="./img/Trip_Photos/photo5.jpg" height="250" width="200">
-            <img src="./img/Trip_Photos/photo6.png" height="250" width="200">
-            <img src="./img/Trip_Photos/photo7.png" height="250" width="200">
-            <img src="./img/Trip_Photos/photo8.jpg" height="250" width="200">
-            <img src="./img/Trip_Photos/photo9.jpg" height="250" width="200">
-            <img src="./img/Trip_Photos/photo10.jpg" height="250" width="200">
-            <img src="./img/Trip_Photos/photo11.jpg" height="250" width="200">
-            <img src="./img/Trip_Photos/photo12.jpeg" height="250" width="200">
-            <img src="./img/Trip_Photos/photo13.jpg" height="250" width="200">
-            <img src="./img/Trip_Photos/photo14.jpg" height="250" width="200">
-            <img src="./img/Trip_Photos/photo16.png" height="250" width="200">
-            <img src="./img/Trip_Photos/photo18.jpg" height="250" width="200">
-            <img src="./img/Trip_Photos/photo19.jpg" height="250" width="200">
-            <img src="./img/Trip_Photos/photo20.png" height="250" width="200">
-        </div>
-      </div>
-    </section>
-
-
-
-
-
-    <section class="subscribe" id="Contact">
-      <div class="section__container subscribe__container">
-        <div class="subscribe__content">
-          <h2 class="section__title">Subscribe to get special prize</h2>
-          <p class="section__subtitle">
-            Explore your suitable and dream places around the world. Here you
-            can find your right destination.
-          </p>
-        </div>
-        <div class="subscribe__form">
-          <form>
-            <input type="email" placeholder="Your email here" />
-            <button class="btn" type="submit">Send</button>
-          </form>
-        </div>
-      </div>
-    </section>
+    <!-- omitted uneccessary sections -->
 
     <footer class="footer">
       <div class="section__container footer__container">

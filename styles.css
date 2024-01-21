@@ -270,14 +270,14 @@ header {
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
 }
 
-.video-player {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-  height: 0;
-  overflow: hidden;
+/* added video player tag to display at 80% */
+.sized-video {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
 }
-
-
 
 .story > span {
   font-size: 1rem;
