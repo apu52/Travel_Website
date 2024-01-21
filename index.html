@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="./Image-Gallery/style.css">
-    <title>Arpan Codes | Tourguide</title>
+    <title>Tourguide</title>
      <!-- adding a fav-icon -->
      <link rel="icon" href="img/A T logo with a white background and a square shape, connected to nature for a travel company.png" type="image/x-icon" />
     <script src="index.js"></script>
@@ -50,6 +50,7 @@
 
         <li class="link"><a href="login.html">Login</a></li>
       </ul>
+      <button id="toggle">Dark Theme</button>
       <a href="#contact"><button class="btn">Contact Us</button></a>
     </nav>
     <header>
@@ -61,7 +62,7 @@
         <div class="header__content">
           <div>
             <p class="sub__header">Book Now</p>
-            <h1>Find Your Perfect Getaway<br />Discover the World's Best Kept Secrets</h1>
+            <h1>Find Your Perfect Getaway<br />Discover the World's Best Kept <span class="auto-typed" style="color: slateblue;"></span></h1>
             <p class="section__subtitle">
               Make your travel more enjoyable with us. We are the best travel
               agency and we are providing the best travel services for our
@@ -446,8 +447,8 @@
         <div class="footer__col">
           <h3>Tourguide<span>.</span></h3>
           <p>
-            Explore your suitable and dream places around the world. Here you
-            can find your right destination.
+            Explore your suitable and dream places around the world.
+            Here you can find your right destination.
           </p>
         </div>
         <div class="footer__col">
@@ -464,6 +465,20 @@
           </p>
           <p><span>Email:</span> tour@tourguide.com</p>
           <p><span>Phone:</span> +91 8562145852</p>
+        </div>
+        <div class="footer__col">
+          <h4>Explore</h4>
+          <p>Write a review</p>
+          <p>Traveller's choice</p>
+          <p>Travel articles</p>
+          <p>Add a Place</p>
+        </div>
+        <div class="footer__col">
+          <h4>Connect With Us</h4>
+          <p>Facebook</p>
+          <p>Twitter</p>
+          <p>Youtube</p>
+          <p>Instagram</p>
         </div>
       </div>
       <div class="footer__bar">
@@ -495,6 +510,30 @@
         document.documentElement.scrollTop = 0; 
       }
     </script>
+    <script>
+        var ToggleBtn=document.getElementById("toggle");
+        ToggleBtn.onclick=function(){
+          document.body.classList.toggle("dark-theme");
+          if(document.body.classList.contains("dark-theme")){
+            ToggleBtn.textContent="Light theme";
+          }
+          else{
+            ToggleBtn.textContent="Dark theme";
+          }
+        }
+    </script>
+
+<!-- typing animation -->
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+  var typed = new Typed(".auto-typed", {
+    strings : ["Wonders", "Gems", "Secrets"],
+    typeSpeed : 150,
+    backSpeed : 50,
+    loop : true
+  })
+</script>
+
   </body>
   <script>
     function replaceDivs() {
