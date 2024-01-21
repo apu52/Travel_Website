@@ -59,7 +59,7 @@
         <div class="header__content">
           <div>
             <p class="sub__header">Book Now</p>
-            <h1>Find Your Perfect Getaway<br />Discover the World's Best Kept Secrets</h1>
+            <h1>Find Your Perfect Getaway<br />Discover the World's Best Kept <span class="auto-typed" style="color: slateblue;"></span></h1>
             <p class="section__subtitle">
               Make your travel more enjoyable with us. We are the best travel
               agency and we are providing the best travel services for our
@@ -434,6 +434,17 @@
           }
         }
     </script>
+
+<!-- typing animation -->
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+  var typed = new Typed(".auto-typed", {
+    strings : ["Wonders", "Gems", "Secrets"],
+    typeSpeed : 150,
+    backSpeed : 50,
+    loop : true
+  })
+</script>
 
   </body>
   <script>
