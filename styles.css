@@ -630,14 +630,17 @@ header {
 /* doing changes */
 #goToTopBtn {
   display: none;
+  width: 50px;
+  height: 50px;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #007bff;
+  bottom: 100px;
+  right: 0px;
+  background-color: #ab45e7;
   color: #fff;
-  padding: 10px;
+  padding: 2px;
   border: none;
-  border-radius: 5px;
+  margin-right: 27px;
+  border-radius: 50%;
   cursor: pointer;
 }
 
