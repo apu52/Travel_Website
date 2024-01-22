@@ -93,6 +93,21 @@
   font-weight: 600;
 }
 
+/* ensures no box or shadow for the video button */
+.btn_video {
+  background: none;       
+  color: inherit;         
+  border: none;           
+  padding: 0;            
+  margin: 0;              
+  font: inherit;          
+  cursor: pointer;        
+  outline: inherit;       
+  box-shadow: none;       
+  text-align: inherit;    
+  display: inline;        
+}
+
 a {
   text-decoration: none;
 }
@@ -254,6 +269,15 @@ header {
   background-color: var(--extra-light);
   border-radius: 100%;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* added video player tag to display at 80% */
+.sized-video {
+  width: 960px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 .story > span {
