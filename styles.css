@@ -607,6 +607,22 @@ header {
   }
 }
 
+@media (width>1400px){
+  #toggle{
+    margin-right: -5%;
+  }
+  
+}
+
+@media (width>1550px){
+  #toggle{
+    margin-right: -8%;
+  }
+  
+}
+
+/* Enhance the responsiveness of gap between Dark Theme button and Contact Us buttons of navbar.  */
+
 @media (width < 900px) {
   .nav__links {
     display: none;
