@@ -37,6 +37,8 @@
   transition: 0.3s;
 }
 
+
+
 .section__container {
   max-width: var(--max-width);
   margin: auto;
@@ -605,6 +607,20 @@ header {
   .header__image img:nth-child(2) {
     max-width: 200px;
   }
+}
+
+@media (width>1400px){
+  #toggle{
+    margin-right: -5%;
+  }
+  
+}
+
+@media (width>1550px){
+  #toggle{
+    margin-right: -8%;
+  }
+  
 }
 
 @media (width < 900px) {
