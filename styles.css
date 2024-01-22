@@ -162,7 +162,7 @@ header {
   min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 15rem;
 }
 
 .header__image {
@@ -192,6 +192,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 30px;
 }
 
 .header__content > div {
@@ -403,18 +404,16 @@ header {
 }
 
 .gallary__container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  /* my change */
+  display: flex;
   background-color: var(--secondary-color);
-  /* my change */
+
 }
 
 .image__gallary {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  width: 480px;
 }
 
 .gallary__col {
