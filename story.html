@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./Image-Gallery/style.css">
+    <title>Arpan Codes | Tourguide</title>
+     <!-- adding a fav-icon -->
+     <link rel="icon" href="img/A T logo with a white background and a square shape, connected to nature for a travel company.png" type="image/x-icon" />
+    <script src="index.js"></script>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("WB9rAyWwwLZube-er");
+   })();
+</script>
+
+  <style>
+  html {
+    scroll-behavior: smooth;
+  }
+  </style>
+
+  </head>
+  <body>
+    <nav>
+      <div class="nav__logo">Tourguide<span>.</span></div>
+      <ul class="nav__links">
+        <li class="link"><a href="#Home">Home</a></li>
+        <li class="link"><a href="#Destinations">Destinations</a></li>
+        <li class="link"><a href="#trip">Pricing</a></li>
+        <li class="link"><a href="#ReviewGallery">Reviews</a></li>
+      </ul>
+      <a href="#contact"><button class="btn">Contact Us</button></a>
+    </nav>
+
+    <!-- inserted a video in the header section to reflect "watch our story" -->
+    <header>
+      <section class="section__container" style="margin-top: 75px;">
+        <video class="sized-video" autoplay controls>
+          <source src="img/travel_video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        </div>
+      </section>
+    </header>
+
+    <!-- omitted uneccessary sections -->
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h3>Tourguide<span>.</span></h3>
+          <p>
+            Explore your suitable and dream places around the world. Here you
+            can find your right destination.
+          </p>
+        </div>
+        <div class="footer__col">
+          <h4>Support</h4>
+          <p>FAQs</p>
+          <p>Terms & Conditions</p>
+          <p>Privacy Policy</p>
+          <p>Contact Us</p>
+        </div>
+        <div class="footer__col">
+          <h4>Address</h4>
+          <p>
+            <span>Address:</span> 3/2 Wellington Street, Kolkata , West Bengal , India 
+          </p>
+          <p><span>Email:</span> tour@tourguide.com</p>
+          <p><span>Phone:</span> +91 8562145852</p>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2023 Arpan Chowdhury. All rights reserved.
+      </div>
+    </footer>
+    <!-- adding a btn -->
+    <button id="goToTopBtn" onclick="goToTop()">Go to Top</button>
+    <script>
+      // Get the button
+      var mybutton = document.getElementById("goToTopBtn");
+    
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+    
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+    
+      // When the user clicks on the button, scroll to the top of the document
+      function goToTop() {
+        document.body.scrollTop = 0; 
+        document.documentElement.scrollTop = 0; 
+      }
+    </script>
+  </body>
+  <script>
+    function replaceDivs() {
+      // Get references to the original and new divs
+      var originalDiv = document.getElementById("originalDiv");
+      var newDiv = document.getElementById("newDiv");
+
+      // Check if the original div exists
+      if (originalDiv) {
+          // Hide the original div
+          originalDiv.style.display = "none";
+
+          // Show the new div
+          newDiv.style.display = "block";
+      }
+  }
+  </script>
+  <script src="./Image-Gallery/script.js"></script>
+</html>

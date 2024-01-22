@@ -93,6 +93,21 @@
   font-weight: 600;
 }
 
+/* ensures no box or shadow for the video button */
+.btn_video {
+  background: none;       
+  color: inherit;         
+  border: none;           
+  padding: 0;            
+  margin: 0;              
+  font: inherit;          
+  cursor: pointer;        
+  outline: inherit;       
+  box-shadow: none;       
+  text-align: inherit;    
+  display: inline;        
+}
+
 a {
   text-decoration: none;
 }
@@ -161,7 +176,7 @@ header {
   min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 15rem;
 }
 
 .header__image {
@@ -191,6 +206,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 30px;
 }
 
 .header__content > div {
@@ -252,6 +268,15 @@ header {
   background-color: var(--extra-light);
   border-radius: 100%;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* added video player tag to display at 80% */
+.sized-video {
+  width: 960px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 .story > span {
@@ -402,18 +427,16 @@ header {
 }
 
 .gallary__container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  /* my change */
+  display: flex;
   background-color: var(--secondary-color);
-  /* my change */
+
 }
 
 .image__gallary {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  width: 480px;
 }
 
 .gallary__col {
@@ -629,14 +652,17 @@ header {
 /* doing changes */
 #goToTopBtn {
   display: none;
+  width: 50px;
+  height: 50px;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #007bff;
+  bottom: 100px;
+  right: 0px;
+  background-color: #ab45e7;
   color: #fff;
-  padding: 10px;
+  padding: 2px;
   border: none;
-  border-radius: 5px;
+  margin-right: 27px;
+  border-radius: 50%;
   cursor: pointer;
 }
 
