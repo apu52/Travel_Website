@@ -7,21 +7,32 @@
     <link rel="stylesheet" href="style_.css">
     <!-- FontAwsome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    
 </head>
 <body>
-    <div>
-    <div class="rating-box">
-        <header>How was our service?</header>
-        <div class="stars">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
+    <div class="container">
+    <div class="glassmorphism-container">
+        <h1>Rate our Service</h1>
+    
+        <div class="stars" id="stars-container">
+          <!-- Stars will be added dynamically using JavaScript -->
         </div>
-    </div>
+    
+        <p id="rating-text">Rating: 0</p>
+    
+         <!-- Feedback input box section -->
+         <div>
+          <label for="feedback-input">Your feedback:</label>
+          <textarea id="feedback-input" placeholder="Enter your feedback here..."></textarea>
+      </div>
+      <button class="submit-button" onclick="submitFeedback()">Submit</button>
+      </div>
     <div><button class="button-36" onclick="location.href = 'index.html';">Return To Home Page</button></div>
     </div>
+</div>
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
     <script src="feedback.js" defer></script>
 </body>
 </html>
