@@ -69,7 +69,8 @@ main{
 .registration, .login{
     min-height: 30rem;
     min-width: 40vw;
-    background-color: aqua;
+    /* removed aqua color from background which beautifies the page
+    background-color: aqua;  */
     margin-left: 100px;
 }
 .grid-two--column{
@@ -113,6 +114,7 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    /* Added border radius to look better */
     border-radius: 40px;
 }
 .registration-form p, .login-form p{
@@ -137,6 +139,7 @@ input{
     width: 20rem;
     margin: .7rem 0;
     border: none;
+    /* Added border radius to make it look better */
     border-radius: 20px;
     background-color: #e8e8e8;
     padding: 1rem 1.8rem;
@@ -147,7 +150,8 @@ input[type="submit"]{
     min-width: 10rem;
     background-color: var(--var-primary-color);
     color:#fff;
-    border-radius: 20px;;
+    /* Added border radius to make it look better */
+    border-radius: 20px;
 }
 .registration:not(.login-section--display){
     display: none;

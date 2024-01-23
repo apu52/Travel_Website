@@ -676,72 +676,57 @@ body:hover {
   scrollbar-width: thin;
   scrollbar-color: var(--primary-color-dark) var(--extra-light);
 }
-.boo{
-  height: 40px;
-  width: 100px;
-  background-color: #ddb9e2;
-  color: white;
-}
 .sub__header:hover{
   background-color: transparent;
   color: var(--primary-color);
   
 }
 
-.aboutUs a {
-  color: #000; 
-}
-.aboutUs:hover{
-  color: blue;
-}
-.aboutcon{
-  text-decoration: double;
-  text-align: left;
-}
-.headingofAbout{
-  font:bolder;
-  text-align: center;
+:root {
+  --text-color: #000;
+  --background-color: #b7c9d5;
+  --box-background-color: #b9d7d3;
+  --accent-color: rgb(204, 102, 7); /* Color for hover effect */
 }
 
+/* Light mode */
+
+.headingofAbout {
+  font-weight: bolder;
+  text-align: center;
+  color: var(--text-color);
+}
 
 .aboutcon {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
 }
-
 
 .aboutcontent {
   text-align: center;
   margin-bottom: 20px;
 }
 
-
 .aboutcontent svg {
   width: 100px; 
   height: 90px; 
   fill: none;
   stroke-width: 2;
-  align-items:end;
+  align-items: end;
   stroke-linecap: round;
   stroke-linejoin: round;
   transition: all 0.3s ease-in-out;
-   display: inline-block;
-   box-shadow: 10px 70px 50px -1px rgba(176, 69, 137, 0.19);
-  -webkit-transition: all .4s ease-out 0s;
-  -o-transition: all .4s ease-out 0s;
-  -moz-transition: all .4s ease-out 0s;
-  transition: all .4s ease-out 0s;
-  background-color: #b7c9d5;
+  display: inline-block;
+  box-shadow: 10px 70px 50px -1px rgba(176, 69, 137, 0.19);
+  background-color: var(--background-color);
   border-radius: 20px;
 }
 
-
 .aboutcontent:hover svg {
-  stroke: rgb(204, 102, 7); 
+  stroke: var(--accent-color); 
 }
-
 
 .aboutcontent h3 {
   font-size: 1.5rem; 
@@ -750,25 +735,49 @@ body:hover {
 
 .aboutcontent p {
   font-size: 1rem; 
-  color: black;
-  font-size: medium;
-  font-style:oblique;
+  color: var(--text-color);
+  font-style: oblique;
 }
- .box1{
+
+.box1 {
   height: 175px;
   width: 500px;
-  background-color:#b9d7d3;
+  background-color: var(--box-background-color);
   align-items: center;
   align-content: center;
   border: 0.5px solid;
-  border-color:#b9c9d7;
+  border-color: var(--background-color);
   border-radius: 20px;
-  display:flexbox;
-  margin-bottom:10px;
+  display: flex;
+  margin-bottom: 10px;
   justify-content: center;
- }
- .color{
-  background-color:#b9c9d7;
- }
- 
+}
+
+.color {
+  background-color: var(--background-color);
+}
+
+/* Dark mode styles */
+.dark-mode {
+  --text-color: #fff;
+  --background-color: #1a1a1a;
+  --box-background-color: #2c2c2c;
+}
+
+
+
+.dark-mode .box1 {
+  background-color: var(--box-background-color);
+  border-color: var(--background-color);
+}
+/* Add dark mode styles for other elements as needed */
+.dark-mode .headingofAbout {
+  color: var(--text-color);
+}
+
+.dark-mode .aboutcontent p{
+  /* Dark mode styles for content */
+  color: var(--text-color);
+}
+
 

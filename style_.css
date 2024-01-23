@@ -15,9 +15,9 @@ body{
     justify-content: center;
     background: linear-gradient(45deg, #ae45ff, #ffb45d);
 }
-.headd{
+/* .headd{
   text-align:left;
-}
+} */
 .rating-box{
     position: relative;
     background: #b9d372;
