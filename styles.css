@@ -739,3 +739,64 @@ body:hover {
   scrollbar-width: thin;
   scrollbar-color: var(--primary-color-dark) var(--extra-light);
 }
+/* rate us*/
+/* styles.css */
+
+
+  
+  
+
+/* styles.css */
+
+
+.glassmorphism-container {
+  background: rgba(135, 206, 250, 0.7); /* Sky blue color */
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333; /* Dark text color */
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.fa-star {
+  font-size: 24px;
+  color: #f0d42b;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+#rating-text {
+  color: #333; /* Dark text color */
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: #ddd;
+}
+
