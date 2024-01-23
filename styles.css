@@ -755,3 +755,43 @@ body:hover {
   scrollbar-width: thin;
   scrollbar-color: var(--primary-color-dark) var(--extra-light);
 }
+
+
+
+body{
+  background-color:#eee;
+  margin-top:20px;
+}
+.card {
+  box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+}
+.nav-tabs-custom .nav-item .nav-link.active {
+  color: #6c6ff5;
+}
+.nav-tabs-custom .nav-item .nav-link {
+  border: none;
+}
+.text-muted {
+  color: #8ca3bd!important;
+}
+.nav-tabs-custom .nav-item {
+  position: relative;
+  color: #271050;
+}
+.nav-tabs-custom .nav-item .nav-link.active:after {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.nav-tabs-custom .nav-item .nav-link::after {
+  content: "";
+  background: #6c6ff5;
+  height: 2px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -1px;
+  -webkit-transition: all 250ms ease 0s;
+  transition: all 250ms ease 0s;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
