@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
+  
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="./Image-Gallery/style.css">
-    <title>Arpan Codes | Tourguide</title>
+    <title>Tourguide</title>
      <!-- adding a fav-icon -->
      <link rel="icon" href="img/A T logo with a white background and a square shape, connected to nature for a travel company.png" type="image/x-icon" />
+     
     <script src="index.js"></script>
 
     <script type="text/javascript"
@@ -33,45 +36,46 @@
   </style>
 
   </head>
-  <body>
-    <nav>
-      <div class="nav__logo">Tourguide<span>.</span></div>
-      <ul class="nav__links">
-        <li class="link"><a href="#Home">Home</a></li>
-        <!-- Adding the component "About Us" -->
-        <li class="link"><a href="#AboutUs ">About Us</a></li>
-        <li class="link"><a href="#Destinations">Destinations</a></li>
-        <li class="link"><a href="#trip">Pricing</a></li>
-        <li class="link"><a href="#testimonials">Testimonials</a></li>
-        <li class="link"><a href="#ReviewGallery">Reviews</a></li>
 
-        <li class="link"><a href="feedback.html">Rate Us?</a></li>
-       
 
-        <li class="link"><a href="login.html">Login</a></li>
-      </ul>
-      <a href="#contact"><button class="btn">Contact Us</button></a>
-    </nav>
-    <header>
-      <section class="section__container header__container" id="Home">
-        <div class="header__image">
-          <img src="https://i.ibb.co/88Qnjxg/pexels-josh-hild-2422259.jpg" alt="header" />
-          <img src="https://i.ibb.co/w4Jqjdf/pexels-andrei-tanase-1271619.jpg" alt="header" />
-        </div>
-        <div class="header__content">
-          <div>
-            <p class="sub__header">Book Now</p>
-            <h1>Find Your Perfect Getaway<br />Discover the World's Best Kept Secrets</h1>
-            <p class="section__subtitle">
-              Make your travel more enjoyable with us. We are the best travel
-              agency and we are providing the best travel services for our
-              clients.
-            </p>
-            <div class="action__btns">
-              <button class="btn">Plan a Trip</button>
-              <div class="story">
-                <div class="video">
-                  <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" type="video/mp4"></img> 
+<body>
+  <nav>
+    <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+    <ul class="nav__links">
+      <li class="link" data-aos="fade-down"><a href="#Home">Home</a></li>
+      <li class="link" data-aos="fade-down"><a href="#Destinations">Destinations</a></li>
+      <li class="link" data-aos="fade-down"><a href="#trip">Pricing</a></li>
+      <li class="link" data-aos="fade-down"><a href="#testimonials">Testimonials</a></li>
+      <li class="link" data-aos="fade-down"><a href="#ReviewGallery">Reviews</a></li>
+      <li class="link" data-aos="fade-down"><a href="feedback.html">Rate Us?</a></li>
+      <li class="link" data-aos="fade-down"><a href="login.html">Login</a></li>
+    </ul>
+    <button id="toggle" data-aos="fade-down">Dark Theme</button>
+    <a href="#contact" data-aos="fade-down"><button class="btn">Contact Us</button></a>
+  </nav>
+  <header>
+    <section class="section__container header__container" id="Home">
+      <div class="header__image" data-aos="fade-down-right">
+        <img src="https://i.ibb.co/88Qnjxg/pexels-josh-hild-2422259.jpg" alt="header" />
+        <img src="https://i.ibb.co/w4Jqjdf/pexels-andrei-tanase-1271619.jpg" alt="header" />
+      </div>
+      <div class="header__content">
+        <div>
+          <h1 data-aos="fade-in">Find Your Perfect Getaway<br />Discover the World's Best Kept <span class="auto-typed"
+              style="color: slateblue;"></span></h1>
+          <p class="section__subtitle" data-aos="fade-in">
+            Make your travel more enjoyable with us. We are the best travel
+            agency and we are providing the best travel services for our
+            clients.
+          </p>
+          <div class="action__btns">
+            <button class="btn" data-aos="fade-in" style="width: 160px;">Plan a Trip</button>
+            <a href="./payment.html"><button class="btn" data-aos="fade-in" style="width: 160px;">Book Now</button></a>
+            <div class="story">
+              <div class="video">
+                <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" type="video/mp4"></img> 
+                <!-- link to the hmtl page with the video -->
+                <a href="story.html" class="btn_video" target="_blank">
                   <span><i class="ri-play-fill"></i></span>
                 </div>
                 <span>Watch our story</span>
@@ -225,189 +229,198 @@
       </div>
     </section>
 
-    <section class="trip" id="trip">
-      <div class="section__container trip__container">
-        <h2 class="section__title">Best trip package</h2>
-        <p class="section__subtitle">
-          Explore your suitable and dream places around the world. Here you can
-          find your right destination.
-        </p>
-        <div class="trip__grid">
-          <div class="trip__card">
-            <img src="https://i.ibb.co/60nvYwQ/Screenshot-2023-07-14-173347.png" alt="trip" height="250" width="45"/>
-            <div class="trip__details">
-              <p>Santorini ,Aegean Sea</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $300</div>
-                <button class="book__now">Book Now</button>
-              </div>
-            </div>
-          </div>
-          <div class="trip__card">
-            <img src="https://i.ibb.co/h1WgH8B/Screenshot-2023-07-14-173807.png" alt="trip" height="250" width="45" />
-            <div class="trip__details">
-              <p>Machu Picchu ,Peru</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $450</div>
-                <button class="book__now">Book Now</button>
-              </div>
-            </div>
-          </div>
-          <div class="trip__card">
-            <img src="https://i.ibb.co/vc2W0wN/Screenshot-2023-07-14-174151.png" alt="trip" height="250" width="45"/>
-            <div class="trip__details">
-              <p>Grand Canyon National Park ,Arizona</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $400</div>
-                <button class="book__now">Book Now</button>
-              </div>
+  <section class="trip" id="trip" data-aos="zoom-in" data-aos-offset="100">
+    <div class="section__container trip__container">
+      <h2 class="section__title">Best trip package</h2>
+      <p class="section__subtitle">
+        Explore your suitable and dream places around the world. Here you can
+        find your right destination.
+      </p>
+      <div class="trip__grid">
+        <div class="trip__card">
+          <img src="https://i.ibb.co/60nvYwQ/Screenshot-2023-07-14-173347.png" alt="trip" height="250" width="45" />
+          <div class="trip__details">
+            <p>Santorini ,Aegean Sea</p>
+            <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            <div class="booking__price">
+              <div class="price"><span>From</span> $300</div>
+              <a href="./payment.html"><button class="book__now">Book Now</button></a>
             </div>
           </div>
         </div>
-        <div class="view__all">
-          <a href="./package.html"><button class="btn">View All</button></a>
+        <div class="trip__card">
+          <img src="https://i.ibb.co/h1WgH8B/Screenshot-2023-07-14-173807.png" alt="trip" height="250" width="45" />
+          <div class="trip__details">
+            <p>Machu Picchu ,Peru</p>
+            <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            <div class="booking__price">
+              <div class="price"><span>From</span> $450</div>
+              <a href="./payment.html"><button class="book__now">Book Now</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="trip__card">
+          <img src="https://i.ibb.co/vc2W0wN/Screenshot-2023-07-14-174151.png" alt="trip" height="250" width="45" />
+          <div class="trip__details">
+            <p>Grand Canyon National Park ,Arizona</p>
+            <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            <div class="booking__price">
+              <div class="price"><span>From</span> $400</div>
+              <a href="./payment.html"><button class="book__now">Book Now</button></a>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+      <div class="view__all">
+        <a href="./package.html"><button class="btn">View All</button></a>
+      </div>
+    </div>
+  </section>
 
 
-    <section class="gallary" id="ReviewGallery">
-      <div class="section__container gallary__container">
-        <div class="section__container gallary__container" id="originalDiv">
+  <section class="gallary" id="ReviewGallery">
+    <div class="section__container gallary__container">
+      <div class="section__container gallary__container" id="originalDiv">
         <div class="image__gallary">
-          <div class="gallary__col">
+          <div class="gallary__col" data-aos="zoom-in">
             <img src="https://i.ibb.co/ZYDJ6vv/pexels-spencer-davis-4356144.jpg" alt="gallary" />
           </div>
-          <div class="gallary__col">
+          <div class="gallary__col" data-aos="zoom-in">
             <img src="https://i.ibb.co/W3HTbYG/pexels-zakaria-boumliha-2827374.jpg" alt="gallary" />
             <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" alt="gallary" />
           </div>
         </div>
         <div class="gallary__content">
           <div>
-            <h2 class="section__title">
+            <h2 class="section__title" data-aos="zoom-in">
               Our trip gallary that will inspire you
             </h2>
-            <p class="section__subtitle">
+            <p class="section__subtitle" data-aos="zoom-in">
               Explore your suitable and dream places around the world. Here you
               can find your right destination.
             </p>
-            <button class="btn" id="btn-page" onclick="replaceDivs()">View All</button>
+            <button class="btn" id="btn-page" onclick="replaceDivs()" data-aos="zoom-in">View All</button>
           </div>
         </div>
-        </div>
-      </div>
-    </section><br><br>
-
-  </section><br>
-  <br>
-  <br><br>
-    <!-- New div components (hidden initially) -->
-    <div id="newDiv" style="display: none;">
-      <!-- Sliding Animated Gallery -->
-      <div class="gallery-rotate-image">
-        <div class="image-container">
-          <span style="--i : 1">
-            <img src="./img/pexels-ajay-donga-2174656.jpg">
-          </span>
-          <span style="--i : 2">
-            <img src="./img/pexels-alex-azabache-3214958.jpg">
-          </span>
-          <span style="--i : 3">
-            <img src="./img/pexels-andrei-tanase-1271619.jpg">
-          </span>
-          <span style="--i : 4">
-            <img src="./img/pexels-josh-hild-2422259.jpg">
-          </span>
-          <span style="--i : 5">
-            <img src="./img/pexels-paulo-marcelo-martins-2412606.jpg">
-          </span>
-          <span style="--i : 6">
-            <img src="./img/pexels-quang-nguyen-vinh-2132126.jpg">
-          </span>
-          <span style="--i : 7">
-            <img src="./img/pexels-sam-kolder-2387871.jpg">
-          </span>
-          <span style="--i : 8">
-            <img src="./img/pexels-spencer-davis-4356144.jpg">
-          </span>
-          <span style="--i : 9">
-            <img src="./img/pexels-stijn-dijkstra-2499699.jpg">
-          </span>
-          <span style="--i : 10">
-            <img src="./img/pexels-zakaria-boumliha-2827374.jpg">
-          </span>
-        </div>
-      </div>
-      <div class="btn-container">
-        <button class="btn" id="prev">Prev</button>
-        <button class="btn" id="next">Next</button>
-      </div>
-      <!-- Trip Photo Gallery -->
-      <div class="trip-gallery-container">
-        <img src="./img/Trip_Photos/photo1.png" height="250" width="200">
-        <img src="./img/Trip_Photos/photo2.png" height="250" width="200">
-        <img src="./img/Trip_Photos/photo3.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo4.png" height="250" width="200">
-        <img src="./img/Trip_Photos/photo5.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo6.png" height="250" width="200">
-        <img src="./img/Trip_Photos/photo7.png" height="250" width="200">
-        <img src="./img/Trip_Photos/photo8.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo9.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo10.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo11.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo12.jpeg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo13.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo14.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo16.png" height="250" width="200">
-        <img src="./img/Trip_Photos/photo18.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo19.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo20.png" height="250" width="200">
       </div>
     </div>
+  </section><br><br>
+  <!-- New div components (hidden initially) -->
+  <div id="newDiv" style="display: none;" data-aos="zoom-in">
+    <!-- Sliding Animated Gallery -->
+    <div class="gallery-rotate-image">
+      <div class="image-container">
+        <span style="--i : 1">
+          <img src="./img/pexels-ajay-donga-2174656.jpg">
+        </span>
+        <span style="--i : 2">
+          <img src="./img/pexels-alex-azabache-3214958.jpg">
+        </span>
+        <span style="--i : 3">
+          <img src="./img/pexels-andrei-tanase-1271619.jpg">
+        </span>
+        <span style="--i : 4">
+          <img src="./img/pexels-josh-hild-2422259.jpg">
+        </span>
+        <span style="--i : 5">
+          <img src="./img/pexels-paulo-marcelo-martins-2412606.jpg">
+        </span>
+        <span style="--i : 6">
+          <img src="./img/pexels-quang-nguyen-vinh-2132126.jpg">
+        </span>
+        <span style="--i : 7">
+          <img src="./img/pexels-sam-kolder-2387871.jpg">
+        </span>
+        <span style="--i : 8">
+          <img src="./img/pexels-spencer-davis-4356144.jpg">
+        </span>
+        <span style="--i : 9">
+          <img src="./img/pexels-stijn-dijkstra-2499699.jpg">
+        </span>
+        <span style="--i : 10">
+          <img src="./img/pexels-zakaria-boumliha-2827374.jpg">
+        </span>
+      </div>
+    </div>
+    <div class="btn-container">
+      <button class="btn" id="prev">Prev</button>
+      <button class="btn" id="next">Next</button>
+    </div>
+    <!-- Trip Photo Gallery -->
+    <div class="trip-gallery-container">
+      <img src="./img/Trip_Photos/photo1.png" height="250" width="200">
+      <img src="./img/Trip_Photos/photo2.png" height="250" width="200">
+      <img src="./img/Trip_Photos/photo3.jpg" height="250" width="200">
+      <img src="./img/Trip_Photos/photo4.png" height="250" width="200">
+      <img src="./img/Trip_Photos/photo5.jpg" height="250" width="200">
+      <img src="./img/Trip_Photos/photo6.png" height="250" width="200">
+      <img src="./img/Trip_Photos/photo7.png" height="250" width="200">
+      <img src="./img/Trip_Photos/photo8.jpg" height="250" width="200">
+      <img src="./img/Trip_Photos/photo9.jpg" height="250" width="200">
+      <img src="./img/Trip_Photos/photo10.jpg" height="250" width="200">
+      <img src="./img/Trip_Photos/photo11.jpg" height="250" width="200">
+      <img src="./img/Trip_Photos/photo12.jpeg" height="250" width="200">
+      <img src="./img/Trip_Photos/photo13.jpg" height="250" width="200">
+      <img src="./img/Trip_Photos/photo14.jpg" height="250" width="200">
+      <img src="./img/Trip_Photos/photo16.png" height="250" width="200">
+      <img src="./img/Trip_Photos/photo18.jpg" height="250" width="200">
+      <img src="./img/Trip_Photos/photo19.jpg" height="250" width="200">
+      <img src="./img/Trip_Photos/photo20.png" height="250" width="200">
+    </div>
+  </div>
 
 
-    <section class="Testimonials" id="testimonials">
-      <h2 class="section__title" align-items="center">Testimonials</h2>
-      <br>
-      <br>
+  <section class="Testimonials" id="testimonials">
+    <h2 class="section__title" align-items="center" data-aos="fade-in">Testimonials</h2>
+    <br>
+    <br>
     <div class="container marketing">
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
-        <div class="col-lg-4">
-          <img class="rounded-circle" width="5" height="350" preserveAspectRatio="xMidYMid slice" src="./img/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg">
+        <div class="col-lg-4" data-aos="fade-up">
+          <img class="rounded-circle" width="5" height="350" preserveAspectRatio="xMidYMid slice"
+            src="./img/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg">
           <h2 class="fw-normal">Joseph</h2>
-          <p>"TourGuide made our dream vacation a reality! From the breathtaking landscapes to the seamless logistics, every moment was a new adventure. The personalized itinerary and expert guides added a special touch to our journey. We can't wait to book our next trip with TourGuide!"</p>
-          
+          <p data-aos="fade-in">"TourGuide made our dream vacation a reality! From the breathtaking landscapes to the
+            seamless logistics,
+            every moment was a new adventure. The personalized itinerary and expert guides added a special touch to our
+            journey. We can't wait to book our next trip with TourGuide!"</p>
+
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="rounded-circle" width="5" height="350" preserveAspectRatio="xMidYMid slice" src="./img/Abhisek Tamang.jpg">
+        <div class="col-lg-4" data-aos="fade-up">
+          <img class="rounded-circle" width="5" height="350" preserveAspectRatio="xMidYMid slice"
+            src="./img/Abhisek Tamang.jpg">
           <h2 class="fw-normal">Charles</h2>
-          <p>"Our cultural tour with TourGuide exceeded all expectations. The immersive experiences, knowledgeable guides, and carefully curated activities allowed us to connect with the local culture in a way we never thought possible. Thanks to TourGuide."</p>
-          
+          <p data-aos="fade-in">"Our cultural tour with TourGuide exceeded all expectations. The immersive experiences,
+            knowledgeable
+            guides, and carefully curated activities allowed us to connect with the local culture in a way we never
+            thought possible. Thanks to TourGuide."</p>
+
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="rounded-circle" width="5" height="350" preserveAspectRatio="xMidYMid slice" src="./img/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg">
+        <div class="col-lg-4" data-aos="fade-up">
+          <img class="rounded-circle" width="5" height="350" preserveAspectRatio="xMidYMid slice"
+            src="./img/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg">
           <h2 class="fw-normal">Katie</h2>
-          <p>"Traveling with the family has never been easier! TourGuide took care of every detail, ensuring a stress-free and enjoyable vacation for all. The kid-friendly activities and family-oriented guides made our trip unforgettable."</p>
-          
+          <p data-aos="fade-in">"Traveling with the family has never been easier! TourGuide took care of every detail,
+            ensuring a
+            stress-free and enjoyable vacation for all. The kid-friendly activities and family-oriented guides made our
+            trip unforgettable."</p>
+
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
-  
+
     </div>
-    </section>
+  </section>
 
 
-    <section class="contact" id="contact">
-      <h2 class="section__title" align-items="center">Contact Us</h2>
-      <div class="contact-form">
-        <div class="left">
-          <!-- Add your image here -->
-        <img src="./img/flat-design-illustration-customer-support_23-2148887720.avif" alt="Contact Image" style="max-width: 100%; width: 500px;">
+  <section class="contact" id="contact">
+    <h2 class="section__title" align-items="center" data-aos="slide-right">Contact Us</h2>
+    <div class="contact-form" data-aos="fade-in">
+      <div class="left">
+        <!-- Add your image here -->
+        <img src="./img/flat-design-illustration-customer-support_23-2148887720.avif" alt="Contact Image"
+          style="max-width: 100%; width: 500px;">
       </div>
       <div class="right">
         <form>
@@ -417,115 +430,162 @@
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail2" class="form-label text-light">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Enter your email">
+            <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp"
+              placeholder="Enter your email">
             <div id="emailHelp" class="form-text text-light">We'll never share your email with anyone else.</div>
           </div>
           <div class="mb-3">
             <label for="exampleInputMessage" class="form-label text-light">Message</label>
-            <textarea class="form-control" id="exampleInputMessage" rows="4" placeholder="feel free to ask your queries!"></textarea>
+            <textarea class="form-control" id="exampleInputMessage" rows="4"
+              placeholder="feel free to ask your queries!"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary"  onclick="sendMail()">Submit</button>
+          <button type="submit" class="btn btn-primary" onclick="sendMail()">Submit</button>
         </form>
-        </div>
       </div>
-
-      
-        
-    </section>
+    </div>
 
 
 
+  </section>
 
 
-    <section class="subscribe" id="Contact">
-      <div class="section__container subscribe__container">
-        <div class="subscribe__content">
-          <h2 class="section__title">Subscribe to get special prize</h2>
-          <p class="section__subtitle">
-            Explore your suitable and dream places around the world. Here you
-            can find your right destination.
-          </p>
-        </div>
-        <div class="subscribe__form">
-          <form>
-            <input type="email" placeholder="Your email here" />
-            <button class="btn" id="send" type="submit">Send</button>
-          </form>
-        </div>
+
+
+
+  <section class="subscribe" id="Contact">
+    <div class="section__container subscribe__container">
+      <div class="subscribe__content">
+        <h2 class="section__title" data-aos="fade-up">Subscribe to get special prize</h2>
+        <p class="section__subtitle" data-aos="fade-up">
+          Explore your suitable and dream places around the world. Here you
+          can find your right destination.
+        </p>
       </div>
-    </section>
+      <div class="subscribe__form" data-aos="fade-up">
+        <form>
+          <input type="email" placeholder="Your email here" />
+          <button class="btn" id="send" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
 
-    <footer class="footer">
-      <div class="section__container footer__container">
-        <div class="footer__col">
-          <h3>Tourguide<span>.</span></h3>
-          <p>
-            Explore your suitable and dream places around the world. Here you
-            can find your right destination.
-          </p>
-        </div>
-        <div class="footer__col">
-          <h4>Support</h4>
-          <p>FAQs</p>
-          <p>Terms & Conditions</p>
-          <p>Privacy Policy</p>
-          <p>Contact Us</p>
-        </div>
-        <div class="footer__col">
-          <h4>Address</h4>
-          <p>
-            <span>Address:</span> 3/2 Wellington Street, Kolkata , West Bengal , India 
-          </p>
-          <p><span>Email:</span> tour@tourguide.com</p>
-          <p><span>Phone:</span> +91 8562145852</p>
-        </div>
+  <footer class="footer" data-aos="fade-up">
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <h3>Tourguide<span>.</span></h3>
+        <p>
+          Explore your suitable and dream places around the world. Here you
+          can find your right destination.
+        </p>
       </div>
-      <div class="footer__bar">
-        Copyright © 2023 Arpan Chowdhury. All rights reserved.
+      <div class="footer__col">
+        <h4>Support</h4>
+        <p>FAQs</p>
+        <p>Terms & Conditions</p>
+        <p>Privacy Policy</p>
+        <p>Contact Us</p>
       </div>
-    </footer>
-    <!-- adding a btn -->
-    <button id="goToTopBtn" onclick="goToTop()">Go to Top</button>
-    <script>
-      // Get the button
-      var mybutton = document.getElementById("goToTopBtn");
-    
-      // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function () {
-        scrollFunction();
-      };
-    
-      function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
-    
-      // When the user clicks on the button, scroll to the top of the document
-      function goToTop() {
-        document.body.scrollTop = 0; 
-        document.documentElement.scrollTop = 0; 
-      }
-    </script>
-  </body>
+      <div class="footer__col">
+        <h4>Address</h4>
+        <p>
+          <span>Address:</span> 3/2 Wellington Street, Kolkata , West Bengal , India
+        </p>
+        <p><span>Email:</span> tour@tourguide.com</p>
+        <p><span>Phone:</span> +91 8562145852</p>
+      </div>
+    </div>
+    <div class="footer__bar">
+      Copyright © 2023 Arpan Chowdhury. All rights reserved.
+    </div>
+  </footer>
+  <!-- adding a btn -->
+  <button id="goToTopBtn" onclick="goToTop()"> <i class="fa-solid fa-chevron-up" style="color: #00328a;"></i></button>
+
   <script>
-    function replaceDivs() {
-      // Get references to the original and new divs
-      var originalDiv = document.getElementById("originalDiv");
-      var newDiv = document.getElementById("newDiv");
+    // Get the button
+    var mybutton = document.getElementById("goToTopBtn");
 
-      // Check if the original div exists
-      if (originalDiv) {
-          // Hide the original div
-          originalDiv.style.display = "none";
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
 
-          // Show the new div
-          newDiv.style.display = "block";
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
       }
-  }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function goToTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
   </script>
-  <script src="./Image-Gallery/script.js"></script>
-  
+
+
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1500,
+      offset: 120
+    });
+  </script>
+
+  <!-- typing animation -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed(".auto-typed", {
+      strings: ["Wonders", "Gems", "Secrets"],
+      typeSpeed: 150,
+      backSpeed: 50,
+      loop: true
+    })
+  </script>
+
+
+
+
+ <!--Start of Conferbot Script-->
+ <script type="text/javascript">
+  (function (d, s, id) {
+    var js, el = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.async = true;
+    js.src = 'https://s3.ap-south-1.amazonaws.com/conferbot.defaults/dist/v1/widget.min.js';
+    js.id = id;
+    js.charset = 'UTF-8';
+    el.parentNode.insertBefore(js, el);
+    js.onload = function () {
+      var w = window.ConferbotWidget("65abf7c21173f1231cef840f", "live_chat");
+    };
+  })(document, 'script', 'conferbot-js');
+</script>
+<!--End of Conferbot Script-->
+
+
+</body>
+<script>
+  function replaceDivs() {
+    // Get references to the original and new divs
+    var originalDiv = document.getElementById("originalDiv");
+    var newDiv = document.getElementById("newDiv");
+
+    // Check if the original div exists
+    if (originalDiv) {
+      // Hide the original div
+      originalDiv.style.display = "none";
+
+      // Show the new div
+      newDiv.style.display = "block";
+    }
+  }
+</script>
+<script src="./Image-Gallery/script.js"></script>
+
 </html>

@@ -1,85 +1,85 @@
 /*Google Fonts*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:'Poppins', sans-serif ;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(to right, #4DA0B0, #fff);
+  font-family: 'Arial', sans-serif;
 }
 
-body{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(45deg, #ae45ff, #ffb45d);
-}
-/* .headd{
-  text-align:left;
-} */
-.rating-box{
-    position: relative;
-    background: #b9d372;
-    padding: 25px 50px 35px;
-    border-radius: 25px;
-    box-shadow: 0 5px 10px rgba(0, 0,0 ,0.3);
-}
-.rating-box header{
-    font-size: 23px;
-    color: #fefafe;
-    font-weight: 500;
-    margin-bottom:20px ;
-    text-align: center;
-}
-.rating-box .stars{
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-.stars i{
-    color:#97ad5b;
-    font-size: 35px;
-    cursor: pointer;
-    transition: color 0.1s ease;
-}
-.stars i.active{
-    color: #ff9c1a;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* CSS */
-.button-36 {
-  background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
-  border-radius: 8px;
-  padding: 25px 50px 35px;
-  border-style: none;
-  position: relative;
-  box-sizing: border-box;
-  margin-left:80px;
-  margin-top: 50px;
-  color: #FFFFFF;
-  cursor: pointer;
-  flex-shrink: 0;
-  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  height: 2.5rem;
-  padding: 0 1.6rem;
+.glassmorphism-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
   text-align: center;
-  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
-  transition: all .5s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  max-width: 400px; 
+  width: 90%; 
+  margin-bottom: 20px; 
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.star {
+  color: #FFD700;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.star:hover {
+  color: #FFA500;
+}
+
+#rating-text {
+  margin-top: 10px;
+}
+
+.button-36-container {
+  margin-top: 20px;
+}
+
+.button-36-container a {
+  text-decoration: none;
+}
+
+.button-36 {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #4DA0B0;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
 }
 
 .button-36:hover {
-  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
-  transition-duration: .1s;
+  background: #357c8e;
 }
 
-@media (min-width: 768px) {
-  .button-36 {
-    padding: 0 2.6rem;
+
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 90%;
   }
 }

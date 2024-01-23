@@ -3,10 +3,13 @@
 :root {
   --primary-color: #3685fb;
   --primary-color-dark: #2f73d9;
-  --secondary-color: #fafcff;
-  --text-dark: #0d213f;
   --text-light: #767268;
   --extra-light: #ffffff;
+  --foot-light:#0d213f;
+        --arr-light:#3685fb;
+        --body-light:#ffffff;
+        --secondary-color: #fafcff; 
+        --text-dark: #0d213f; 
   --max-width: 1200px;
 }
 
@@ -14,6 +17,24 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.dark-theme{
+  --secondary-color: black;
+  --text-dark: #ffffff;
+  --arr-light:white;
+  --body-light:black;
+}
+#toggle{
+  padding: 0.75rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--extra-light);
+  background-color: var(--primary-color);
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .section__container {
@@ -70,6 +91,21 @@
 .btn:hover {
   background-color: var(--primary-color-dark);
   font-weight: 600;
+}
+
+/* ensures no box or shadow for the video button */
+.btn_video {
+  background: none;       
+  color: inherit;         
+  border: none;           
+  padding: 0;            
+  margin: 0;              
+  font: inherit;          
+  cursor: pointer;        
+  outline: inherit;       
+  box-shadow: none;       
+  text-align: inherit;    
+  display: inline;        
 }
 
 a {
@@ -140,7 +176,7 @@ header {
   min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 15rem;
 }
 
 .header__image {
@@ -170,6 +206,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 30px;
 }
 
 .header__content > div {
@@ -231,6 +268,15 @@ header {
   background-color: var(--extra-light);
   border-radius: 100%;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* added video player tag to display at 80% */
+.sized-video {
+  width: 960px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 .story > span {
@@ -380,19 +426,17 @@ header {
   background-color: var(--primary-color);
 }
 
-.section__container .gallary__container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
+.gallary__container {
+  display: flex;
+  background-color: var(--secondary-color);
+
 }
 
 .image__gallary {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  width: 480px;
 }
 
 .gallary__col {
@@ -490,16 +534,31 @@ header {
 }
 
 .footer__container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  /*grid-template-columns: repeat(3, 1fr);*/
+  gap: 24px;
   color: var(--secondary-color);
+}
+
+.footer__col{
+  flex: 1;
+  max-width: 200px;
+  margin: 10px;
+  text-align: center;
+  flex-direction: column;
+}
+
+.footer__col:nth-child(2) {
+  margin-top: 10px; 
 }
 
 .footer__col h3 {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
 }
 
 .footer__col h3 span {
@@ -508,7 +567,6 @@ header {
 
 .footer__col p {
   font-size: 0.8rem;
-  margin-bottom: 1rem;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -524,7 +582,7 @@ header {
 .footer__col h4 {
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 2rem;
+  margin-bottom: 10px;
 }
 
 .footer__bar {
@@ -533,7 +591,8 @@ header {
   padding: 0.5rem;
   text-align: center;
   font-size: 0.8rem;
-  color: var(--secondary-color);
+/*   color: var(--secondary-color); */
+    color: var(--extra-light);
   border-top: 1px solid var(--text-light);
 }
 
@@ -593,14 +652,17 @@ header {
 /* doing changes */
 #goToTopBtn {
   display: none;
+  width: 50px;
+  height: 50px;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #007bff;
+  bottom: 100px;
+  right: 0px;
+  background-color: #ab45e7;
   color: #fff;
-  padding: 10px;
+  padding: 2px;
   border: none;
-  border-radius: 5px;
+  margin-right: 27px;
+  border-radius: 50%;
   cursor: pointer;
 }
 
