@@ -47,7 +47,7 @@
       <li class="link" data-aos="fade-down"><a href="#trip">Pricing</a></li>
       <li class="link" data-aos="fade-down"><a href="#testimonials">Testimonials</a></li>
       <li class="link" data-aos="fade-down"><a href="#ReviewGallery">Reviews</a></li>
-      <li class="link" data-aos="fade-down"><a href="feedback.html">Rate Us?</a></li>
+      <li id="openModalBtn" data-aos="fade-down">Rate Us?</li>
       <li class="link" data-aos="fade-down"><a href="login.html">Login</a></li>
     </ul>
     <button id="toggle" data-aos="fade-down">Dark Theme</button>
@@ -378,6 +378,20 @@
       </div>
     </div>
   </section>
+  <!--rate us-->
+  <div class="container">
+    <div class="glassmorphism-container">
+      <h1>Rate our Service</h1>
+
+      <div class="stars" id="stars-container">
+        <!-- Stars will be added dynamically using JavaScript -->
+      </div>
+
+      <p id="rating-text">Rating: 0</p>
+    
+    <button class="close-btn" onclick="closeModal();">Close</button>
+  </div>
+    </div>
 
   <footer class="footer" data-aos="fade-up">
     <div class="section__container footer__container">
@@ -496,5 +510,60 @@
   }
 </script>
 <script src="./Image-Gallery/script.js"></script>
+<script>
+  // script.js
+  
+  
+      
 
+  var openModalBtn = document.getElementById("openModalBtn");
+
+// Apply click event listener directly to the "Rate Us" button
+openModalBtn.addEventListener('click', function () {
+  var rateUsModal = document.querySelector('.glassmorphism-container');
+  var starsContainer = document.getElementById('stars-container');
+  var ratingText = document.getElementById('rating-text');
+
+  var currentRating = 0;
+
+  // Function to generate star icons dynamically
+  function generateStars() {
+    starsContainer.innerHTML = '';
+    for (var i = 1; i <= 5; i++) {
+      var star = document.createElement('i');
+      star.className = 'fa-solid fa-star';
+      star.dataset.rating = i;
+      star.addEventListener('click', function () {
+        currentRating = parseInt(this.dataset.rating);
+        updateRating();
+      });
+      starsContainer.appendChild(star);
+    }
+  }
+
+  // Function to update the displayed rating
+  function updateRating() {
+    ratingText.textContent = 'Rating: ' + currentRating;
+  }
+
+  // Open the modal and generate stars on click
+  generateStars();
+  rateUsModal.style.display = 'block';
+
+  // Close modal when the "Close" button is clicked
+  var closeBtn = document.querySelector('.close-btn');
+  closeBtn.addEventListener('click', function () {
+    rateUsModal.style.display = 'none';
+  });
+
+  // Close modal if user clicks outside the modal content
+  window.addEventListener('click', function (event) {
+    if (event.target === rateUsModal) {
+      rateUsModal.style.display = 'none';
+    }
+  });
+});
+document.querySelector('.glassmorphism-container').style.display = 'none';
+
+</script>
 </html>
