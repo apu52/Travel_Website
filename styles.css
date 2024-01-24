@@ -815,8 +815,8 @@ body{
 
 .testimonial-user{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-flow: column nowrap;
   align-items: center;
   background: #efefef;
   height: 400px;
@@ -826,10 +826,16 @@ body{
   padding: 0 20px 20px 20px;
   box-shadow: 0 0 27px 0 rgb(0 0 0 / 5%);
 }
+.testimonial-user > div{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
 
 .testi-img{
   width: 120px;
   height: 120px;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   object-fit: cover;
   transform: translate(0, -50%);
