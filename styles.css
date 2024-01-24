@@ -819,7 +819,7 @@ body{
   justify-content: center;
   align-items: center;
   background: #efefef;
-  height: fit-content;
+  height: 400px;
   width: 350px;
   max-width: 90%;
   margin-top: 50px;
