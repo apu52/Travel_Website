@@ -1,0 +1,97 @@
+/*css/style.css */
+
+.slider{
+	margin:120px 50px;
+	width:40%;
+
+}
+ 
+.img-box img{
+	width:100%;
+  border: #575050 solid 3px;
+  box-shadow: 5px 5px 60px #575050 ;
+}
+
+.btn{
+	border:none;
+	outline:none;
+	background:#888;
+	padding:10px 30px;
+	font-size: 20px;
+	color:#ddd;
+	cursor: pointer;
+	margin:17px auto;			 
+  margin-bottom: 20px;
+}
+
+
+#btns:hover{
+	background: #111;
+}
+
+.middle{
+  display: flex;
+}
+
+.right-section{
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+
+
+}
+
+.check-in-out{
+  display: flex;
+  flex-direction: row;
+  margin-top: 120px;
+}
+
+.check-in, .check-out{
+  display: flex;
+  gap: .7rem;
+  font-weight: bold;
+
+}
+.check-in{
+  margin-right: 4rem;
+  margin-left: 0px;
+}
+
+
+.map{
+  margin-top: 30px;
+  height: 200px;
+  margin-right: 20px;
+  box-shadow: 5px 5px 20px #5c5757;
+}
+
+.description{
+  margin: 50px 0;
+  height: 400px;
+  width: 800px;
+  padding: 0;
+}
+
+#btnss{
+  margin-left: 6rem;
+  padding: 11px 45px ;
+}
+
+#btnss:hover{
+  background-color:#111;
+}
+
+.features{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#chk-design{
+  font-size: 16px;
+  font-weight: bold;
+  height: 30px;
+  border-radius: 10px;
+  border: black solid 1px;
+}
