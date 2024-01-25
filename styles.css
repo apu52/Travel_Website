@@ -863,7 +863,7 @@ body:hover {
   border: 0.5px solid;
   border-color: var(--text-dark); /* Use the text-dark custom property for color */
   
-  border-radius: 20px;
+  border-radius: 21px;
   display: flex;
   margin-left: 30px;
   margin-bottom: 10px;
