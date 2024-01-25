@@ -53,7 +53,7 @@
       <li class="link" data-aos="fade-down"><a href="login.html">Login</a></li>
     </ul>
     <button id="toggle" data-aos="fade-down">Dark Theme</button>
-    <a href="#contact" data-aos="fade-down"><button class="btn">Contact Us</button></a>
+    <a href="#contact"><button class="btn" id="btn-style">Contact Us</button></a>
   </nav>
   <header>
     <section class="section__container header__container" id="Home">
@@ -368,46 +368,38 @@
   </div>
 
 
-  <section class="Testimonials" id="testimonials">
-    <h2 class="section__title" align-items="center" data-aos="fade-in">Testimonials</h2>
-    <br>
-    <br>
-    <div class="container marketing">
+  <!-- Testimonials Section -->
 
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-4" data-aos="fade-up">
-          <img class="rounded-circle" width="5" height="350" preserveAspectRatio="xMidYMid slice"
-            src="./img/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg">
-          <h2 class="fw-normal">Joseph</h2>
-          <p data-aos="fade-in">"TourGuide made our dream vacation a reality! From the breathtaking landscapes to the
-            seamless logistics,
-            every moment was a new adventure. The personalized itinerary and expert guides added a special touch to our
-            journey. We can't wait to book our next trip with TourGuide!"</p>
-
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4" data-aos="fade-up">
-          <img class="rounded-circle" width="5" height="350" preserveAspectRatio="xMidYMid slice"
-            src="./img/Abhisek Tamang.jpg">
-          <h2 class="fw-normal">Charles</h2>
-          <p data-aos="fade-in">"Our cultural tour with TourGuide exceeded all expectations. The immersive experiences,
-            knowledgeable
-            guides, and carefully curated activities allowed us to connect with the local culture in a way we never
-            thought possible. Thanks to TourGuide."</p>
-
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4" data-aos="fade-up">
-          <img class="rounded-circle" width="5" height="350" preserveAspectRatio="xMidYMid slice"
-            src="./img/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg">
-          <h2 class="fw-normal">Katie</h2>
-          <p data-aos="fade-in">"Traveling with the family has never been easier! TourGuide took care of every detail,
-            ensuring a
-            stress-free and enjoyable vacation for all. The kid-friendly activities and family-oriented guides made our
-            trip unforgettable."</p>
-
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
-
+  <section class="testimonials" id="testimonials">
+    <h2 class="testimonial-heading" align-items="center" data-aos="fade-in">Testimonials</h2>
+    <div class="testimonial-container">
+      <div class="testimonial-user" data-aos="fade-up">
+        <img class="testi-img" src="./img/testimonial1.jpg" alt="">
+        <div>
+          <p><sup><i class="fas fa-quote-left"></i></sup>TourGuide made our dream vacation a reality! From the breathtaking landscapes to the seamless logistics, every moment was a new adventure. The personalized itinerary and expert guides added a special touch to our journey. We can't wait to book our next trip with TourGuide!<sup><i class="fas fa-quote-right"></i></sup></p>
+          <div class="user-info">
+            <h3>Joseph</h3>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-user" data-aos="fade-up">
+        <img class="testi-img" src="./img/Abhisek Tamang.jpg" alt="">
+        <div>
+          <p><sup><i class="fas fa-quote-left"></i></sup>Our cultural tour with TourGuide exceeded all expectations. The immersive experiences, knowledgeable guides, and carefully curated activities allowed us to connect with the local culture in a way we never thought possible. Thanks to TourGuide.<sup><i class="fas fa-quote-right"></i></sup></p>
+          <div class="user-info">
+            <h3>Charles</h3>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-user" data-aos="fade-up">
+        <img class="testi-img" src="./img/testimonial2.jpg" alt="">
+        <div>
+          <p><sup><i class="fas fa-quote-left"></i></sup>Traveling with the family has never been easier! TourGuide took care of every detail, ensuring a stress-free and enjoyable vacation for all. The kid-friendly activities and family-oriented guides made our trip unforgettable.<sup><i class="fas fa-quote-right"></i></sup></p>
+          <div class="user-info">
+            <h3>Katie</h3>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -479,7 +471,7 @@
       </div>
       <div class="footer__col">
         <h4>Support</h4>
-        <p>FAQs</p>
+        <a href="./faq.html" style="color: inherit; text-decoration: none;"><p style="color: inherit;">FAQs</p></a>
         <p>Terms & Conditions</p>
         <p>Privacy Policy</p>
         <p>Contact Us</p>
@@ -498,8 +490,7 @@
     </div>
   </footer>
   <!-- adding a btn -->
-  <button id="goToTopBtn" onclick="goToTop()"> <i class="fa-solid fa-chevron-up" style="color: #00328a;"></i></button>
-
+  <button id="goToTopBtn" onclick="goToTop()" class="top-btn"> <i class="fa-solid fa-chevron-up" style="color: #00328a;"></i></button>
   <script>
     // Get the button
     var mybutton = document.getElementById("goToTopBtn");
