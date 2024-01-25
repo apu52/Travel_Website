@@ -270,12 +270,10 @@ header {
   border-radius: 100%;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
 }
-section{
-  width:73vw;
-}
+
 /* added video player tag to display at 80% */
 .sized-video {
-  width: 100%;
+  width:73vw;
   height: auto;
   display: block;
   margin: 0 auto;
