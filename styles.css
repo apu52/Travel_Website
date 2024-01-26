@@ -283,7 +283,7 @@ header {
 
 /* added video player tag to display at 80% */
 .sized-video {
-  width: 960px;
+  width:73vw;
   height: auto;
   display: block;
   margin: 0 auto;
