@@ -17,9 +17,10 @@
 }
 
 .section__container {
-  max-width: var(--max-width);
-  margin: auto;
+  width: 100%;
+  margin: 10px 10px;
   padding: 5rem 1rem;
+  height: 50px;
 }
 
 .section__header {
@@ -48,6 +49,7 @@
   padding: 0.75rem 2rem;
   outline: none;
   border: none;
+  margin-right: 5px;
   font-size: 1rem;
   color: var(--extra-light);
   background-color: var(--primary-color);
@@ -83,25 +85,29 @@ body {
 nav {
   background-color:#95d1def9;
   padding: 1rem;
-  /*position: absolute;*/
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+  position: absolute;
   position: fixed; /*Making the navigation bar fixed at the top*/
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
+  height: 120px;
   /* max-width: var(--max-width); */
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 1001;
-  resize: horizontal; /* Allow horizontal resizing */
   overflow-x: auto; 
 }
 
 
 .nav__logo {
-  font-size: 1.2rem;
+  font-size: 3rem;
   font-weight: 600;
+
   color: var(--text-dark);
   cursor: pointer;
 }
@@ -146,24 +152,27 @@ header {
 
 .header__image {
   position: relative;
+  width: 100%;
 }
 
 .header__image img {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top:40%;
+  left: 40%;
+  width: 180%;
   border: 0.5rem solid var(--extra-light);
   border-radius: 2rem;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
 }
 
 .header__image img:nth-child(1) {
-  max-width: 350px;
+  width: 150%;
   transform: translate(-75%, -50%);
 }
 
 .header__image img:nth-child(2) {
-  max-width: 250px;
+  width: 100%;
+  height: 500px;
   transform: translate(0%, -25%);
 }
 
@@ -171,12 +180,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 200px;
 }
 
 .header__content > div {
   max-width: 400px;
   display: grid;
-  gap: 1rem;
+  gap: 20rem;
 }
 
 .header__content .sub__header {
@@ -624,15 +634,66 @@ header {
   max-width: 600px; /* Adjust the maximum width as needed */
 }
 
-/* Additional styling for responsiveness */
-@media (max-width: 768px) {
-  .contact-form {
-    flex-direction: column;
+//* ... your previous CSS rules ... */
+
+@media (max-width: 1200px) {
+  .header__image img:nth-child(1) {
+    max-width: 300px;
   }
+
+  .header__image img:nth-child(2) {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav__links {
+    display: none;
+  }
+
+  .header__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .header__image {
+    min-height: 500px;
+  }
+
+  .destination__grid {
+    gap: 1rem;
+  }
+
+  .trip__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .destination__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trip__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .gallary__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .subscribe__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
 
   .contact-form .right {
     padding-left: 0;
     margin-top: 10px; /* Adjust as needed */
   }
-}
+
 
