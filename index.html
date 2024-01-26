@@ -20,7 +20,8 @@
     href="img/A T logo with a white background and a square shape, connected to nature for a travel company.png"
     type="image/x-icon" />
 
-  <script src="index.js"></script>
+  <script src="index.js" defer></script>
+  <script src="Theme.js" defer></script>
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
   </script>
@@ -46,7 +47,7 @@
 </head>
 
 
-<body>
+<body style="background-color: var(--secondary-color);">
   <nav>
     <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
     <ul class="nav__links">
@@ -346,17 +347,17 @@
       <div class="right">
         <form>
           <div class="mb-3">
-            <label for="exampleInputName"  style="color:black;">Name</label>
+            <label for="exampleInputName"  style="color:var(--label-text);">Name</label>
             <input type="text" class="form-control" id="exampleInputName" placeholder="Enter your name">
           </div>
           <div class="mb-3">
-            <label for="exampleInputEmail2"  style="color:black;">Email address</label>
+            <label for="exampleInputEmail2"  style="color:var(--label-text);">Email address</label>
             <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp"
               placeholder="Enter your email">
-            <div id="emailHelp"  style="color:black;" >We'll never share your email with anyone else.</div>
+            <div id="emailHelp"  style="color:var(--label-text);" >We'll never share your email with anyone else.</div>
           </div>
           <div class="mb-3">
-            <label for="exampleInputMessage"  style="color:black;">Message</label>
+            <label for="exampleInputMessage"  style="color:var(--label-text);">Message</label>
             <textarea class="form-control" id="exampleInputMessage" rows="4"
               placeholder="feel free to ask your queries!"></textarea>
           </div>
