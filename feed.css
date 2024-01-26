@@ -1,0 +1,69 @@
+/* Add your general styling for the form container */
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: #121212;
+  border: 1px solid #121212;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for form labels */
+.form-label {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Style for form inputs */
+.form-control {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #121212;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Style for radio buttons and labels */
+.form-check-input {
+  margin-right: 5px;
+}
+
+/* Style for checkboxes and labels */
+.form-check-input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* Style for submit button */
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Style for the overall form layout */
+.row {
+  margin-bottom: 15px;
+}
+
+/* Optional: Add styles for the body to improve overall appearance */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  margin: 0;
+  padding: 0;
+}
+
+/* Optional: Add a bit of space around the form */
+body .container {
+  margin-top: 30px;
+}
+h3{
+  color:#60bbc5
+}
+
+/* Style for the specific label text */

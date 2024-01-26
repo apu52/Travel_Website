@@ -739,3 +739,15 @@ body:hover {
   scrollbar-width: thin;
   scrollbar-color: var(--primary-color-dark) var(--extra-light);
 }
+.custom-btn {
+  background-color: yellow;
+  color: black; 
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.custom-btn:hover {
+  background-color: #ffd700; 
+}
