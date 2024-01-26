@@ -1165,3 +1165,15 @@ body{
   background-color: #B2bfed;  /* Use the text-dark custom property for color */
 }
 /* Styling of AboutUs ended here */
+.custom-btn {
+  background-color: yellow;
+  color: black; 
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.custom-btn:hover {
+  background-color: #ffd700; 
+}
