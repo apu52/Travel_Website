@@ -70,35 +70,34 @@ h2{
   color:rgb(161, 127, 255);
 }
 
-/* Style for the specific label text */
-/* Style for ease of navigation labels */
+
 label {
   font-weight: bold;
-  margin-right: 10px; /* Adjust the margin as needed */
+  margin-right: 10px; 
   color: antiquewhite;
 }
 
-/* Apply colors based on ease of navigation ratings */
+
 input[value="1"] + label {
-  color: #FF0000; /* Red */
+  color: #FF0000;
 }
 
 input[value="2"] + label {
-  color: #FFA500; /* Orange */
+  color: #FFA500; 
 }
 
 input[value="3"] + label {
-  color: #FFFF00; /* Yellow */
+  color: #FFFF00; 
 }
 
 input[value="4"] + label {
-  color: #008000; /* Green */
+  color: #008000; 
 }
 
 input[value="5"] + label {
-  color: #0000FF; /* Blue */
+  color: #0000FF; 
 }
-/* Style for the specific label text in each rating section */
+
 .d-flex.flex-wrap {
   display: flex;
 
