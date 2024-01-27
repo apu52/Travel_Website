@@ -69,6 +69,7 @@ main{
 .registration, .login{
     min-height: 30rem;
     min-width: 40vw;
+    /* <Commented background to make the background as same */
     /* background-color: aqua; */
     /* removed aqua color from background which beautifies the page
     background-color: aqua;  */
@@ -131,7 +132,7 @@ main{
     color: #fff;
   border-radius:20px;
 }
-/* Added a class for the common background of both */
+/* Added a class for the common background of both login as well as register block */
 .back{
   background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)),url("img/img2.jpg");
   width: 100%;
