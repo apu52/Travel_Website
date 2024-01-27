@@ -23,6 +23,7 @@
   <script src="index.js" defer></script>
   <script src="Theme.js" defer></script>
 
+
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
   </script>
   <script type="text/javascript">
@@ -60,7 +61,7 @@
       <li class="link" data-aos="fade-down"><a href="#ReviewGallery">Reviews</a></li>
       <li class="link" data-aos="fade-down"><a href="feedback.html">Rate Us?</a></li>
       <li class="link" data-aos="fade-down"><a href="login.html">Login</a></li>
-      
+
     </ul>
     <button id="toggle" data-aos="fade-down">Dark Theme</button>
     <a href="#contact"><button class="btn" id="btn-style">Contact Us</button></a>
@@ -124,6 +125,40 @@
       </div>
     </section>
   </header>
+
+  <!-- Newsletter Modal -->
+
+  <div class="modal-container">
+    <div class="modal-wrapper">
+      <div class="cross-container">
+        <i class="fas fa-times close-btn" onclick="closeModal()"></i>
+      </div>
+      <div class="modal-newsletter">
+        <div class="modal-header">
+          <div style="display: flex;flex-flow: column;">
+            <a href="#" class="nav__logo"
+              style="pointer-events:none;color:#000;scale: 0.75;">Tourguide<span>.</span></a>
+            <h3 style="font-weight: 600;font-size: 24px;">Get Flat 15% OFF</h3>
+            <span style="color: #939393; padding: .5rem; font-size: 13px;">Sign up and grab your discount.</span>
+          </div>
+        </div>
+        <div class="modal-content">
+          <form id="modal-form">
+            <input type="email" id="modal-email" placeholder="Email Address" required>
+            <button class="modal-btn" id="news-subscribe" type="submit">Subscribe</button>
+          </form>
+          <span style="color: #3950ac; padding: 1rem 0 0 0; font-weight: 600;cursor:pointer;font-size: 16px;"
+            onclick="closeModal()">No, thanks</span>
+          <span style="color: #939393; padding: 1rem; font-size: 13px;">You are signing up to receive our newsletters
+            via
+            email and can unsubscribe at any time.</span>
+        </div>
+      </div>
+      <div>
+        <img src="./img/pexels-sam-kolder-2387871.jpg" class="modal-image" alt="maldives">
+      </div>
+    </div>
+  </div>
 
   <section class="section__container destination__container" id="Destinations">
     <div class="section__header">
@@ -393,6 +428,9 @@
           </div>
           <button type="submit" class="btn btn-primary" onclick="sendMail()">Submit</button>
         </form>
+        <button type="button" class="custom-btn" onclick="window.location.href='feed.html'">
+          Go to Feedback Page
+        </button>
       </div>
     </div>
 
@@ -436,8 +474,8 @@
         <a href="./faq.html" style="color: inherit; text-decoration: none;">
           <p style="color: inherit;">FAQs</p>
         </a>
-        <p>Terms & Conditions</p>
-        <p>Privacy Policy</p>
+        <a href="./tnc.html"><p>Terms & Conditions</p></a>
+        <a href="./privacy.html"><p>Privacy Policy</p></a>
         <p>Contact Us</p>
       </div>
       <div class="footer__col">
@@ -531,6 +569,7 @@
     })
   </script>
 
+  <script src="index.js"></script>
 
 
 
