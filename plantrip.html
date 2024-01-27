@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Planner</title>
+    <link rel="icon"
+    href="img/A T logo with a white background and a square shape, connected to nature for a travel company.png"
+    type="image/x-icon" />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #b1e5f748;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #add8e6e3;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Trip Planner</h1>
+    </header>
+
+    <form>
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" name="destination" required>
+
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" name="startDate" required>
+
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" name="endDate" required>
+
+        <label for="budget">Budget:</label>
+        <input type="number" id="budget" name="budget" required>
+
+        <label for="accommodation">Accommodation:</label>
+        <select id="accommodation" name="accommodation">
+            <option value="hotel">Hotel</option>
+            <option value="apartment">Apartment</option>
+            <option value="hostel">Hostel</option>
+        </select>
+
+        <button type="submit">Plan My Trip</button>
+    </form>
+
+</body>
+
+</html>

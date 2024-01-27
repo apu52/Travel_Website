@@ -1,0 +1,147 @@
+@font-face {
+    font-family: Aller;
+    src: url("../fonts/aller/aller_bd.eot");
+    /* IE9 Compat Modes */
+    src: url("../fonts/aller/aller_bd.eot?#iefix") format("embedded-opentype"), url("../fonts/aller/aller_bd.woff") format("woff"), url("../fonts/aller/aller_bd.ttf") format("truetype"), url("../fonts/aller/aller_bd.svg#svgFontName") format("svg");
+    /* Legacy iOS */
+    font-weight: bold;
+    font-style: normal; }
+  
+  .header-gradient, .header {
+    background: #4a90e2;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #4a90e2, #d56fa1);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #4a90e2, #d56fa1);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #4a90e2, #d56fa1);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #4a90e2, #d56fa1);
+    /* Standard syntax */ }
+  
+  .header {
+    padding: 40px 0;
+    margin-bottom: 40px; }
+    .header .logo {
+      margin: 40px 0; }
+    .header .title {
+      margin-top: 0;
+      font-family: Lato;
+      font-weight: lighter;
+      font-style: italic;
+      color: white; }
+    .header .subtitle {
+      font-family: Lato;
+      font-size: 20px;
+      color: white;
+      margin-bottom: 30px; }
+    .header .store-button {
+      max-width: 45%;
+      height: auto; }
+  
+  @media (min-width: 768px) and (max-width: 991px) {
+    .header .logo {
+      margin-top: 80px; } }
+  
+  .footer-gradient, .footer {
+    background: #4a90e2;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#4a90e2, #6e7fd8);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#4a90e2, #6e7fd8);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#4a90e2, #6e7fd8);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#4a90e2, #6e7fd8);
+    /* Standard syntax */ }
+  
+  .footer {
+    padding: 40px 10px; }
+    .footer .footer-logo-container img {
+      margin-bottom: 30px; }
+    .footer .title {
+      color: white;
+      font-family: Lato;
+      font-style: italic;
+      font-weight: lighter; }
+    .footer .link-container .links {
+      color: white;
+      font-family: Lato;
+      font-size: 20px; }
+      .footer .link-container .links.transparent {
+        opacity: 0.6; }
+    .footer .copyright {
+      margin-top: 20px;
+      color: white;
+      font-family: Lato;
+      font-size: 15px;
+      opacity: 0.6; }
+      .footer .copyright:last-child {
+        margin-top: 0; }
+  
+  @media (max-width: 767px) {
+    .footer {
+      border-radius: 0; } }
+  
+  #terms-and-conditions .terms-and-conditions-section {
+    margin: 10px 0; }
+    #terms-and-conditions .terms-and-conditions-section.grey {
+      background-color: #f8f8fb; }
+    #terms-and-conditions .terms-and-conditions-section .section-title {
+      color: #979797; }
+  
+  #about .about-section {
+    margin: 10px 0; }
+    #about .about-section.grey {
+      background-color: #f8f8fb; }
+  
+  #about .text-section {
+    margin-top: 30px;
+    margin-bottom: 100px; }
+  
+  .how-to-section {
+    margin: 10px 0;
+    padding: 20px 0; }
+    .how-to-section.grey {
+      background-color: #f8f8fb; }
+  
+  .text-wrapper {
+    height: 400px;
+    position: relative; }
+    .text-wrapper .section-text {
+      position: absolute;
+      top: 40%;
+      height: 100px;
+      margin-top: -50px; }
+  
+  .title {
+    font-family: Lato;
+    font-weight: 100;
+    font-style: italic;
+    color: #979797;
+    margin-bottom: 30px; }
+  
+  .section-header {
+    font-family: Aller;
+    font-weight: bold;
+    color: #6e7fd8; }
+  
+  .subtext {
+    font-family: Lato;
+    font-size: 18px;
+    color: #919191; }
+  
+  .how-to-image {
+    height: 400px;
+    max-width: 100%; }
+  
+  @media (max-width: 767px) {
+    .text-wrapper {
+      height: auto;
+      position: static; }
+      .text-wrapper .section-text {
+        position: static;
+        height: auto;
+        margin-top: 0; }
+    .how-to-image {
+      height: 200px; } }
