@@ -69,7 +69,7 @@ main{
 .registration, .login{
     min-height: 30rem;
     min-width: 40vw;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 .grid-two--column{
     display: grid;
@@ -81,10 +81,14 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)),url("img/img2.jpg");
+    background-color: transparent;
+    /* background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)),url("img/img2.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: cover; */
+    /* background-position: center; */
+    /* border-color: #091020; */
+    border-radius: 20px;
+    /* background-color: #ccc; */
     color: #fff;
     padding: 3rem 2rem;
 }
@@ -99,17 +103,32 @@ main{
 
 }
 .form-text button:hover{
-    background-color: transparent;
+    background-color: blue;
     color: #fff;
 }
 .registration-form, .login-form{
+  height: 500px;
     width: 100%;
+    /* padding-right: 100px; */
+    /* margin-left: 20px; */
     min-height: 45vh;
-    background-color: #fff;
+    background-color: transparent;
+    /* background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)),url("img/img2.jpg");
+    background-size: cover;
+    background-position: center; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: #fff;
+  border-radius:20px ;
+}
+.back{
+  background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)),url("img/img2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-position: center;
+  border-radius: 20px;
 }
 .registration-form p, .login-form p{
     margin: 1rem 0 .7rem 0;
@@ -124,6 +143,8 @@ main{
     height: 4rem;
     border-radius: 50%;
     border: 0.1rem solid #ccc;
+    border-color: #000;
+    background-color:azure;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -136,6 +157,7 @@ input{
     background-color: #e8e8e8;
     padding: 1rem 1.8rem;
     letter-spacing: 0.1rem;
+    border-radius: 20px;
 }
 input[type="submit"]{
     margin-top: 1rem;
