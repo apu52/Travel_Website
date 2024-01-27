@@ -10,12 +10,11 @@
     <link rel="stylesheet" href="style_.css">
     <!-- FontAwsome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    
 </head>
 <body>
     <div class="container">
     <div class="glassmorphism-container">
-        <h1>Rate our Service</h1>
+        <h1>RATE OUR SERVICE</h1>
     
         <div class="stars" id="stars-container">
           <!-- Stars will be added dynamically using JavaScript -->
@@ -25,12 +24,14 @@
     
          <!-- Feedback input box section -->
          <div>
-          <label for="feedback-input">Your feedback:</label>
-          <textarea id="feedback-input" placeholder="Enter your feedback here..."></textarea>
+            
+          <label for="feedback-input" id="rating-text">Your feedback:</label>
+          <br><br>
+          <textarea id="feedback-input" placeholder="Remember to be nice please!"></textarea>
       </div>
-      <button class="submit-button" onclick="submitFeedback()">Submit</button>
+      <button class="button" onclick="submitFeedback()">Submit</button>
       </div>
-    <div><button class="button-36" onclick="location.href = 'index.html';">Return To Home Page</button></div>
+    <div><button class="button" onclick="location.href = 'index.html';">Return To Home Page</button></div>
     </div>
 </div>
 <!-- SweetAlert2 -->
