@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="./Image-Gallery/style.css">
-    <title>Tourguide</title>
-     <!-- adding a fav-icon -->
-     <link rel="icon" href="img/A T logo with a white background and a square shape, connected to nature for a travel company.png" type="image/x-icon" />
-     
-    <script src="index.js"></script>
 
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="./Image-Gallery/style.css">
+  <title>Tourguide</title>
+  <!-- adding a fav-icon -->
+  <link rel="icon"
+    href="img/A T logo with a white background and a square shape, connected to nature for a travel company.png"
+    type="image/x-icon" />
+
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
       emailjs.init("WB9rAyWwwLZube-er");
-   })();
-</script>
+    })();
+
+    function planTrip() {
+
+      window.location.href = 'plantrip.html';
+    }
+
+  </script>
+
 
   <style>
-  html {
-    scroll-behavior: smooth;
-  }
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 
-  </head>
+</head>
 
 
 <body>
-  <nav>
+  <!-- <nav>
     <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
     <ul class="nav__links">
       <li class="link" data-aos="fade-down"><a href="#Home">Home</a></li>
@@ -49,10 +56,33 @@
       <li class="link" data-aos="fade-down"><a href="#ReviewGallery">Reviews</a></li>
       <li class="link" data-aos="fade-down"><a href="feedback.html">Rate Us?</a></li>
       <li class="link" data-aos="fade-down"><a href="login.html">Login</a></li>
+
     </ul>
     <button id="toggle" data-aos="fade-down">Dark Theme</button>
-    <a href="#contact" data-aos="fade-down"><button class="btn">Contact Us</button></a>
-  </nav>
+    <a href="#contact"><button class="btn" id="btn-style">Contact Us</button></a>
+  </nav> -->
+  <div class="nav-container">
+    <nav class="newNav">
+      <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+  
+      <ul class="navLinks">
+        <li class="link" data-aos="fade-down"><a href="#Home">Home</a></li>
+        <li class="link" data-aos="fade-down"><a href="#Destinations">Destinations</a></li>
+        <li class="link" data-aos="fade-down"><a href="#trip">Pricing</a></li>
+        <li class="link" data-aos="fade-down"><a href="#testimonials">Testimonials</a></li>
+        <li class="link" data-aos="fade-down"><a href="#ReviewGallery">Reviews</a></li>
+        <li class="link" data-aos="fade-down"><a href="feedback.html">Rate Us?</a></li>
+        <li class="link" data-aos="fade-down"><a href="login.html">Login</a></li>
+      </ul>
+      <button id="toggle" data-aos="fade-down" style="display: inline-block;">Dark Theme</button>
+      <a href="#contact" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;" data-aos="fade-down">Contact Us</button></a>
+      <div class="hamburger" data-aos="fade-down">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+  </div>
   <header>
     <section class="section__container header__container" id="Home">
       <div class="header__image" data-aos="fade-down-right">
@@ -69,23 +99,61 @@
             clients.
           </p>
           <div class="action__btns">
-            <button class="btn" data-aos="fade-in" style="width: 160px;">Plan a Trip</button>
+            <a href="pricing/index.html"><button class="btn" data-aos="fade-in"
+                style="width: 160px;">Membership</button></a>
+            <button class="btn" data-aos="fade-in" style="width: 160px;" onclick="planTrip()">Plan a Trip</button>
             <a href="./payment.html"><button class="btn" data-aos="fade-in" style="width: 160px;">Book Now</button></a>
+</div>
+
             <div class="story">
               <div class="video">
-                <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" type="video/mp4"></img> 
+                <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" type="video/mp4"></img>
                 <!-- link to the hmtl page with the video -->
                 <a href="story.html" class="btn_video" target="_blank">
                   <span><i class="ri-play-fill"></i></span>
                 </a>
               </div>
-                <span data-aos="fade-in">Watch our story</span>
+              <span data-aos="fade-in">Watch our story</span>
             </div>
-          </div>
+          
         </div>
       </div>
     </section>
   </header>
+
+  <!-- Newsletter Modal -->
+
+  <div class="modal-container">
+    <div class="modal-wrapper">
+      <div class="cross-container">
+        <i class="fas fa-times close-btn" onclick="closeModal()"></i>
+      </div>
+      <div class="modal-newsletter">
+        <div class="modal-header">
+          <div style="display: flex;flex-flow: column;">
+            <a href="#" class="nav__logo"
+              style="pointer-events:none;color:#000;scale: 0.75;">Tourguide<span>.</span></a>
+            <h3 style="font-weight: 600;font-size: 24px;">Get Flat 15% OFF</h3>
+            <span style="color: #939393; padding: .5rem; font-size: 13px;">Sign up and grab your discount.</span>
+          </div>
+        </div>
+        <div class="modal-content">
+          <form id="modal-form">
+            <input type="email" id="modal-email" placeholder="Email Address" required>
+            <button class="modal-btn" id="news-subscribe" type="submit">Subscribe</button>
+          </form>
+          <span style="color: #3950ac; padding: 1rem 0 0 0; font-weight: 600;cursor:pointer;font-size: 16px;"
+            onclick="closeModal()">No, thanks</span>
+          <span style="color: #939393; padding: 1rem; font-size: 13px;">You are signing up to receive our newsletters
+            via
+            email and can unsubscribe at any time.</span>
+        </div>
+      </div>
+      <div>
+        <img src="./img/pexels-sam-kolder-2387871.jpg" class="modal-image" alt="maldives">
+      </div>
+    </div>
+  </div>
 
   <section class="section__container destination__container" id="Destinations">
     <div class="section__header">
@@ -153,7 +221,8 @@
             <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
             <div class="booking__price">
               <div class="price"><span>From</span> $300</div>
-              <a href="./payment.html"><button class="book__now">Book Now</button></a>
+              <a href="./dedicated destinations/Santorini ,Aegean Sea/start.html"><button class="book__now">Book
+                  Now</button></a>
             </div>
           </div>
         </div>
@@ -164,7 +233,8 @@
             <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
             <div class="booking__price">
               <div class="price"><span>From</span> $450</div>
-              <a href="./payment.html"><button class="book__now">Book Now</button></a>
+              <a href="./dedicated destinations/Machu Picchu ,Peru/Machu_start.html"><button class="book__now">Book
+                  Now</button></a>
             </div>
           </div>
         </div>
@@ -175,7 +245,8 @@
             <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
             <div class="booking__price">
               <div class="price"><span>From</span> $400</div>
-              <a href="./payment.html"><button class="book__now">Book Now</button></a>
+              <a href="./dedicated destinations/Grand Canyon National Park ,Arizona/Grand_start.html"><button
+                  class="book__now">Book Now</button></a>
             </div>
           </div>
         </div>
@@ -279,46 +350,46 @@
   </div>
 
 
-  <section class="Testimonials" id="testimonials">
-    <h2 class="section__title" align-items="center" data-aos="fade-in">Testimonials</h2>
-    <br>
-    <br>
-    <div class="container marketing">
+  <!-- Testimonials Section -->
 
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-4" data-aos="fade-up">
-          <img class="rounded-circle" width="5" height="350" preserveAspectRatio="xMidYMid slice"
-            src="./img/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg">
-          <h2 class="fw-normal">Joseph</h2>
-          <p data-aos="fade-in">"TourGuide made our dream vacation a reality! From the breathtaking landscapes to the
-            seamless logistics,
-            every moment was a new adventure. The personalized itinerary and expert guides added a special touch to our
-            journey. We can't wait to book our next trip with TourGuide!"</p>
-
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4" data-aos="fade-up">
-          <img class="rounded-circle" width="5" height="350" preserveAspectRatio="xMidYMid slice"
-            src="./img/Abhisek Tamang.jpg">
-          <h2 class="fw-normal">Charles</h2>
-          <p data-aos="fade-in">"Our cultural tour with TourGuide exceeded all expectations. The immersive experiences,
-            knowledgeable
-            guides, and carefully curated activities allowed us to connect with the local culture in a way we never
-            thought possible. Thanks to TourGuide."</p>
-
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4" data-aos="fade-up">
-          <img class="rounded-circle" width="5" height="350" preserveAspectRatio="xMidYMid slice"
-            src="./img/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg">
-          <h2 class="fw-normal">Katie</h2>
-          <p data-aos="fade-in">"Traveling with the family has never been easier! TourGuide took care of every detail,
-            ensuring a
-            stress-free and enjoyable vacation for all. The kid-friendly activities and family-oriented guides made our
-            trip unforgettable."</p>
-
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
-
+  <section class="testimonials" id="testimonials">
+    <h2 class="testimonial-heading" align-items="center" data-aos="fade-in">Testimonials</h2>
+    <div class="testimonial-container">
+      <div class="testimonial-user" data-aos="fade-up">
+        <img class="testi-img" src="./img/testimonial1.jpg" alt="">
+        <div>
+          <p><sup><i class="fas fa-quote-left"></i></sup>TourGuide made our dream vacation a reality! From the
+            breathtaking landscapes to the seamless logistics, every moment was a new adventure. The personalized
+            itinerary and expert guides added a special touch to our journey. We can't wait to book our next trip with
+            TourGuide!<sup><i class="fas fa-quote-right"></i></sup></p>
+          <div class="user-info">
+            <h3>Joseph</h3>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-user" data-aos="fade-up">
+        <img class="testi-img" src="./img/Abhisek Tamang.jpg" alt="">
+        <div>
+          <p><sup><i class="fas fa-quote-left"></i></sup>Our cultural tour with TourGuide exceeded all expectations. The
+            immersive experiences, knowledgeable guides, and carefully curated activities allowed us to connect with the
+            local culture in a way we never thought possible. Thanks to TourGuide.<sup><i
+                class="fas fa-quote-right"></i></sup></p>
+          <div class="user-info">
+            <h3>Charles</h3>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-user" data-aos="fade-up">
+        <img class="testi-img" src="./img/testimonial2.jpg" alt="">
+        <div>
+          <p><sup><i class="fas fa-quote-left"></i></sup>Traveling with the family has never been easier! TourGuide took
+            care of every detail, ensuring a stress-free and enjoyable vacation for all. The kid-friendly activities and
+            family-oriented guides made our trip unforgettable.<sup><i class="fas fa-quote-right"></i></sup></p>
+          <div class="user-info">
+            <h3>Katie</h3>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -334,17 +405,17 @@
       <div class="right">
         <form>
           <div class="mb-3">
-            <label for="exampleInputName" class="form-label text-light">Name</label>
+            <label for="exampleInputName" style="color:black;">Name</label>
             <input type="text" class="form-control" id="exampleInputName" placeholder="Enter your name">
           </div>
           <div class="mb-3">
-            <label for="exampleInputEmail2" class="form-label text-light">Email address</label>
+            <label for="exampleInputEmail2" style="color:black;">Email address</label>
             <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp"
               placeholder="Enter your email">
-            <div id="emailHelp" class="form-text text-light">We'll never share your email with anyone else.</div>
+            <div id="emailHelp" style="color:black;">We'll never share your email with anyone else.</div>
           </div>
           <div class="mb-3">
-            <label for="exampleInputMessage" class="form-label text-light">Message</label>
+            <label for="exampleInputMessage" style="color:black;">Message</label>
             <textarea class="form-control" id="exampleInputMessage" rows="4"
               placeholder="feel free to ask your queries!"></textarea>
           </div>
@@ -393,16 +464,41 @@
       </div>
       <div class="footer__col">
         <h4>Support</h4>
-        <p>FAQs</p>
-        <p>Terms & Conditions</p>
+        <a href="./faq.html" style="color: inherit; text-decoration: none;">
+          <p style="color: inherit;">FAQs</p>
+        </a>
+        <a href="./tnc.html"><p>Terms & Conditions</p></a>
         <p>Privacy Policy</p>
         <p>Contact Us</p>
       </div>
       <div class="footer__col">
         <h4>Address</h4>
-        <p>
-          <span>Address:</span> 3/2 Wellington Street, Kolkata , West Bengal , India
-        </p>
+        <div class="mapouter">
+          <div class="gmap_canvas"><iframe width="200" height="200" id="gmap_canvas"
+              src="https://maps.google.com/maps?q=wellington%20street%20kolkata&t=k&z=11&ie=UTF8&iwloc=&output=embed"
+              frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+              href="https://embedgooglemap.net/124/">invincible 123movies</a><br>
+            <style>
+              .mapouter {
+                position: relative;
+                text-align: right;
+                height: 200px;
+                width: 200px;
+              }
+            </style><a href="https://www.embedgooglemap.net">embed google map on website</a>
+            <style>
+              .gmap_canvas {
+                overflow: hidden;
+                background: none !important;
+                height: 200px;
+                width: 200px;
+              }
+            </style>
+          </div>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Reach Out To Us</h4>
         <p><span>Email:</span> tour@tourguide.com</p>
         <p><span>Phone:</span> +91 8562145852</p>
       </div>
@@ -412,8 +508,8 @@
     </div>
   </footer>
   <!-- adding a btn -->
-  <button id="goToTopBtn" onclick="goToTop()"> <i class="fa-solid fa-chevron-up" style="color: #00328a;"></i></button>
-
+  <button id="goToTopBtn" onclick="goToTop()" class="top-btn"> <i class="fa-solid fa-chevron-up"
+      style="color: #00328a;"></i></button>
   <script>
     // Get the button
     var mybutton = document.getElementById("goToTopBtn");
@@ -438,6 +534,13 @@
     }
   </script>
 
+  <script>
+    let hamburger = document.querySelector('.hamburger');
+    hamburger.addEventListener('click' , ()=>{
+      let list = document.querySelector('.navLinks');
+        list.classList.toggle('activeHamburger');
+    })
+  </script>
 
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -459,26 +562,27 @@
     })
   </script>
 
+  <script src="index.js"></script>
 
 
 
- <!--Start of Conferbot Script-->
- <script type="text/javascript">
-  (function (d, s, id) {
-    var js, el = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.async = true;
-    js.src = 'https://s3.ap-south-1.amazonaws.com/conferbot.defaults/dist/v1/widget.min.js';
-    js.id = id;
-    js.charset = 'UTF-8';
-    el.parentNode.insertBefore(js, el);
-    js.onload = function () {
-      var w = window.ConferbotWidget("65abf7c21173f1231cef840f", "live_chat");
-    };
-  })(document, 'script', 'conferbot-js');
-</script>
-<!--End of Conferbot Script-->
+  <!--Start of Conferbot Script-->
+  <script type="text/javascript">
+      (function (d, s, id) {
+        var js, el = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.async = true;
+        js.src = 'https://s3.ap-south-1.amazonaws.com/conferbot.defaults/dist/v1/widget.min.js';
+        js.id = id;
+        js.charset = 'UTF-8';
+        el.parentNode.insertBefore(js, el);
+        js.onload = function () {
+          var w = window.ConferbotWidget("65abf7c21173f1231cef840f", "live_chat");
+        };
+      })(document, 'script', 'conferbot-js');
+  </script>
+  <!--End of Conferbot Script-->
 
 
 </body>
@@ -499,5 +603,6 @@
   }
 </script>
 <script src="./Image-Gallery/script.js"></script>
+<script src="./index.js"></script>
 
 </html>

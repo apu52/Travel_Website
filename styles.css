@@ -26,15 +26,25 @@
   --body-light:black;
 }
 #toggle{
-  padding: 0.75rem 2rem;
-  outline: none;
-  border: none;
-  font-size: 1rem;
-  color: var(--extra-light);
-  background-color: var(--primary-color);
-  border-radius: 5rem;
-  cursor: pointer;
-  transition: 0.3s;
+  display: inline-block;
+  border-radius: 50px;
+  transition: all .4s ease-in-out;
+  padding: 10px 10px;
+  background-color: transparent;
+  border: 2px solid #c6c9d8bf;
+  color: #c6c9d8bf;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+#toggle:hover {
+  background-color: #ff0000; 
+  border-color: #ff0000;
+  color: #fff;
+}
+#toggle:hover {
+  filter: brightness(1.5);
 }
 
 .section__container {
@@ -71,7 +81,6 @@
   text-align: left;
 }
 .btn {
-  padding: 0.75rem 2rem;
   outline: none;
   border: none;
   font-size: 1rem;
@@ -80,6 +89,7 @@
   border-radius: 5rem;
   cursor: pointer;
   transition: 0.3s;
+  font-weight: 600;
 }
 
 #send {
@@ -90,7 +100,6 @@
 
 .btn:hover {
   background-color: var(--primary-color-dark);
-  font-weight: 600;
 }
 
 /* ensures no box or shadow for the video button */
@@ -122,50 +131,42 @@ body {
 }
 
 nav {
-  background-color: #95d1def9;
-  padding: 1rem;
-  position: fixed; /* Making the navigation bar fixed at the top */
+  background-color: #091020;
+  position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   z-index: 1001;
 }
 
 .nav__logo {
-  font-size: 1.2rem;
+  font-size: 1.8rem; /* Increased font size for the logo */
   font-weight: 600;
-  color: var(--text-dark);
+  color: #ffffff;
   cursor: pointer;
+  /* border: 2px solid white; */
 }
 
 .nav__logo span {
-  color: var(--primary-color);
+  color: #3685fb; /* Assuming this is your primary color */
 }
 
-.nav__logo:hover {
-  transform: scale(1.3);
-}
-
-.nav__links {
+/* .nav__links {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-top: 10px;
-}
+  gap: 1rem; /* Increased gap between links */
+  /* font-size: 1.2rem; Increased font size for the links   */
+/* } */
 
 .link a {
-  padding: 0 1rem;
-  color: var(--text-dark);
+  /* padding: 0.5rem 1rem; Adjusted padding for links */
+  color: #ffffff;
   transition: 0.3s;
+  font-weight: 600;
 }
 
 .link a:hover {
-  color: var(--primary-color);
+  color: #ff0000;
 }
 
 header {
@@ -237,6 +238,119 @@ header {
   margin-top: 1rem;
 }
 
+/* Newsletter Modal */
+
+.modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  z-index: 2000000000;
+}
+
+.modal-wrapper{
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.modal-image{
+  height: 100%;
+  transform: scale(1.1);
+  object-position: center;
+  object-fit: cover;
+  max-width: inherit;
+}
+
+
+.modal-newsletter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.cross-container{
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: fit-content;
+  z-index: 1;
+  padding: 1rem;
+}
+
+.close-btn{
+  
+  font-size: 1.5rem;
+  color: #000;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.close-btn:hover{
+  color: #ff0000;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modal-content input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 2px solid #efefef;
+}
+
+.modal-btn {
+  padding: 10px;
+  background-color: #091020;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: scale 0.3s ease-in-out;
+}
+
+.modal-btn:active {
+  scale: 0.95;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* Modal End */
+
 .story {
   display: flex;
   align-items: center;
@@ -273,7 +387,7 @@ header {
 
 /* added video player tag to display at 80% */
 .sized-video {
-  width: 960px;
+  width:73vw;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -531,7 +645,7 @@ header {
 
 .footer {
   width: 100%;
-  background-color: var(--text-dark);
+  background-color: #091020;
 }
 
 .footer__container {
@@ -573,7 +687,8 @@ header {
 }
 
 .footer__col p:hover {
-  color: var(--primary-color);
+  color: #ff0000;
+  font-size: 15px;
 }
 
 .footer__col p span {
@@ -606,6 +721,22 @@ header {
     max-width: 200px;
   }
 }
+
+@media (width>1400px){
+  #toggle{
+    margin-right: -5%;
+  }
+  
+}
+
+@media (width>1550px){
+  #toggle{
+    margin-right: -8%;
+  }
+  
+}
+
+/* Enhance the responsiveness of gap between Dark Theme button and Contact Us buttons of navbar.  */
 
 @media (width < 900px) {
   .nav__links {
@@ -651,7 +782,7 @@ header {
 }
 
 /* doing changes */
-#goToTopBtn {
+.top-btn {
   display: none;
   width: 50px;
   height: 50px;
@@ -667,9 +798,10 @@ header {
   cursor: pointer;
 }
 
-#goToTopBtn:hover {
+.top-btn:hover {
   background-color: #0056b3;
 }
+
 
 /*contact section overlapping with nav fixed*/
 #contact{
@@ -739,6 +871,7 @@ body:hover {
   scrollbar-width: thin;
   scrollbar-color: var(--primary-color-dark) var(--extra-light);
 }
+
 .custom-btn {
   background-color: rgb(73, 185, 185);
   color: black; 
@@ -751,3 +884,229 @@ body:hover {
 .custom-btn:hover {
   background-color: #5f8fd2; 
 }
+
+
+
+
+body{
+  background-color:#eee;
+  margin-top:20px;
+}
+.card {
+  box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+}
+.nav-tabs-custom .nav-item .nav-link.active {
+  color: #6c6ff5;
+}
+.nav-tabs-custom .nav-item .nav-link {
+  border: none;
+}
+.text-muted {
+  color: #8ca3bd!important;
+}
+.nav-tabs-custom .nav-item {
+  position: relative;
+  color: #271050;
+}
+.nav-tabs-custom .nav-item .nav-link.active:after {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.nav-tabs-custom .nav-item .nav-link::after {
+  content: "";
+  background: #6c6ff5;
+  height: 2px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -1px;
+  -webkit-transition: all 250ms ease 0s;
+  transition: all 250ms ease 0s;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+/* Testimonials Section */
+
+.testimonial-heading{
+  text-align: center;
+  margin-bottom: 50px;
+  color: #3685fb;
+  font-weight: 600;
+}
+
+.testimonial-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.testimonial-user{
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column nowrap;
+  align-items: center;
+  background: #efefef;
+  height: 400px;
+  width: 350px;
+  max-width: 90%;
+  margin-top: 50px;
+  padding: 0 20px 20px 20px;
+  box-shadow: 0 0 27px 0 rgb(0 0 0 / 5%);
+}
+.testimonial-user > div{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.testi-img{
+  width: 120px;
+  height: 120px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+  transform: translate(0, -50%);
+  box-shadow: 0 0 0 10px #fff;
+}
+
+.fa-quote-left, .fa-quote-right{
+  font-size: 16px;
+  color: #3685fb;
+  padding: .5rem;
+}
+
+.user-info h3{
+  color: #3685fb;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+/* New NAvbar CSS Starts Here*/
+
+.nav-container {
+  height: auto;
+  width: 200%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  z-index: 9999;
+}
+.newNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  height: auto;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.navLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  list-style: none;
+  gap: 1.2rem;
+  position: relative;
+  top: 0.5rem;
+  z-index: 10;
+}
+
+.link a{
+  position: relative;
+}
+
+.link a::before {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 0%;
+  bottom: -5px;
+  left: 0;
+  background-color: red;
+}
+
+.link a::after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 0%;
+  top: -5px;
+  right: 0;
+  background-color: red;
+  transition: all 0.2s ease-in-out;
+}
+
+.link a:hover::before{
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.link a:hover::after{
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.hamburger{
+  height: 2rem;
+  width: 1.7rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  display: none;
+  transition: 0.2s;
+}
+
+.line{
+  height: 5px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+}
+
+@media screen and (max-width : 1220px) {
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+  .navLinks {
+    position: absolute;
+    top: 70px;
+    background-color: #091020;
+    width: 0%;
+    left: 0;
+    height: 100vh;
+    padding: 2rem 0;
+    flex-direction: column;
+    transition: 0.2s;
+    overflow: hidden;
+  }
+
+  .navLinks li {
+    width: 100%;
+    padding: 0.5rem 0;
+    background-color: #1f2532;
+    z-index: 10;
+  }
+
+  #toggle {
+    font-size: 0.6rem;
+  }
+
+  #btn-style {
+    font-size: 0.6rem;
+  }
+}
+
+.navLinks.activeHamburger {
+  width: 100%;
+}
+
+/* New NAvbar CSS Ends Here*/
