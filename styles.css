@@ -1166,7 +1166,7 @@ body{
 }
 /* Styling of AboutUs ended here */
 .custom-btn {
-  background-color: yellow;
+  background-color: rgb(73, 185, 185);
   color: black; 
   padding: 10px 20px;
   border: none;
@@ -1175,5 +1175,5 @@ body{
 
 
 .custom-btn:hover {
-  background-color: #ffd700; 
+  background-color: #5f8fd2; 
 }

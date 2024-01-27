@@ -4,7 +4,7 @@
   margin: auto;
   padding: 20px;
   background-color: #121212;
-  border: 1px solid #121212;
+  border: 1px solid #f6f4f4;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -64,6 +64,9 @@ body .container {
 }
 h3{
   color:#60bbc5
+}
+h2{
+  color:rgb(161, 127, 255);
 }
 
 /* Style for the specific label text */
