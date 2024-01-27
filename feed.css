@@ -4,7 +4,7 @@
   margin: auto;
   padding: 20px;
   background-color: #121212;
-  border: 1px solid #f6f4f4;
+  border: 1px solid #3999af;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -28,6 +28,7 @@
 /* Style for radio buttons and labels */
 .form-check-input {
   margin-right: 5px;
+  color: #f6f4f4;
 }
 
 /* Style for checkboxes and labels */
@@ -70,3 +71,39 @@ h2{
 }
 
 /* Style for the specific label text */
+/* Style for ease of navigation labels */
+label {
+  font-weight: bold;
+  margin-right: 10px; /* Adjust the margin as needed */
+  color: antiquewhite;
+}
+
+/* Apply colors based on ease of navigation ratings */
+input[value="1"] + label {
+  color: #FF0000; /* Red */
+}
+
+input[value="2"] + label {
+  color: #FFA500; /* Orange */
+}
+
+input[value="3"] + label {
+  color: #FFFF00; /* Yellow */
+}
+
+input[value="4"] + label {
+  color: #008000; /* Green */
+}
+
+input[value="5"] + label {
+  color: #0000FF; /* Blue */
+}
+/* Style for the specific label text in each rating section */
+.d-flex.flex-wrap {
+  display: flex;
+
+}
+.form-check.form-check-inline.me-3{
+  display: inline-block;
+  margin-right: 10px; 
+}
