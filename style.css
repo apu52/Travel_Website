@@ -80,7 +80,9 @@ main{
     
 }
 .form-text{
+  width: auto;
     height: inherit;
+    padding-right: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,9 +114,9 @@ main{
 }
 .registration-form, .login-form{
   height: 500px;
-    width: 100%;
-    /* padding-right: 100px; */
-    /* margin-left: 20px; */
+    width:50%;
+    padding-right: 150px;
+    
     height:500px;
     width: 400px;
     min-height: 45vh;
@@ -127,10 +129,12 @@ main{
     align-items: center;
     flex-direction: column;
     color: #fff;
-  border-radius:20px ;
+  border-radius:20px;
 }
+/* Added a class for the common background of both */
 .back{
   background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)),url("img/img2.jpg");
+  width: 100%;
   background-size: cover;
   background-position: center;
   background-position: center;
