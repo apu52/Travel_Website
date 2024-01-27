@@ -80,6 +80,10 @@
 
 <h2>Getting Started💥</h2>
 
+<h3>Local Installation video</h3> -> [video](https://drive.google.com/file/d/1LsBudIUtZLDMSlmBDdOfT001QRqGBSbN/view?usp=sharing)
+
+
+
 ## How to make a Pull Request?
 
 **1.** Start by forking the [**Travel_Website**](https://github.com/apu52/Travel_Website) repository. Click on the <a href="https://github.com/apu52/Travel_Website/fork"><img src="https://i.imgur.com/G4z1kEe.png" height="21" width="21"></a> symbol at the top right corner.
