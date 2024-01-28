@@ -58,12 +58,103 @@ body {
   filter: brightness(1.5);
 }
 
+.toggle-container {
+  --size: 2rem;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+}
+
+.toggle {
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
+  border-radius: 999px;
+  color: hsl(240, 100%, 95%);
+  transition: all 500ms;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &:checked {
+    --ray-size: calc(var(--size) * -0.4);
+    --offset-orthogonal: calc(var(--size) * 0.65);
+    --offset-diagonal: calc(var(--size) * 0.45);
+    transform: scale(0.75);
+    color: hsl(40, 100%, 50%);
+    box-shadow: 
+      inset 0 0 0 var(--size),
+      calc(var(--offset-orthogonal) * -1) 0 0 var(--ray-size),
+      var(--offset-orthogonal) 0 0 var(--ray-size),
+      0 calc(var(--offset-orthogonal) * -1) 0 var(--ray-size),
+      0 var(--offset-orthogonal) 0 var(--ray-size),
+      calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0 var(--ray-size),
+      var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size),
+      calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size),
+      var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
+  }
+}
+
+/* Apply fade-down animation to the toggle container */
+.toggle-container[data-aos="fade-down"] {
+  transition: opacity 500ms ease-in-out;
+  opacity: 0;
+}
+
+.toggle-container[data-aos="fade-down"].aos-animate {
+  opacity: 1;
+}
+
 .section__container {
   max-width: var(--max-width);
   margin: auto;
   padding: 5rem 1rem;
   /* border: 2px solid red; */
+}/* Apply similar styles to your existing toggle button */
+.toggle-container {
+  --size: 2rem;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  cursor: pointer;
 }
+
+.toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  background: hsl(240, 100%, 95%);
+  box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
+  transition: background 500ms;
+}
+
+.toggle:checked + .toggle-label {
+  background: white;
+}
+
+.toggle-dot {
+  --dot-size: calc(var(--size) * 0.75);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--dot-size);
+  height: var(--dot-size);
+  background: hsl(240, 100%, 95%);
+  border-radius: 999px;
+  transition: transform 500ms;
+}
+
+.toggle:checked + .toggle-label .toggle-dot {
+  transform: scale(0.75);
+}
+
 
 .section__header {
   display: flex;
