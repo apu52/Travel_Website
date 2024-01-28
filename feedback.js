@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const starsContainer = document.getElementById('stars-container');
-    const ratingText = document.getElementById('rating-text');
-    let currentRating = 0;
+  const starsContainers = document.getElementsByClassName("stars");
+  const ratingTexts = document.querySelectorAll('[id$="-rating-text"]');
+  let currentRating = 0;
 
-    // Create 5 stars dynamically
+  // Create 5 stars dynamically for each stars container
+  Array.from(starsContainers).forEach((starsContainer, index) => {
     for (let i = 1; i <= 5; i++) {
       const star = document.createElement('span');
       star.classList.add('star');
@@ -12,17 +13,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
       star.addEventListener('click', () => {
         currentRating = i;
-        updateRating();
+        updateRating(index);
       });
 
       starsContainer.appendChild(star);
     }
+  });
 
-    const updateRating = () => {
-      ratingText.textContent = `Rating: ${currentRating}`;
-    };
-  
+  const updateRating = (index) => {
+    ratingTexts[index].textContent = `Rating: ${currentRating}`;
+  };
 });
+
+
 function submitFeedback() {
   var feedbackInput = document.getElementById("feedback-input");
   var feedback = feedbackInput.value.trim();
@@ -48,5 +51,5 @@ function submitFeedback() {
       feedbackInput.value = "";
     }
   });
-  
+
 }
