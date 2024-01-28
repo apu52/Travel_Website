@@ -50,6 +50,7 @@
 
 <body style="background-color: var(--secondary-color);">
 <body>
+  <canvas id="canvas"></canvas>
   <!-- <nav>
 
     <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
@@ -143,23 +144,23 @@
           <div class="aboutcon">
           
             <div class="col-span-2 mx-auto lg:mx-0 lg:text-left">
-            <h1 class="headingofAbout"><b>About Us</b></h1>
+            <h1 class="headingofAbout" data-aos="fade-in"><b>About Us</b></h1>
             <!-- Article with about us content -->
             <article class="w-full text-left format sm:format-base lg:format-lg format-blue dark:format-invert">
               <!-- Adding the content -->
-              <p class="aboutcontent">  
+              <p class="aboutcontent" data-aos="fade-in">  
                 Welcome to TourGuide, where we firmly believe that the true purpose of life is found in venturing into the unknown, embracing the unfamiliar, and living the extraordinary! Our mission is to empower you, the traveler, to uncover this purpose and maximize your travel experiences by offering unparalleled assistance.
               </p>
   
-              <p class="aboutcontent">
+              <p class="aboutcontent" data-aos="fade-in">
                 At TourGuide, our local guides serve as your passport to effortlessly navigate through local languages, customs, and traditions that often make traveling to a foreign place overwhelming. We provide curated travel itineraries, once-in-a-lifetime experiences, valuable travel advice, and the freedom to customize itineraries to ensure everything aligns with your wishlist.
               </p>
   
-              <p class="aboutcontent">
+              <p class="aboutcontent" data-aos="fade-in">
                 Since our inception in 2024, TourGuide has cultivated a dynamic travel community, with 30,000+ guides hailing from over 200+ countries globally. We continue to grow each day, expanding the horizons of possibilities for discovering the world. With TourGuide by your side, there's no limit to the different ways you can embark on an unforgettable journey!
               </p>
   
-              <p class="aboutcontent">
+              <p class="aboutcontent" data-aos="fade-in">
                 <strong> We welcome you to the TourGuide family - where every journey becomes a story worth sharing!</strong>
               </p>
             </article>
@@ -179,7 +180,7 @@
                 <circle cx="8.5" cy="7" r="4" />
                 <polyline points="17 11 19 13 23 9" />
               </svg>
-              <h3 class="font-semibold text-4xl md:text-3xl group-hover:text-thq_green-500 text-gray-900 dark:text-white mt-3.5">25000</h3>
+              <h3 class="font-semibold text-4xl md:text-3xl group-hover:text-thq_green-500 text-gray-900 dark:text-white mt-3.5" data-aos="fade-in">25000</h3>
               <p class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300">Guides</p>
             </div>
           </div>
@@ -194,8 +195,8 @@
                 <line x1="12" y1="18" x2="12" y2="22" />
                 <line x1="8" y1="22" x2="16" y2="22" />
               </svg>
-              <h3 class="font-semibold text-4xl md:text-3xl  group-hover:text-thq_green-500 text-gray-900 dark:text-white mt-3.5">20000</h3>
-              <p class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300">Tours</p>
+              <h3 class="font-semibold text-4xl md:text-3xl  group-hover:text-thq_green-500 text-gray-900 dark:text-white mt-3.5" data-aos="fade-in">20000</h3>
+              <p class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300" data-aos="fade-in">Tours</p>
             </div>
           </div>
           <!-- Box 3 - Number of Destinations -->
@@ -210,8 +211,8 @@
                 <line x1="9" y1="4" x2="9" y2="17" />
                 <line x1="15" y1="15" x2="15" y2="20" />
               </svg>
-              <h3 class="font-semibold text-4xl md:text-3xl  group-hover:text-thq_green-500 text-black-900 dark:text-black mt-3.5">10994</h3>
-              <p class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300">Destinations</p>
+              <h3 class="font-semibold text-4xl md:text-3xl  group-hover:text-thq_green-500 text-black-900 dark:text-black mt-3.5" data-aos="fade-in">10994</h3>
+              <p class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300" data-aos="fade-in">Destinations</p>
             </a>
           </div>
         </div>
@@ -264,8 +265,8 @@
     <section class="section__container destination__container" id="Destinations">
       <div class="section__header">
         <div>
-          <h2 class="section__title">Explore top destinations</h2>
-          <p class="section__subtitle">
+          <h2 class="section__title" data-aos="fade-in">Explore top destinations</h2>
+          <p class="section__subtitle" data-aos="fade-in">
             Explore your suitable and dream places around the world. Here you
             can find your right destination.
           </p>
@@ -275,7 +276,7 @@
           <span><i class="ri-arrow-right-s-line"></i></span>
         </div>
       </div>
-      <div class="destination__grid">
+      <div class="destination__grid" data-aos="fade-in">
         <div class="destination__card">
           <img src="https://i.ibb.co/kQ2s7bH/pexels-paulo-marcelo-martins-2412606.jpg" alt="destination" />
           <div class="destination__details">
@@ -688,6 +689,112 @@
       })(document, 'script', 'conferbot-js');
   </script>
   <!--End of Conferbot Script-->
+
+  <script>
+    var canvas = document.getElementById("canvas"),
+      ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    var stars = [], // Array that contains the stars
+      FPS = 60, // Frames per second
+      x = 100, // Number of stars
+      mouse = {
+        x: 0,
+        y: 0
+      };  // mouse location
+
+    // Push stars to array
+
+    for (var i = 0; i < x; i++) {
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 1 + 1,
+        vx: Math.floor(Math.random() * 50) - 25,
+        vy: Math.floor(Math.random() * 50) - 25
+      });
+    }
+
+    // Draw the scene
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      ctx.globalCompositeOperation = "lighter";
+
+      for (var i = 0, x = stars.length; i < x; i++) {
+        var s = stars[i];
+
+        ctx.fillStyle = "#fff";
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.radius, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.fillStyle = 'black';
+        ctx.stroke();
+      }
+
+      ctx.beginPath();
+      for (var i = 0, x = stars.length; i < x; i++) {
+        var starI = stars[i];
+        ctx.moveTo(starI.x, starI.y);
+        if (distance(mouse, starI) < 150) ctx.lineTo(mouse.x, mouse.y);
+        for (var j = 0, x = stars.length; j < x; j++) {
+          var starII = stars[j];
+          if (distance(starI, starII) < 150) {
+            //ctx.globalAlpha = (1 / 150 * distance(starI, starII).toFixed(1));
+            ctx.lineTo(starII.x, starII.y);
+          }
+        }
+      }
+      ctx.lineWidth = 0.05;
+      ctx.strokeStyle = 'white';
+      ctx.stroke();
+    }
+
+    function distance(point1, point2) {
+      var xs = 0;
+      var ys = 0;
+
+      xs = point2.x - point1.x;
+      xs = xs * xs;
+
+      ys = point2.y - point1.y;
+      ys = ys * ys;
+
+      return Math.sqrt(xs + ys);
+    }
+
+    // Update star locations
+
+    function update() {
+      for (var i = 0, x = stars.length; i < x; i++) {
+        var s = stars[i];
+
+        s.x += s.vx / FPS;
+        s.y += s.vy / FPS;
+
+        if (s.x < 0 || s.x > canvas.width) s.vx = -s.vx;
+        if (s.y < 0 || s.y > canvas.height) s.vy = -s.vy;
+      }
+    }
+
+    canvas.addEventListener('mousemove', function (e) {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    });
+
+    // Update and draw
+
+    function tick() {
+      draw();
+      update();
+      requestAnimationFrame(tick);
+    }
+
+    tick();
+  </script>
 
 
 </body>
