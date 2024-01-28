@@ -77,14 +77,14 @@ body {
 .section__title {
   font-size: 2rem;
   font-weight: 600;
-  color: var(--text-dark);
+  color: var(--extra-light);
   margin-bottom: 1rem;
   text-align: left;
 }
 
 .section__subtitle {
   font-size: 1rem;
-  color: var(--text-dark);
+  color: var(--extra-light);
   max-width: calc(var(--max-width) / 2);
   text-align: right;
 }
