@@ -40,27 +40,160 @@
     html {
       scroll-behavior: smooth;
     }
+    /* Light Mode Styles */
+.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Navigation Bar Styles */
+.nav-container {
+  background-color: #ffffff; /* Light Mode */
+  color: #000000; /* Light Mode */
+}
+
+/* Text Color */
+.section__title {
+  color: #000000; /* Light Mode */
+}
+
+/* Button Styles */
+.btn {
+  background-color: #007bff; /* Light Mode */
+  color: #ffffff; /* Light Mode */
+}
+
+/* Dark Mode Styles */
+.dark-mode .nav-container {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.dark-mode .section__title {
+  color: #ffffff;
+}
+
+.dark-mode .btn {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* Dark Mode Toggle Button Styles */
+#toggleDarkMode {
+  background-color: #000000; /* Dark Mode */
+  color: #fff; /* Dark Mode */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+#toggleDarkMode:hover {
+  background-color: #000000; /* Dark Mode Hover */
+}
+
+.contact {
+  padding: 80px 0; /* Adjust padding as needed */
+  background-color: #f8f9fa; /* Set background color */
+}
+
+.section__title {
+  color: #333; /* Set title color */
+  margin-bottom: 30px; /* Add space below the title */
+}
+
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+}
+
+.left {
+  flex: 0 0 50%; /* Set left column width */
+  padding-right: 30px; /* Add space between columns */
+}
+
+.right {
+  flex: 0 0 50%; /* Set right column width */
+  padding-left: 30px; /* Add space between columns */
+}
+
+.contact-form img {
+  max-width: 100%;
+  height: auto; /* Ensure image maintains aspect ratio */
+  display: block; /* Remove default inline display */
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #007bff; /* Change border color on focus */
+}
+
+#emailHelp {
+  font-size: 14px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.custom-btn {
+  padding: 10px 20px;
+  background-color: #28a745; /* Green color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px; /* Add space above the button */
+}
+
+.custom-btn:hover {
+  background-color: #218838; /* Darker shade on hover */
+}
+
   </style>
 
 </head>
+<script>
+  function toggleDarkMode() {
+    var body = document.body;
+    body.classList.toggle("dark-mode");
+}
+
+</script>
 
 
-<body>
-  <!-- <nav>
-    <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
-    <ul class="nav__links">
-      <li class="link" data-aos="fade-down"><a href="#Home">Home</a></li>
-      <li class="link" data-aos="fade-down"><a href="#Destinations">Destinations</a></li>
-      <li class="link" data-aos="fade-down"><a href="#trip">Pricing</a></li>
-      <li class="link" data-aos="fade-down"><a href="#testimonials">Testimonials</a></li>
-      <li class="link" data-aos="fade-down"><a href="#ReviewGallery">Reviews</a></li>
-      <li class="link" data-aos="fade-down"><a href="feedback.html">Rate Us?</a></li>
-      <li class="link" data-aos="fade-down"><a href="login.html">Login</a></li>
+<body class="light-mode">
 
-    </ul>
-    <button id="toggle" data-aos="fade-down">Dark Theme</button>
-    <a href="#contact"><button class="btn" id="btn-style">Contact Us</button></a>
-  </nav> -->
+
   <div class="nav-container">
     <nav class="newNav">
       <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
@@ -74,7 +207,8 @@
         <li class="link" data-aos="fade-down"><a href="feedback.html">Rate Us?</a></li>
         <li class="link" data-aos="fade-down"><a href="login.html">Login</a></li>
       </ul>
-      <button id="toggle" data-aos="fade-down" style="display: inline-block;">Dark Theme</button>
+      <button id="toggleDarkMode" onclick="toggleDarkMode()">Dark Mode</button>
+
       <a href="#contact" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;" data-aos="fade-down">Contact Us</button></a>
       <div class="hamburger" data-aos="fade-down">
         <div class="line"></div>
@@ -92,7 +226,7 @@
       <div class="header__content">
         <div>
           <h1 data-aos="fade-in">Find Your Perfect Getaway<br />Discover the World's Best Kept <span class="auto-typed"
-              style="color: slateblue;"></span></h1>
+              style="color: rgb(54, 26, 234);"></span></h1>
           <p class="section__subtitle" data-aos="fade-in">
             Make your travel more enjoyable with us. We are the best travel
             agency and we are providing the best travel services for our
