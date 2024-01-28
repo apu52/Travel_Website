@@ -22,6 +22,7 @@ h1{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 .glassmorphism-container {
@@ -30,7 +31,7 @@ h1{
   border-radius: 15px;
   padding: 20px;
   text-align: center;
-  max-width: 400px;
+  max-width: 800px;
   width: 90%;
   margin-bottom: 20px;
 }
