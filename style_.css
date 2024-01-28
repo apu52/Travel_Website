@@ -106,7 +106,7 @@ h1{
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .button-36:hover {
