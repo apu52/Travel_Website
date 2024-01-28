@@ -244,8 +244,8 @@ nav {
 
 .nav__logo {
   font-size: 1.8rem;
-  /* Increased font size for the logo */
   font-weight: 600;
+  margin-right: 193px;
   color: #ffffff;
   cursor: pointer;
   /* border: 2px solid white; */
@@ -1187,6 +1187,29 @@ body {
   font-size: 18px;
   font-weight: 600;
 }
+/* 
+login */
+
+#btn-style {
+  display: inline-block;
+  border-radius: 50px;
+  transition: all .4s ease-in-out;
+  padding-left: 20px;
+  padding-right:20px;
+  background-color: transparent;
+  border: 2px solid #c6c9d8bf;
+  color: #c6c9d8bf;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+#btn-style:hover {
+  background-color: #ff0000; 
+  border-color: #ff0000;
+  color: #fff;
+}
 
 
 /* New NAvbar CSS Starts Here*/
@@ -1201,7 +1224,6 @@ body {
   left: 0;
   z-index: 9999;
 }
-
 .newNav {
   display: flex;
   justify-content: space-between;
@@ -1224,7 +1246,7 @@ body {
   z-index: 10;
 }
 
-.link a {
+.link a{
   position: relative;
 }
 
@@ -1249,17 +1271,16 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.link a:hover::before {
+.link a:hover::before{
   width: 100%;
   transition: all 0.2s ease-in-out;
 }
 
-.link a:hover::after {
+.link a:hover::after{
   width: 100%;
   transition: all 0.2s ease-in-out;
 }
-
-.hamburger {
+  .hamburger {
   height: 2rem;
   width: 1.7rem;
   display: flex;
@@ -1300,6 +1321,10 @@ body {
     padding: 0.5rem 0;
     background-color: #1f2532;
     z-index: 10;
+  }
+
+  .home{
+    margin-left: 440px;
   }
 
   #toggle {
