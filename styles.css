@@ -428,46 +428,83 @@ header {
   color: var(--text-dark);
 }
 
-.destination__container {
+/* carousel */
+
+.slideshow-container{
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 10px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  max-width: var(--max-width);
-  /* position: relative; */
-  z-index: 100;
-  background-color: var(--secondary-color);
+  flex-flow: row nowrap;
 }
 
-.section__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  /* border: 2px solid red; */
+.mySlides{
+  min-width: 100%;
+  height: inherit;
+  overflow: hidden;
+  transition: margin-left .3s ease-in-out;
+}
+
+.mySlides img{
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imageDots{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.imageDots span{
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #0000;
+  border: 3px solid white;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.imageDots span.active{
+  background-color: white;
 }
 
 .destination__nav {
   display: flex;
-  gap: 1rem;
+  width: 100%;
+  top: 50%;
+  transform: translatey(-50%);
+  position: absolute;
+  justify-content: space-between;
 }
 
 .destination__nav span {
-  width: 30px;
-  height: 30px;
+  width: 75px;
+  height: 75px;
   display: grid;
-  place-content: center;
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
-  border-radius: 100%;
+  place-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border-radius: 0 10px 10px 0;
   font-size: 1.5rem;
   cursor: pointer;
   transition: 0.3s;
 }
+.destination__nav span:nth-child(2) {
+  border-radius: 10px 0 0 10px;
+}
 
 .destination__nav span:hover {
-  color: var(--extra-light);
-  background-color: var(--primary-color);
+  background-color: rgba(0,0,0,0.2);
 }
 
 .destination__grid {
@@ -492,30 +529,25 @@ header {
   position: absolute;
   width: calc(100% - 2rem);
   padding: 1rem;
-  bottom: -6rem;
+  bottom: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  color: var(--extra-light);
-  /* background-color: transparent; */
+  color: black;
   background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px); 
   border-radius: 10px;
   z-index: 1;
   transition: 0.3s;
 }
 
-.destination__card:hover .destination__details {
-  bottom: 1rem;
-}
-
 .destination__title {
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 
 .destination__subtitle {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 

@@ -50,3 +50,74 @@ form.addEventListener("submit", subscribe)
 
 // Open the modal as soon as the page loads
 window.onload = openModal();
+
+
+// carousel JS
+
+const slideDots = document.querySelectorAll(".imageDots span");
+const slides = document.querySelectorAll(".mySlides");
+let activeSlide = 0;
+
+const destinationTitles = [
+  "Eiffel Tower",
+  "Giant Wheel",
+  "Goa Beach",
+  "Male Beach",
+];
+
+const destinationSubtitles = ["Paris", "London", "Goa", "Maldives"];
+
+slideDots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    pullSlide(null, index);
+  });
+});
+
+function pullSlide(relativeNum, absoluteNum) {
+  if (typeof relativeNum === "number") {
+    activeSlide = (activeSlide + relativeNum) % 4;
+    if (activeSlide < 0) activeSlide = slides.length + activeSlide;
+  } else if (typeof absoluteNum === "number") {
+    activeSlide = absoluteNum;
+  }
+  const title = destinationTitles[activeSlide];
+  const subtitle = destinationSubtitles[activeSlide];
+  slides.forEach((slide) => {
+
+    // Check if destination__details already exists, if not, create it
+    let detailsContainer = slide.querySelector(".destination__details");
+    if (!detailsContainer) {
+      detailsContainer = document.createElement("div");
+      detailsContainer.className = "destination__details";
+      slide.appendChild(detailsContainer);
+    }
+
+    // Check if destination__title already exists, if not, create it
+    let titleElement = detailsContainer.querySelector(".destination__title");
+    if (!titleElement) {
+      titleElement = document.createElement("p");
+      titleElement.className = "destination__title";
+      detailsContainer.appendChild(titleElement);
+    }
+    titleElement.textContent = title;
+
+    // Check if destination__subtitle already exists, if not, create it
+    let subtitleElement = detailsContainer.querySelector(".destination__subtitle");
+    if (!subtitleElement) {
+      subtitleElement = document.createElement("p");
+      subtitleElement.className = "destination__subtitle";
+      detailsContainer.appendChild(subtitleElement);
+    }
+    subtitleElement.textContent = subtitle;
+  });
+
+  slides[0].style.marginLeft = `${-activeSlide * 100}%`;
+
+  slideDots.forEach((dot) => {
+    dot.classList.remove("active");
+  });
+  slideDots[activeSlide].classList.add("active");
+}
+
+// Initial details rendering
+pullSlide(0);

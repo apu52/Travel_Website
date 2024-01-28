@@ -276,12 +276,12 @@
             can find your right destination.
           </p>
         </div>
-        <div class="destination__nav">
+        <!-- <div class="destination__nav">
           <span><i class="ri-arrow-left-s-line"></i></span>
           <span><i class="ri-arrow-right-s-line"></i></span>
-        </div>
+        </div> -->
       </div>
-      <div class="destination__grid" data-aos="fade-in">
+      <!-- <div class="destination__grid">
         <div class="destination__card">
           <img src="https://i.ibb.co/kQ2s7bH/pexels-paulo-marcelo-martins-2412606.jpg" alt="destination" />
           <div class="destination__details">
@@ -296,7 +296,7 @@
             <p class="destination__subtitle">Vietnam</p>
           </div>
         </div>
-        <!-- make hieght to 400px -->
+        <!-- make hieght to 400px -- >
         <div class="destination__card">
           <img src="https://i.ibb.co/Z2FMDPZ/pexels-sam-kolder-2387871.jpg" alt="destination" height="400px" />
           <div class="destination__details">
@@ -304,13 +304,46 @@
             <p class="destination__subtitle">Agra</p>
           </div>
         </div>
-        <!-- make hieght to 400px -->
+        <!-- make hieght to 400px -- >
         <div class="destination__card">
           <img src="https://i.ibb.co/gj3DM28/pexels-alex-azabache-3214958.jpg" alt="destination" height="400px"/>
           <div class="destination__details">
             <p class="destination__title">Wadi Musa</p>
             <p class="destination__subtitle">Jordan</p>
           </div>
+        </div>
+      </div> -->
+
+      <!-- slideshow -->
+      <div class="slideshow-container">
+
+        <!-- Next and previous buttons -->
+        <div class="destination__nav">
+          <span onclick="pullSlide(-1)"><i class="ri-arrow-left-s-line"></i></span>
+          <span onclick="pullSlide(1)"><i class="ri-arrow-right-s-line"></i></span>
+        </div>
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides">
+          <img src="./img/eiffelTower.webp" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <img src="./img/london.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <img src="./img/goa.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <img src="./img/maldives.jpg" style="width:100%">
+        </div>
+        <div class="imageDots">
+          <span class="active"></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
     </section>
