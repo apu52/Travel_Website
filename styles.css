@@ -11,6 +11,8 @@
         --secondary-color: #fafcff; 
         --text-dark: #0d213f; 
   --max-width: 1200px;
+  --body-color:#fff;
+  --label-text:#000;
 }
 
 * {
@@ -19,11 +21,17 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: var(--secondary-color);
+}
+
 .dark-theme{
   --secondary-color: black;
   --text-dark: #ffffff;
   --arr-light:white;
   --body-light:black;
+  --label-text:#fff;
+
 }
 #toggle{
   display: inline-block;
@@ -164,7 +172,6 @@ nav {
   transition: 0.3s;
   font-weight: 600;
 }
-
 .link a:hover {
   color: #ff0000;
 }
@@ -237,6 +244,119 @@ header {
   gap: 2rem;
   margin-top: 1rem;
 }
+
+/* Newsletter Modal */
+
+.modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  z-index: 2000000000;
+}
+
+.modal-wrapper{
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.modal-image{
+  height: 100%;
+  transform: scale(1.1);
+  object-position: center;
+  object-fit: cover;
+  max-width: inherit;
+}
+
+
+.modal-newsletter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.cross-container{
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: fit-content;
+  z-index: 1;
+  padding: 1rem;
+}
+
+.close-btn{
+  
+  font-size: 1.5rem;
+  color: #000;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.close-btn:hover{
+  color: #ff0000;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modal-content input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 2px solid #efefef;
+}
+
+.modal-btn {
+  padding: 10px;
+  background-color: #091020;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: scale 0.3s ease-in-out;
+}
+
+.modal-btn:active {
+  scale: 0.95;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* Modal End */
 
 .story {
   display: flex;
@@ -372,6 +492,14 @@ header {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin: 4rem 0;
+}
+
+.trip__grid p{
+  color: #000;
+}
+
+.price{
+  color: #000;
 }
 
 .trip__card {
@@ -533,6 +661,7 @@ header {
 .footer {
   width: 100%;
   background-color: #091020;
+
 }
 
 .footer__container {
@@ -542,7 +671,8 @@ header {
   align-items: flex-start;
   /*grid-template-columns: repeat(3, 1fr);*/
   gap: 24px;
-  color: var(--secondary-color);
+  /* color: var(--secondary-color); */
+  color: #fff;
 }
 
 .footer__col{
@@ -761,6 +891,8 @@ body:hover {
 
 
 
+
+
 body{
   background-color:#eee;
   margin-top:20px;
@@ -855,7 +987,10 @@ body{
   color: #3685fb;
   font-size: 18px;
   font-weight: 600;
+
+
 }
+
 
 
 /* New NAvbar CSS Starts Here*/
@@ -983,3 +1118,102 @@ body{
 }
 
 /* New NAvbar CSS Ends Here*/
+
+
+.sub__header:hover{
+  background-color: transparent;
+  color: var(--primary-color);
+  
+}
+
+/* Light mode  And Dark mode of AboutUs*/
+
+.headingofAbout {
+  font-weight: bolder;  /* Set font weight to bolder */
+  text-align: center;
+  color: var(--text-dark);  /* Use the text-dark custom property for color */
+}
+/* Styling for elements with .aboutcon class */
+.aboutcon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+  background-color:var(--body-light); /* Use the text-dark custom property for color */
+}
+/* Styling for elements with .aboutcontent class */
+.aboutcontent {
+  text-align: center;
+  color: var(--text-dark);  /* Use the text-dark custom property for color */
+  margin-bottom: 20px;
+}
+/* Styling for SVG elements inside .iconss class */
+.iconss svg {
+  width: 100px; 
+  height: 90px; 
+  fill: none;
+  stroke-width: 2;
+  align-items: end;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  box-shadow: 10px 70px 50px -1px rgba(176, 69, 137, 0.19);
+  background-color: transparent;
+  border-radius: 20px;
+}
+/* Styling for elements with .iconss class */
+.iconss{
+  color:var(--foot-light);  /* Use the text-dark custom property for color */
+}
+/* Hover effect for SVG elements inside .iconss class */
+.iconss:hover svg {
+  stroke: #D51459;
+}
+/* Styling for h3 elements inside .aboutcontent class */
+.aboutcontent h3 {
+  font-size: 1.5rem; 
+  margin-top: 10px;
+}
+/* Styling for p elements inside .iconss class */
+
+.iconss p {
+  font-size: 1rem; 
+  color: var(--foot-light); /* Use the text-dark custom property for color */
+  font-style: oblique;
+}
+/* Styling for elements with .box1 class */
+.box1 {
+  height: 175px;
+  align-items: right;
+  width: 500px;
+  background-color: #d1f1f4;
+  align-items: center;
+  align-content: center;
+  border: 0.5px solid;
+  border-color: var(--text-dark); /* Use the text-dark custom property for color */
+  
+  border-radius: 20px;
+  display: flex;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.color {
+  background-color: #B2bfed;  /* Use the text-dark custom property for color */
+}
+/* Styling of AboutUs ended here */
+.custom-btn {
+  background-color: rgb(73, 185, 185);
+  color: black; 
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.custom-btn:hover {
+  background-color: #5f8fd2; 
+}
+

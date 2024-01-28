@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <nav>
+    <!--<nav>
         <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
         <ul class="nav__links">
           <li class="link" data-aos="fade-down"><a href="/index.html#Home">Home</a></li>
@@ -23,6 +23,31 @@
         <button id="toggle" data-aos="fade-down">Dark Theme</button>
         <a href="/index.html#contact" data-aos="fade-down"><button class="btn">Contact Us</button></a>
       </nav>
+    --->
+    <div class="nav-container">
+      <nav class="newNav">
+        <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+    
+        <ul class="navLinks">
+          <li class="link" data-aos="fade-down"><a href="/index.html#Home">Home</a></li>
+          <li class="link" data-aos="fade-down"><a href="/index.html#Destinations">Destinations</a></li>
+          <li class="link" data-aos="fade-down"><a href="/index.html#trip">Pricing</a></li>
+          <li class="link" data-aos="fade-down"><a href="/index.html#testimonials">Testimonials</a></li>
+          <li class="link" data-aos="fade-down"><a href="/index.html#ReviewGallery">Reviews</a></li>
+          <li class="link" data-aos="fade-down"><a href="/feedback.html">Rate Us?</a></li>
+          <li class="link" data-aos="fade-down"><a href="/login.html">Login</a></li>
+        </ul>
+        <button id="toggle" data-aos="fade-down" style="display: inline-block;" class="aos-init aos-animate" fdprocessedid="4jppko">Dark Theme</button>
+        <a href="#contact" class="contact-btn">
+          <button class="btn aos-init aos-animate" id="btn-style" style="margin: 0;" data-aos="fade-down" fdprocessedid="kglas">Contact Us</button>
+        </a>
+        <div class="hamburger" data-aos="fade-down">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+    </div>
     
     <section class="middle">
     <!---Image Slider-----> 
@@ -32,9 +57,9 @@
                 </div>
             
                 <!--Next and Previous Buttons-->
-                <button class="btn" id="btns" onclick="prev()">Prev</button>
-                <button class="btn" id="btns" onclick="next()">Next</button>
-                <a  href="/payment.html"><button class="btn" id="btnss">CHECK OUT</button></a>
+                <button class="bttn" id="btns" onclick="prev()">Prev</button>
+                <button class="bttn" id="btns" onclick="next()">Next</button>
+                <a  href="/payment.html"><button class="bttn" id="btnss">CHECK OUT</button></a>
 
                 <div class="features">
                     <h3><i title="BBQ meal included" class="fa fal fa-utensils"></i> BBQ meal included</h3>
