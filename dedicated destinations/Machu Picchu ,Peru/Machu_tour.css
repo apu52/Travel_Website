@@ -12,7 +12,7 @@
   box-shadow: 5px 5px 60px #575050 ;
 }
 
-.btn{
+.bttn{
 	border:none;
 	outline:none;
 	background:#888;
@@ -24,6 +24,26 @@
   margin-bottom: 20px;
 }
 
+#btn-style {
+  display: inline-block;
+  border-radius: 50px;
+  transition: all .4s ease-in-out;
+  padding: 10px 10px;
+  background-color: transparent;
+  border: 2px solid #c6c9d8bf;
+  color: #c6c9d8bf;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  margin: 10px 40px;
+}
+
+#btn-style:hover {
+  background-color: #ff0000;
+  border-color: #ff0000;
+  color: #fff;
+}
 
 #btns:hover{
 	background: #111;
@@ -74,7 +94,7 @@
 }
 
 #btnss{
-  margin-left: 6rem;
+  margin-left: 4.5rem;
   padding: 11px 45px ;
 }
 
@@ -95,3 +115,37 @@
   border-radius: 10px;
   border: black solid 1px;
 }
+
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #091020;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1001;
+}
+
+.nav__logo {
+  font-size: 1.8rem; /* Increased font size for the logo */
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  /* border: 2px solid white; */
+}
+
+.nav__logo span {
+  color: #3685fb; /* Assuming this is your primary color */
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+ol, ul {
+  padding-left: 2rem;
+}
+
+  
