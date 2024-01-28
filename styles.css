@@ -11,6 +11,8 @@
         --secondary-color: #fafcff; 
         --text-dark: #0d213f; 
   --max-width: 1200px;
+  --body-color:#fff;
+  --label-text:#000;
 }
 
 * {
@@ -19,11 +21,17 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: var(--secondary-color);
+}
+
 .dark-theme{
   --secondary-color: black;
   --text-dark: #ffffff;
   --arr-light:white;
   --body-light:black;
+  --label-text:#fff;
+
 }
 #toggle{
   display: inline-block;
@@ -486,6 +494,14 @@ header {
   margin: 4rem 0;
 }
 
+.trip__grid p{
+  color: #000;
+}
+
+.price{
+  color: #000;
+}
+
 .trip__card {
   border-radius: 1rem;
   overflow: hidden;
@@ -645,6 +661,7 @@ header {
 .footer {
   width: 100%;
   background-color: #091020;
+
 }
 
 .footer__container {
@@ -654,7 +671,8 @@ header {
   align-items: flex-start;
   /*grid-template-columns: repeat(3, 1fr);*/
   gap: 24px;
-  color: var(--secondary-color);
+  /* color: var(--secondary-color); */
+  color: #fff;
 }
 
 .footer__col{
