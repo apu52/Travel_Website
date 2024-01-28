@@ -1234,3 +1234,108 @@ body {
   top: 0;
   height: 800%;
 }
+
+
+/* ******* */
+.sub__header:hover{
+  background-color: transparent;
+  color: var(--primary-color);
+  
+}
+
+/* Light mode  And Dark mode of AboutUs*/
+
+.headingofAbout {
+  font-weight: bolder;  /* Set font weight to bolder */
+  text-align: center;
+  color: var(--text-dark);  /* Use the text-dark custom property for color */
+}
+/* Styling for elements with .aboutcon class */
+.aboutcon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+  background-color:var(--body-light); /* Use the text-dark custom property for color */
+}
+/* Styling for elements with .aboutcontent class */
+.aboutcontent {
+  text-align: center;
+  color: var(--text-dark);  /* Use the text-dark custom property for color */
+  margin-bottom: 20px;
+}
+/* Styling for SVG elements inside .iconss class */
+.iconss svg {
+  width: 100px; 
+  height: 90px; 
+  fill: none;
+  stroke-width: 2;
+  align-items: end;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  box-shadow: 10px 70px 50px -1px rgba(176, 69, 137, 0.19);
+  background-color: transparent;
+  border-radius: 20px;
+}
+/* Styling for elements with .iconss class */
+.iconss{
+  color:var(--foot-light);  /* Use the text-dark custom property for color */
+}
+/* Hover effect for SVG elements inside .iconss class */
+.iconss:hover svg {
+  stroke: #D51459;
+}
+/* Styling for h3 elements inside .aboutcontent class */
+.aboutcontent h3 {
+  font-size: 1.5rem; 
+  margin-top: 10px;
+}
+/* Styling for p elements inside .iconss class */
+
+.iconss p {
+  font-size: 1rem; 
+  color: var(--foot-light); /* Use the text-dark custom property for color */
+  font-style: oblique;
+}
+/* Styling for elements with .box1 class */
+.box1 {
+  height: 175px;
+  align-items: right;
+  width: 500px;
+  background-color: #d1f1f4;
+  align-items: center;
+  align-content: center;
+  border: 0.5px solid;
+  border-color: var(--text-dark); /* Use the text-dark custom property for color */
+  
+  border-radius: 20px;
+  display: flex;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.color {
+  background-color: #B2bfed;  /* Use the text-dark custom property for color */
+}
+/* Styling of AboutUs ended here */
+.custom-btn {
+  background-color: rgb(73, 185, 185);
+  color: black; 
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.custom-btn:hover {
+  background-color: #5f8fd2; 
+}
+
+.section__container .gallary__container {
+  border: 2px solid green;
+  width: auto;
+}
+
