@@ -1302,8 +1302,6 @@ body {
 /* Styling for elements with .box1 class */
 .box1 {
   height: 175px;
-  align-items: right;
-  width: 500px;
   background-color: #d1f1f4;
   align-items: center;
   align-content: center;
@@ -1312,7 +1310,6 @@ body {
   
   border-radius: 20px;
   display: flex;
-  margin-left: 30px;
   margin-bottom: 10px;
   justify-content: center;
 }
@@ -1337,5 +1334,6 @@ body {
 .section__container .gallary__container {
   /* border: 2px solid green; */
   width: auto;
+  place-items: center;
+  place-content: center ;
 }
-
