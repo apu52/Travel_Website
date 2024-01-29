@@ -23,32 +23,67 @@
   height: 70vh;
 }
 
-.section__header {
+/* .section__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10rem;
   flex-wrap: wrap;
   margin-bottom: 4rem;
-}
+} */
 
-.section__title {
+/* .section__title {
+  width: 100%;
   font-size: 7rem;
-  margin-top: 50px;
+  margin-top: 20px;
   font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 1rem;
-  text-align: center; /* Center text horizontally */
-  line-height: 1; /* Center text vertically */
+   text-align: center; /*Center text horizontally */
+  /* line-height: 1; Center text vertically */
+
+/* } */ 
+
+/* .section__subtitle {
+  font-size:2rem;
+  margin-top:200px;
+  color: var(--text-dark);
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+} */
+
+.section__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px; /* Add padding for better spacing */
+}
+
+.section__title {
+  margin-bottom: 10px; /* Add some spacing below the title */
+  width: 100%;
+  font-size: 7rem;
+  margin-top: 20px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
 
 }
 
 .section__subtitle {
-  font-size:2rem;
-  margin-top: 300px;
-  color: var(--text-dark);
-  max-width: calc(var(--max-width) / 2);
+  margin-bottom: 20px; /* Add more spacing below the subtitle */
 }
+
+
+
+
+
+
 
 .btn {
   padding: 0.75rem 2rem;
@@ -300,6 +335,9 @@ header {
   font-size: 1.5rem;
   cursor: pointer;
   transition: 0.3s;
+
+    margin: 0 10px; 
+  
 }
 
 .destination__nav span:hover {
@@ -378,14 +416,14 @@ header {
   grid-template-columns: repeat(3, 1fr);
   gap: 10rem;
   margin: 4rem 4rem;
-  height: 50vh;
+  height: 20vh;
 
 }
 
 .trip__card {
   border-radius: 1rem;
   overflow: hidden;
-  height: 30vh;
+  height: 20vh;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
   transition: 2s;
 }
@@ -463,7 +501,7 @@ header {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 }
 
-.gallary__content {
+/* .gallary__content {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -478,7 +516,78 @@ header {
 .gallary__content .section__subtitle {
   margin-bottom: 2rem;
 
+} */
+
+.gallary__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
 }
+
+.gallary__content .section__title{
+  
+  margin-bottom: 10px; /* Add some spacing below the title */
+  width: 100%;
+  font-size: 5rem;
+  margin-top: 20px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+
+}
+
+
+.gallary__content .section__subtitle{
+  font-size:2rem;
+  margin-top:200px;
+  color: var(--text-dark);
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+
+.gallary__content img {
+  max-width: 45%; /* Adjust the width of the image as needed */
+  margin-right: 20px; /* Add margin to create space between the image and text */
+}
+
+.gallary__content div {
+  max-width: 45%; /* Adjust the width of the text container as needed */
+}
+
+/* .section__title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.section__subtitle {
+  font-size: 18px;
+  margin-bottom: 20px;
+} */
+
+.btn {
+  font-size: 16px;
+}
+
+/* Media query for better responsiveness on smaller screens */
+@media only screen and (max-width: 768px) {
+  .gallary__content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .gallary__content img,
+  .gallary__content div {
+    max-width: 100%;
+    margin-right: 0; /* Remove margin on smaller screens */
+  }
+}
+
 
 .trip-gallery-container{
   width: 100%;
@@ -501,16 +610,57 @@ header {
 }
 
 .subscribe__container {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 100vh; /* Set the height to 100% of the viewport height for vertical centering */
+  height: 40vh; 
 }
 
 .subscribe__form {
   margin-top: 20px; /* Add some spacing between the content and the form */
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 10vh;
+}
+
+/* .subscribe__form { */
+  /* margin-top: 20px; Add some spacing between the content and the form */
+/* } */
+
+.subscribe__form form {
+  max-width: 400px; /* Set a maximum width for the form */
+  margin: auto; /* Center the form horizontally */
+}
+
+/* Style the input */
+.subscribe__form input {
+  width: 100%; /* Make the input take up the full width of the form */
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 16px; /* Adjust the font size as needed */
+}
+
+/* Style the button */
+.subscribe__form button {
+  width: 100%; /* Make the button take up the full width of the form */
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px; /* Adjust the font size as needed */
+}
+
+
+
+
+.section__subtitle{
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+  font-size: 60px;
+
 }
 
 /* Style the input and button */
@@ -533,20 +683,6 @@ header {
   gap: 2rem;
 }
 
-.subscribe__form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.subscribe__form form {
-  width: 100%;
-  max-width: 400px;
-  display: flex;
-  background-color: var(--extra-light);
-  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
-  border-radius: 5rem;
-} */
 
 /* .subscribe__form input {
   width: 100%;
