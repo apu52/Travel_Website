@@ -23,6 +23,14 @@
   height: 70vh;
 }
 
+.section__container .gallary__container{
+  width: 100%;
+  margin: 10px 10px;
+  padding: 5rem 1rem;
+  height: 100vh;
+
+}
+
 /* .section__header {
   display: flex;
   align-items: center;
@@ -409,6 +417,7 @@ header {
   margin: 10px 10px;
   padding: 5rem 1rem;
   height: 70vh;
+  margin-top: 400px;
 }
 
 .trip__grid {
@@ -416,14 +425,14 @@ header {
   grid-template-columns: repeat(3, 1fr);
   gap: 10rem;
   margin: 4rem 4rem;
-  height: 20vh;
+  height: 40vh;
 
 }
 
 .trip__card {
   border-radius: 1rem;
   overflow: hidden;
-  height: 20vh;
+  height: 40vh;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
   transition: 2s;
 }
@@ -479,6 +488,7 @@ header {
 }
 
 .gallary__container {
+  margin-left: 300px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
@@ -494,6 +504,9 @@ header {
   display: grid;
   place-content: center;
   gap: 1rem;
+  width: 700px;
+
+
 }
 
 .gallary__col img {
@@ -525,6 +538,7 @@ header {
   text-align: center;
   padding: 20px;
   width: 100%;
+  margin-left: 1000px;
 }
 
 .gallary__content .section__title{
@@ -536,12 +550,11 @@ header {
   font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 1rem;
-
 }
 
 
 .gallary__content .section__subtitle{
-  font-size:2rem;
+  font-size:3rem;
   margin-top:200px;
   color: var(--text-dark);
   width: 100%;
@@ -560,15 +573,26 @@ header {
   max-width: 45%; /* Adjust the width of the text container as needed */
 }
 
-/* .section__title {
-  font-size: 24px;
-  margin-bottom: 10px;
+
+element.style {
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+.gallary__content .btn {
+    bottom: -80px;
+    background-color: slateblue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 100px;
+
 }
 
-.section__subtitle {
-  font-size: 18px;
-  margin-bottom: 20px;
-} */
+
+
 
 .btn {
   font-size: 16px;
