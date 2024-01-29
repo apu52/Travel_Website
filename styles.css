@@ -1398,3 +1398,18 @@ body {
   place-items: center;
   place-content: center ;
 }
+#toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#toggle i {
+  font-size: 24px; /* Adjust the size as needed */
+  color: white;
+  transition: color 0.3s;
+}
+
+#toggle:hover i {
+  color: #ffffff80; /* 80% opacity white for hovering effect */
+}
