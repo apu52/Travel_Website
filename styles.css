@@ -20,28 +20,32 @@
   width: 100%;
   margin: 10px 10px;
   padding: 5rem 1rem;
-  height: 50px;
+  height: 70vh;
 }
 
 .section__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 10rem;
   flex-wrap: wrap;
   margin-bottom: 4rem;
 }
 
 .section__title {
-  font-size: 2rem;
+  font-size: 7rem;
+  margin-top: 50px;
   font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 1rem;
+  text-align: center; /* Center text horizontally */
+  line-height: 1; /* Center text vertically */
+
 }
 
 .section__subtitle {
-  font-size: 1.5rem;
-  margin-top: -300px;
+  font-size:2rem;
+  margin-top: 300px;
   color: var(--text-dark);
   max-width: calc(var(--max-width) / 2);
 }
@@ -108,7 +112,7 @@ nav {
 .nav__logo {
   font-size: 3rem;
   font-weight: 600;
-
+   margin-left: 30px;
   color: var(--text-dark);
   cursor: pointer;
 }
@@ -181,7 +185,7 @@ header {
 
 .header__image img {
   position: absolute;
-  top:40%;
+  top:50%;
   left: 40%;
   width: 140%;
   border: 0.5rem solid var(--extra-light);
@@ -215,24 +219,29 @@ header {
 }
 
 .header__content .sub__header {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 600;
   color: var(--primary-color);
+
 }
 
 .header__content h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   line-height: 4rem;
   font-weight: 800;
+ margin-bottom: 2rem;
   color: var(--text-dark);
-  margin-top:-300px ;
+  margin-top:-200px ;
 }
+
+
 
 .header__content .action__btns {
   display: flex;
   align-items: center;
   gap: 2rem;
   margin-top: -400px;
+  margin-left: auto;
 }
 
 .story {
@@ -240,6 +249,7 @@ header {
   align-items: center;
   gap: 2rem;
   cursor: pointer;
+  margin-right: 50px;
 }
 
 .video {
@@ -256,7 +266,6 @@ header {
 .video span {
   position: absolute;
   top: 50%;
-  left: 100%;
   transform: translate(-50%, -50%);
 }
 
@@ -281,8 +290,8 @@ header {
 }
 
 .destination__nav span {
-  width: 30px;
-  height: 30px;
+  width: 100px;
+  height: 100px;
   display: grid;
   place-content: center;
   color: var(--primary-color);
@@ -312,7 +321,7 @@ header {
 }
 
 .destination__card img {
-  border-radius: 1rem;
+  border-radius: 2rem;
 }
 
 .destination__details {
@@ -347,24 +356,36 @@ header {
 
 .trip {
   background-color: var(--secondary-color);
+ 
 }
 
 .trip__container :is(.section__title, .section__subtitle, .view__all) {
   text-align: center;
   margin-right: auto;
   margin-left: auto;
+ 
+  
+}
+
+.section__container .trip__container{
+  margin: 10px 10px;
+  padding: 5rem 1rem;
+  height: 70vh;
 }
 
 .trip__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin: 4rem 0;
+  gap: 10rem;
+  margin: 4rem 4rem;
+  height: 50vh;
+
 }
 
 .trip__card {
   border-radius: 1rem;
   overflow: hidden;
+  height: 30vh;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
   transition: 2s;
 }
@@ -404,6 +425,9 @@ header {
   padding: 0.5rem 1.5rem;
   color: var(--primary-color);
   outline: none;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
   border: 1px solid var(--primary-color);
   border-radius: 5rem;
   background-color: transparent;
@@ -444,6 +468,7 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .gallary__content > div {
@@ -467,14 +492,38 @@ header {
   width: 100%;
 }
 
+
+
 .trip-gallery-container img:hover{
   transform: scale(0.8) rotate(-10deg);
   border-radius: 20px;
   box-shadow: 0 32px 7px rgba(68,77,136,0.2);
 }
 
+.subscribe__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh; /* Set the height to 100% of the viewport height for vertical centering */
+}
 
-.subscribe {
+.subscribe__form {
+  margin-top: 20px; /* Add some spacing between the content and the form */
+}
+
+/* Style the input and button */
+.subscribe__form input,
+.subscribe__form button {
+  padding: 10px;
+  margin: 5px;
+}
+
+/* Optional: Add more styling based on your design preferences */
+
+
+/* .subscribe {
   background-color: var(--secondary-color);
 }
 
@@ -497,20 +546,21 @@ header {
   background-color: var(--extra-light);
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
   border-radius: 5rem;
-}
+} */
 
-.subscribe__form input {
+/* .subscribe__form input {
   width: 100%;
   padding: 1rem;
   outline: none;
   border: none;
   border-radius: 5rem;
   font-size: 1rem;
-}
+} */
 
 .footer {
   width: 100%;
   background-color: var(--text-dark);
+  margin-bottom: 0;
 }
 
 .footer__container {
@@ -518,10 +568,11 @@ header {
   grid-template-columns: repeat(3, 1fr);
   gap: 5rem;
   color: var(--secondary-color);
+  height: 25vh;
 }
 
 .footer__col h3 {
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: 600;
   margin-bottom: 2rem;
 }
@@ -535,6 +586,7 @@ header {
   margin-bottom: 1rem;
   cursor: pointer;
   transition: 0.3s;
+  font-size:30px;
 }
 
 .footer__col p:hover {
@@ -542,13 +594,14 @@ header {
 }
 
 .footer__col p span {
-  font-weight: 600;
+  font-weight: 800;
+  font-size:30px;
 }
 
 .footer__col h4 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 2rem;
+  font-size:30px;
+  font-weight: 800;
+  margin-bottom: 4rem;
 }
 
 .footer__bar {
@@ -559,168 +612,27 @@ header {
   font-size: 0.8rem;
   color: var(--secondary-color);
   border-top: 1px solid var(--text-light);
+  font-size:30px;
 }
 
-@media (width < 1200px) {
-  .header__image img:nth-child(1) {
-    max-width: 300px;
-  }
 
-  .header__image img:nth-child(2) {
-    max-width: 200px;
-  }
+
+
+.col-lg-4{
+  justify-content: space-around;
 }
 
-@media (width < 900px) {
-  .nav__links {
-    display: none;
-  }
-
-  .header__container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .header__image {
-    min-height: 500px;
-  }
-
-  .destination__grid {
-    gap: 1rem;
-  }
-
-  .trip__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.left img{
+  width: 50%;
+  height: 50vh;
 }
 
-@media (width < 600px) {
-  .destination__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .trip__grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .gallary__container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .subscribe__container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .footer__container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* doing changes */
-#goToTopBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#goToTopBtn:hover {
-  background-color: #0056b3;
-}
-
-/*contact section overlapping with nav fixed*/
-#contact{
-  margin-top: 30px;
-  padding-top: 100px;
-}
-
-.contact-form {
-  display: flex;
+#goToTopBtn{
   align-items: center;
-  justify-content: space-between;
-}
-
-.contact-form .left {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.contact-form .right {
-  flex: 1;
-  padding-left: 20px;
-}
-
-.right .form-control {
-  width: 100%;
-  max-width: 600px; /* Adjust the maximum width as needed */
+  margin: auto;
+  font-size: 20px;
 }
 
 
-
-@media (max-width: 1200px) {
-  .header__image img:nth-child(1) {
-    max-width: 300px;
-  }
-
-  .header__image img:nth-child(2) {
-    max-width: 200px;
-  }
-}
-
-@media (max-width: 900px) {
-  .nav__links {
-    display: none;
-  }
-
-  .header__container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .header__image {
-    min-height: 500px;
-  }
-
-  .destination__grid {
-    gap: 1rem;
-  }
-
-  .trip__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .destination__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .trip__grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .gallary__container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .subscribe__container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .footer__container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-
-
-  .contact-form .right {
-    padding-left: 0;
-    margin-top: 10px; /* Adjust as needed */
-  }
 
 
