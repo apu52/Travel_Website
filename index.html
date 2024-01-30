@@ -678,7 +678,8 @@
 
 
 
-  <!--Start of Conferbot Script-->
+  <!-- Start of Conferbot Script -->
+
   <script type="text/javascript">
       (function (d, s, id) {
         var js, el = d.getElementsByTagName(s)[0];
@@ -690,11 +691,16 @@
         js.charset = 'UTF-8';
         el.parentNode.insertBefore(js, el);
         js.onload = function () {
-          var w = window.ConferbotWidget("65abf7c21173f1231cef840f", "live_chat");
+          var w = window.ConferbotWidget("65b80765988633d43148e80e", "live_chat");
         };
       })(document, 'script', 'conferbot-js');
-  </script>
-  <!--End of Conferbot Script-->
+    </script>
+    <!--End of Conferbot Script-->
+  
+
+<!-- Button to trigger the chatbot -->
+<button onclick="initializeConferbot()">Open Chatbot</button>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script>
