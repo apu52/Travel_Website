@@ -12,27 +12,31 @@
   --secondary-color: #fafcff;
   --text-dark: #0d213f;
   --max-width: 1200px;
+  --img-color: white;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
 }
 
 .dark-theme {
-  --secondary-color: black;
+  --secondary-color: #0e1525;
   --text-dark: #ffffff;
   --arr-light: white;
-  --body-light: black;
+  --body-light: #0e1525;
+  --img-color:#6a5acd;
 }
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
+  background-color: #0e1525;
   overflow-x: hidden;
+
 }
 
 #toggle {
@@ -63,7 +67,6 @@ body {
   max-width: var(--max-width);
   margin: auto;
   padding: 5rem 1rem;
-  /* border: 2px solid red; */
 }
 
 .section__header {
@@ -210,7 +213,7 @@ header {
   position: absolute;
   top: 50%;
   left: 55%;
-  border: 0.5rem solid var(--extra-light);
+  border: 0.5rem solid var(--img-color);
   border-radius: 2rem;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
 }
@@ -1555,7 +1558,7 @@ body {
 }
 
 .color {
-  background-color: #B2bfed;  /* Use the text-dark custom property for color */
+  background-color:transparent;  /* Use the text-dark custom property for color */
 }
 /* Styling of AboutUs ended here */
 .custom-btn {
