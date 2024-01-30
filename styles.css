@@ -489,7 +489,7 @@ header {
 }
 
 .gallary__container {
-  margin-left: 300px;
+  margin-left: 700px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
@@ -502,9 +502,10 @@ header {
 }
 
 .gallary__col {
+  margin-top: 300px;
   display: grid;
   place-content: center;
-  gap: 1rem;
+  gap: 3rem;
   width: 700px;
 
 
@@ -533,13 +534,14 @@ header {
 } */
 
 .gallary__content {
+  margin-top: 300px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   text-align: center;
   padding: 20px;
   width: 100%;
-  margin-left: 1000px;
+  margin-left: 800px;
 }
 
 .gallary__content .section__title{
@@ -555,8 +557,8 @@ header {
 
 
 .gallary__content .section__subtitle{
-  font-size:3rem;
-  margin-top:200px;
+  font-size:4rem;
+  margin-top:100px;
   color: var(--text-dark);
   width: 100%;
   align-items: center;
@@ -566,9 +568,9 @@ header {
 }
 
 .gallary__content img {
-  max-width: 45%; /* Adjust the width of the image as needed */
-  margin-right: 20px; /* Add margin to create space between the image and text */
-}
+  max-width: 60%; 
+  left-right: 100px;
+ }
 
 .gallary__content div {
   max-width: 45%; /* Adjust the width of the text container as needed */
@@ -585,10 +587,10 @@ element.style {
     background-color: slateblue;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 30px 20px;
+    border-radius: 10px;
     cursor: pointer;
-    margin-top: 100px;
+    margin-top: 60px;
 
 }
 
