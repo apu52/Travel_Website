@@ -13,6 +13,7 @@
   --text-dark: #0d213f;
   --max-width: 1200px;
   --img-color: white;
+  --head-text: #6a5acd;
 }
 
 * {
@@ -27,7 +28,8 @@
   --text-dark: #ffffff;
   --arr-light: white;
   --body-light: #0e1525;
-  --img-color:#6a5acd;
+  --img-color:red;
+  --head-text: red;
 }
 
 body {
