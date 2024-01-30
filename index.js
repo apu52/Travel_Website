@@ -121,3 +121,11 @@ function pullSlide(relativeNum, absoluteNum) {
 
 // Initial details rendering
 pullSlide(0);
+
+document.getElementById('emailInput').addEventListener('focus', function() {
+  document.getElementById('send').classList.add('focused');
+});
+
+document.getElementById('emailInput').addEventListener('blur', function() {
+  document.getElementById('send').classList.remove('focused');
+});
