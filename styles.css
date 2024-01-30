@@ -110,6 +110,36 @@ body {
   border-top-right-radius: 5rem;
   border-bottom-right-radius: 5rem;
 }
+/* send button start*/
+#send {
+  display: inline-block;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transition: all .4s ease-in-out;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: auto;
+  border: none;
+  background-color: transparent;
+  color: slateblue;
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: 2px;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+
+#send.focused {
+  background-color: slateblue;
+  border-color: slateblue;
+  color: #fff;
+}
+
+/* send button end */
 
 
 .btn:hover {
