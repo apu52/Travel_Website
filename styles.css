@@ -84,7 +84,7 @@
 }
 
 .section__subtitle {
-  margin-bottom: 20px; /* Add more spacing below the subtitle */
+  margin-bottom: 10px; /* Add more spacing below the subtitle */
 }
 
 
@@ -98,10 +98,10 @@
   outline: none;
   border: none;
   margin-right: 5px;
-  font-size: 1rem;
+  font-size: 4rem;
   color: var(--extra-light);
   background-color: var(--primary-color);
-  border-radius: 5rem;
+  border-radius: 8rem;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -258,7 +258,7 @@ header {
 .header__content > div {
   max-width: 600px;
   display: grid;
-  gap: 20rem;
+  gap: 3rem;
 }
 
 .header__content .sub__header {
@@ -274,7 +274,7 @@ header {
   font-weight: 800;
  margin-bottom: 2rem;
   color: var(--text-dark);
-  margin-top:-200px ;
+  /* margin-top:400px ; */
 }
 
 
@@ -282,8 +282,7 @@ header {
 .header__content .action__btns {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  margin-top: -400px;
+  gap: 4rem;
   margin-left: auto;
 }
 
@@ -469,7 +468,8 @@ header {
 }
 
 .book__now {
-  padding: 0.5rem 1.5rem;
+  padding: 20px 30px;
+  font-size: 20px;
   color: var(--primary-color);
   outline: none;
   align-items: center;
@@ -480,6 +480,7 @@ header {
   background-color: transparent;
   cursor: pointer;
   transition: 0.3s;
+  margin-top: 10rem;
 }
 
 .book__now:hover {
@@ -595,7 +596,13 @@ element.style {
 
 
 .btn {
-  font-size: 16px;
+  font-size: 40px;
+
+}
+
+.view__all btn{
+  margin-top: 100px;
+  
 }
 
 /* Media query for better responsiveness on smaller screens */
@@ -634,7 +641,7 @@ element.style {
 }
 
 .subscribe__container {
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -642,39 +649,42 @@ element.style {
   height: 40vh; 
 }
 
-.subscribe__form {
-  margin-top: 20px; /* Add some spacing between the content and the form */
-  width: 50%;
+/* .subscribe__form { */
+  /* margin-top: 40px; Add some spacing between the content and the form */
+  /* width: 50%;
   align-items: center;
   justify-content: center;
   margin: auto;
   height: 10vh;
-}
+} */
 
-/* .subscribe__form { */
-  /* margin-top: 20px; Add some spacing between the content and the form */
+/* .subscribe__form {
+  margin-top: 20px; 
+ } */
+
+/* .subscribe__form form {
+  max-width: 400px; 
+  margin: auto; 
+} */
+/* 
+.subscribe__form input {
+  width: 100%; 
+  padding: 10px;
+  margin: 20px 0; */
+  /* font-size: 48px; Adjust the font size as needed */
 /* } */
 
-.subscribe__form form {
-  max-width: 400px; /* Set a maximum width for the form */
-  margin: auto; /* Center the form horizontally */
-}
-
-/* Style the input */
-.subscribe__form input {
-  width: 100%; /* Make the input take up the full width of the form */
-  padding: 10px;
-  margin: 5px 0;
-  font-size: 16px; /* Adjust the font size as needed */
-}
-
 /* Style the button */
-.subscribe__form button {
-  width: 100%; /* Make the button take up the full width of the form */
-  padding: 10px;
-  margin: 10px 0;
-  font-size: 16px; /* Adjust the font size as needed */
-}
+/* .subscribe__form button {
+  background-color: slateblue;
+  color: white;
+  border: none;
+  padding: 40px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 100px;
+
+} */
 
 
 
@@ -697,7 +707,7 @@ element.style {
 /* Optional: Add more styling based on your design preferences */
 
 
-/* .subscribe {
+ .subscribe {
   background-color: var(--secondary-color);
 }
 
@@ -705,17 +715,17 @@ element.style {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-}
+} 
 
 
-/* .subscribe__form input {
+.subscribe__form input {
   width: 100%;
-  padding: 1rem;
+  padding: 3rem;
   outline: none;
   border: none;
   border-radius: 5rem;
   font-size: 1rem;
-} */
+}
 
 .footer {
   width: 100%;
@@ -783,8 +793,12 @@ element.style {
 }
 
 .left img{
+  display: flex;
   width: 50%;
   height: 50vh;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
 
 #goToTopBtn{
