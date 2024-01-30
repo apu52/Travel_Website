@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Oxygen:wght@300&display=swap');
 
 :root {
   --primary-color: #3685fb;
@@ -916,7 +917,7 @@ header {
 
 
 /*contact section overlapping with nav fixed*/
-#contact {
+/* #contact {
   padding-top: 100px;
 }
 
@@ -953,22 +954,216 @@ header {
 
 .right .form-control {
   width: 100%;
-  max-width: 600px;
+  max-width: 600px; */
   /* Adjust the maximum width as needed */
-}
+/* } */
 
 /* Additional styling for responsiveness */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .contact-form {
     flex-direction: column;
   }
 
   .contact-form .right {
     padding-left: 0;
-    margin-top: 10px;
+    margin-top: 10px; */
     /* Adjust as needed */
+  /* }
+} */
+
+/* Updated Contact section */
+.container{
+  position: relative;
+  width: 100%;
+}
+
+.items{
+  width: 100%;
+  height: 600px;
+  max-width: 1100px;
+  border-radius: 20px;
+  overflow: hidden;
+  background:#0000001a ;
+  backdrop-filter: blur(10px);
+  margin: 50px;
+  grid-template-columns: 1fr 2fr;
+  display: grid;
+  z-index: 10;
+}
+
+.contact{
+  background-color: var(--extra-light);
+}
+
+.contact h1{
+  color:#ab45e7;
+  font-family: 'Noto Serif', serif;
+  font-size: 2.8rem;
+  text-align: center;
+  margin: 20px;
+}
+
+.contact p{
+  color: #dda0dde8;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+.contact img{
+  height: 400px;
+  width: 400px;
+}
+
+/* .contact-form{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+} */
+
+.contact-form form{
+  padding: auto;
+}
+.contact-form h1{
+  display: none;
+}
+.contact-form input{
+  width: 50%;
+  padding-left:10px;
+  padding-bottom:10px;
+  margin: 20px;
+  margin-left: 30px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  background: none;
+  border-bottom: 2px solid var(--extra-light);
+  color: var(--extra-light);
+  font-family: 'Oxygen', sans-serif;
+}
+
+.contact-form input::placeholder{
+  color: var(--Text-Color);
+}
+
+.contact-form #Name{
+  margin-top: 100px;
+}
+
+.contact-form h4{
+  color: var(--extra-light);
+  font-weight: 300; 
+  font-size: 15px;
+  font-family: 'Oxygen', sans-serif;
+  margin-right: 150px;
+  margin-top: 20px;
+}
+
+.contact-form textarea{
+  background:none;
+  border: none;
+  padding:10px;
+  margin: 20px;
+  margin-top: 10px;
+  margin-left: 30px;
+  border-bottom: 2px solid var(--extra-light);
+  color: var(--extra-light);
+  font-weight: 200;
+  font-size: 15px;
+  outline: none;
+  width: 50%;
+}
+
+textarea::-webkit-scrollbar{
+  width: 1em;
+}
+
+.contact-form #button{
+  border: none;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  background: var(--extra-light);
+  border-radius: 30px;
+  margin-top: 60px;
+  font-weight: 600;
+  font-size: 20px;
+  width: 100px;
+  padding: 10px;
+  margin-left: 176px;
+  margin-bottom: 30px;
+  transition: 0.3s;
+  color: #ab45e7;
+}
+
+.contact-form #button:hover , #feedback:hover {
+  opacity:0.71;
+}
+
+#feedback{
+  border: none;
+  border-radius: 30px;
+  padding: 10px 16px;
+  font-weight: 600;
+  font-size: 20px;
+  background-color: #ab45e7;
+  color: var(--extra-light);
+}
+
+
+@media(max-width:920px){
+  .items{
+     grid-template-columns: 1fr;
+  }
+
+  .contact{
+      display: none;
+  }
+
+  .contact-form h1{
+      display: block;
+      color:var(--extra-light);
+      text-align: center;
+      margin-top: 20px;
+
+  }
+
+  .contact-form input{
+      width: 75%;
+  }
+
+  .contact-form textarea{
+      width: 75%;
   }
 }
+
+@media(max-width:700px){
+  .items{
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+  }
+
+  .contact{
+      display: block;
+  }
+
+  .contact img{
+      height: 300px;
+      width: 300px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .contact-form h1{
+      display: none;
+  }
+}
+
 
 /* Custom scrollbar for WebKit browsers */
 body::-webkit-scrollbar {
@@ -1003,22 +1198,6 @@ body:hover {
   scrollbar-width: thin;
   scrollbar-color: var(--primary-color-dark) var(--extra-light);
 }
-
-.custom-btn {
-  background-color: rgb(73, 185, 185);
-  color: black;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-
-.custom-btn:hover {
-  background-color: #5f8fd2;
-}
-
-
-
 
 body {
   background-color: #eee;

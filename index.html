@@ -499,12 +499,13 @@
     </div>
   </section>
 
+  <!--------------------------------------- Updated Contact Us Section ----------------------------------------------->
 
-  <section class="contact" id="contact">
+  <!-- <section class="contact" id="contact">
     <h2 class="section__title" align-items="center" data-aos="slide-right">Contact Us</h2>
     <div class="contact-form" data-aos="fade-in">
       <div class="left">
-        <!-- Add your image here -->
+        Add your image here
         <img src="./img/flat-design-illustration-customer-support_23-2148887720.avif" alt="Contact Image"
           style="max-width: 100%; width: 500px;">
       </div>
@@ -538,8 +539,34 @@
 
 
 
-  </section>
+  </section> -->
 
+  <section id="contact">
+    <div class="container">
+      <div class="items">
+          <div class="contact" data-aos="slide-right">
+              <div>
+                  <h1>Contact Us</h1>
+                  <p>Feel Free to drop us a message with any inquiries or feedback.We're here to assist you!</p>
+                  <img src="./img/flat-design-illustration-customer-support_23-2148887720.avif">
+              </div>
+          </div>
+          <div class="contact-form" data-aos="fade-in">
+              <h1>Contact Us</h1>
+              <form id="contact-form" name="CalcDiverse Contact" autocomplete="off">  
+                  <input type="text" id="Name" placeholder="Name" required>
+                  <input type="email" id="email" placeholder="Email" required>
+                  <h4>Type your message here..</h4>
+                  <textarea required></textarea>
+                  <input type="submit" value="Send" id="button" onclick="sendMail()">
+                  <button type="button" id="feedback" onclick="window.location.href='feed.html'">
+                    Feedback
+                  </button>
+              </form>
+          </div>
+      </div>
+  </div>
+  </section>
 
 
 
