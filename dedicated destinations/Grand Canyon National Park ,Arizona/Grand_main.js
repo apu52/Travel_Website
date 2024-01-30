@@ -1,0 +1,22 @@
+// 'js/mian.js'
+
+let slider_img = document.querySelector('.slider-img');
+let images = ['Grand Canyon National Park ,Arizona.1.webp', 'Grand Canyon National Park ,Arizona.2.webp', 'Grand Canyon National Park ,Arizona.3.webp', 'Grand Canyon National Park ,Arizona.4.jpg', 'Grand Canyon National Park ,Arizona.5.jpg', 'Grand Canyon National Park ,Arizona.6.jpg', 'Grand Canyon National Park ,Arizona.7.jpg', 'Grand Canyon National Park ,Arizona.8.jpg'];
+let i = 0;
+
+function prev(){
+	if(i <= 0) i = images.length;	
+	i--;
+	return setImg();			 
+}
+
+function next(){
+	if(i >= images.length-1) i = -1;
+	i++;
+	return setImg();			 
+}
+
+function setImg(){
+	return slider_img.setAttribute('src', "./gallery_Grand/"+images[i]);
+	
+}

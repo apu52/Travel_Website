@@ -1,0 +1,151 @@
+/*css/style.css */
+
+.slider{
+	margin:120px 50px;
+	width:40%;
+
+}
+ 
+.img-box img{
+	width:100%;
+  border: #575050 solid 3px;
+  box-shadow: 5px 5px 60px #575050 ;
+}
+
+.bttn{
+	border:none;
+	outline:none;
+	background:#888;
+	padding:10px 30px;
+	font-size: 20px;
+	color:#ddd;
+	cursor: pointer;
+	margin:17px auto;			 
+  margin-bottom: 20px;
+}
+
+#btn-style {
+  display: inline-block;
+  border-radius: 50px;
+  transition: all .4s ease-in-out;
+  padding: 10px 10px;
+  background-color: transparent;
+  border: 2px solid #c6c9d8bf;
+  color: #c6c9d8bf;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  margin: 10px 40px;
+}
+
+#btn-style:hover {
+  background-color: #ff0000;
+  border-color: #ff0000;
+  color: #fff;
+}
+
+#btns:hover{
+	background: #111;
+}
+
+.middle{
+  display: flex;
+}
+
+.right-section{
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+
+
+}
+
+.check-in-out{
+  display: flex;
+  flex-direction: row;
+  margin-top: 120px;
+}
+
+.check-in, .check-out{
+  display: flex;
+  gap: .7rem;
+  font-weight: bold;
+
+}
+.check-in{
+  margin-right: 4rem;
+  margin-left: 0px;
+}
+
+
+.map{
+  margin-top: 30px;
+  height: 200px;
+  margin-right: 20px;
+  box-shadow: 5px 5px 20px #5c5757;
+}
+
+.description{
+  margin: 50px 0;
+  height: 400px;
+  width: 800px;
+  padding: 0;
+}
+
+#btnss{
+  margin-left: 4.5rem;
+  padding: 11px 45px ;
+}
+
+#btnss:hover{
+  background-color:#111;
+}
+
+.features{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#chk-design{
+  font-size: 16px;
+  font-weight: bold;
+  height: 30px;
+  border-radius: 10px;
+  border: black solid 1px;
+}
+
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #091020;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1001;
+}
+
+.nav__logo {
+  font-size: 1.8rem; /* Increased font size for the logo */
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  /* border: 2px solid white; */
+}
+
+.nav__logo span {
+  color: #3685fb; /* Assuming this is your primary color */
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+ol, ul {
+  padding-left: 2rem;
+}
+
+  
