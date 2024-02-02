@@ -5,6 +5,42 @@ body {
   text-align: center;
   justify-content: center;
 }
+:root {
+  --primary-color: #3685fb;
+  --primary-color-dark: #2f73d9;
+  --text-light: #767268;
+  --extra-light: #ffffff;
+  --foot-light: #0d213f;
+  --arr-light: #3685fb;
+  --body-light: #ffffff;
+  --secondary-color: #fafcff;
+  --text-dark: #0d213f;
+  --max-width: 1200px;
+  --img-color: slateblue;
+  --head-text: #6a5acd;
+  --btn-border: slateblue;
+  --btn-color: red;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+.dark-theme {
+  --secondary-color: #0e1525;
+  --text-dark: #ffffff;
+  --arr-light: white;
+  --body-light: #0e1525;
+  --img-color:red;
+  --head-text: red;
+  --btn-border: red;
+  --btn-color: #fdbb2dbf;
+
+}
 .gallery-rotate-image{
   display: flex;
   align-items: center;
@@ -57,27 +93,59 @@ body {
 .btn:hover {
   filter: brightness(1.5);
 }
+
 #btn-style {
   display: inline-block;
   border-radius: 50px;
   transition: all .4s ease-in-out;
-  padding: 10px 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: auto;
   background-color: transparent;
-  border: 2px solid #c6c9d8bf;
-  color: #c6c9d8bf;
+  border: 2px solid var(--btn-border);
+  color: var(--btn-color);
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 2px;
+  vertical-align: middle;
   text-decoration: none;
-  margin: 20px 40px;
+  white-space: nowrap;
 }
-
 #btn-style:hover {
   background-color: #ff0000; 
   border-color: #ff0000;
   color: #fff;
 }
+
 #btn:hover {
+  filter: brightness(1.5);
+}
+
+
+.btn-style {
+  display: inline-block;
+  border-radius: 50px;
+  transition: all .4s ease-in-out;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: auto;
+  background-color: transparent;
+  border: 2px solid var(--btn-border);
+  color: var(--btn-color);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 2px;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn-style:hover {
+  background-color: #ff0000; 
+  border-color: #ff0000;
+  color: #fff;
+}
+
+.btn:hover {
   filter: brightness(1.5);
 }
 
