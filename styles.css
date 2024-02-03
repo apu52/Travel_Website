@@ -1173,7 +1173,7 @@ textarea::-webkit-scrollbar{
   width: 1em;
 }
 
-.contact-form #button{
+/* .contact-form #button{
   border: none;
   cursor: pointer;
   transition: 0.5s ease-in-out;
@@ -1202,7 +1202,7 @@ textarea::-webkit-scrollbar{
   font-size: 20px;
   background-color: #ab45e7;
   color: var(--extra-light);
-}
+} */
 
 
 @media(max-width:920px){
