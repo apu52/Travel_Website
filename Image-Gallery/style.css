@@ -39,8 +39,29 @@ body {
   --head-text: red;
   --btn-border: red;
   --btn-color: #fdbb2dbf;
-
+  --footer-text-color: #ffffff;
 }
+
+.footer__text {
+  color: var(--footer-text-color);
+}
+
+.footer__title {
+  color: var(--footer-text-color);
+}
+
+.footer__subtitle {
+  color: var(--footer-text-color);
+}
+
+.footer__col h4 {
+  color: var(--footer-text-color);
+}
+
+.footer__col p {
+  color: var(--footer-text-color);
+}
+
 .gallery-rotate-image{
   display: flex;
   align-items: center;
