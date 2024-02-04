@@ -80,12 +80,21 @@ body {
   margin-bottom: 4rem;
 }
 
-.section__title {
+.section__title {  
   font-size: 2rem;
   font-weight: 600;
   color: var(--text-dark);
-  margin-bottom: 1rem;
+  margin-bottom: 15px;
   text-align: left;
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 34px;
+  margin-bottom: 28px;
+  background: #FD4766;
+  background: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, #FD4766 79.69%);;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .section__subtitle {
