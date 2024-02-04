@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tourguide</title>
     <link rel="stylesheet" href="./Paris.css">
-    <link rel="stylesheet" href="/styles.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
         <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
     
         <ul class="navLinks">
-          <li class="link" data-aos="fade-down"><a href="/index.html#Home">Home</a></li>
+          <li class="link home" data-aos="fade-down"><a href="/index.html#Home">Home</a></li>
           <li class="link" data-aos="fade-down"><a href="/index.html#Destinations">Destinations</a></li>
           <li class="link" data-aos="fade-down"><a href="/index.html#trip">Pricing</a></li>
           <li class="link" data-aos="fade-down"><a href="/index.html#testimonials">Testimonials</a></li>
@@ -37,12 +37,12 @@
           <li class="link" data-aos="fade-down"><a href="/feedback.html">Rate Us?</a></li>
           <li class="link" data-aos="fade-down"><a href="/login.html">Login</a></li> 
         </ul>
-        <button id="toggle" data-aos="fade-down" style="display: inline-block;" class="aos-init aos-animate" fdprocessedid="4jppko">Dark Theme</button>
-        <a href="#contact" class="contact-btn">
+        
+        <a href="/index.html#contact" class="contact-btn">
           <button class="btn aos-init aos-animate" id="btn-style" style="margin: 0;" data-aos="fade-down" fdprocessedid="kglas">Contact Us</button>
         </a>
         <div class="hamburger" data-aos="fade-down">
-          <div class="line"></div>
+          <div class="line"></div>  
           <div class="line"></div>
           <div class="line"></div>
         </div>
@@ -109,9 +109,8 @@
                   Culinary delights abound in Paris, with its world-class restaurants, cozy bistros, and bustling markets showcasing the best of French cuisine. From croissants and baguettes to gourmet meals paired with exquisite wines, the gastronomic experiences are endless.
                 </p>
             </div>
-
+            
         </div>
-
 
     </section>
 
@@ -126,16 +125,41 @@
           </div>
           <div class="footer__col">
             <h4>Support</h4>
-            <a href="./faq.html"><p>FAQs</p></a>
-            <p>Terms & Conditions</p>
-            <p>Privacy Policy</p>
+            <a href="./faq.html" style="color: inherit; text-decoration: none;">
+              <p style="color: inherit;">FAQs</p>
+            </a>
+            <a href="./tnc.html"><p>Terms & Conditions</p></a>
+            <a href="./privacy.html"><p>Privacy Policy</p></a>
             <p>Contact Us</p>
           </div>
           <div class="footer__col">
             <h4>Address</h4>
-            <p>
-              <span>Address:</span> 3/2 Wellington Street, Kolkata , West Bengal , India
-            </p>
+            <div class="mapouter">
+              <div class="gmap_canvas"><iframe width="200" height="200" id="gmap_canvas"
+                  src="https://maps.google.com/maps?q=wellington%20street%20kolkata&t=k&z=11&ie=UTF8&iwloc=&output=embed"
+                  frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                  href="https://embedgooglemap.net/124/">invincible 123movies</a><br>
+                <style>
+                  .mapouter {
+                    position: relative;
+                    text-align: right;
+                    height: 200px;
+                    width: 200px;
+                  }
+                </style><a href="https://www.embedgooglemap.net">embed google map on website</a>
+                <style>
+                  .gmap_canvas {
+                    overflow: hidden;
+                    background: none !important;
+                    height: 200px;
+                    width: 200px;
+                  }
+                </style>
+              </div>
+            </div>
+          </div>
+          <div class="footer__col">
+            <h4>Reach Out To Us</h4>
             <p><span>Email:</span> tour@tourguide.com</p>
             <p><span>Phone:</span> +91 8562145852</p>
           </div>
