@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#pre-loader {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 2000000010;
+    background: #000 url(Loader_Animation.gif) no-repeat center center;
+    background-size: 30%;
+}
+
+#pre-loader h1 {
+    background-color: transparent;
+    position: absolute;
+    top: 70%;
+    left: 52%;
+    transform: translate(-50%,-50%);
+    color: antiquewhite;
+    font-size: 3rem;
+    letter-spacing: 1.2px;
+    animation-name: animate;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
