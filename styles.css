@@ -23,6 +23,29 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
+#scrollPath {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+#progressbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 100%;
+  background: linear-gradient(to top , #008aff , #00ffe7);
+  z-index: 333333;
+}
+
 .dark-theme {
   --secondary-color: #0e1525;
   --text-dark: #ffffff;
