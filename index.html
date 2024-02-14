@@ -63,6 +63,8 @@
       <canvas></canvas>
       <canvas></canvas>
     </div>
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
     <!-- <canvas id="canvas"></canvas> -->
     <!-- <nav>
 
@@ -1040,6 +1042,18 @@
       window.addEventListener("load", function () {
         pre.style.display = "none";
       })
+    </script>
+
+    <script>
+
+      let progress = document.getElementById("progressbar");
+
+      let totalHeight = document.body.scrollHeight - window.innerHeight;
+      window.onscroll = function () {
+        let progressHeight = (window.pageYOffset / totalHeight) * 100;
+        progress.style.height = progressHeight + "%";
+      }
+
     </script>
 
 
