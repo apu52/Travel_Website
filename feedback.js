@@ -3,6 +3,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const ratingTexts = document.querySelectorAll('[id$="-rating-text"]');
   let currentRating = 0;
 
+  function colourStar(ind , container) {
+
+    let s = container.querySelectorAll("span");
+    s = Array.from(s);
+    // remove existing rating
+    for(let i = 0; i < s.length; i++) {
+      s[i].style.color = "white";
+    }
+
+    for(let i = 0; i < ind; i++) {
+      s[i].style.color = "#FFA500";
+    }
+    // console.log(container);
+  }
+
   // Create 5 stars dynamically for each stars container
   Array.from(starsContainers).forEach((starsContainer, index) => {
     for (let i = 1; i <= 5; i++) {
@@ -10,13 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
       star.classList.add('star');
       star.innerHTML = '★';
       star.setAttribute('data-rating', i);
+      starsContainer.appendChild(star);
 
       star.addEventListener('click', () => {
         currentRating = i;
         updateRating(index);
+        colourStar(i , starsContainer);
       });
 
-      starsContainer.appendChild(star);
     }
   });
 
