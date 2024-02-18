@@ -26,7 +26,8 @@
   <script src="index.js" defer></script>
   <script src="Theme.js" defer></script>
 
-
+  <link rel="stylesheet" href="path/to/aos.css">
+  <script src="path/to/aos.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
   </script>
   <script type="text/javascript">
@@ -45,6 +46,9 @@
   <style>
     html {
       scroll-behavior: smooth;
+    }
+    .active {
+      color: red !important;
     }
   </style>
 
@@ -1044,6 +1048,37 @@
       })
     </script>
 
+    <script>
+      
+// To highlight active navbar
+document.addEventListener("DOMContentLoaded", function () {
+      const navLinks = document.querySelectorAll('.navLinks a');
+
+      function highlightNavLink() {
+        const scrollPosition = window.scrollY;
+
+        navLinks.forEach(link => {
+          const sectionId = link.getAttribute('href').substring(1);
+          const section = document.getElementById(sectionId);
+
+          // Adjust this value to control when the link should be highlighted
+          const offsetPercentage = 20;
+
+          if (section.offsetTop - window.innerHeight * (offsetPercentage / 100) <= scrollPosition &&
+            section.offsetTop + section.offsetHeight > scrollPosition) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+
+      document.addEventListener('scroll', highlightNavLink);
+      window.addEventListener('resize', highlightNavLink);
+
+      // Initialize AOS library
+      AOS.init();
+    });</script>
     <script>
 
       let progress = document.getElementById("progressbar");
