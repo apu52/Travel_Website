@@ -1795,9 +1795,11 @@ body {
 }
 /* Styling for elements with .aboutcontent class */
 .aboutcontent {
+  
   text-align: center;
   color: var(--text-dark); /* Use the text-dark custom property for color */
   margin-bottom: 20px;
+  
 }
 /* Styling for SVG elements inside .iconss class */
 .iconss svg {
