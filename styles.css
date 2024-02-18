@@ -16,6 +16,7 @@
   --img-color: white;
   --head-text: #6a5acd;
   --bubble-color: #6a5acd;
+  --testimonials-img-border: #6a5acd;
 }
 
 * {
@@ -243,6 +244,8 @@
   --head-text: red;
   --text-same: #0d213f;
   --bubble-color: red;
+  --testimonials-img-border: red;
+
 }
 
 body {
@@ -1576,6 +1579,8 @@ body {
   max-width: 90%;
   margin-top: 50px;
   padding: 0 20px 20px 20px;
+  border-radius: 20px;
+
   box-shadow: 0 0 27px 0 rgb(0 0 0 / 5%);
 }
 
@@ -1592,7 +1597,7 @@ body {
   border-radius: 50%;
   object-fit: cover;
   transform: translate(0, -50%);
-  box-shadow: 0 0 0 10px #fff;
+  box-shadow: 0 0 0 10px var(  --testimonials-img-border);
 }
 
 .fa-quote-left,
