@@ -15,6 +15,7 @@
   --max-width: 1200px;
   --img-color: white;
   --head-text: #6a5acd;
+  --bubble-color: #6a5acd;
 }
 
 * {
@@ -27,6 +28,193 @@
   width: 0;
 }
 
+/* new bubble start*/
+
+
+.bubbles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Ensure bubbles don't interfere with other elements */
+}
+
+.bubble {
+  position: absolute;
+  bottom: 0; /* Start from the bottom of the page */
+  width: 40px;
+  height: 40px;
+  background: var(--bubble-color);
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: rise 10s infinite ease-in;
+}
+.bubble:nth-child(1){
+  width:40px;
+  height:40px;
+  left:10%;
+  animation-duration:8s;
+}
+.bubble:nth-child(2){
+  width:20px;
+  height:20px;
+  left:20%;
+  animation-duration:5s;
+  animation-delay:1s;
+}
+.bubble:nth-child(3){
+  width:50px;
+  height:50px;
+  left:35%;
+  animation-duration:7s;
+  animation-delay:2s;
+}
+.bubble:nth-child(4){
+  width:80px;
+  height:80px;
+  left:50%;
+  animation-duration:11s;
+  animation-delay:0s;
+}
+.bubble:nth-child(5){
+  width:35px;
+  height:35px;
+  left:55%;
+  animation-duration:6s;
+  animation-delay:1s;
+}
+.bubble:nth-child(6){
+  width:45px;
+  height:45px;
+  left:65%;
+  animation-duration:8s;
+  animation-delay:3s;
+}
+.bubble:nth-child(7){
+  width:90px;
+  height:90px;
+  left:70%;
+  animation-duration:12s;
+  animation-delay:2s;
+}
+.bubble:nth-child(8){
+  width:25px;
+  height:25px;
+  left:80%;
+  animation-duration:6s;
+  animation-delay:2s;
+}
+.bubble:nth-child(9){
+  width:15px;
+  height:15px;
+  left:70%;
+  animation-duration:5s;
+  animation-delay:1s;
+}
+.bubble:nth-child(10){
+  width:90px;
+  height:90px;
+  left:25%;
+  animation-duration:10s;
+  animation-delay:4s;
+}
+.bubble:nth-child(11) {
+  width: 60px;
+  height: 60px;
+  left: 15%;
+  animation-duration: 9s;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(12) {
+  width: 30px;
+  height: 30px;
+  left: 25%;
+  animation-duration: 6s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(13) {
+  width: 70px;
+  height: 70px;
+  left: 40%;
+  animation-duration: 8s;
+  animation-delay: 3s;
+}
+
+.bubble:nth-child(14) {
+  width: 100px;
+  height: 100px;
+  left: 55%;
+  animation-duration: 12s;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(15) {
+  width: 45px;
+  height: 45px;
+  left: 60%;
+  animation-duration: 7s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(16) {
+  width: 55px;
+  height: 55px;
+  left: 70%;
+  animation-duration: 10s;
+  animation-delay: 3s;
+}
+
+.bubble:nth-child(17) {
+  width: 80px;
+  height: 80px;
+  left: 75%;
+  animation-duration: 11s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(18) {
+  width: 35px;
+  height: 35px;
+  left: 85%;
+  animation-duration: 7s;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(19) {
+  width: 25px;
+  height: 25px;
+  left: 90%;
+  animation-duration: 5s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(20) {
+  width: 80px;
+  height: 80px;
+  left: 35%;
+  animation-duration: 9s;
+  animation-delay: 4s;
+}
+
+@keyframes rise {
+  0% {
+    bottom: 0;
+    transform: translateX(0);
+  }
+  50% {
+    transform: translate(100px);
+  }
+  100% {
+    bottom: 100vh; /* Use viewport height to ensure it reaches the top */
+    transform: translateX(-200px);
+  }
+}
+/* new bubble end */
 #scrollPath {
   position: fixed;
   top: 0;
@@ -54,6 +242,7 @@
   --img-color: red;
   --head-text: red;
   --text-same: #0d213f;
+  --bubble-color: red;
 }
 
 body {
@@ -1608,9 +1797,11 @@ body {
 }
 /* Styling for elements with .aboutcontent class */
 .aboutcontent {
+  
   text-align: center;
   color: var(--text-dark); /* Use the text-dark custom property for color */
   margin-bottom: 20px;
+  
 }
 /* Styling for SVG elements inside .iconss class */
 .iconss svg {
