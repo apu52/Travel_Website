@@ -367,6 +367,7 @@ body {
 /* send button end */
 
 .btn:hover {
+  color: var(--body-light);
   background-color: var(--primary-color-dark);
 }
 
@@ -1340,8 +1341,8 @@ header {
   border: none;
   font-size: 15px;
   background: none;
-  border-bottom: 2px solid var(--extra-light);
-  color: var(--extra-light);
+  border-bottom: 2px solid var(--foot-light);
+  color: var(--foot-light);
   font-family: 'Oxygen', sans-serif;
 }
 
@@ -1354,7 +1355,7 @@ header {
 }
 
 .contact-form h4 {
-  color: var(--extra-light);
+  color: var(--foot-light);
   font-weight: 300;
   font-size: 15px;
   font-family: 'Oxygen', sans-serif;
@@ -1369,8 +1370,8 @@ header {
   margin: 20px;
   margin-top: 10px;
   margin-left: 30px;
-  border-bottom: 2px solid var(--extra-light);
-  color: var(--extra-light);
+  border-bottom: 2px solid var(--foot-light);
+  color: var(--foot-light);
   font-weight: 200;
   font-size: 15px;
   outline: none;
@@ -1379,6 +1380,10 @@ header {
 
 textarea::-webkit-scrollbar {
   width: 1em;
+}
+
+.contact-form button{
+  color: var(--foot-light) !important;
 }
 
 /* .contact-form #button{
@@ -1890,3 +1895,4 @@ body {
 #toggle:hover i {
   color: #ffffff80; /* 80% opacity white for hovering effect */
 }
+
