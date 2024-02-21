@@ -16,6 +16,7 @@
   --img-color: white;
   --head-text: #6a5acd;
   --bubble-color: #6a5acd;
+  --text-color:black;
 }
 
 * {
@@ -1340,13 +1341,13 @@ header {
   border: none;
   font-size: 15px;
   background: none;
-  border-bottom: 2px solid var(--extra-light);
-  color: var(--extra-light);
+  border-bottom: 2px solid var(--text-light);
+  color: var(--text-color);
   font-family: 'Oxygen', sans-serif;
 }
 
 .contact-form input::placeholder {
-  color: var(--Text-Color);
+  color: var(--text-light);
 }
 
 .contact-form #Name {
@@ -1354,7 +1355,7 @@ header {
 }
 
 .contact-form h4 {
-  color: var(--extra-light);
+  color: var(--text-light);
   font-weight: 300;
   font-size: 15px;
   font-family: 'Oxygen', sans-serif;
@@ -1369,8 +1370,8 @@ header {
   margin: 20px;
   margin-top: 10px;
   margin-left: 30px;
-  border-bottom: 2px solid var(--extra-light);
-  color: var(--extra-light);
+  border-bottom: 2px solid var(--text-light);
+  color: var(--text-color);
   font-weight: 200;
   font-size: 15px;
   outline: none;
