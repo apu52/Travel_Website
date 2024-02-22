@@ -1462,6 +1462,42 @@ textarea::-webkit-scrollbar {
     display: none;
   }
 }
+.contact-form input,
+.contact-form textarea {
+  width: 50%;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  margin: 20px;
+  margin-left: 30px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  background: none;
+  border-bottom: 1px solid var(--text-dark); /* Change line color */
+  color: var(--text-dark);
+  font-family: 'Oxygen', sans-serif;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--text-dark);
+}
+
+@media (max-width: 920px) {
+  .contact-form input,
+  .contact-form textarea {
+    width: 75%;
+    color: var(--text-dark);
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-form input,
+  .contact-form textarea {
+    width: 75%;
+    color: var(--text-dark);
+  }
+}
 
 /* Custom scrollbar for WebKit browsers */
 body::-webkit-scrollbar {
