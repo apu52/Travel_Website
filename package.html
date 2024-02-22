@@ -1,64 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-      .top-btn {
-  display: none;
-  width: 50px;
-  height: 50px;
-  position: fixed;
-  bottom: 10px;
-  right: 0px;
-  background-color: #ab45e7;
-  color: #fff;
-  padding: 2px;
-  border: none;
-  margin-right: 36px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.top-btn:hover {
-  background-color: #0056b3;
-}
-
-    </style>
-    
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="./Image-Gallery/style.css">
-    <title>Arpan Codes | Tourguide</title>
-     <!-- adding a fav-icon -->
-     <link rel="icon" href="img/A T logo with a white background and a square shape, connected to nature for a travel company.png" type="image/x-icon" />
-    <script src="index.js"></script>
-
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("WB9rAyWwwLZube-er");
-   })();
-</script>
-
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-  html {
-    scroll-behavior: smooth;
-  }
+    .top-btn {
+      display: none;
+      width: 50px;
+      height: 50px;
+      position: fixed;
+      bottom: 10px;
+      right: 0px;
+      background-color: #ab45e7;
+      color: #fff;
+      padding: 2px;
+      border: none;
+      margin-right: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .top-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .reveal {
+      position: relative;
+      opacity: 0;
+    }
+
+    .reveal.active {
+      opacity: 1;
+    }
+
+    .active.fade-bottom {
+      animation: fade-bottom 0.5s ease-in-out;
+    }
+
+    .active.fade-left {
+      animation: fade-left 0.5s ease-in-out;
+    }
+
+    .active.fade-right {
+      animation: fade-right 0.5s ease-in-out;
+    }
+
+    @keyframes fade-bottom {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fade-left {
+      0% {
+        transform: translateX(-100px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fade-right {
+      0% {
+        transform: translateX(100px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
   </style>
 
-  </head>
-  <body>
-    <!-- <nav>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="./Image-Gallery/style.css">
+  <title>Arpan Codes | Tourguide</title>
+  <!-- adding a fav-icon -->
+  <link rel="icon"
+    href="img/A T logo with a white background and a square shape, connected to nature for a travel company.png"
+    type="image/x-icon" />
+  <script src="index.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("WB9rAyWwwLZube-er");
+    })();
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- <nav>
       <div class="nav__logo">Tourguide<span>.</span></div>
       <ul class="nav__links">
         <li class="link"><a href="./index.html">Home</a></li>
@@ -72,263 +130,344 @@
       </ul>
       <a href="/index.html"><button class="btn">Contact Us</button></a>
     </nav> -->
-    <div class="nav-container">
-      <nav class="newNav">
-        <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
-    
-        <ul class="navLinks">
-          <li class="link" data-aos="fade-down"><a href="./index.html#Home">Home</a></li>
-          <li class="link" data-aos="fade-down"><a href="./index.html#AboutUs">AboutUs</a></li>
-          <li class="link" data-aos="fade-down"><a href="./index.html#Destinations">Destinations</a></li>
-          <li class="link" data-aos="fade-down"><a href="./index.html#trip">Pricing</a></li>
-          <li class="link" data-aos="fade-down"><a href="./index.html#testimonials">Testimonials</a></li>
-          <li class="link" data-aos="fade-down"><a href="./index.html#ReviewGallery">Reviews</a></li>
-          <li class="link" data-aos="fade-down"><a href="./feedback.html">Rate Us?</a></li>
-          <li class="link" data-aos="fade-down"><a href="./login.html">Login</a></li>
-        </ul>
-        <a href="./index.html#contact" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;" data-aos="fade-down">Contact Us</button></a>
-        <div class="hamburger" data-aos="fade-down">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
+  <div class="nav-container">
+    <nav class="newNav">
+      <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+
+      <ul class="navLinks">
+        <li class="link" data-aos="fade-down"><a href="./index.html#Home">Home</a></li>
+        <li class="link" data-aos="fade-down"><a href="./index.html#AboutUs">AboutUs</a></li>
+        <li class="link" data-aos="fade-down"><a href="./index.html#Destinations">Destinations</a></li>
+        <li class="link" data-aos="fade-down"><a href="./index.html#trip">Pricing</a></li>
+        <li class="link" data-aos="fade-down"><a href="./index.html#testimonials">Testimonials</a></li>
+        <li class="link" data-aos="fade-down"><a href="./index.html#ReviewGallery">Reviews</a></li>
+        <li class="link" data-aos="fade-down"><a href="./feedback.html">Rate Us?</a></li>
+        <li class="link" data-aos="fade-down"><a href="./login.html">Login</a></li>
+      </ul>
+      <a href="./index.html#contact" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
+          data-aos="fade-down">Contact Us</button></a>
+      <div class="hamburger" data-aos="fade-down">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+  </div>
+
+
+
+
+  <section class="trip" id="trip">
+    <div class="section__container trip__container">
+      <h2 class="section__title">Best trip package</h2>
+      <p class="section__subtitle">
+        Explore your suitable and dream places around the world. Here you can
+        find your right destination.
+      </p>
+      </b></h2>
+      <div class="trip__grid">
+
+        <div class="trip__card">
+          <img src="https://i.ibb.co/60nvYwQ/Screenshot-2023-07-14-173347.png" alt="trip" height="250" width="45" />
+          <div class="trip__details">
+            <p>Santorini ,Aegean Sea</p>
+            <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            <div class="booking__price">
+              <div class="price"><span>From</span> $300</div>
+              <a href="./dedicated destinations/Santorini ,Aegean Sea/start.html"><button class="book__now">Book
+                  Now</button></a>
+            </div>
+          </div>
         </div>
-      </nav>
+        <div class="trip__card">
+          <img src="https://i.ibb.co/h1WgH8B/Screenshot-2023-07-14-173807.png" alt="trip" height="250" width="45" />
+          <div class="trip__details">
+            <p>Machu Picchu ,Peru</p>
+            <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            <div class="booking__price">
+              <div class="price"><span>From</span> $450</div>
+              <a href="./dedicated destinations/Machu Picchu ,Peru/Machu_start.html"><button class="book__now">Book
+                  Now</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="trip__card">
+          <img src="https://i.ibb.co/vc2W0wN/Screenshot-2023-07-14-174151.png" alt="trip" height="250" width="45" />
+          <div class="trip__details">
+            <p>Grand Canyon National Park ,Arizona</p>
+            <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            <div class="booking__price">
+              <div class="price"><span>From</span> $400</div>
+              <a href="./dedicated destinations/Grand Canyon National Park ,Arizona/Grand_start.html"><button
+                  class="book__now">Book Now</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="trip__card">
+          <img src="./img/london.jpg" alt="trip" height="250" width="45" />
+          <div class="trip__details">
+            <p>London</p>
+            <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            <div class="booking__price">
+              <div class="price"><span>From</span> $300</div>
+              <a href="./dedicated destinations/London/start.html"><button class="book__now">Book Now</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="trip__card">
+          <img src="./img/dubai.webp" alt="trip" height="250" width="45" />
+          <div class="trip__details">
+            <p>Dubai</p>
+            <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            <div class="booking__price">
+              <div class="price"><span>From</span> $450</div>
+              <a href="./dedicated destinations/Dubai/start.html"><button class="book__now">Book Now</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="trip__card">
+          <img src="./img/nyc.avif" alt="trip" height="250" width="45" />
+          <div class="trip__details">
+            <p>New York</p>
+            <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            <div class="booking__price">
+              <div class="price"><span>From</span> $400</div>
+              <a href="./dedicated destinations/NewYork/start.html"><button class="book__now">Book Now</button></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="trip__card">
+          <img src="./img/paris.jpg" alt="trip" height="250" width="45" />
+          <div class="trip__details">
+            <p>Paris</p>
+            <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            <div class="booking__price">
+              <div class="price"><span>From</span> $300</div>
+              <a href="./dedicated destinations/Paris/start.html"><button class="book__now">Book Now</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="trip__card">
+          <img src="./img/goa.jpg" alt="trip" height="250" width="45" />
+          <div class="trip__details">
+            <p>Goa</p>
+            <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            <div class="booking__price">
+              <div class="price"><span>From</span> $450</div>
+              <a href="./dedicated destinations/Goa/start.html"><button class="book__now">Book Now</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="trip__card">
+          <img src="./img/kashmir.avif" alt="trip" height="250" width="45" />
+          <div class="trip__details">
+            <p>Kashmir</p>
+            <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            <div class="booking__price">
+              <div class="price"><span>From</span> $400</div>
+              <a href="./dedicated destinations/kashmir/start.html"><button class="book__now">Book Now</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="trip__card">
+          <img src="./img/maldives.jpg" alt="trip" height="250" width="45" />
+          <div class="trip__details">
+            <p>Maldives</p>
+            <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            <div class="booking__price">
+              <div class="price"><span>From</span> $300</div>
+              <a href="./dedicated destinations/Maldives/start.html"><button class="book__now">Book Now</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="trip__card">
+          <img src="./img/bali.webp" alt="trip" height="250" width="45" />
+          <div class="trip__details">
+            <p>Bali</p>
+            <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            <div class="booking__price">
+              <div class="price"><span>From</span> $450</div>
+              <a href="./dedicated destinations/bali/start.html"><button class="book__now">Book Now</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="trip__card">
+          <img src="./img/what-is-brazil-known-for-christ-the-redeemer-aerial-hero.webp" alt="trip" height="250"
+            width="45" />
+          <div class="trip__details">
+            <p>Brazil</p>
+            <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            <div class="booking__price">
+              <div class="price"><span>From</span> $400</div>
+              <a href="./dedicated destinations/brazil/start.html"><button class="book__now">Book Now</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </div>
-   
+  </section>
 
-    
 
-    <section class="trip" id="trip">
-      <div class="section__container trip__container">
-        <h2 class="section__title">Best trip package</h2>
-        <p class="section__subtitle">
-          Explore your suitable and dream places around the world. Here you can
-          find your right destination.
+
+
+  <footer class="footer">
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <h3>Tourguide<span>.</span></h3>
+        <p>
+          Explore your suitable and dream places around the world. Here you
+          can find your right destination.
         </p>
-        </b></h2>
-        <div class="trip__grid">
-          
-          <div class="trip__card">
-            <img src="https://i.ibb.co/60nvYwQ/Screenshot-2023-07-14-173347.png" alt="trip" height="250" width="45"/>
-            <div class="trip__details">
-              <p>Santorini ,Aegean Sea</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $300</div>
-                <a href="./dedicated destinations/Santorini ,Aegean Sea/start.html"><button class="book__now">Book Now</button></a>
-              </div>
-            </div>
-          </div>
-          <div class="trip__card">
-            <img src="https://i.ibb.co/h1WgH8B/Screenshot-2023-07-14-173807.png" alt="trip" height="250" width="45" />
-            <div class="trip__details">
-              <p>Machu Picchu ,Peru</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $450</div>
-                <a href="./dedicated destinations/Machu Picchu ,Peru/Machu_start.html"><button class="book__now">Book Now</button></a>
-              </div>
-            </div>
-          </div>
-          <div class="trip__card">
-            <img src="https://i.ibb.co/vc2W0wN/Screenshot-2023-07-14-174151.png" alt="trip" height="250" width="45"/>
-            <div class="trip__details">
-              <p>Grand Canyon National Park ,Arizona</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $400</div>
-                <a href="./dedicated destinations/Grand Canyon National Park ,Arizona/Grand_start.html"><button class="book__now">Book Now</button></a>
-              </div>
-            </div>
-          </div>
-          <div class="trip__card">
-            <img src="./img/london.jpg" alt="trip" height="250" width="45"/>
-            <div class="trip__details">
-              <p>London</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $300</div>
-                <a href="./dedicated destinations/London/start.html"><button class="book__now">Book Now</button></a>
-              </div>
-            </div>
-          </div>
-          <div class="trip__card">
-            <img src="./img/dubai.webp" alt="trip" height="250" width="45" />
-            <div class="trip__details">
-              <p>Dubai</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $450</div>
-                <a href="./dedicated destinations/Dubai/start.html"><button class="book__now">Book Now</button></a>
-              </div>
-            </div>
-          </div>
-          <div class="trip__card">
-            <img src="./img/nyc.avif" alt="trip" height="250" width="45"/>
-            <div class="trip__details">
-              <p>New York</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $400</div>
-                <a href="./dedicated destinations/NewYork/start.html"><button class="book__now">Book Now</button></a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="trip__card">
-            <img src="./img/paris.jpg" alt="trip" height="250" width="45"/>
-            <div class="trip__details">
-              <p>Paris</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $300</div>
-                <a href="./dedicated destinations/Paris/start.html"><button class="book__now">Book Now</button></a>
-              </div>
-            </div>
-          </div>
-          <div class="trip__card">
-            <img src="./img/goa.jpg" alt="trip" height="250" width="45" />
-            <div class="trip__details">
-              <p>Goa</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $450</div>
-                <a href="./dedicated destinations/Goa/start.html"><button class="book__now">Book Now</button></a>
-              </div>
-            </div>
-          </div>
-          <div class="trip__card">
-            <img src="./img/kashmir.avif" alt="trip" height="250" width="45"/>
-            <div class="trip__details">
-              <p>Kashmir</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $400</div>
-                <a href="./dedicated destinations/kashmir/start.html"><button class="book__now">Book Now</button></a>
-              </div>
-            </div>
-          </div>
-          <div class="trip__card">
-            <img src="./img/maldives.jpg" alt="trip" height="250" width="45"/>
-            <div class="trip__details">
-              <p>Maldives</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $300</div>
-                <a href="./dedicated destinations/Maldives/start.html"><button class="book__now">Book Now</button></a>
-              </div>
-            </div>
-          </div>
-          <div class="trip__card">
-            <img src="./img/bali.webp" alt="trip" height="250" width="45" />
-            <div class="trip__details">
-              <p>Bali</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $450</div>
-                <a href="./dedicated destinations/bali/start.html"><button class="book__now">Book Now</button></a>
-              </div>
-            </div>
-          </div>
-          <div class="trip__card">
-            <img src="./img/what-is-brazil-known-for-christ-the-redeemer-aerial-hero.webp" alt="trip" height="250" width="45"/>
-            <div class="trip__details">
-              <p>Brazil</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $400</div>
-                <a href="./dedicated destinations/brazil/start.html"><button class="book__now">Book Now</button></a>
-              </div>
-            </div>
-          </div>
-        </div>
-     
-        
       </div>
-    </section>
-
-
-    
-
-    <footer class="footer">
-      <div class="section__container footer__container">
-        <div class="footer__col">
-          <h3>Tourguide<span>.</span></h3>
-          <p>
-            Explore your suitable and dream places around the world. Here you
-            can find your right destination.
-          </p>
-        </div>
-        <div class="footer__col">
-          <h4>Support</h4>
-          <p><a href="./faq.html">FAQs</a></p>
-          <p><a href="./tnc.html">Terms & Conditions</a></p>
-          <p><a href="./privacy.html">Privacy Policy</a></p>
-          <p>Contact Us</p>
-        </div>
-        <div class="footer__col">
-          <h4>Address</h4>
-          <p>
-            <span>Address:</span> 3/2 Wellington Street, Kolkata , West Bengal , India 
-          </p>
-          <p><span>Email:</span> tour@tourguide.com</p>
-          <p><span>Phone:</span> +91 8562145852</p>
-        </div>
+      <div class="footer__col">
+        <h4>Support</h4>
+        <p><a href="./faq.html">FAQs</a></p>
+        <p><a href="./tnc.html">Terms & Conditions</a></p>
+        <p><a href="./privacy.html">Privacy Policy</a></p>
+        <p>Contact Us</p>
       </div>
-      <div class="footer__bar">
-        Copyright © 2023 Arpan Chowdhury. All rights reserved.
+      <div class="footer__col">
+        <h4>Address</h4>
+        <p>
+          <span>Address:</span> 3/2 Wellington Street, Kolkata , West Bengal , India
+        </p>
+        <p><span>Email:</span> tour@tourguide.com</p>
+        <p><span>Phone:</span> +91 8562145852</p>
       </div>
-    </footer>
+    </div>
+    <div class="footer__bar">
+      Copyright © 2023 Arpan Chowdhury. All rights reserved.
+    </div>
+  </footer>
 
-    <button class="top-btn" id="goToTopBtn" onclick="goToTop()"><i class="fa-solid fa-chevron-up" style="color: #ffffff;"></i></button>
-    
-   
-    <script>
-      // Get the button
-      var mybutton = document.getElementById("goToTopBtn");
-    
-      // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function () {
-        scrollFunction();
-      };
-    
-      function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-          mybutton.style.display = "block";
+  <button class="top-btn" id="goToTopBtn" onclick="goToTop()"><i class="fa-solid fa-chevron-up"
+      style="color: #ffffff;"></i></button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script>
+
+
+
+    var tl = gsap.timeline();
+
+    tl.from("nav", {
+      opacity: 0,
+      y: -20,
+      duration: 1,
+      delay: 0.5,
+    })
+
+    tl.from(".nav__logo", {
+      opacity: 0,
+      x: -20,
+      duration: 0.3,
+    })
+
+
+    tl.from(".link, .contact-btn", {
+      opacity: 0,
+      duration: 0.5,
+      stagger: 0.1,
+    })
+
+    tl.from(".trip", {
+      opacity: 0,
+    })
+
+    tl.from(".section__title,.section__subtitle", {
+      opacity: 0,
+      y: 15,
+      duration: 0.7,
+    })
+
+    tl.from(".footer", {
+      opacity: 0,
+      x:-50,
+      duration: 0.7,
+    })
+
+  </script>
+
+  <script>
+
+    let cards = document.querySelectorAll(".trip__card");
+    let footer = document.querySelector(".footer");
+
+    Array.from(cards).forEach((e) => {
+      e.classList.add("reveal");
+    })
+
+    function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
         } else {
-          mybutton.style.display = "none";
+          reveals[i].classList.remove("active");
         }
       }
-    
-      // When the user clicks on the button, scroll to the top of the document
-      function goToTop() {
-        document.body.scrollTop = 0; 
-        document.documentElement.scrollTop = 0; 
-      }
-    </script>
-  </body>
-  <script>
-    let hamburger = document.querySelector('.hamburger');
-    hamburger.addEventListener('click' , ()=>{
-      let list = document.querySelector('.navLinks');
-        list.classList.toggle('activeHamburger');
-    })
+    }
+
+    window.addEventListener("scroll", reveal);
   </script>
   <script>
-    function replaceDivs() {
-      // Get references to the original and new divs
-      var originalDiv = document.getElementById("originalDiv");
-      var newDiv = document.getElementById("newDiv");
+    // Get the button
+    var mybutton = document.getElementById("goToTopBtn");
 
-      // Check if the original div exists
-      if (originalDiv) {
-          // Hide the original div
-          originalDiv.style.display = "none";
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
 
-          // Show the new div
-          newDiv.style.display = "block";
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
       }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function goToTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+</body>
+<script>
+  let hamburger = document.querySelector('.hamburger');
+  hamburger.addEventListener('click', () => {
+    let list = document.querySelector('.navLinks');
+    list.classList.toggle('activeHamburger');
+  })
+</script>
+<script>
+  function replaceDivs() {
+    // Get references to the original and new divs
+    var originalDiv = document.getElementById("originalDiv");
+    var newDiv = document.getElementById("newDiv");
+
+    // Check if the original div exists
+    if (originalDiv) {
+      // Hide the original div
+      originalDiv.style.display = "none";
+
+      // Show the new div
+      newDiv.style.display = "block";
+    }
   }
-  </script>
-  <script src="./Image-Gallery/script.js"></script>
+</script>
+<script src="./Image-Gallery/script.js"></script>
+
 </html>
