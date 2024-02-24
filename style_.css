@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
 /* Google Fonts */
 body {
-  background-image: url('./img/feedback_bg.jpg');
-  background-size: cover; 
+  background-image: url("./img/feedback_bg.jpg");
+  background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
@@ -9,12 +11,35 @@ body {
   min-height: 100vh;
   margin: 0;
   /*background: linear-gradient(to right, #4DA0B0, #fff);*/
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
-h1{
-  font-size: 2rem;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+.feedback-heading {
+  font-size: 3rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 }
 
 .container {
@@ -22,7 +47,6 @@ h1{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .glassmorphism-container {
@@ -34,6 +58,17 @@ h1{
   max-width: 800px;
   width: 90%;
   margin-bottom: 20px;
+}
+p {
+  line-height: 1.2em;
+  margin: 0;
+  font-family: "Lato";
+  font-size: 26px;
+  color: #07147a;
+  padding: 8px 5px;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+  text-shadow: 1px 1px 0 #29c0e6, 1px 2px 0px #e784c6;
 }
 
 .stars {
@@ -50,13 +85,35 @@ h1{
 }
 
 .star:hover {
-  color: #FFA500;
+  color: #ffa500;
 }
 
 #rating-text {
-  font-family:monospace;
-  margin-top: 10px;
-  font-size: 1.2rem;
+  font-family: monospace;
+  margin-top: 40px;
+  font-size: 1.8rem;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 }
 
 /* Feedback input box and submit button styles */
@@ -65,15 +122,16 @@ h1{
 }
 
 #feedback-input {
-  width: 100%;
+  width: 90%;
   height: 80px;
   resize: vertical;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding: 8px;
-  border: 1.5px solid #5468ff ;
+  border: 1.5px solid #5468ff;
   border-radius: 5px;
-  background-color: aliceblue;
+  background-color: rgba(219, 230, 240, 0.402);
   box-sizing: border-box;
+  font-size: 1rem;
 }
 
 /*.submit-button {
@@ -160,13 +218,13 @@ h1{
   z-index: 10;
 }
 
-.link a{
+.link a {
   position: relative;
 }
 
 .link a::before {
   position: absolute;
-  content: '';
+  content: "";
   height: 2px;
   width: 0%;
   bottom: -5px;
@@ -176,7 +234,7 @@ h1{
 
 .link a::after {
   position: absolute;
-  content: '';
+  content: "";
   height: 2px;
   width: 0%;
   top: -5px;
@@ -185,17 +243,17 @@ h1{
   transition: all 0.2s ease-in-out;
 }
 
-.link a:hover::before{
+.link a:hover::before {
   width: 100%;
   transition: all 0.2s ease-in-out;
 }
 
-.link a:hover::after{
+.link a:hover::after {
   width: 100%;
   transition: all 0.2s ease-in-out;
 }
 
-.hamburger{
+.hamburger {
   height: 2rem;
   width: 1.7rem;
   display: flex;
@@ -205,14 +263,14 @@ h1{
   transition: 0.2s;
 }
 
-.line{
+.line {
   height: 5px;
   width: 100%;
   background-color: white;
   border-radius: 2px;
 }
 
-@media screen and (max-width : 1220px) {
+@media screen and (max-width: 1220px) {
   .hamburger {
     display: flex;
     cursor: pointer;
@@ -256,15 +314,20 @@ h1{
 .button {
   align-items: center;
   appearance: none;
-  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #5adaff 0,
+    #5468ff 100%
+  );
   border: 0;
   border-radius: 6px;
-  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
   display: inline-flex;
-  font-family: "JetBrains Mono",monospace;
+  font-family: "JetBrains Mono", monospace;
   height: 40px;
   justify-content: center;
   line-height: 1;
@@ -275,21 +338,23 @@ h1{
   position: relative;
   text-align: left;
   text-decoration: none;
-  transition: box-shadow .15s,transform .15s;
+  transition: box-shadow 0.15s, transform 0.15s;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   white-space: nowrap;
-  will-change: box-shadow,transform;
+  will-change: box-shadow, transform;
   font-size: 18px;
 }
 
 .button:focus {
-  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
 }
 
 .button:hover {
-  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
   transform: translateY(-2px);
 }
 
