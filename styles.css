@@ -1584,7 +1584,7 @@ body {
 /* Testimonials Section */
 
 .testimonials {
-  z-index: 100;
+  /* z-index: 100; */
   background-color: var(--secondary-color);
   max-width: var(--max-width);
   padding: 5rem 5rem;
