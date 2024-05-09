@@ -26,7 +26,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 0;
 }
 
 /* new bubble start*/
@@ -1514,7 +1514,7 @@ textarea::-webkit-scrollbar {
 
 /* Custom scrollbar for WebKit browsers */
 body::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
   /* Width of the scrollbar */
 }
 
