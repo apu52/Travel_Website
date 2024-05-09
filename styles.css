@@ -26,7 +26,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 0;
+  width: 10px;
 }
 
 /* new bubble start*/
@@ -40,12 +40,13 @@
   overflow: hidden;
   top: 0;
   left: 0;
+  overflow: hidden;
   pointer-events: none; /* Ensure bubbles don't interfere with other elements */
 }
 
 .bubble {
   position: absolute;
-  bottom: 0; /* Start from the bottom of the page */
+  bottom: -50px; /* Start from below the screen */
   width: 40px;
   height: 40px;
   background: var(--bubble-color);
@@ -53,150 +54,151 @@
   opacity: 0.5;
   animation: rise 10s infinite ease-in;
 }
+
 .bubble:nth-child(1){
-  width:40px;
-  height:40px;
+  width:calc(40px + 3vmin);
+  height:calc(40px + 3vmin);
   left:10%;
   animation-duration:8s;
 }
 .bubble:nth-child(2){
-  width:20px;
-  height:20px;
+  width:calc(20px + 5vmin);
+  height:calc(20px + 5vmin);
   left:20%;
   animation-duration:5s;
   animation-delay:1s;
 }
 .bubble:nth-child(3){
-  width:50px;
-  height:50px;
+  width:calc(50px + 3vmin);
+  height:calc(50px + 3vmin);
   left:35%;
   animation-duration:7s;
   animation-delay:2s;
 }
 .bubble:nth-child(4){
-  width:80px;
-  height:80px;
+  width:calc(80px + 5vmin);
+  height:calc(80px + 5vmin);
   left:50%;
   animation-duration:11s;
   animation-delay:0s;
 }
 .bubble:nth-child(5){
-  width:35px;
-  height:35px;
+  width:calc(35px + 3vmin);
+  height:calc(35px + 3vmin);
   left:55%;
   animation-duration:6s;
   animation-delay:1s;
 }
 .bubble:nth-child(6){
-  width:45px;
-  height:45px;
+  width:calc(45px + 5vmin);
+  height:calc(45px + 5vmin);
   left:65%;
   animation-duration:8s;
   animation-delay:3s;
 }
 .bubble:nth-child(7){
-  width:90px;
-  height:90px;
+  width:calc(90px + 3vmin);
+  height:calc(90px + 3vmin);
   left:70%;
   animation-duration:12s;
   animation-delay:2s;
 }
 .bubble:nth-child(8){
-  width:25px;
-  height:25px;
+  width:calc(25px + 5vmin);
+  height:calc(25px + 5vmin);
   left:80%;
   animation-duration:6s;
   animation-delay:2s;
 }
 .bubble:nth-child(9){
-  width:15px;
-  height:15px;
+  width:calc(15px + 3vmin);
+  height:calc(15px + 3vmin);
   left:70%;
   animation-duration:5s;
   animation-delay:1s;
 }
 .bubble:nth-child(10){
-  width:90px;
-  height:90px;
+  width:calc(90px + 5vmin);
+  height:calc(90px + 5vmin);
   left:25%;
   animation-duration:10s;
   animation-delay:4s;
 }
 .bubble:nth-child(11) {
-  width: 60px;
-  height: 60px;
+  width: calc(60px + 3vmin);
+  height: calc(60px + 3vmin);
   left: 15%;
   animation-duration: 9s;
   animation-delay: 1s;
 }
 
 .bubble:nth-child(12) {
-  width: 30px;
-  height: 30px;
+  width: calc(30px + 5vmin);
+  height: calc(30px + 5vmin);
   left: 25%;
   animation-duration: 6s;
   animation-delay: 2s;
 }
 
 .bubble:nth-child(13) {
-  width: 70px;
-  height: 70px;
+  width: calc(70px + 3vmin);
+  height: calc(70px + 3vmin);
   left: 40%;
   animation-duration: 8s;
   animation-delay: 3s;
 }
 
 .bubble:nth-child(14) {
-  width: 100px;
-  height: 100px;
+  width: calc(100px + 5vmin);
+  height: calc(100px + 5vmin);
   left: 55%;
   animation-duration: 12s;
   animation-delay: 1s;
 }
 
 .bubble:nth-child(15) {
-  width: 45px;
-  height: 45px;
+  width: calc(45px + 3vmin);
+  height: calc(45px + 3vmin);
   left: 60%;
   animation-duration: 7s;
   animation-delay: 2s;
 }
 
 .bubble:nth-child(16) {
-  width: 55px;
-  height: 55px;
+  width: calc(55px + 5vmin);
+  height: calc(55px + 5vmin);
   left: 70%;
   animation-duration: 10s;
   animation-delay: 3s;
 }
 
 .bubble:nth-child(17) {
-  width: 80px;
-  height: 80px;
+  width: calc(80px + 3vmin);
+  height: calc(80px + 3vmin);
   left: 75%;
   animation-duration: 11s;
   animation-delay: 2s;
 }
 
 .bubble:nth-child(18) {
-  width: 35px;
-  height: 35px;
+  width: calc(35px + 5vmin);
+  height: calc(35px + 5vmin);
   left: 85%;
   animation-duration: 7s;
   animation-delay: 1s;
 }
 
 .bubble:nth-child(19) {
-  width: 25px;
-  height: 25px;
+  width: calc(25px + 3vmin);
+  height: calc(25px + 3vmin);
   left: 90%;
   animation-duration: 5s;
   animation-delay: 2s;
 }
 
 .bubble:nth-child(20) {
-  width: 80px;
-  height: 80px;
+  width: calc(80px + 5vmin);
+  height: calc(80px + 5vmin);
   left: 35%;
   animation-duration: 9s;
   animation-delay: 4s;
@@ -208,7 +210,7 @@
     transform: translateX(0);
   }
   50% {
-    transform: translate(100px);
+    transform: translateX(100px);
   }
   100% {
     bottom: 100vh; /* Use viewport height to ensure it reaches the top */
@@ -294,7 +296,11 @@ body {
   flex-wrap: wrap;
   margin-bottom: 4rem;
 }
-
+h1, h2, h3 {
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 20px;
+}
 .section__title {  
   font-size: 2rem;
   font-weight: 600;
@@ -333,6 +339,7 @@ body {
   cursor: pointer;
   transition: 0.3s;
   font-weight: 600;
+  
 }
 
 #send {
@@ -595,7 +602,7 @@ header {
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);
-  z-index: 2000000000;
+  z-index: 1000; /* Increase z-index */
 }
 
 .modal-wrapper {
@@ -607,6 +614,7 @@ header {
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+  z-index: 1001; /* Ensure this is above the overlay */
 }
 
 .modal-image {
@@ -615,6 +623,7 @@ header {
   object-position: center;
   object-fit: cover;
   max-width: inherit;
+  z-index: 1002; /* Ensure image is above modal background */
 }
 
 .modal-newsletter {
@@ -626,6 +635,7 @@ header {
   border-radius: 5px;
   max-width: 400px;
   width: 100%;
+  z-index: 1003; /* Ensure content is above the image */
 }
 
 .modal-header {
@@ -1504,7 +1514,7 @@ textarea::-webkit-scrollbar {
 
 /* Custom scrollbar for WebKit browsers */
 body::-webkit-scrollbar {
-  width: 8px;
+  width: 12px;
   /* Width of the scrollbar */
 }
 
@@ -1517,6 +1527,7 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-track {
   background-color: var(--extra-light);
+  
   /* Color of the scrollbar track */
 }
 
@@ -1932,4 +1943,39 @@ body {
 
 #toggle:hover i {
   color: #ffffff80; /* 80% opacity white for hovering effect */
+}
+
+@media (max-width: 768px) {
+  .header__image img {
+    width: 90%;
+  }
+
+  .nav__links {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .section__container {
+    padding: 10px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+  }
+
+  .nav__links a {
+    padding: 8px;
+  }
+}
+
+@media (orientation: portrait) {
+  .header__content h1 {
+    font-size: 1.5rem;
+  }
+
+  .bubbles .bubble {
+    width: 30px;
+    height: 30px;
+  }
 }
