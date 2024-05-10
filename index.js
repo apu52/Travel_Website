@@ -23,10 +23,10 @@ function sendMail() {
 
 // Modal JS
 
-const modalContainer = document.querySelector(".modal-container");
-const closeBtn = document.querySelector("#close-btn");
-const subscribeBtn = document.querySelector("#news-subscribe");
-const form = document.querySelector("#modal-form");
+var modalContainer = document.querySelector(".modal-container");
+var closeBtn = document.querySelector("#close-btn");
+var subscribeBtn = document.querySelector("#news-subscribe");
+var form = document.querySelector("#modal-form");
 
 function openModal() {
   modalContainer.style.display = "flex";
@@ -54,18 +54,18 @@ window.onload = openModal();
 
 // carousel JS
 
-const slideDots = document.querySelectorAll(".imageDots span");
-const slides = document.querySelectorAll(".mySlides");
-let activeSlide = 0;
+var slideDots = document.querySelectorAll(".imageDots span");
+var slides = document.querySelectorAll(".mySlides");
+var activeSlide = 0;
 
-const destinationTitles = [
+var destinationTitles = [
   "Eiffel Tower",
   "Giant Wheel",
   "Goa Beach",
   "Male Beach",
 ];
 
-const destinationSubtitles = ["Paris", "London", "Goa", "Maldives"];
+var destinationSubtitles = ["Paris", "London", "Goa", "Maldives"];
 
 slideDots.forEach((dot, index) => {
   dot.addEventListener("click", () => {

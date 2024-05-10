@@ -7,8 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./loader.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -25,9 +24,10 @@
 
   <script src="index.js" defer></script>
   <script src="Theme.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
 
-  <link rel="stylesheet" href="path/to/aos.css">
-  <script src="path/to/aos.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
   </script>
   <script type="text/javascript">
@@ -44,9 +44,7 @@
 
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+   
   </style>
   <style>
 
@@ -303,8 +301,8 @@
           </div>
           <div class="modal-content">
             <form id="modal-form">
-              <input type="email" id="modal-email" placeholder="Email Address" required>
-              <button class="modal-btn" id="news-subscribe" type="submit">Subscribe</button>
+              <input type="email" name="email" id="modal-email" placeholder="Email Address" required>
+              <button class="modal-btn" name="submit" id="news-subscribe" type="submit">Subscribe</button>
             </form>
             <span style="color: #3950ac; padding: 1rem 0 0 0; font-weight: 600;cursor:pointer;font-size: 16px;"
               onclick="closeModal()">No, thanks</span>
@@ -638,9 +636,9 @@
           </p>
         </div>
         <div class="subscribe__form" data-aos="fade-up">
-          <form>
-            <input type="email" placeholder="Your email here" id="emailInput" required />
-            <button class="btn-send" id="send" type="submit">Send</button>
+          <form id="subscribe2">
+            <input type="email" name="email"  placeholder="Your email here" id="emailInput" required />
+            <button class="btn-send" name="submit" id="send" type="submit">Send</button>
           </form>
         </div>
       </div>
@@ -667,7 +665,7 @@
           <div class="mapouter">
             <div class="gmap_canvas"><iframe width="200" height="200" id="gmap_canvas"
                 src="https://maps.google.com/maps?q=wellington%20street%20kolkata&t=k&z=11&ie=UTF8&iwloc=&output=embed"
-                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                frameborder="0"  marginheight="0" marginwidth="0"></iframe><a
                 href="https://embedgooglemap.net/124/">invincible 123movies</a><br>
               <style>
                 .mapouter {
@@ -1051,36 +1049,60 @@
     </script>
 
     <script>
-      
-// To highlight active navbar
-document.addEventListener("DOMContentLoaded", function () {
-      const navLinks = document.querySelectorAll('.navLinks a');
+    document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll('.navLinks a');
 
-      function highlightNavLink() {
-        const scrollPosition = window.scrollY;
+        // Smooth scroll function
+        function scrollToTarget(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            // Scroll smoothly to the target element
+            if (targetElement) {
+                const targetOffsetTop = targetElement.offsetTop;
+                const scrollOptions = {
+                    top: targetOffsetTop,
+                    behavior: 'smooth'
+                };
+                window.scrollTo(scrollOptions);
+            }
+        }
 
+        // Add smooth scroll behavior to each nav link
         navLinks.forEach(link => {
-          const sectionId = link.getAttribute('href').substring(1);
-          const section = document.getElementById(sectionId);
-
-          // Adjust this value to control when the link should be highlighted
-          const offsetPercentage = 20;
-
-          if (section.offsetTop - window.innerHeight * (offsetPercentage / 100) <= scrollPosition &&
-            section.offsetTop + section.offsetHeight > scrollPosition) {
-            link.classList.add('active');
-          } else {
-            link.classList.remove('active');
-          }
+            link.addEventListener('click', scrollToTarget);
         });
-      }
 
-      document.addEventListener('scroll', highlightNavLink);
-      window.addEventListener('resize', highlightNavLink);
+        function highlightNavLink() {
+            const scrollPosition = window.scrollY;
 
-      // Initialize AOS library
-      AOS.init();
-    });</script>
+            navLinks.forEach(link => {
+                const sectionId = link.getAttribute('href').substring(1);
+                const section = document.getElementById(sectionId);
+
+                if (section) {
+                    const offsetPercentage = 20;
+
+                    if (section.offsetTop - window.innerHeight * (offsetPercentage / 100) <= scrollPosition &&
+                        section.offsetTop + section.offsetHeight > scrollPosition) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                }
+            });
+        }
+
+        document.addEventListener('scroll', highlightNavLink);
+        window.addEventListener('resize', highlightNavLink);
+
+        // Initialize AOS library
+        AOS.init();
+    });
+</script>
+
+
     <script>
 
       let progress = document.getElementById("progressbar");
@@ -1114,6 +1136,26 @@ document.addEventListener("DOMContentLoaded", function () {
   </script>
   <script src="./Image-Gallery/script.js"></script>
   <script src="./index.js"></script>
+  <script>
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
+            direction: "vertical",
+            gestureDirection: "vertical",
+            smooth: true,
+            smoothTouch: false,
+            touchMultiplier: 2,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+
+    </script>
 
 </html><!-- New bubble background start -->
 
