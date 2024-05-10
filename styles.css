@@ -1777,6 +1777,10 @@ body {
   width: 100%;
 }
 
+.navLinks.activeHamburger li {
+  margin: 0;
+}
+
 /* New NAvbar CSS Ends Here*/
 /* #canvas {
   background: #232323;
