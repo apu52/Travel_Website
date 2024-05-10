@@ -190,6 +190,11 @@ Show some ❤️&nbsp; by giving <img src="https://imgur.com/o7ncZFp.jpg" height
 </div>
 
 ## Contributing is fun🧡
+
+<a href="https://github.com/PDurgaAnusha/Travel_Website">
+  <img align="center" />
+</a> 
+
 <p align ="center">
   <img src="https://github.com/shruti-sen2004/Travel_Website/assets/115914670/d544fd3b-aed2-4a05-a2f8-0b7a2ff9014f" width="700" height= "250" />
 </p>
