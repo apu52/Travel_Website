@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trip Planner</title>
-    <link rel="icon"
-    href="img/A T logo with a white background and a square shape, connected to nature for a travel company.png"
-    type="image/x-icon" />
+    <link rel="icon" href="img/A T logo with a white background and a square shape, connected to nature for a travel company.png" type="image/x-icon" />
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -89,9 +87,46 @@
             <option value="hostel">Hostel</option>
         </select>
 
+        <button type="button" onclick="getCurrentLocation()">Use Current Location</button>
         <button type="submit">Plan My Trip</button>
     </form>
 
+    <script>
+        function getCurrentLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    // Get latitude and longitude
+                    const latitude = position.coords.latitude;
+                    const longitude = position.coords.longitude;
+
+                    // Create a new Geocoder object
+                    const geocoder = new google.maps.Geocoder();
+                    const latlng = new google.maps.LatLng(latitude, longitude);
+
+                    // Call the geocode method
+                    geocoder.geocode({ 'location': latlng }, function (results, status) {
+                        if (status === 'OK') {
+                            if (results[0]) {
+                                // Get the formatted address from the results
+                                const formattedAddress = results[0].formatted_address;
+
+                                // Set the destination input value to the formatted address
+                                document.getElementById('destination').value = formattedAddress;
+                            } else {
+                                console.log('No results found');
+                            }
+                        } else {
+                            console.log('Geocoder failed due to: ' + status);
+                        }
+                    });
+                });
+            } else {
+                console.log('Geolocation is not supported by this browser');
+            }
+        }
+    </script>
+    <!-- Include Google Maps JavaScript API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
 </body>
 
 </html>
