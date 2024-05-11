@@ -129,3 +129,7 @@ document.getElementById('emailInput').addEventListener('focus', function() {
 document.getElementById('emailInput').addEventListener('blur', function() {
   document.getElementById('send').classList.remove('focused');
 });
+// Issue #337 -> Adding current year dynamically using Date Object and modifying it using DOM manipulation...
+let curr_date=new Date();
+let curr_year=curr_date.getFullYear();
+document.querySelector(".year").innerHTML=curr_year;
