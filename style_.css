@@ -2,7 +2,7 @@
 
 /* Google Fonts */
 body {
-  background-image: url("./img/feedback_bg.jpg");
+  background-image: url("./img/feedbackbg.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -20,10 +20,10 @@ body {
   text-transform: uppercase;
   background-image: linear-gradient(
     -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
+    #90e0ef,
+    #00b4d8,
+    #0077b6,
+    #03045e
   );
   background-size: auto auto;
   background-clip: border-box;
@@ -50,7 +50,7 @@ body {
 }
 
 .glassmorphism-container {
-  background: rgba(46, 123, 225, 0.1);
+  background: rgba(52, 125, 222, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 20px;
@@ -64,11 +64,11 @@ p {
   margin: 0;
   font-family: "Lato";
   font-size: 26px;
-  color: #07147a;
+  color: #1d3557;
   padding: 8px 5px;
   text-align: center;
   text-rendering: optimizeLegibility;
-  text-shadow: 1px 1px 0 #29c0e6, 1px 2px 0px #e784c6;
+  /* text-shadow: 1px 1px 0 #29c0e6, 1px 2px 0px #e784c6; */
 }
 
 .stars {
@@ -78,14 +78,14 @@ p {
 }
 
 .star {
-  color: #eae3be;
+  color: #003459;
   font-size: 2rem;
   cursor: pointer;
   transition: color 0.2s ease-in-out;
 }
 
 .star:hover {
-  color: #ffa500;
+  color: #4361ee;
 }
 
 #rating-text {
@@ -94,10 +94,10 @@ p {
   font-size: 1.8rem;
   background-image: linear-gradient(
     -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
+    #f9d76b,
+    #ffcb77,
+    #deae42,
+    #f57359
   );
   background-size: auto auto;
   background-clip: border-box;
@@ -107,7 +107,7 @@ p {
   text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textclip 2s linear infinite;
+  /* animation: textclip 2s linear infinite; */
   display: inline-block;
 }
 @keyframes textclip {
@@ -316,15 +316,15 @@ p {
   appearance: none;
   background-image: radial-gradient(
     100% 100% at 100% 0,
-    #5adaff 0,
-    #5468ff 100%
+    #bee9e8 0,
+    #62b6cb 100%
   );
   border: 0;
   border-radius: 6px;
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
   box-sizing: border-box;
-  color: #fff;
+  color: black;
   cursor: pointer;
   display: inline-flex;
   font-family: "JetBrains Mono", monospace;
@@ -362,3 +362,4 @@ p {
   box-shadow: #3c4fe0 0 3px 7px inset;
   transform: translateY(2px);
 }
+
