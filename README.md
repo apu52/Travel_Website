@@ -5,7 +5,7 @@
 <img  src="https://readme-typing-svg.herokuapp.com?color=45ffaa&size=40&width=900&height=80&lines=Welcome-to-TOURGUIDE"/>
 </center>
    
-![image](https://github.com/apu52/Travel_Website/assets/114172928/1919a2f9-8a88-4baa-866b-d2a84158ce7f)
+![image](https://github.com/avanimathur/Travel_Website/assets/151984867/1024d506-92c6-4b35-a4ab-2d4eaca78199)
 
 
  <div align="center">
