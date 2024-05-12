@@ -13,7 +13,7 @@ Close #<issue_no>
 
 # Video/Screenshots (mandatory)
 <!--Please try to attach the working video of your new deployed project here -->
-<!-- It is not applicable for the templates of adding feature or fixing bugs -->
+
 
 # Checklist:
 
