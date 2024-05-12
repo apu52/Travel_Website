@@ -40,12 +40,14 @@
   overflow: hidden;
   top: 0;
   left: 0;
-  pointer-events: none; /* Ensure bubbles don't interfere with other elements */
+  pointer-events: none;
+  /* Ensure bubbles don't interfere with other elements */
 }
 
 .bubble {
   position: absolute;
-  bottom: 0; /* Start from the bottom of the page */
+  bottom: 0;
+  /* Start from the bottom of the page */
   width: 40px;
   height: 40px;
   background: var(--bubble-color);
@@ -53,75 +55,86 @@
   opacity: 0.5;
   animation: rise 10s infinite ease-in;
 }
-.bubble:nth-child(1){
-  width:40px;
-  height:40px;
-  left:10%;
-  animation-duration:8s;
+
+.bubble:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  left: 10%;
+  animation-duration: 8s;
 }
-.bubble:nth-child(2){
-  width:20px;
-  height:20px;
-  left:20%;
-  animation-duration:5s;
-  animation-delay:1s;
+
+.bubble:nth-child(2) {
+  width: 20px;
+  height: 20px;
+  left: 20%;
+  animation-duration: 5s;
+  animation-delay: 1s;
 }
-.bubble:nth-child(3){
-  width:50px;
-  height:50px;
-  left:35%;
-  animation-duration:7s;
-  animation-delay:2s;
+
+.bubble:nth-child(3) {
+  width: 50px;
+  height: 50px;
+  left: 35%;
+  animation-duration: 7s;
+  animation-delay: 2s;
 }
-.bubble:nth-child(4){
-  width:80px;
-  height:80px;
-  left:50%;
-  animation-duration:11s;
-  animation-delay:0s;
+
+.bubble:nth-child(4) {
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  animation-duration: 11s;
+  animation-delay: 0s;
 }
-.bubble:nth-child(5){
-  width:35px;
-  height:35px;
-  left:55%;
-  animation-duration:6s;
-  animation-delay:1s;
+
+.bubble:nth-child(5) {
+  width: 35px;
+  height: 35px;
+  left: 55%;
+  animation-duration: 6s;
+  animation-delay: 1s;
 }
-.bubble:nth-child(6){
-  width:45px;
-  height:45px;
-  left:65%;
-  animation-duration:8s;
-  animation-delay:3s;
+
+.bubble:nth-child(6) {
+  width: 45px;
+  height: 45px;
+  left: 65%;
+  animation-duration: 8s;
+  animation-delay: 3s;
 }
-.bubble:nth-child(7){
-  width:90px;
-  height:90px;
-  left:70%;
-  animation-duration:12s;
-  animation-delay:2s;
+
+.bubble:nth-child(7) {
+  width: 90px;
+  height: 90px;
+  left: 70%;
+  animation-duration: 12s;
+  animation-delay: 2s;
 }
-.bubble:nth-child(8){
-  width:25px;
-  height:25px;
-  left:80%;
-  animation-duration:6s;
-  animation-delay:2s;
+
+.bubble:nth-child(8) {
+  width: 25px;
+  height: 25px;
+  left: 80%;
+  animation-duration: 6s;
+  animation-delay: 2s;
 }
-.bubble:nth-child(9){
-  width:15px;
-  height:15px;
-  left:70%;
-  animation-duration:5s;
-  animation-delay:1s;
+
+.bubble:nth-child(9) {
+  width: 15px;
+  height: 15px;
+  left: 70%;
+  animation-duration: 5s;
+  animation-delay: 1s;
 }
-.bubble:nth-child(10){
-  width:90px;
-  height:90px;
-  left:25%;
-  animation-duration:10s;
-  animation-delay:4s;
+
+.bubble:nth-child(10) {
+  width: 90px;
+  height: 90px;
+  left: 25%;
+  animation-duration: 10s;
+  animation-delay: 4s;
 }
+
 .bubble:nth-child(11) {
   width: 60px;
   height: 60px;
@@ -207,14 +220,18 @@
     bottom: 0;
     transform: translateX(0);
   }
+
   50% {
     transform: translate(100px);
   }
+
   100% {
-    bottom: 100vh; /* Use viewport height to ensure it reaches the top */
+    bottom: 100vh;
+    /* Use viewport height to ensure it reaches the top */
     transform: translateX(-200px);
   }
 }
+
 /* new bubble end */
 #scrollPath {
   position: fixed;
@@ -231,7 +248,7 @@
   right: 0;
   width: 15px;
   height: 100%;
-  background: linear-gradient(to top , #008aff , #00ffe7);
+  background: linear-gradient(to top, #008aff, #00ffe7);
   z-index: 333333;
 }
 
@@ -256,7 +273,7 @@ body {
   overflow-x: hidden;
 }
 
-/* #toggle {
+#toggle {
   display: inline-block;
   border-radius: 50px;
   transition: all .4s ease-in-out;
@@ -274,9 +291,9 @@ body {
   background-color: #ff0000;
   border-color: #ff0000;
   color: #fff;
-} */
+}
 
-#toggle:hover {
+*/ #toggle:hover {
   filter: brightness(1.5);
 }
 
@@ -295,7 +312,7 @@ body {
   margin-bottom: 4rem;
 }
 
-.section__title {  
+.section__title {
   font-size: 2rem;
   font-weight: 600;
   color: var(--text-dark);
@@ -307,7 +324,8 @@ body {
   line-height: 34px;
   margin-bottom: 28px;
   background: #FD4766;
-  background: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, #FD4766 79.69%);;
+  background: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, #FD4766 79.69%);
+  ;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -339,6 +357,7 @@ body {
   border-top-right-radius: 5rem;
   border-bottom-right-radius: 5rem;
 }
+
 /* send button start*/
 #send {
   display: inline-block;
@@ -371,6 +390,27 @@ body {
 
 .btn:hover {
   background-color: var(--primary-color-dark);
+}
+
+
+
+#btn-style {
+
+  display: inline-block;
+  border-radius: 50px;
+  transition: all .4s ease-in-out;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: auto;
+  background-color: transparent;
+  border: 2px solid rgb(41, 0, 128);
+  color: red;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 2px;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 /* ensures no box or shadow for the video button */
@@ -485,8 +525,7 @@ header {
       var(--offset-orthogonal) 0 0 var(--ray-size),
       0 calc(var(--offset-orthogonal) * -1) 0 var(--ray-size),
       0 var(--offset-orthogonal) 0 var(--ray-size),
-      calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0
-        var(--ray-size),
+      calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0 var(--ray-size),
       var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size),
       calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size),
       var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
@@ -551,7 +590,7 @@ header {
   gap: 1rem;
 }
 
-.header__content > div {
+.header__content>div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -735,7 +774,7 @@ header {
   max-width: 100%;
 }
 
-.story > span {
+.story>span {
   font-size: 1rem;
   font-weight: 600;
   color: var(--text-dark);
@@ -816,6 +855,7 @@ header {
   cursor: pointer;
   transition: 0.3s;
 }
+
 .destination__nav span:nth-child(2) {
   border-radius: 10px 0 0 10px;
 }
@@ -987,7 +1027,7 @@ header {
   flex-direction: column;
 }
 
-.gallary__content > div {
+.gallary__content>div {
   max-width: 400px;
 }
 
@@ -1332,9 +1372,11 @@ header {
 .contact-form form {
   padding: auto;
 }
+
 .contact-form h1 {
   display: none;
 }
+
 .contact-form input {
   width: 50%;
   padding-left: 10px;
@@ -1465,6 +1507,7 @@ textarea::-webkit-scrollbar {
     display: none;
   }
 }
+
 .contact-form input,
 .contact-form textarea {
   width: 50%;
@@ -1476,7 +1519,8 @@ textarea::-webkit-scrollbar {
   border: none;
   font-size: 15px;
   background: none;
-  border-bottom: 1px solid var(--text-dark); /* Change line color */
+  border-bottom: 1px solid var(--text-dark);
+  /* Change line color */
   color: var(--text-dark);
   font-family: 'Oxygen', sans-serif;
 }
@@ -1487,6 +1531,7 @@ textarea::-webkit-scrollbar {
 }
 
 @media (max-width: 920px) {
+
   .contact-form input,
   .contact-form textarea {
     width: 75%;
@@ -1495,6 +1540,7 @@ textarea::-webkit-scrollbar {
 }
 
 @media (max-width: 700px) {
+
   .contact-form input,
   .contact-form textarea {
     width: 75%;
@@ -1622,7 +1668,7 @@ body {
   box-shadow: 0 0 27px 0 rgb(0 0 0 / 5%);
 }
 
-.testimonial-user > div {
+.testimonial-user>div {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
@@ -1635,7 +1681,7 @@ body {
   border-radius: 50%;
   object-fit: cover;
   transform: translate(0, -50%);
-  box-shadow: 0 0 0 10px var(  --testimonials-img-border);
+  box-shadow: 0 0 0 10px var(--testimonials-img-border);
 }
 
 .fa-quote-left,
@@ -1768,9 +1814,6 @@ body {
     font-size: 0.6rem;
   }
 
-  #btn-style {
-    font-size: 0.6rem;
-  }
 }
 
 .navLinks.activeHamburger {
@@ -1822,28 +1865,33 @@ body {
 /* Light mode  And Dark mode of AboutUs*/
 
 .headingofAbout {
-  font-weight: bolder; /* Set font weight to bolder */
+  font-weight: bolder;
+  /* Set font weight to bolder */
   text-align: center;
-  color: var(--text-dark); /* Use the text-dark custom property for color */
+  color: var(--text-dark);
+  /* Use the text-dark custom property for color */
 }
+
 /* Styling for elements with .aboutcon class */
 .aboutcon {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background-color: var(
-    --body-light
-  ); /* Use the text-dark custom property for color */
+  background-color: var(--body-light);
+  /* Use the text-dark custom property for color */
 }
+
 /* Styling for elements with .aboutcontent class */
 .aboutcontent {
-  
+
   text-align: center;
-  color: var(--text-dark); /* Use the text-dark custom property for color */
+  color: var(--text-dark);
+  /* Use the text-dark custom property for color */
   margin-bottom: 20px;
-  
+
 }
+
 /* Styling for SVG elements inside .iconss class */
 .iconss svg {
   width: 100px;
@@ -1859,26 +1907,33 @@ body {
   background-color: transparent;
   border-radius: 20px;
 }
+
 /* Styling for elements with .iconss class */
 .iconss {
-  color: var(--foot-light); /* Use the text-dark custom property for color */
+  color: var(--foot-light);
+  /* Use the text-dark custom property for color */
 }
+
 /* Hover effect for SVG elements inside .iconss class */
 .iconss:hover svg {
   stroke: #d51459;
 }
+
 /* Styling for h3 elements inside .aboutcontent class */
 .aboutcontent h3 {
   font-size: 1.5rem;
   margin-top: 10px;
 }
+
 /* Styling for p elements inside .iconss class */
 
 .iconss p {
   font-size: 1rem;
-  color: var(--foot-light); /* Use the text-dark custom property for color */
+  color: var(--foot-light);
+  /* Use the text-dark custom property for color */
   font-style: oblique;
 }
+
 /* Styling for elements with .box1 class */
 .box1 {
   height: 175px;
@@ -1886,9 +1941,8 @@ body {
   align-items: center;
   align-content: center;
   border: 0.5px solid;
-  border-color: var(
-    --text-dark
-  ); /* Use the text-dark custom property for color */
+  border-color: var(--text-dark);
+  /* Use the text-dark custom property for color */
 
   border-radius: 20px;
   display: flex;
@@ -1897,8 +1951,10 @@ body {
 }
 
 .color {
-  background-color: transparent; /* Use the text-dark custom property for color */
+  background-color: transparent;
+  /* Use the text-dark custom property for color */
 }
+
 /* Styling of AboutUs ended here */
 .custom-btn {
   background-color: rgb(73, 185, 185);
@@ -1918,6 +1974,7 @@ body {
   place-items: center;
   place-content: center;
 }
+
 #toggle {
   background-color: transparent;
   border: none;
@@ -1925,11 +1982,13 @@ body {
 }
 
 #toggle i {
-  font-size: 24px; /* Adjust the size as needed */
+  font-size: 24px;
+  /* Adjust the size as needed */
   color: white;
   transition: color 0.3s;
 }
 
 #toggle:hover i {
-  color: #ffffff80; /* 80% opacity white for hovering effect */
+  color: #ffffff80;
+  /* 80% opacity white for hovering effect */
 }

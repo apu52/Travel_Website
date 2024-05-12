@@ -18,13 +18,11 @@ body {
   font-size: 3rem;
   font-family: Georgia, "Times New Roman", Times, serif;
   text-transform: uppercase;
-  background-image: linear-gradient(
-    -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
-  );
+  background-image: linear-gradient(-225deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%);
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
@@ -36,6 +34,7 @@ body {
   animation: textclip 2s linear infinite;
   display: inline-block;
 }
+
 @keyframes textclip {
   to {
     background-position: 200% center;
@@ -54,11 +53,14 @@ body {
   backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 20px;
+  margin-top: 102px;
+  margin-bottom: 23px;
   text-align: center;
   max-width: 800px;
   width: 90%;
   margin-bottom: 20px;
 }
+
 p {
   line-height: 1.2em;
   margin: 0;
@@ -92,13 +94,11 @@ p {
   font-family: monospace;
   margin-top: 40px;
   font-size: 1.8rem;
-  background-image: linear-gradient(
-    -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
-  );
+  background-image: linear-gradient(-225deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%);
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
@@ -110,6 +110,7 @@ p {
   animation: textclip 2s linear infinite;
   display: inline-block;
 }
+
 @keyframes textclip {
   to {
     background-position: 200% center;
@@ -196,6 +197,7 @@ p {
   left: 0;
   z-index: 9999;
 }
+
 .newNav {
   display: flex;
   justify-content: space-between;
@@ -275,6 +277,7 @@ p {
     display: flex;
     cursor: pointer;
   }
+
   .navLinks {
     position: absolute;
     top: 70px;
@@ -301,7 +304,28 @@ p {
 
   #btn-style {
     font-size: 0.6rem;
+
+
   }
+}
+
+#btn-style {
+  display: inline-block;
+  border-radius: 50px;
+  transition: all .4s ease-in-out;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: auto;
+  background-color: transparent;
+  border: 2px solid rgb(41, 0, 128);
+  color: red;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 2px;
+  vertical-align: middle;
+  text-decoration: none;
 }
 
 .navLinks.activeHamburger {
@@ -312,13 +336,12 @@ p {
 
 /* CSS */
 .button {
+  margin-bottom: 23px;
   align-items: center;
   appearance: none;
-  background-image: radial-gradient(
-    100% 100% at 100% 0,
-    #5adaff 0,
-    #5468ff 100%
-  );
+  background-image: radial-gradient(100% 100% at 100% 0,
+      #5adaff 0,
+      #5468ff 100%);
   border: 0;
   border-radius: 6px;
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
