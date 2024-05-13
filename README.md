@@ -9,7 +9,7 @@
 
 
  <div align="center">
- <p>
+  <p>
 
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)
@@ -27,7 +27,7 @@
  <h2>Hi there👋, Enjoy with the World of Open source contribution </h2>
 
 
-<p>Hello Coders👨‍💻 ,I am Arpan Chowdhury, an aspiring Web developer.🤖 Here is the project of the front-end Web Developement.</p>
+<p>Hello Coders👨‍💻 ,I am Arpan Chowdhury, an aspiring Web developer.🤖 Here is the project of the front-end Web Development.</p>
 
 
 
@@ -47,7 +47,7 @@
 <br>
 
 <h2>Overview📌</h2>
-<p> Here is the project of the front-end Web Developement.This repo contains my project on Travel Website ✈️ using HTML,CSS . It contains the landing page of a travel tour company website👨🏻‍💻.We oftenly search for many travelling places here & there , So Here is it🚤.I welcome you all to contribute in this repository & make this a grand project. So, what are you waiting for??🤔Just jump into it after reading the guidelines📚</p>
+<p> Here is the project of the front-end Web Development.This repo contains my project on Travel Website ✈️ using HTML,CSS . It contains the landing page of a travel tour company website👨🏻‍💻.We oftenly search for many travelling places here & there , So Here is it🚤.I welcome you all to contribute in this repository & make this a grand project. So, what are you waiting for??🤔Just jump into it after reading the guidelines📚</p>
 
 <h2>Live Project -- https://apu52.github.io/Travel_Website/</h2>
 
@@ -71,7 +71,7 @@
 
  ### This project is now OFFICIALLY accepted for
  
-![GSSOC](https://github.com/apu52/METAVERSE/assets/114172928/e79eb6de-81b1-4ffb-b6ed-f018bb977e88)
+![GSSOC](https://github.com/apu52/METAVERSE/assets/114172928/e79eb6de-81b1-4ffb-b6ed-f018bb977e88) 
 
 ### This project was part of following Open Source Programs
 
