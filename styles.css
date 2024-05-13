@@ -31,7 +31,7 @@
 
 /* new bubble start*/
 
-
+/* old one
 .bubbles {
   position: fixed;
   width: 100%;
@@ -40,12 +40,11 @@
   overflow: hidden;
   top: 0;
   left: 0;
-  pointer-events: none; /* Ensure bubbles don't interfere with other elements */
-}
+  pointer-events: none; }
 
 .bubble {
   position: absolute;
-  bottom: 0; /* Start from the bottom of the page */
+  bottom: 0; 
   width: 40px;
   height: 40px;
   background: var(--bubble-color);
@@ -53,6 +52,31 @@
   opacity: 0.5;
   animation: rise 10s infinite ease-in;
 }
+*/
+/* new one!!*/
+.bubbles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Lower the z-index of bubbles to place them below cards/images */
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.bubble {
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  background: var(--bubble-color);
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: rise 10s infinite ease-in;
+  z-index: -1; /* Ensure bubbles are below cards/images */
+}
+
 .bubble:nth-child(1){
   width:40px;
   height:40px;
