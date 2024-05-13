@@ -177,3 +177,19 @@ body {
 #next {
   left: 100%;
 }
+
+  /* Added new logo css  */
+
+  .nav__logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .nav__logo img {
+    width: 40px; 
+    height: auto;
+    margin-right: 5px; 
+  }
+
+  /* New Logo css ends here */
