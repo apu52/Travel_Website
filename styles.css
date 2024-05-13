@@ -31,7 +31,7 @@
 
 /* new bubble start*/
 
-/* old one
+
 .bubbles {
   position: fixed;
   width: 100%;
@@ -40,11 +40,12 @@
   overflow: hidden;
   top: 0;
   left: 0;
-  pointer-events: none; }
+  pointer-events: none; /* Ensure bubbles don't interfere with other elements */
+}
 
 .bubble {
   position: absolute;
-  bottom: 0; 
+  bottom: 0; /* Start from the bottom of the page */
   width: 40px;
   height: 40px;
   background: var(--bubble-color);
@@ -52,31 +53,6 @@
   opacity: 0.5;
   animation: rise 10s infinite ease-in;
 }
-*/
-/* new one!!*/
-.bubbles {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 0; /* Lower the z-index of bubbles to place them below cards/images */
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
-
-.bubble {
-  position: absolute;
-  bottom: 0;
-  width: 40px;
-  height: 40px;
-  background: var(--bubble-color);
-  border-radius: 50%;
-  opacity: 0.5;
-  animation: rise 10s infinite ease-in;
-  z-index: -1; /* Ensure bubbles are below cards/images */
-}
-
 .bubble:nth-child(1){
   width:40px;
   height:40px;
@@ -419,8 +395,6 @@ a {
 img {
   width: 100%;
   display: block;
-  position: relative;
-  z-index: 1; 
 }
 
 body {
@@ -544,8 +518,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  z-index: 1; 
 }
 
 .header__image img {
@@ -555,24 +527,18 @@ header {
   border: 0.5rem solid var(--img-color);
   border-radius: 2rem;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
-  position: relative;
-  z-index: 1; 
 }
 
 .header__image img:nth-child(1) {
   /* max-width: 350px; */
   max-width: 20vw;
   transform: translate(-75%, -50%);
-  position: relative;
-  z-index: 1; 
 }
 
 .header__image img:nth-child(2) {
   /* max-width: 250px; */
   max-width: 15vw;
   transform: translate(0%, -25%);
-  position: relative;
-  z-index: 1; 
 }
 
 .header__content {
@@ -649,8 +615,6 @@ header {
   object-position: center;
   object-fit: cover;
   max-width: inherit;
-  position: relative;
-  z-index: 1; 
 }
 
 .modal-newsletter {
@@ -804,8 +768,6 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: relative;
-  z-index: 1; 
 }
 
 .imageDots {
@@ -874,14 +836,10 @@ header {
   position: relative;
   isolation: isolate;
   cursor: pointer;
-  position: relative;
-  z-index: 1; 
 }
 
 .destination__card img {
   border-radius: 1rem;
-  position: relative;
-  z-index: 1; 
 }
 
 .destination__details {
@@ -933,8 +891,6 @@ header {
   overflow: hidden;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
   transition: 2s;
-  position: relative;
-  z-index: 1; 
 }
 
 .trip__card:hover {
@@ -1022,8 +978,6 @@ header {
 .gallary__col img {
   border-radius: 1rem;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-  position: relative;
-  z-index: 1; 
 }
 
 .gallary__content {
@@ -1056,8 +1010,6 @@ header {
 
 .trip-gallery-container img {
   width: 100%;
-  position: relative;
-  z-index: 1; 
 }
 
 .trip-gallery-container img:hover {
