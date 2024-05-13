@@ -245,6 +245,9 @@
   --text-same: #0d213f;
   --bubble-color: red;
   --testimonials-img-border: red;
+  span.aos-init.aos-animate{
+    color:white;
+  }
 
 }
 
