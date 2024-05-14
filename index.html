@@ -695,7 +695,9 @@
         </div>
       </div>
       <div class="footer__bar">
-        Copyright © 2023 Arpan Chowdhury. All rights reserved.
+        <div>
+          <li>Copyright &copy;<span id="year"></span> </span> Arpan Chowdhury. All rights reserved. </li>
+        </div>
       </div>
     </footer>
     <!-- adding a btn -->
@@ -1114,6 +1116,9 @@ document.addEventListener("DOMContentLoaded", function () {
   </script>
   <script src="./Image-Gallery/script.js"></script>
   <script src="./index.js"></script>
+  <script>
+  document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
 
 </html><!-- New bubble background start -->
 
