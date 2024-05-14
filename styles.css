@@ -15,7 +15,7 @@
   --max-width: 1200px;
   --img-color: white;
   --head-text: #6a5acd;
-  --bubble-color: #6a5acd;
+  --bubble-color: linear-gradient(120deg, #90cdff 20.69%, #b8a4ee 50.19%, #ffffff 79.69%);
   --testimonials-img-border: #6a5acd;
 }
 
@@ -243,7 +243,7 @@
   --img-color: red;
   --head-text: red;
   --text-same: #0d213f;
-  --bubble-color: red;
+  --bubble-color: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, #FD4766 79.69%);
   --testimonials-img-border: red;
 
 }
