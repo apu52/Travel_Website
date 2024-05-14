@@ -853,7 +853,7 @@ header {
   color: black;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(4px);
-  border-radius: 10px;
+  border-radius: 5px;
   z-index: 1;
   transition: 0.3s;
 }
@@ -887,14 +887,14 @@ header {
 }
 
 .trip__card {
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
-  transition: 2s;
+  transition: 0.50s;
 }
 
 .trip__card:hover {
-  transform: scale(1.1);
+  transform: scale(1.03);
   cursor: zoom-in;
 }
 
