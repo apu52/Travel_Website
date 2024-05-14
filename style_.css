@@ -14,26 +14,29 @@ body {
   font-family: "Arial", sans-serif;
 }
 
+
 .feedback-heading {
   font-size: 3rem;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   text-transform: uppercase;
   background-image: linear-gradient(
-    -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
+    to right,
+    #222A68 ,
+    #FF4F79 ,
+    #ffaa00 
+    
   );
   background-size: auto auto;
   background-clip: border-box;
-  background-size: 200% auto;
+  background-size: 100% auto;
   color: #fff;
   background-clip: text;
   text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textclip 2s linear infinite;
+  animation: textclip 2.5s linear infinite;
   display: inline-block;
 }
 @keyframes textclip {
@@ -51,7 +54,7 @@ body {
 
 .glassmorphism-container {
   background: rgba(46, 123, 225, 0.1);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(4px);
   border-radius: 15px;
   padding: 20px;
   text-align: center;
@@ -62,13 +65,14 @@ body {
 p {
   line-height: 1.2em;
   margin: 0;
-  font-family: "Lato";
+  font-family: "PT Sans", sans-serif;
   font-size: 26px;
-  color: #07147a;
+  font-style: normal;
+  color: #222A68;
   padding: 8px 5px;
   text-align: center;
-  text-rendering: optimizeLegibility;
-  text-shadow: 1px 1px 0 #29c0e6, 1px 2px 0px #e784c6;
+  /* text-rendering: optimizeLegibility; */
+  /* text-shadow: 1px 1px 0 #29c0e6, 1px 2px 0px #e784c6; */
 }
 
 .stars {
@@ -85,29 +89,15 @@ p {
 }
 
 .star:hover {
-  color: #ffa500;
+  color: #ff9a04;
 }
 
 #rating-text {
   font-family: monospace;
   margin-top: 40px;
   font-size: 1.8rem;
-  background-image: linear-gradient(
-    -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
-  );
-  background-size: auto auto;
-  background-clip: border-box;
-  background-size: 200% auto;
-  color: #fff;
-  background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textclip 2s linear infinite;
+  font-weight: 700;
+  color: #222A68;
   display: inline-block;
 }
 @keyframes textclip {
@@ -316,15 +306,15 @@ p {
   appearance: none;
   background-image: radial-gradient(
     100% 100% at 100% 0,
-    #5adaff 0,
-    #5468ff 100%
+    #6acae5 30%,
+    #4c5fea 90%
   );
   border: 0;
   border-radius: 6px;
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
   box-sizing: border-box;
-  color: #fff;
+  color: black;
   cursor: pointer;
   display: inline-flex;
   font-family: "JetBrains Mono", monospace;
@@ -354,8 +344,15 @@ p {
 
 .button:hover {
   box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #222A68 0 -3px 0 inset;
   transform: translateY(-2px);
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #495ada 0,
+    #222A68 100%
+  );
+  color: white;
+  
 }
 
 .button:active {
