@@ -58,6 +58,7 @@ body {
   max-width: 800px;
   width: 90%;
   margin-bottom: 20px;
+  margin-top: 100px;
 }
 p {
   line-height: 1.2em;
@@ -186,6 +187,47 @@ p {
 
 /* New NAvbar CSS Starts Here*/
 
+
+nav {
+  background-color: #091020;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1001;
+}
+
+.nav__logo {
+  font-size: 1.8rem;
+  /* Increased font size for the logo */
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  /* border: 2px solid white; */
+}
+
+.nav__logo span {
+  color: #3685fb;
+  /* Assuming this is your primary color */
+}
+
+
+.link a {
+  /* padding: 0.5rem 1rem; Adjusted padding for links */
+  color: #ffffff;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.link a:hover {
+  color: #ff0000;
+}
+
+
+header {
+  background-color: var(--secondary-color);
+}
+
+
 .nav-container {
   height: auto;
   width: 200%;
@@ -195,12 +237,14 @@ p {
   position: fixed;
   left: 0;
   z-index: 9999;
+  
 }
+
 .newNav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  gap: 0.5rem;
+  gap: 10px;
   height: auto;
   width: 100%;
   padding: 1rem 2rem;
@@ -210,21 +254,23 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 15px;
   list-style: none;
   gap: 1.2rem;
   position: relative;
-  top: 0.5rem;
   z-index: 10;
+  margin-right: 20px;
+
 }
 
 .link a {
   position: relative;
+  list-style: none;
 }
 
 .link a::before {
   position: absolute;
-  content: "";
+  content: '';
   height: 2px;
   width: 0%;
   bottom: -5px;
@@ -234,7 +280,7 @@ p {
 
 .link a::after {
   position: absolute;
-  content: "";
+  content: '';
   height: 2px;
   width: 0%;
   top: -5px;
@@ -252,6 +298,7 @@ p {
   width: 100%;
   transition: all 0.2s ease-in-out;
 }
+
 
 .hamburger {
   height: 2rem;
@@ -275,6 +322,7 @@ p {
     display: flex;
     cursor: pointer;
   }
+
   .navLinks {
     position: absolute;
     top: 70px;

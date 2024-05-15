@@ -444,9 +444,7 @@ nav {
   color: #ff0000;
 }
 
-.home {
-  margin-left: 210px;
-}
+
 
 header {
   background-color: var(--secondary-color);
@@ -1655,7 +1653,7 @@ body {
 
 .nav-container {
   height: auto;
-  width: 200%;
+  /* width: 200%; */
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1666,9 +1664,9 @@ body {
 
 .newNav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  gap: 0.5rem;
+  gap: 10px;
   height: auto;
   width: 100%;
   padding: 1rem 2rem;
@@ -1678,12 +1676,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 15px;
   list-style: none;
   gap: 1.2rem;
   position: relative;
   top: 0.5rem;
   z-index: 10;
+  margin-right: 20px;
+
 }
 
 .link a {
