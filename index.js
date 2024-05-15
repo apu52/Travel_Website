@@ -57,6 +57,7 @@ window.onload = openModal();
 const slideDots = document.querySelectorAll(".imageDots span");
 const slides = document.querySelectorAll(".mySlides");
 let activeSlide = 0;
+let slideInterval;
 
 const destinationTitles = [
   "Eiffel Tower",
@@ -69,45 +70,49 @@ const destinationSubtitles = ["Paris", "London", "Goa", "Maldives"];
 
 slideDots.forEach((dot, index) => {
   dot.addEventListener("click", () => {
-    pullSlide(null, index);
+    changeSlide(null, index);
   });
 });
 
-function pullSlide(relativeNum, absoluteNum) {
+document.querySelector(".destination__nav span:nth-child(1)").addEventListener("click", () => {
+  changeSlide(-1, null);
+  resetSlideInterval();
+});
+
+document.querySelector(".destination__nav span:nth-child(2)").addEventListener("click", () => {
+  changeSlide(1, null);
+  resetSlideInterval();
+});
+
+function changeSlide(relativeNum, absoluteNum) {
   if (typeof relativeNum === "number") {
-    activeSlide = (activeSlide + relativeNum) % 4;
+    activeSlide = (activeSlide + relativeNum) % slides.length;
     if (activeSlide < 0) activeSlide = slides.length + activeSlide;
   } else if (typeof absoluteNum === "number") {
     activeSlide = absoluteNum;
   }
+
   const title = destinationTitles[activeSlide];
   const subtitle = destinationSubtitles[activeSlide];
-  slides.forEach((slide) => {
 
-    // Check if destination__details already exists, if not, create it
-    let detailsContainer = slide.querySelector(".destination__details");
-    if (!detailsContainer) {
-      detailsContainer = document.createElement("div");
+  slides.forEach((slide, index) => {
+    if (!slide.querySelector(".destination__details")) {
+      const detailsContainer = document.createElement("div");
       detailsContainer.className = "destination__details";
       slide.appendChild(detailsContainer);
-    }
-
-    // Check if destination__title already exists, if not, create it
-    let titleElement = detailsContainer.querySelector(".destination__title");
-    if (!titleElement) {
-      titleElement = document.createElement("p");
+      
+      const titleElement = document.createElement("p");
       titleElement.className = "destination__title";
       detailsContainer.appendChild(titleElement);
-    }
-    titleElement.textContent = title;
-
-    // Check if destination__subtitle already exists, if not, create it
-    let subtitleElement = detailsContainer.querySelector(".destination__subtitle");
-    if (!subtitleElement) {
-      subtitleElement = document.createElement("p");
+      
+      const subtitleElement = document.createElement("p");
       subtitleElement.className = "destination__subtitle";
       detailsContainer.appendChild(subtitleElement);
     }
+    
+    const titleElement = slide.querySelector(".destination__title");
+    const subtitleElement = slide.querySelector(".destination__subtitle");
+    titleElement.textContent = title;
     subtitleElement.textContent = subtitle;
   });
 
@@ -119,8 +124,20 @@ function pullSlide(relativeNum, absoluteNum) {
   slideDots[activeSlide].classList.add("active");
 }
 
+function startSlideInterval() {
+  slideInterval = setInterval(() => {
+    changeSlide(1, null);
+  }, 3000); // Change slide every 3 seconds
+}
+
+function resetSlideInterval() {
+  clearInterval(slideInterval); // For clearing auto- slide
+  startSlideInterval(); // initializing the auto - slide
+}
+
 // Initial details rendering
-pullSlide(0);
+changeSlide(0);
+startSlideInterval();
 
 document.getElementById('emailInput').addEventListener('focus', function() {
   document.getElementById('send').classList.add('focused');
