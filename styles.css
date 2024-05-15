@@ -890,12 +890,12 @@ header {
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
-  transition: 2s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .trip__card:hover {
   transform: scale(1.1);
-  cursor: zoom-in;
+  cursor: pointer;
 }
 
 .trip__details {
