@@ -1933,3 +1933,97 @@ body {
 #toggle:hover i {
   color: #ffffff80; /* 80% opacity white for hovering effect */
 }
+
+
+/* Testimonial Section */
+
+.testimonials{
+  position: relative;
+  width: 100%;
+  border-radius: 2%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00ffe7;
+  overflow: hidden;
+}
+
+.swiper-slide {
+background-position: center;
+background-size: cover;
+width: 320px;
+background-color: #00ffe7;
+box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+filter: blur(4px);
+border-radius: 2%;
+
+}
+.swiper-slide-active {
+filter: blur(0px);
+background-color: white;
+border-radius: 2%;
+
+}
+.testimonialContent{
+  border-radius: 2%;
+}
+
+.testimonialBox{
+  border-radius: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  padding-top: 90px;
+  color: #999;
+}
+.testimonialBox .quote{
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  top: 20px;
+  right: 30px;
+  bottom: 20px;
+  opacity: 0.2;
+}
+
+.testimonialBox .details{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.testimonialBox .details .imgBX{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.testimonialBox .details .imgBX img{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.testimonialBox .details h3{
+font-size: 16px;
+font-weight: 400;
+letter-spacing: 1px;
+color: hotpink;
+line-height: 1.1em;
+}
+.testimonialBox .details  h3 span{
+font-size: 12px;
+color: blue;
+margin-left: 20px;
+}
+
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-left
+{
+  background-image: none;
+}
