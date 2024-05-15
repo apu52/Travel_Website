@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="./bali.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 </head>
 
 <body>
@@ -103,42 +105,109 @@
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
-      <div class="description">
-        <h1><u>Description</u></h1> <br>
-        <p>Bali is a province of Indonesia and the westernmost of the Lesser Sunda Islands. East of Java and west of
-          Lombok, the province includes the island of Bali and a few smaller offshore islands, notably Nusa Penida, Nusa
-          Lembongan, and Nusa Ceningan to the southeast. Here's a comprehensive overview of tourism in Bali:
-          <br><br>
-          <b>Climate</b>:Being just 8 degrees south of the equator, Bali has a fairly even climate all year round.
-          Average
-          year-round temperature stands at around 30 °C (86 °F) with a humidity level of about 85%.
+      <!-- Menu Container -->
+      <div class="w3-container" id="menu">
+        <div class="w3-content" style="max-width:700px">
 
-          Daytime temperatures at low elevations vary between 20 and 33 °C (68 and 91 °F), but the temperatures decrease
-          significantly with increasing elevation.
+          <br>
+          <div class="w3-row w3-center w3-card w3-padding">
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+              <div class="w3-col s6 tablink">Description</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+              <div class="w3-col s6 tablink">Things To Do</div>
+            </a>
+          </div>
 
-          The west monsoon is in place from approximately October to April, and this can bring significant rain,
-          particularly from December to March. During the rainy season, there are comparatively fewer tourists seen in
-          Bali. During the Easter and Christmas holidays, the weather is very unpredictable. Outside of the monsoon
-          period, humidity is relatively low and any rain is unlikely in lowland areas.
-          <br><br>
-          <b>Cultural Heritage</b>:The Balinese people follow a form of Hinduism known as Agama Hindu Dharma. Balinese
-          culture
-          and traditions religion impacts almost every aspect of life on the island and draws people to Bali to see and
-          experience it. An important belief of Balinese Hinduism is that elements of mother nature are influenced by
-          spirit.
+          <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+
+            <p class="w3-text-grey">
+              Bali is a province of Indonesia and the westernmost of the Lesser Sunda Islands. East of Java and west of
+              Lombok, the province includes the island of Bali and a few smaller offshore islands, notably Nusa Penida,
+              Nusa
+              Lembongan, and Nusa Ceningan to the southeast. Here's a comprehensive overview of tourism in Bali:
+              <br><br>
+              <b>
+                <h3>Climate</h3>
+              </b>Being just 8 degrees south of the equator, Bali has a fairly even climate all year round.
+              Average
+              year-round temperature stands at around 30 °C (86 °F) with a humidity level of about 85%.
 
 
-        </p>
+              The west monsoon is in place from approximately October to April, and this can bring significant rain,
+              particularly from December to March. During the rainy season, there are comparatively fewer tourists seen
+              in
+              Bali. During the Easter and Christmas holidays, the weather is very unpredictable. Outside of the monsoon
+              period, humidity is relatively low and any rain is unlikely in lowland areas.
+              <br><br>
+              <b>
+
+
+
+            </p>
+
+
+          </div>
+
+          <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+            <h5>Restaurants</h5>
+            <p class="w3-text-grey">Find the best restaurant around while traveling.</p><br>
+
+            <h5>Attractions</h5>
+            <p class="w3-text-grey">Find the best tourist attractions in the city.</p><br>
+
+            <h5>Rooms</h5>
+            <p class="w3-text-grey">Finds room nearby</p><br>
+
+            <h5>Offers</h5>
+            <p class="w3-text-grey">Find the best offer and discount on tourguide.</p>
+
+
+          </div>
+          <br>
+
+
+        </div>
+        <br>
+        <div class="transport-container">
+          <div class="single-list-topics-content">
+            <div class="icon1"></div>
+            <button class="bttnn">Flight</button>
+          </div>
+
+          <div class="single-list-topics-content">
+            <div class="icon2"></div>
+            <button class="bttnn">Train</button>
+          </div>
+          <div class="single-list-topics-content">
+            <div class="icon3"></div>
+            <button class="bttnn">Bus</button>
+            <div> </div>
+          </div>
+
+          <script>
+            function openMenu(evt, menuName) {
+              var i, x, tablinks;
+              x = document.getElementsByClassName("menu");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablink");
+              for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+              }
+              document.getElementById(menuName).style.display = "block";
+              evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+            }
+            document.getElementById("myLink").click();
+          </script>
+          <div id="weatherInfo">
+
+            <!-- Weather information will be inserted here -->
+          </div>
+        </div>
+
       </div>
-
-      <div>
-        <h3>Current Climate Info:</h3>
-        <div id="weatherInfo">
-          <!-- Weather information will be inserted here -->
-      </div>
-      </div>
-
-    </div>
 
 
   </section>

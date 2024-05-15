@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="./Goa.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 </head>
 
 <body>
@@ -103,33 +105,104 @@
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
-      <div class="description">
-        <h1><u>Description</u></h1> <br>
-        <p>Goa is a vibrant and diverse industry that attracts millions of visitors from around the world each year.
-          Located on the western coast of India, Goa is renowned for its stunning beaches, rich cultural heritage,
-          vibrant nightlife, and lush landscapes. Here's a comprehensive overview of tourism in Goa:
+      <!-- Menu Container -->
+      <div class="w3-container" id="menu">
+        <div class="w3-content" style="max-width:700px">
 
-          Beaches: One of the primary attractions of Goa is its pristine coastline, which stretches for over 100
-          kilometers along the Arabian Sea. From popular beaches like Baga, Calangute, and Anjuna in North Goa to more
-          serene and secluded ones like Palolem and Agonda in South Goa, tourists have a wide variety of options to
-          choose from. These beaches offer opportunities for sunbathing, water sports such as parasailing and jet
-          skiing, and beachside shacks serving delicious Goan cuisine and refreshing beverages.
-          <br><br>
-          Cultural Heritage: With a rich history influenced by Portuguese colonization, Goa boasts a unique blend of
-          Indian and Western cultures. Visitors can explore centuries-old churches and cathedrals like the Basilica of
-          Bom Jesus and Se Cathedral, which are UNESCO World Heritage Sites. Additionally, the state is dotted with
-          picturesque colonial-era buildings, forts, and museums showcasing its cultural and architectural legacy.
+          <br>
+          <div class="w3-row w3-center w3-card w3-padding">
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+              <div class="w3-col s6 tablink">Description</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+              <div class="w3-col s6 tablink">Things To Do</div>
+            </a>
+          </div>
+
+          <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+
+            <p class="w3-text-grey">
+
+              Goa is India’s smallest state by its geographical area and the fourth smallest by population.
+              The state has been a very important historical and cultural centre since ancient times.
+              In a Hindu scripture Mahabharata it is referred as Gopakpattan or Gomant and in Sutra- Samhita it was
+              mentioned as Govapuri. <br><br>
+              Located on India’s West coast, Goa is a former Portuguese colony with prolific history. The state has
+              unique blend of Indian and
+              Portuguese culture, art and architecture that pulls approx 2.5 millions (wiki) tourists every year. And
+              hence Goa is visibly different
+              from the rest of India.<br><br>
+
+              The magical land of Goa is a land of celebrations and festivities.
+              Snuggled in the Konkan Coast Belt, It has a long coastline of approx 100 kilometers.
+              Goa is primarily known for its beautiful beaches which are engrossed with oscillating palm trees and an
+              astonishing nightlife.
+              It is a wonderful place embraced by joy & happiness only. However, apart from beaches there is much more
+              in Goa.<br><br>
+              It is such a destination that combines the charm of the old world fashion with exoticism of the new age.
+              And this is the reason why Goa has always been visited by a huge number of national and international
+              tourists each year.
 
 
-        </p>
-      </div>
-      <div>
-        <h3>Current Climate Info:</h3>
-        <div id="weatherInfo">
-          <!-- Weather information will be inserted here -->
-      </div>
-      </div>
-    </div>
+
+            </p>
+
+
+          </div>
+
+          <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+            <h5>Restaurants</h5>
+            <p class="w3-text-grey">Find the best restaurant around while traveling.</p><br>
+
+            <h5>Attractions</h5>
+            <p class="w3-text-grey">Find the best tourist attractions in the city.</p><br>
+
+            <h5>Rooms</h5>
+            <p class="w3-text-grey">Finds room nearby</p><br>
+
+            <h5>Offers</h5>
+            <p class="w3-text-grey">Find the best offer and discount on tourguide.</p>
+
+
+          </div>
+          <br>
+          <br>
+          <div class="transport-container">
+            <div class="single-list-topics-content">
+              <div class="icon1"></div>
+              <button class="bttnn">Flight</button>
+            </div>
+
+            <div class="single-list-topics-content">
+              <div class="icon2"></div>
+              <button class="bttnn">Train</button>
+            </div>
+            <div class="single-list-topics-content">
+              <div class="icon3"></div>
+              <button class="bttnn">Bus</button>
+              <div> </div>
+            </div>
+            <script>
+              function openMenu(evt, menuName) {
+                var i, x, tablinks;
+                x = document.getElementsByClassName("menu");
+                for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < x.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+                }
+                document.getElementById(menuName).style.display = "block";
+                evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+              }
+              document.getElementById("myLink").click();
+            </script>
+            <div id="weatherInfo">
+              <!-- Weather information will be inserted here -->
+            </div>
+          </div>
+        </div>
 
 
   </section>

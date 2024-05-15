@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="./NewYork.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 </head>
 
 <body>
@@ -102,37 +104,100 @@
           width="800" height="200" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
+      <!-- Menu Container -->
+      <div class="w3-container" id="menu">
+        <div class="w3-content" style="max-width:700px">
 
-      <div class="description">
-        <h1><u>Description</u></h1> <br>
-        <p>New York, often dubbed "The Empire State" or "The Big Apple," is a global hub of tourism, offering an
-          unparalleled blend of cultural diversity, iconic landmarks, and vibrant energy. From the bustling streets of
-          Manhattan to the serene landscapes of the Hudson Valley, New York State caters to a diverse range of interests
-          and preferences, ensuring that every visitor finds something captivating.
+          <br>
+          <div class="w3-row w3-center w3-card w3-padding">
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+              <div class="w3-col s6 tablink">Description</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+              <div class="w3-col s6 tablink">Things To Do</div>
+            </a>
+          </div>
 
-          In New York City, tourists are greeted by the towering skyscrapers of Midtown Manhattan, including the iconic
-          Empire State Building, Times Square, and Rockefeller Center. The city's cultural landscape is equally
-          impressive, with world-renowned museums like the Metropolitan Museum of Art, the Museum of Modern Art (MoMA),
-          and the American Museum of Natural History.
+          <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
 
-          <br><br>
-          Broadway theaters draw theater enthusiasts from around the globe, showcasing the latest in musicals, plays,
-          and performances. Central Park provides a picturesque oasis amidst the urban jungle, offering opportunities
-          for leisurely strolls, boat rides, and outdoor concerts.
+            <p class="w3-text-grey">New York, often dubbed "The Empire State" or "The Big Apple," is a global hub of
+              tourism, offering an
+              unparalleled blend of cultural diversity, iconic landmarks, and vibrant energy. From the bustling streets
+              of
+              Manhattan to the serene landscapes of the Hudson Valley, New York State caters to a diverse range of
+              interests
+              and preferences, ensuring that every visitor finds something captivating.<br><br>
 
-          Beyond Manhattan, New York State boasts an array of attractions. In Brooklyn, visitors can explore diverse
-          neighborhoods like Williamsburg and DUMBO, known for their artistic flair and culinary delights. The Bronx is
-          home to the famous Bronx Zoo and the New York Botanical Garden, while Queens offers cultural gems like the
-          Queens Museum and Flushing Meadows-Corona Park.
-        </p>
-      </div>
-      <div>
-        <h3>Current Climate Info:</h3>
-        <div id="weatherInfo">
-          <!-- Weather information will be inserted here -->
-      </div>
-      </div>
-    </div>
+              In New York City, tourists are greeted by the towering skyscrapers of Midtown Manhattan, including the
+              iconic
+              Empire State Building, Times Square, and Rockefeller Center. The city's cultural landscape is equally
+              impressive, with world-renowned museums like the Metropolitan Museum of Art, the Museum of Modern Art
+              (MoMA),
+              and the American Museum of Natural History.
+
+              <br><br>
+              Broadway theaters draw theater enthusiasts from around the globe, showcasing the latest in musicals,
+              plays,
+              and performances. Central Park provides a picturesque oasis amidst the urban jungle, offering
+              opportunities
+              for leisurely strolls, boat rides, and outdoor concerts.<br><br>
+
+              Beyond Manhattan, New York State boasts an array of attractions. In Brooklyn, visitors can explore diverse
+              neighborhoods like Williamsburg and DUMBO, known for their artistic flair and culinary delights.
+            </p>
+          </div>
+          <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+            <h5>Restaurants</h5>
+            <p class="w3-text-grey">Find the best restaurant around while traveling.</p><br>
+
+            <h5>Attractions</h5>
+            <p class="w3-text-grey">Find the best tourist attractions in the city.</p><br>
+
+            <h5>Rooms</h5>
+            <p class="w3-text-grey">Finds room nearby</p><br>
+
+            <h5>Offers</h5>
+            <p class="w3-text-grey">Find the best offer and discount on tourguide.</p>
+
+
+          </div>
+          <br>
+          <div class="transport-container">
+            <div class="single-list-topics-content">
+              <div class="icon1"></div>
+              <button class="bttnn">Flight</button>
+            </div>
+
+            <div class="single-list-topics-content">
+              <div class="icon2"></div>
+              <button class="bttnn">Train</button>
+            </div>
+            <div class="single-list-topics-content">
+              <div class="icon3"></div>
+              <button class="bttnn">Bus</button>
+              <div> </div>
+            </div>
+            <script>
+              function openMenu(evt, menuName) {
+                var i, x, tablinks;
+                x = document.getElementsByClassName("menu");
+                for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < x.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+                }
+                document.getElementById(menuName).style.display = "block";
+                evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+              }
+              document.getElementById("myLink").click();
+            </script>
+            <div id="weatherInfo">
+              <!-- Weather information will be inserted here -->
+            </div>
+          </div>
+        </div>
 
 
   </section>
