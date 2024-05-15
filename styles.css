@@ -1933,3 +1933,7 @@ body {
 #toggle:hover i {
   color: #ffffff80; /* 80% opacity white for hovering effect */
 }
+
+.footer__link{
+  color: rgb(255, 255, 255);
+}
