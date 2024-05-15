@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Oxygen:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
   --primary-color: #3685fb;
@@ -1279,7 +1280,8 @@ header {
 /* Updated Contact section */
 .container {
   position: relative;
-  width: 100%;
+  width: 100vw;
+  right: 70px;
 }
 
 .items {
@@ -1291,8 +1293,8 @@ header {
   background: #0000001a;
   backdrop-filter: blur(10px);
   margin: 50px;
-  grid-template-columns: 1fr 2fr;
-  display: grid;
+  /* grid-template-columns: 1fr 2fr; */
+  display: flex;
   z-index: 10;
 }
 
@@ -1302,7 +1304,9 @@ header {
 
 .contact h1 {
   color: #ab45e7;
-  font-family: 'Noto Serif', serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 660;
+  font-style: normal;
   font-size: 2.8rem;
   text-align: center;
   margin: 20px;
@@ -1416,11 +1420,7 @@ textarea::-webkit-scrollbar {
   background-color: #ab45e7;
   color: var(--extra-light);
 } */
-
 @media (max-width: 920px) {
-  .items {
-    grid-template-columns: 1fr;
-  }
 
   .contact {
     display: none;
