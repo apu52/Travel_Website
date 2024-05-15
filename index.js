@@ -127,7 +127,7 @@ function changeSlide(relativeNum, absoluteNum) {
 function startSlideInterval() {
   slideInterval = setInterval(() => {
     changeSlide(1, null);
-  }, 3000); // Change slide every 3 seconds
+  }, 4000); // Change slide every 4 seconds
 }
 
 function resetSlideInterval() {
