@@ -381,6 +381,7 @@ body {
   padding: 0;
   margin: 0;
   font: inherit;
+  /* font: 1.2rem "Fira Sans", sans-serif; */
   cursor: pointer;
   outline: inherit;
   box-shadow: none;
@@ -402,7 +403,7 @@ body {
 }
 
 nav {
-  background-color: #091020;
+  background-color: #131518;
   position: fixed;
   top: 0;
   width: 100%;
@@ -410,12 +411,17 @@ nav {
 }
 
 .nav__logo {
-  font-size: 1.8rem;
+  font-size: 2rem;
   /* Increased font size for the logo */
   font-weight: 600;
   color: #ffffff;
   cursor: pointer;
+  /* border-radius: 20px; */
   /* border: 2px solid white; */
+}
+
+.nav__logo:hover {
+  color: red;
 }
 
 .nav__logo span {
@@ -435,13 +441,14 @@ nav {
 
 .link a {
   /* padding: 0.5rem 1rem; Adjusted padding for links */
-  color: #ffffff;
+  color: #f8f6f6;
   transition: 0.3s;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 15px;
 }
 
 .link a:hover {
-  color: #ff0000;
+  color: #ff3c00;
 }
 
 .home {
@@ -1122,12 +1129,18 @@ header {
 .footer__bar {
   max-width: var(--max-width);
   margin: auto;
-  padding: 0.5rem;
+  cursor: pointer;
+  padding: 0.8rem;
   text-align: center;
-  font-size: 0.8rem;
-  /*   color: var(--secondary-color); */
+  font-size: 1.4rem;
+  text-decoration: blink;
+  color: var(--secondary-color);
   color: var(--extra-light);
   border-top: 1px solid var(--text-light);
+}
+
+.footer__bar:hover {
+  color: red;
 }
 
 @media (width < 1200px) {
@@ -1613,12 +1626,12 @@ body {
   align-items: center;
   background: #efefef;
   height: 400px;
+  transition: .3s;
   width: 350px;
   max-width: 90%;
   margin-top: 50px;
   padding: 0 20px 20px 20px;
   border-radius: 20px;
-
   box-shadow: 0 0 27px 0 rgb(0 0 0 / 5%);
 }
 

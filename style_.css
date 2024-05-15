@@ -2,7 +2,7 @@
 
 /* Google Fonts */
 body {
-  background-image: url("./img/feedback_bg.jpg");
+  /* background-image: url("./img/feedback_bg.jpg"); */
   background-size: cover;
   background-position: center;
   display: flex;
