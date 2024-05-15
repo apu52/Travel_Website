@@ -1,5 +1,5 @@
 ---
-name: Documentation
+name: Documentation update
 about: Describe this issue template's purpose here.
 title: Documentation
 labels: documentation
