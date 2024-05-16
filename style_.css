@@ -63,12 +63,13 @@ body {
 .glassmorphism-container {
   background: rgba(46, 123, 225, 0.1);
   backdrop-filter: blur(4px);
-  border-radius: 15px;
+  border-radius: 20px;
   padding: 20px;
   text-align: center;
   max-width: 800px;
   width: 90%;
   margin-bottom: 20px;
+  margin-top: 30px;
 }
 p {
   line-height: 1.2em;
