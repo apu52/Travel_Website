@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="./Image-Gallery/style.css">
   <link rel="stylesheet" href="./Image-Gallery/stylecaptions.css">
+  <link rel="stylesheet" href="explore.css">
   <title>Tourguide</title>
   <!-- adding a fav-icon -->
   <link rel="icon"
@@ -340,7 +341,7 @@
       </div>
     </div>
 
-    <section class="section__container destination__container" id="Destinations" data-aos="fade-up">
+    <!-- <section class="section__container destination__container" id="Destinations" data-aos="fade-up">
       <div class="section__header">
         <div>
           <h2 class="section__title" data-aos="fade-in">Explore top destinations</h2>
@@ -349,19 +350,19 @@
             can find your right destination.
           </p>
         </div>
-      </div>
+      </div> -->
 
       <!-- slideshow -->
-      <div class="slideshow-container" data-aos="fade-up">
+      <!-- <div class="slideshow-container" data-aos="fade-up"> -->
 
         <!-- Next and previous buttons -->
-        <div class="destination__nav">
+        <!-- <div class="destination__nav">
           <span onclick="pullSlide(-1)"><i class="ri-arrow-left-s-line"></i></span>
           <span onclick="pullSlide(1)"><i class="ri-arrow-right-s-line"></i></span>
-        </div>
+        </div> -->
 
         <!-- Full-width images with number and caption text -->
-        <div class="mySlides">
+        <!-- <div class="mySlides">
           <img src="./img/eiffelTower.webp" style="width:100%">
         </div>
 
@@ -383,7 +384,87 @@
           <span></span>
         </div>
       </div>
-    </section>
+    </section> -->
+
+    <!-- EXPLORE DESTINATION SECTION -->
+    <div class="section__header">
+      <div>
+        <h2 class="section__title" data-aos="fade-in">Explore top destinations</h2>
+        <p class="section__subtitle" data-aos="fade-in">
+          Explore your suitable and dream places around the world. Here you
+          can find your right destination. <br><br><b class="hedd">
+          Click on the cards to find your right destination.</b> 
+        </p>
+      </div>
+    </div>
+    <div class="outer-box">
+      <div class="containers">
+        <div
+          class="card active"
+          style="
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+              url('/img/paris.jpg');
+          "
+        >
+          <div class="info">
+            
+            <p>
+              ||Eiffel Tower||
+            </p>
+            <h3>PARIS</h3>
+          </div>
+        </div>
+  
+        <div
+          class="card"
+          style="
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+              url('/img/london.jpg');
+          "
+        >
+          <div class="info">
+            
+            <p>
+              ||Giant Wheel||
+            </p>
+            <h3>LONDON</h3>
+          </div>
+        </div>
+  
+        <div
+          class="card"
+          style="
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+              url('/img/goa.jpg');
+          "
+        >
+          <div class="info">
+            
+            <p>
+              ||Goa Beach||
+            </p>
+            <h3>GOA</h3>
+          </div>
+        </div>
+    
+        <div
+          class="card"
+          style="
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+              url('/img/maldives.jpg');
+          "
+        >
+          <div class="info">
+            
+            <p>
+              ||Male Beach||
+            </p>
+            <h3>MALDIVES</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="explore.js"></script>
 
     <section class="trip" id="trip" data-aos="zoom-in" data-aos-offset="100">
       <div class="section__container trip__container">
