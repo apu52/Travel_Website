@@ -17,6 +17,7 @@ body {
 
 .feedback-heading {
   font-size: 3rem;
+  -webkit-text-stroke: 1px #3d5a80;
   font-family: "EB Garamond", serif;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -24,9 +25,15 @@ body {
   text-transform: uppercase;
   background-image: linear-gradient(
     to right,
-    #222A68 ,
-    #FF4F79 ,
-    #ffaa00 
+    #7400b8,
+    #6930c3 ,
+    #5e60ce,
+    #5390d9,
+    #4ea8de,
+    #48bfe3,
+    
+    #64dfdf,
+    #80ffdb
     
   );
   background-size: auto auto;
@@ -66,7 +73,7 @@ body {
 p {
   line-height: 1.2em;
   margin: 0;
-  font-family: "PT Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 26px;
   font-style: normal;
   color: #222A68;
@@ -94,10 +101,11 @@ p {
 }
 
 #rating-text {
-  font-family: monospace;
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
   margin-top: 40px;
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 500;
   color: #222A68;
   display: inline-block;
 }
@@ -118,12 +126,18 @@ p {
   resize: vertical;
   margin-bottom: 20px;
   padding: 8px;
-  border: 1.5px solid #5468ff;
+  border: 1.5px solid #0353a4;
   border-radius: 5px;
   background-color: rgba(219, 230, 240, 0.402);
   box-sizing: border-box;
   font-size: 1rem;
 }
+
+#feedback-input:focus-visible{
+  outline:2px solid #0466c8;
+  border-radius: 5px;
+}
+
 
 /*.submit-button {
   display: inline-block;
@@ -307,8 +321,8 @@ p {
   appearance: none;
   background-image: radial-gradient(
     100% 100% at 100% 0,
-    #6acae5 30%,
-    #4c5fea 90%
+    #4d9ded 30%,
+    #4681f4 90%
   );
   border: 0;
   border-radius: 6px;
@@ -349,7 +363,7 @@ p {
   transform: translateY(-2px);
   background-image: radial-gradient(
     100% 100% at 100% 0,
-    #495ada 0,
+    #0a57a5 0,
     #222A68 100%
   );
   color: white;
