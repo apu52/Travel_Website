@@ -2,7 +2,7 @@
 
 /* Google Fonts */
 body {
-  background-image: url("./img/feedback_bg.jpg");
+  background-image: url("./img/feedback2.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -17,7 +17,8 @@ body {
 
 .feedback-heading {
   font-size: 3rem;
-  font-family: "PT Sans", sans-serif;
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
