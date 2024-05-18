@@ -701,9 +701,19 @@
           <p><span>Phone:</span> +91 8562145852</p>
         </div>
       </div>
+      
+<!--  New copyright code to make it dynamic and display current year -->
       <div class="footer__bar">
-        Copyright © 2023 Arpan Chowdhury. All rights reserved.
+        <div>
+          <li>Copyright &copy;<span id="year"></span> </span> Arpan Chowdhury. All rights reserved. </li>
+        </div>
       </div>
+      
+<!--   Previous copyright code
+<!--  <div class="footer__bar">
+        Copyright © 2023 Arpan Chowdhury. All rights reserved.
+      </div> -->
+      
     </footer>
     <!-- adding a btn -->
     <button id="goToTopBtn" onclick="goToTop()" class="top-btn"> <i class="fa-solid fa-chevron-up"
@@ -1121,6 +1131,11 @@ document.addEventListener("DOMContentLoaded", function () {
   </script>
   <script src="./Image-Gallery/script.js"></script>
   <script src="./index.js"></script>
+  
+  <!--  Adding copyright javascript code to make it dynamic and display current year -->
+  <script>
+  document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
 
 </html><!-- New bubble background start -->
 
