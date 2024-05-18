@@ -194,6 +194,15 @@ Show some ❤️&nbsp; by giving <img src="https://imgur.com/o7ncZFp.jpg" height
 </tr>
 </table>
 
+<table>
+<tr>
+<td align="center"><a href="https://github.com/Ghanshyam89"><img src="img/GhanshyamNewPic.jpg" width=130px height=130px /></a></br> <h4 style="color:red;">Ghanshyam Prajapati</h4>
+ <a href="https://www.linkedin.com/in/ghanshyam-prajapati/"><img src="https://img.icons8.com/fluency/2x/linkedin.png" width="32px" height="32px"></img></a>
+   </td>
+
+</tr>
+</table>
+
 </div>
   
  # Project Admin⚡
