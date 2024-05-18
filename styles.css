@@ -741,6 +741,7 @@ header {
   color: var(--text-dark);
 }
 
+
 /* carousel */
 
 .destination__container {
@@ -1832,9 +1833,7 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background-color: var(
-    --body-light
-  ); /* Use the text-dark custom property for color */
+  background: transparent; /* Use the text-dark custom property for color */
 }
 /* Styling for elements with .aboutcontent class */
 .aboutcontent {
