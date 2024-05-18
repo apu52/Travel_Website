@@ -5,9 +5,6 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  	<!-- Link Swiper's CSS -->
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
   <link rel="stylesheet" href="./loader.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -65,7 +62,6 @@
     }
       </style>
 
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 
 
@@ -107,14 +103,15 @@
 
         <ul class="navLinks">
 
-          <li onclick="closeNav()" class="link" data-aos=""><a href="#Home"><i class="ri-home-fill"></i>Home</a></li>
-          <li onclick="closeNav()" class="link" data-aos=""><a href="#AboutUs"><i class="ri-user-3-fill"></i> AboutUs</a></li>
-          <li onclick="closeNav()" class="link" data-aos=""><a href="#Destinations"><i class="ri-landscape-fill"></i>Destinations</a></li>
-          <li onclick="closeNav()" class="link" data-aos=""><a href="#trip"><i class="ri-price-tag-3-fill"></i>Pricing</a></li>
-          <li onclick="closeNav()" class="link" data-aos=""><a href="#ReviewGallery"><i class="ri-gallery-fill"></i>Gallery</a></li>
-          <li onclick="closeNav()" class="link" data-aos=""><a href="#testimonials"><i class="ri-layout-2-fill"></i>Testimonials</a></li>
-          <li onclick="closeNav()" class="link" data-aos=""><a href="feedback.html"><i class="ri-service-fill"></i>Rate Us?</a></li>
-          <li onclick="closeNav()" class="link" data-aos=""><a href="#contact"><i class="ri-customer-service-2-fill"></i>Contact Us</a></li>
+
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#Home">Home</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#AboutUs"> AboutUs</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#Destinations">Destinations</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#trip">Pricing</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#ReviewGallery">Trip Gallery</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#testimonials">Testimonials</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#contact">Contact Us</a></li>
 
 
         </ul>
@@ -172,50 +169,57 @@
 
     <br>
     <!-- Section of About Us -->
-    <section class="About" id="AboutUs">
+<section class="About" id="AboutUs">
+  <div class="color col-12">
+    <div class="section__container about__container">
+      <!-- Left background color column -->
+      <div class="col-8 bg primary"></div>
+      <!-- Right content container -->
+      <div class="section__container gallary__container relative z-10 max-w-screen-xl px-4 mx-auto text-center pb-14">
+        <div class="aboutcon">
+          <div class="col-span-2 mx-auto lg:mx-0 lg:text-left">
+            <h1 class="headingofAbout section__title data-aos=" fade-in"><b>About Us</b></h1>
+            <!-- Article with about us content -->
+            <article class="w-full text-left format sm:format-base lg:format-lg format-blue dark:format-invert">
+              <!-- Adding the content -->
+              <style>
+                /* CSS for hover effect */
+                .aboutcontent:hover {
+                  transform: scale(1.8); 
+                  transition: transform 0.8s ease; 
+                }
+              </style>
+              <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
+                <span style="margin-left: 80px;"></span>Welcome to TourGuide, where we firmly believe that life's true purpose unfolds amidst the thrill of exploration, the embrace of the unfamiliar, and the pursuit of the extraordinary! Our mission is to embolden you, the intrepid traveler, to unveil this purpose and elevate your journey by providing unparalleled assistance and guidance. Let us be your compass as you navigate through the wonders of the world, forging unforgettable memories and discovering the essence of travel!
+              </p>
 
-      <div class="color col-12">
-        <div class="section__container about__container">
-          <!-- Left background color column -->
-          <div class="col-8 bg primary"></div>
-          <!-- Right content container -->
-          <div
-            class="section__container gallary__container relative z-10 max-w-screen-xl px-4 mx-auto text-center pb-14">
+              <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
+                <span style="margin-left: 80px;"></span> At TourGuide, our local guides serve as your passport to effortlessly navigate through local
+                languages, customs, and traditions that often make traveling to a foreign place overwhelming. We
+                provide curated travel itineraries, once-in-a-lifetime experiences, valuable travel advice, and the
+                freedom to customize itineraries to ensure everything aligns with your wishlist.
+              </p>
 
-            <div class="aboutcon">
+              <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
+                <span style="margin-left: 80px;"></span>Since our inception in 2024, TourGuide has cultivated a dynamic travel community, with 30,000+
+                guides hailing from over 200+ countries globally. We continue to grow each day, expanding the
+                horizons of possibilities for discovering the world. With TourGuide by your side, there's no limit
+                to the different ways you can embark on an unforgettable journey!
+              </p>
 
-              <div class="col-span-2 mx-auto lg:mx-0 lg:text-left">
-                <h1 class="headingofAbout section__title data-aos=" fade-in"><b>About Us</b></h1>
-                <!-- Article with about us content -->
-                <article class="w-full text-left format sm:format-base lg:format-lg format-blue dark:format-invert">
-                  <!-- Adding the content -->
-                  <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
-                    <span style="margin-left: 80px;"></span>Welcome to TourGuide, where we firmly believe that the true purpose of life is found in venturing
-                    into the unknown, embracing the unfamiliar, and living the extraordinary! Our mission is to empower
-                    you, the traveler, to uncover this purpose and maximize your travel experiences by offering
-                    unparalleled assistance.
-                  </p>
+              <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
+                <strong><span style="margin-left: 80px;"></span> We welcome you to the TourGuide family - where every journey becomes a story worth
+                  sharing!</strong>
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-                  <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
-                    <span style="margin-left: 80px;"></span> At TourGuide, our local guides serve as your passport to effortlessly navigate through local
-                    languages, customs, and traditions that often make traveling to a foreign place overwhelming. We
-                    provide curated travel itineraries, once-in-a-lifetime experiences, valuable travel advice, and the
-                    freedom to customize itineraries to ensure everything aligns with your wishlist.
-                  </p>
-
-                  <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
-                    <span style="margin-left: 80px;"></span>Since our inception in 2024, TourGuide has cultivated a dynamic travel community, with 30,000+
-                    guides hailing from over 200+ countries globally. We continue to grow each day, expanding the
-                    horizons of possibilities for discovering the world. With TourGuide by your side, there's no limit
-                    to the different ways you can embark on an unforgettable journey!
-                  </p>
-
-                  <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
-                    <strong><span style="margin-left: 80px;"></span> We welcome you to the TourGuide family - where every journey becomes a story worth
-                      sharing!</strong>
-                  </p>
-                </article>
-              </div>
+    
             </div>
             <!-- Right statistics container -->
             <div class="col-6">
@@ -525,7 +529,7 @@
 
     <!-- Testimonials Section -->
 
-    <!-- <section class="testimonials" id="testimonials">
+    <section class="testimonials" id="testimonials">
       <h2 class="testimonial-heading section__title" align-items="center" data-aos="fade-in">Testimonials</h2>
       <div class="testimonial-container">
         <div class="testimonial-user" data-aos="fade-up">
@@ -568,138 +572,7 @@
           </div>
         </div>
       </div>
-    </section> -->
-
-
-    <h2 class="testimonial-heading section__title" >Testimonials</h2>
-    <section class="testimonials" id="testimonials">
-      	<!-- Swiper -->
-	<div class="swiper-container">
-		<div class="swiper-wrapper">
-
-
-			<div class="swiper-slide">
-        <div class="testimonialBox">
-          <img src="/img/quote.png" class="quote">
-          <div class="testimonialContent">
-            <p>TourGuide made our dream vacation a reality! From the
-              breathtaking landscapes to the seamless logistics, every moment was a new adventure. The personalized
-              itinerary and expert guides added a special touch to our journey. We can't wait to book our next trip with
-              TourGuide!</p>
-                <div class="details">
-                  <div class="imgBX">
-                    <img src="/img/testimonial1.jpg" alt="">
-                  </div>
-                  <h3>Joseph <br> <span>Certified User  </span></h3>
-                </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="swiper-slide">
-        <div class="testimonialBox">
-          <img src="/img/quote.png" class="quote">
-          <div class="testimonialContent">
-            <p>Our cultural tour with TourGuide exceeded all expectations.
-              The
-              immersive experiences, knowledgeable guides, and carefully curated activities allowed us to connect with
-              the
-              local culture in a way we never thought possible. Thanks to TourGuide.</p>
-                <div class="details">
-                  <div class="imgBX">
-                    <img src="/img/testimonial2.jpg" alt="">
-                  </div>
-                  <h3>Katie <br> <span>Certified User  </span></h3>
-                </div>
-          </div>
-        </div>
-      </div>
-
-      
-      <div class="swiper-slide">
-        <div class="testimonialBox">
-          <img src="/img/quote.png" class="quote">
-          <div class="testimonialContent">
-            <p>Tourguide exceeded my expectations! Seamless booking process, knowledgeable guides, and unforgettable experiences.
-               A must for any traveler seeking authentic adventures. Highly recommend for a memorable journey!</p>
-                <div class="details">
-                  <div class="imgBX">
-                    <img src="/img/danial.jpg" alt="">
-                  </div>
-                  <h3>Danial<br> <span>Certified User  </span></h3>
-                </div>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="swiper-slide">
-        <div class="testimonialBox">
-          <img src="/img/quote.png" class="quote">
-          <div class="testimonialContent">
-            <p>An exceptional experience! The tour guides were knowledgeable, friendly, and made our trip unforgettable.
-               Seamless organization and personalized attention. Highly recommend for any traveler seeking an immersive journey!</p>
-                <div class="details">
-                  <div class="imgBX">
-                    <img src="/img/robin.jpg" alt="">
-                  </div>
-                  <h3>Robin <br> <span>Certified User  </span></h3>
-                </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="testimonialBox">
-          <img src="/img/quote.png" class="quote">
-          <div class="testimonialContent">
-            <p>Traveling with the family has never been easier! TourGuide
-              took
-              care of every detail, ensuring a stress-free and enjoyable vacation for all. The kid-friendly activities
-              and
-              family-oriented guides made our trip unforgettable.</p>
-
-                <div class="details">
-
-                  <div class="imgBX">
-                    <img src="/img/Abhisek Tamang.jpg" alt="">
-                  </div>
-
-                  <h3>Charles <br> <span>Certified User </span></h3>
-                </div>
-
-          </div>
-        </div>
-      </div>
-
-
-
-		</div>
-	</div>
     </section>
-
-          <!-- Swiper JS -->
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-	<!-- Initialize Swiper -->
-	<script>
-		var swiper = new Swiper(".swiper-container", {
-      effect: 'coverflow',
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: 'auto',
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 0,
-        depth: 100,
-        modifier: 2,
-        slideShadows : true,
-      },
-      loop:true,
-    });
-	</script>
 
     <!--------------------------------------- Updated Contact Us Section ----------------------------------------------->
 
