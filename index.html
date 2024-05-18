@@ -39,6 +39,13 @@
 
       window.location.href = 'plantrip.html';
     }
+    // const menuButton = document.getElementsByClassName('link');
+    function closeNav(){
+      let list = document.querySelector('.navLinks');
+        list.classList.toggle('activeHamburger');
+    }
+    // menuButton.forEach((button) => (button.onclick = () => closeNav()));
+    
 
   </script>
 
@@ -95,14 +102,17 @@
         <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
 
         <ul class="navLinks">
-          <li class="link"data-aos="fade-down"><a href="#Home">Home</a></li>
-          <li class="link" data-aos="fade-down"><a href="#AboutUs">AboutUs</a></li>
-          <li class="link" data-aos="fade-down"><a href="#Destinations">Destinations</a></li>
-          <li class="link" data-aos="fade-down"><a href="#trip">Pricing</a></li>
-          <li class="link" data-aos="fade-down"><a href="#ReviewGallery">Trip Gallery</a></li>
-          <li class="link" data-aos="fade-down"><a href="#testimonials">Testimonials</a></li>
-          <li class="link" data-aos="fade-down"><a href="feedback.html">Rate Us?</a></li>
-          <li class="link" data-aos="fade-down"><a href="#contact">Contact Us</a></li>
+
+
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#Home">Home</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#AboutUs"> AboutUs</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#Destinations">Destinations</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#trip">Pricing</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#ReviewGallery">Trip Gallery</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#testimonials">Testimonials</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#contact">Contact Us</a></li>
+
 
         </ul>
         <a href="newLogin.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
