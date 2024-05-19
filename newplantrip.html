@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="newplantripstyle.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav">
+            <div class="plantrip">
+                <img src="Tourguide (2).jpg" alt="">
+                <h1>Tour Planner</h1>
+            </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="burger-menu">☰</label>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="story.html">About</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li class="nav-button"><a href="newLogin.html">Login</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="background">
+        <img src="ronin-06roiCfSCiU-unsplash (1).jpg" alt="#">
+    </div>
+    
+    <div class="form-container">
+        <form>
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" name="destination" required>
+
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" name="startDate" required>
+
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" name="endDate" required>
+
+            <label for="budget">Budget:</label>
+            <input type="number" id="budget" name="budget" required>
+
+            <label for="accommodation">Accommodation:</label>
+            <select id="accommodation" name="accommodation">
+                <option value="hotel">Hotel</option>
+                <option value="apartment">Apartment</option>
+                <option value="hostel">Hostel</option>
+            </select>
+
+            <button type="submit">Plan My Trip</button>
+        </form>
+    </div>
+</body>
+</html>
