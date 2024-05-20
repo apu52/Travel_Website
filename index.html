@@ -39,6 +39,13 @@
 
       window.location.href = 'plantrip.html';
     }
+    // const menuButton = document.getElementsByClassName('link');
+    function closeNav(){
+      let list = document.querySelector('.navLinks');
+        list.classList.toggle('activeHamburger');
+    }
+    // menuButton.forEach((button) => (button.onclick = () => closeNav()));
+    
 
   </script>
 
@@ -95,14 +102,17 @@
         <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
 
         <ul class="navLinks">
-          <li class="link home" data-aos="fade-down"><a href="#Home">Home</a></li>
-          <li class="link" data-aos="fade-down"><a href="#AboutUs">AboutUs</a></li>
-          <li class="link" data-aos="fade-down"><a href="#Destinations">Destinations</a></li>
-          <li class="link" data-aos="fade-down"><a href="#trip">Pricing</a></li>
-          <li class="link" data-aos="fade-down"><a href="#ReviewGallery">Trip Gallery</a></li>
-          <li class="link" data-aos="fade-down"><a href="#testimonials">Testimonials</a></li>
-          <li class="link" data-aos="fade-down"><a href="feedback.html">Rate Us?</a></li>
-          <li class="link" data-aos="fade-down"><a href="#contact">Contact Us</a></li>
+
+
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#Home">Home</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#AboutUs"> AboutUs</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#Destinations">Destinations</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#trip">Pricing</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#ReviewGallery">Trip Gallery</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#testimonials">Testimonials</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#contact">Contact Us</a></li>
+
 
         </ul>
         <a href="newLogin.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
@@ -144,7 +154,7 @@
               <div class="video">
                 <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" type="video/mp4"></img>
                 <!-- link to the hmtl page with the video -->
-                <a href="story.html" class="btn_video" target="_blank">
+                <a href="story.html" class="btn_video">
                   <span><i class="ri-play-fill"></i></span>
               </div>
 
@@ -159,50 +169,57 @@
 
     <br>
     <!-- Section of About Us -->
-    <section class="About" id="AboutUs">
+<section class="About" id="AboutUs">
+  <div class="color col-12">
+    <div class="section__container about__container">
+      <!-- Left background color column -->
+      <div class="col-8 bg primary"></div>
+      <!-- Right content container -->
+      <div class="section__container gallary__container relative z-10 max-w-screen-xl px-4 mx-auto text-center pb-14">
+        <div class="aboutcon">
+          <div class="col-span-2 mx-auto lg:mx-0 lg:text-left">
+            <h1 class="headingofAbout section__title " data-aos=" fade-in"><b>About Us</b></h1>
+            <!-- Article with about us content -->
+            <article class="w-full text-left format sm:format-base lg:format-lg format-blue dark:format-invert">
+              <!-- Adding the content -->
+              <style>
+                /* CSS for hover effect */
+                .aboutcontent:hover {
+                  transform: scale(1.8); 
+                  transition: transform 0.8s ease; 
+                }
+              </style>
+              <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
+                <span style="margin-left: 80px;"></span>Welcome to TourGuide, where we firmly believe that life's true purpose unfolds amidst the thrill of exploration, the embrace of the unfamiliar, and the pursuit of the extraordinary! Our mission is to embolden you, the intrepid traveler, to unveil this purpose and elevate your journey by providing unparalleled assistance and guidance. Let us be your compass as you navigate through the wonders of the world, forging unforgettable memories and discovering the essence of travel!
+              </p>
 
-      <div class="color col-12">
-        <div class="section__container about__container">
-          <!-- Left background color column -->
-          <div class="col-8 bg primary"></div>
-          <!-- Right content container -->
-          <div
-            class="section__container gallary__container relative z-10 max-w-screen-xl px-4 mx-auto text-center pb-14">
+              <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
+                <span style="margin-left: 80px;"></span> At TourGuide, our local guides serve as your passport to effortlessly navigate through local
+                languages, customs, and traditions that often make traveling to a foreign place overwhelming. We
+                provide curated travel itineraries, once-in-a-lifetime experiences, valuable travel advice, and the
+                freedom to customize itineraries to ensure everything aligns with your wishlist.
+              </p>
 
-            <div class="aboutcon">
+              <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
+                <span style="margin-left: 80px;"></span>Since our inception in 2024, TourGuide has cultivated a dynamic travel community, with 30,000+
+                guides hailing from over 200+ countries globally. We continue to grow each day, expanding the
+                horizons of possibilities for discovering the world. With TourGuide by your side, there's no limit
+                to the different ways you can embark on an unforgettable journey!
+              </p>
 
-              <div data-aos="fade-right" class="col-span-2 mx-auto lg:mx-0 lg:text-left">
-                <h1 class="headingofAbout section__title data-aos=" fade-in"><b>About Us</b></h1>
-                <!-- Article with about us content -->
-                <article class="w-full text-left format sm:format-base lg:format-lg format-blue dark:format-invert">
-                  <!-- Adding the content -->
-                  <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
-                    <span style="margin-left: 80px;"></span>Welcome to TourGuide, where we firmly believe that the true purpose of life is found in venturing
-                    into the unknown, embracing the unfamiliar, and living the extraordinary! Our mission is to empower
-                    you, the traveler, to uncover this purpose and maximize your travel experiences by offering
-                    unparalleled assistance.
-                  </p>
+              <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
+                <strong><span style="margin-left: 80px;"></span> We welcome you to the TourGuide family - where every journey becomes a story worth
+                  sharing!</strong>
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-                  <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
-                    <span style="margin-left: 80px;"></span> At TourGuide, our local guides serve as your passport to effortlessly navigate through local
-                    languages, customs, and traditions that often make traveling to a foreign place overwhelming. We
-                    provide curated travel itineraries, once-in-a-lifetime experiences, valuable travel advice, and the
-                    freedom to customize itineraries to ensure everything aligns with your wishlist.
-                  </p>
-
-                  <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
-                    <span style="margin-left: 80px;"></span>Since our inception in 2024, TourGuide has cultivated a dynamic travel community, with 30,000+
-                    guides hailing from over 200+ countries globally. We continue to grow each day, expanding the
-                    horizons of possibilities for discovering the world. With TourGuide by your side, there's no limit
-                    to the different ways you can embark on an unforgettable journey!
-                  </p>
-
-                  <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
-                    <strong><span style="margin-left: 80px;"></span> We welcome you to the TourGuide family - where every journey becomes a story worth
-                      sharing!</strong>
-                  </p>
-                </article>
-              </div>
+    
             </div>
             <!-- Right statistics container -->
             <div data-aos="fade-left" class="col-6">
@@ -694,9 +711,19 @@
           <p><span>Phone:</span> +91 8562145852</p>
         </div>
       </div>
+      
+<!--  New copyright code to make it dynamic and display current year -->
       <div class="footer__bar">
-        Copyright © 2023 Arpan Chowdhury. All rights reserved.
+        <div>
+          <li>Copyright &copy;<span id="year"></span> </span> Arpan Chowdhury. All rights reserved. </li>
+        </div>
       </div>
+      
+<!--   Previous copyright code
+<!--  <div class="footer__bar">
+        Copyright © 2023 Arpan Chowdhury. All rights reserved.
+      </div> -->
+      
     </footer>
     <!-- adding a btn -->
     <button id="goToTopBtn" onclick="goToTop()" class="top-btn"> <i class="fa-solid fa-chevron-up"
@@ -1114,6 +1141,11 @@ document.addEventListener("DOMContentLoaded", function () {
   </script>
   <script src="./Image-Gallery/script.js"></script>
   <script src="./index.js"></script>
+  
+  <!--  Adding copyright javascript code to make it dynamic and display current year -->
+  <script>
+  document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
 
 </html><!-- New bubble background start -->
 
