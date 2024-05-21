@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="./Paris.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 </head>
 
 <body>
@@ -102,37 +104,94 @@
           width="800" height="200" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
+      <!-- Menu Container -->
+      <div class="w3-container" id="menu">
+        <div class="w3-content" style="max-width:700px">
 
-      <div class="description">
-        <h1><u>Description</u></h1> <br>
-        <p>Paris, often referred to as the "City of Light" or the "City of Love," is an experience unlike any other. As
-          one of the most visited cities in the world, Paris attracts millions of tourists each year with its rich
-          history, iconic landmarks, vibrant culture, and exquisite cuisine.
+          <br>
+          <div class="w3-row w3-center w3-card w3-padding">
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+              <div class="w3-col s6 tablink">Description</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+              <div class="w3-col s6 tablink">Things To Do</div>
+            </a>
+          </div>
 
-          The city is renowned for its architectural marvels, including the Eiffel Tower, a symbol of France and one of
-          the most recognizable structures globally. Visitors can ascend to the top for panoramic views of the
-          cityscape, creating unforgettable memories.
+          <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
 
-          The Louvre Museum is another highlight, housing thousands of works of art, including the enigmatic Mona Lisa.
-          Art enthusiasts can immerse themselves in centuries of artistic achievement, from ancient Egyptian artifacts
-          to Renaissance masterpieces.
-          <br> <br>
-          Paris is also synonymous with romance, with charming neighborhoods like Montmartre offering cobblestone
-          streets, quaint cafes, and the stunning Sacré-Cœur Basilica overlooking the city. Couples can enjoy leisurely
-          strolls along the Seine River or picnics in picturesque parks like the Luxembourg Gardens.
+            <p class="w3-text-grey">Paris is not just the capital of France; it’s the capital of fashion and the city of
+              love.
+              Located by the River Seine in the north of France, Paris is reputed for being the most beautiful and
+              romantic city in the world. <br><br>
+              It is overwhelmed with culture, history, iconic architecture, arty treasures, delicious food and exciting
+              fashion. Europe’s most enchanting city,
+              Paris is known for its many monuments, especially the Eiffel Tower, Notre-Dame Cathedral, Arc de Triomphe,
+              Opéra Garnier, Les Invalides,
+              etc.<br><br>Paris was home to some of the best artists through history; hence, it harbors treasures and
+              antiques from the masters like Picasso,
+              Van Gogh, Monet, Dalí, and Renoir. Paris (and the whole of France) is famous for its food and drinks; from
+              cozy little cafes to one of its many
+              Michelin-starred restaurants – the food is prepared and presented with perfection here.<br><br> Whether
+              you’re a first-timer or regular visitor,
+              Paris always seems magical as there are so many places to explore. It’s no wonder that the city is one of
+              the most popular tourist destinations
+              in the world and welcomes over 45 million visitors every year.
+            </p>
+          </div>
+          <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+            <h5>Restaurants</h5>
+            <p class="w3-text-grey">Find the best restaurant around while traveling.</p><br>
 
-          Culinary delights abound in Paris, with its world-class restaurants, cozy bistros, and bustling markets
-          showcasing the best of French cuisine. From croissants and baguettes to gourmet meals paired with exquisite
-          wines, the gastronomic experiences are endless.
-        </p>
-      </div>
-      <div>
-        <h3>Current Climate Info:</h3>
-        <div id="weatherInfo">
-          <!-- Weather information will be inserted here -->
-      </div>
-      </div>
-    </div>
+            <h5>Attractions</h5>
+            <p class="w3-text-grey">Find the best tourist attractions in the city.</p><br>
+
+            <h5>Rooms</h5>
+            <p class="w3-text-grey">Finds room nearby</p><br>
+
+            <h5>Offers</h5>
+            <p class="w3-text-grey">Find the best offer and discount on tourguide.</p>
+
+
+          </div>
+          <br>
+          <div class="transport-container">
+            <div class="single-list-topics-content">
+              <div class="icon1"></div>
+              <button class="bttnn">Flight</button>
+            </div>
+
+            <div class="single-list-topics-content">
+              <div class="icon2"></div>
+              <button class="bttnn">Train</button>
+            </div>
+            <div class="single-list-topics-content">
+              <div class="icon3"></div>
+              <button class="bttnn">Bus</button>
+              <div> </div>
+            </div>
+            <script>
+              function openMenu(evt, menuName) {
+                var i, x, tablinks;
+                x = document.getElementsByClassName("menu");
+                for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < x.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+                }
+                document.getElementById(menuName).style.display = "block";
+                evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+              }
+              document.getElementById("myLink").click();
+            </script>
+            <div id="weatherInfo">
+              <!-- Weather information will be inserted here -->
+            </div>
+          </div>
+        </div>
+
 
   </section>
 
