@@ -245,6 +245,9 @@
   --text-same: #0d213f;
   --bubble-color: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, #FD4766 79.69%);
   --testimonials-img-border: red;
+  span.aos-init.aos-animate{
+    color:white;
+  }
 
 }
 
