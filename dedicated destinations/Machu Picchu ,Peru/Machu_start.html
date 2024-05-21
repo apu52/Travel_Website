@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="./Machu_tour.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 </head>
 
 <body>
@@ -67,17 +69,18 @@
       <div class="features">
         <h3><i title="BBQ meal included" class="fa fal fa-utensils"></i> BBQ meal included</h3>
         <p>Main menu: Fresh fish, grilled chicken, pork chops, pasta with red sauce. Appetizers: Greek salad, shrimp
-          saganaki, roasted vegetables, stuffed vine leaves. Vegetarian meal included</p>
+          saganaki, roasted vegetables, stuffed vine leaves. Vegetarian meal included.</p>
       </div>
 
       <div class="features">
         <h3><i class="fa-solid fa-bus"></i> Free pickup & drop-off</h3>
-        <p>You will be picked up from your stay or the nearest accessible point, by minibus</p>
+        <p>You will be picked up from your stay or the nearest accessible point, by minibus.</p>
       </div>
+
 
       <div class="features">
         <h3><i class="fa fa-undo"></i> Free cancellation</h3>
-        <p>Up to 100% refund according to the cancellation policy</p>
+        <p>Up to 100% refund according to the cancellation policy.</p>
       </div>
 
     </div>
@@ -103,43 +106,90 @@
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
-      <div class="description">
-        <h1><u>Description</u></h1> <br>
-        <p>
-          Machu Picchu, nestled high in the Andes Mountains of Peru, is an ancient Incan citadel renowned for its
-          awe-inspiring
-          beauty and mysterious history. This UNESCO World Heritage Site is often referred to as the "Lost City of the
-          Incas"
-          and is one of the most iconic archaeological sites in the world.
-          <br> <br>
-          Perched on a ridge overlooking the Sacred Valley, Machu Picchu boasts breathtaking panoramic views of
-          lush green mountains and the winding Urubamba River below. The site itself is a marvel of engineering and
-          architecture,
-          with intricately crafted stone terraces, temples, and residential areas seamlessly integrated into the natural
-          landscape.
-          <br><br>
-          Visitors to Machu Picchu can explore the site's remarkable structures, including the Intihuatana Stone,
-          believed to have
-          served as a sundial or astronomical calendar, and the Temple of the Sun, an impressive example of Incan
-          masonry.
-          The enigmatic aura surrounding Machu Picchu, coupled with its remote location and stunning vistas, makes it a
-          bucket-list destination
-          for travelers seeking adventure, history, and natural beauty.
-          Whether hiking the renowned Inca Trail to reach the citadel, or arriving by train through the picturesque
-          Sacred Valley,
-          Machu Picchu offers an unforgettable journey back in time to the height of the Incan Empire.
-        </p>
-      </div>
-      <div>
-        <h3>Current Climate Info:</h3>
-        <div id="weatherInfo">
-          <!-- Weather information will be inserted here -->
-      </div>
-      </div>
-    </div>
 
+      <!-- Menu Container -->
+      <div class="w3-container" id="menu">
+        <div class="w3-content" style="max-width:700px">
+
+          <br>
+          <div class="w3-row w3-center w3-card w3-padding">
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+              <div class="w3-col s6 tablink">Description</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+              <div class="w3-col s6 tablink">Things To Do</div>
+            </a>
+          </div>
+
+          <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+
+            <p class="w3-text-grey">Machu Picchu has temples, residences, platforms, and roads, and most of these are
+              included in the tourist route with a guide. <br><br>
+              Some places, like the Intipunku and Inca Bridge, require optional routes to enter, while others, like the
+              Temple of the Moon, require a different ticket.
+              The most popular way to get to Machu Picchu is by hiking the 4-day Inca Trail, which takes hikers through
+              the Andes, past lesser-known Inca sites,
+              and ends at the Sun Gate.
+              There's also a 2-day Inca Trail for those who want a shorter or less challenging hike. <br><br>The trail
+              includes steep stone staircases
+              and narrow paths, and hikers feel a sense of accomplishment when they reach the Sun Gate. </p>
+          </div>
+
+          <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+            <h5>Restaurants</h5>
+            <p class="w3-text-grey">Find the best restaurant around while traveling.</p><br>
+
+            <h5>Attractions</h5>
+            <p class="w3-text-grey">Find the best tourist attractions in the city.</p><br>
+
+            <h5>Rooms</h5>
+            <p class="w3-text-grey">Finds room nearby</p><br>
+
+            <h5>Offers</h5>
+            <p class="w3-text-grey">Find the best offer and discount on tourguide.</p>
+
+
+          </div>
+          <br>
+          <div class="transport-container">
+            <div class="single-list-topics-content">
+              <div class="icon1"></div>
+              <button class="bttnn">Flight</button>
+            </div>
+
+            <div class="single-list-topics-content">
+              <div class="icon2"></div>
+              <button class="bttnn">Train</button>
+            </div>
+            <div class="single-list-topics-content">
+              <div class="icon3"></div>
+              <button class="bttnn">Bus</button>
+              <div> </div>
+            </div>
+
+            <script>
+              function openMenu(evt, menuName) {
+                var i, x, tablinks;
+                x = document.getElementsByClassName("menu");
+                for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < x.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+                }
+                document.getElementById(menuName).style.display = "block";
+                evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+              }
+              document.getElementById("myLink").click();
+            </script>
+            <div id="weatherInfo">
+
+              <!-- Weather information will be inserted here -->
+            </div>
 
   </section>
+
 
   <footer class="footer" data-aos="fade-up">
     <div class="section__container footer__container">

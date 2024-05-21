@@ -13,6 +13,7 @@
 .main-container {
     min-height: 100vh;
     min-width: 100vw;
+    margin-top: 50px;
     background-image: url('./img/img1.jpeg');
     background-position: center;
     background-size: cover;

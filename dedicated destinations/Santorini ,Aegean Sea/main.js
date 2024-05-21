@@ -4,21 +4,21 @@ let slider_img = document.querySelector('.slider-img');
 let images = ['Santorini ,Aegean Sea.1.jpg', 'Santorini ,Aegean Sea.2.jpg', 'Santorini ,Aegean Sea.3.jpg', 'Santorini ,Aegean Sea.4.jpg', 'Santorini ,Aegean Sea.5.jpg', 'Santorini ,Aegean Sea.6.jpg', 'Santorini ,Aegean Sea.7.jpg', 'Santorini ,Aegean Sea.8.jpg'];
 let i = 0;
 
-function prev(){
-	if(i <= 0) i = images.length;	
-	i--;
-	return setImg();			 
+function prev() {
+    if (i <= 0) i = images.length;
+    i--;
+    return setImg();
 }
 
-function next(){
-	if(i >= images.length-1) i = -1;
-	i++;
-	return setImg();			 
+function next() {
+    if (i >= images.length - 1) i = -1;
+    i++;
+    return setImg();
 }
 
-function setImg(){
-	return slider_img.setAttribute('src', "./gallery/"+images[i]);
-	
+function setImg() {
+    return slider_img.setAttribute('src', "./gallery/" + images[i]);
+
 }
 const url = 'https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Santorini';
 const options = {
@@ -33,19 +33,20 @@ const options = {
 fetch(url, options)
     .then(res => res.json())
     .then(data => {
-		console.log(data)
+        console.log(data)
         const weatherInfoContainer = document.getElementById('weatherInfo');
-        
+
         const humidity = data.humidity;
-		const max_temp = data.max_temp;
-		const min_temp = data.min_temp;
+        const max_temp = data.max_temp;
+        const min_temp = data.min_temp;
 
         const weatherInfoHTML = `
+        <h4>Climate Info:</h4>
             <p>Maximum Temperature: ${max_temp}&deg;C</p>
             <p>Minium Temperature: ${min_temp}&deg;C</p>
             <p>Humidity: ${humidity}%</p>
         `;
-        
+
         weatherInfoContainer.innerHTML = weatherInfoHTML;
     })
     .catch(error => console.error('Error fetching weather data:', error));

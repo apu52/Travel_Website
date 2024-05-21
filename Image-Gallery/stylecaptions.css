@@ -1,0 +1,20 @@
+/* contribution-namefeature enhancement GSSOC */
+
+
+.image-container {
+    display: inline-block; 
+    position: relative;
+    text-align: center; 
+    font-weight: bolder;
+    
+    margin: 20px;
+  }
+  
+  figcaption {
+    display: block; 
+    margin-top: 8px; 
+    margin-bottom: 20px;
+  }
+  
+
+ 

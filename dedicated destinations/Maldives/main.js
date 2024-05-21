@@ -40,7 +40,9 @@ fetch(url, options)
 		const max_temp = data.max_temp;
 		const min_temp = data.min_temp;
 
+
         const weatherInfoHTML = `
+        <h4>Climate Info:</h4>
             <p>Maximum Temperature: ${max_temp}&deg;C</p>
             <p>Minium Temperature: ${min_temp}&deg;C</p>
             <p>Humidity: ${humidity}%</p>
