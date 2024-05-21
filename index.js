@@ -24,7 +24,7 @@ function sendMail() {
 // Modal JS
 
 const modalContainer = document.querySelector(".modal-container");
-const closeBtn = document.querySelector("#close-btn");
+const closeBtn = document.querySelector(".close-btn");
 const subscribeBtn = document.querySelector("#news-subscribe");
 const form = document.querySelector("#modal-form");
 
@@ -41,15 +41,25 @@ function subscribe(e) {
   e.preventDefault();
   const emailInput = document.querySelector("#modal-email").value;
   // You can add your logic to handle the form submission here
-  // alert("Email subscribed: "+emailInput);
+  // alert("Email subscribed: " + emailInput);
   closeModal();
 }
 
-form.addEventListener("submit", subscribe)
-// closeBtn.addEventListener("click", closeModal);
+// Close the modal when clicking outside the modal content (new code)
+window.addEventListener("click", (e) => {
+  if (e.target === modalContainer) {
+    closeModal();
+  }
+});
+
+// Close the modal when clicking the exit button (new code)
+closeBtn.addEventListener("click", closeModal);
+
+form.addEventListener("submit", subscribe);
+closeBtn.addEventListener("click", closeModal);
 
 // Open the modal as soon as the page loads
-window.onload = openModal();
+window.onload = openModal;
 
 
 // carousel JS
