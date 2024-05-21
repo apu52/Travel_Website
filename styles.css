@@ -1304,6 +1304,8 @@ header {
 
 .contact h1 {
   color: #ab45e7;
+  font-family: 'Noto Serif', serif;
+  font-size: 2.8rem;
   text-align: center;
   margin: 20px;
 }
