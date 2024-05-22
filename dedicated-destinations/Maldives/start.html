@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="./maldive.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 </head>
 
 <body>
@@ -103,35 +105,94 @@
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
-      <div class="description">
-        <h1><u>Description</u></h1> <br>
-        <p>The Maldives, officially the Republic of Maldives, is a country and archipelagic state in South Asia in the
-          Indian Ocean. The Maldives is named after the main island and capital of Male. The word "Maldives" means "the
-          islands of Male". Here's a comprehensive overview of tourism in Maldive:
-          <br><br>
-          <b>Climate</b>: The Maldives has a tropical monsoon climate (Am) under the Köppen climate classification,
-          which is
-          affected by the large landmass of South Asia to the north. Because the Maldives has the lowest elevation of
-          any country in the world, the temperature is constantly hot and often humid. The presence of this landmass
-          causes differential heating of land and water. These factors set off a rush of moisture-rich air from the
-          Indian Ocean over South Asia, resulting in the southwest monsoon. Two seasons dominate the Maldives' weather:
-          the dry season associated with the winter northeastern monsoon and the rainy season associated with the
-          southwest monsoon which brings strong winds and storms.[79]
-          <br><br>
-          <b>Best Place</b>: Malé, the capital of Maldives, is the main island that is populated densely and has some
-          spectacular mosques.This is the southernmost atoll of the Maldives, extending the island into the Southern
-          hemisphere. There are several inhabited and uninhabited islands here, and as a re
+      <!-- Menu Container -->
+      <div class="w3-container" id="menu">
+        <div class="w3-content" style="max-width:700px">
+
+          <br>
+          <div class="w3-row w3-center w3-card w3-padding">
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+              <div class="w3-col s6 tablink">Description</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+              <div class="w3-col s6 tablink">Things To Do</div>
+            </a>
+          </div>
+
+          <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+
+            <p class="w3-text-grey">The Maldives is an island country in the Indian Ocean known for its white sand
+              beaches,
+              turquoise waters, coral reefs, and tropical climate. Tourism is the country's largest economic industry,
+              with over 1.5 million tourists visiting annually.<br><br>
+              The Maldives is considered one of the world's top
+              destinations
+              for recreational diving, and its marine geography offers opportunities for water sports, undersea
+              accommodations, restaurants, and spas.
+              The Maldives has two distinct seasons: a wet season from May to October and a dry season from November to
+              April.<br><br>
+              The dry season is ideal for water sports, sunbathing, and shopping, while the wet season brings tropical
+              storms and heavy rainfall.
+              The Maldives' tourism industry is characterized by one island per resort, which provides more privacy and
+              luxury for visitors.
+              The country has over 130 resort islands with high-end hotel brands.
+
+          </div>
+
+          <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+            <h5>Restaurants</h5>
+            <p class="w3-text-grey">Find the best restaurant around while traveling.</p><br>
+
+            <h5>Attractions</h5>
+            <p class="w3-text-grey">Find the best tourist attractions in the city.</p><br>
+
+            <h5>Rooms</h5>
+            <p class="w3-text-grey">Finds room nearby</p><br>
+
+            <h5>Offers</h5>
+            <p class="w3-text-grey">Find the best offer and discount on tourguide.</p>
 
 
-        </p>
-      </div>
-      <div>
-        <h3>Current Climate Info:</h3>
-        <div id="weatherInfo">
-          <!-- Weather information will be inserted here -->
-      </div>
-      </div>
-    </div>
+          </div>
+          <br>
+
+          <div class="transport-container">
+            <div class="single-list-topics-content">
+              <div class="icon1"></div>
+              <button class="bttnn">Flight</button>
+            </div>
+
+            <div class="single-list-topics-content">
+              <div class="icon2"></div>
+              <button class="bttnn">Train</button>
+            </div>
+            <div class="single-list-topics-content">
+              <div class="icon3"></div>
+              <button class="bttnn">Bus</button>
+              <div> </div>
+            </div>
+
+            <script>
+              function openMenu(evt, menuName) {
+                var i, x, tablinks;
+                x = document.getElementsByClassName("menu");
+                for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < x.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+                }
+                document.getElementById(menuName).style.display = "block";
+                evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+              }
+              document.getElementById("myLink").click();
+            </script>
+            <div id="weatherInfo">
+              <!-- Weather information will be inserted here -->
+            </div>
+          </div>
+        </div>
 
 
   </section>

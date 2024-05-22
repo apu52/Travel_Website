@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="./Grand_tour.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 </head>
 
 <body>
@@ -102,33 +104,90 @@
           width="800" height="200" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
+      <!-- Menu Container -->
+      <div class="w3-container" id="menu">
+        <div class="w3-content" style="max-width:700px">
 
-      <div class="description">
-        <h1><u>Description</u></h1> <br>
-        <p>
-          Grand Canyon National Park, a world-renowned marvel of natural beauty and a testament
-          to the power of geological forces. Located in the heart of Arizona, this iconic destination attracts millions
-          of
-          visitors each year with its awe-inspiring vistas, rugged landscapes, and rich cultural heritage.
-          Stretching over 277 miles long, up to 18 miles wide, and reaching depths of over a mile,
-          the Grand Canyon is a breathtaking sight to behold. Carved by the mighty Colorado River over millions of
-          years,
-          the canyon's intricate layers of rock reveal a fascinating geological history dating back billions of years
-          <br> <br>
-          Visitors to Grand Canyon National Park are treated to a plethora of activities and experiences
-          that cater to every interest and level of adventure. From hiking along the rim trails,
-          offering panoramic views that seem to stretch into eternity, to embarking on a thrilling whitewater rafting
-          expedition through the canyon's rapids,
-          there's no shortage of ways to immerse oneself in the grandeur of this natural wonder.
-        </p>
-      </div>
-      <div>
-        <h3>Current Climate Info:</h3>
-        <div id="weatherInfo">
-          <!-- Weather information will be inserted here -->
-      </div>
-      </div>
-    </div>
+          <br>
+          <div class="w3-row w3-center w3-card w3-padding">
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+              <div class="w3-col s6 tablink">Description</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+              <div class="w3-col s6 tablink">Things To Do</div>
+            </a>
+          </div>
+
+          <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+            The Grand Canyon is a 277-mile-long canyon in Arizona carved by the Colorado River.
+            It's 6,000 feet deep at its deepest point, 18 miles wide, and averages 4,000 feet deep throughout.<br><br>
+            The Grand Canyon is known for its exposed geologic strata, which include Vishnu schist, Kaibab limestone,
+            gneiss, and schist.
+            The strata rise over a mile above the river and
+            represent one of the world's most complete records of geological history.
+            The geologic formations at the bottom of the canyon date back 1,800 million years.
+            The Grand Canyon is considered one of the world's natural wonders.
+            It's also known for its fantastic shapes and colors, with imposing peaks, canyons, and ravines within the
+            canyon walls. <br><br>
+            The canyon's floor has a diverse landscape, including desert areas that can reach 120°F and forests where
+            temperatures can drop to -20°F
+
+            <p class="w3-text-grey">
+          </div>
+
+          <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+            <h5>Restaurants</h5>
+            <p class="w3-text-grey">Find the best restaurant around while traveling.</p><br>
+
+            <h5>Attractions</h5>
+            <p class="w3-text-grey">Find the best tourist attractions in the city.</p><br>
+
+            <h5>Rooms</h5>
+            <p class="w3-text-grey">Finds room nearby</p><br>
+
+            <h5>Offers</h5>
+            <p class="w3-text-grey">Find the best offer and discount on tourguide.</p>
+
+
+          </div>
+          <br>
+          <br>
+          <div class="transport-container">
+            <div class="single-list-topics-content">
+              <div class="icon1"></div>
+              <button class="bttnn">Flight</button>
+            </div>
+
+            <div class="single-list-topics-content">
+              <div class="icon2"></div>
+              <button class="bttnn">Train</button>
+            </div>
+            <div class="single-list-topics-content">
+              <div class="icon3"></div>
+              <button class="bttnn">Bus</button>
+              <div> </div>
+            </div>
+            <script>
+              function openMenu(evt, menuName) {
+                var i, x, tablinks;
+                x = document.getElementsByClassName("menu");
+                for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < x.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+                }
+                document.getElementById(menuName).style.display = "block";
+                evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+              }
+              document.getElementById("myLink").click();
+            </script>
+            <div id="weatherInfo">
+              <!-- Weather information will be inserted here -->
+            </div>
+          </div>
+        </div>
 
 
   </section>

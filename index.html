@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./loader.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="faq-website.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -17,6 +19,8 @@
 
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="./Image-Gallery/style.css">
+  <link rel="stylesheet" href="./Image-Gallery/stylecaptions.css">
+  <link rel="stylesheet" href="explore.css">
   <title>Tourguide</title>
   <!-- adding a fav-icon -->
   <link rel="icon"
@@ -39,6 +43,13 @@
 
       window.location.href = 'plantrip.html';
     }
+    // const menuButton = document.getElementsByClassName('link');
+    function closeNav(){
+      let list = document.querySelector('.navLinks');
+        list.classList.toggle('activeHamburger');
+    }
+    // menuButton.forEach((button) => (button.onclick = () => closeNav()));
+    
 
   </script>
 
@@ -54,6 +65,7 @@
       color: red !important;
     }
       </style>
+
 
 </head>
 
@@ -95,14 +107,17 @@
         <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
 
         <ul class="navLinks">
-          <li class="link home" data-aos="fade-down"><a href="#Home">Home</a></li>
-          <li class="link" data-aos="fade-down"><a href="#AboutUs">AboutUs</a></li>
-          <li class="link" data-aos="fade-down"><a href="#Destinations">Destinations</a></li>
-          <li class="link" data-aos="fade-down"><a href="#trip">Pricing</a></li>
-          <li class="link" data-aos="fade-down"><a href="#ReviewGallery">Trip Gallery</a></li>
-          <li class="link" data-aos="fade-down"><a href="#testimonials">Testimonials</a></li>
-          <li class="link" data-aos="fade-down"><a href="feedback.html">Rate Us?</a></li>
-          <li class="link" data-aos="fade-down"><a href="#contact">Contact Us</a></li>
+
+
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#Home">Home</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#AboutUs"> AboutUs</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#Destinations">Destinations</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#trip">Pricing</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#ReviewGallery">Trip Gallery</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#testimonials">Testimonials</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#contact">Contact Us</a></li>
+
 
         </ul>
         <a href="newLogin.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
@@ -144,7 +159,7 @@
               <div class="video">
                 <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" type="video/mp4"></img>
                 <!-- link to the hmtl page with the video -->
-                <a href="story.html" class="btn_video" target="_blank">
+                <a href="story.html" class="btn_video">
                   <span><i class="ri-play-fill"></i></span>
               </div>
 
@@ -159,53 +174,60 @@
 
     <br>
     <!-- Section of About Us -->
-    <section class="About" id="AboutUs">
+<section class="About" id="AboutUs">
+  <div class="color col-12">
+    <div class="section__container about__container">
+      <!-- Left background color column -->
+      <div class="col-8 bg primary"></div>
+      <!-- Right content container -->
+      <div class="section__container gallary__container relative z-10 max-w-screen-xl px-4 mx-auto text-center pb-14">
+        <div class="aboutcon">
+          <div class="col-span-2 mx-auto lg:mx-0 lg:text-left">
+            <h1 class="headingofAbout section__title " data-aos=" fade-in"><b>About Us</b></h1>
+            <!-- Article with about us content -->
+            <article class="w-full text-left format sm:format-base lg:format-lg format-blue dark:format-invert">
+              <!-- Adding the content -->
+              <style>
+                /* CSS for hover effect */
+                .aboutcontent:hover {
+                  transform: scale(1.8); 
+                  transition: transform 0.8s ease; 
+                }
+              </style>
+              <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
+                <span style="margin-left: 80px;"></span>Welcome to TourGuide, where we firmly believe that life's true purpose unfolds amidst the thrill of exploration, the embrace of the unfamiliar, and the pursuit of the extraordinary! Our mission is to embolden you, the intrepid traveler, to unveil this purpose and elevate your journey by providing unparalleled assistance and guidance. Let us be your compass as you navigate through the wonders of the world, forging unforgettable memories and discovering the essence of travel!
+              </p>
 
-      <div class="color col-12">
-        <div class="section__container about__container">
-          <!-- Left background color column -->
-          <div class="col-8 bg primary"></div>
-          <!-- Right content container -->
-          <div
-            class="section__container gallary__container relative z-10 max-w-screen-xl px-4 mx-auto text-center pb-14">
+              <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
+                <span style="margin-left: 80px;"></span> At TourGuide, our local guides serve as your passport to effortlessly navigate through local
+                languages, customs, and traditions that often make traveling to a foreign place overwhelming. We
+                provide curated travel itineraries, once-in-a-lifetime experiences, valuable travel advice, and the
+                freedom to customize itineraries to ensure everything aligns with your wishlist.
+              </p>
 
-            <div class="aboutcon">
+              <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
+                <span style="margin-left: 80px;"></span>Since our inception in 2024, TourGuide has cultivated a dynamic travel community, with 30,000+
+                guides hailing from over 200+ countries globally. We continue to grow each day, expanding the
+                horizons of possibilities for discovering the world. With TourGuide by your side, there's no limit
+                to the different ways you can embark on an unforgettable journey!
+              </p>
 
-              <div class="col-span-2 mx-auto lg:mx-0 lg:text-left">
-                <h1 class="headingofAbout section__title data-aos=" fade-in"><b>About Us</b></h1>
-                <!-- Article with about us content -->
-                <article class="w-full text-left format sm:format-base lg:format-lg format-blue dark:format-invert">
-                  <!-- Adding the content -->
-                  <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
-                    <span style="margin-left: 80px;"></span>Welcome to TourGuide, where we firmly believe that the true purpose of life is found in venturing
-                    into the unknown, embracing the unfamiliar, and living the extraordinary! Our mission is to empower
-                    you, the traveler, to uncover this purpose and maximize your travel experiences by offering
-                    unparalleled assistance.
-                  </p>
+              <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
+                <strong><span style="margin-left: 80px;"></span> We welcome you to the TourGuide family - where every journey becomes a story worth
+                  sharing!</strong>
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-                  <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
-                    <span style="margin-left: 80px;"></span> At TourGuide, our local guides serve as your passport to effortlessly navigate through local
-                    languages, customs, and traditions that often make traveling to a foreign place overwhelming. We
-                    provide curated travel itineraries, once-in-a-lifetime experiences, valuable travel advice, and the
-                    freedom to customize itineraries to ensure everything aligns with your wishlist.
-                  </p>
-
-                  <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
-                    <span style="margin-left: 80px;"></span>Since our inception in 2024, TourGuide has cultivated a dynamic travel community, with 30,000+
-                    guides hailing from over 200+ countries globally. We continue to grow each day, expanding the
-                    horizons of possibilities for discovering the world. With TourGuide by your side, there's no limit
-                    to the different ways you can embark on an unforgettable journey!
-                  </p>
-
-                  <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
-                    <strong><span style="margin-left: 80px;"></span> We welcome you to the TourGuide family - where every journey becomes a story worth
-                      sharing!</strong>
-                  </p>
-                </article>
-              </div>
+    
             </div>
             <!-- Right statistics container -->
-            <div class="col-6">
+            <div data-aos="fade-left" class="col-6">
 
               <div class="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-1 sm:gap-4 xl:gap-8 sm:space-y-0 md:mt-12">
                 <!-- Box 1 - Number of Guides -->
@@ -319,7 +341,7 @@
       </div>
     </div>
 
-    <section class="section__container destination__container" id="Destinations" data-aos="fade-up">
+    <!-- <section class="section__container destination__container" id="Destinations" data-aos="fade-up"> -->
       <div class="section__header">
         <div>
           <h2 class="section__title" data-aos="fade-in">Explore top destinations</h2>
@@ -331,16 +353,16 @@
       </div>
 
       <!-- slideshow -->
-      <div class="slideshow-container" data-aos="fade-up">
+      <!-- <div class="slideshow-container" data-aos="fade-up"> -->
 
         <!-- Next and previous buttons -->
-        <div class="destination__nav">
+        <!-- <div class="destination__nav">
           <span onclick="pullSlide(-1)"><i class="ri-arrow-left-s-line"></i></span>
           <span onclick="pullSlide(1)"><i class="ri-arrow-right-s-line"></i></span>
-        </div>
+        </div> -->
 
         <!-- Full-width images with number and caption text -->
-        <div class="mySlides">
+        <!-- <div class="mySlides">
           <img src="./img/eiffelTower.webp" style="width:100%">
         </div>
 
@@ -361,8 +383,80 @@
           <span></span>
           <span></span>
         </div>
+      </div> -->
+      <div class="outer-box">
+        <div class="containers">
+          
+          <div
+            class="card active"
+            style="
+              background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+                url('/img/paris.jpg');
+            "
+          >
+            <div class="info">
+              
+              <p>
+                ||Eiffel Tower||
+              </p>
+              <h3>PARIS</h3>
+            </div>
+          </div>
+        
+          <div
+            class="card"
+            style="
+              background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+                url('/img/london.jpg');
+            "
+          >
+            <div class="info">
+              
+              <p>
+                ||Giant Wheel||
+              </p>
+              <h3>LONDON</h3>
+            </div>
+          </div>
+          
+          <div
+            class="card"
+            style="
+              background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+                url('/img/goa.jpg');
+            "
+          >
+            <div class="info">
+              
+              <p>
+                ||Goa Beach||
+              </p>
+              <h3>GOA</h3>
+            </div>
+          </div>
+          
+          <div
+            class="card"
+            style="
+              background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+                url('/img/maldives.jpg');
+            "
+          >
+            <div class="info">
+              
+              <p>
+                ||Male Beach||
+              </p>
+              <h3>MALDIVES</h3>
+            </div>
+          </div>
+         
+    
+          
+        </div>
       </div>
-    </section>
+      <script src="explore.js"></script>
+    <!-- </section> -->
 
     <section class="trip" id="trip" data-aos="zoom-in" data-aos-offset="100">
       <div class="section__container trip__container">
@@ -488,24 +582,66 @@
       </div>
       <!-- Trip Photo Gallery -->
       <div class="trip-gallery-container">
-        <img src="./img/Trip_Photos/photo1.png" height="250" width="200">
-        <img src="./img/Trip_Photos/photo2.png" height="250" width="200">
-        <img src="./img/Trip_Photos/photo3.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo4.png" height="250" width="200">
-        <img src="./img/Trip_Photos/photo5.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo6.png" height="250" width="200">
-        <img src="./img/Trip_Photos/photo7.png" height="250" width="200">
-        <img src="./img/Trip_Photos/photo8.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo9.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo10.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo11.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo12.jpeg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo13.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo14.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo16.png" height="250" width="200">
-        <img src="./img/Trip_Photos/photo18.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo19.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo20.png" height="250" width="200">
+
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo1.png" height="250" width="200"> 
+          <p><a href="https://maps.app.goo.gl/4ULWYJxSVD8AcUin6" target="_blank">LADAKH</a></p>
+        </figure>
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo2.png" height="250" width="200">
+          <p><a href="https://maps.app.goo.gl/zrA5UgDQoeUtRhhn7" target="_blank">RANNERDALE KNOTTS</a></p>
+        </figure>
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo3.jpg" height="250" width="200">
+          <p><a href="https://maps.app.goo.gl/eTfvw4peKN3AcMUy8" target="_blank">AMALPHI COAST</a></p>
+        </figure>
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo4.png" height="220" width="230">
+          <p><a href="https://maps.app.goo.gl/tBZLQcZbCHRWsgGX7" target="_blank">THE GOLDEN TEMPLE,PERIYAPATTNA</a></p>
+        </figure>
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo5.jpg" height="220" width="230">
+          <p><a href="https://maps.app.goo.gl/8Y3rnjtxU563KVvE9" target="_blank">MALSHEJ GHAT</a></p>
+        </figure>
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo6.png" height="220" width="230">
+          <p><a href="https://maps.app.goo.gl/cj2UZZoyCTzeoQjEA" target="_blank">SAHARA DESERT</a></p>
+        </figure>
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo7.png" height="220" width="230">
+          <p><a href="https://maps.app.goo.gl/Gk1fQts4zeVRdAWu6" target="_blank">MALDIVES</a></p>
+        </figure>
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo8.jpg" height="220" width="230">
+          <p><a href="https://maps.app.goo.gl/DbWvrFgfwwwTWuBT8" target="_blank">PUNAKHA SUSPENSION BRIDGE</a></p>
+        </figure>
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo9.jpg" height="220" width="230">
+          <p><a href="https://maps.app.goo.gl/gBGuxUNXXemiZ2Td8" target="_blank">ARU VALLEY</a></p>
+        </figure>
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo10.jpg" height="220" width="230">
+          <p><a href="https://maps.app.goo.gl/tQ4BT4gDoFtauReM9" target="_blank">THE GOLDEN BRIDGE</a></p>
+        </figure>
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo11.jpg" height="220" width="230">
+          <p><a href="https://maps.app.goo.gl/oqDnmF2pCqRxV5Cp6" target="_blank">LAKE DISTRICT</a></p>
+        </figure>
+        <figure class="image-container">
+        <img src="./img/Trip_Photos/photo13.jpg" height="220" width="230">
+        <p><a href="https://maps.app.goo.gl/pHjaA4aqP41JxdAh9" target="_blank">MUNNAR</a></p>
+        </figure>
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo19.jpg" height="220" width="230">
+          <p><a href="https://maps.app.goo.gl/84rV6GhhginGXgbc8" target="_blank">STATUE OF LIBERTY</a></p>
+        </figure>
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo20.png" height="220" width="230">
+          <p><a href="https://maps.app.goo.gl/GzVALHoLp4MgFmgw5" target="_blank">NAKKI LAKE</a></p>
+        </figure>
+       
+        <!-- <img src="./img/Trip_Photos/photo3.jpg" height="240" width="200"> -->
+       
       </div>
     </div>
 
@@ -557,6 +693,67 @@
       </div>
     </section>
 
+ 
+
+<!----------------------------------------------------- FAQ section ---------------------- -->
+
+    <section>
+      <h2 class="section__title" data-aos="zoom-in">
+        Frequently asked questions
+      </h2>
+    <div class="faq-container">
+        <div class="faq active" data-aos="zoom-in">
+            <h3 class="faq-title">How do I book my travel arrangements through your website?</h3>
+            <p class="faq-text">Booking your travel with us is simple and convenient. Start by entering your destination, travel dates, and other relevant details on our homepage. Browse through the available options, including flights, hotels, and car rentals. Once you find the perfect combination for your trip, follow the easy step-by-step process to confirm your booking. If you encounter any issues or have questions during the booking process, our customer support team is available 24/7 to assist you.</p>
+            <button class="faq-toggle">
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="faq" data-aos="zoom-in">
+            <h3 class="faq-title">What measures are in place to ensure the safety of my personal information?</h3>
+            <p class="faq-text">We take the security of your personal information seriously. Our website employs state-of-the-art encryption technology to safeguard your data during the booking process. Additionally, we adhere to strict privacy policies and comply with industry standards to protect your information. Rest assured that your details are used solely for the purpose of facilitating your travel arrangements, and we do not share your information with third parties without your consent. For more details, please refer to our Privacy Policy.</p>
+            <button class="faq-toggle">
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="faq" data-aos="zoom-in">
+            <h3 class="faq-title">Can I make changes to my booking or cancel it if needed?</h3>
+            <p class="faq-text">IYes, we understand that plans can change. Depending on the terms and conditions of your specific booking, you may be able to make modifications or cancel your reservation. Log in to your account on our website, navigate to the "Manage Booking" section, and follow the provided instructions. Keep in mind that there may be associated fees or restrictions depending on the type of booking and the time of the requested changes. For further assistance, feel free to contact our customer support team, and they will guide you through the process.</p>
+            <button class="faq-toggle">
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+    </div>
+    </section>
+
+          <!-- Swiper JS -->
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+	<!-- Initialize Swiper -->
+	<script>
+		var swiper = new Swiper(".swiper-container", {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2,
+        slideShadows : true,
+      },
+      loop:true,
+    });
+	</script>
+
+
+ 
+ 
     <!--------------------------------------- Updated Contact Us Section ----------------------------------------------->
 
     <!-- <section class="contact" id="contact">
@@ -694,9 +891,19 @@
           <p><span>Phone:</span> +91 8562145852</p>
         </div>
       </div>
+      
+<!--  New copyright code to make it dynamic and display current year -->
       <div class="footer__bar">
-        Copyright © 2023 Arpan Chowdhury. All rights reserved.
+        <div>
+          <li>Copyright &copy;<span id="year"></span> </span> Arpan Chowdhury. All rights reserved. </li>
+        </div>
       </div>
+      
+<!--   Previous copyright code
+<!--  <div class="footer__bar">
+        Copyright © 2023 Arpan Chowdhury. All rights reserved.
+      </div> -->
+      
     </footer>
     <!-- adding a btn -->
     <button id="goToTopBtn" onclick="goToTop()" class="top-btn"> <i class="fa-solid fa-chevron-up"
@@ -1095,6 +1302,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
   </body>
   <script>
     function replaceDivs() {
@@ -1114,7 +1322,16 @@ document.addEventListener("DOMContentLoaded", function () {
   </script>
   <script src="./Image-Gallery/script.js"></script>
   <script src="./index.js"></script>
+ 
+  <script src="faq-website.js"></script>
+=======
+  
+  <!--  Adding copyright javascript code to make it dynamic and display current year -->
+  <script>
+  document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
 
+ 
 </html><!-- New bubble background start -->
 
     
@@ -1146,3 +1363,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </div>
 <!-- New bubble background end -->
+

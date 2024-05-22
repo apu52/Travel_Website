@@ -42,6 +42,7 @@ fetch(url, options)
 		const min_temp = data.min_temp;
 
         const weatherInfoHTML = `
+        <h3>Current Climate:</h3>
             <p>Maximum Temperature: ${max_temp}&deg;C</p>
             <p>Minium Temperature: ${min_temp}&deg;C</p>
             <p>Humidity: ${humidity}%</p>
@@ -50,3 +51,4 @@ fetch(url, options)
         weatherInfoContainer.innerHTML = weatherInfoHTML;
     })
     .catch(error => console.error('Error fetching weather data:', error));
+    

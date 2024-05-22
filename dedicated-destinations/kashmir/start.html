@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="../kashmir/kashmir.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 </head>
 
 <body>
@@ -103,39 +105,104 @@
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
-      <div class="description">
-        <h1><u>Description</u></h1> <br>
-        <p>Kashmir is the northernmost geographical region of the Indian subcontinent. Until the mid-19th century, the
-          term "Kashmir" denoted only the Kashmir Valley between the Great Himalayas and the Pir Panjal Range.Here's a
-          comprehensive overview of tourism in Kashmir:
-          <br><br>
-          <b>Climate </b>: The climate of Jammu and Kashmir varies with altitude and across regions. Southern and southwestern
-          areas have a sub tropical climate, with hot summers and cool winters. This region receives most of its
-          rainfall during the monsoon season. In the east and north, summers are usually pleasant. The effect of the
-          monsoon diminishes in areas lying to the leeward side of the Pir Panjal, such as the Kashmir valley, and much
-          of the rainfall happens in the spring season due to western disturbances. Winters are cold, with temperatures
-          reaching sub-zero levels. Snowfall is common in the valley and the mountain areas.
-          <br><br>
-          <b>Best place</b>:Some major tourist attractions in Jammu and Kashmir are Srinagar, the Mughal Gardens, Gulmarg,
-          Pahalgam, Patnitop, Bhaderwah and Jammu. Every year, thousands of Hindu pilgrims visit holy shrines of Vaishno
-          Devi and Amarnath which has had significant impact on the state's economy.[107]
 
-          The Kashmir valley is one of the top tourist destinations in India.[108] Gulmarg, one of the most popular ski
-          resort destinations in India, is also home to the world's highest green golf course.[109] The decrease in
-          violence in the state has boosted the state's economy, specifically tourism.[110] Jammu and Kashmir is also
-          famous for its scenic beauty, flower gardens, apple farms and more. It attracts tourists for its unique
-          handicrafts and the world-famous Kashmiri Shawls.
+      <!-- Menu Container -->
+      <div class="w3-container" id="menu">
+        <div class="w3-content" style="max-width:700px">
+
+          <br>
+          <div class="w3-row w3-center w3-card w3-padding">
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+              <div class="w3-col s6 tablink">Description</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+              <div class="w3-col s6 tablink">Things To Do</div>
+            </a>
+          </div>
+
+          <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+
+            <p class="w3-text-grey">
+            <p>Kashmir is the northernmost geographical region of the Indian subcontinent. Until the mid-19th century,
+              the
+              term "Kashmir" denoted only the Kashmir Valley between the Great Himalayas and the Pir Panjal Range.Here's
+              a
+              comprehensive overview of tourism in Kashmir:
+              <br><br>
+              <b>Climate </b>: The climate of Jammu and Kashmir varies with altitude and across regions. Southern and
+              southwestern
+              areas have a sub tropical climate, with hot summers and cool winters. This region receives most of its
+              rainfall during the monsoon season. In the east and north, summers are usually pleasant. The effect of the
+              monsoon diminishes in areas lying to the leeward side of the Pir Panjal, such as the Kashmir valley, and
+              much
+              of the rainfall happens in the spring season due to western disturbances. Winters are cold, with
+              temperatures
+              reaching sub-zero levels. Snowfall is common in the valley and the mountain areas.
+              <br><br>
+              <b>Best place</b>:Some major tourist attractions in Jammu and Kashmir are Srinagar, the Mughal Gardens,
+              Gulmarg,
+              Pahalgam, Patnitop, Bhaderwah and Jammu. Every year, thousands of Hindu pilgrims visit holy shrines of
+              Vaishno
+              Devi and Amarnath which has had significant impact on the state's economy.[107]
 
 
-        </p>
-      </div>
-      <div>
-        <h3>Current Climate Info:</h3>
-        <div id="weatherInfo">
-          <!-- Weather information will be inserted here -->
-      </div>
-      </div>
-    </div>
+            </p>
+
+
+          </div>
+
+          <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+            <h5>Restaurants</h5>
+            <p class="w3-text-grey">Find the best restaurant around while traveling.</p><br>
+
+            <h5>Attractions</h5>
+            <p class="w3-text-grey">Find the best tourist attractions in the city.</p><br>
+
+            <h5>Rooms</h5>
+            <p class="w3-text-grey">Finds room nearby</p><br>
+
+            <h5>Offers</h5>
+            <p class="w3-text-grey">Find the best offer and discount on tourguide.</p>
+          </div><br>
+
+          <div class="transport-container">
+            <div class="single-list-topics-content">
+              <div class="icon1"></div>
+              <button class="bttnn">Flight</button>
+            </div>
+
+            <div class="single-list-topics-content">
+              <div class="icon2"></div>
+              <button class="bttnn">Train</button>
+            </div>
+            <div class="single-list-topics-content">
+              <div class="icon3"></div>
+              <button class="bttnn">Bus</button>
+              <div> </div>
+            </div>
+
+            <script>
+              function openMenu(evt, menuName) {
+                var i, x, tablinks;
+                x = document.getElementsByClassName("menu");
+                for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < x.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+                }
+                document.getElementById(menuName).style.display = "block";
+                evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+              }
+              document.getElementById("myLink").click();
+            </script>
+
+            <div id="weatherInfo">
+              <!-- Weather information will be inserted here -->
+            </div>
+          </div>
+        </div>
 
 
   </section>
