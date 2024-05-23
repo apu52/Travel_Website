@@ -10,13 +10,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="feed.js" defer></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
 
     <div class="container">
-        <form method="post" id="myform">
-
+        <form method="post" id="myform" class="needs-validation" novalidate>
             <div class="row mb-3">
                 <div class="col-md-12">
                     <h2>Tour Feedback Form</h2>
@@ -27,21 +29,27 @@
             <div class="row mb-3">
                 <div class="col-md-6">
                     <label for="event_name" class="form-label">Name the tour you attended:</label>
-                    <input type="text" name="event_name" id="event_name" class="form-control" required="required" />
+                    <input type="text" name="event_name" id="event_name" class="form-control" required/>
                 </div><br>
                 <div class="col-md-6">
                     <label for="event_date" class="form-label">Tour Date:</label>
-                    <input type="date" class="form-control" name="event_date" id="event_date" />
+                    <input type="date" class="form-control" name="event_date" id="event_date" required />
                 </div>
             </div>
             <div class="row mb-3">
                 <div class="col-md-6">
                     <label for="FullName" class="form-label">Name</label>
-                    <input type="text" name="FullName" id="FullName" placeholder="Your Name" required="required" class="form-control" />
+                    <input type="text" name="FullName" id="FullName" placeholder="Your Name" required="required" class="form-control" required/>
+                    <div class="valid-feedback">
+                        Looks good!
+                      </div>
                 </div><br>
                 <div class="col-md-6">
                     <label for="Email" class="form-label">Email:</label>
-                    <input type="email" class="form-control" name="Email" id="Email" />
+                    <input type="email" class="form-control" name="Email" id="Email" required />
+                    <div class="invalid-feedback">
+                        Please provide valid email.
+                      </div>
                 </div>
             </div>
 
@@ -53,7 +61,7 @@
                     <label>Ease of navigation?</label>
                     <div class="d-flex flex-wrap" id="navigationEase">
                     </div>
-                    <p id="navigationEase-rating-text">Rating: 0</p>
+                    <p id="navigationEase-rating-text" aria-required="required">Rating: 0</p>
                 </div>
             </div>
             <div class="row mb-3">
@@ -146,6 +154,27 @@
         </form>
     </div>
 
+    <script>
+        (() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+
+    </script>
 </body>
 
 </html>

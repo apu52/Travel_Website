@@ -304,7 +304,7 @@ body {
   font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 15px;
-  text-align: left;
+  text-align:center;
   display: inline-block;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -1945,6 +1945,7 @@ body {
   border-radius: 2%;
   min-height: 100vh;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background-color: #00ffe7;
