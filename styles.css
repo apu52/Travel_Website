@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Oxygen:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
   --primary-color: #3685fb;
@@ -15,7 +16,7 @@
   --max-width: 1200px;
   --img-color: white;
   --head-text: #6a5acd;
-  --bubble-color: #6a5acd;
+  --bubble-color: linear-gradient(120deg, #90cdff 20.69%, #b8a4ee 50.19%, #ffffff 79.69%);
   --testimonials-img-border: #6a5acd;
 }
 
@@ -243,8 +244,11 @@
   --img-color: red;
   --head-text: red;
   --text-same: #0d213f;
-  --bubble-color: red;
+  --bubble-color: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, #FD4766 79.69%);
   --testimonials-img-border: red;
+  span.aos-init.aos-animate{
+    color:white;
+  }
 
 }
 
@@ -444,9 +448,7 @@ nav {
   color: #ff0000;
 }
 
-.home {
-  margin-left: 210px;
-}
+
 
 header {
   background-color: var(--secondary-color);
@@ -853,7 +855,7 @@ header {
   color: black;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(4px);
-  border-radius: 10px;
+  border-radius: 5px;
   z-index: 1;
   transition: 0.3s;
 }
@@ -887,15 +889,15 @@ header {
 }
 
 .trip__card {
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
-  transition: 2s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .trip__card:hover {
   transform: scale(1.1);
-  cursor: zoom-in;
+  cursor: pointer;
 }
 
 .trip__details {
@@ -1279,7 +1281,8 @@ header {
 /* Updated Contact section */
 .container {
   position: relative;
-  width: 100%;
+  width: 100vw;
+  right: 70px;
 }
 
 .items {
@@ -1291,8 +1294,8 @@ header {
   background: #0000001a;
   backdrop-filter: blur(10px);
   margin: 50px;
-  grid-template-columns: 1fr 2fr;
-  display: grid;
+  /* grid-template-columns: 1fr 2fr; */
+  display: flex;
   z-index: 10;
 }
 
@@ -1302,8 +1305,8 @@ header {
 
 .contact h1 {
   color: #ab45e7;
-  font-family: 'Noto Serif', serif;
-  font-size: 2.8rem;
+  font-family: 'Poppins', serif;
+  font-size: 32px;
   text-align: center;
   margin: 20px;
 }
@@ -1416,11 +1419,7 @@ textarea::-webkit-scrollbar {
   background-color: #ab45e7;
   color: var(--extra-light);
 } */
-
 @media (max-width: 920px) {
-  .items {
-    grid-template-columns: 1fr;
-  }
 
   .contact {
     display: none;
@@ -1655,7 +1654,7 @@ body {
 
 .nav-container {
   height: auto;
-  width: 200%;
+  /* width: 200%; */
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1666,9 +1665,9 @@ body {
 
 .newNav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  gap: 0.5rem;
+  gap: 10px;
   height: auto;
   width: 100%;
   padding: 1rem 2rem;
@@ -1678,12 +1677,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 15px;
   list-style: none;
   gap: 1.2rem;
   position: relative;
   top: 0.5rem;
   z-index: 10;
+  margin-right: 20px;
+
 }
 
 .link a {
@@ -1775,6 +1776,7 @@ body {
 
 .navLinks.activeHamburger {
   width: 100%;
+  padding-top: 100px;
 }
 
 /* New NAvbar CSS Ends Here*/

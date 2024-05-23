@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tourguide</title>
+  <link rel="stylesheet" href="./tour.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+</head>
+
+<body>
+  <!--<nav>
+        <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+        <ul class="nav__links">
+          <li class="link" data-aos="fade-down"><a href="/index.html#Home">Home</a></li>
+          <li class="link" data-aos="fade-down"><a href="/index.html#Destinations">Destinations</a></li>
+          <li class="link" data-aos="fade-down"><a href="/index.html#trip">Pricing</a></li>
+          <li class="link" data-aos="fade-down"><a href="/index.html#testimonials">Testimonials</a></li>
+          <li class="link" data-aos="fade-down"><a href="/index.html#ReviewGallery">Reviews</a></li>
+          <li class="link" data-aos="fade-down"><a href="/index.htmlfeedback.html">Rate Us?</a></li>
+          <li class="link" data-aos="fade-down"><a href="/index.htmllogin.html">Login</a></li>
+        </ul>
+        <button id="toggle" data-aos="fade-down">Dark Theme</button>
+        <a href="/index.html#contact" data-aos="fade-down"><button class="btn">Contact Us</button></a>
+      </nav>
+    --->
+  <div class="nav-container">
+    <nav class="newNav">
+      <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+
+      <ul class="navLinks">
+        <li class="link home" data-aos="fade-down"><a href="../../index.html#Home">Home</a></li>
+        <li class="link" data-aos="fade-down"><a href="../../index.html#Destinations">Destinations</a></li>
+        <li class="link" data-aos="fade-down"><a href="../../index.html#trip">Pricing</a></li>
+        <li class="link" data-aos="fade-down"><a href="../../index.html#testimonials">Testimonials</a></li>
+        <li class="link" data-aos="fade-down"><a href="../../index.html#ReviewGallery">Reviews</a></li>
+        <li class="link" data-aos="fade-down"><a href="../../feedback.html">Rate Us?</a></li>
+        <li class="link" data-aos="fade-down"><a href="../../login.html">Login</a></li>
+      </ul>
+
+      <a href="/index.html#contact" class="contact-btn">
+        <button class="btn aos-init aos-animate" id="btn-style" style="margin: 0;" data-aos="fade-down"
+          fdprocessedid="kglas">Contact Us</button>
+      </a>
+      <div class="hamburger" data-aos="fade-down">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+  </div>
+
+  <section class="middle">
+    <!---Image Slider----->
+    <div class="slider">
+      <div class="img-box">
+        <img src="./gallery/Santorini ,Aegean Sea.8.jpg" alt="" class="slider-img">
+      </div>
+
+      <!--Next and Previous Buttons-->
+      <button class="bttn" id="btns" onclick="prev()">Prev</button>
+      <button class="bttn" id="btns" onclick="next()">Next</button>
+      <a href="/payment.html"><button class="bttn" id="btnss">CHECK OUT</button></a>
+
+      <div class="features">
+        <h3><i title="BBQ meal included" class="fa fal fa-utensils"></i> BBQ meal included</h3>
+        <p>Main menu: Fresh fish, grilled chicken, pork chops, pasta with red sauce. Appetizers: Greek salad, shrimp
+          saganaki, roasted vegetables, stuffed vine leaves. Vegetarian meal included</p>
+      </div>
+
+      <div class="features">
+        <h3><i class="fa-solid fa-bus"></i> Free pickup & drop-off</h3>
+        <p>You will be picked up from your stay or the nearest accessible point, by minibus</p>
+      </div>
+
+      <div class="features">
+        <h3><i class="fa fa-undo"></i> Free cancellation</h3>
+        <p>Up to 100% refund according to the cancellation policy</p>
+      </div>
+
+    </div>
+
+    <div class="right-section">
+      <div class="check-in-out">
+
+        <div class="check-in">
+          <label for="">CHECK IN :</label>
+          <input type="datetime-local" name="" id="chk-design">
+        </div>
+        <div class="check-out">
+          <label for="">CHECK OUT :</label>
+          <input type="datetime-local" name="" id="chk-design">
+        </div>
+
+      </div>
+
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102754.73743472747!2d25.338229986202133!3d36.407125546217046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1499ce86adfd9ff7%3A0xb2a761f740d68afc!2sSantorini!5e0!3m2!1sen!2sin!4v1706095325984!5m2!1sen!2sin"
+          width="800" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <!-- Menu Container -->
+      <div class="w3-container" id="menu">
+        <div class="w3-content" style="max-width:700px">
+
+          <br>
+          <div class="w3-row w3-center w3-card w3-padding">
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+              <div class="w3-col s6 tablink">Description</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+              <div class="w3-col s6 tablink">Things To Do</div>
+            </a>
+          </div>
+
+          <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+
+            <p class="w3-text-grey">Santorini, nestled in the heart of the Aegean Sea, is a captivating Greek island
+              renowned for its stunning
+              landscapes, rich history, and unique architectural charm. Formed by a volcanic caldera, this
+              crescent-shaped
+              island boasts a dramatic topography characterized by sheer cliffs, white-washed buildings, and
+              crystal-clear
+              azure waters.<br><br>
+              The island's iconic architecture is a visual delight, with traditional Cycladic structures featuring cubic
+              houses adorned with blue-domed roofs that perfectly complement the vibrant hues of the sea and sky. <br>
+              <br>
+              These structures cascade down the cliffs, creating a breathtaking panorama that is synonymous with the
+              postcard-perfect image of Santorini.<br><br>
+              The island's main towns, Fira and Oia, are perched on the cliffs and offer panoramic views of the
+              expansive
+              caldera and the neighboring islands. Fira, the bustling capital, is a vibrant hub with narrow cobblestone
+              streets, charming shops, and lively cafes. Oia, renowned for its magical sunsets, presents a quieter, more
+              romantic ambiance,
+              with its narrow alleyways, upscale boutiques, and art galleries.
+            </p>
+          </div>
+          <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+            <h5>Restaurants</h5>
+            <p class="w3-text-grey">Find the best restaurant around while traveling.</p><br>
+
+            <h5>Attractions</h5>
+            <p class="w3-text-grey">Find the best tourist attractions in the city.</p><br>
+
+            <h5>Rooms</h5>
+            <p class="w3-text-grey">Finds room nearby</p><br>
+
+            <h5>Offers</h5>
+            <p class="w3-text-grey">Find the best offer and discount on tourguide.</p>
+
+
+          </div>
+          <br>
+          <div class="transport-container">
+            <div class="single-list-topics-content">
+              <div class="icon1"></div>
+              <button class="bttnn">Flight</button>
+            </div>
+
+            <div class="single-list-topics-content">
+              <div class="icon2"></div>
+              <button class="bttnn">Train</button>
+            </div>
+            <div class="single-list-topics-content">
+              <div class="icon3"></div>
+              <button class="bttnn">Bus</button>
+              <div> </div>
+            </div>
+            <script>
+              function openMenu(evt, menuName) {
+                var i, x, tablinks;
+                x = document.getElementsByClassName("menu");
+                for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < x.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+                }
+                document.getElementById(menuName).style.display = "block";
+                evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+              }
+              document.getElementById("myLink").click();
+            </script>
+            <div id="weatherInfo">
+              <!-- Weather information will be inserted here -->
+            </div>
+          </div>
+        </div>
+
+
+  </section>
+
+  <footer class="footer" data-aos="fade-up">
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <h3>Tourguide<span>.</span></h3>
+        <p>
+          Explore your suitable and dream places around the world. Here you
+          can find your right destination.
+        </p>
+      </div>
+      <div class="footer__col">
+        <h4>Support</h4>
+        <a href="../../faq.html" style="color: inherit; text-decoration: none;">
+          <p style="color: inherit;">FAQs</p>
+        </a>
+        <a href="../../tnc.html">
+          <p>Terms & Conditions</p>
+        </a>
+        <a href="../../privacy.html">
+          <p>Privacy Policy</p>
+        </a>
+        <p>Contact Us</p>
+      </div>
+      <div class="footer__col">
+        <h4>Address</h4>
+        <div class="mapouter">
+          <div class="gmap_canvas"><iframe width="200" height="200" id="gmap_canvas"
+              src="https://maps.google.com/maps?q=wellington%20street%20kolkata&t=k&z=11&ie=UTF8&iwloc=&output=embed"
+              frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+              href="https://embedgooglemap.net/124/">invincible 123movies</a><br>
+            <style>
+              .mapouter {
+                position: relative;
+                text-align: right;
+                height: 200px;
+                width: 200px;
+              }
+            </style><a href="https://www.embedgooglemap.net">embed google map on website</a>
+            <style>
+              .gmap_canvas {
+                overflow: hidden;
+                background: none !important;
+                height: 200px;
+                width: 200px;
+              }
+            </style>
+          </div>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Reach Out To Us</h4>
+        <p><span>Email:</span> tour@tourguide.com</p>
+        <p><span>Phone:</span> +91 8562145852</p>
+      </div>
+    </div>
+    <div class="footer__bar">
+      Copyright © 2023 Arpan Chowdhury. All rights reserved.
+    </div>
+  </footer>
+
+
+  <script src="main.js"></script>
+
+</html>
