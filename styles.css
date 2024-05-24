@@ -290,7 +290,27 @@ body {
   padding: 5rem 1rem;
 }*/
 
-/*Curved Corners for the Video*/
+/*Creating Curved Corners for the Video*/
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+  margin-top: 20px; /* Added margin-top */
+  margin-bottom: -28px; /* Added margin-bottom */
+  /*background: rgb(241, 239, 239);  Added background color */
+  display: flex; 
+  justify-content: center; /* Center the content */
+}
+
+.sized-video {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  width: 100%;
+  max-width: 800px; /* Limit the maximum width of the video */
+  height: auto; 
+  outline: none; /* Remove default outline */
+}
+
 .section__container {
   max-width: var(--max-width);
   margin: auto;
@@ -303,32 +323,12 @@ body {
 }
 
 .sized-video {
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  width: 100%;
-  max-width: 800px; 
-  height: auto; 
-  outline: none; 
-}
-
-.section__container {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 5rem 1rem;
-  margin-top: 20px; 
-  margin-bottom: -28px; 
-  /*background: rgb(241, 239, 239); */
-  display: flex; 
-  justify-content: center; 
-}
-
-.sized-video {
   border-radius: 15px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 800px; 
   height: auto; 
-  outline: none; 
+  outline: none; /* Remove default outline */
 }
 
 .section__header {
