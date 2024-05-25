@@ -53,7 +53,7 @@
 
                             </div>
                             <p>or</p>
-                            <form action="#">
+                            <form action="#" id="input-form">
                                 <div class="input-field">
                                     <label for="username">
                                     <input type="text" name="#" id="username" placeholder="Name" required>
@@ -127,6 +127,17 @@
             </main>
         </header>
         <script>
+            document.getElementById("input-form").addEventListener('submit',function(event){
+                var email = document.getElementById("Email").value;
+                var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                if(!emailPattern.test(email)){
+                   alert("Please enter a valid email");
+                   return;
+                }
+                else{
+                    alert("Registration successful!");
+                }
+            });
             const user_con=document.querySelector('.user-container');
             const regis_btn=document.querySelector('.registration-btn');
             const login_btn=document.querySelector('.login-btn');
