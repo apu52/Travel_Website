@@ -122,7 +122,6 @@
         </ul>
         <a href="newLogin.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0; box-shadow:1.5px 1.5px 6px red;"
           data-aos="fade-down">Login</button></a>
-            data-aos="fade-down">Login</button></a>
         <div class="toggle-container" data-aos="fade-down">
           <input id="themeToggle" class="toggle" type="checkbox">
         </div>
@@ -158,17 +157,14 @@
             <br>
             <div class="story">
               <div class="video">
-                <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" type="video/mp4" style="box-shadow:2px 2px 8px blue;"></img>
+                <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" type="video/mp4" style="box-shadow:2px 2px 8px blue;">
                 <!-- link to the hmtl page with the video -->
                 <a href="story.html" class="btn_video">
                   <span><i class="ri-play-fill"></i></span>
               </div>
-
             </div>
             <span data-aos="fade-in">Watch our story</span>
           </div>
-        </div>
-        </div>
         </div>
       </section>
     </header>
@@ -275,7 +271,7 @@
                 </div>
                 <!-- Box 3 - Number of Destinations -->
                 <div class="box1">
-                  <a href="" class="iconss">
+                  <a href="affordable-destinations.html" class="iconss">
                     <svg
                       class="w-12 h-12 mx-auto group-hover:text-pink-500 dark:text-gray-100 group-hover:dark:text-pink-500"
                       viewBox="0 0 24 24" stroke-width="2" stroke="black" fill="none" stroke-linecap="round"
@@ -721,7 +717,7 @@
         </div>
         <div class="faq" data-aos="zoom-in">
             <h3 class="faq-title">Can I make changes to my booking or cancel it if needed?</h3>
-            <p class="faq-text">IYes, we understand that plans can change. Depending on the terms and conditions of your specific booking, you may be able to make modifications or cancel your reservation. Log in to your account on our website, navigate to the "Manage Booking" section, and follow the provided instructions. Keep in mind that there may be associated fees or restrictions depending on the type of booking and the time of the requested changes. For further assistance, feel free to contact our customer support team, and they will guide you through the process.</p>
+            <p class="faq-text">Yes, we understand that plans can change. Depending on the terms and conditions of your specific booking, you may be able to make modifications or cancel your reservation. Log in to your account on our website, navigate to the "Manage Booking" section, and follow the provided instructions. Keep in mind that there may be associated fees or restrictions depending on the type of booking and the time of the requested changes. For further assistance, feel free to contact our customer support team, and they will guide you through the process.</p>
             <button class="faq-toggle">
                 <i class="fas fa-chevron-down"></i>
                 <i class="fas fa-times"></i>
@@ -812,8 +808,8 @@
             <form id="contact-form" name="CalcDiverse Contact" autocomplete="off">
               <input type="text" id="Name" placeholder="Name" required>
               <input type="email" id="email" placeholder="Email" required>
-              <textarea placeholder="Type your message here.." required ></textarea><br>
-              <button onclick="sendMail()" class="btn btn-style" data-aos="fade-in" id="btn-style"
+              <textarea id="message" placeholder="Type your message here.." required ></textarea><br>
+              <button type="submit" class="btn btn-style" data-aos="fade-in" id="btn-style"
                 style="margin-right: 40px;box-shadow: 2px 2px 8px red;">Send</button>
               <button onclick="window.location.href='feed.html'" class="btn  btn-style" data-aos="fade-in"
                 id="btn-style" style="box-shadow: 2px 2px 8px red;">Feedback</button>
@@ -838,7 +834,7 @@
         <div class="subscribe__form" data-aos="fade-up">
           <form>
             <input type="email" placeholder="Your email here" id="emailInput" required />
-            <button class="btn-send" id="send" type="submit" style="box-shadow: 2px 2px 8px blue;">Send</button>
+            <button class="btn-send" id="send" type="submit" style="box-shadow: 2px 2px 8px blue;">Subscribe</button>
           </form>
         </div>
       </div>
@@ -909,6 +905,7 @@
     <!-- adding a btn -->
     <button id="goToTopBtn" onclick="goToTop()" class="top-btn"> <i class="fa-solid fa-chevron-up"
         style="color: #00328a;"></i></button>
+      
     <script>
       // Get the button
       var mybutton = document.getElementById("goToTopBtn");
@@ -960,12 +957,67 @@
         loop: true
       })
     </script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+    //initailizing emailjs 
+
+    (function(){
+       emailjs.init("kHyqhzLTyzP0cw1px");
+    })();
+
+document.getElementById("contact-form").addEventListener('submit',function(event) {
+    event.preventDefault();
+    var email = document.getElementById("email").value;
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if(!emailPattern.test(email)){
+       alert("Please enter a valid email");
+       return;
+    }
+    sendEmail(email);
+});
+
+function sendEmail(email){
+    var params = {
+       name: document.getElementById("Name").value,
+       email: email,
+       message: document.getElementById("message").value
+    }
+
+    const serviceID = "service_txp05dc";
+    const templateID = "template_16rbum9";
+
+    emailjs.send(serviceID,templateID,params)
+    .then(function(response){
+       console.log("Success!",response.status,response.text);
+       alert("Email sent successfully!");
+    }, 
+    function(error){
+      console.log("Failed to send email...",error);
+      alert("Failed to send Email. Please try again later.");
+    });
+}
+</script>
 
     <script src="index.js"></script>
 
 
+    <script>
+      window.embeddedChatbotConfig = {
+      chatbotId: "yDQ_EheFvX0HAPr9beQ5L",
+      domain: "www.chatbase.co"
+      }
+      </script>
+      <script
+      src="https://www.chatbase.co/embed.min.js"
+      chatbotId="yDQ_EheFvX0HAPr9beQ5L"
+      domain="www.chatbase.co"
+      defer>
+      </script>
 
-    <!-- Start of Conferbot Script -->
+
+
+    <!-- Start of Conferbot Script 
 
     <script type="text/javascript">
         (function (d, s, id) {
@@ -982,7 +1034,8 @@
           };
         })(document, 'script', 'conferbot-js');
     </script>
-    <!--End of Conferbot Script-->
+    End of Conferbot Script
+  -->
 
 
 
