@@ -68,7 +68,7 @@
                     </a>
                 </div>
                 <p>OR</p>
-                <form action="">
+                <form id="register-form">
                     <input type="text" name="name" id="name" placeholder="Name" required>
                     <input type="email" name="email" id="email" placeholder="Email" required>
                     <input type="password" name="passWord" id="passWord" placeholder="Password" required>
@@ -120,8 +120,17 @@
             
             if (name.trim() === '' || email.trim() === '' || password.trim() === '') {
                 alert('Please fill out all fields.');
-            } else {
-                window.location.href = './index.html';
+            }
+            else{
+                var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                if(!emailPattern.test(email)){
+                    alert("Please enter valid email!");
+                    return;
+                }
+                else{
+                    alert("Registration Successfully completed!");
+                    window.location.href = './index.html';
+                }
             }
         });
         

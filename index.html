@@ -122,7 +122,6 @@
         </ul>
         <a href="newLogin.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0; box-shadow:1.5px 1.5px 6px red;"
           data-aos="fade-down">Login</button></a>
-            data-aos="fade-down">Login</button></a>
         <div class="toggle-container" data-aos="fade-down">
           <input id="themeToggle" class="toggle" type="checkbox">
         </div>
@@ -158,17 +157,14 @@
             <br>
             <div class="story">
               <div class="video">
-                <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" type="video/mp4" style="box-shadow:2px 2px 8px blue;"></img>
+                <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" type="video/mp4" style="box-shadow:2px 2px 8px blue;">
                 <!-- link to the hmtl page with the video -->
                 <a href="story.html" class="btn_video">
                   <span><i class="ri-play-fill"></i></span>
               </div>
-
             </div>
             <span data-aos="fade-in">Watch our story</span>
           </div>
-        </div>
-        </div>
         </div>
       </section>
     </header>
@@ -812,8 +808,8 @@
             <form id="contact-form" name="CalcDiverse Contact" autocomplete="off">
               <input type="text" id="Name" placeholder="Name" required>
               <input type="email" id="email" placeholder="Email" required>
-              <textarea placeholder="Type your message here.." required ></textarea><br>
-              <button onclick="sendMail()" class="btn btn-style" data-aos="fade-in" id="btn-style"
+              <textarea id="message" placeholder="Type your message here.." required ></textarea><br>
+              <button type="submit" class="btn btn-style" data-aos="fade-in" id="btn-style"
                 style="margin-right: 40px;box-shadow: 2px 2px 8px red;">Send</button>
               <button onclick="window.location.href='feed.html'" class="btn  btn-style" data-aos="fade-in"
                 id="btn-style" style="box-shadow: 2px 2px 8px red;">Feedback</button>
@@ -909,6 +905,7 @@
     <!-- adding a btn -->
     <button id="goToTopBtn" onclick="goToTop()" class="top-btn"> <i class="fa-solid fa-chevron-up"
         style="color: #00328a;"></i></button>
+      
     <script>
       // Get the button
       var mybutton = document.getElementById("goToTopBtn");
@@ -960,6 +957,47 @@
         loop: true
       })
     </script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+    //initailizing emailjs 
+
+    (function(){
+       emailjs.init("kHyqhzLTyzP0cw1px");
+    })();
+
+document.getElementById("contact-form").addEventListener('submit',function(event) {
+    event.preventDefault();
+    var email = document.getElementById("email").value;
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if(!emailPattern.test(email)){
+       alert("Please enter a valid email");
+       return;
+    }
+    sendEmail(email);
+});
+
+function sendEmail(email){
+    var params = {
+       name: document.getElementById("Name").value,
+       email: email,
+       message: document.getElementById("message").value
+    }
+
+    const serviceID = "service_txp05dc";
+    const templateID = "template_16rbum9";
+
+    emailjs.send(serviceID,templateID,params)
+    .then(function(response){
+       console.log("Success!",response.status,response.text);
+       alert("Email sent successfully!");
+    }, 
+    function(error){
+      console.log("Failed to send email...",error);
+      alert("Failed to send Email. Please try again later.");
+    });
+}
+</script>
 
     <script src="index.js"></script>
 
