@@ -17,11 +17,30 @@
         }
 
         header {
-            background-color: #333;
+            background-color: #091020;
             color: #fff;
             text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 10px;
-            transform: scale(1.05);
+            transform: scale(1.00);
+            height: 60px;
+        }
+        .nav__logo {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #ffffff;
+            text-decoration: none; /* Remove underline from link */
+        }
+
+        .nav__logo span {
+            color: #3685fb;
+        }
+        
+        h1{
+            padding-right: 690px;
+            text-align: center;
         }
 
         form {
@@ -112,6 +131,7 @@
 <body>
 
     <header>
+        <a href="index.html" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
         <h1>Trip Planner</h1>
     </header>
 
