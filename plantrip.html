@@ -6,21 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trip Planner</title>
     <link rel="icon"
-    href="img/A T logo with a white background and a square shape, connected to nature for a travel company.png"
-    type="image/x-icon" />
+        href="img/A T logo with a white background and a square shape, connected to nature for a travel company.png"
+        type="image/x-icon" />
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Nunito Sans', sans-serif;
             background-color: #b1e5f748;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #333;
+            background-color: #091020;
             color: #fff;
             text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 10px;
+            transform: scale(1.00);
+            height: 60px;
+        }
+        .nav__logo {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #ffffff;
+            text-decoration: none; /* Remove underline from link */
+        }
+
+        .nav__logo span {
+            color: #3685fb;
+        }
+        
+        h1{
+            padding-right: 690px;
+            text-align: center;
         }
 
         form {
@@ -29,12 +49,13 @@
             background-color: #add8e6e3;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         }
 
         label {
             display: block;
             margin-bottom: 8px;
+            font-weight: bold;
         }
 
         input,
@@ -45,31 +66,76 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
+            font-weight: bold;
+            font-family: inherit;
         }
 
         button {
-            background-color: #4CAF50;
+            background-color: #4c854e;
             color: #fff;
             padding: 10px 20px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
+            font-weight: bold;
+            font-family: inherit;
+            transition: transform 0.3s ease-in-out;
         }
 
         button:hover {
-            background-color: #45a049;
+            background-color: #87af89;
+            transform: scale(1.15);
+        }
+
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+            /* Add custom dropdown arrow */
+            background-repeat: no-repeat;
+            background-position: right 10px top 50%;
+            background-size: 24px auto;
+            padding-right: 30px;
+            font-weight: bold;
+            font-family: inherit;
+        }
+
+        select:focus {
+            border-color: #4CAF50;
+            outline: none;
         }
     </style>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const startDate = new Date(document.getElementById('startDate').value);
+            const endDate = new Date(document.getElementById('endDate').value);
+
+            if (endDate < startDate) {
+                alert('End date cannot be earlier than start date.');
+            } else {
+                alert('Trip planned successfully!');
+                // You can proceed to submit the form or perform other actions here
+                // For demonstration, form submission is prevented.
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('tripForm').addEventListener('submit', handleSubmit);
+        });
+    </script>
 </head>
 
 <body>
 
     <header>
+        <a href="index.html" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
         <h1>Trip Planner</h1>
     </header>
 
-    <form>
+    <form id="tripForm">
         <label for="destination">Destination:</label>
         <input type="text" id="destination" name="destination" required>
 

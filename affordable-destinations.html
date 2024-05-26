@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best and Affordable Destinations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .destination-item {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            display: inline-block;
+            width: calc(33% - 40px);
+            max-width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .destination-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .destination-item img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .destination-item h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .destination-item p {
+            margin: 5px 0;
+        }
+
+        .destination-item .price {
+            font-weight: bold;
+        }
+
+        .book-now-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .book-now-btn:hover {
+            background-color: #0056b3;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        #back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        #back-button:hover {
+            background-color: #5a6268;
+        }
+
+        @media (max-width: 768px) {
+            .destination-item {
+                width: calc(50% - 40px);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .destination-item {
+                width: calc(100% - 40px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Best and Affordable Destinations</h1>
+    <div id="destinations-list"></div>
+    <button id="back-button">Back to Home</button>
+
+    <script>
+        const destinations = [
+            { name: "Santorini, Aegean Sea", price: "$300", rating: "4.2", imgSrc: "santorini-view.jpg" },
+            { name: "Machu Picchu, Peru", price: "$450", rating: "4.5", imgSrc: "peru.jpg" },
+            { name: "Grand Canyon, Arizona", price: "$400", rating: "4.7", imgSrc: "grandcanyon.jpg" },
+            { name: "Bali, Indonesia", price: "$350", rating: "4.8", imgSrc: "bali.jpg" },
+            { name: "Paris, France", price: "$500", rating: "4.6", imgSrc: "paris.jpg" },
+            { name: "Kyoto, Japan", price: "$400", rating: "4.7", imgSrc: "japan.jpg" },
+            { name: "Rome, Italy", price: "$450", rating: "4.5", imgSrc: "italy.jpg" },
+            { name: "Sydney, Australia", price: "$480", rating: "4.6", imgSrc: "sydney.jpg" },
+            { name: "New York, USA", price: "$550", rating: "4.7", imgSrc: "usa.jpg" },
+            { name: "Cape Town, South Africa", price: "$420", rating: "4.5", imgSrc: "capetown.jpg" },
+            { name: "Barcelona, Spain", price: "$390", rating: "4.6", imgSrc: "spain.jpg" },
+            { name: "Dubai, UAE", price: "$600", rating: "4.7", imgSrc: "dubai.jpg" }
+            // Add more destinations as needed
+        ];
+
+        const destinationsList = document.getElementById("destinations-list");
+        destinations.forEach(destination => {
+            const destinationItem = document.createElement("div");
+            destinationItem.className = "destination-item";
+            destinationItem.innerHTML = `
+                <img src="${destination.imgSrc}" alt="${destination.name}">
+                <h2>${destination.name}</h2>
+                <p>Rating: <span class="rating">${destination.rating}</span></p>
+                <p class="price">From ${destination.price}</p>
+                <a href="payment.html"><button
+                    class="book__now btn-style" style="box-shadow: 2px 2px 8px black;">Book
+                    Now</button></a>
+            `;
+            destinationsList.appendChild(destinationItem);
+        });
+
+        document.getElementById("back-button").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>
