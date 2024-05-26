@@ -1,108 +1,92 @@
-/* Add your general styling for the form container */
-.container {
-  max-width: 600px;
-  margin: auto;
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
   padding: 20px;
-  background-color: #121212;
-  border: 1px solid #3999af;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #333;
 }
 
-/* Style for form labels */
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgb(88, 87, 87);
+}
+
+h2 {
+  text-align: center;
+  color: #007bff; 
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-top: 30px; 
+  color: #e63946; 
+  margin-bottom: 20px; 
+}
+
+.mb-3 {
+  margin-bottom: 1.5rem; 
+}
+
 .form-label {
   font-weight: bold;
-  color: #007bff;
+  color: #1d3557; 
+  margin-bottom: 10px;
 }
 
-/* Style for form inputs */
 .form-control {
   width: 100%;
-  padding: 8px;
-  margin-bottom: 15px;
-  border: 1px solid #121212;
-  border-radius: 4px;
-  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
-/* Style for radio buttons and labels */
-.form-check-input {
-  margin-right: 5px;
-  color: #f6f4f4;
-}
-
-/* Style for checkboxes and labels */
-.form-check-input[type="checkbox"] {
-  margin-right: 8px;
-}
-
-/* Style for submit button */
 .btn {
-  background-color: #007bff;
-  color: #fff;
-  border: 1px solid #007bff;
-  border-radius: 4px;
-  padding: 10px 20px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff; 
+  color: white;
+  display: block; 
+  margin: 20px auto 0; 
+  text-align: center; 
+}
+
+.btn:hover {
+  background-color: #0056b3; 
+}
+
+.star {
+  font-size: 24px;
+  color: #ccc;
   cursor: pointer;
 }
 
-/* Style for the overall form layout */
-.row {
-  margin-bottom: 15px;
+.star.checked {
+  color: #e63946;
 }
 
-/* Optional: Add styles for the body to improve overall appearance */
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #121212;
-  margin: 0;
-  padding: 0;
+#navigationEase, 
+#bookingProcess, 
+#accuracyInformation, 
+#paymentOptions, 
+#securityMeasures, 
+#customerSupport, 
+#overallExperience {
+  gap: 5px;
 }
 
-/* Optional: Add a bit of space around the form */
-body .container {
-  margin-top: 30px;
-}
-h3{
-  color:#60bbc5
-}
-h2{
-  color:rgb(161, 127, 255);
-}
-
-
-label {
-  font-weight: bold;
-  margin-right: 10px; 
-  color: antiquewhite;
-}
-
-
-input[value="1"] + label {
-  color: #FF0000;
-}
-
-input[value="2"] + label {
-  color: #FFA500; 
-}
-
-input[value="3"] + label {
-  color: #FFFF00; 
-}
-
-input[value="4"] + label {
-  color: #008000; 
-}
-
-input[value="5"] + label {
-  color: #0000FF; 
-}
-
-.d-flex.flex-wrap {
-  display: flex;
-
-}
-.form-check.form-check-inline.me-3{
-  display: inline-block;
-  margin-right: 10px; 
+#navigationEase-rating-text,
+#bookingProcess-rating-text,
+#accuracyInformation-rating-text,
+#paymentOptions-rating-text,
+#securityMeasures-rating-text,
+#customerSupport-rating-text,
+#overallExperience-rating-text {
+  color: #007bff; 
+  margin-top: 10px; 
 }

@@ -1,0 +1,100 @@
+/* styles.css */
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Breadcrumb styling */
+  .breadcrumb {
+    background-color: #f8f9fa;
+    border-radius: 0.375rem;
+    padding: 2rem 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: '>';
+    color: #6c757d;
+  }
+  
+  .breadcrumb-item a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .breadcrumb-item a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  .breadcrumb-item.active {
+    color: #6c757d;
+  }
+  
+  /* Additional styles for other sections */
+  .checkout-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .address-section,
+  .cart-section,
+  .payment-section {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  
+  form {
+    display: grid;
+    gap: 10px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input,
+  select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .checkout-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  

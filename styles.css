@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Oxygen:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
   --primary-color: #3685fb;
@@ -245,6 +246,9 @@
   --text-same: #0d213f;
   --bubble-color: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, #FD4766 79.69%);
   --testimonials-img-border: red;
+  span.aos-init.aos-animate{
+    color:white;
+  }
 
 }
 
@@ -280,10 +284,52 @@ body {
   filter: brightness(1.5);
 }
 
+/*.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}*/
+
+/*Creating Curved Corners for the Video*/
 .section__container {
   max-width: var(--max-width);
   margin: auto;
   padding: 5rem 1rem;
+  margin-top: 20px; /* Added margin-top */
+  margin-bottom: -28px; /* Added margin-bottom */
+  /*background: rgb(241, 239, 239);  Added background color */
+  display: flex; 
+  justify-content: center; /* Center the content */
+}
+
+.sized-video {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  width: 100%;
+  max-width: 800px; /* Limit the maximum width of the video */
+  height: auto; 
+  outline: none; /* Remove default outline */
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+  margin-top: 20px; 
+  margin-bottom: -28px; 
+  /*background: rgb(241, 239, 239);  */
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.sized-video {
+  border-radius: 15px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px; 
+  height: auto; 
+  outline: none; /* Remove default outline */
 }
 
 .section__header {
@@ -444,9 +490,7 @@ nav {
   color: #ff0000;
 }
 
-.home {
-  margin-left: 210px;
-}
+
 
 header {
   background-color: var(--secondary-color);
@@ -890,12 +934,12 @@ header {
   border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
-  transition: 0.50s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .trip__card:hover {
-  transform: scale(1.03);
-  cursor: zoom-in;
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .trip__details {
@@ -1071,6 +1115,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: flex-start;
+  flex-direction: row;
   /*grid-template-columns: repeat(3, 1fr);*/
   gap: 24px;
   color: var(--secondary-color);
@@ -1279,7 +1324,8 @@ header {
 /* Updated Contact section */
 .container {
   position: relative;
-  width: 100%;
+  width: 100vw;
+  right: 70px;
 }
 
 .items {
@@ -1291,8 +1337,8 @@ header {
   background: #0000001a;
   backdrop-filter: blur(10px);
   margin: 50px;
-  grid-template-columns: 1fr 2fr;
-  display: grid;
+  /* grid-template-columns: 1fr 2fr; */
+  display: flex;
   z-index: 10;
 }
 
@@ -1416,11 +1462,7 @@ textarea::-webkit-scrollbar {
   background-color: #ab45e7;
   color: var(--extra-light);
 } */
-
 @media (max-width: 920px) {
-  .items {
-    grid-template-columns: 1fr;
-  }
 
   .contact {
     display: none;
@@ -1655,7 +1697,7 @@ body {
 
 .nav-container {
   height: auto;
-  width: 200%;
+  /* width: 200%; */
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1666,9 +1708,9 @@ body {
 
 .newNav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  gap: 0.5rem;
+  gap: 10px;
   height: auto;
   width: 100%;
   padding: 1rem 2rem;
@@ -1678,12 +1720,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 15px;
   list-style: none;
   gap: 1.2rem;
   position: relative;
   top: 0.5rem;
   z-index: 10;
+  margin-right: 20px;
+
 }
 
 .link a {
@@ -1775,6 +1819,7 @@ body {
 
 .navLinks.activeHamburger {
   width: 100%;
+  padding-top: 100px;
 }
 
 /* New NAvbar CSS Ends Here*/
@@ -1936,6 +1981,18 @@ body {
 
 
 /* Testimonial Section */
+@media (min-width:320px)  {
+  .testimonials{
+    flex-direction: column;
+  }
+
+}
+@media (min-width:481px)  { 
+  .testimonials{
+    flex-direction: column;
+  }
+ 
+ }
 
 .testimonials{
   position: relative;

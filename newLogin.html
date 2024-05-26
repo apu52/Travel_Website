@@ -12,13 +12,44 @@
         href="img/A T logo with a white background and a square shape, connected to nature for a travel company.png"
         type="image/x-icon" />
     <link rel="stylesheet" href="./newLogin.css">
+    <link rel="stylesheet" href="style_.css">
 </head>
 
 <body>
+
+    <div class="nav-container">
+        <nav class="newNav">
+          <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+  
+          <ul class="navLinks">
+            <li class="link home" data-aos="fade-down"><a href="index.html#Home">Home</a></li>
+            <li class="link" data-aos="fade-down"><a href="index.html">AboutUs</a></li>
+            <li class="link" data-aos="fade-down"><a href="index.html">Destinations</a></li>
+            <li class="link" data-aos="fade-down"><a href="index.html">Pricing</a></li>
+            <li class="link" data-aos="fade-down"><a href="index.html">Trip Gallery</a></li>
+            <li class="link" data-aos="fade-down"><a href="index.html">Testimonials</a></li>
+            <li class="link" data-aos="fade-down"><a href="feedback.html">Rate Us?</a></li>
+            <li class="link" data-aos="fade-down"><a href="index.html">Contact Us</a></li>
+  
+          </ul>
+          <a href="newLogin.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
+              data-aos="fade-down">Login</button></a>
+          <div class="toggle-container" data-aos="fade-down">
+            <input id="themeToggle" class="toggle" type="checkbox">
+          </div>
+          <div class="hamburger" data-aos="fade-down">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </nav>
+      </div>
+
     <div class="main-container">
         <div class="form-container">
             <div class="content1">
                 <h1>Welcome Back !</h1>
+                <img src="\img\image.png">
                 <p>To keep connected with us please login with your personal information.</p>
                 <button type="submit">Login</button>  
             </div>
@@ -37,15 +68,20 @@
                     </a>
                 </div>
                 <p>OR</p>
+
                 <form action="">
-                    <input type="text" name="" id="" placeholder="Name">
-                    <input type="email" name="" id="" placeholder="Email">
-                    <input type="password" name="" id="" placeholder="Password">
+                    <input type="text" name="" id="" placeholder="First Name" required>
+                    <input type="text" name="" id="" placeholder="Last Name" required>
+                    <input type="email" name="" id="" placeholder="Email" required>
+                    <input type="password" name="" id="" placeholder="Password" required>
+                    <input type="password" name="" id="" placeholder="Confirm Password" required>
                     <button type="submit" class=".content2_button">Register</button>
+
                 </form>
             </div>
         </div>
     </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
@@ -80,6 +116,28 @@
             opacity:0,
             duration:0.5,
         })
+        document.getElementById('registerButton').addEventListener('click', function(event) {
+            event.preventDefault();
+
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('passWord').value;
+            
+            if (name.trim() === '' || email.trim() === '' || password.trim() === '') {
+                alert('Please fill out all fields.');
+            }
+            else{
+                var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                if(!emailPattern.test(email)){
+                    alert("Please enter valid email!");
+                    return;
+                }
+                else{
+                    alert("Registration Successfully completed!");
+                    window.location.href = './index.html';
+                }
+            }
+        });
         
     </script>
 </body>

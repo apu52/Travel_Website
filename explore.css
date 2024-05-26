@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .outer-box {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    
+  }
+  
+  .containers {
+    display: flex;
+    width: 90vw;
+    
+  }
+  
+  .card {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    border-radius: 35px 35px;
+    /* border-radius: 20px; */
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info {
+    position: absolute;
+    bottom: 20px;
+    left: 25%;
+    visibility: hidden;
+    background: rgba(221, 206, 216, 0.462);
+    backdrop-filter:blur(0px);
+    width: 500px;
+    border-radius: 15px 15px;
+  }
+  
+  .card h3 {
+    font-size: 24px;
+    opacity: 0;
+    color: black !important;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    font-weight: bolder;
+    -webkit-text-stroke:1px navy;
+  }
+  
+  .card p {
+    font-size: 16px;
+    opacity: 0;
+    color:black !important;
+    margin-top: 10px;
+    font-weight: 500;
+    /* -webkit-text-stroke:0.5px beige; */
+  }
+  
+  .card.active {
+    flex: 3;
+  }
+  
+  .card.active h3 {
+    opacity: 1;
+    transition: opacity 0.5s ease-in 0.8s;
+  }
+  
+  .card.active p {
+    opacity: 1;
+    transition: opacity 0.5s ease-in 0.8s;
+  }
+  
+  .card.active .info {
+    visibility: visible;
+  }
+  .hedd{
+    font-size: 25px;
+  }
+  @media (max-width: 1300px) {
+    .containers {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    .info{
+      left: 10%;
+    }
+    .card h3 {
+      font-size: 16px;
+    }
+  
+    .card p {
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 620px){
+    .info{
+      width: 200px;
+      left: 20px;
+    }
+  }
+  @media (max-width: 280px){
+    .info{
+      width: 100px;
+      left: 0px;
+    }
+  }
+  
