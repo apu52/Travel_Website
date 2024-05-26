@@ -20,7 +20,7 @@
             <div class="content1">
                 <h1>Welcome Back !</h1>
                 <p>To keep connected with us please login with your personal information.</p>
-                <button type="submit">Login</button>  
+                <button class="login-btn" onclick="showPopup()">Login</button>
             </div>
             <div class="content2">
                 <h1>Create Account</h1>
@@ -38,12 +38,29 @@
                 </div>
                 <p>OR</p>
                 <form action="">
-                    <input type="text" name="" id="" placeholder="Name">
-                    <input type="email" name="" id="" placeholder="Email">
-                    <input type="password" name="" id="" placeholder="Password">
+                    <input type="text" name="" id="" placeholder="First Name" required>
+                    <input type="text" name="" id="" placeholder="Last Name" required>
+                    <input type="email" name="" id="" placeholder="Email" required>
+                    <input type="password" name="" id="" placeholder="Password" required>
+                    <input type="password" name="" id="" placeholder="Confirm Password" required>
                     <button type="submit" class=".content2_button">Register</button>
                 </form>
             </div>
+        </div>
+    </div>
+    <div id="loginPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="email">Name:</label><br>
+                <input type="email" id="user" name="username" required><br>
+                <label for="email">Email Id:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
         </div>
     </div>
 
@@ -80,7 +97,15 @@
             opacity:0,
             duration:0.5,
         })
-        
+         // Function to show the pop-up
+    function showPopup() {
+        document.getElementById("loginPopup").style.display = "block";
+    }
+
+    // Function to close the pop-up
+    function closePopup() {
+        document.getElementById("loginPopup").style.display = "none";
+    }
     </script>
 </body>
 
