@@ -1,0 +1,18 @@
+
+.ripple {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 45%;
+    background: linear-gradient(45deg, #b3e0f1, #01baef);
+    pointer-events: none;
+    transform: scale(0);
+    z-index: 1000;
+    transition: transform 1.2s, opacity 1s;
+    opacity: 1;
+}
+
+.ripple-active {
+    transform: scale(3);
+    opacity: 0;
+}
