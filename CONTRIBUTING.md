@@ -20,7 +20,7 @@ Contributors can enhance the project by implementing new features or improvement
 - At first raise an issue in which you want to work
 - Then after assigning only then work on that issue & make a PR 
 - Create a [**Pull Request**](https://github.com/apu52/Travel_Website/pulls), which will be promptly reviewed and given suggestions for improvements by the community.
-- **REMINDER: Don't raise more than 1 `Issue` at a time**
+- **REMINDER: Don't raise more than 2 `Issue` at a time**
 - **IMPORTANT: Don't make any type of `Pull Request` until & unless you get assigned to an `Issue`**
 - Add screenshots or screen captures to your `Pull Request` to help us understand the effects of the changes that are included in your commits.
 

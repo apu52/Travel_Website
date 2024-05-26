@@ -5,7 +5,7 @@
 <img  src="https://readme-typing-svg.herokuapp.com?color=45ffaa&size=40&width=900&height=80&lines=Welcome-to-TOURGUIDE"/>
 </center>
    
-![image](https://github.com/apu52/Travel_Website/assets/114172928/1919a2f9-8a88-4baa-866b-d2a84158ce7f)
+![image](https://github.com/avanimathur/Travel_Website/assets/151984867/1024d506-92c6-4b35-a4ab-2d4eaca78199)
 
 
  <div align="center">
@@ -24,10 +24,10 @@
  </p>
  </div>
 
- <h2>Hi there👋, Enjoy with the World of Open source contribution </h2>
+ <h2>Hi there👋, Enjoy the World of Open source contribution </h2>
 
 
-<p>Hello Coders👨‍💻 ,I am Arpan Chowdhury, an aspiring Web developer.🤖 Here is the project of the front-end Web Developement.</p>
+<p>Hello Coders👨‍💻 ,I am Arpan Chowdhury, an aspiring Web developer.🤖 Here is the project on front-end Web Development.</p>
 
 
 
@@ -37,6 +37,7 @@
 <h2>Table of Contents🧾</h2>
 
 - [Overview📌](#overview)
+- [Features](#features)
 - [Technology Used🚀](#technology-used)
 - [Open-Source-Programmes⭐](#open-source-programmes)
 - [Getting Started💥](#getting-started)
@@ -47,22 +48,23 @@
 <br>
 
 <h2>Overview📌</h2>
-<p> Here is the project of the front-end Web Developement.This repo contains my project on Travel Website ✈️ using HTML,CSS . It contains the landing page of a travel tour company website👨🏻‍💻.We oftenly search for many travelling places here & there , So Here is it🚤.I welcome you all to contribute in this repository & make this a grand project. So, what are you waiting for??🤔Just jump into it after reading the guidelines📚</p>
+<p> Here is a project on front-end Web Development.This repository contains my project on a Travel Website ✈️ using HTML and CSS . It contains the landing page of a travel tour company website👨🏻‍💻.We often search for many travel destinations here and there, so here it is🚤.I welcome you all to contribute to this repository and make it a grand project. So, what are you waiting for??🤔Just jump into it after reading the guidelines📚.</p>
 
 <h2>Live Project -- https://apu52.github.io/Travel_Website/</h2>
+<h2>Features</h2>
 
-**Features**
-- An Introductory Page
-- Top Destination Page
-- Best trip Packages
-- Our Trip gallery
-- Contact us page
+- **Introductory Page**: Welcomes visitors with an engaging introductory page that highlights the essence of our travel website and sets the tone for exploration.
+- **Top Destination Page**: Showcases top travel destinations with captivating imagery, detailed descriptions, and essential information to inspire and inform visitors.
+- **Best Trip Packages**: Presents the best trip packages tailored to different interests and budgets, complete with itinerary details, pricing, and booking options for seamless travel planning.
+- **Our Trip Gallery**: Curates a visually stunning gallery showcasing memorable moments and experiences from our trips, enticing visitors to embark on their own adventures. Includes interactive features such as user comments.
+- **Contact Us Page**: Provides a user-friendly contact page with essential contact information inquiry forms, amd interactive maps for visitors to reach out and engage with our travel company effortlessly.
 
 <h2>Technology Used🚀</h2>
 
 <p>
   <a href="https://www.w3schools.com/html/"> <img src="https://img.icons8.com/color/70/000000/html-5--v1.png" alt="HTML" /></a>
   <a href="https://www.w3schools.com/css/"> <img src="https://img.icons8.com/color/70/000000/css3.png" alt="CSS" /></a>
+   <a href="https://www.w3schools.com/js/"> <img src="https://img.icons8.com/?size=70&id=PXTY4q2Sq2lG&format=png&color=000000" alt="js" /></a>
 </p>
 <p align="right"><a href="#top"><img src="https://img.shields.io/badge/Move%20to%20top-Blue?style=plastic" alt="Back To Top"></a></p>
 
@@ -167,18 +169,42 @@ git push origin YourBranchName
 
 <h2>Contributing Guidelines📑</h2>
 
-Read our [Contributing Guidelines](https://github.com/apu52/Travel_Website/blob/main/CONTRIBUTING.md) to learn about our development process, how to propose bugfixes and improvements of our Project
+To learn about our development process, how to propose bug fixes and improvements of our project please read our [Contributing Guidelines.](https://github.com/apu52/Travel_Website/blob/main/CONTRIBUTING.md)
 
 <h2>Code Of Conduct📑</h2>
 
-This project and everyone participating in it is governed by the [Code of Conduct](https://github.com/apu52/Travel_Website/blob/main/Code_of_conduct.md). By participating, you are expected to uphold this code.
+This project and everyone participating in it are governed by the [Code of Conduct](https://github.com/apu52/Travel_Website/blob/main/Code_of_conduct.md). By participating, you are expected to uphold this code.
 
 </br>
 <p align = "center">
-Show some ❤️&nbsp; by giving <img src="https://imgur.com/o7ncZFp.jpg" height=25px width=25px> to this repo
+Show some ❤️&nbsp; by giving <img src="https://imgur.com/o7ncZFp.jpg" height=25px width=25px> to this repository.
 </p>
 
 <div align="center">
+
+<div align="center">
+
+## Project Mentor
+
+<table>
+<tr>
+<td align="center"><a href="https://github.com/KrishnenduDG"><img src="img/krishnendu DG.png" width=130px height=130px /></a></br> <h4 style="color:red;">Krishnendu Dasgupta</h4>
+ <a href="https://www.linkedin.com/in/krishnendu-dasgupta-450391186/"><img src="https://img.icons8.com/fluency/2x/linkedin.png" width="32px" height="32px"></img></a>
+   </td>
+
+</tr>
+</table>
+
+<table>
+<tr>
+<td align="center"><a href="https://github.com/Ghanshyam89"><img src="img/GhanshyamNewPic.jpg" width=130px height=130px /></a></br> <h4 style="color:red;">Ghanshyam Prajapati</h4>
+ <a href="https://www.linkedin.com/in/ghanshyam-prajapati/"><img src="https://img.icons8.com/fluency/2x/linkedin.png" width="32px" height="32px"></img></a>
+   </td>
+
+</tr>
+</table>
+
+</div>
   
  # Project Admin⚡
  
@@ -192,6 +218,8 @@ Show some ❤️&nbsp; by giving <img src="https://imgur.com/o7ncZFp.jpg" height
 </table>
   
 </div>
+
+
 
 ## Contributing is fun🧡
 <p align ="center">

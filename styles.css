@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Oxygen:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
   --primary-color: #3685fb;
@@ -15,7 +16,7 @@
   --max-width: 1200px;
   --img-color: white;
   --head-text: #6a5acd;
-  --bubble-color: #6a5acd;
+  --bubble-color: linear-gradient(120deg, #90cdff 20.69%, #b8a4ee 50.19%, #ffffff 79.69%);
   --testimonials-img-border: #6a5acd;
 }
 
@@ -243,8 +244,11 @@
   --img-color: red;
   --head-text: red;
   --text-same: #0d213f;
-  --bubble-color: red;
+  --bubble-color: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, #FD4766 79.69%);
   --testimonials-img-border: red;
+  span.aos-init.aos-animate{
+    color:white;
+  }
 
 }
 
@@ -280,10 +284,52 @@ body {
   filter: brightness(1.5);
 }
 
+/*.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}*/
+
+/*Creating Curved Corners for the Video*/
 .section__container {
   max-width: var(--max-width);
   margin: auto;
   padding: 5rem 1rem;
+  margin-top: 20px; /* Added margin-top */
+  margin-bottom: -28px; /* Added margin-bottom */
+  /*background: rgb(241, 239, 239);  Added background color */
+  display: flex; 
+  justify-content: center; /* Center the content */
+}
+
+.sized-video {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  width: 100%;
+  max-width: 800px; /* Limit the maximum width of the video */
+  height: auto; 
+  outline: none; /* Remove default outline */
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+  margin-top: 20px; 
+  margin-bottom: -28px; 
+  /*background: rgb(241, 239, 239);  */
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.sized-video {
+  border-radius: 15px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px; 
+  height: auto; 
+  outline: none; /* Remove default outline */
 }
 
 .section__header {
@@ -444,9 +490,11 @@ nav {
   color: #ff0000;
 }
 
+
 .home {
   margin-left: 50px;
 }
+
 
 header {
   background-color: var(--secondary-color);
@@ -853,7 +901,7 @@ header {
   color: black;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(4px);
-  border-radius: 10px;
+  border-radius: 5px;
   z-index: 1;
   transition: 0.3s;
 }
@@ -887,15 +935,15 @@ header {
 }
 
 .trip__card {
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
-  transition: 2s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .trip__card:hover {
   transform: scale(1.1);
-  cursor: zoom-in;
+  cursor: pointer;
 }
 
 .trip__details {
@@ -1071,6 +1119,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: flex-start;
+  flex-direction: row;
   /*grid-template-columns: repeat(3, 1fr);*/
   gap: 24px;
   color: var(--secondary-color);
@@ -1279,7 +1328,8 @@ header {
 /* Updated Contact section */
 .container {
   position: relative;
-  width: 100%;
+  width: 100vw;
+  right: 70px;
 }
 
 .items {
@@ -1291,8 +1341,8 @@ header {
   background: #0000001a;
   backdrop-filter: blur(10px);
   margin: 50px;
-  grid-template-columns: 1fr 2fr;
-  display: grid;
+  /* grid-template-columns: 1fr 2fr; */
+  display: flex;
   z-index: 10;
 }
 
@@ -1302,8 +1352,8 @@ header {
 
 .contact h1 {
   color: #ab45e7;
-  font-family: 'Noto Serif', serif;
-  font-size: 2.8rem;
+  font-family: 'Poppins', serif;
+  font-size: 32px;
   text-align: center;
   margin: 20px;
 }
@@ -1416,11 +1466,7 @@ textarea::-webkit-scrollbar {
   background-color: #ab45e7;
   color: var(--extra-light);
 } */
-
 @media (max-width: 920px) {
-  .items {
-    grid-template-columns: 1fr;
-  }
 
   .contact {
     display: none;
@@ -1655,7 +1701,7 @@ body {
 
 .nav-container {
   height: auto;
-  width: 200%;
+  /* width: 200%; */
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1666,9 +1712,9 @@ body {
 
 .newNav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  gap: 0.5rem;
+  gap: 10px;
   height: auto;
   width: 100%;
   padding: 1rem 2rem;
@@ -1678,12 +1724,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 15px;
   list-style: none;
   gap: 1.2rem;
   position: relative;
   top: 0.5rem;
   z-index: 10;
+  margin-right: 20px;
+
 }
 
 .link a {
@@ -1775,6 +1823,7 @@ body {
 
 .navLinks.activeHamburger {
   width: 100%;
+  padding-top: 100px;
 }
 
 /* New NAvbar CSS Ends Here*/
@@ -1932,4 +1981,110 @@ body {
 
 #toggle:hover i {
   color: #ffffff80; /* 80% opacity white for hovering effect */
+}
+
+
+/* Testimonial Section */
+@media (min-width:320px)  {
+  .testimonials{
+    flex-direction: column;
+  }
+
+}
+@media (min-width:481px)  { 
+  .testimonials{
+    flex-direction: column;
+  }
+ 
+ }
+
+.testimonials{
+  position: relative;
+  width: 100%;
+  border-radius: 2%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00ffe7;
+  overflow: hidden;
+}
+
+.swiper-slide {
+background-position: center;
+background-size: cover;
+width: 320px;
+background-color: #00ffe7;
+box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+filter: blur(4px);
+border-radius: 2%;
+
+}
+.swiper-slide-active {
+filter: blur(0px);
+background-color: white;
+border-radius: 2%;
+
+}
+.testimonialContent{
+  border-radius: 2%;
+}
+
+.testimonialBox{
+  border-radius: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  padding-top: 90px;
+  color: #999;
+}
+.testimonialBox .quote{
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  top: 20px;
+  right: 30px;
+  bottom: 20px;
+  opacity: 0.2;
+}
+
+.testimonialBox .details{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.testimonialBox .details .imgBX{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.testimonialBox .details .imgBX img{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.testimonialBox .details h3{
+font-size: 16px;
+font-weight: 400;
+letter-spacing: 1px;
+color: hotpink;
+line-height: 1.1em;
+}
+.testimonialBox .details  h3 span{
+font-size: 12px;
+color: blue;
+margin-left: 20px;
+}
+
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-left
+{
+  background-image: none;
 }
