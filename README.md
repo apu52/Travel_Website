@@ -27,7 +27,7 @@
  <h2>Hi there👋, Enjoy the World of Open source contribution </h2>
 
 
-<p>Hello Coders👨‍💻 ,I am Arpan Chowdhury, an aspiring Web developer.🤖 Here is the project on front-end Web Development.</p>
+<p>Hello Coders!!👨‍💻<br> I am Arpan Chowdhury, an aspiring Web developer🤖. Here is the project on front-end Web Development.</p>
 
 
 
@@ -48,7 +48,7 @@
 <br>
 
 <h2>Overview📌</h2>
-<p> Here is a project on front-end Web Development.This repository contains my project on a Travel Website ✈️ using HTML and CSS . It contains the landing page of a travel tour company website👨🏻‍💻.We often search for many travel destinations here and there, so here it is🚤.I welcome you all to contribute to this repository and make it a grand project. So, what are you waiting for??🤔Just jump into it after reading the guidelines📚.</p>
+<p>This repository contains my project on a Travel Website✈️ using HTML, CSS and JavaScript. It features a landing page for a travel tour company website. Finding the perfect travel destination can be a challenge. This project aims to streamline that process🚤. We welcome all contributions to make this a fantastic resource for travelers. Jump in and contribute to this grand project! Read the guidelines📚 and get started building!</p>
 
 <h2>Live Project -- https://apu52.github.io/Travel_Website/</h2>
 <h2>Features</h2>
