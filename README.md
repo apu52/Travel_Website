@@ -57,7 +57,7 @@
 - **Top Destination Page**: Showcases top travel destinations with captivating imagery, detailed descriptions, and essential information to inspire and inform visitors.
 - **Best Trip Packages**: Presents the best trip packages tailored to different interests and budgets, complete with itinerary details, pricing, and booking options for seamless travel planning.
 - **Our Trip Gallery**: Curates a visually stunning gallery showcasing memorable moments and experiences from our trips, enticing visitors to embark on their own adventures. Includes interactive features such as user comments.
-- **Contact Us Page**: Provides a user-friendly contact page with essential contact information inquiry forms, amd interactive maps for visitors to reach out and engage with our travel company effortlessly.
+- **Contact Us Page**: Provides a user-friendly contact page with essential contact information inquiry forms, and interactive maps for visitors to reach out and engage with our travel company effortlessly.
 
 <h2>Technology Used🚀</h2>
 
@@ -84,7 +84,9 @@
 
 <h2>Getting Started💥</h2>
 
-<h3>Local Installation video</h3> -> [video](https://drive.google.com/file/d/1LsBudIUtZLDMSlmBDdOfT001QRqGBSbN/view?usp=sharing)
+<h3>Local Installation video</h3>
+
+[video](https://drive.google.com/file/d/1LsBudIUtZLDMSlmBDdOfT001QRqGBSbN/view?usp=sharing)
 
 
 
