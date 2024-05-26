@@ -297,10 +297,52 @@ body {
   filter: brightness(1.5);
 }
 
+/*.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}*/
+
+/*Creating Curved Corners for the Video*/
 .section__container {
   max-width: var(--max-width);
   margin: auto;
   padding: 5rem 1rem;
+  margin-top: 20px; /* Added margin-top */
+  margin-bottom: -28px; /* Added margin-bottom */
+  /*background: rgb(241, 239, 239);  Added background color */
+  display: flex; 
+  justify-content: center; /* Center the content */
+}
+
+.sized-video {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  width: 100%;
+  max-width: 800px; /* Limit the maximum width of the video */
+  height: auto; 
+  outline: none; /* Remove default outline */
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+  margin-top: 20px; 
+  margin-bottom: -28px; 
+  /*background: rgb(241, 239, 239);  */
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.sized-video {
+  border-radius: 15px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px; 
+  height: auto; 
+  outline: none; /* Remove default outline */
 }
 
 .section__header {
@@ -1111,7 +1153,9 @@ header {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: flex-start;
+
   /grid-template-columns: repeat(3, 1fr);/ gap: 24px;
+
   color: var(--secondary-color);
 }
 
@@ -1988,6 +2032,8 @@ body {
 }
 
 #toggle:hover i {
+
   color: #ffffff80;
   /* 80% opacity white for hovering effect */
+
 }

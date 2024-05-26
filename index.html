@@ -28,6 +28,8 @@
     type="image/x-icon" />
 
   <script src="index.js" defer></script>
+  <script src="mouseEffect.js"></script>
+  <link rel="stylesheet" href="mouseEffect.css">
   <script src="Theme.js" defer></script>
 
   <link rel="stylesheet" href="path/to/aos.css">
@@ -102,7 +104,7 @@
     <button id="toggle" data-aos="fade-down">Dark Theme</button>
     <a href="#contact"><button class="btn" id="btn-style">Contact Us</button></a>
   </nav> -->
-    <div class="nav-container">
+    <div class="nav-container" id="top">
       <nav class="newNav">
         <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
 
@@ -120,8 +122,8 @@
 
 
         </ul>
-        <a href="newLogin.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
-            data-aos="fade-down">Login</button></a>
+        <a href="newLogin.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0; box-shadow:1.5px 1.5px 6px red;"
+          data-aos="fade-down">Login</button></a>
         <div class="toggle-container" data-aos="fade-down">
           <input id="themeToggle" class="toggle" type="checkbox">
         </div>
@@ -148,26 +150,23 @@
               clients.
             </p>
             <div class="action__btns">
-              <a href="pricing/index.html"><button class="btn" data-aos="fade-in" id="btn-style">Membership</button></a>
-              <button class="btn" data-aos="fade-in" id="btn-style" onclick="planTrip()">Plan a Trip</button>
-              <a href="./payment.html"><button class="btn" data-aos="fade-in" id="btn-style">Book Now</button></a>
+              <a href="pricing/index.html"><button class="btn" data-aos="fade-in" id="btn-style" style="box-shadow: 2px 2px 8px red;">Membership</button></a>
+              <a href="newplantrip.html"><button class="btn" data-aos="fade-in" id="btn-style"  style="box-shadow: 2px 2px 8px red;">Plan a Trip</button></a>
+              <a href="./payment.html"><button class="btn" data-aos="fade-in" id="btn-style" style="box-shadow: 2px 2px 8px red;">Book Now</button></a>
             </div>
 
 
             <br>
             <div class="story">
               <div class="video">
-                <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" type="video/mp4"></img>
+                <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" type="video/mp4" style="box-shadow:2px 2px 8px blue;">
                 <!-- link to the hmtl page with the video -->
                 <a href="story.html" class="btn_video">
                   <span><i class="ri-play-fill"></i></span>
               </div>
-
             </div>
             <span data-aos="fade-in">Watch our story</span>
           </div>
-        </div>
-        </div>
         </div>
       </section>
     </header>
@@ -274,7 +273,7 @@
                 </div>
                 <!-- Box 3 - Number of Destinations -->
                 <div class="box1">
-                  <a href="" class="iconss">
+                  <a href="affordable-destinations.html" class="iconss">
                     <svg
                       class="w-12 h-12 mx-auto group-hover:text-pink-500 dark:text-gray-100 group-hover:dark:text-pink-500"
                       viewBox="0 0 24 24" stroke-width="2" stroke="black" fill="none" stroke-linecap="round"
@@ -474,7 +473,7 @@
               <div class="booking__price">
                 <div class="price"><span>From</span> $300</div>
                 <a href="./dedicated-destinations/santorini-aegean-sea/start.html"><button
-                    class="book__now btn-style">Book
+                    class="book__now btn-style" style="box-shadow: 2px 2px 8px red;">Book
                     Now</button></a>
               </div>
             </div>
@@ -487,7 +486,7 @@
               <div class="booking__price">
                 <div class="price"><span>From</span> $450</div>
                 <a href="./dedicated-destinations/machu-picchu-peru/Machu_start.html"><button
-                    class="book__now btn-style">Book
+                    class="book__now btn-style" style="box-shadow: 2px 2px 8px red;">Book
                     Now</button></a>
               </div>
             </div>
@@ -500,13 +499,13 @@
               <div class="booking__price">
                 <div class="price"><span>From</span> $400</div>
                 <a href="./dedicated-destinations/grand-canyon-national-park-arizona/Grand_start.html"><button
-                    class="book__now btn-style">Book Now</button></a>
+                    class="book__now btn-style" style="box-shadow: 2px 2px 8px red;">Book Now</button></a>
               </div>
             </div>
           </div>
         </div>
         <div class="view__all">
-          <a href="./package.html"><button class="btn" id="btn-style">View All</button></a>
+          <a href="./package.html"><button class="btn" id="btn-style" style="box-shadow: 2px 2px 8px red;">View All</button></a>
         </div>
       </div>
     </section>
@@ -533,7 +532,7 @@
                 Explore your suitable and dream places around the world. Here you
                 can find your right destination.
               </p>
-              <button class="btn btn-style" id="btn-page" onclick="replaceDivs()" data-aos="zoom-in">View All</button>
+              <button class="btn btn-style" id="btn-page" onclick="replaceDivs()" data-aos="zoom-in" style="box-shadow: 2px 2px 8px red;" >View All</button>
             </div>
           </div>
         </div>
@@ -720,7 +719,7 @@
         </div>
         <div class="faq" data-aos="zoom-in">
             <h3 class="faq-title">Can I make changes to my booking or cancel it if needed?</h3>
-            <p class="faq-text">IYes, we understand that plans can change. Depending on the terms and conditions of your specific booking, you may be able to make modifications or cancel your reservation. Log in to your account on our website, navigate to the "Manage Booking" section, and follow the provided instructions. Keep in mind that there may be associated fees or restrictions depending on the type of booking and the time of the requested changes. For further assistance, feel free to contact our customer support team, and they will guide you through the process.</p>
+            <p class="faq-text">Yes, we understand that plans can change. Depending on the terms and conditions of your specific booking, you may be able to make modifications or cancel your reservation. Log in to your account on our website, navigate to the "Manage Booking" section, and follow the provided instructions. Keep in mind that there may be associated fees or restrictions depending on the type of booking and the time of the requested changes. For further assistance, feel free to contact our customer support team, and they will guide you through the process.</p>
             <button class="faq-toggle">
                 <i class="fas fa-chevron-down"></i>
                 <i class="fas fa-times"></i>
@@ -811,11 +810,11 @@
             <form id="contact-form" name="CalcDiverse Contact" autocomplete="off">
               <input type="text" id="Name" placeholder="Name" required>
               <input type="email" id="email" placeholder="Email" required>
-              <textarea placeholder="Type your message here.." required ></textarea><br>
-              <button onclick="sendMail()" class="btn btn-style" data-aos="fade-in" id="btn-style"
-                style="margin-right: 40px;">Send</button>
+              <textarea id="message" placeholder="Type your message here.." required ></textarea><br>
+              <button type="submit" class="btn btn-style" data-aos="fade-in" id="btn-style"
+                style="margin-right: 40px;box-shadow: 2px 2px 8px red;">Send</button>
               <button onclick="window.location.href='feed.html'" class="btn  btn-style" data-aos="fade-in"
-                id="btn-style">Feedback</button>
+                id="btn-style" style="box-shadow: 2px 2px 8px red;">Feedback</button>
             </form>
           </div>
         </div>
@@ -837,7 +836,7 @@
         <div class="subscribe__form" data-aos="fade-up">
           <form>
             <input type="email" placeholder="Your email here" id="emailInput" required />
-            <button class="btn-send" id="send" type="submit">Send</button>
+            <button class="btn-send" id="send" type="submit" style="box-shadow: 2px 2px 8px blue;">Subscribe</button>
           </form>
         </div>
       </div>
@@ -908,6 +907,7 @@
     <!-- adding a btn -->
     <button id="goToTopBtn" onclick="goToTop()" class="top-btn"> <i class="fa-solid fa-chevron-up"
         style="color: #00328a;"></i></button>
+      
     <script>
       // Get the button
       var mybutton = document.getElementById("goToTopBtn");
@@ -959,12 +959,67 @@
         loop: true
       })
     </script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+    //initailizing emailjs 
+
+    (function(){
+       emailjs.init("kHyqhzLTyzP0cw1px");
+    })();
+
+document.getElementById("contact-form").addEventListener('submit',function(event) {
+    event.preventDefault();
+    var email = document.getElementById("email").value;
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if(!emailPattern.test(email)){
+       alert("Please enter a valid email");
+       return;
+    }
+    sendEmail(email);
+});
+
+function sendEmail(email){
+    var params = {
+       name: document.getElementById("Name").value,
+       email: email,
+       message: document.getElementById("message").value
+    }
+
+    const serviceID = "service_txp05dc";
+    const templateID = "template_16rbum9";
+
+    emailjs.send(serviceID,templateID,params)
+    .then(function(response){
+       console.log("Success!",response.status,response.text);
+       alert("Email sent successfully!");
+    }, 
+    function(error){
+      console.log("Failed to send email...",error);
+      alert("Failed to send Email. Please try again later.");
+    });
+}
+</script>
 
     <script src="index.js"></script>
 
 
+    <script>
+      window.embeddedChatbotConfig = {
+      chatbotId: "yDQ_EheFvX0HAPr9beQ5L",
+      domain: "www.chatbase.co"
+      }
+      </script>
+      <script
+      src="https://www.chatbase.co/embed.min.js"
+      chatbotId="yDQ_EheFvX0HAPr9beQ5L"
+      domain="www.chatbase.co"
+      defer>
+      </script>
 
-    <!-- Start of Conferbot Script -->
+
+
+    <!-- Start of Conferbot Script 
 
     <script type="text/javascript">
         (function (d, s, id) {
@@ -981,7 +1036,8 @@
           };
         })(document, 'script', 'conferbot-js');
     </script>
-    <!--End of Conferbot Script-->
+    End of Conferbot Script
+  -->
 
 
 
