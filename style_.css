@@ -2,7 +2,7 @@
 
 /* Google Fonts */
 body {
-  background-image: url("./img/feedback_bg.jpg");
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url("./img/sunset.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -16,18 +16,11 @@ body {
 
 .feedback-heading {
   font-size: 3rem;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  text-transform: uppercase;
-  background-image: linear-gradient(
-    -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
-  );
+  font-family: Poppins, sans-serif;
+  background-image: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, #FD4766 79.69%);
   background-size: auto auto;
+
   background-clip: border-box;
-  background-size: 200% auto;
   color: #fff;
   background-clip: text;
   text-fill-color: transparent;
@@ -53,7 +46,7 @@ body {
   background: rgba(46, 123, 225, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 15px;
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
   text-align: center;
   max-width: 800px;
   width: 90%;
@@ -63,13 +56,12 @@ body {
 p {
   line-height: 1.2em;
   margin: 0;
-  font-family: "Lato";
-  font-size: 26px;
+  font-family: Poppins, sans-serif;
+  font-size: 20px;
   color: #07147a;
   padding: 8px 5px;
   text-align: center;
   text-rendering: optimizeLegibility;
-  text-shadow: 1px 1px 0 #29c0e6, 1px 2px 0px #e784c6;
 }
 
 .stars {
@@ -91,18 +83,13 @@ p {
 
 #rating-text {
   font-family: monospace;
+  font-weight: 700;
   margin-top: 40px;
   font-size: 1.8rem;
-  background-image: linear-gradient(
-    -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
-  );
+  background-image:linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, #FD4766 79.69%);
+
   background-size: auto auto;
   background-clip: border-box;
-  background-size: 200% auto;
   color: #fff;
   background-clip: text;
   text-fill-color: transparent;
@@ -133,6 +120,11 @@ p {
   background-color: rgba(219, 230, 240, 0.402);
   box-sizing: border-box;
   font-size: 1rem;
+}
+
+#feedback-input:focus-visible{
+  outline:2px solid #6a5acd ;
+  border-radius: 5px;
 }
 
 /*.submit-button {
@@ -315,7 +307,7 @@ header {
   gap: 1.2rem;
   position: relative;
   z-index: 10;
-  margin-right: 20px;
+  margin: 15px 20px 15px 0px;
 
 }
 
@@ -447,22 +439,9 @@ header {
 
 /* CSS */
 .button {
-  align-items: center;
-  appearance: none;
-  background-image: radial-gradient(
-    100% 100% at 100% 0,
-    #5adaff 0,
-    #5468ff 100%
-  );
-  border: 0;
-  border-radius: 6px;
-  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-flex;
-  font-family: "JetBrains Mono", monospace;
+  display: inline-block;
+  /* added consistent fonts */
+  font-family: Poppins, sans-serif;
   height: 40px;
   justify-content: center;
   line-height: 1;
@@ -470,30 +449,36 @@ header {
   overflow: hidden;
   padding-left: 16px;
   padding-right: 16px;
-  position: relative;
-  text-align: left;
+  border-radius: 50px;
+  /* transition: all .1s ease-in-out; */
+  border: 2px solid #6a5acd;
+  color: #ff0000;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 2px;
+  vertical-align: middle;
   text-decoration: none;
-  transition: box-shadow 0.15s, transform 0.15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
   white-space: nowrap;
-  will-change: box-shadow, transform;
-  font-size: 18px;
+  box-shadow: 2px 2px 8px red;
+  margin-bottom: 20px;
+  box-sizing: border-box;
 }
 
 .button:focus {
-  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  /* box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset; */
 }
 
 .button:hover {
-  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+  /* box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
-  transform: translateY(-2px);
+  transform: translateY(-2px); */
+  background-color: #6a5acd;
+   color: #fff;
+
 }
 
 .button:active {
-  box-shadow: #3c4fe0 0 3px 7px inset;
-  transform: translateY(2px);
+  /* box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px); */
 }
