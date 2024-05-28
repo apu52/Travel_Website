@@ -1977,8 +1977,6 @@ body {
 
 #toggle:hover i {
   color: #ffffff80; /* 80% opacity white for hovering effect */
-<<<<<<< HEAD
-=======
 }
 
 
@@ -2085,5 +2083,4 @@ margin-left: 20px;
 .swiper-container-3d .swiper-slide-shadow-left
 {
   background-image: none;
->>>>>>> 6b980ba2505b366c3383d5bd620835513644f34e
 }
