@@ -177,3 +177,14 @@ body {
 #next {
   left: 100%;
 }
+
+.footer__text{
+  font-size: 16px;
+  transition: color 0.3s ease, font-size 0.3s ease;
+  display: block;
+}
+
+.footer__text:hover{
+  color: red;
+  font-size: 18px;
+}
