@@ -469,8 +469,6 @@ nav {
   /* Assuming this is your primary color */
 }
 
-
-
 /* .nav__links {
   list-style: none;
   display: flex;
@@ -724,9 +722,9 @@ header {
   transition: scale 0.3s ease-in-out;
 }
 
-.modal-btn:active {
+/* .modal-btn:active {
   scale: 0.95;
-}
+} */
 
 .close-btn {
   background: none;
@@ -1587,9 +1585,9 @@ body {
   box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
 }
 
-.nav-tabs-custom .nav-item .nav-link.active {
+/* .nav-tabs-custom .nav-item .nav-link.active {
   color: #6c6ff5;
-}
+} */
 
 .nav-tabs-custom .nav-item .nav-link {
   border: none;
@@ -1604,10 +1602,10 @@ body {
   color: #271050;
 }
 
-.nav-tabs-custom .nav-item .nav-link.active:after {
+/* .nav-tabs-custom .nav-item .nav-link.active:after {
   -webkit-transform: scale(1);
   transform: scale(1);
-}
+} */
 
 .nav-tabs-custom .nav-item .nav-link::after {
   content: '';
@@ -1815,6 +1813,11 @@ body {
   #btn-style {
     font-size: 0.6rem;
   }
+}
+
+.navLinks .link a:active {
+  color:red;
+
 }
 
 .navLinks.activeHamburger {
