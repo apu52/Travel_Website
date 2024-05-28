@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./loader.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="faq-website.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -17,6 +19,8 @@
 
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="./Image-Gallery/style.css">
+  <link rel="stylesheet" href="./Image-Gallery/stylecaptions.css">
+  <link rel="stylesheet" href="explore.css">
   <title>Tourguide</title>
   <!-- adding a fav-icon -->
   <link rel="icon"
@@ -24,6 +28,8 @@
     type="image/x-icon" />
 
   <script src="index.js" defer></script>
+  <script src="mouseEffect.js"></script>
+  <link rel="stylesheet" href="mouseEffect.css">
   <script src="Theme.js" defer></script>
 
   <link rel="stylesheet" href="path/to/aos.css">
@@ -39,6 +45,13 @@
 
       window.location.href = 'plantrip.html';
     }
+    // const menuButton = document.getElementsByClassName('link');
+    function closeNav() {
+      let list = document.querySelector('.navLinks');
+      list.classList.toggle('activeHamburger');
+    }
+    // menuButton.forEach((button) => (button.onclick = () => closeNav()));
+
 
   </script>
 
@@ -49,11 +62,11 @@
     }
   </style>
   <style>
-
-   .active {
+    .active {
       color: red !important;
     }
-      </style>
+  </style>
+
 
 </head>
 
@@ -90,23 +103,26 @@
     <button id="toggle" data-aos="fade-down">Dark Theme</button>
     <a href="#contact"><button class="btn" id="btn-style">Contact Us</button></a>
   </nav> -->
-    <div class="nav-container">
+    <div class="nav-container" id="top">
       <nav class="newNav">
         <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
 
         <ul class="navLinks">
-          <li class="link home" data-aos="fade-down"><a href="#Home">Home</a></li>
-          <li class="link" data-aos="fade-down"><a href="#AboutUs">AboutUs</a></li>
-          <li class="link" data-aos="fade-down"><a href="#Destinations">Destinations</a></li>
-          <li class="link" data-aos="fade-down"><a href="#trip">Pricing</a></li>
-          <li class="link" data-aos="fade-down"><a href="#ReviewGallery">Trip Gallery</a></li>
-          <li class="link" data-aos="fade-down"><a href="#testimonials">Testimonials</a></li>
-          <li class="link" data-aos="fade-down"><a href="feedback.html">Rate Us?</a></li>
-          <li class="link" data-aos="fade-down"><a href="#contact">Contact Us</a></li>
+
+
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#Home">Home</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#AboutUs"> AboutUs</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#Destinations">Destinations</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#trip">Pricing</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#ReviewGallery">Trip Gallery</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#testimonials">Testimonials</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="#contact">Contact Us</a></li>
+
 
         </ul>
-        <a href="newLogin.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
-            data-aos="fade-down">Login</button></a>
+        <a href="newLogin.html" class="contact-btn"><button class="btn" id="btn-style"
+            style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a>
         <div class="toggle-container" data-aos="fade-down">
           <input id="themeToggle" class="toggle" type="checkbox">
         </div>
@@ -133,26 +149,28 @@
               clients.
             </p>
             <div class="action__btns">
-              <a href="pricing/index.html"><button class="btn" data-aos="fade-in" id="btn-style">Membership</button></a>
-              <button class="btn" data-aos="fade-in" id="btn-style" onclick="planTrip()">Plan a Trip</button>
-              <a href="./payment.html"><button class="btn" data-aos="fade-in" id="btn-style">Book Now</button></a>
+              <a href="pricing/index.html"><button class="btn" data-aos="fade-in" id="btn-style"
+                  style="box-shadow: 2px 2px 8px red;">Membership</button></a>
+              <button class="btn" data-aos="fade-in" id="btn-style" onclick="planTrip()"
+                style="box-shadow: 2px 2px 8px red;">Plan a Trip</button>
+              <a href="./payment.html"><button class="btn" data-aos="fade-in" id="btn-style"
+                  style="box-shadow: 2px 2px 8px red;">Book Now</button></a>
             </div>
+
 
 
             <br>
             <div class="story">
               <div class="video">
-                <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" type="video/mp4"></img>
+                <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" type="video/mp4"
+                  style="box-shadow:2px 2px 8px blue;">
                 <!-- link to the hmtl page with the video -->
-                <a href="story.html" class="btn_video" target="_blank">
+                <a href="story.html" class="btn_video">
                   <span><i class="ri-play-fill"></i></span>
               </div>
-
             </div>
             <span data-aos="fade-in">Watch our story</span>
           </div>
-        </div>
-        </div>
         </div>
       </section>
     </header>
@@ -160,7 +178,6 @@
     <br>
     <!-- Section of About Us -->
     <section class="About" id="AboutUs">
-
       <div class="color col-12">
         <div class="section__container about__container">
           <!-- Left background color column -->
@@ -168,117 +185,131 @@
           <!-- Right content container -->
           <div
             class="section__container gallary__container relative z-10 max-w-screen-xl px-4 mx-auto text-center pb-14">
-
             <div class="aboutcon">
-
               <div class="col-span-2 mx-auto lg:mx-0 lg:text-left">
-                <h1 class="headingofAbout section__title data-aos=" fade-in"><b>About Us</b></h1>
+                <h1 class="headingofAbout section__title " data-aos=" fade-in"><b>About Us</b></h1>
                 <!-- Article with about us content -->
                 <article class="w-full text-left format sm:format-base lg:format-lg format-blue dark:format-invert">
                   <!-- Adding the content -->
+                  <style>
+                    /* CSS for hover effect */
+                    .aboutcontent:hover {
+                      transform: scale(1.8);
+                      transition: transform 0.8s ease;
+                    }
+                  </style>
                   <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
-                    <span style="margin-left: 80px;"></span>Welcome to TourGuide, where we firmly believe that the true purpose of life is found in venturing
-                    into the unknown, embracing the unfamiliar, and living the extraordinary! Our mission is to empower
-                    you, the traveler, to uncover this purpose and maximize your travel experiences by offering
-                    unparalleled assistance.
+                    <span style="margin-left: 80px;"></span>Welcome to TourGuide, where we firmly believe that life's
+                    true purpose unfolds amidst the thrill of exploration, the embrace of the unfamiliar, and the
+                    pursuit of the extraordinary! Our mission is to embolden you, the intrepid traveler, to unveil this
+                    purpose and elevate your journey by providing unparalleled assistance and guidance. Let us be your
+                    compass as you navigate through the wonders of the world, forging unforgettable memories and
+                    discovering the essence of travel!
                   </p>
 
                   <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
-                    <span style="margin-left: 80px;"></span> At TourGuide, our local guides serve as your passport to effortlessly navigate through local
+                    <span style="margin-left: 80px;"></span> At TourGuide, our local guides serve as your passport to
+                    effortlessly navigate through local
                     languages, customs, and traditions that often make traveling to a foreign place overwhelming. We
                     provide curated travel itineraries, once-in-a-lifetime experiences, valuable travel advice, and the
                     freedom to customize itineraries to ensure everything aligns with your wishlist.
                   </p>
 
                   <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
-                    <span style="margin-left: 80px;"></span>Since our inception in 2024, TourGuide has cultivated a dynamic travel community, with 30,000+
+                    <span style="margin-left: 80px;"></span>Since our inception in 2024, TourGuide has cultivated a
+                    dynamic travel community, with 30,000+
                     guides hailing from over 200+ countries globally. We continue to grow each day, expanding the
                     horizons of possibilities for discovering the world. With TourGuide by your side, there's no limit
                     to the different ways you can embark on an unforgettable journey!
                   </p>
 
                   <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
-                    <strong><span style="margin-left: 80px;"></span> We welcome you to the TourGuide family - where every journey becomes a story worth
+                    <strong><span style="margin-left: 80px;"></span> We welcome you to the TourGuide family - where
+                      every journey becomes a story worth
                       sharing!</strong>
                   </p>
                 </article>
               </div>
             </div>
-            <!-- Right statistics container -->
-            <div class="col-6">
-
-              <div class="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-1 sm:gap-4 xl:gap-8 sm:space-y-0 md:mt-12">
-                <!-- Box 1 - Number of Guides -->
-                <div class="box1">
-                  <div class="iconss">
-
-                    <svg
-                      class="w-12 h-12 mx-auto dark:text-gray-100 group-hover:text-pink-500 group-hover:dark:text-pink-500"
-                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                      <!-- SVG Path for the icon -->
-                      <circle cx="8.5" cy="7" r="4" />
-                      <polyline points="17 11 19 13 23 9" />
-                    </svg>
-                    <h3
-                      class="font-semibold text-4xl md:text-3xl group-hover:text-thq_green-500 text-gray-900 dark:text-white mt-3.5"
-                      data-aos="fade-in">25000</h3>
-                    <p
-                      class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300">
-                      Guides</p>
-                  </div>
-                </div>
-                <!-- Box 2 - Number of Tours -->
-                <div class="box1">
-                  <div class="iconss">
-                    <svg
-                      class="w-12 h-12 mx-auto dark:text-gray-100 group-hover:text-pink-500 group-hover:dark:text-pink-500"
-                      viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" />
-                      <circle cx="12" cy="10" r="4" />
-                      <!-- SVG Path for the icon -->
-                      <path d="M6.75 16a8.015 8.015 0 1 0 9.25 -13" />
-                      <line x1="12" y1="18" x2="12" y2="22" />
-                      <line x1="8" y1="22" x2="16" y2="22" />
-                    </svg>
-                    <h3
-                      class="font-semibold text-4xl md:text-3xl  group-hover:text-thq_green-500 text-gray-900 dark:text-white mt-3.5"
-                      data-aos="fade-in">20000</h3>
-                    <p class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300"
-                      data-aos="fade-in">Tours</p>
-                  </div>
-                </div>
-                <!-- Box 3 - Number of Destinations -->
-                <div class="box1">
-                  <a href="" class="iconss">
-                    <svg
-                      class="w-12 h-12 mx-auto group-hover:text-pink-500 dark:text-gray-100 group-hover:dark:text-pink-500"
-                      viewBox="0 0 24 24" stroke-width="2" stroke="black" fill="none" stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <!-- SVG Path for the icon -->
-                      <path stroke="none" d="M0 0h24v24H0z" />
-                      <line x1="18" y1="6" x2="18" y2="6.01" />
-                      <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
-                      <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
-                      <line x1="9" y1="4" x2="9" y2="17" />
-                      <line x1="15" y1="15" x2="15" y2="20" />
-                    </svg>
-                    <h3
-                      class="font-semibold text-4xl md:text-3xl  group-hover:text-thq_green-500 text-black-900 dark:text-black mt-3.5"
-                      data-aos="fade-in">10994</h3>
-                    <p class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300"
-                      data-aos="fade-in">Destinations</p>
-                  </a>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
+    </section>
+
+
+    </div>
+    <!-- Right statistics container -->
+    <div data-aos="fade-left" class="col-6">
+
+      <div class="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-1 sm:gap-4 xl:gap-8 sm:space-y-0 md:mt-12">
+        <!-- Box 1 - Number of Guides -->
+        <div class="box1">
+          <div class="iconss">
+
+            <svg class="w-12 h-12 mx-auto dark:text-gray-100 group-hover:text-pink-500 group-hover:dark:text-pink-500"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <!-- SVG Path for the icon -->
+              <circle cx="8.5" cy="7" r="4" />
+              <polyline points="17 11 19 13 23 9" />
+            </svg>
+            <h3
+              class="font-semibold text-4xl md:text-3xl group-hover:text-thq_green-500 text-gray-900 dark:text-white mt-3.5"
+              data-aos="fade-in">25000</h3>
+            <p
+              class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300">
+              Guides</p>
+          </div>
+        </div>
+        <!-- Box 2 - Number of Tours -->
+        <div class="box1">
+          <div class="iconss">
+            <svg class="w-12 h-12 mx-auto dark:text-gray-100 group-hover:text-pink-500 group-hover:dark:text-pink-500"
+              viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" />
+              <circle cx="12" cy="10" r="4" />
+              <!-- SVG Path for the icon -->
+              <path d="M6.75 16a8.015 8.015 0 1 0 9.25 -13" />
+              <line x1="12" y1="18" x2="12" y2="22" />
+              <line x1="8" y1="22" x2="16" y2="22" />
+            </svg>
+            <h3
+              class="font-semibold text-4xl md:text-3xl  group-hover:text-thq_green-500 text-gray-900 dark:text-white mt-3.5"
+              data-aos="fade-in">20000</h3>
+            <p class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300"
+              data-aos="fade-in">Tours</p>
+          </div>
+        </div>
+        <!-- Box 3 - Number of Destinations -->
+        <div class="box1">
+          <a href="affordable-destinations.html" class="iconss">
+            <svg class="w-12 h-12 mx-auto group-hover:text-pink-500 dark:text-gray-100 group-hover:dark:text-pink-500"
+              viewBox="0 0 24 24" stroke-width="2" stroke="black" fill="none" stroke-linecap="round"
+              stroke-linejoin="round">
+              <!-- SVG Path for the icon -->
+              <path stroke="none" d="M0 0h24v24H0z" />
+              <line x1="18" y1="6" x2="18" y2="6.01" />
+              <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
+              <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
+              <line x1="9" y1="4" x2="9" y2="17" />
+              <line x1="15" y1="15" x2="15" y2="20" />
+            </svg>
+            <h3
+              class="font-semibold text-4xl md:text-3xl  group-hover:text-thq_green-500 text-black-900 dark:text-black mt-3.5"
+              data-aos="fade-in">10994</h3>
+            <p class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300"
+              data-aos="fade-in">Destinations</p>
+          </a>
+        </div>
       </div>
+    </div>
+
+    </div>
+    </div>
+    </div>
+    </div>
 
     </section>
     </header>
@@ -319,28 +350,28 @@
       </div>
     </div>
 
-    <section class="section__container destination__container" id="Destinations" data-aos="fade-up">
-      <div class="section__header">
-        <div>
-          <h2 class="section__title" data-aos="fade-in">Explore top destinations</h2>
-          <p class="section__subtitle" data-aos="fade-in">
-            Explore your suitable and dream places around the world. Here you
-            can find your right destination.
-          </p>
-        </div>
+    <!-- <section class="section__container destination__container" id="Destinations" data-aos="fade-up"> -->
+    <div class="section__header">
+      <div>
+        <h2 class="section__title" data-aos="fade-in">Explore top destinations</h2>
+        <p class="section__subtitle" data-aos="fade-in">
+          Explore your suitable and dream places around the world. Here you
+          can find your right destination.
+        </p>
       </div>
+    </div>
 
-      <!-- slideshow -->
-      <div class="slideshow-container" data-aos="fade-up">
+    <!-- slideshow -->
+    <!-- <div class="slideshow-container" data-aos="fade-up"> -->
 
-        <!-- Next and previous buttons -->
-        <div class="destination__nav">
+    <!-- Next and previous buttons -->
+    <!-- <div class="destination__nav">
           <span onclick="pullSlide(-1)"><i class="ri-arrow-left-s-line"></i></span>
           <span onclick="pullSlide(1)"><i class="ri-arrow-right-s-line"></i></span>
-        </div>
+        </div> -->
 
-        <!-- Full-width images with number and caption text -->
-        <div class="mySlides">
+    <!-- Full-width images with number and caption text -->
+    <!-- <div class="mySlides">
           <img src="./img/eiffelTower.webp" style="width:100%">
         </div>
 
@@ -361,8 +392,67 @@
           <span></span>
           <span></span>
         </div>
+      </div> -->
+    <div class="outer-box">
+      <div class="containers">
+            
+          <div class="card active" style="
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+              url('/img/paris.jpg')
+          ">
+          <div class="info">
+
+            <p>
+              ||Eiffel Tower||
+            </p>
+            <h3>PARIS</h3>
+          </div>
+        </div>
+
+        <div class="card" style="
+              background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+                url('/img/london.jpg')
+            ">
+          <div class="info">
+
+            <p>
+              ||Giant Wheel||
+            </p>
+            <h3>LONDON</h3>
+          </div>
+        </div>
+
+        <div class="card" style="
+              background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+                url('/img/goa.jpg')
+            ">
+          <div class="info">
+
+            <p>
+              ||Goa Beach||
+            </p>
+            <h3>GOA</h3>
+          </div>
+        </div>
+
+        <div class="card" style="
+              background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+                url('/img/maldives.jpg')">
+          <div class="info">
+
+            <p>
+              ||Male Beach||
+            </p>
+            <h3>MALDIVES</h3>
+          </div>
+        </div>
+
+
+
       </div>
-    </section>
+    </div>
+    <script src="explore.js"></script>
+    <!-- </section> -->
 
     <section class="trip" id="trip" data-aos="zoom-in" data-aos-offset="100">
       <div class="section__container trip__container">
@@ -379,8 +469,8 @@
               <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
               <div class="booking__price">
                 <div class="price"><span>From</span> $300</div>
-                <a href="./dedicated destinations/Santorini ,Aegean Sea/start.html"><button
-                    class="book__now btn-style">Book
+                <a href="./dedicated-destinations/santorini-aegean-sea/start.html"><button class="book__now btn-style"
+                    style="box-shadow: 2px 2px 8px red;">Book
                     Now</button></a>
               </div>
             </div>
@@ -392,8 +482,8 @@
               <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
               <div class="booking__price">
                 <div class="price"><span>From</span> $450</div>
-                <a href="./dedicated destinations/Machu Picchu ,Peru/Machu_start.html"><button
-                    class="book__now btn-style">Book
+                <a href="./dedicated-destinations/machu-picchu-peru/Machu_start.html"><button
+                    class="book__now btn-style" style="box-shadow: 2px 2px 8px red;">Book
                     Now</button></a>
               </div>
             </div>
@@ -405,14 +495,15 @@
               <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
               <div class="booking__price">
                 <div class="price"><span>From</span> $400</div>
-                <a href="./dedicated destinations/Grand Canyon National Park ,Arizona/Grand_start.html"><button
-                    class="book__now btn-style">Book Now</button></a>
+                <a href="./dedicated-destinations/grand-canyon-national-park-arizona/Grand_start.html"><button
+                    class="book__now btn-style" style="box-shadow: 2px 2px 8px red;">Book Now</button></a>
               </div>
             </div>
           </div>
         </div>
         <div class="view__all">
-          <a href="./package.html"><button class="btn" id="btn-style">View All</button></a>
+          <a href="./package.html"><button class="btn" id="btn-style" style="box-shadow: 2px 2px 8px red;">View
+              All</button></a>
         </div>
       </div>
     </section>
@@ -439,7 +530,8 @@
                 Explore your suitable and dream places around the world. Here you
                 can find your right destination.
               </p>
-              <button class="btn btn-style" id="btn-page" onclick="replaceDivs()" data-aos="zoom-in">View All</button>
+              <button class="btn btn-style" id="btn-page" onclick="replaceDivs()" data-aos="zoom-in"
+                style="box-shadow: 2px 2px 8px red;">View All</button>
             </div>
           </div>
         </div>
@@ -488,24 +580,66 @@
       </div>
       <!-- Trip Photo Gallery -->
       <div class="trip-gallery-container">
-        <img src="./img/Trip_Photos/photo1.png" height="250" width="200">
-        <img src="./img/Trip_Photos/photo2.png" height="250" width="200">
-        <img src="./img/Trip_Photos/photo3.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo4.png" height="250" width="200">
-        <img src="./img/Trip_Photos/photo5.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo6.png" height="250" width="200">
-        <img src="./img/Trip_Photos/photo7.png" height="250" width="200">
-        <img src="./img/Trip_Photos/photo8.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo9.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo10.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo11.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo12.jpeg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo13.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo14.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo16.png" height="250" width="200">
-        <img src="./img/Trip_Photos/photo18.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo19.jpg" height="250" width="200">
-        <img src="./img/Trip_Photos/photo20.png" height="250" width="200">
+
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo1.png" height="250" width="200">
+          <p><a href="https://maps.app.goo.gl/4ULWYJxSVD8AcUin6" target="_blank">LADAKH</a></p>
+        </figure>
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo2.png" height="250" width="200">
+          <p><a href="https://maps.app.goo.gl/zrA5UgDQoeUtRhhn7" target="_blank">RANNERDALE KNOTTS</a></p>
+        </figure>
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo3.jpg" height="250" width="200">
+          <p><a href="https://maps.app.goo.gl/eTfvw4peKN3AcMUy8" target="_blank">AMALPHI COAST</a></p>
+        </figure>
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo4.png" height="220" width="230">
+          <p><a href="https://maps.app.goo.gl/tBZLQcZbCHRWsgGX7" target="_blank">THE GOLDEN TEMPLE,PERIYAPATTNA</a></p>
+        </figure>
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo5.jpg" height="220" width="230">
+          <p><a href="https://maps.app.goo.gl/8Y3rnjtxU563KVvE9" target="_blank">MALSHEJ GHAT</a></p>
+        </figure>
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo6.png" height="220" width="230">
+          <p><a href="https://maps.app.goo.gl/cj2UZZoyCTzeoQjEA" target="_blank">SAHARA DESERT</a></p>
+        </figure>
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo7.png" height="220" width="230">
+          <p><a href="https://maps.app.goo.gl/Gk1fQts4zeVRdAWu6" target="_blank">MALDIVES</a></p>
+        </figure>
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo8.jpg" height="220" width="230">
+          <p><a href="https://maps.app.goo.gl/DbWvrFgfwwwTWuBT8" target="_blank">PUNAKHA SUSPENSION BRIDGE</a></p>
+        </figure>
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo9.jpg" height="220" width="230">
+          <p><a href="https://maps.app.goo.gl/gBGuxUNXXemiZ2Td8" target="_blank">ARU VALLEY</a></p>
+        </figure>
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo10.jpg" height="220" width="230">
+          <p><a href="https://maps.app.goo.gl/tQ4BT4gDoFtauReM9" target="_blank">THE GOLDEN BRIDGE</a></p>
+        </figure>
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo11.jpg" height="220" width="230">
+          <p><a href="https://maps.app.goo.gl/oqDnmF2pCqRxV5Cp6" target="_blank">LAKE DISTRICT</a></p>
+        </figure>
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo13.jpg" height="220" width="230">
+          <p><a href="https://maps.app.goo.gl/pHjaA4aqP41JxdAh9" target="_blank">MUNNAR</a></p>
+        </figure>
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo19.jpg" height="220" width="230">
+          <p><a href="https://maps.app.goo.gl/84rV6GhhginGXgbc8" target="_blank">STATUE OF LIBERTY</a></p>
+        </figure>
+        <figure class="image-container">
+          <img src="./img/Trip_Photos/photo20.png" height="220" width="230">
+          <p><a href="https://maps.app.goo.gl/GzVALHoLp4MgFmgw5" target="_blank">NAKKI LAKE</a></p>
+        </figure>
+
+        <!-- <img src="./img/Trip_Photos/photo3.jpg" height="240" width="200"> -->
+
       </div>
     </div>
 
@@ -556,6 +690,81 @@
         </div>
       </div>
     </section>
+
+
+
+    <!----------------------------------------------------- FAQ section ---------------------- -->
+
+    <section>
+      <h2 class="section__title" data-aos="zoom-in">
+        Frequently asked questions
+      </h2>
+      <div class="faq-container">
+        <div class="faq active" data-aos="zoom-in">
+          <h3 class="faq-title">How do I book my travel arrangements through your website?</h3>
+          <p class="faq-text">Booking your travel with us is simple and convenient. Start by entering your destination,
+            travel dates, and other relevant details on our homepage. Browse through the available options, including
+            flights, hotels, and car rentals. Once you find the perfect combination for your trip, follow the easy
+            step-by-step process to confirm your booking. If you encounter any issues or have questions during the
+            booking process, our customer support team is available 24/7 to assist you.</p>
+          <button class="faq-toggle">
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="faq" data-aos="zoom-in">
+          <h3 class="faq-title">What measures are in place to ensure the safety of my personal information?</h3>
+          <p class="faq-text">We take the security of your personal information seriously. Our website employs
+            state-of-the-art encryption technology to safeguard your data during the booking process. Additionally, we
+            adhere to strict privacy policies and comply with industry standards to protect your information. Rest
+            assured that your details are used solely for the purpose of facilitating your travel arrangements, and we
+            do not share your information with third parties without your consent. For more details, please refer to our
+            Privacy Policy.</p>
+          <button class="faq-toggle">
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="faq" data-aos="zoom-in">
+          <h3 class="faq-title">Can I make changes to my booking or cancel it if needed?</h3>
+          <p class="faq-text">Yes, we understand that plans can change. Depending on the terms and conditions of your
+            specific booking, you may be able to make modifications or cancel your reservation. Log in to your account
+            on our website, navigate to the "Manage Booking" section, and follow the provided instructions. Keep in mind
+            that there may be associated fees or restrictions depending on the type of booking and the time of the
+            requested changes. For further assistance, feel free to contact our customer support team, and they will
+            guide you through the process.</p>
+          <button class="faq-toggle">
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2,
+          slideShadows: true,
+        },
+        loop: true,
+      });
+    </script>
+
+
+
 
     <!--------------------------------------- Updated Contact Us Section ----------------------------------------------->
 
@@ -615,11 +824,11 @@
             <form id="contact-form" name="CalcDiverse Contact" autocomplete="off">
               <input type="text" id="Name" placeholder="Name" required>
               <input type="email" id="email" placeholder="Email" required>
-              <textarea placeholder="Type your message here.." required ></textarea><br>
-              <button onclick="sendMail()" class="btn btn-style" data-aos="fade-in" id="btn-style"
-                style="margin-right: 40px;">Send</button>
+              <textarea id="message" placeholder="Type your message here.." required></textarea><br>
+              <button type="submit" class="btn btn-style" data-aos="fade-in" id="btn-style"
+                style="margin-right: 40px;box-shadow: 2px 2px 8px red;">Send</button>
               <button onclick="window.location.href='feed.html'" class="btn  btn-style" data-aos="fade-in"
-                id="btn-style">Feedback</button>
+                id="btn-style" style="box-shadow: 2px 2px 8px red;">Feedback</button>
             </form>
           </div>
         </div>
@@ -641,7 +850,7 @@
         <div class="subscribe__form" data-aos="fade-up">
           <form>
             <input type="email" placeholder="Your email here" id="emailInput" required />
-            <button class="btn-send" id="send" type="submit">Send</button>
+            <button class="btn-send" id="send" type="submit" style="box-shadow: 2px 2px 8px blue;">Subscribe</button>
           </form>
         </div>
       </div>
@@ -695,13 +904,24 @@
           <p><span>Phone:</span> +91 8562145852</p>
         </div>
       </div>
+
+      <!--  New copyright code to make it dynamic and display current year -->
       <div class="footer__bar">
-        Copyright © 2023 Arpan Chowdhury. All rights reserved.
+        <div>
+          <li>Copyright &copy;<span id="year"></span> </span> Arpan Chowdhury. All rights reserved. </li>
+        </div>
       </div>
+
+      <!--   Previous copyright code
+<!--  <div class="footer__bar">
+        Copyright © 2023 Arpan Chowdhury. All rights reserved.
+      </div> -->
+
     </footer>
     <!-- adding a btn -->
     <button id="goToTopBtn" onclick="goToTop()" class="top-btn"> <i class="fa-solid fa-chevron-up"
         style="color: #00328a;"></i></button>
+
     <script>
       // Get the button
       var mybutton = document.getElementById("goToTopBtn");
@@ -754,11 +974,62 @@
       })
     </script>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        //initailizing emailjs 
+
+        (function () {
+          emailjs.init("kHyqhzLTyzP0cw1px");
+        })();
+
+      document.getElementById("contact-form").addEventListener('submit', function (event) {
+        event.preventDefault();
+        var email = document.getElementById("email").value;
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (!emailPattern.test(email)) {
+          alert("Please enter a valid email");
+          return;
+        }
+        sendEmail(email);
+      });
+
+      function sendEmail(email) {
+        var params = {
+          name: document.getElementById("Name").value,
+          email: email,
+          message: document.getElementById("message").value
+        }
+
+        const serviceID = "service_txp05dc";
+        const templateID = "template_16rbum9";
+
+        emailjs.send(serviceID, templateID, params)
+          .then(function (response) {
+            console.log("Success!", response.status, response.text);
+            alert("Email sent successfully!");
+          },
+            function (error) {
+              console.log("Failed to send email...", error);
+              alert("Failed to send Email. Please try again later.");
+            });
+      }
+    </script>
+
     <script src="index.js"></script>
 
 
+    <script>
+      window.embeddedChatbotConfig = {
+        chatbotId: "yDQ_EheFvX0HAPr9beQ5L",
+        domain: "www.chatbase.co"
+      }
+    </script>
+    <script src="https://www.chatbase.co/embed.min.js" chatbotId="yDQ_EheFvX0HAPr9beQ5L" domain="www.chatbase.co" defer>
+    </script>
 
-    <!-- Start of Conferbot Script -->
+
+
+    <!-- Start of Conferbot Script 
 
     <script type="text/javascript">
         (function (d, s, id) {
@@ -775,7 +1046,8 @@
           };
         })(document, 'script', 'conferbot-js');
     </script>
-    <!--End of Conferbot Script-->
+    End of Conferbot Script
+  -->
 
 
 
@@ -783,7 +1055,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
       integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<!-- 
+    <!-- 
     <script>
       (function ($) {
         var isDarkMode = false; // Assuming initially in light mode
@@ -1052,36 +1324,36 @@
     </script>
 
     <script>
-      
-// To highlight active navbar
-document.addEventListener("DOMContentLoaded", function () {
-      const navLinks = document.querySelectorAll('.navLinks a');
 
-      function highlightNavLink() {
-        const scrollPosition = window.scrollY;
+      // To highlight active navbar
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll('.navLinks a');
 
-        navLinks.forEach(link => {
-          const sectionId = link.getAttribute('href').substring(1);
-          const section = document.getElementById(sectionId);
+        function highlightNavLink() {
+          const scrollPosition = window.scrollY;
 
-          // Adjust this value to control when the link should be highlighted
-          const offsetPercentage = 20;
+          navLinks.forEach(link => {
+            const sectionId = link.getAttribute('href').substring(1);
+            const section = document.getElementById(sectionId);
 
-          if (section.offsetTop - window.innerHeight * (offsetPercentage / 100) <= scrollPosition &&
-            section.offsetTop + section.offsetHeight > scrollPosition) {
-            link.classList.add('active');
-          } else {
-            link.classList.remove('active');
-          }
-        });
-      }
+            // Adjust this value to control when the link should be highlighted
+            const offsetPercentage = 20;
 
-      document.addEventListener('scroll', highlightNavLink);
-      window.addEventListener('resize', highlightNavLink);
+            if (section.offsetTop - window.innerHeight * (offsetPercentage / 100) <= scrollPosition &&
+              section.offsetTop + section.offsetHeight > scrollPosition) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
 
-      // Initialize AOS library
-      AOS.init();
-    });</script>
+        document.addEventListener('scroll', highlightNavLink);
+        window.addEventListener('resize', highlightNavLink);
+
+        // Initialize AOS library
+        AOS.init();
+      });</script>
     <script>
 
       let progress = document.getElementById("progressbar");
@@ -1093,6 +1365,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
     </script>
+
 
 
 
@@ -1116,9 +1389,18 @@ document.addEventListener("DOMContentLoaded", function () {
   <script src="./Image-Gallery/script.js"></script>
   <script src="./index.js"></script>
 
+  <script src="faq-website.js"></script>
+  =======
+
+  <!--  Adding copyright javascript code to make it dynamic and display current year -->
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+
+
 </html><!-- New bubble background start -->
 
-    
+
 <div class="bubbles">
   <div class="bubble"></div>
   <div class="bubble"></div>
@@ -1143,7 +1425,7 @@ document.addEventListener("DOMContentLoaded", function () {
   <div class="bubble"></div>
   <div class="bubble"></div>
 
-  
+
 
 </div>
 <!-- New bubble background end -->

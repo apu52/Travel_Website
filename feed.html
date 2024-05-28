@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tour Feedback Form</title>
-    <!-- Add your stylesheets and scripts here -->
-    <link rel="stylesheet"  href="/feed.css" />
-    
+    <link rel="stylesheet" href="feed.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="feed.js" defer></script>
 </head>
 
 <body>
@@ -24,241 +25,110 @@
             </div>
 
             <div class="row mb-3">
-              <div class="col-md-6">
-                <label for="event_name" class="form-label">Name the tour you attended:</label>
-                <input type="text" name="event_name" id="event_name" class="form-control" required="required" />
-            </div>
+                <div class="col-md-6">
+                    <label for="event_name" class="form-label">Name the tour you attended:</label>
+                    <input type="text" name="event_name" id="event_name" class="form-control" required="required" />
+                </div><br>
                 <div class="col-md-6">
                     <label for="event_date" class="form-label">Tour Date:</label>
                     <input type="date" class="form-control" name="event_date" id="event_date" />
                 </div>
             </div>
-
             <div class="row mb-3">
-              <div class="col-md-6">
-                <label for="FullName" class="form-label">Name</label>
-                <input type="text" name="FullName" id="FullName" placeholder="Your Name" required="required" class="form-control" />
-            </div>
+                <div class="col-md-6">
+                    <label for="FullName" class="form-label">Name</label>
+                    <input type="text" name="FullName" id="FullName" placeholder="Your Name" required="required" class="form-control" />
+                </div><br>
                 <div class="col-md-6">
                     <label for="Email" class="form-label">Email:</label>
                     <input type="email" class="form-control" name="Email" id="Email" />
                 </div>
             </div>
-       </div>
-<h3>Whats your opinion about:</h3>
-<div class="row mb-3">
-  <div class="col-md-12">
-      <label>Ease of navigation?</label>
-    <div class="d-flex flex-wrap">
-        <div class="form-check form-check-inline me-3">
-        <input type="radio" name="rating_overall_experience" value="1" id="rating_overall_experience_0" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_0">1</label>
-      </div>
-      <div class="form-check form-check-inline me-3">  
-        <input type="radio" name="rating_overall_experience" value="2" id="rating_overall_experience_1" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_1">2</label>
-      </div>
-      <div class="form-check form-check-inline me-3">  
-        <input type="radio" name="rating_overall_experience" value="3" id="rating_overall_experience_2" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_2">3</label>
-      </div>
-      <div class="form-check form-check-inline me-3">  
-        <input type="radio" name="rating_overall_experience" value="4" id="rating_overall_experience_3" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_3">4</label>
-      </div>
-      <div class="form-check form-check-inline me-3">  
-        <input type="radio" name="rating_overall_experience" value="5" id="rating_overall_experience_4" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_4">5</label>
-      </div>
-    </div>
-      </div>
-  </div>
-</div>
-<div class="row mb-3">
-  <div class="col-md-12">
-      <label>Booking process</label>
-      <div class="d-flex flex-wrap">
-        <div class="form-check form-check-inline me-3">
-        <input type="radio" name="rating_overall_experience" value="1" id="rating_overall_experience_0" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_0">1</label>
-      </div>
-      <div class="form-check form-check-inline me-3">  
-        <input type="radio" name="rating_overall_experience" value="2" id="rating_overall_experience_1" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_1">2</label>
-      </div>
-      <div class="form-check form-check-inline me-3">  
-        <input type="radio" name="rating_overall_experience" value="3" id="rating_overall_experience_2" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_2">3</label>
-      </div>
-      <div class="form-check form-check-inline me-3">  
-        <input type="radio" name="rating_overall_experience" value="4" id="rating_overall_experience_3" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_3">4</label>
-      </div>
-      <div class="form-check form-check-inline me-3">  
-        <input type="radio" name="rating_overall_experience" value="5" id="rating_overall_experience_4" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_4">5</label>
-      </div>
-    </div>
-      </div>
-  </div>
-</div>
-<div class="row mb-3">
-  <div class="col-md-12">
-      <label>Accuracy of information provided</label>
-      <div class="d-flex flex-wrap">
-        <div class="form-check form-check-inline me-3">
-        <input type="radio" name="rating_overall_experience" value="1" id="rating_overall_experience_0" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_0">1</label>
-      </div>
-      <div class="form-check form-check-inline me-3">  
-        <input type="radio" name="rating_overall_experience" value="2" id="rating_overall_experience_1" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_1">2</label>
-      </div>
-      <div class="form-check form-check-inline me-3">  
-        <input type="radio" name="rating_overall_experience" value="3" id="rating_overall_experience_2" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_2">3</label>
-      </div>
-      <div class="form-check form-check-inline me-3">  
-        <input type="radio" name="rating_overall_experience" value="4" id="rating_overall_experience_3" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_3">4</label>
-      </div>
-      <div class="form-check form-check-inline me-3">  
-        <input type="radio" name="rating_overall_experience" value="5" id="rating_overall_experience_4" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_4">5</label>
-      </div>
-    </div>
-      </div>
-  </div>
-</div>
-<h3>How would you rate the following aspects?</h3>
-<div class="row mb-3">
-  <div class="col-md-12">
-      <label>Payment options</label>
-      <div class="d-flex flex-wrap">
-        <div class="form-check form-check-inline me-3">
-        <input type="radio" name="rating_overall_experience" value="1" id="rating_overall_experience_0" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_0">1</label>
-      </div>
-      <div class="form-check form-check-inline me-3">  
-        <input type="radio" name="rating_overall_experience" value="2" id="rating_overall_experience_1" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_1">2</label>
-      </div>
-      <div class="form-check form-check-inline me-3">  
-        <input type="radio" name="rating_overall_experience" value="3" id="rating_overall_experience_2" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_2">3</label>
-      </div>
-      <div class="form-check form-check-inline me-3">  
-        <input type="radio" name="rating_overall_experience" value="4" id="rating_overall_experience_3" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_3">4</label>
-      </div>
-      <div class="form-check form-check-inline me-3">  
-        <input type="radio" name="rating_overall_experience" value="5" id="rating_overall_experience_4" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_4">5</label>
-      </div>
-    </div>
-      </div>
-  </div>
-</div>
-<div class="row mb-3">
-  <div class="col-md-12">
-      <label>Security Measures</label>
-      <div class="d-flex flex-wrap">
-        <div class="form-check form-check-inline me-3">
-        <input type="radio" name="rating_overall_experience" value="1" id="rating_overall_experience_0" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_0">1</label>
-      </div>
-      <div class="form-check form-check-inline me-3">  
-        <input type="radio" name="rating_overall_experience" value="2" id="rating_overall_experience_1" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_1">2</label>
-      </div>
-      <div class="form-check form-check-inline me-3">  
-        <input type="radio" name="rating_overall_experience" value="3" id="rating_overall_experience_2" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_2">3</label>
-      </div>
-      <div class="form-check form-check-inline me-3">  
-        <input type="radio" name="rating_overall_experience" value="4" id="rating_overall_experience_3" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_3">4</label>
-      </div>
-      <div class="form-check form-check-inline me-3">  
-        <input type="radio" name="rating_overall_experience" value="5" id="rating_overall_experience_4" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_4">5</label>
-      </div>
-    </div>
-      </div>
-  </div>
-</div>
-<div class="row mb-3">
-  <div class="col-md-12">
-      <label>Customer Support</label>
-    <div class="d-flex flex-wrap">
-      <div class="form-check form-check-inline me-3">   
-        <input type="radio" name="rating_overall_experience" value="1" id="rating_overall_experience_0" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_0">1</label>
-      </div>
-      <div class="form-check form-check-inline me-3">  
-        <input type="radio" name="rating_overall_experience" value="2" id="rating_overall_experience_1" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_1">2</label>
-      </div>
-      <div class="form-check form-check-inline me-3">  
-        <input type="radio" name="rating_overall_experience" value="3" id="rating_overall_experience_2" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_2">3</label>
-      </div>
-      <div class="form-check form-check-inline me-3">  
-        <input type="radio" name="rating_overall_experience" value="4" id="rating_overall_experience_3" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_3">4</label>
-      </div>
-      <div class="form-check form-check-inline me-3">  
-        <input type="radio" name="rating_overall_experience" value="5" id="rating_overall_experience_4" class="form-check-input"/>
-        <label class="form-check-label" for="rating_overall_experience_4">5</label>
-      </div>
-    </div>
-   </div>
-</div>
-</div>
 
+            <h3>What's your opinion about:</h3>
+
+          
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <label>Ease of navigation?</label>
+                    <div class="d-flex flex-wrap" id="navigationEase">
+                    </div>
+                    <p id="navigationEase-rating-text">Rating: 0</p>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <label>Booking process</label>
+                    <div class="d-flex flex-wrap" id="bookingProcess">
+                    </div>
+                    <p id="bookingProcess-rating-text">Rating: 0</p>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <label>Accuracy of information provided</label>
+                    <div class="d-flex flex-wrap" id="accuracyInformation">
+                    </div>
+                    <p id="accuracyInformation-rating-text">Rating: 0</p>
+                </div>
+            </div>
+
+            <h3>How would you rate the following aspects?</h3>
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <label>Payment options</label>
+                    <div class="d-flex flex-wrap" id="paymentOptions">
+                    </div>
+                    <p id="paymentOptions-rating-text">Rating: 0</p>
+                </div>
+              </div>
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <label>Security Measures</label>
+                    <div class="d-flex flex-wrap" id="securityMeasures">
+                    </div>
+                    <p id="securityMeasures-rating-text">Rating: 0</p>
+                </div>
+            </div>
+
+         
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <label>Customer Support</label>
+                    <div class="d-flex flex-wrap" id="customerSupport">
+                    
+                    </div>
+                    <p id="customerSupport-rating-text">Rating: 0</p>
+                </div>
+            </div>
+
+            
             <div class="row mb-3">
                 <div class="col-md-12">
                     <label>How would you rate the overall experience?</label>
-                    <div class="d-flex flex-wrap">
-                      <div class="form-check form-check-inline me-3">
-                      <input type="radio" name="rating_overall_experience" value="1" id="rating_overall_experience_0" class="form-check-input"/>
-                      <label class="form-check-label" for="rating_overall_experience_0">1</label>
+                    <div class="d-flex flex-wrap" id="overallExperience">
+                        
                     </div>
-                    <div class="form-check form-check-inline me-3">  
-                      <input type="radio" name="rating_overall_experience" value="2" id="rating_overall_experience_1" class="form-check-input"/>
-                      <label class="form-check-label" for="rating_overall_experience_1">2</label>
-                    </div>
-                    <div class="form-check form-check-inline me-3">  
-                      <input type="radio" name="rating_overall_experience" value="3" id="rating_overall_experience_2" class="form-check-input"/>
-                      <label class="form-check-label" for="rating_overall_experience_2">3</label>
-                    </div>
-                    <div class="form-check form-check-inline me-3">  
-                      <input type="radio" name="rating_overall_experience" value="4" id="rating_overall_experience_3" class="form-check-input"/>
-                      <label class="form-check-label" for="rating_overall_experience_3">4</label>
-                    </div>
-                    <div class="form-check form-check-inline me-3">  
-                      <input type="radio" name="rating_overall_experience" value="5" id="rating_overall_experience_4" class="form-check-input"/>
-                      <label class="form-check-label" for="rating_overall_experience_4">5</label>
-                    </div>
-                  </div>
+                    <p id="overallExperience-rating-text">Rating: 0</p>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <label for="suggestions" class="form-label">Your suggestions for improving future events</label>
+                    <textarea name="suggestions" class="form-control" id="suggestions" rows="6"></textarea>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6 d-flex align-items-center">
+                    <div>
+                        <input type="checkbox" class="form-check-input" name="notify_future_events" id="notify_future_events" />
+                        <label for="notify_future_events" class="form-check-label">Would you like to be notified about future events?</label>
                     </div>
                 </div>
             </div>
-            
-            <div class="row mb-3">  
-              <div class="col-md-12">  
-                <label for="suggestions" class="form-label">Your suggestions for improving future events</label>
-                <textarea name="suggestions" class="form-control" id="suggestions" rows="6"></textarea>
-              </div>
-            </div>
-            <div class="row mb-3">  
-              <div class="col-md-6 d-flex align-items-center">  
-                <div>  
-                  <input type="checkbox" class="form-check-input" name="notify_future_events" id="notify_future_events"/>
-                  <label for="notify_future_events" class="form-check-label">Would you like to be notified about future events?</label>
-                </div>
-              </div>
-            </div>
+
             <div class="row mb-3">
                 <div class="col-md-6 d-flex align-items-center">
                     <div>
@@ -269,15 +139,12 @@
             </div>
 
             <div class="row mb-3">
-              <div class="col-md-6 d-flex align-items-center">
-                  <a href="thankyou.html" class="btn btn-lg px-4" style="background-color:#007bff;border-color:#007bff;color:white;">Submit</a>
-              </div>
-          </div>
-          
+                <div class="col-md-6 d-flex align-items-center">
+                    <button type="button" class="btn btn-lg px-4" style="background-color:#007bff;border-color:#007bff;color:white;" onclick="submitFeedback()">Submit</button>
+                </div>
+            </div>
         </form>
     </div>
-
-   
 
 </body>
 
