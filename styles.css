@@ -2002,7 +2002,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #00ffe7;
+  /* background-color: #00ffe7; */
+  background-color: #d0e7f9;
   overflow: hidden;
 }
 
