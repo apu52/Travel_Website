@@ -34,6 +34,9 @@
           </ul>
           <a href="newLogin.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
               data-aos="fade-down">Login</button></a>
+          <a href="newLogin.html" class="contact-btn"><button class="btn" id="logoutButton"
+                style="margin: 0; box-shadow:1.5px 1.5px 6px red;background-color: #555; color: #fff; cursor: not-allowed; display: none;" data-aos="fade-down" disabled>Log Out</button></a>
+
           <div class="toggle-container" data-aos="fade-down">
             <input id="themeToggle" class="toggle" type="checkbox">
           </div>
@@ -72,7 +75,7 @@
                 <form action="">
                     <input type="email" name="" id="" placeholder="Email" required>
                     <input type="password" name="" id="" placeholder="Password" required>
-                    <button type="submit" class=".content2_button">Login</button>
+                    <button type="submit" class=".content2_button" id="btn-style">Login</button>
 
                 </form>
             </div>
@@ -113,7 +116,7 @@
             opacity:0,
             duration:0.5,
         })
-        document.getElementById('registerButton').addEventListener('click', function(event) {
+        document.querySelector('.content2_button').addEventListener('click', function(event) {
             event.preventDefault();
 
             var name = document.getElementById('name').value;
@@ -130,6 +133,7 @@
                     return;
                 }
                 else{
+                    localStorage.setItem('isLoggedIn', 'true'); 
                     alert("Registration Successfully completed!");
                     window.location.href = './index.html';
                 }

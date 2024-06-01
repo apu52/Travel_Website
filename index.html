@@ -52,6 +52,25 @@
     }
     // menuButton.forEach((button) => (button.onclick = () => closeNav()));
 
+    document.addEventListener('DOMContentLoaded', function () {
+      var isLoggedIn = localStorage.getItem('isLoggedIn');
+      var loginButton = document.getElementById('btn-style');
+      var logoutButton = document.getElementById('logoutButton');
+
+      if (isLoggedIn === 'true') {
+          loginButton.style.display = 'none';
+          logoutButton.style.display = 'block';
+          logoutButton.disabled = false;
+          logoutButton.style.cursor = 'pointer';
+          logoutButton.addEventListener('click', function() {
+              localStorage.setItem('isLoggedIn', 'false');
+              window.location.href = './index.html';
+          });
+      } else {
+          loginButton.style.display = 'block';
+          logoutButton.style.display = 'none';
+      }
+  });
 
   </script>
 
@@ -123,6 +142,9 @@
         </ul>
         <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
             style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a>
+            <a href="newLogin.html" class="contact-btn"><button class="btn" id="logoutButton"
+              style="margin: 0; box-shadow:1.5px 1.5px 6px red;background-color: #555; color: #fff; display: none;" data-aos="fade-down">Log Out</button></a>
+  
         <div class="toggle-container" data-aos="fade-down">
           <input id="themeToggle" class="toggle" type="checkbox">
         </div>
