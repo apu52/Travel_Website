@@ -1796,7 +1796,9 @@ body {
     display: flex;
     cursor: pointer;
   }
-
+  .nav__logo{
+    margin-left:-80px;
+  }
   .navLinks {
     position: absolute;
     top: 70px;
@@ -1828,7 +1830,6 @@ body {
 
 .navLinks.activeHamburger {
   width: 100%;
-  padding-top: 100px;
 }
 
 /* New NAvbar CSS Ends Here*/
