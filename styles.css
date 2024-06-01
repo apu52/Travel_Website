@@ -1674,6 +1674,10 @@ body {
   box-shadow: 0 0 27px 0 rgb(0 0 0 / 5%);
 }
 
+.testimonial-user:hover{
+  box-shadow: rgb(220 95 95 / 75%) 3px -4px 67px -3px;
+}
+
 .testimonial-user > div {
   display: flex;
   flex-flow: column nowrap;
@@ -2019,10 +2023,12 @@ body {
   border-radius: 2%;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #00ffe7;
+  background-color:#91b4ffe7;
   overflow: hidden;
+  margin-bottom: 50px;
 }
 
 .swiper-slide {
