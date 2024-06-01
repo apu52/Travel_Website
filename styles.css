@@ -1,5 +1,7 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Oxygen:wght@300&display=swap');
+
 
 :root {
   --primary-color: #3685fb;
@@ -15,7 +17,9 @@
   --max-width: 1200px;
   --img-color: white;
   --head-text: #6a5acd;
+
   --bubble-color: #6a5acd;
+
   --testimonials-img-border: #6a5acd;
 }
 
@@ -30,7 +34,6 @@
 }
 
 /* new bubble start*/
-
 
 .bubbles {
   position: fixed;
@@ -260,8 +263,10 @@
   --img-color: red;
   --head-text: red;
   --text-same: #0d213f;
+
   --bubble-color: red;
   --testimonials-img-border: red;
+
 
 }
 
@@ -311,16 +316,16 @@ body {
   margin-top: 20px; /* Added margin-top */
   margin-bottom: -28px; /* Added margin-bottom */
   /*background: rgb(241, 239, 239);  Added background color */
-  display: flex; 
+  display: flex;
   justify-content: center; /* Center the content */
 }
 
 .sized-video {
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 800px; /* Limit the maximum width of the video */
-  height: auto; 
+  height: auto;
   outline: none; /* Remove default outline */
 }
 
@@ -328,20 +333,20 @@ body {
   max-width: var(--max-width);
   margin: auto;
   padding: 5rem 1rem;
-  margin-top: 20px; 
-  margin-bottom: -28px; 
+  margin-top: 20px;
+  margin-bottom: -28px;
   /*background: rgb(241, 239, 239);  */
-  display: flex; 
+  display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .sized-video {
-  border-radius: 15px; 
+  border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 800px; 
-  height: auto; 
+  max-width: 800px;
+  height: auto;
   outline: none; /* Remove default outline */
 }
 
@@ -365,9 +370,11 @@ body {
   letter-spacing: 0.5px;
   line-height: 34px;
   margin-bottom: 28px;
+
   background: #FD4766;
   background: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, #FD4766 79.69%);
   ;
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -480,7 +487,7 @@ img {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 nav {
@@ -505,8 +512,6 @@ nav {
   /* Assuming this is your primary color */
 }
 
-
-
 /* .nav__links {
   list-style: none;
   display: flex;
@@ -526,9 +531,11 @@ nav {
   color: #ff0000;
 }
 
+
 .home {
   margin-left: 210px;
 }
+
 
 header {
   background-color: var(--secondary-color);
@@ -575,12 +582,12 @@ header {
 }
 
 /* Apply fade-down animation to the toggle container */
-.toggle-container[data-aos='fade-down'] {
+.toggle-container[data-aos="fade-down"] {
   transition: opacity 500ms ease-in-out;
   opacity: 0;
 }
 
-.toggle-container[data-aos='fade-down'].aos-animate {
+.toggle-container[data-aos="fade-down"].aos-animate {
   opacity: 1;
 }
 
@@ -1385,8 +1392,10 @@ header {
 
 .contact h1 {
   color: #ab45e7;
+
   font-family: 'Noto Serif', serif;
   font-size: 2.8rem;
+
   text-align: center;
   margin: 20px;
 }
@@ -1432,7 +1441,7 @@ header {
   background: none;
   border-bottom: 2px solid var(--extra-light);
   color: var(--extra-light);
-  font-family: 'Oxygen', sans-serif;
+  font-family: "Oxygen", sans-serif;
 }
 
 .contact-form input::placeholder {
@@ -1447,7 +1456,7 @@ header {
   color: var(--extra-light);
   font-weight: 300;
   font-size: 15px;
-  font-family: 'Oxygen', sans-serif;
+  font-family: "Oxygen", sans-serif;
   margin-right: 150px;
   margin-top: 20px;
 }
@@ -1503,9 +1512,11 @@ textarea::-webkit-scrollbar {
 } */
 
 @media (max-width: 920px) {
+
   .items {
     grid-template-columns: 1fr;
   }
+
 
   .contact {
     display: none;
@@ -1565,7 +1576,7 @@ textarea::-webkit-scrollbar {
   border-bottom: 1px solid var(--text-dark);
   /* Change line color */
   color: var(--text-dark);
-  font-family: 'Oxygen', sans-serif;
+  font-family: "Oxygen", sans-serif;
 }
 
 .contact-form input::placeholder,
@@ -1657,7 +1668,7 @@ body {
 }
 
 .nav-tabs-custom .nav-item .nav-link::after {
-  content: '';
+  content: "";
   background: #6c6ff5;
   height: 2px;
   position: absolute;
@@ -1773,6 +1784,8 @@ body {
   position: relative;
   top: 0.5rem;
   z-index: 10;
+
+
 }
 
 .link a {
@@ -1781,7 +1794,7 @@ body {
 
 .link a::before {
   position: absolute;
-  content: '';
+  content: "";
   height: 2px;
   width: 0%;
   bottom: -5px;
@@ -1791,7 +1804,7 @@ body {
 
 .link a::after {
   position: absolute;
-  content: '';
+  content: "";
   height: 2px;
   width: 0%;
   top: -5px;
@@ -2033,7 +2046,9 @@ body {
 
 #toggle:hover i {
 
+
   color: #ffffff80;
   /* 80% opacity white for hovering effect */
 
 }
+
