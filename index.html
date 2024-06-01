@@ -54,12 +54,13 @@
 
     document.addEventListener('DOMContentLoaded', function () {
       var isLoggedIn = localStorage.getItem('isLoggedIn');
-      var loginButton = document.getElementById('btn-style');
+      var loginButton = document.getElementById('loginButton');
       var logoutButton = document.getElementById('logoutButton');
 
       if (isLoggedIn === 'true') {
           loginButton.style.display = 'none';
           logoutButton.style.display = 'block';
+          loginButton.disable = true ;
           logoutButton.disabled = false;
           logoutButton.style.cursor = 'pointer';
           logoutButton.addEventListener('click', function() {
@@ -140,7 +141,7 @@
 
 
         </ul>
-        <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
+        <a href="login-modified.html" class="contact-btn"><button class="btn" id="loginButton"
             style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a>
             <a href="newLogin.html" class="contact-btn"><button class="btn" id="logoutButton"
               style="margin: 0; box-shadow:1.5px 1.5px 6px red;background-color: #555; color: #fff; display: none;" data-aos="fade-down">Log Out</button></a>

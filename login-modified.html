@@ -32,9 +32,9 @@
             <li class="link" data-aos="fade-down"><a href="index.html">Contact Us</a></li>
   
           </ul>
-          <a href="newLogin.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
+          <a href="newLogin.html" class="contact-btn"><button class="btn" id="loginButton" style="margin: 0;"
               data-aos="fade-down">Login</button></a>
-          <a href="newLogin.html" class="contact-btn"><button class="btn" id="logoutButton"
+          <a href="login-modified.html" class="contact-btn"><button class="btn" id="logoutButton"
                 style="margin: 0; box-shadow:1.5px 1.5px 6px red;background-color: #555; color: #fff; cursor: not-allowed; display: none;" data-aos="fade-down" disabled>Log Out</button></a>
 
           <div class="toggle-container" data-aos="fade-down">
@@ -54,7 +54,7 @@
                 <h1>Welcome Back !</h1>
                 <img src="\img\image.png">
                 <p>To keep connected with us please login with your personal information.</p>
-                 <a href="newLogin.html"><button type="submit">Register Here</button></a>
+                 <a href="newLogin.html" class=".content2_button"><button type="submit">Register Here</button></a>
             </div>
             <div class="content2">
                 <h1>LOGIN</h1>
@@ -73,9 +73,9 @@
                 <p>OR</p>
 
                 <form action="">
-                    <input type="email" name="" id="" placeholder="Email" required>
-                    <input type="password" name="" id="" placeholder="Password" required>
-                    <button type="submit" class=".content2_button" id="btn-style">Login</button>
+                    <input type="email" name="" id="email" placeholder="Email" required>
+                    <input type="password" name="" id="password" placeholder="Password" required>
+                    <button type="submit" class=".content2_button" id="loginButton">Login</button>
 
                 </form>
             </div>
@@ -121,7 +121,7 @@
 
             var name = document.getElementById('name').value;
             var email = document.getElementById('email').value;
-            var password = document.getElementById('passWord').value;
+            var password = document.getElementById('password').value;
             
             if (name.trim() === '' || email.trim() === '' || password.trim() === '') {
                 alert('Please fill out all fields.');
