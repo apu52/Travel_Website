@@ -110,7 +110,7 @@
        <script>
         function handleSubmit(event) {
             event.preventDefault();
-            const today = new Date(); 
+            const today = new Date(); // Get today's date
             const startDate = new Date(document.getElementById('startDate').value);
             const endDate = new Date(document.getElementById('endDate').value);
 
@@ -120,7 +120,8 @@
                 alert('Start and end dates cannot be earlier than today.');
             } else {
                 alert('Trip planned successfully!');
-                
+                // You can proceed to submit the form or perform other actions here
+                // For demonstration, form submission is prevented.
             }
         }
 
