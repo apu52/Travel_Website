@@ -135,3 +135,41 @@ function validateAddress() {
         input.classList.remove('is-invalid');
     }
 }
+
+
+//Selected Package Rate
+  function getQueryParam(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  }
+
+  const selectedPackage = getQueryParam("package");
+
+  let packageCost;
+  let briefDescription;
+  switch (selectedPackage) {
+    case "basic":
+      packageCost = 15000; 
+      briefDescription = "Basic Package "; 
+      break;
+    case "premium":
+      packageCost = 20000; 
+      briefDescription = "Premium Package"; 
+      break;
+    case "ultimate":
+      packageCost = 25000; 
+      briefDescription = "Ultimate Package"; 
+      break;
+    default:
+      packageCost = 15000; 
+      briefDescription = "Package Not Selected"; 
+  }
+
+  document.getElementById("package-cost").textContent = packageCost + "/-";
+
+  document.getElementById("brief-description").textContent = briefDescription;
+
+  const promoCodeDiscount = 1000; 
+  const totalCost = packageCost - promoCodeDiscount;
+  document.getElementById("total-cost").textContent = totalCost + "/-";
+
