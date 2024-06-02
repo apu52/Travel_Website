@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Urbanist', sans-serif;
+}
+:root{
+    --var-primary-color: #2888E8FF
+}
+html{
+    font-size:62.5%;
+
+}
+h1,h2,h3,h4{
+    font-family:'Lexend Deca', sans-serif;
+}
+h1{
+    font-size:4.8rem;
+}
+h2{
+    font-size:3rem;
+}
+p{
+    font-size: 1.6rem;
+    letter-spacing: 0.08rem;
+}
+button, input[type="submit"]{
+    border: .1rem solid #fff;
+    outline: none;
+    padding: .6rem 1.2rem;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    letter-spacing: 0.01rem;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+.registration-header{
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("img/img1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    height:10vh;
+    width: 80%;
+    margin:auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.logo a{
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+main{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.registration, .login{
+    min-height: 30rem;
+    min-width: 40vw;
+    /* <Commented background to make the background as same */
+    /* background-color: aqua; */
+    /* removed aqua color from background which beautifies the page
+    background-color: aqua;  */
+    margin-left: 100px;
+}
+.grid-two--column{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
+}
+.form-text{
+  width: auto;
+    height: inherit;
+    padding-right: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    /* background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)),url("img/img2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* background-position: center; */
+    /* border-color: #091020; */
+    border-radius: 20px;
+    /* background-color: #ccc; */
+    color: #fff;
+    padding: 3rem 2rem;
+     margin-top: 60px;
+}
+.form-text p{
+    width: 30ch;
+    text-align: center;
+    margin: 2rem 0 3rem 0;
+
+}
+
+.registration-form, .login-form{
+  height: 500px;
+    width:50%;
+    padding-right: 150px;
+    
+    height:500px;
+    width: 400px;
+    min-height: 45vh;
+    background-color: transparent;
+    /* background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)),url("img/img2.jpg");
+    background-size: cover;
+    background-position: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+  border-radius:20px;
+}
+/* Added a class for the common background of both login as well as register block */
+.back{
+  background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)),url("img/img2.jpg");
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-position: center;
+  border-radius: 20px;
+    /* Added border radius to look better */
+    border-radius: 40px;
+}
+.registration-form p, .login-form p{
+    margin: 1rem 0 .7rem 0;
+}
+.social-icons{
+    display: flex;
+    gap: 1.4rem;
+    margin:  1.6rem 0 .6rem 0;
+}
+.fa-brands{
+    width:4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 0.1rem solid #ccc;
+    border-color: #000;
+    background-color:azure;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+}
+input{
+    width: 20rem;
+    margin: .7rem 0;
+    border: none;
+    /* Added border radius to make it look better */
+    border-radius: 20px;
+    background-color: #e8e8e8;
+    padding: 1rem 1.8rem;
+    letter-spacing: 0.1rem;
+    border-radius: 20px;
+}
+input[type="submit"]{
+    margin-top: 1rem;
+    min-width: 10rem;
+    background-color: var(--var-primary-color);
+    color:#fff;
+    /* Added border radius to make it look better */
+    border-radius: 20px;
+}
+.registration:not(.login-section--display){
+    display: none;
+}
+.login-section--display .registration{
+    display: block;
+}
+.login-section--display .login{
+    display: none;
+}
+
+
+/* New NAvbar CSS Starts Here*/
+
+.nav-container {
+    height: auto;
+    width: 200%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    z-index: 9999;
+  }
+  .newNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    height: auto;
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+  
+  .navLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    list-style: none;
+    gap: 1.2rem;
+    position: relative;
+    top: 0.5rem;
+    z-index: 10;
+  }
+  
+  .link a{
+    position: relative;
+  }
+  
+  .link a::before {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 0%;
+    bottom: -5px;
+    left: 0;
+    background-color: red;
+  }
+  
+  .link a::after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 0%;
+    top: -5px;
+    right: 0;
+    background-color: red;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .link a:hover::before{
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .link a:hover::after{
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .hamburger{
+    height: 2rem;
+    width: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    display: none;
+    transition: 0.2s;
+  }
+  
+  .line{
+    height: 5px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+  }
+  
+  @media screen and (max-width : 1220px) {
+    .hamburger {
+      display: flex;
+      cursor: pointer;
+    }
+    .navLinks {
+      position: absolute;
+      top: 70px;
+      background-color: #091020;
+      width: 0%;
+      left: 0;
+      height: 100vh;
+      padding: 2rem 0;
+      flex-direction: column;
+      transition: 0.2s;
+      overflow: hidden;
+    }
+  
+    .navLinks li {
+      width: 100%;
+      padding: 0.5rem 0;
+      background-color: #1f2532;
+      z-index: 10;
+    }
+  
+    #toggle {
+      font-size: 0.6rem;
+    }
+  
+    #btn-style {
+      font-size: 0.6rem;
+    }
+  }
+  
+  .navLinks.activeHamburger {
+    width: 100%;
+  }
+  
+  /* New NAvbar CSS Ends Here*/
