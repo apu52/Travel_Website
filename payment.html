@@ -14,17 +14,41 @@
 </head>
 
 <body>
-  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Checkout</li>
-    </ol>
-  </nav>
+  <div class="nav-container" id="top">
+    <nav class="newNav">
+      <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
 
-  <div class="container">
+      <ul class="navLinks">
+
+
+        <li onclick="closeNav()" class="link" data-aos=""><a href="#Home">Home</a></li>
+        <li onclick="closeNav()" class="link" data-aos=""><a href="#AboutUs"> AboutUs</a></li>
+        <li onclick="closeNav()" class="link" data-aos=""><a href="#Destinations">Destinations</a></li>
+        <li onclick="closeNav()" class="link" data-aos=""><a href="#trip">Pricing</a></li>
+        <li onclick="closeNav()" class="link" data-aos=""><a href="#ReviewGallery">Trip Gallery</a></li>
+        <li onclick="closeNav()" class="link" data-aos=""><a href="#testimonials">Testimonials</a></li>
+        <li onclick="closeNav()" class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+        <li onclick="closeNav()" class="link" data-aos=""><a href="#contact">Contact Us</a></li>
+
+
+      </ul>
+      <a href="newLogin.html" class="contact-btn"><button class="btn" id="btn-style"
+          style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a>
+      <div class="toggle-container" data-aos="fade-down">
+        <input id="themeToggle" class="toggle" type="checkbox">
+      </div>
+      <div class="hamburger" data-aos="fade-down">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container" style="margin-top: 70px;">
     <main>
       <div class="py-5 text-center">
-        <img class="d-block mx-auto mb-6" src="./img/Screenshot 2024-01-23 003448.png" alt="" height="100"><br>
+        
         <h2>Checkout form</h2>
       </div>
 
@@ -38,30 +62,31 @@
             <li class="list-group-item d-flex justify-content-between lh-sm">
               <div>
                 <h6 class="my-0">Your Package</h6>
-                <small class="text-body-secondary">Brief description</small>
-              </div>
-              <span class="text-body-secondary">15000/-</span>
-            </li>
+                <small id="brief-description" class="text-body-secondary">Brief description</small>
 
+              </div>
+              <span id="package-cost" class="text-body-secondary">15000/-</span>
+            </li>
+        
             <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
               <div class="text-success">
                 <h6 class="my-0">Promo code</h6>
-                <small>JWOC </small>
+                <small>JWOC</small>
               </div>
               <span class="text-success">−1000/-</span>
             </li>
             <li class="list-group-item d-flex justify-content-between">
               <span>Total (INR)</span>
-              <strong>14000/-</strong>
-            </li </ul>
-
-            <form class="card p-2">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Promo code">
-                <button type="submit" class="btn btn-secondary">Redeem</button>
-              </div>
-            </form>
-
+              <strong id="total-cost">14000/-</strong>
+            </li>
+          </ul>
+        
+          <form class="card p-2">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Promo code">
+              <button type="submit" class="btn btn-secondary">Redeem</button>
+            </div>
+          </form>
         </div>
         <!--  Checkout form -->
         <div class="col-md-7 col-lg-8">

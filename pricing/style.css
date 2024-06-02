@@ -14,10 +14,290 @@ body{
   background: #647df9;
 }
 
+.dark-theme {
+  --secondary-color: #0e1525;
+  --text-dark: #ffffff;
+  --arr-light: white;
+  --body-light: #0e1525;
+  --img-color: red;
+  --head-text: red;
+  --text-same: #0d213f;
+  --bubble-color: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, #FD4766 79.69%);
+  --testimonials-img-border: red;
+  span.aos-init.aos-animate{
+    color:white;
+  }
+
+}
+
+
+
+/*NAVBAR CSS*/
+
+/* New NAvbar CSS Starts Here*/
+
+
+nav {
+  background-color: #091020;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1001;
+}
+
+.nav__logo {
+  font-size: 1.8rem;
+  /* Increased font size for the logo */
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  /* border: 2px solid white; */
+  text-decoration: none;
+}
+
+.nav__logo span {
+  color: #3685fb;
+  /* Assuming this is your primary color */
+}
+
+
+.link a {
+  /* padding: 0.5rem 1rem; Adjusted padding for links */
+  color: #ffffff;
+  transition: 0.3s;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link a:hover {
+  color: #ff0000;
+}
+
+
+header {
+  background-color: var(--secondary-color);
+}
+
+
+.nav-container {
+  height: auto;
+  width: 200%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  z-index: 9999;
+  
+}
+
+.newNav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  height: auto;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.navLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  list-style: none;
+  gap: 1.2rem;
+  position: relative;
+  z-index: 10;
+  margin-right: 20px;
+
+}
+
+.link a {
+  position: relative;
+  list-style: none;
+}
+
+.link a::before {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 0%;
+  bottom: -5px;
+  left: 0;
+  background-color: red;
+}
+
+.link a::after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 0%;
+  top: -5px;
+  right: 0;
+  background-color: red;
+  transition: all 0.2s ease-in-out;
+}
+
+.link a:hover::before {
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.link a:hover::after {
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+
+.hamburger {
+  height: 2rem;
+  width: 1.7rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  display: none;
+  transition: 0.2s;
+}
+
+.line {
+  height: 5px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 1220px) {
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .navLinks {
+    position: absolute;
+    top: 70px;
+    background-color: #091020;
+    width: 0%;
+    left: 0;
+    height: 100vh;
+    padding: 2rem 0;
+    flex-direction: column;
+    transition: 0.2s;
+    overflow: hidden;
+  }
+
+  .navLinks li {
+    width: 100%;
+    padding: 0.5rem 0;
+    background-color: #1f2532;
+    z-index: 10;
+  }
+
+  #toggle {
+    font-size: 0.6rem;
+  }
+
+  #btn-style {
+    font-size: 0.6rem;
+  }
+}
+
+.navLinks.activeHamburger {
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 50px;
+  transition: all .4s ease-in-out;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: auto;
+  background-color: transparent;
+  border: 2px solid slateblue;
+  color: red;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 2px;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn:hover {
+  background-color: #ff0000; 
+  border-color: #ff0000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: brightness(1.5);
+}
+
+
+/*New toggle*/
+/* new toggle start */
+.toggle-container {
+  --size: 2rem;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  margin-right: 71px;
+}
+
+.toggle {
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
+  border-radius: 999px;
+  color: hsl(240, 100%, 95%);
+  transition: all 500ms;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &:checked {
+    --ray-size: calc(var(--size) * -0.4);
+    --offset-orthogonal: calc(var(--size) * 0.65);
+    --offset-diagonal: calc(var(--size) * 0.45);
+    transform: scale(0.75);
+    color: hsl(40, 100%, 50%);
+    box-shadow: inset 0 0 0 var(--size),
+      calc(var(--offset-orthogonal) * -1) 0 0 var(--ray-size),
+      var(--offset-orthogonal) 0 0 var(--ray-size),
+      0 calc(var(--offset-orthogonal) * -1) 0 var(--ray-size),
+      0 var(--offset-orthogonal) 0 var(--ray-size),
+      calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0
+        var(--ray-size),
+      var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size),
+      calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size),
+      var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
+  }
+}
+
+/* Apply fade-down animation to the toggle container */
+.toggle-container[data-aos='fade-down'] {
+  transition: opacity 500ms ease-in-out;
+  opacity: 1;
+}
+
+.toggle-container[data-aos='fade-down'].aos-animate {
+  opacity: 1;
+}
+
+
+/* New NAvbar CSS Ends Here*/
+
 .wrapper{
   /* max-width: 1090px; */
   width: 100%;
-  /* margin: 1%; */
+  margin-top: 10%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -28,6 +308,8 @@ body{
   padding: 30px 30px;
   position: relative;
   box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  
+  border-radius: 5px;
 }
 .table .price-section{
   display: flex;
@@ -35,26 +317,26 @@ body{
 }
 .table .price-area{
   height: 120px;
-  width: 120px;
-  border-radius: 50%;
+  width: 320px;
+  border-radius: 10%;
   padding: 2px;
 }
 .price-area .inner-area{
   height: 100%;
   width: 100%;
-  border-radius: 50%;
+  border-radius: 10%;
   border: 3px solid #fff;
   line-height: 117px;
   text-align: center;
   color: #fff;
-  position: relative;
+  /* position: relative; */
 }
 .price-area .inner-area .text{
   font-size: 25px;
   font-weight: 400;
   position: absolute;
-  top: -10px;
-  left: 17px;
+  top: 3px;
+  left: 60px;
 }
 .price-area .inner-area .price{
   font-size: 45px;
@@ -96,13 +378,13 @@ body{
 .features li .icon.cross{
   color: #cd3241;
 }
-.table .btn{
+.table .purchase-btn{
   width: 100%;
   display: flex;
   margin-top: 35px;
   justify-content: center;
 }
-.table .btn button{
+.table .purchase-btn button{
   width: 80%;
   height: 50px;
   color: #fff;
@@ -114,7 +396,7 @@ body{
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.table .btn button:hover{
+.table .purchase-btn button:hover{
   border-radius: 5px;
 }
 .basic .features li::selection{
@@ -125,22 +407,22 @@ body{
 .basic .inner-area{
   background: #ffd861;
 }
-.basic .btn button{
+.basic .purchase-btn button{
   border: 2px solid #ffd861;
   background: #fff;
   color: #ffd861;
 }
-.basic .btn button:hover{
+.basic .purchase-btn button:hover{
   background: #ffd861;
   color: #fff;
 }
 .premium ::selection,
 .premium .price-area,
 .premium .inner-area,
-.premium .btn button{
+.premium .purchase-btn button{
   background: #a26bfa;
 }
-.premium .btn button:hover{
+.premium .puchase-btn button:hover{
   background: #833af8;
 }
 .ultimate ::selection,
@@ -148,12 +430,12 @@ body{
 .ultimate .inner-area{
   background: #43ef8b;
 }
-.ultimate .btn button{
+.ultimate .purchase-btn button{
   border: 2px solid #43ef8b;
   color: #43ef8b;
   background: #fff;
 }
-.ultimate .btn button:hover{
+.ultimate .purchase-btn button:hover{
   background: #43ef8b;
   color: #fff;
 }
