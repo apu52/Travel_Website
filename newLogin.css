@@ -64,6 +64,7 @@
 }
 
 .content1 button {
+    cursor: pointer;
     font-size: 1.5rem;
     padding: 1rem 2rem;
     border-radius: 0.5rem;
