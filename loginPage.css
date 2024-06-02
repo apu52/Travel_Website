@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.main-container {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-image: url("./img/img1.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  backdrop-filter: blur(8px);
+  padding: 2rem 1rem;
+  background-color: rgba(44, 57, 104, 0.2);
+  border-radius: 20px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  font-weight: 600;
+  flex-wrap: wrap;
+}
+
+.content h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  text-shadow: 0px 0px 20px #010618, 0px 0px 40px #010618;
+  text-align: center;
+  position: relative;
+}
+.content p {
+  width: 100%;
+  font-size: 1.5rem;
+  color: white;
+  opacity: 1;
+  font-weight: 600;
+  text-shadow: 0px 0px 20px #010618, 0px 0px 40px #010618;
+  text-align: center;
+}
+text{
+    color:aquamarine
+}
+.register-link {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.register-link:hover {
+    color: #f39c12; /* Change to your desired hover color */
+}
+.passForget{
+    color: rgb(234, 35, 35);
+    font-weight: bold;
+    
+
+}
+
+.content button {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: linear-gradient(
+    109.6deg,
+    rgb(5, 85, 84) 11.2%,
+    rgb(64, 224, 208) 91.1%
+  );
+  color: white;
+  font-weight: 700;
+  box-shadow: 0px 0px 10px rgb(10, 64, 88);
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 1.1px;
+}
+
+.content button:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 10px rgb(10, 64, 88), 0px 0px 20px rgb(10, 64, 88),
+    0px 0px 30px rgb(10, 64, 88);
+  transition: all 0.2s ease-in-out;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+form > input {
+  font-size: 1.3rem;
+  padding: 0.5rem 0.5rem;
+  width: 20rem;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 6px;
+  color: white;
+  transition: outline 0.2s ease-in-out;
+  outline: none;
+}
+
+form > input::placeholder {
+  color: white;
+}
+
+form > input:focus {
+  outline: 3px solid #010618;
+  transition: outline 0.2s ease-in-out;
+  border: none;
+}
+
+@media screen and (max-width: 815px) {
+  .form-container {
+    flex-direction: column;
+  }
+
+  .content {
+    box-shadow: 0px 0px 20px #010618, 0px 0px 40px #010618;
+    padding: 2rem 0rem;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    width: 50%;
+  }
+}
+form>input {
+        font-size: 1rem;
+        padding: 0.5rem 0.5rem;
+        width: 14rem;
+        background: transparent;
+    }
