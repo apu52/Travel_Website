@@ -450,17 +450,17 @@ body {
 
 #btn-style {
 
-  display: inline-block;
+  display: inline;
   border-radius: 50px;
   transition: all .4s ease-in-out;
   padding-left: 20px;
-  padding-right: 20px;
+  padding-right: 0px;
   width: auto;
   background-color: transparent;
   border: 2px solid rgb(41, 0, 128);
   color: red;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 20px;
   letter-spacing: 2px;
   vertical-align: middle;
   text-decoration: none;
@@ -499,7 +499,7 @@ nav {
   background-color: #091020;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 50%;
   z-index: 1001;
 }
 
@@ -509,6 +509,7 @@ nav {
   font-weight: 600;
   color: #ffffff;
   cursor: pointer;
+  width: 50%;
   /* border: 2px solid white; */
 }
 
@@ -841,9 +842,9 @@ header {
 }
 
 .slideshow-container {
-  position: relative;
-  width: 100%;
-  height: 600px;
+  position:relative;
+  width: 70%;
+  height: 490px;
   overflow: hidden;
   border-radius: 10px;
   display: flex;
@@ -1763,8 +1764,8 @@ body {
 .nav-container {
   margin-top: 0;
   height: auto;
-  width: 200%;
-  display: flex;
+  width: 50%;
+  display:grid;
   justify-content: flex-start;
   align-items: center;
   position: fixed;
@@ -1774,6 +1775,7 @@ body {
 
 .newNav {
   display: flex;
+  /*flex-direction: column;*/
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
@@ -1783,13 +1785,14 @@ body {
 }
 
 .navLinks {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display:flex;
+  flex-direction: column;
+  justify-content:left;
+  align-items: left;
   font-size: 1.2rem;
   list-style: none;
   gap: 1.2rem;
-  position: relative;
+  position:fixed;
   top: 0.5rem;
   z-index: 10;
 
@@ -1886,7 +1889,7 @@ body {
 }
 
 .navLinks.activeHamburger {
-  width: 100%;
+  width: 20%;
 }
 
 /* New NAvbar CSS Ends Here*/
