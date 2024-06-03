@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+s<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="./Image-Gallery/style.css">
   <link rel="stylesheet" href="./Image-Gallery/stylecaptions.css">
   <link rel="stylesheet" href="explore.css">
-  <title>Tourguide</title>
+  <title>Tourguide</title>i
   <!-- adding a fav-icon -->
   <link rel="icon"
     href="img/A T logo with a white background and a square shape, connected to nature for a travel company.png"
@@ -818,7 +818,7 @@
 
     <section >
       <div class="container" id="cnt-form">
-        <div class="items" >
+        <div class="items" style="box-shadow:rgba(50,50,93,0.25) 0px 50px 100px -20px,rgba(0,0,0,0.3) 0px 30px 60px -30px,rgba(10,37,64,0.35) 0px -2px 6px 0px inset;">
           <div class="contact" data-aos="slide-right">
             <div >
               <h1 class="section__title" style="height: 90px;">Contact Us</h1>
@@ -829,11 +829,20 @@
           <div class="contact-form" data-aos="fade-in">
             <h1>Contact Us</h1>
             <form id="contact-form" name="CalcDiverse Contact" autocomplete="off">
-              <input type="text" id="Name" placeholder="Name" required>
-              <input type="email" id="email" placeholder="Email" required>
-              <textarea id="message" placeholder="Type your message here.." required></textarea><br>
+              <div class="one" style="position: relative;">
+                <i class="icon1 fa-solid fa-user"></i>
+                <input type="text" id="Name" placeholder="Name"  style="padding-left: 6%;">
+              </div>
+              <div style="position: relative;">
+                <i class="icon2 fa-solid fa-envelope" ></i>
+                <input type="email" id="email" placeholder="Email"style="padding-left:6%;" required>
+              </div>
+              <div style="position: relative;">
+                <i class="icon3 fa-solid fa-message"></i>
+                <textarea id="message" placeholder="Type your message here.." style="padding-left:6%;" required></textarea><br>
+              </div>
               <button type="submit" class="btn btn-style" data-aos="fade-in" id="btn-style"
-                style="margin-right: 40px;box-shadow: 2px 2px 8px red;">Send</button>
+              style="margin-right: 40px;box-shadow: 2px 2px 8px red;">Send</button>
               <button onclick="window.location.href='feed.html'" class="btn  btn-style" data-aos="fade-in"
                 id="btn-style" style="box-shadow: 2px 2px 8px red;">Feedback</button>
             </form>

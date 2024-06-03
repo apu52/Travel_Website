@@ -1484,7 +1484,24 @@ header {
 textarea::-webkit-scrollbar {
   width: 1em;
 }
-
+.icon1{
+position:absolute;
+top:calc(65%);           
+left:26.4%;
+color:grey;
+}
+.icon2{
+position:absolute;
+top:calc(33%);
+left:26.4%;
+color:grey;
+}
+.icon3{
+position:absolute;
+top:calc(30%);
+left:26.4%;
+color:grey;
+}
 /* .contact-form #button{
   border: none;
   cursor: pointer;
@@ -1521,8 +1538,6 @@ textarea::-webkit-scrollbar {
   .items {
     grid-template-columns: 1fr;
   }
-
-
   .contact {
     display: none;
   }
@@ -1541,6 +1556,15 @@ textarea::-webkit-scrollbar {
   .contact-form textarea {
     width: 75%;
   }
+  .icon1{
+    left:14.8%;
+  }
+  .icon2{
+    left:14.8%;
+  }
+  .icon3{
+    left:14.8%;
+  }
 }
 
 @media (max-width: 700px) {
@@ -1548,6 +1572,7 @@ textarea::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
     height: 100%;
+    
   }
 
   .contact {
@@ -1564,6 +1589,15 @@ textarea::-webkit-scrollbar {
 
   .contact-form h1 {
     display: none;
+  }
+  .icon1{
+    left:14.8%;
+  }
+  .icon2{
+    left:14.8%;
+  }
+  .icon3{
+    left:14.8%;
   }
 }
 
@@ -1589,6 +1623,7 @@ textarea::-webkit-scrollbar {
   color: var(--text-dark);
 }
 
+
 @media (max-width: 920px) {
 
   .contact-form input,
@@ -1596,7 +1631,18 @@ textarea::-webkit-scrollbar {
     width: 75%;
     color: var(--text-dark);
   }
+  .icon1{
+    left:14.8%;
+  }
+  .icon2{
+    left:14.8%;
+  }
+  .icon3{
+    left:14.8%;
+  }
+
 }
+
 
 @media (max-width: 700px) {
 
@@ -1605,6 +1651,16 @@ textarea::-webkit-scrollbar {
     width: 75%;
     color: var(--text-dark);
   }
+  .icon1{
+    left:14.8%;
+  }
+  .icon2{
+    left:14.8%;
+  }
+  .icon3{
+    left:14.8%;
+  }
+ 
 }
 
 /* Custom scrollbar for WebKit browsers */
