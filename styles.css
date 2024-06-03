@@ -433,7 +433,21 @@ body {
   text-decoration: none;
   white-space: nowrap;
 }
+body.dark-theme #send:hover {
+  background: linear-gradient(135deg, #f1879a, #c14e35);
+  color: white;
+}
+body.dark-theme #send {
+  background-color: #141e36;
+  border: 0.0001px solid red;
+  color: slateblue;
+}
+#send:hover{
+  background-color: slateblue;
+  border-color: slateblue;
+  color: #fff;
 
+}
 #send.focused {
   background-color: slateblue;
   border-color: slateblue;
@@ -1135,6 +1149,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .subscribe__form form {
@@ -1142,17 +1157,41 @@ header {
   max-width: 400px;
   display: flex;
   background-color: var(--extra-light);
-  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 30px slateblue;
   border-radius: 5rem;
+  overflow: hidden;
+  border: 0.001px solid gray;
 }
-
+body.dark-theme .subscribe__form form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    /* background-color: var(--extra-light); */
+    box-shadow: 5px 5px 30px rgba(162, 136, 248, 0.964);
+    border-radius: 5rem;
+    overflow: hidden;
+    border: 0.000001px solid var(--text-light);
+    /* color: white; */
+    
+}
 .subscribe__form input {
   width: 100%;
   padding: 1rem;
   outline: none;
   border: none;
-  border-radius: 5rem;
+  /* border-radius: 5rem; */
   font-size: 1rem;
+}
+
+body.light-theme #emailInput {
+  background-color: white;
+  color: black;
+}
+
+
+body.dark-theme #emailInput {
+  background-color: #222f4b;
+  color:white ;
 }
 
 .footer {
@@ -1166,7 +1205,7 @@ header {
   justify-content: space-evenly;
   align-items: flex-start;
 
-  /grid-template-columns: repeat(3, 1fr);/ gap: 24px;
+  /* /grid-template-columns: repeat(3, 1fr);/ gap: 24px; */
 
   color: var(--secondary-color);
 }
@@ -1316,7 +1355,7 @@ header {
   background-color: #0056b3;
 }
 
-/contact section overlapping with nav fixed/
+/* /contact section overlapping with nav fixed/ */
 /* #contact {
   padding-top: 100px;
 }
