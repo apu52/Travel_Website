@@ -23,9 +23,7 @@
   <link rel="stylesheet" href="explore.css">
   <title>Tourguide</title>
   <!-- adding a fav-icon -->
-  <link rel="icon"
-    href="img/A T logo with a white background and a square shape, connected to nature for a travel company.png"
-    type="image/x-icon" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
 
   <script src="index.js" defer></script>
   <script src="mouseEffect.js"></script>
@@ -1398,6 +1396,16 @@
   <script src="./index.js"></script>
 
   <script src="faq-website.js"></script>
+
+  <script>
+    window.onload = function() {
+        var link = top.document.createElement("link");
+        link.type = "image/x-icon";
+        link.rel = "icon";
+        link.href = "favicon.ico?v=1";
+        top.document.getElementsByTagName("head")[0].appendChild(link);
+    }
+</script>
   =======
 
   <!--  Adding copyright javascript code to make it dynamic and display current year -->
