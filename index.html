@@ -65,6 +65,39 @@
     .active {
       color: red !important;
     }
+    @media screen and (max-width:390px){
+      .nav__logo{
+        position: relative;
+        right: 1.9rem;
+      }
+      .contact-btn{
+        position: relative;
+        right: 2.5rem;
+      }
+      .toggle-container{
+        position: relative;
+        right: 2.5rem;
+
+      }
+      .toggle{
+        width: 130%;
+      } 
+      .line{
+        width: 130%;
+      }
+      .hamburger{
+        position: relative;
+        right: 1rem;
+      }
+    }
+    @media screen and (max-width:364px) {
+      .toggle{
+        width:190%;
+      }
+      .line{
+        width: 190%;
+      }
+    }
   </style>
 
 
@@ -128,8 +161,8 @@
 
 
 
-        <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
-            style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a>
+        <!-- <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
+            style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a> -->
 
         <div class="toggle-container" data-aos="fade-down">
           <input id="themeToggle" class="toggle" type="checkbox">
@@ -403,8 +436,8 @@
       </div> -->
     <div class="outer-box">
       <div class="containers">
-            
-          <div class="card active" style="
+
+        <div class="card active" style="
             background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
               url('/img/paris.jpg')
           ">
@@ -464,7 +497,7 @@
 
     <section class="trip" id="trip" data-aos="zoom-in" data-aos-offset="100">
       <div class="section__container trip__container">
-        <h2 class="section__title">Best trip package</h2>
+        <h2 class="section__title">Best trip packages</h2>
         <p class="section__subtitle">
           Explore your suitable and dream places around the world. Here you can
           find your right destination.
@@ -473,7 +506,7 @@
           <div class="trip__card">
             <img src="https://i.ibb.co/60nvYwQ/Screenshot-2023-07-14-173347.png" alt="trip" height="250" width="45" />
             <div class="trip__details">
-              <p>Santorini ,Aegean Sea</p>
+              <p>Santorini, Aegean Sea</p>
               <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
               <div class="booking__price">
                 <div class="price"><span>From</span> $300</div>
@@ -486,7 +519,7 @@
           <div class="trip__card">
             <img src="https://i.ibb.co/h1WgH8B/Screenshot-2023-07-14-173807.png" alt="trip" height="250" width="45" />
             <div class="trip__details">
-              <p>Machu Picchu ,Peru</p>
+              <p>Machu Picchu, Peru</p>
               <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
               <div class="booking__price">
                 <div class="price"><span>From</span> $450</div>
@@ -499,7 +532,7 @@
           <div class="trip__card">
             <img src="https://i.ibb.co/vc2W0wN/Screenshot-2023-07-14-174151.png" alt="trip" height="250" width="45" />
             <div class="trip__details">
-              <p>Grand Canyon National Park ,Arizona</p>
+              <p>Grand Canyon National Park, Arizona</p>
               <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
               <div class="booking__price">
                 <div class="price"><span>From</span> $400</div>
@@ -544,113 +577,115 @@
           </div>
         </div>
       </div>
-    <br><br>
-    <!-- New div components (hidden initially) -->
-    <div id="newDiv" style="display: none;" data-aos="zoom-in">
-      <!-- Sliding Animated Gallery -->
-      <div class="gallery-rotate-image">
-        <div class="image-container">
-          <span style="--i : 1">
-            <img src="./img/pexels-ajay-donga-2174656.jpg">
-          </span>
-          <span style="--i : 2">
-            <img src="./img/pexels-alex-azabache-3214958.jpg">
-          </span>
-          <span style="--i : 3">
-            <img src="./img/pexels-andrei-tanase-1271619.jpg">
-          </span>
-          <span style="--i : 4">
-            <img src="./img/pexels-josh-hild-2422259.jpg">
-          </span>
-          <span style="--i : 5">
-            <img src="./img/pexels-paulo-marcelo-martins-2412606.jpg">
-          </span>
-          <span style="--i : 6">
-            <img src="./img/pexels-quang-nguyen-vinh-2132126.jpg">
-          </span>
-          <span style="--i : 7">
-            <img src="./img/pexels-sam-kolder-2387871.jpg">
-          </span>
-          <span style="--i : 8">
-            <img src="./img/pexels-spencer-davis-4356144.jpg">
-          </span>
-          <span style="--i : 9">
-            <img src="./img/pexels-stijn-dijkstra-2499699.jpg">
-          </span>
-          <span style="--i : 10">
-            <img src="./img/pexels-zakaria-boumliha-2827374.jpg">
-          </span>
+      <br><br>
+      <!-- New div components (hidden initially) -->
+      <div id="newDiv" style="display: none;" data-aos="zoom-in">
+        <!-- Sliding Animated Gallery -->
+        <div class="gallery-rotate-image">
+          <div class="image-container">
+            <span style="--i : 1">
+              <img src="./img/pexels-ajay-donga-2174656.jpg">
+            </span>
+            <span style="--i : 2">
+              <img src="./img/pexels-alex-azabache-3214958.jpg">
+            </span>
+            <span style="--i : 3">
+              <img src="./img/pexels-andrei-tanase-1271619.jpg">
+            </span>
+            <span style="--i : 4">
+              <img src="./img/pexels-josh-hild-2422259.jpg">
+            </span>
+            <span style="--i : 5">
+              <img src="./img/pexels-paulo-marcelo-martins-2412606.jpg">
+            </span>
+            <span style="--i : 6">
+              <img src="./img/pexels-quang-nguyen-vinh-2132126.jpg">
+            </span>
+            <span style="--i : 7">
+              <img src="./img/pexels-sam-kolder-2387871.jpg">
+            </span>
+            <span style="--i : 8">
+              <img src="./img/pexels-spencer-davis-4356144.jpg">
+            </span>
+            <span style="--i : 9">
+              <img src="./img/pexels-stijn-dijkstra-2499699.jpg">
+            </span>
+            <span style="--i : 10">
+              <img src="./img/pexels-zakaria-boumliha-2827374.jpg">
+            </span>
+          </div>
+        </div>
+        <div class="btn-container">
+          <button class="btn btn-style" id="prev">Prev</button>
+          <button class="btn btn-style" id="next">Next</button>
+        </div>
+        <!-- Trip Photo Gallery -->
+        <div class="trip-gallery-container">
+
+          <figure class="image-container">
+            <img src="./img/Trip_Photos/photo1.png" height="250" width="200">
+            <p><a href="https://maps.app.goo.gl/4ULWYJxSVD8AcUin6" target="_blank">LADAKH</a></p>
+          </figure>
+          <figure class="image-container">
+            <img src="./img/Trip_Photos/photo2.png" height="250" width="200">
+            <p><a href="https://maps.app.goo.gl/zrA5UgDQoeUtRhhn7" target="_blank">RANNERDALE KNOTTS</a></p>
+          </figure>
+          <figure class="image-container">
+            <img src="./img/Trip_Photos/photo3.jpg" height="250" width="200">
+            <p><a href="https://maps.app.goo.gl/eTfvw4peKN3AcMUy8" target="_blank">AMALPHI COAST</a></p>
+          </figure>
+          <figure class="image-container">
+            <img src="./img/Trip_Photos/photo4.png" height="220" width="230">
+            <p><a href="https://maps.app.goo.gl/tBZLQcZbCHRWsgGX7" target="_blank">THE GOLDEN TEMPLE,PERIYAPATTNA</a>
+            </p>
+          </figure>
+          <figure class="image-container">
+            <img src="./img/Trip_Photos/photo5.jpg" height="220" width="230">
+            <p><a href="https://maps.app.goo.gl/8Y3rnjtxU563KVvE9" target="_blank">MALSHEJ GHAT</a></p>
+          </figure>
+          <figure class="image-container">
+            <img src="./img/Trip_Photos/photo6.png" height="220" width="230">
+            <p><a href="https://maps.app.goo.gl/cj2UZZoyCTzeoQjEA" target="_blank">SAHARA DESERT</a></p>
+          </figure>
+          <figure class="image-container">
+            <img src="./img/Trip_Photos/photo7.png" height="220" width="230">
+            <p><a href="https://maps.app.goo.gl/Gk1fQts4zeVRdAWu6" target="_blank">MALDIVES</a></p>
+          </figure>
+          <figure class="image-container">
+            <img src="./img/Trip_Photos/photo8.jpg" height="220" width="230">
+            <p><a href="https://maps.app.goo.gl/DbWvrFgfwwwTWuBT8" target="_blank">PUNAKHA SUSPENSION BRIDGE</a></p>
+          </figure>
+          <figure class="image-container">
+            <img src="./img/Trip_Photos/photo9.jpg" height="220" width="230">
+            <p><a href="https://maps.app.goo.gl/gBGuxUNXXemiZ2Td8" target="_blank">ARU VALLEY</a></p>
+          </figure>
+          <figure class="image-container">
+            <img src="./img/Trip_Photos/photo10.jpg" height="220" width="230">
+            <p><a href="https://maps.app.goo.gl/tQ4BT4gDoFtauReM9" target="_blank">THE GOLDEN BRIDGE</a></p>
+          </figure>
+          <figure class="image-container">
+            <img src="./img/Trip_Photos/photo11.jpg" height="220" width="230">
+            <p><a href="https://maps.app.goo.gl/oqDnmF2pCqRxV5Cp6" target="_blank">LAKE DISTRICT</a></p>
+          </figure>
+          <figure class="image-container">
+            <img src="./img/Trip_Photos/photo13.jpg" height="220" width="230">
+            <p><a href="https://maps.app.goo.gl/pHjaA4aqP41JxdAh9" target="_blank">MUNNAR</a></p>
+          </figure>
+          <figure class="image-container">
+            <img src="./img/Trip_Photos/photo19.jpg" height="220" width="230">
+            <p><a href="https://maps.app.goo.gl/84rV6GhhginGXgbc8" target="_blank">STATUE OF LIBERTY</a></p>
+          </figure>
+          <figure class="image-container">
+            <img src="./img/Trip_Photos/photo20.png" height="220" width="230">
+            <p><a href="https://maps.app.goo.gl/GzVALHoLp4MgFmgw5" target="_blank">NAKKI LAKE</a></p>
+          </figure>
+
+          <!-- <img src="./img/Trip_Photos/photo3.jpg" height="240" width="200"> -->
+
         </div>
       </div>
-      <div class="btn-container">
-        <button class="btn btn-style" id="prev">Prev</button>
-        <button class="btn btn-style" id="next">Next</button>
-      </div>
-      <!-- Trip Photo Gallery -->
-      <div class="trip-gallery-container">
-
-        <figure class="image-container">
-          <img src="./img/Trip_Photos/photo1.png" height="250" width="200">
-          <p><a href="https://maps.app.goo.gl/4ULWYJxSVD8AcUin6" target="_blank">LADAKH</a></p>
-        </figure>
-        <figure class="image-container">
-          <img src="./img/Trip_Photos/photo2.png" height="250" width="200">
-          <p><a href="https://maps.app.goo.gl/zrA5UgDQoeUtRhhn7" target="_blank">RANNERDALE KNOTTS</a></p>
-        </figure>
-        <figure class="image-container">
-          <img src="./img/Trip_Photos/photo3.jpg" height="250" width="200">
-          <p><a href="https://maps.app.goo.gl/eTfvw4peKN3AcMUy8" target="_blank">AMALPHI COAST</a></p>
-        </figure>
-        <figure class="image-container">
-          <img src="./img/Trip_Photos/photo4.png" height="220" width="230">
-          <p><a href="https://maps.app.goo.gl/tBZLQcZbCHRWsgGX7" target="_blank">THE GOLDEN TEMPLE,PERIYAPATTNA</a></p>
-        </figure>
-        <figure class="image-container">
-          <img src="./img/Trip_Photos/photo5.jpg" height="220" width="230">
-          <p><a href="https://maps.app.goo.gl/8Y3rnjtxU563KVvE9" target="_blank">MALSHEJ GHAT</a></p>
-        </figure>
-        <figure class="image-container">
-          <img src="./img/Trip_Photos/photo6.png" height="220" width="230">
-          <p><a href="https://maps.app.goo.gl/cj2UZZoyCTzeoQjEA" target="_blank">SAHARA DESERT</a></p>
-        </figure>
-        <figure class="image-container">
-          <img src="./img/Trip_Photos/photo7.png" height="220" width="230">
-          <p><a href="https://maps.app.goo.gl/Gk1fQts4zeVRdAWu6" target="_blank">MALDIVES</a></p>
-        </figure>
-        <figure class="image-container">
-          <img src="./img/Trip_Photos/photo8.jpg" height="220" width="230">
-          <p><a href="https://maps.app.goo.gl/DbWvrFgfwwwTWuBT8" target="_blank">PUNAKHA SUSPENSION BRIDGE</a></p>
-        </figure>
-        <figure class="image-container">
-          <img src="./img/Trip_Photos/photo9.jpg" height="220" width="230">
-          <p><a href="https://maps.app.goo.gl/gBGuxUNXXemiZ2Td8" target="_blank">ARU VALLEY</a></p>
-        </figure>
-        <figure class="image-container">
-          <img src="./img/Trip_Photos/photo10.jpg" height="220" width="230">
-          <p><a href="https://maps.app.goo.gl/tQ4BT4gDoFtauReM9" target="_blank">THE GOLDEN BRIDGE</a></p>
-        </figure>
-        <figure class="image-container">
-          <img src="./img/Trip_Photos/photo11.jpg" height="220" width="230">
-          <p><a href="https://maps.app.goo.gl/oqDnmF2pCqRxV5Cp6" target="_blank">LAKE DISTRICT</a></p>
-        </figure>
-        <figure class="image-container">
-          <img src="./img/Trip_Photos/photo13.jpg" height="220" width="230">
-          <p><a href="https://maps.app.goo.gl/pHjaA4aqP41JxdAh9" target="_blank">MUNNAR</a></p>
-        </figure>
-        <figure class="image-container">
-          <img src="./img/Trip_Photos/photo19.jpg" height="220" width="230">
-          <p><a href="https://maps.app.goo.gl/84rV6GhhginGXgbc8" target="_blank">STATUE OF LIBERTY</a></p>
-        </figure>
-        <figure class="image-container">
-          <img src="./img/Trip_Photos/photo20.png" height="220" width="230">
-          <p><a href="https://maps.app.goo.gl/GzVALHoLp4MgFmgw5" target="_blank">NAKKI LAKE</a></p>
-        </figure>
-
-        <!-- <img src="./img/Trip_Photos/photo3.jpg" height="240" width="200"> -->
-
-      </div>
-    </div></section>
-      <br/><br/><br/><br/><br/><br/>
+    </section>
+    <br /><br /><br /><br /><br /><br />
 
     <!-- Testimonials Section -->
 
@@ -816,11 +851,11 @@
 
   </section> -->
 
-    <section >
+    <section>
       <div class="container" id="cnt-form">
-        <div class="items" >
+        <div class="items">
           <div class="contact" data-aos="slide-right">
-            <div >
+            <div>
               <h1 class="section__title" style="height: 90px;">Contact Us</h1>
               <p>Feel Free to drop us a message with any inquiries or feedback.We're here to assist you!</p>
               <img src="./img/flat-design-illustration-customer-support_23-2148887720.avif">
@@ -872,13 +907,15 @@
             can find your right destination.
           </p>
         </div>
-        <div class="footer__area">
-          <h4 class="footer__subtitle">Support</h4>
+        <div class="footer__col">
+          <div class="footer__area">
+            <h4 class="footer__subtitle">Support</h4>
           <p><a href="./faq.html" class="footer__link">FAQs</a></p>
           <p><a href="./tnc.html" class="footer__link">Terms & Conditions</a></p>
           <p><a href="./privacy.html" class="footer__link">Privacy Policy</a></p>
           <p><a href="#cnt-form" class="footer__link">Contact</a></p>
-        </div>
+          </div>
+       
         <div class="footer__col">
           <h4>Address</h4>
           <div class="mapouter">
@@ -927,9 +964,9 @@
     </footer>
 
     <!-- adding a scrollup btn -->
-    <a  class="goupbtn" href="#"><i class="fa-solid fa-arrow-up"></i></a>
+    <a class="goupbtn" href="#"><i class="fa-solid fa-arrow-up"></i></a>
 
-      
+
     <script>
       // Get the button
       var mybutton = document.getElementById("goToTopBtn");
@@ -999,6 +1036,7 @@
           return;
         }
         sendEmail(email);
+        event.target.reset();
       });
 
       function sendEmail(email) {
