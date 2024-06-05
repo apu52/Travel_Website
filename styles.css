@@ -1201,7 +1201,8 @@ header {
 
 .footer__col p:hover {
   color: #ff0000;
-  font-size: 15px;
+  font-size: 13px;
+  overflow: hidden;
 }
 
 .footer__col p span {
@@ -1223,6 +1224,18 @@ header {
   /*   color: var(--secondary-color); */
   color: var(--extra-light);
   border-top: 1px solid var(--text-light);
+}
+
+.footer__area{
+   margin-left: 2.3rem;
+}
+
+.footer__area a{
+   color: white;
+}
+
+.footer__area a:hover{
+  color: #ff0000;
 }
 
 @media (width < 1200px) {
