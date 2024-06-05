@@ -65,6 +65,39 @@
     .active {
       color: red !important;
     }
+    @media screen and (max-width:390px){
+      .nav__logo{
+        position: relative;
+        right: 1.9rem;
+      }
+      .contact-btn{
+        position: relative;
+        right: 2.5rem;
+      }
+      .toggle-container{
+        position: relative;
+        right: 2.5rem;
+
+      }
+      .toggle{
+        width: 130%;
+      } 
+      .line{
+        width: 130%;
+      }
+      .hamburger{
+        position: relative;
+        right: 1rem;
+      }
+    }
+    @media screen and (max-width:364px) {
+      .toggle{
+        width:190%;
+      }
+      .line{
+        width: 190%;
+      }
+    }
   </style>
 
 
@@ -128,8 +161,8 @@
 
 
 
-        <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
-            style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a>
+        <!-- <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
+            style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a> -->
 
         <div class="toggle-container" data-aos="fade-down">
           <input id="themeToggle" class="toggle" type="checkbox">
