@@ -132,7 +132,7 @@
             style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a>
 
         <div class="toggle-container" data-aos="fade-down">
-          <input id="themeToggle" class="toggle" type="checkbox">
+          <input id="themeToggle" class="toggle" onclick="image()" type="checkbox">
         </div>
         <div class="hamburger" data-aos="fade-down">
           <div class="line"></div>
@@ -820,7 +820,7 @@
       <div class="container" id="cnt-form">
         <div class="items" >
           <div class="contact" data-aos="slide-right">
-            <div >
+            <div id="change">
               <h1 class="section__title" style="height: 90px;">Contact Us</h1>
               <p>Feel Free to drop us a message with any inquiries or feedback.We're here to assist you!</p>
               <img src="./img/flat-design-illustration-customer-support_23-2148887720.avif">
@@ -927,9 +927,7 @@
     </footer>
 
     <!-- adding a scrollup btn -->
-    <a  class="goupbtn" href="#"><i class="fa-solid fa-arrow-up"></i></a>
-
-      
+    <a  class="goupbtn" href="#"><i class="fa-solid fa-arrow-up"></i></a> 
     <script>
       // Get the button
       var mybutton = document.getElementById("goToTopBtn");
