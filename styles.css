@@ -2083,14 +2083,25 @@ body {
   height: 50px;
   background-color: #002152;
   bottom: 20px;
-  right: 80px;
-
+  right: 25px;
+  bottom: 80px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   text-decoration: none;
   color: white;
   text-align: center;
   line-height: 50px;
   font-size: 22px;
+  transition: all 0.5s;
+  transition: box-shadow 0.3s; /* Added transition for box-shadow */
 }
+
+.goupbtn:hover {
+  background-color: #004080;
+  transform: scale(1.1);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5) , 0 0 25px black , 0 0 50px black , 0 0 200px black;
+}
+
 
 /* Testimonial Section */
 @media (min-width: 320px) {
