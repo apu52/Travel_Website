@@ -46,10 +46,10 @@
       window.location.href = 'plantrip.html';
     }
     // const menuButton = document.getElementsByClassName('link');
-    function closeNav() {
-      let list = document.querySelector('.navLinks');
-      list.classList.toggle('activeHamburger');
-    }
+    //function closeNav() {
+    //  let list = document.querySelector('.navLinks');
+    //  list.classList.toggle('activeHamburger');
+    //}
     // menuButton.forEach((button) => (button.onclick = () => closeNav()));
 
 
@@ -142,15 +142,14 @@
 
         <ul class="navLinks">
 
-
-          <li onclick="closeNav()" class="link" data-aos=""><a href="#Home">Home</a></li>
-          <li onclick="closeNav()" class="link" data-aos=""><a href="#AboutUs"> AboutUs</a></li>
-          <li onclick="closeNav()" class="link" data-aos=""><a href="#Destinations">Destinations</a></li>
-          <li onclick="closeNav()" class="link" data-aos=""><a href="#trip">Pricing</a></li>
-          <li onclick="closeNav()" class="link" data-aos=""><a href="#ReviewGallery">Trip Gallery</a></li>
-          <li onclick="closeNav()" class="link" data-aos=""><a href="#testimonials">Testimonials</a></li>
-          <li onclick="closeNav()" class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
-          <li onclick="closeNav()" class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+          <li class="link" data-aos=""><a href="#Home">Home</a></li>
+          <li class="link" data-aos=""><a href="#AboutUs"> AboutUs</a></li>
+          <li class="link" data-aos=""><a href="#Destinations">Destinations</a></li>
+          <li class="link" data-aos=""><a href="#trip">Pricing</a></li>
+          <li class="link" data-aos=""><a href="#ReviewGallery">Trip Gallery</a></li>
+          <li class="link" data-aos=""><a href="#testimonials">Testimonials</a></li>
+          <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+          <li class="link" data-aos=""><a href="#contact">Contact Us</a></li>
 
 
         </ul>
@@ -391,8 +390,8 @@
       </div>
     </div>
 
-    <!-- <section class="section__container destination__container" id="Destinations" data-aos="fade-up"> -->
-    <div class="section__header" id="Destinations">
+    <section class="section__container destination__container" id="Destinations" data-aos="fade-up">
+    <div class="section__header">
       <div>
         <h2 class="section__title" data-aos="fade-in">Explore top destinations</h2>
         <p class="section__subtitle" data-aos="fade-in">
@@ -493,7 +492,7 @@
       </div>
     </div>
     <script src="explore.js"></script>
-    <!-- </section> -->
+    </section>
 
     <section class="trip" id="trip" data-aos="zoom-in" data-aos-offset="100">
       <div class="section__container trip__container">
