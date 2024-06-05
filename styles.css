@@ -1049,15 +1049,10 @@ header {
   background-color: var(--primary-color);
 }
 
-.gallary {
-  /* border: 2px solid green; */
-  width: var(--max-width);
-}
-
 .gallary__container {
   display: flex;
   background-color: var(--secondary-color);
-  width: var(--max-width);
+  width: 80%;
   justify-content: center;
   align-items: center;
   gap: 4rem;

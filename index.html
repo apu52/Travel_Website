@@ -97,7 +97,8 @@
       }
     }
   </style>
-
+<link rel="stylesheet" href="imstyle.css">
+<link rel="stylesheet" href="jquery.flipster.min.css">
 
 </head>
 
@@ -545,35 +546,51 @@
         </div>
       </div>
     </section>
-
-
-    <section class="gallary" id="ReviewGallery">
-      <div class="section__container gallary__container">
-        <div class="section__container gallary__container" id="originalDiv">
-          <div class="image__gallary">
-            <div class="gallary__col" data-aos="zoom-in">
-              <img src="https://i.ibb.co/ZYDJ6vv/pexels-spencer-davis-4356144.jpg" alt="gallary" />
-            </div>
-            <div class="gallary__col" data-aos="zoom-in">
-              <img src="https://i.ibb.co/W3HTbYG/pexels-zakaria-boumliha-2827374.jpg" alt="gallary" />
-              <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" alt="gallary" />
-            </div>
-          </div>
-          <div class="gallary__content">
-            <div>
-              <h2 class="section__title" data-aos="zoom-in">
-                Our trip gallery that will inspire you
-              </h2>
-              <p class="section__subtitle" data-aos="zoom-in">
-                Explore your suitable and dream places around the world. Here you
-                can find your right destination.
-              </p>
-              <button class="btn btn-style" id="btn-page" onclick="replaceDivs()" data-aos="zoom-in"
-                style="box-shadow: 2px 2px 8px rgb(0, 191, 255);">View All</button>
-            </div>
-          </div>
-        </div>
+    <div class="hero">
+      <div class="carousel">
+        <ul>
+            <li><img src="https://i.ibb.co/ZYDJ6vv/pexels-spencer-davis-4356144.jpg"></li>
+            <li><img src="https://i.ibb.co/W3HTbYG/pexels-zakaria-boumliha-2827374.jpg"></li>
+            <li><img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg"></li>
+            <li><img src="https://www.shutterstock.com/image-photo/attractive-young-female-tourist-exploring-260nw-2206967581.jpg"></li>
+            <li><img src="https://thumbs.dreamstime.com/b/young-man-tourist-sail-long-tail-thailand-boat-ocean-sea-vacation-travel-trip-beautiful-nature-87331931.jpg"></li>
+            <li><img src="https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/Feature-Akshardham-Temple.jpg"></li>
+            <li><img src="https://etimg.etb2bimg.com/photo/106124800.cms"></li>
+            <li><img src="https://i.insider.com/5dcc2f02e94e860aff271137?width=700"></li>
+            <li><img src="https://static01.nyt.com/images/2022/03/23/multimedia/23-virus-briefing-capitol/23-virus-briefing-capitol-articleLarge.jpg?quality=75&auto=webp&disable=upscale"></li>
+            <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWh9aGHycWhRya4V6ZiJFL26LyIHheiu-EoQ&s"></li>
+        
+        </ul>
       </div>
+    
+     
+
+</div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+    <script src="jquery.flipster.min.js"></script>
+<script>
+$('.carousel').flipster({
+    style:'carousel',
+    spacing: -0.3,
+});
+</script>
+<div class="gallary__content" style="margin-top: 10px;width:80%">
+  <div>
+    <h2 class="section__title" data-aos="zoom-in">
+      Our trip gallery that will inspire you
+    </h2>
+    <p class="section__subtitle" data-aos="zoom-in">
+      Explore your suitable and dream places around the world. Here you
+      can find your right destination.
+    </p>
+    <button class="btn btn-style" id="btn-page" onclick="replaceDivs()" data-aos="zoom-in"
+      style="box-shadow: 2px 2px 8px rgb(0, 191, 255);">View All</button>
+  </div>
+</div>
       <br><br>
       <!-- New div components (hidden initially) -->
       <div id="newDiv" style="display: none;" data-aos="zoom-in">
