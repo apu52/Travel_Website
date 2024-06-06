@@ -22,8 +22,12 @@ themeToggle.addEventListener("change", () => {
   if (document.body.classList.contains("dark-theme")) {
     themeLabel.style.background = "#fff"; // Adjust color for the checked state as needed
     console.log("Dark theme");
+    document.body.classList.remove("dark-theme");
+    document.body.classList.add("light-theme");
   } else {
     themeLabel.style.background = "var(--primary-color)"; // Adjust color for the unchecked state as needed
     console.log("Light theme");
+    document.body.classList.remove("light-theme");
+    document.body.classList.add("dark-theme");
   }
 });
