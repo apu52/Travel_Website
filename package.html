@@ -155,16 +155,121 @@
   </div>
 
 
-
-
   <section class="trip" id="trip">
     <div class="section__container trip__container">
       <h2 class="section__title">Best trip package</h2>
       <p class="section__subtitle">
-        Explore your suitable and dream places around the world. Here you can
-        find your right destination.
-      </p>
+        Explore your suitable and dream places around the world. Here you can find your right destination.</p>
       </b></h2>
+
+      <!-- filter html -->
+      <div class="filter-search">
+        <select class="price-filter" id="priceFilter" onchange="filterProducts()">
+          <option value="">All Prices</option>
+        <option value="400">Below $400</option>
+        <option value="500">Below $500</option>
+        <!-- Add more options as needed -->
+      </select>
+      
+      <!-- search button html -->
+      <form onsubmit="search(event)" class="search-bar"> 
+        <input type="text" id ="find" placeholder="search places" onkeyup="search()" name="q">
+        <button type="submit" value="search" ><b>GO!</b></button>
+      </form>
+    </div>
+    <h2 id="noResults" style="display: none;" ><b>NO RESULTS FOUND</b> <img src="notFound.jpg" ></h2>
+    <!-- search styling -->
+    <style>
+      .filter-search {
+      display: flex;
+      align-items: center; 
+}
+      .price-filter{
+        display: flex;
+        margin-left: auto;
+        position: absolute;
+        top: 38%; 
+        right: 11%;
+      transform: translateY(-50%);
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #fcfdff;
+      color: #333;
+      font-size: 15px;
+      }
+      .search-bar{
+        width: 90%;
+        height: 50%;
+        max-width: 100%;
+        background:rgba(0, 13, 79, 0.696);
+        display: flex;
+        align-items: center;
+        border-radius: 58px;
+        padding: 10px 10px;
+      }
+      .search-bar input{
+        background: rgb(255, 255, 255);
+        flex: 1;
+        border-radius: 60px;
+        outline: none;
+        padding: 10px 20px;
+        font-size: 15px;
+        color: #0c0c0c;
+      }
+      .search-bar button{
+        border: 0;
+        border-radius: 40%;
+        width: 50px;
+        height: 40px;
+        color: #0b0a0a;
+        font-size: small;
+        background:#ffffffb8;
+        cursor: pointer;
+      }
+    </style>
+
+     <!--javascript for functionality of search button-->
+     <script type="text/javascript">
+      function search(event){
+        event.preventDefault();
+        let filter = document.getElementById('find').value.toUpperCase();
+        let item = document.querySelectorAll('.trip__card');
+        let l = document.getElementsByTagName('p');
+        var found = false;
+        for(var i = 0; i < l.length; i++){
+          let a = item[i].getElementsByTagName('p')[0];
+          let value = a.innerHTML || a.innerText || a.textContent;
+          if(value.toUpperCase().indexOf(filter) > -1) {
+            item[i].style.display = "";
+            found = true;
+          }
+    else {
+      item[i].style.display = "none";
+      document.getElementById("noResults").style.display = found ? "none" : "block";
+    }
+    }
+   }
+</script>
+<!-- filter's functionality -->
+<script>
+function filterProducts() {
+    var priceFilter = document.getElementById('priceFilter').value;
+    var products = document.getElementsByClassName('trip__card');
+
+    for (var i = 0; i < products.length; i++) {
+        var productPrice = parseFloat(products[i].querySelector('.price').getAttribute('data-price'));
+        if (priceFilter === "" || productPrice <= parseFloat(priceFilter)) {
+            products[i].style.display = "block";
+        } else {
+            products[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+      <!-- end of search button -->
+        
       <div class="trip__grid">
 
         <div class="trip__card">
@@ -173,7 +278,7 @@
             <p>Santorini ,Aegean Sea</p>
             <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
             <div class="booking__price">
-              <div class="price"><span>From</span> $300</div>
+              <div class="price" id="filter" data-price="300"><span>From</span> $300</div>
               <a href="./dedicated-destinations/santorini-aegean-sea/start.html"><button class="book__now">Book
                   Now</button></a>
             </div>
@@ -185,7 +290,7 @@
             <p>Machu Picchu ,Peru</p>
             <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
             <div class="booking__price">
-              <div class="price"><span>From</span> $450</div>
+              <div class="price"id="filter" data-price="450"><span>From</span> $450</div>
               <a href="./dedicated-destinations/machu-picchu-peru/Machu_start.html"><button class="book__now">Book
                   Now</button></a>
             </div>
@@ -197,7 +302,7 @@
             <p>Grand Canyon National Park ,Arizona</p>
             <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
             <div class="booking__price">
-              <div class="price"><span>From</span> $400</div>
+              <div class="price" id="filter" data-price="400"><span>From</span> $400</div>
               <a href="./dedicated-destinations/grand-canyon-national-park-arizona/Grand_start.html"><button
                   class="book__now">Book Now</button></a>
             </div>
@@ -209,7 +314,7 @@
             <p>London</p>
             <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
             <div class="booking__price">
-              <div class="price"><span>From</span> $300</div>
+              <div class="price" id="filter" data-price="300"><span>From</span> $300</div>
               <a href="./dedicated-destinations/london/start.html"><button class="book__now">Book Now</button></a>
             </div>
           </div>
@@ -220,7 +325,7 @@
             <p>Dubai</p>
             <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
             <div class="booking__price">
-              <div class="price"><span>From</span> $450</div>
+              <div class="price"id="filter" data-price="450"><span>From</span> $450</div>
               <a href="./dedicated-destinations/dubai/start.html"><button class="book__now">Book Now</button></a>
             </div>
           </div>
@@ -231,7 +336,7 @@
             <p>New York</p>
             <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
             <div class="booking__price">
-              <div class="price"><span>From</span> $400</div>
+              <div class="price" id="filter" data-price="400"><span>From</span> $400</div>
               <a href="./dedicated-destinations/new-york/start.html"><button class="book__now">Book Now</button></a>
             </div>
           </div>
@@ -243,7 +348,7 @@
             <p>Paris</p>
             <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
             <div class="booking__price">
-              <div class="price"><span>From</span> $300</div>
+              <div class="price" id="filter" data-price="300"><span>From</span> $300</div>
               <a href="./dedicated-destinations/paris/start.html"><button class="book__now">Book Now</button></a>
             </div>
           </div>
@@ -254,7 +359,7 @@
             <p>Goa</p>
             <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
             <div class="booking__price">
-              <div class="price"><span>From</span> $450</div>
+              <div class="price" id="filter" data-price="450"><span>From</span> $450</div>
               <a href="./dedicated-destinations/goa/start.html"><button class="book__now">Book Now</button></a>
             </div>
           </div>
@@ -265,7 +370,7 @@
             <p>Kashmir</p>
             <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
             <div class="booking__price">
-              <div class="price"><span>From</span> $400</div>
+              <div class="price" id="filter" data-price="400"><span>From</span> $400</div>
               <a href="./dedicated-destinations/kashmir/start.html"><button class="book__now">Book Now</button></a>
             </div>
           </div>
@@ -276,7 +381,7 @@
             <p>Maldives</p>
             <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
             <div class="booking__price">
-              <div class="price"><span>From</span> $300</div>
+              <div class="price" id="filter" data-price="300"><span>From</span> $300</div>
               <a href="./dedicated-destinations/maldives/start.html"><button class="book__now">Book Now</button></a>
             </div>
           </div>
@@ -287,7 +392,7 @@
             <p>Bali</p>
             <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
             <div class="booking__price">
-              <div class="price"><span>From</span> $450</div>
+              <div class="price" id="filter" data-price="450"><span>From</span> $450</div>
               <a href="./dedicated-destinations/bali/start.html"><button class="book__now">Book Now</button></a>
             </div>
           </div>
@@ -299,7 +404,7 @@
             <p>Brazil</p>
             <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
             <div class="booking__price">
-              <div class="price"><span>From</span> $400</div>
+              <div class="price" id="filter" data-price="400"><span>From</span> $400</div>
               <a href="./dedicated-destinations/brazil/start.html"><button class="book__now">Book Now</button></a>
             </div>
           </div>
