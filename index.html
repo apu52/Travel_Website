@@ -96,6 +96,38 @@
         width: 190%;
       }
     }
+    .gallery-rotate-image .image-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Adjust the gap between images */
+}
+
+.gallery-rotate-image .image-container span {
+  display: inline-block;
+}
+
+.trip-gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Adjust the gap between images */
+}
+
+.trip-gallery-container .image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trip-gallery-container .image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px; /* Adjust the gap between buttons */
+}
   </style>
 <link rel="stylesheet" href="imstyle.css">
 <link rel="stylesheet" href="jquery.flipster.min.css">
@@ -578,19 +610,24 @@ $('.carousel').flipster({
     spacing: -0.3,
 });
 </script>
-<div class="gallary__content" style="margin-top: 10px;width:80%">
-  <div>
-    <h2 class="section__title" data-aos="zoom-in">
-      Our trip gallery that will inspire you
-    </h2>
-    <p class="section__subtitle" data-aos="zoom-in">
-      Explore your suitable and dream places around the world. Here you
-      can find your right destination.
-    </p>
-    <button class="btn btn-style" id="btn-page" onclick="replaceDivs()" data-aos="zoom-in"
-      style="box-shadow: 2px 2px 8px rgb(0, 191, 255);">View All</button>
+<section class="gallary" id="ReviewGallery">
+  <div class="section__container gallary__container">
+    <div class="section__container gallary__container" id="originalDiv">
+      <div class="gallary__content">
+        <div>
+          <h2 class="section__title" data-aos="zoom-in">
+            Our trip gallery that will inspire you
+          </h2>
+          <p class="section__subtitle" data-aos="zoom-in">
+            Explore your suitable and dream places around the world. Here you
+            can find your right destination.
+          </p>
+          <button class="btn btn-style" id="btn-page" onclick="replaceDivs()" data-aos="zoom-in"
+            style="box-shadow: 2px 2px 8px rgb(0, 191, 255);">View All</button>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
       <br><br>
       <!-- New div components (hidden initially) -->
       <div id="newDiv" style="display: none;" data-aos="zoom-in">
@@ -699,6 +736,13 @@ $('.carousel').flipster({
         </div>
       </div>
     </section>
+    <script>
+      function replaceDivs() {
+    document.querySelector('.hero').style.display = 'none';
+    document.getElementById('originalDiv').style.display = 'none';
+    document.getElementById('newDiv').style.display = 'block';
+  }
+    </script>
     <br /><br /><br /><br /><br /><br />
 
     <!-- Testimonials Section -->
