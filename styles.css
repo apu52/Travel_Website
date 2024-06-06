@@ -1544,6 +1544,26 @@ body.dark-theme #emailInput {
   width: 50%;
 }
 
+
+.icon1{
+  position:absolute;
+  top:calc(65%);           
+  left:26.4%;
+  color:grey;
+  }
+  .icon2{
+  position:absolute;
+  top:calc(33%);
+  left:26.4%;
+  color:grey;
+  }
+  .icon3{
+  position:absolute;
+  top:calc(30%);
+  left:26.4%;
+  color:grey;
+  }
+
 textarea::-webkit-scrollbar {
   width: 1em;
 }
@@ -1604,7 +1624,17 @@ textarea::-webkit-scrollbar {
   .contact-form textarea {
     width: 75%;
   }
+  .icon1{
+    left:14.8%;
+  }
+  .icon2{
+    left:14.8%;
+  }
+  .icon3{
+    left:14.8%;
+  }
 }
+
 
 @media (max-width: 700px) {
   .items {
@@ -1627,6 +1657,15 @@ textarea::-webkit-scrollbar {
 
   .contact-form h1 {
     display: none;
+  }
+  .icon1{
+    left:14.8%;
+  }
+  .icon2{
+    left:14.8%;
+  }
+  .icon3{
+    left:14.8%;
   }
 }
 
@@ -1659,6 +1698,15 @@ textarea::-webkit-scrollbar {
     width: 75%;
     color: var(--text-dark);
   }
+  .icon1{
+    left:14.8%;
+  }
+  .icon2{
+    left:14.8%;
+  }
+  .icon3{
+    left:14.8%;
+  }
 }
 
 @media (max-width: 700px) {
@@ -1667,6 +1715,15 @@ textarea::-webkit-scrollbar {
   .contact-form textarea {
     width: 75%;
     color: var(--text-dark);
+  }
+  .icon1{
+    left:14.8%;
+  }
+  .icon2{
+    left:14.8%;
+  }
+  .icon3{
+    left:14.8%;
   }
 }
 
