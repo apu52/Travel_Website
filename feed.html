@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="feed.js" defer></script>
+    <script
+    src="https://kit.fontawesome.com/b08b6de27e.js"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -17,40 +22,43 @@
     <div class="container">
         <form method="post" id="myform">
 
-            <div class="row mb-3">
+            <div class="row-mb-3">
                 <div class="col-md-12">
                     <h2>Tour Feedback Form</h2>
-                    <div class="fs-6 fw-light" style="color: #eae54c;">We value your feedback and use it to improve our tours. Please fill out this form to share your experience.</div>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <div class="col-md-6">
-                    <label for="event_name" class="form-label">Name the tour you attended:</label>
-                    <input type="text" name="event_name" id="event_name" class="form-control" required="required" />
-                </div><br>
+                    <div class="icon"><i class="fas fa-map-marked-alt"></i></div>
+                    <input type="text" name="event_name" placeholder="Name the tour you attended:" id="event_name" class="form-control" required="required" />
+                </div>
                 <div class="col-md-6">
-                    <label for="event_date" class="form-label">Tour Date:</label>
-                    <input type="date" class="form-control" name="event_date" id="event_date" />
+                    <div class="icon"><i class="fas fa-calendar-alt"></i></div> 
+                    <input type="date" class="form-control" placeholder="Tour Date:" name="event_date" id="event_date" />
                 </div>
             </div>
             <div class="row mb-3">
                 <div class="col-md-6">
-                    <label for="FullName" class="form-label">Name</label>
+                    <div class="icon">
+                        <i class="fas fa-user"></i>
+                    </div>
                     <input type="text" name="FullName" id="FullName" placeholder="Your Name" required="required" class="form-control" />
                 </div><br>
                 <div class="col-md-6">
-                    <label for="Email" class="form-label">Email:</label>
-                    <input type="email" class="form-control" name="Email" id="Email" />
+                    <div class="icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <input type="email" class="form-control"  placeholder="Email Id"  name="Email" id="Email" />
                 </div>
             </div>
 
             <h3>What's your opinion about:</h3>
 
-          
+          <div class="group">
             <div class="row mb-3">
                 <div class="col-md-12">
-                    <label>Ease of navigation?</label>
+                    <label >Ease of navigation?</label>
                     <div class="d-flex flex-wrap" id="navigationEase">
                     </div>
                     <p id="navigationEase-rating-text">Rating: 0</p>
@@ -72,8 +80,12 @@
                     <p id="accuracyInformation-rating-text">Rating: 0</p>
                 </div>
             </div>
+        </div>
+
+        
 
             <h3>How would you rate the following aspects?</h3>
+            <div class="group">
             <div class="row mb-3">
                 <div class="col-md-12">
                     <label>Payment options</label>
@@ -90,7 +102,7 @@
                     <p id="securityMeasures-rating-text">Rating: 0</p>
                 </div>
             </div>
-
+        
          
             <div class="row mb-3">
                 <div class="col-md-12">
@@ -101,39 +113,30 @@
                     <p id="customerSupport-rating-text">Rating: 0</p>
                 </div>
             </div>
-
+        </div>
             
+       
             <div class="row mb-3">
                 <div class="col-md-12">
-                    <label>How would you rate the overall experience?</label>
-                    <div class="d-flex flex-wrap" id="overallExperience">
-                        
-                    </div>
-                    <p id="overallExperience-rating-text">Rating: 0</p>
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-md-12">
-                    <label for="suggestions" class="form-label">Your suggestions for improving future events</label>
-                    <textarea name="suggestions" class="form-control" id="suggestions" rows="6"></textarea>
+                    <textarea name="suggestions" itemid="text" class="form-control"  placeholder="Your suggestions for improving future events" id="suggestions" rows="6"></textarea>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <div class="col-md-6 d-flex align-items-center">
-                    <div>
-                        <input type="checkbox" class="form-check-input" name="notify_future_events" id="notify_future_events" />
+                    <div class="last">
                         <label for="notify_future_events" class="form-check-label">Would you like to be notified about future events?</label>
+                        <input type="checkbox" class="form-check-input" name="notify_future_events" id="notify_future_events" />
                     </div>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <div class="col-md-6 d-flex align-items-center">
-                    <div>
-                        <input type="checkbox" class="form-check-input" name="can_follow_up" id="can_follow_up" />
+                    <div class="last">
                         <label for="can_follow_up" class="form-check-label">Can we contact you regarding your feedback for further clarification or follow-up?</label>
+
+                        <input type="checkbox" class="form-check-input" name="can_follow_up" id="can_follow_up" />
                     </div>
                 </div>
             </div>
