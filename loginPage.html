@@ -39,10 +39,12 @@
             var password = document.getElementById('password').value;
             
             if (email.trim() === '' || password.trim() === '') {
+                localStorage.setItem('isLoggedIn', 'true'); 
                 alert('Please fill out all fields.');
             } else {
                 var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
                 if (!emailPattern.test(email)) {
+                    localStorage.setItem('isLoggedIn', 'true'); 
                     alert('Please enter a valid email!');
                 } else {
                     localStorage.setItem('isLoggedIn', 'true'); 

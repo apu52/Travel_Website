@@ -50,30 +50,6 @@
     //}
     // menuButton.forEach((button) => (button.onclick = () => closeNav()));
 
-    // Logout Button
-
-    document.addEventListener('DOMContentLoaded', function () {
-      var isLoggedIn = localStorage.getItem('isLoggedIn');
-      var loginButton = document.getElementById('btn-style');
-      var logoutButton = document.getElementById('logout-btn');
-
-      if (isLoggedIn === 'true') {
-          loginButton.style.display = 'none';
-          logoutButton.style.display = 'block';
-          loginButton.disabled = true ;
-          logoutButton.disabled = false;
-          logoutButton.style.cursor = 'pointer';
-          logoutButton.addEventListener('click', function() {
-              localStorage.setItem('isLoggedIn', 'false');
-              window.location.href = './index.html';
-          });
-      } else {
-          loginButton.style.display = 'block';
-          logoutButton.style.display = 'none';
-      }
-  });
-
-
   </script>
 
 
@@ -1548,6 +1524,31 @@ $('.carousel').flipster({
   <!--  Adding copyright javascript code to make it dynamic and display current year -->
   <script>
     document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+
+  <script>
+        // Logout Button
+
+      document.addEventListener('DOMContentLoaded', function () {
+      var isLoggedIn = localStorage.getItem('isLoggedIn');
+      var loginButton = document.getElementById('btn-style');
+      var logoutButton = document.getElementById('logout-btn');
+
+      if (isLoggedIn === 'true') {
+          loginButton.style.display = 'none';
+          logoutButton.style.display = 'block';
+          loginButton.disabled = true ;
+          logoutButton.disabled = false;
+          logoutButton.style.cursor = 'pointer';
+          logoutButton.addEventListener('click', function() {
+              localStorage.setItem('isLoggedIn', 'false');
+              window.location.href = './index.html';
+          });
+      } else {
+          loginButton.style.display = 'block';
+          logoutButton.disabled = true;
+      }
+  });
   </script>
 
 
