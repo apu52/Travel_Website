@@ -364,17 +364,36 @@ body {
   margin-bottom: 4rem;
 }
 
+.trip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.destination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  /* margin-bottom: 4rem; */
+}
+
 .section__title {
   font-size: 2rem;
   font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 15px;
-  text-align: left;
+  text-align: center;
   display: inline-block;
   font-weight: 600;
   letter-spacing: 0.5px;
-  line-height: 34px;
+  line-height: 40px;
   margin-bottom: 28px;
+  
 
   background: #FD4766;
   background: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, #FD4766 79.69%);
@@ -388,7 +407,6 @@ body {
   font-size: 1rem;
   color: var(--text-dark);
   max-width: calc(var(--max-width) / 2);
-  text-align: right;
 }
 
 .section_header .section_subtitle {
@@ -851,7 +869,10 @@ header {
 /* carousel */
 
 .destination__container {
-  background-color: var(--body-light);
+  /* background-color: var(--body-light); */
+  text-align: center;
+  /* margin-right: auto; */
+  /* margin-left: auto; */
 }
 
 .slideshow-container {
@@ -981,7 +1002,7 @@ header {
   max-width: var(--max-width);
 }
 
-.trip_container :is(.sectiontitle, .sectionsubtitle, .view_all) {
+.trip__container :is(.sectiontitle, .sectionsubtitle, .view_all) {
   text-align: center;
   margin-right: auto;
   margin-left: auto;
@@ -1090,7 +1111,7 @@ header {
   flex-direction: column;
 }
 
-.gallary__content>div {
+.gallary__content {
   max-width: 400px;
 }
 
@@ -1100,7 +1121,7 @@ header {
 
 .gallary_content .section_subtitle {
   margin-bottom: 2rem;
-  text-align: right;
+  /* text-align: center; */
 }
 
 .trip-gallery-container {
@@ -1132,8 +1153,12 @@ header {
   gap: 2rem;
 }
 
-.subscribe_container .subscribecontent .section_title {
+.subscribe_container .subscribecontent{
   text-align: left;
+}
+
+.section__subtitle {
+  text-align: center;
 }
 
 .subscribe_container .subscribecontent .section_subtitle {
@@ -2058,6 +2083,14 @@ body {
   /* Use the text-dark custom property for color */
 }
 
+.headingofexploretopdestinations {
+  font-weight: bolder;
+  /* Set font weight to bolder */
+  text-align: center;
+  color: var(--text-dark);
+  /* Use the text-dark custom property for color */
+}
+
 /* Styling for elements with .aboutcon class */
 .aboutcon {
   display: flex;
@@ -2376,9 +2409,10 @@ body {
   .section__subtitle {
     font-size: 0.7rem; /* Adjust font size for smaller devices */
     padding: 0 10px; /* Add vertical padding */
+    
     text-align: center; /* Center align text */
-    max-width: 30%; /* Limit width to prevent overflow */
-    margin: 0 auto; /* Center the subtitle */
+    max-width: 100%; /* Limit width to prevent overflow */
+    margin: auto; /* Center the subtitle */
   }
 }
 
