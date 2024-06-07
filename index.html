@@ -50,7 +50,6 @@
     //}
     // menuButton.forEach((button) => (button.onclick = () => closeNav()));
 
-
   </script>
 
 
@@ -189,7 +188,8 @@
         <a href="loginPage.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
             data-aos="fade-down">Login</button></a>
 
-
+        <a href="loginPage.html" class="contact-btn"><button class="btn" id="logout-btn" style="margin: 0; display: none;"
+              data-aos="fade-down" disabled>Log Out</button></a>
 
         <!-- <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
             style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a> -->
@@ -1524,6 +1524,31 @@ $('.carousel').flipster({
   <!--  Adding copyright javascript code to make it dynamic and display current year -->
   <script>
     document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+
+  <script>
+        // Logout Button
+
+      document.addEventListener('DOMContentLoaded', function () {
+      var isLoggedIn = localStorage.getItem('isLoggedIn');
+      var loginButton = document.getElementById('btn-style');
+      var logoutButton = document.getElementById('logout-btn');
+
+      if (isLoggedIn === 'true') {
+          loginButton.style.display = 'none';
+          logoutButton.style.display = 'block';
+          loginButton.disabled = true ;
+          logoutButton.disabled = false;
+          logoutButton.style.cursor = 'pointer';
+          logoutButton.addEventListener('click', function() {
+              localStorage.setItem('isLoggedIn', 'false');
+              window.location.href = './index.html';
+          });
+      } else {
+          loginButton.style.display = 'block';
+          logoutButton.disabled = true;
+      }
+  });
   </script>
 
 
