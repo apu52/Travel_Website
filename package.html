@@ -182,24 +182,32 @@
       display: flex;
       align-items: center; 
 }
-      .price-filter{
-        display: flex;
-        margin-left: auto;
-        position: absolute;
-        top: 38%; 
-        right: 11%;
-      transform: translateY(-50%);
-      padding: 8px 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      background-color: #fcfdff;
-      color: #333;
-      font-size: 15px;
-      }
+      .price-filter {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Align items horizontally */
+    position: relative; /* Change to relative positioning */
+    
+    margin-left: auto; /* Adjust margin */
+    padding: 0.5rem 1rem; /* Adjust padding */
+    border: 1px solid #ccc;
+    border-radius: 0.25rem; /* Adjust border radius */
+    background-color: #fcfdff;
+    color: #333;
+    font-size: 1rem; /* Adjust font size */
+}
+
+/* Optional: Add hover effects or additional styling */
+.price-filter:hover {
+    background-color: #f0f0f0;
+    border-color: #999;
+}
+
+
       .search-bar{
-        width: 90%;
+        width: 1500px;
         height: 50%;
-        max-width: 100%;
+        max-width: 400%;
         background:rgba(0, 13, 79, 0.696);
         display: flex;
         align-items: center;
