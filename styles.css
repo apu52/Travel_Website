@@ -1162,6 +1162,7 @@ header {
 
 .footer__container {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: flex-start;
@@ -2253,5 +2254,3 @@ body {
     margin: 0 auto; /* Center the subtitle */
   }
 }
-
-
