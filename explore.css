@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    border-radius: 20px;
   }
   
   .outer-box {
