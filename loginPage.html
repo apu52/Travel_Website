@@ -8,26 +8,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="./loginPage.css">
 </head>
-<body>
-     <div class="main-container">
-           <div class="form-container">
-            <div class="content">
-                <h1>Welcome Back !</h1>
-                <p>Login with your personal information.</p>
-                 <form action="">
-                   <input type="email" name="" id="" placeholder="Email">
-                    <input type="password" name="" id="" placeholder="Password">
-                    <button type="submit" >Login</button>
-                </form>
-                 <div class="passForget">Forgot your password?</div>
-                  <text>Don't have an account? <a href="registerPage.html" class="register-link">Please Register here.<a></a></text>
-            </div>
-           </div>
-           </div>
 
-     </div>
+<body>
+    <div class="main-container">
+        <div class="form-container">
+            <div class="content">
+                <h1>Welcome Back!</h1>
+                <p>Login to your personal information.</p>
+                <form action="">
+                    <div class="input-container">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" name="" id="" placeholder="Email">
+                    </div>
+                    <div class="input-container">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="" id="" placeholder="Password">
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+                <div class="passForget">Forgot your password?</div>
+                <p>Don't have an account? <a href="registerPage.html" class="register-link">Please Register here.</a>
+                </p>
+                <div class="social-login">
+                    <p>Or login with</p>
+                    <button class="social-btn google"><i class="fab fa-google"></i> Google</button>
+                    <button class="social-btn facebook"><i class="fab fa-facebook-f"></i> Facebook</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
