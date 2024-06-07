@@ -51,35 +51,47 @@
         </div>
       </nav>
     </div>
-
-    <div class="container">
-
-
-
+    <div class="sidebyside">
+      <div class="image">
+        <!-- <img src="./img/rateus.jpg"></img> -->
+      </div>
+      <div class="container">
         <div class="glassmorphism-container">
-            <h1 class="feedback-heading">Rate Our Service</h1>
+            <h1 class="feedback-heading">Rate Our Service</h1><hr>
 
             <!-- <div class="stars" id="stars-container"> -->
             <!-- Stars will be added dynamically using JavaScript -->
             <!-- </div> -->
             <p>How easy was it to navigate through the website?</p>
+            <div class="rate">
             <div class="stars" id="navEase-stars-container"></div>
-            <p id="navEase-rating-text">Rating: 0</p>
+            <p id="navEase-rating-text">Rating: 0</p> 
+          </div><hr>
             <p>How much straightforward and easy was the booking process</p>
+            <div class="rate">
             <div class="stars" id="bookingProcess-stars-container"></div>
             <p id="bookingProcess-rating-text">Rating: 0</p>
+            </div><hr>
             <p>Did the payment options meet your needs? Were you comfortable with the security measures in place?</p>
+            <div class="rate">
             <div class="stars" id="paymentOptions-stars-container"></div>
             <p id="paymentOptions-rating-text">Rating: 0</p>
+            </div><hr>
             <p>How responsive and helpful was the customer support team?</p>
+            <div class="rate">
             <div class="stars" id="customerSupport-stars-container"></div>
             <p id="customerSupport-rating-text">Rating: 0</p>
+            </div><hr>
             <p>How much would you recommend this travel website to others?</p>
+            <div class="rate">
             <div class="stars" id="recommendation-stars-container"></div>
             <p id="recommendation-rating-text">Rating: 0</p>
+            </div><hr>
             <p>If you've taken a package tour from this website, how was the overall experience?</p>
+            <div class="rate">
             <div class="stars" id="packageTour-stars-container"></div>
             <p id="packageTour-rating-text">Rating: 0</p>
+            </div><hr>
             <!-- Feedback input box section -->
             <div>
                 <label for="feedback-input" id="rating-text">Your feedback:</label>
@@ -87,10 +99,12 @@
                 <textarea id="feedback-input" placeholder="Remember to be nice please!"></textarea>
             </div>
             <button class="button" onclick="submitFeedback()">Submit</button>
+            <div><button class="button button2" onclick="location.href = 'index.html';">Return To Home Page</button></div>
         </div>
-        <div><button class="button" onclick="location.href = 'index.html';">Return To Home Page</button></div>
+        
+      </div>
     </div>
-    </div>
+    
     <!-- SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="feedback.js" defer></script>
