@@ -1217,7 +1217,18 @@ body.dark-theme #emailInput {
   text-align: center;
   flex-direction: column;
 }
+.social-icon a {
+  transition: transform 0.3s ease;
+  padding: 10px;
+}
 
+.social-icon a:hover {
+  transform: scale(1.1);
+  color: white; 
+}
+.footer:hover{
+  background: linear-gradient(135deg, #654ea3, #eaafc8);
+}
 .footer__col:nth-child(2) {
   margin-top: 10px;
 }
