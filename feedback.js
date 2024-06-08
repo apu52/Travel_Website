@@ -3,19 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const ratingTexts = document.querySelectorAll('[id$="-rating-text"]');
   let currentRating = 0;
 
-  function colourStar(ind , container) {
-
+  function colourStar(ind, container) {
     let s = container.querySelectorAll("span");
     s = Array.from(s);
     // remove existing rating
-    for(let i = 0; i < s.length; i++) {
+    for (let i = 0; i < s.length; i++) {
       s[i].style.color = "white";
     }
 
-    for(let i = 0; i < ind; i++) {
+    for (let i = 0; i < ind; i++) {
       s[i].style.color = "#FFA500";
     }
-    // console.log(container);
   }
 
   // Create 5 stars dynamically for each stars container
@@ -30,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       star.addEventListener('click', () => {
         currentRating = i;
         updateRating(index);
-        colourStar(i , starsContainer);
+        colourStar(i, starsContainer);
       });
 
     }
@@ -40,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
     ratingTexts[index].textContent = `Rating: ${currentRating}`;
   };
 });
-
 
 function submitFeedback() {
   var feedbackInput = document.getElementById("feedback-input");
@@ -65,7 +62,21 @@ function submitFeedback() {
     // Clear the feedback input box after the user acknowledges the success modal
     if (result.isConfirmed || result.isDismissed) {
       feedbackInput.value = "";
+      resetForm(); // Call resetForm function to reset the entire form
     }
   });
+}
 
+function resetForm() {
+  const starsContainers = document.getElementsByClassName("stars");
+  const ratingTexts = document.querySelectorAll('[id$="-rating-text"]');
+  let currentRating = 0;
+
+  Array.from(starsContainers).forEach((starsContainer, index) => {
+    const stars = starsContainer.querySelectorAll("span");
+    stars.forEach(star => {
+      star.style.color = "white"; // Reset star colors to default
+    });
+    ratingTexts[index].textContent = `Rating: ${currentRating}`; // Reset rating text
+  });
 }
