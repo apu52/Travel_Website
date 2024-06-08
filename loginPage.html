@@ -17,9 +17,9 @@
             <div class="content">
                 <h1>Welcome Back !</h1>
                 <p>Login with your personal information.</p>
-                 <form action="">
-                   <input type="email" name="" id="" placeholder="Email">
-                    <input type="password" name="" id="" placeholder="Password">
+                 <form action="" id="loginForm">
+                   <input type="email" name="email" id="email" placeholder="Email" >
+                    <input type="password" name="password" id="password" placeholder="Password">
                     <button type="submit" >Login</button>
                 </form>
                  <div class="passForget">Forgot your password?</div>
@@ -29,5 +29,31 @@
            </div>
 
      </div>
+
+     <script>
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            
+            if (email.trim() === '' || password.trim() === '') {
+                localStorage.setItem('isLoggedIn', 'true'); 
+                alert('Please fill out all fields.');
+            } else {
+                var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                if (!emailPattern.test(email)) {
+                    localStorage.setItem('isLoggedIn', 'true'); 
+                    alert('Please enter a valid email!');
+                } else {
+                    localStorage.setItem('isLoggedIn', 'true'); 
+                    alert('Login successful!');
+                    window.location.href = './index.html';
+                }
+            }
+        });
+
+     </script>
 </body>
 </html>
