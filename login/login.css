@@ -25,7 +25,7 @@
    font-weight: 700;
    letter-spacing: -1.5px;
    margin: 0;
-   margin-bottom: 15px;
+   margin-top: 10px;
  }
 
  h1.title {
@@ -205,6 +205,116 @@
    z-index: 5;
    animation: show 0.6s;
  }
+
+ #login-section{
+  display: flex;
+  align-items: center;
+  width: 100%;
+ }
+
+ #loginPassword{
+  position: relative;
+ }
+
+ #toggleLoginPassword{
+  position: absolute;
+  background: transparent;
+  border: none;
+  color: #505050;
+  right: 15%;
+  padding:2px;
+  transition: 0.3s ease-in-out;
+ }
+
+ #register-section{
+  display: flex;
+  align-items: center;
+  width: 100%;
+ }
+
+ #registerPassword{
+  position: relative;
+ }
+
+ #toggleRegisterPassword{
+  position: absolute;
+  background: transparent;
+  border: none;
+  color: #505050;
+  right: 15%;
+  padding:2px;
+  transition: 0.3s ease-in-out;
+ }
+
+ #confirmPassword{
+  position: relative;
+ }
+
+ #toggleConfirmPassword{
+  position: absolute;
+  background: transparent;
+  border: none;
+  color: #505050;
+  right: 15%;
+  padding:2px;
+  transition: 0.3s ease-in-out;
+ }
+
+@media (max-width: 768px){
+  #login-section{
+    display: flex;
+    align-items: center;
+   }
+  
+   #loginPassword{
+    position: relative;
+   }
+  
+   #toggleLoginPassword{
+    position: absolute;
+    background: transparent;
+    border: none;
+    color: #505050;
+    right: 15%;
+     padding:2px;
+     letter-spacing: 1px;
+     text-transform: capitalize;
+     transition: 0.3s ease-in-out;
+   }
+   #register-section{
+    display: flex;
+    align-items: center;
+   }
+   #registerPassword{
+    position: relative;
+   }
+   #toggleRegisterPasswor{
+    position: absolute;
+    background: transparent;
+    border: none;
+    color: #505050;
+    right: 15%;
+     padding:2px;
+     letter-spacing: 1px;
+     text-transform: capitalize;
+     transition: 0.3s ease-in-out;
+   }
+   
+ #confirmPassword{
+  position: relative;
+ }
+
+ #toggleConfirmPassword{
+  position: absolute;
+  background: transparent;
+  border: none;
+  color: #505050;
+  right: 15%;
+  padding:2px;
+  transition: 0.3s ease-in-out;
+ }
+}
+ 
 
  @keyframes show {
    0%,
