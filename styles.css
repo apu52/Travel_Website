@@ -270,6 +270,7 @@
 }
 
 body {
+  cursor: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -692,6 +693,7 @@ header {
 /* Newsletter Modal */
 
 .modal-container {
+  cursor: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2382,4 +2384,19 @@ body {
   }
 }
 
+
+/* Custom Cursor */
+
+.dot {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(112, 224, 222);
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
 
