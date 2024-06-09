@@ -16,30 +16,42 @@ body {
 
 h2 {
   text-align: center;
-  color: #007bff; 
+  color: #003366; 
   margin-bottom: 20px;
+  margin-top: 12px;
 }
 
 h3 {
   margin-top: 30px; 
-  color: #e63946; 
+  color: #003366; 
   margin-bottom: 20px; 
+}
+#bookingProcess,#accuracyInformation,#paymentOptions,#securityMeasures,#customerSupport{
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .mb-3 {
   margin-bottom: 1.5rem; 
 }
+p{
+  color: #003366; 
+}
 
 .form-label {
   font-weight: bold;
   color: #1d3557; 
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+#navigationEase{
+  margin-top: 10px;
 }
 
 .form-control {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #e8e8e8;
   border-radius: 5px;
   margin-top: 10px;
 }
@@ -49,7 +61,7 @@ h3 {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #007bff; 
+  background: linear-gradient(#003366,#9f4bee);
   color: white;
   display: block; 
   margin: 20px auto 0; 
@@ -57,7 +69,7 @@ h3 {
 }
 
 .btn:hover {
-  background-color: #0056b3; 
+  background: linear-gradient(#007bff,#e534bf); 
 }
 
 .star {
@@ -67,7 +79,7 @@ h3 {
 }
 
 .star.checked {
-  color: #e63946;
+  color: #f0cd04;
 }
 
 #navigationEase, 
@@ -87,6 +99,61 @@ h3 {
 #securityMeasures-rating-text,
 #customerSupport-rating-text,
 #overallExperience-rating-text {
-  color: #007bff; 
+  color: #003366; 
   margin-top: 10px; 
 }
+
+.col-md-6{
+ margin-bottom: 20px;
+  position: relative;
+  
+}
+.col-md-6 .icon {
+  position: absolute;
+  top: 60%;
+  left: 10px;
+  transform: translateY(-50%);
+  background-color: #003366;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-md-6 input{
+  width: 90%;
+  padding: 10px 10px 10px 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.group{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.text{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.last{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.form-check-label{
+  width: 2000px;
+}
+label{
+  color: #003366;
+}
+
+

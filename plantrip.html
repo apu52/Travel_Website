@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trip Planner</title>
-    <link rel="icon"
-        href="img/A T logo with a white background and a square shape, connected to nature for a travel company.png"
-        type="image/x-icon" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
     <style>
         body {
             font-family: 'Nunito Sans', sans-serif;
@@ -107,14 +105,17 @@
             outline: none;
         }
     </style>
-    <script>
+       <script>
         function handleSubmit(event) {
             event.preventDefault();
+            const today = new Date(); // Get today's date
             const startDate = new Date(document.getElementById('startDate').value);
             const endDate = new Date(document.getElementById('endDate').value);
 
             if (endDate < startDate) {
                 alert('End date cannot be earlier than start date.');
+            } else if (startDate < today || endDate < today) {
+                alert('Start and end dates cannot be earlier than today.');
             } else {
                 alert('Trip planned successfully!');
                 // You can proceed to submit the form or perform other actions here

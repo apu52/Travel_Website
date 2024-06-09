@@ -2,7 +2,7 @@
 
 /* Google Fonts */
 body {
-  background-image: url("./img/feedback_bg.jpg");
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url("./img/sunset.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -10,24 +10,23 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  /*background: linear-gradient(to right, #4DA0B0, #fff);*/
-  font-family: "Arial", sans-serif;
+  /background: linear-gradient(to right, #4DA0B0, #fff);/ font-family: "Arial", sans-serif;
 }
 
 .feedback-heading {
   font-size: 3rem;
+
   font-family: Georgia, "Times New Roman", Times, serif;
   text-transform: uppercase;
-  background-image: linear-gradient(
-    -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
-  );
+  background-image: linear-gradient(-225deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%);
+
   background-size: auto auto;
+
   background-clip: border-box;
-  background-size: 200% auto;
   color: #fff;
   background-clip: text;
   text-fill-color: transparent;
@@ -36,6 +35,7 @@ body {
   animation: textclip 2s linear infinite;
   display: inline-block;
 }
+
 @keyframes textclip {
   to {
     background-position: 200% center;
@@ -53,23 +53,26 @@ body {
   background: rgba(46, 123, 225, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 15px;
+
   padding: 20px;
+  margin-top: 102px;
+  margin-bottom: 23px;
+
   text-align: center;
   max-width: 800px;
   width: 90%;
   margin-bottom: 20px;
-  margin-top: 100px;
 }
+
 p {
   line-height: 1.2em;
   margin: 0;
-  font-family: "Lato";
-  font-size: 26px;
+  font-family: Poppins, sans-serif;
+  font-size: 20px;
   color: #07147a;
   padding: 8px 5px;
   text-align: center;
   text-rendering: optimizeLegibility;
-  text-shadow: 1px 1px 0 #29c0e6, 1px 2px 0px #e784c6;
 }
 
 .stars {
@@ -91,18 +94,18 @@ p {
 
 #rating-text {
   font-family: monospace;
+  font-weight: 700;
   margin-top: 40px;
   font-size: 1.8rem;
-  background-image: linear-gradient(
-    -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
-  );
+
+  background-image: linear-gradient(-225deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%);
+
   background-size: auto auto;
   background-clip: border-box;
-  background-size: 200% auto;
   color: #fff;
   background-clip: text;
   text-fill-color: transparent;
@@ -111,6 +114,7 @@ p {
   animation: textclip 2s linear infinite;
   display: inline-block;
 }
+
 @keyframes textclip {
   to {
     background-position: 200% center;
@@ -133,6 +137,11 @@ p {
   background-color: rgba(219, 230, 240, 0.402);
   box-sizing: border-box;
   font-size: 1rem;
+}
+
+#feedback-input:focus-visible{
+  outline:2px solid #6a5acd ;
+  border-radius: 5px;
 }
 
 /*.submit-button {
@@ -186,102 +195,7 @@ p {
 }
 
 
-/*New toggle*/
-/* new toggle start */
-.toggle-container {
-  --size: 2rem;
-  position: relative;
-  width: var(--size);
-  height: var(--size);
-  margin-right: 71px;
-}
-
-.toggle {
-  appearance: none;
-  outline: none;
-  cursor: pointer;
-  width: 100%;
-  height: 100%;
-  box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
-  border-radius: 999px;
-  color: hsl(240, 100%, 95%);
-  transition: all 500ms;
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  &:checked {
-    --ray-size: calc(var(--size) * -0.4);
-    --offset-orthogonal: calc(var(--size) * 0.65);
-    --offset-diagonal: calc(var(--size) * 0.45);
-    transform: scale(0.75);
-    color: hsl(40, 100%, 50%);
-    box-shadow: inset 0 0 0 var(--size),
-      calc(var(--offset-orthogonal) * -1) 0 0 var(--ray-size),
-      var(--offset-orthogonal) 0 0 var(--ray-size),
-      0 calc(var(--offset-orthogonal) * -1) 0 var(--ray-size),
-      0 var(--offset-orthogonal) 0 var(--ray-size),
-      calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0
-        var(--ray-size),
-      var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size),
-      calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size),
-      var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
-  }
-}
-
-/* Apply fade-down animation to the toggle container */
-.toggle-container[data-aos='fade-down'] {
-  transition: opacity 500ms ease-in-out;
-  opacity: 1;
-}
-
-.toggle-container[data-aos='fade-down'].aos-animate {
-  opacity: 1;
-}
-
 /* New NAvbar CSS Starts Here*/
-
-
-nav {
-  background-color: #091020;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1001;
-}
-
-.nav__logo {
-  font-size: 1.8rem;
-  /* Increased font size for the logo */
-  font-weight: 600;
-  color: #ffffff;
-  cursor: pointer;
-  /* border: 2px solid white; */
-  text-decoration: none;
-}
-
-.nav__logo span {
-  color: #3685fb;
-  /* Assuming this is your primary color */
-}
-
-
-.link a {
-  /* padding: 0.5rem 1rem; Adjusted padding for links */
-  color: #ffffff;
-  transition: 0.3s;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.link a:hover {
-  color: #ff0000;
-}
-
-
-header {
-  background-color: var(--secondary-color);
-}
 
 
 .nav-container {
@@ -293,14 +207,13 @@ header {
   position: fixed;
   left: 0;
   z-index: 9999;
-  
 }
 
 .newNav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 0.5rem;
   height: auto;
   width: 100%;
   padding: 1rem 2rem;
@@ -310,23 +223,23 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 15px;
+  font-size: 1.2rem;
   list-style: none;
   gap: 1.2rem;
   position: relative;
+  top: 0.5rem;
   z-index: 10;
-  margin-right: 20px;
+
 
 }
 
 .link a {
   position: relative;
-  list-style: none;
 }
 
 .link a::before {
   position: absolute;
-  content: '';
+  content: "";
   height: 2px;
   width: 0%;
   bottom: -5px;
@@ -336,7 +249,7 @@ header {
 
 .link a::after {
   position: absolute;
-  content: '';
+  content: "";
   height: 2px;
   width: 0%;
   top: -5px;
@@ -354,7 +267,6 @@ header {
   width: 100%;
   transition: all 0.2s ease-in-out;
 }
-
 
 .hamburger {
   height: 2rem;
@@ -405,14 +317,12 @@ header {
 
   #btn-style {
     font-size: 0.6rem;
+
+
   }
 }
 
-.navLinks.activeHamburger {
-  width: 100%;
-}
-
-.btn {
+#btn-style {
   display: inline-block;
   border-radius: 50px;
   transition: all .4s ease-in-out;
@@ -422,38 +332,30 @@ header {
   padding-bottom: 12px;
   width: auto;
   background-color: transparent;
-  border: 2px solid slateblue;
+  border: 2px solid rgb(41, 0, 128);
   color: red;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 2px;
   vertical-align: middle;
   text-decoration: none;
-  white-space: nowrap;
-}
-.btn:hover {
-  background-color: #ff0000; 
-  border-color: #ff0000;
-  color: #fff;
-  cursor: pointer;
 }
 
-.btn:hover {
-  filter: brightness(1.5);
+.navLinks.activeHamburger {
+  width: 100%;
 }
-
 
 /* New NAvbar CSS Ends Here*/
 
 /* CSS */
 .button {
+
+  margin-bottom: 23px;
   align-items: center;
   appearance: none;
-  background-image: radial-gradient(
-    100% 100% at 100% 0,
-    #5adaff 0,
-    #5468ff 100%
-  );
+  background-image: radial-gradient(100% 100% at 100% 0,
+      #5adaff 0,
+      #5468ff 100%);
   border: 0;
   border-radius: 6px;
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
@@ -463,6 +365,7 @@ header {
   cursor: pointer;
   display: inline-flex;
   font-family: "JetBrains Mono", monospace;
+
   height: 40px;
   justify-content: center;
   line-height: 1;
@@ -470,30 +373,38 @@ header {
   overflow: hidden;
   padding-left: 16px;
   padding-right: 16px;
-  position: relative;
-  text-align: left;
+  border-radius: 50px;
+  /* transition: all .1s ease-in-out; */
+  border: 2px solid #6a5acd;
+  color: #ff0000;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 2px;
+  vertical-align: middle;
   text-decoration: none;
-  transition: box-shadow 0.15s, transform 0.15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
   white-space: nowrap;
-  will-change: box-shadow, transform;
-  font-size: 18px;
+  box-shadow: 2px 2px 8px red;
+  margin-bottom: 20px;
+  box-sizing: border-box;
 }
 
 .button:focus {
-  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  /* box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset; */
 }
 
 .button:hover {
-  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+  /* box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
-  transform: translateY(-2px);
+  transform: translateY(-2px); */
+  background-color: #6a5acd;
+   color: #fff;
+
 }
 
 .button:active {
+
   box-shadow: #3c4fe0 0 3px 7px inset;
   transform: translateY(2px);
 }
+

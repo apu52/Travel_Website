@@ -108,9 +108,9 @@
       padding: 0;
     }
   #btns{
-    height: 40px;
-    width: 120px;
-  
+    /* height: 40px;
+    width: 120px; */
+  font-size: small;
   }
   .bttnn{
     height: 40px;
@@ -129,8 +129,9 @@
     color: white;
   }
     #btnss {
-      margin-left: 4rem;
-      padding: 11px 45px;
+      /* margin-left: 4rem;
+      padding: 11px 45px; */
+      font-size: small;
     }
   
     #btnss:hover {
