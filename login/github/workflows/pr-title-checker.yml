@@ -1,4 +1,4 @@
-name: PR Title Checker
+name: Password Hide and Show button
 
 on:
   pull_request_target:
