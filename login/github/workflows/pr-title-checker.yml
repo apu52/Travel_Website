@@ -1,0 +1,28 @@
+name: PR Title Checker
+
+on:
+  pull_request_target:
+    types: [opened, edited, reopened]
+
+jobs:
+  check-pr-title:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v2
+
+      - name: Check PR title
+        id: check-title
+        run: |
+          PR_TITLE="${{ github.event.pull_request.title }}"
+          echo "PR Title: $PR_TITLE"
+          
+          if [[ ! "$PR_TITLE" =~ ^(feat|build|chore|docs|fix|perf|refactor|revert|style|test):\  ]]; then
+            echo "::error::Error: PR title does not conform to the required format. Please use one of the specified prefixes (feat, build, chore, docs, fix, perf, refactor, revert, style, test) followed by a colon and a space."
+            exit 1
+          fi
+
+      - name: Title is valid
+        if: success()
+        run: echo "The PR title is valid."
