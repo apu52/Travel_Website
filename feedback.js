@@ -65,6 +65,8 @@ function submitFeedback() {
     // Clear the feedback input box after the user acknowledges the success modal
     if (result.isConfirmed || result.isDismissed) {
       feedbackInput.value = "";
+      // Redirect to the home page
+      window.location.href = 'index.html';
     }
   });
 
