@@ -2,101 +2,98 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./loader.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <link rel="stylesheet" href="faq-website.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="faq-website.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="./Image-Gallery/style.css">
-  <link rel="stylesheet" href="./Image-Gallery/stylecaptions.css">
-  <link rel="stylesheet" href="explore.css">
-  <title>Tourguide</title>
-  <!-- adding a fav-icon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./Image-Gallery/style.css">
+    <link rel="stylesheet" href="./Image-Gallery/stylecaptions.css">
+    <link rel="stylesheet" href="explore.css">
+    <title>Tourguide</title>
+    <!-- adding a fav-icon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-  <script src="index.js" defer></script>
-  <script src="mouseEffect.js"></script>
-  <link rel="stylesheet" href="mouseEffect.css">
-  <script src="Theme.js" defer></script>
+    <script src="index.js" defer></script>
+    <script src="mouseEffect.js"></script>
+    <link rel="stylesheet" href="mouseEffect.css">
+    <script src="Theme.js" defer></script>
 
-  <link rel="stylesheet" href="path/to/aos.css">
-  <script src="path/to/aos.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-  </script>
-  <script type="text/javascript">
-    (function () {
-      emailjs.init("WB9rAyWwwLZube-er");
-    })();
+    <link rel="stylesheet" href="path/to/aos.css">
+    <script src="path/to/aos.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("WB9rAyWwwLZube-er");
+        })();
 
-    function planTrip() {
+        function planTrip() {
 
-      window.location.href = 'plantrip.html';
-    }
-    // const menuButton = document.getElementsByClassName('link');
-    //function closeNav() {
-    //  let list = document.querySelector('.navLinks');
-    //  list.classList.toggle('activeHamburger');
-    //}
-    // menuButton.forEach((button) => (button.onclick = () => closeNav()));
-
-
-  </script>
+            window.location.href = 'plantrip.html';
+        }
+        // const menuButton = document.getElementsByClassName('link');
+        //function closeNav() {
+        //  let list = document.querySelector('.navLinks');
+        //  list.classList.toggle('activeHamburger');
+        //}
+        // menuButton.forEach((button) => (button.onclick = () => closeNav()));
+    </script>
 
 
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
-  <style>
-    .active {
-      color: red !important;
-    }
-    @media screen and (max-width:390px){
-      .nav__logo{
-        position: relative;
-        right: 1.9rem;
-      }
-      .contact-btn{
-        position: relative;
-        right: 2.5rem;
-      }
-      .toggle-container{
-        position: relative;
-        right: 2.5rem;
-
-      }
-      .toggle{
-        width: 130%;
-      } 
-      .line{
-        width: 130%;
-      }
-      .hamburger{
-        position: relative;
-        right: 1rem;
-      }
-    }
-    @media screen and (max-width:364px) {
-      .toggle{
-        width:190%;
-      }
-      .line{
-        width: 190%;
-      }
-    }
-  </style>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <style>
+        .active {
+            color: red !important;
+        }
+        
+        @media screen and (max-width:390px) {
+            .nav__logo {
+                position: relative;
+                right: 1.9rem;
+            }
+            .contact-btn {
+                position: relative;
+                right: 2.5rem;
+            }
+            .toggle-container {
+                position: relative;
+                right: 2.5rem;
+            }
+            .toggle {
+                width: 130%;
+            }
+            .line {
+                width: 130%;
+            }
+            .hamburger {
+                position: relative;
+                right: 1rem;
+            }
+        }
+        
+        @media screen and (max-width:364px) {
+            .toggle {
+                width: 190%;
+            }
+            .line {
+                width: 190%;
+            }
+        }
+    </style>
 
 
 </head>
@@ -104,20 +101,20 @@
 
 <body style="background-color: var(--secondary-color);">
 
-  <body>
+    <body>
 
-    <div id="pre-loader">
-      <h1>TourGuide . . .</h1>
-    </div>
-    <div id="bg">
-      <canvas></canvas>
-      <canvas></canvas>
-      <canvas></canvas>
-    </div>
-    <div id="progressbar"></div>
-    <div id="scrollPath"></div>
-    <!-- <canvas id="canvas"></canvas> -->
-    <!-- <nav>
+        <div id="pre-loader">
+            <h1>TourGuide . . .</h1>
+        </div>
+        <div id="bg">
+            <canvas></canvas>
+            <canvas></canvas>
+            <canvas></canvas>
+        </div>
+        <div id="progressbar"></div>
+        <div id="scrollPath"></div>
+        <!-- <canvas id="canvas"></canvas> -->
+        <!-- <nav>
 
     <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
     <ul class="nav__links">
@@ -134,178 +131,160 @@
     <button id="toggle" data-aos="fade-down">Dark Theme</button>
     <a href="#contact"><button class="btn" id="btn-style">Contact Us</button></a>
   </nav> -->
-    <div class="nav-container" id="top">
-      <nav class="newNav">
-        <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+        <div class="nav-container" id="top">
+            <nav class="newNav">
+                <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
 
-        <ul class="navLinks">
+                <ul class="navLinks">
 
-          <li class="link" data-aos=""><a href="#Home">Home</a></li>
-          <li class="link" data-aos=""><a href="#AboutUs"> AboutUs</a></li>
-          <li class="link" data-aos=""><a href="#Destinations">Destinations</a></li>
-          <li class="link" data-aos=""><a href="#trip">Pricing</a></li>
-          <li class="link" data-aos=""><a href="#ReviewGallery">Trip Gallery</a></li>
-          <li class="link" data-aos=""><a href="#testimonials">Testimonials</a></li>
-          <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
-          <li class="link" data-aos=""><a href="#contact">Contact Us</a></li>
-
-
-        </ul>
+                    <li class="link" data-aos=""><a href="#Home">Home</a></li>
+                    <li class="link" data-aos=""><a href="#AboutUs"> AboutUs</a></li>
+                    <li class="link" data-aos=""><a href="#Destinations">Destinations</a></li>
+                    <li class="link" data-aos=""><a href="#trip">Pricing</a></li>
+                    <li class="link" data-aos=""><a href="#ReviewGallery">Trip Gallery</a></li>
+                    <li class="link" data-aos=""><a href="#testimonials">Testimonials</a></li>
+                    <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+                    <li class="link" data-aos=""><a href="#contact">Contact Us</a></li>
 
 
-        <a href="loginPage.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
+                </ul>
+
+
+                <a href="loginPage.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
             data-aos="fade-down">Login</button></a>
+                <a href="maps.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
+            data-aos="fade-down">View map</button></a>
 
 
 
-        <!-- <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
+
+                <!-- <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
             style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a> -->
 
-        <div class="toggle-container" data-aos="fade-down">
-          <input id="themeToggle" class="toggle" type="checkbox">
+                <div class="toggle-container" data-aos="fade-down">
+                    <input id="themeToggle" class="toggle" type="checkbox">
+                </div>
+                <div class="hamburger" data-aos="fade-down">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </nav>
         </div>
-        <div class="hamburger" data-aos="fade-down">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
-      </nav>
-    </div>
-    <header>
-      <section class="section__container header__container" id="Home">
-        <div class="header__image" data-aos="fade-down-right">
-          <img src="https://i.ibb.co/88Qnjxg/pexels-josh-hild-2422259.jpg" alt="header" />
-          <img src="https://i.ibb.co/w4Jqjdf/pexels-andrei-tanase-1271619.jpg" alt="header" />
-        </div>
-        <div class="header__content">
-          <div>
-            <h1 data-aos="fade-in">Find Your Perfect Getaway<br />Discover the World's Best Kept <span
-                class="auto-typed" style="color: var(--head-text);"></span></h1>
-            <p class="section__subtitle" data-aos="fade-in">
-              Make your travel more enjoyable with us. We are the best travel
-              agency and we are providing the best travel services for our
-              clients.
-            </p>
-            <div class="action__btns">
-              <a href="pricing/index.html"><button class="btn" data-aos="fade-in" id="btn-style"
+        <header>
+            <section class="section__container header__container" id="Home">
+                <div class="header__image" data-aos="fade-down-right">
+                    <img src="https://i.ibb.co/88Qnjxg/pexels-josh-hild-2422259.jpg" alt="header" />
+                    <img src="https://i.ibb.co/w4Jqjdf/pexels-andrei-tanase-1271619.jpg" alt="header" />
+                </div>
+                <div class="header__content">
+                    <div>
+                        <h1 data-aos="fade-in">Find Your Perfect Getaway<br />Discover the World's Best Kept <span class="auto-typed" style="color: var(--head-text);"></span></h1>
+                        <p class="section__subtitle" data-aos="fade-in">
+                            Make your travel more enjoyable with us. We are the best travel agency and we are providing the best travel services for our clients.
+                        </p>
+                        <div class="action__btns">
+                            <a href="pricing/index.html"><button class="btn" data-aos="fade-in" id="btn-style"
                   style="box-shadow: 2px 2px 8px red;">Membership</button></a>
-              <button class="btn" data-aos="fade-in" id="btn-style" onclick="planTrip()"
-                style="box-shadow: 2px 2px 8px red;">Plan a Trip</button>
-              <a href="./payment.html"><button class="btn" data-aos="fade-in" id="btn-style"
+                            <button class="btn" data-aos="fade-in" id="btn-style" onclick="planTrip()" style="box-shadow: 2px 2px 8px red;">Plan a Trip</button>
+                            <a href="./payment.html"><button class="btn" data-aos="fade-in" id="btn-style"
                   style="box-shadow: 2px 2px 8px red;">Book Now</button></a>
-            </div>
+                        </div>
 
 
 
-            <br>
-            <div class="story">
-              <div class="video">
-                <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" type="video/mp4"
-                  style="box-shadow:2px 2px 8px blue;">
-                <!-- link to the hmtl page with the video -->
-                <a href="story.html" class="btn_video">
-                  <span><i class="ri-play-fill"></i></span>
-              </div>
-            </div>
-            <span data-aos="fade-in">Watch our story</span>
-          </div>
-        </div>
-      </section>
-    </header>
+                        <br>
+                        <div class="story">
+                            <div class="video">
+                                <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" type="video/mp4" style="box-shadow:2px 2px 8px blue;">
+                                <!-- link to the hmtl page with the video -->
+                                <a href="story.html" class="btn_video">
+                                    <span><i class="ri-play-fill"></i></span>
+                            </div>
+                        </div>
+                        <span data-aos="fade-in">Watch our story</span>
+                    </div>
+                </div>
+            </section>
+        </header>
 
-    <br>
-    <!-- Section of About Us -->
-    <section class="About" id="AboutUs">
-      <div class="color col-12">
-        <div class="section__container about__container">
-          <!-- Left background color column -->
-          <div class="col-8 bg primary"></div>
-          <!-- Right content container -->
-          <div
-            class="section__container gallary__container relative z-10 max-w-screen-xl px-4 mx-auto text-center pb-14">
-            <div class="aboutcon">
-              <div class="col-span-2 mx-auto lg:mx-0 lg:text-left">
-                <h1 class="headingofAbout section__title " data-aos=" fade-in"><b>About Us</b></h1>
-                <!-- Article with about us content -->
-                <article class="w-full text-left format sm:format-base lg:format-lg format-blue dark:format-invert">
-                  <!-- Adding the content -->
-                  <style>
-                    /* CSS for hover effect */
-                    .aboutcontent:hover {
-                      transform: scale(1.8);
-                      transition: transform 0.8s ease;
-                    }
-                  </style>
-                  <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
-                    <span style="margin-left: 80px;"></span>Welcome to TourGuide, where we firmly believe that life's
-                    true purpose unfolds amidst the thrill of exploration, the embrace of the unfamiliar, and the
-                    pursuit of the extraordinary! Our mission is to embolden you, the intrepid traveler, to unveil this
-                    purpose and elevate your journey by providing unparalleled assistance and guidance. Let us be your
-                    compass as you navigate through the wonders of the world, forging unforgettable memories and
-                    discovering the essence of travel!
-                  </p>
+        <br>
+        <!-- Section of About Us -->
+        <section class="About" id="AboutUs">
+            <div class="color col-12">
+                <div class="section__container about__container">
+                    <!-- Left background color column -->
+                    <div class="col-8 bg primary"></div>
+                    <!-- Right content container -->
+                    <div class="section__container gallary__container relative z-10 max-w-screen-xl px-4 mx-auto text-center pb-14">
+                        <div class="aboutcon">
+                            <div class="col-span-2 mx-auto lg:mx-0 lg:text-left">
+                                <h1 class="headingofAbout section__title " data-aos=" fade-in"><b>About Us</b></h1>
+                                <!-- Article with about us content -->
+                                <article class="w-full text-left format sm:format-base lg:format-lg format-blue dark:format-invert">
+                                    <!-- Adding the content -->
+                                    <style>
+                                        /* CSS for hover effect */
+                                        
+                                        .aboutcontent:hover {
+                                            transform: scale(1.8);
+                                            transition: transform 0.8s ease;
+                                        }
+                                    </style>
+                                    <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
+                                        <span style="margin-left: 80px;"></span>Welcome to TourGuide, where we firmly believe that life's true purpose unfolds amidst the thrill of exploration, the embrace of the unfamiliar, and the pursuit of the extraordinary!
+                                        Our mission is to embolden you, the intrepid traveler, to unveil this purpose and elevate your journey by providing unparalleled assistance and guidance. Let us be your compass as you navigate through the wonders
+                                        of the world, forging unforgettable memories and discovering the essence of travel!
+                                    </p>
 
-                  <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
-                    <span style="margin-left: 80px;"></span> At TourGuide, our local guides serve as your passport to
-                    effortlessly navigate through local
-                    languages, customs, and traditions that often make traveling to a foreign place overwhelming. We
-                    provide curated travel itineraries, once-in-a-lifetime experiences, valuable travel advice, and the
-                    freedom to customize itineraries to ensure everything aligns with your wishlist.
-                  </p>
+                                    <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
+                                        <span style="margin-left: 80px;"></span> At TourGuide, our local guides serve as your passport to effortlessly navigate through local languages, customs, and traditions that often make traveling to a foreign place
+                                        overwhelming. We provide curated travel itineraries, once-in-a-lifetime experiences, valuable travel advice, and the freedom to customize itineraries to ensure everything aligns with your wishlist.
+                                    </p>
 
-                  <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
-                    <span style="margin-left: 80px;"></span>Since our inception in 2024, TourGuide has cultivated a
-                    dynamic travel community, with 30,000+
-                    guides hailing from over 200+ countries globally. We continue to grow each day, expanding the
-                    horizons of possibilities for discovering the world. With TourGuide by your side, there's no limit
-                    to the different ways you can embark on an unforgettable journey!
-                  </p>
+                                    <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
+                                        <span style="margin-left: 80px;"></span>Since our inception in 2024, TourGuide has cultivated a dynamic travel community, with 30,000+ guides hailing from over 200+ countries globally. We continue to grow each day,
+                                        expanding the horizons of possibilities for discovering the world. With TourGuide by your side, there's no limit to the different ways you can embark on an unforgettable journey!
+                                    </p>
 
-                  <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
-                    <strong><span style="margin-left: 80px;"></span> We welcome you to the TourGuide family - where
+                                    <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
+                                        <strong><span style="margin-left: 80px;"></span> We welcome you to the TourGuide family - where
                       every journey becomes a story worth
                       sharing!</strong>
-                  </p>
-                </article>
-              </div>
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+        </section>
+
+
         </div>
-      </div>
-    </section>
+        <!-- Right statistics container -->
+        <div data-aos="fade-left" class="col-6">
 
+            <div class="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-1 sm:gap-4 xl:gap-8 sm:space-y-0 md:mt-12">
+                <!-- Box 1 - Number of Guides -->
+                <div class="box1">
+                    <div class="iconss">
 
-    </div>
-    <!-- Right statistics container -->
-    <div data-aos="fade-left" class="col-6">
-
-      <div class="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-1 sm:gap-4 xl:gap-8 sm:space-y-0 md:mt-12">
-        <!-- Box 1 - Number of Guides -->
-        <div class="box1">
-          <div class="iconss">
-
-            <svg class="w-12 h-12 mx-auto dark:text-gray-100 group-hover:text-pink-500 group-hover:dark:text-pink-500"
-              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
+                        <svg class="w-12 h-12 mx-auto dark:text-gray-100 group-hover:text-pink-500 group-hover:dark:text-pink-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
               <!-- SVG Path for the icon -->
               <circle cx="8.5" cy="7" r="4" />
               <polyline points="17 11 19 13 23 9" />
             </svg>
-            <h3
-              class="font-semibold text-4xl md:text-3xl group-hover:text-thq_green-500 text-gray-900 dark:text-white mt-3.5"
-              data-aos="fade-in">25000</h3>
-            <p
-              class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300">
-              Guides</p>
-          </div>
-        </div>
-        <!-- Box 2 - Number of Tours -->
-        <div class="box1">
-          <div class="iconss">
-            <svg class="w-12 h-12 mx-auto dark:text-gray-100 group-hover:text-pink-500 group-hover:dark:text-pink-500"
-              viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
+                        <h3 class="font-semibold text-4xl md:text-3xl group-hover:text-thq_green-500 text-gray-900 dark:text-white mt-3.5" data-aos="fade-in">25000</h3>
+                        <p class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300">
+                            Guides</p>
+                    </div>
+                </div>
+                <!-- Box 2 - Number of Tours -->
+                <div class="box1">
+                    <div class="iconss">
+                        <svg class="w-12 h-12 mx-auto dark:text-gray-100 group-hover:text-pink-500 group-hover:dark:text-pink-500" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" />
               <circle cx="12" cy="10" r="4" />
               <!-- SVG Path for the icon -->
@@ -313,19 +292,14 @@
               <line x1="12" y1="18" x2="12" y2="22" />
               <line x1="8" y1="22" x2="16" y2="22" />
             </svg>
-            <h3
-              class="font-semibold text-4xl md:text-3xl  group-hover:text-thq_green-500 text-gray-900 dark:text-white mt-3.5"
-              data-aos="fade-in">20000</h3>
-            <p class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300"
-              data-aos="fade-in">Tours</p>
-          </div>
-        </div>
-        <!-- Box 3 - Number of Destinations -->
-        <div class="box1">
-          <a href="affordable-destinations.html" class="iconss">
-            <svg class="w-12 h-12 mx-auto group-hover:text-pink-500 dark:text-gray-100 group-hover:dark:text-pink-500"
-              viewBox="0 0 24 24" stroke-width="2" stroke="black" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
+                        <h3 class="font-semibold text-4xl md:text-3xl  group-hover:text-thq_green-500 text-gray-900 dark:text-white mt-3.5" data-aos="fade-in">20000</h3>
+                        <p class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300" data-aos="fade-in">Tours</p>
+                    </div>
+                </div>
+                <!-- Box 3 - Number of Destinations -->
+                <div class="box1">
+                    <a href="affordable-destinations.html" class="iconss">
+                        <svg class="w-12 h-12 mx-auto group-hover:text-pink-500 dark:text-gray-100 group-hover:dark:text-pink-500" viewBox="0 0 24 24" stroke-width="2" stroke="black" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <!-- SVG Path for the icon -->
               <path stroke="none" d="M0 0h24v24H0z" />
               <line x1="18" y1="6" x2="18" y2="6.01" />
@@ -334,82 +308,76 @@
               <line x1="9" y1="4" x2="9" y2="17" />
               <line x1="15" y1="15" x2="15" y2="20" />
             </svg>
-            <h3
-              class="font-semibold text-4xl md:text-3xl  group-hover:text-thq_green-500 text-black-900 dark:text-black mt-3.5"
-              data-aos="fade-in">10994</h3>
-            <p class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300"
-              data-aos="fade-in">Destinations</p>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    </div>
-    </div>
-    </div>
-    </div>
-
-    </section>
-    </header>
-    <br><br>
-    <!-- ending the section of About Us -->
-
-    <!-- Newsletter Modal -->
-
-    <div class="modal-container">
-      <div class="modal-wrapper">
-        <div class="cross-container">
-          <i class="fas fa-times close-btn" onclick="closeModal()"></i>
-        </div>
-        <div class="modal-newsletter">
-          <div class="modal-header">
-            <div style="display: flex;flex-flow: column;">
-              <a href="#" class="nav__logo"
-                style="pointer-events:none;color:#000;scale: 0.75;">Tourguide<span>.</span></a>
-              <h3 style="font-weight: 600;font-size: 24px;">Get Flat 15% OFF</h3>
-              <span style="color: #939393; padding: .5rem; font-size: 13px;">Sign up and grab your discount.</span>
+                        <h3 class="font-semibold text-4xl md:text-3xl  group-hover:text-thq_green-500 text-black-900 dark:text-black mt-3.5" data-aos="fade-in">10994</h3>
+                        <p class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300" data-aos="fade-in">Destinations</p>
+                    </a>
+                </div>
             </div>
-          </div>
-          <div class="modal-content">
-            <form id="modal-form">
-              <input type="email" id="modal-email" placeholder="Email Address" required>
-              <button class="modal-btn" id="news-subscribe" type="submit">Subscribe</button>
-            </form>
-            <span style="color: #3950ac; padding: 1rem 0 0 0; font-weight: 600;cursor:pointer;font-size: 16px;"
-              onclick="closeModal()">No, thanks</span>
-            <span style="color: #939393; padding: 1rem; font-size: 13px;">You are signing up to receive our newsletters
+        </div>
+
+        </div>
+        </div>
+        </div>
+        </div>
+
+        </section>
+        </header>
+        <br><br>
+        <!-- ending the section of About Us -->
+
+        <!-- Newsletter Modal -->
+
+        <div class="modal-container">
+            <div class="modal-wrapper">
+                <div class="cross-container">
+                    <i class="fas fa-times close-btn" onclick="closeModal()"></i>
+                </div>
+                <div class="modal-newsletter">
+                    <div class="modal-header">
+                        <div style="display: flex;flex-flow: column;">
+                            <a href="#" class="nav__logo" style="pointer-events:none;color:#000;scale: 0.75;">Tourguide<span>.</span></a>
+                            <h3 style="font-weight: 600;font-size: 24px;">Get Flat 15% OFF</h3>
+                            <span style="color: #939393; padding: .5rem; font-size: 13px;">Sign up and grab your discount.</span>
+                        </div>
+                    </div>
+                    <div class="modal-content">
+                        <form id="modal-form">
+                            <input type="email" id="modal-email" placeholder="Email Address" required>
+                            <button class="modal-btn" id="news-subscribe" type="submit">Subscribe</button>
+                        </form>
+                        <span style="color: #3950ac; padding: 1rem 0 0 0; font-weight: 600;cursor:pointer;font-size: 16px;" onclick="closeModal()">No, thanks</span>
+                        <span style="color: #939393; padding: 1rem; font-size: 13px;">You are signing up to receive our newsletters
               via
               email and can unsubscribe at any time.</span>
-          </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="./img/pexels-sam-kolder-2387871.jpg" class="modal-image" alt="maldives">
+                </div>
+            </div>
         </div>
-        <div>
-          <img src="./img/pexels-sam-kolder-2387871.jpg" class="modal-image" alt="maldives">
-        </div>
-      </div>
-    </div>
 
-    <section class="section__container destination__container" id="Destinations" data-aos="fade-up">
-    <div class="section__header">
-      <div>
-        <h2 class="section__title" data-aos="fade-in">Explore top destinations</h2>
-        <p class="section__subtitle" data-aos="fade-in">
-          Explore your suitable and dream places around the world. Here you
-          can find your right destination.
-        </p>
-      </div>
-    </div>
+        <section class="section__container destination__container" id="Destinations" data-aos="fade-up">
+            <div class="section__header">
+                <div>
+                    <h2 class="section__title" data-aos="fade-in">Explore top destinations</h2>
+                    <p class="section__subtitle" data-aos="fade-in">
+                        Explore your suitable and dream places around the world. Here you can find your right destination.
+                    </p>
+                </div>
+            </div>
 
-    <!-- slideshow -->
-    <!-- <div class="slideshow-container" data-aos="fade-up"> -->
+            <!-- slideshow -->
+            <!-- <div class="slideshow-container" data-aos="fade-up"> -->
 
-    <!-- Next and previous buttons -->
-    <!-- <div class="destination__nav">
+            <!-- Next and previous buttons -->
+            <!-- <div class="destination__nav">
           <span onclick="pullSlide(-1)"><i class="ri-arrow-left-s-line"></i></span>
           <span onclick="pullSlide(1)"><i class="ri-arrow-right-s-line"></i></span>
         </div> -->
 
-    <!-- Full-width images with number and caption text -->
-    <!-- <div class="mySlides">
+            <!-- Full-width images with number and caption text -->
+            <!-- <div class="mySlides">
           <img src="./img/eiffelTower.webp" style="width:100%">
         </div>
 
@@ -431,384 +399,366 @@
           <span></span>
         </div>
       </div> -->
-    <div class="outer-box">
-      <div class="containers">
+            <div class="outer-box">
+                <div class="containers">
 
-        <div class="card active" style="
+                    <div class="card active" style="
             background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
               url('/img/paris.jpg')
           ">
-          <div class="info">
+                        <div class="info">
 
-            <p>
-              ||Eiffel Tower||
-            </p>
-            <h3>PARIS</h3>
-          </div>
-        </div>
+                            <p>
+                                ||Eiffel Tower||
+                            </p>
+                            <h3>PARIS</h3>
+                        </div>
+                    </div>
 
-        <div class="card" style="
+                    <div class="card" style="
               background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
                 url('/img/london.jpg')
             ">
-          <div class="info">
+                        <div class="info">
 
-            <p>
-              ||Giant Wheel||
-            </p>
-            <h3>LONDON</h3>
-          </div>
-        </div>
+                            <p>
+                                ||Giant Wheel||
+                            </p>
+                            <h3>LONDON</h3>
+                        </div>
+                    </div>
 
-        <div class="card" style="
+                    <div class="card" style="
               background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
                 url('/img/goa.jpg')
             ">
-          <div class="info">
+                        <div class="info">
 
-            <p>
-              ||Goa Beach||
-            </p>
-            <h3>GOA</h3>
-          </div>
-        </div>
+                            <p>
+                                ||Goa Beach||
+                            </p>
+                            <h3>GOA</h3>
+                        </div>
+                    </div>
 
-        <div class="card" style="
+                    <div class="card" style="
               background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
                 url('/img/maldives.jpg')">
-          <div class="info">
+                        <div class="info">
 
-            <p>
-              ||Male Beach||
-            </p>
-            <h3>MALDIVES</h3>
-          </div>
-        </div>
+                            <p>
+                                ||Male Beach||
+                            </p>
+                            <h3>MALDIVES</h3>
+                        </div>
+                    </div>
 
 
 
-      </div>
-    </div>
-    <script src="explore.js"></script>
-    </section>
+                </div>
+            </div>
+            <script src="explore.js"></script>
+        </section>
 
-    <section class="trip" id="trip" data-aos="zoom-in" data-aos-offset="100">
-      <div class="section__container trip__container">
-        <h2 class="section__title">Best trip packages</h2>
-        <p class="section__subtitle">
-          Explore your suitable and dream places around the world. Here you can
-          find your right destination.
-        </p>
-        <div class="trip__grid">
-          <div class="trip__card">
-            <img src="https://i.ibb.co/60nvYwQ/Screenshot-2023-07-14-173347.png" alt="trip" height="250" width="45" />
-            <div class="trip__details">
-              <p>Santorini, Aegean Sea</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $300</div>
-                <a href="./dedicated-destinations/santorini-aegean-sea/start.html"><button class="book__now btn-style"
+        <section class="trip" id="trip" data-aos="zoom-in" data-aos-offset="100">
+            <div class="section__container trip__container">
+                <h2 class="section__title">Best trip packages</h2>
+                <p class="section__subtitle">
+                    Explore your suitable and dream places around the world. Here you can find your right destination.
+                </p>
+                <div class="trip__grid">
+                    <div class="trip__card">
+                        <img src="https://i.ibb.co/60nvYwQ/Screenshot-2023-07-14-173347.png" alt="trip" height="250" width="45" />
+                        <div class="trip__details">
+                            <p>Santorini, Aegean Sea</p>
+                            <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+                            <div class="booking__price">
+                                <div class="price"><span>From</span> $300</div>
+                                <a href="./dedicated-destinations/santorini-aegean-sea/start.html"><button class="book__now btn-style"
                     style="box-shadow: 2px 2px 8px red;">Book
                     Now</button></a>
-              </div>
-            </div>
-          </div>
-          <div class="trip__card">
-            <img src="https://i.ibb.co/h1WgH8B/Screenshot-2023-07-14-173807.png" alt="trip" height="250" width="45" />
-            <div class="trip__details">
-              <p>Machu Picchu, Peru</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $450</div>
-                <a href="./dedicated-destinations/machu-picchu-peru/Machu_start.html"><button
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trip__card">
+                        <img src="https://i.ibb.co/h1WgH8B/Screenshot-2023-07-14-173807.png" alt="trip" height="250" width="45" />
+                        <div class="trip__details">
+                            <p>Machu Picchu, Peru</p>
+                            <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+                            <div class="booking__price">
+                                <div class="price"><span>From</span> $450</div>
+                                <a href="./dedicated-destinations/machu-picchu-peru/Machu_start.html"><button
                     class="book__now btn-style" style="box-shadow: 2px 2px 8px red;">Book
                     Now</button></a>
-              </div>
-            </div>
-          </div>
-          <div class="trip__card">
-            <img src="https://i.ibb.co/vc2W0wN/Screenshot-2023-07-14-174151.png" alt="trip" height="250" width="45" />
-            <div class="trip__details">
-              <p>Grand Canyon National Park, Arizona</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $400</div>
-                <a href="./dedicated-destinations/grand-canyon-national-park-arizona/Grand_start.html"><button
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trip__card">
+                        <img src="https://i.ibb.co/vc2W0wN/Screenshot-2023-07-14-174151.png" alt="trip" height="250" width="45" />
+                        <div class="trip__details">
+                            <p>Grand Canyon National Park, Arizona</p>
+                            <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+                            <div class="booking__price">
+                                <div class="price"><span>From</span> $400</div>
+                                <a href="./dedicated-destinations/grand-canyon-national-park-arizona/Grand_start.html"><button
                     class="book__now btn-style" style="box-shadow: 2px 2px 8px red;">Book Now</button></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="view__all">
-          <a href="./package.html"><button class="btn" id="btn-style" style="box-shadow: 2px 2px 8px red;">View
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="view__all">
+                    <a href="./package.html"><button class="btn" id="btn-style" style="box-shadow: 2px 2px 8px red;">View
               All</button></a>
-        </div>
-      </div>
-    </section>
+                </div>
+            </div>
+        </section>
 
 
-    <section class="gallary" id="ReviewGallery">
-      <div class="section__container gallary__container">
-        <div class="section__container gallary__container" id="originalDiv">
-          <div class="image__gallary">
-            <div class="gallary__col" data-aos="zoom-in">
-              <img src="https://i.ibb.co/ZYDJ6vv/pexels-spencer-davis-4356144.jpg" alt="gallary" />
+        <section class="gallary" id="ReviewGallery">
+            <div class="section__container gallary__container">
+                <div class="section__container gallary__container" id="originalDiv">
+                    <div class="image__gallary">
+                        <div class="gallary__col" data-aos="zoom-in">
+                            <img src="https://i.ibb.co/ZYDJ6vv/pexels-spencer-davis-4356144.jpg" alt="gallary" />
+                        </div>
+                        <div class="gallary__col" data-aos="zoom-in">
+                            <img src="https://i.ibb.co/W3HTbYG/pexels-zakaria-boumliha-2827374.jpg" alt="gallary" />
+                            <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" alt="gallary" />
+                        </div>
+                    </div>
+                    <div class="gallary__content">
+                        <div>
+                            <h2 class="section__title" data-aos="zoom-in">
+                                Our trip gallery that will inspire you
+                            </h2>
+                            <p class="section__subtitle" data-aos="zoom-in">
+                                Explore your suitable and dream places around the world. Here you can find your right destination.
+                            </p>
+                            <button class="btn btn-style" id="btn-page" onclick="replaceDivs()" data-aos="zoom-in" style="box-shadow: 2px 2px 8px rgb(0, 191, 255);">View All</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="gallary__col" data-aos="zoom-in">
-              <img src="https://i.ibb.co/W3HTbYG/pexels-zakaria-boumliha-2827374.jpg" alt="gallary" />
-              <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" alt="gallary" />
-            </div>
-          </div>
-          <div class="gallary__content">
-            <div>
-              <h2 class="section__title" data-aos="zoom-in">
-                Our trip gallery that will inspire you
-              </h2>
-              <p class="section__subtitle" data-aos="zoom-in">
-                Explore your suitable and dream places around the world. Here you
-                can find your right destination.
-              </p>
-              <button class="btn btn-style" id="btn-page" onclick="replaceDivs()" data-aos="zoom-in"
-                style="box-shadow: 2px 2px 8px rgb(0, 191, 255);">View All</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br><br>
-      <!-- New div components (hidden initially) -->
-      <div id="newDiv" style="display: none;" data-aos="zoom-in">
-        <!-- Sliding Animated Gallery -->
-        <div class="gallery-rotate-image">
-          <div class="image-container">
-            <span style="--i : 1">
+            <br><br>
+            <!-- New div components (hidden initially) -->
+            <div id="newDiv" style="display: none;" data-aos="zoom-in">
+                <!-- Sliding Animated Gallery -->
+                <div class="gallery-rotate-image">
+                    <div class="image-container">
+                        <span style="--i : 1">
               <img src="./img/pexels-ajay-donga-2174656.jpg">
             </span>
-            <span style="--i : 2">
+                        <span style="--i : 2">
               <img src="./img/pexels-alex-azabache-3214958.jpg">
             </span>
-            <span style="--i : 3">
+                        <span style="--i : 3">
               <img src="./img/pexels-andrei-tanase-1271619.jpg">
             </span>
-            <span style="--i : 4">
+                        <span style="--i : 4">
               <img src="./img/pexels-josh-hild-2422259.jpg">
             </span>
-            <span style="--i : 5">
+                        <span style="--i : 5">
               <img src="./img/pexels-paulo-marcelo-martins-2412606.jpg">
             </span>
-            <span style="--i : 6">
+                        <span style="--i : 6">
               <img src="./img/pexels-quang-nguyen-vinh-2132126.jpg">
             </span>
-            <span style="--i : 7">
+                        <span style="--i : 7">
               <img src="./img/pexels-sam-kolder-2387871.jpg">
             </span>
-            <span style="--i : 8">
+                        <span style="--i : 8">
               <img src="./img/pexels-spencer-davis-4356144.jpg">
             </span>
-            <span style="--i : 9">
+                        <span style="--i : 9">
               <img src="./img/pexels-stijn-dijkstra-2499699.jpg">
             </span>
-            <span style="--i : 10">
+                        <span style="--i : 10">
               <img src="./img/pexels-zakaria-boumliha-2827374.jpg">
             </span>
-          </div>
-        </div>
-        <div class="btn-container">
-          <button class="btn btn-style" id="prev">Prev</button>
-          <button class="btn btn-style" id="next">Next</button>
-        </div>
-        <!-- Trip Photo Gallery -->
-        <div class="trip-gallery-container">
+                    </div>
+                </div>
+                <div class="btn-container">
+                    <button class="btn btn-style" id="prev">Prev</button>
+                    <button class="btn btn-style" id="next">Next</button>
+                </div>
+                <!-- Trip Photo Gallery -->
+                <div class="trip-gallery-container">
 
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo1.png" height="250" width="200">
-            <p><a href="https://maps.app.goo.gl/4ULWYJxSVD8AcUin6" target="_blank">LADAKH</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo2.png" height="250" width="200">
-            <p><a href="https://maps.app.goo.gl/zrA5UgDQoeUtRhhn7" target="_blank">RANNERDALE KNOTTS</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo3.jpg" height="250" width="200">
-            <p><a href="https://maps.app.goo.gl/eTfvw4peKN3AcMUy8" target="_blank">AMALPHI COAST</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo4.png" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/tBZLQcZbCHRWsgGX7" target="_blank">THE GOLDEN TEMPLE,PERIYAPATTNA</a>
-            </p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo5.jpg" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/8Y3rnjtxU563KVvE9" target="_blank">MALSHEJ GHAT</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo6.png" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/cj2UZZoyCTzeoQjEA" target="_blank">SAHARA DESERT</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo7.png" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/Gk1fQts4zeVRdAWu6" target="_blank">MALDIVES</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo8.jpg" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/DbWvrFgfwwwTWuBT8" target="_blank">PUNAKHA SUSPENSION BRIDGE</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo9.jpg" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/gBGuxUNXXemiZ2Td8" target="_blank">ARU VALLEY</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo10.jpg" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/tQ4BT4gDoFtauReM9" target="_blank">THE GOLDEN BRIDGE</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo11.jpg" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/oqDnmF2pCqRxV5Cp6" target="_blank">LAKE DISTRICT</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo13.jpg" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/pHjaA4aqP41JxdAh9" target="_blank">MUNNAR</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo19.jpg" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/84rV6GhhginGXgbc8" target="_blank">STATUE OF LIBERTY</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo20.png" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/GzVALHoLp4MgFmgw5" target="_blank">NAKKI LAKE</a></p>
-          </figure>
+                    <figure class="image-container">
+                        <img src="./img/Trip_Photos/photo1.png" height="250" width="200">
+                        <p><a href="https://maps.app.goo.gl/4ULWYJxSVD8AcUin6" target="_blank">LADAKH</a></p>
+                    </figure>
+                    <figure class="image-container">
+                        <img src="./img/Trip_Photos/photo2.png" height="250" width="200">
+                        <p><a href="https://maps.app.goo.gl/zrA5UgDQoeUtRhhn7" target="_blank">RANNERDALE KNOTTS</a></p>
+                    </figure>
+                    <figure class="image-container">
+                        <img src="./img/Trip_Photos/photo3.jpg" height="250" width="200">
+                        <p><a href="https://maps.app.goo.gl/eTfvw4peKN3AcMUy8" target="_blank">AMALPHI COAST</a></p>
+                    </figure>
+                    <figure class="image-container">
+                        <img src="./img/Trip_Photos/photo4.png" height="220" width="230">
+                        <p><a href="https://maps.app.goo.gl/tBZLQcZbCHRWsgGX7" target="_blank">THE GOLDEN TEMPLE,PERIYAPATTNA</a>
+                        </p>
+                    </figure>
+                    <figure class="image-container">
+                        <img src="./img/Trip_Photos/photo5.jpg" height="220" width="230">
+                        <p><a href="https://maps.app.goo.gl/8Y3rnjtxU563KVvE9" target="_blank">MALSHEJ GHAT</a></p>
+                    </figure>
+                    <figure class="image-container">
+                        <img src="./img/Trip_Photos/photo6.png" height="220" width="230">
+                        <p><a href="https://maps.app.goo.gl/cj2UZZoyCTzeoQjEA" target="_blank">SAHARA DESERT</a></p>
+                    </figure>
+                    <figure class="image-container">
+                        <img src="./img/Trip_Photos/photo7.png" height="220" width="230">
+                        <p><a href="https://maps.app.goo.gl/Gk1fQts4zeVRdAWu6" target="_blank">MALDIVES</a></p>
+                    </figure>
+                    <figure class="image-container">
+                        <img src="./img/Trip_Photos/photo8.jpg" height="220" width="230">
+                        <p><a href="https://maps.app.goo.gl/DbWvrFgfwwwTWuBT8" target="_blank">PUNAKHA SUSPENSION BRIDGE</a></p>
+                    </figure>
+                    <figure class="image-container">
+                        <img src="./img/Trip_Photos/photo9.jpg" height="220" width="230">
+                        <p><a href="https://maps.app.goo.gl/gBGuxUNXXemiZ2Td8" target="_blank">ARU VALLEY</a></p>
+                    </figure>
+                    <figure class="image-container">
+                        <img src="./img/Trip_Photos/photo10.jpg" height="220" width="230">
+                        <p><a href="https://maps.app.goo.gl/tQ4BT4gDoFtauReM9" target="_blank">THE GOLDEN BRIDGE</a></p>
+                    </figure>
+                    <figure class="image-container">
+                        <img src="./img/Trip_Photos/photo11.jpg" height="220" width="230">
+                        <p><a href="https://maps.app.goo.gl/oqDnmF2pCqRxV5Cp6" target="_blank">LAKE DISTRICT</a></p>
+                    </figure>
+                    <figure class="image-container">
+                        <img src="./img/Trip_Photos/photo13.jpg" height="220" width="230">
+                        <p><a href="https://maps.app.goo.gl/pHjaA4aqP41JxdAh9" target="_blank">MUNNAR</a></p>
+                    </figure>
+                    <figure class="image-container">
+                        <img src="./img/Trip_Photos/photo19.jpg" height="220" width="230">
+                        <p><a href="https://maps.app.goo.gl/84rV6GhhginGXgbc8" target="_blank">STATUE OF LIBERTY</a></p>
+                    </figure>
+                    <figure class="image-container">
+                        <img src="./img/Trip_Photos/photo20.png" height="220" width="230">
+                        <p><a href="https://maps.app.goo.gl/GzVALHoLp4MgFmgw5" target="_blank">NAKKI LAKE</a></p>
+                    </figure>
 
-          <!-- <img src="./img/Trip_Photos/photo3.jpg" height="240" width="200"> -->
+                    <!-- <img src="./img/Trip_Photos/photo3.jpg" height="240" width="200"> -->
 
-        </div>
-      </div>
-    </section>
-    <br /><br /><br /><br /><br /><br />
-
-    <!-- Testimonials Section -->
-
-    <section class="testimonials" id="testimonials">
-      <h2 class="testimonial-heading section__title" align-items="center" data-aos="fade-in">Testimonials</h2>
-      <div class="testimonial-container">
-        <div class="testimonial-user" data-aos="fade-up">
-          <img class="testi-img" src="./img/testimonial1.jpg" alt="">
-          <div>
-            <p><sup><i class="fas fa-quote-left"></i></sup>TourGuide made our dream vacation a reality! From the
-              breathtaking landscapes to the seamless logistics, every moment was a new adventure. The personalized
-              itinerary and expert guides added a special touch to our journey. We can't wait to book our next trip with
-              TourGuide!<sup><i class="fas fa-quote-right"></i></sup></p>
-            <div class="user-info">
-              <h3>Joseph</h3>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="testimonial-user" data-aos="fade-up">
-          <img class="testi-img" src="./img/Abhisek Tamang.jpg" alt="">
-          <div>
-            <p><sup><i class="fas fa-quote-left"></i></sup>Our cultural tour with TourGuide exceeded all expectations.
-              The
-              immersive experiences, knowledgeable guides, and carefully curated activities allowed us to connect with
-              the
-              local culture in a way we never thought possible. Thanks to TourGuide.<sup><i
+        </section>
+        <br /><br /><br /><br /><br /><br />
+
+        <!-- Testimonials Section -->
+
+        <section class="testimonials" id="testimonials">
+            <h2 class="testimonial-heading section__title" align-items="center" data-aos="fade-in">Testimonials</h2>
+            <div class="testimonial-container">
+                <div class="testimonial-user" data-aos="fade-up">
+                    <img class="testi-img" src="./img/testimonial1.jpg" alt="">
+                    <div>
+                        <p><sup><i class="fas fa-quote-left"></i></sup>TourGuide made our dream vacation a reality! From the breathtaking landscapes to the seamless logistics, every moment was a new adventure. The personalized itinerary and expert guides
+                            added a special touch to our journey. We can't wait to book our next trip with TourGuide!
+                            <sup><i class="fas fa-quote-right"></i></sup></p>
+                        <div class="user-info">
+                            <h3>Joseph</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-user" data-aos="fade-up">
+                    <img class="testi-img" src="./img/Abhisek Tamang.jpg" alt="">
+                    <div>
+                        <p><sup><i class="fas fa-quote-left"></i></sup>Our cultural tour with TourGuide exceeded all expectations. The immersive experiences, knowledgeable guides, and carefully curated activities allowed us to connect with the local culture
+                            in a way we never thought possible. Thanks to TourGuide.<sup><i
                   class="fas fa-quote-right"></i></sup></p>
-            <div class="user-info">
-              <h3>Charles</h3>
+                        <div class="user-info">
+                            <h3>Charles</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-user" data-aos="fade-up">
+                    <img class="testi-img" src="./img/testimonial2.jpg" alt="">
+                    <div>
+                        <p><sup><i class="fas fa-quote-left"></i></sup>Traveling with the family has never been easier! TourGuide took care of every detail, ensuring a stress-free and enjoyable vacation for all. The kid-friendly activities and family-oriented
+                            guides made our trip unforgettable.<sup><i class="fas fa-quote-right"></i></sup></p>
+                        <div class="user-info">
+                            <h3>Katie</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="testimonial-user" data-aos="fade-up">
-          <img class="testi-img" src="./img/testimonial2.jpg" alt="">
-          <div>
-            <p><sup><i class="fas fa-quote-left"></i></sup>Traveling with the family has never been easier! TourGuide
-              took
-              care of every detail, ensuring a stress-free and enjoyable vacation for all. The kid-friendly activities
-              and
-              family-oriented guides made our trip unforgettable.<sup><i class="fas fa-quote-right"></i></sup></p>
-            <div class="user-info">
-              <h3>Katie</h3>
+        </section>
+
+
+
+        <!----------------------------------------------------- FAQ section ---------------------- -->
+
+        <section>
+            <h2 class="section__title" data-aos="zoom-in">
+                Frequently asked questions
+            </h2>
+            <div class="faq-container">
+                <div class="faq active" data-aos="zoom-in">
+                    <h3 class="faq-title">How do I book my travel arrangements through your website?</h3>
+                    <p class="faq-text">Booking your travel with us is simple and convenient. Start by entering your destination, travel dates, and other relevant details on our homepage. Browse through the available options, including flights, hotels, and car rentals. Once
+                        you find the perfect combination for your trip, follow the easy step-by-step process to confirm your booking. If you encounter any issues or have questions during the booking process, our customer support team is available 24/7
+                        to assist you.</p>
+                    <button class="faq-toggle">
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-times"></i>
+          </button>
+                </div>
+                <div class="faq" data-aos="zoom-in">
+                    <h3 class="faq-title">What measures are in place to ensure the safety of my personal information?</h3>
+                    <p class="faq-text">We take the security of your personal information seriously. Our website employs state-of-the-art encryption technology to safeguard your data during the booking process. Additionally, we adhere to strict privacy policies and comply
+                        with industry standards to protect your information. Rest assured that your details are used solely for the purpose of facilitating your travel arrangements, and we do not share your information with third parties without your
+                        consent. For more details, please refer to our Privacy Policy.</p>
+                    <button class="faq-toggle">
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-times"></i>
+          </button>
+                </div>
+                <div class="faq" data-aos="zoom-in">
+                    <h3 class="faq-title">Can I make changes to my booking or cancel it if needed?</h3>
+                    <p class="faq-text">Yes, we understand that plans can change. Depending on the terms and conditions of your specific booking, you may be able to make modifications or cancel your reservation. Log in to your account on our website, navigate to the "Manage
+                        Booking" section, and follow the provided instructions. Keep in mind that there may be associated fees or restrictions depending on the type of booking and the time of the requested changes. For further assistance, feel free to
+                        contact our customer support team, and they will guide you through the process.</p>
+                    <button class="faq-toggle">
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-times"></i>
+          </button>
+                </div>
+
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-
-    <!----------------------------------------------------- FAQ section ---------------------- -->
-
-    <section>
-      <h2 class="section__title" data-aos="zoom-in">
-        Frequently asked questions
-      </h2>
-      <div class="faq-container">
-        <div class="faq active" data-aos="zoom-in">
-          <h3 class="faq-title">How do I book my travel arrangements through your website?</h3>
-          <p class="faq-text">Booking your travel with us is simple and convenient. Start by entering your destination,
-            travel dates, and other relevant details on our homepage. Browse through the available options, including
-            flights, hotels, and car rentals. Once you find the perfect combination for your trip, follow the easy
-            step-by-step process to confirm your booking. If you encounter any issues or have questions during the
-            booking process, our customer support team is available 24/7 to assist you.</p>
-          <button class="faq-toggle">
-            <i class="fas fa-chevron-down"></i>
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-        <div class="faq" data-aos="zoom-in">
-          <h3 class="faq-title">What measures are in place to ensure the safety of my personal information?</h3>
-          <p class="faq-text">We take the security of your personal information seriously. Our website employs
-            state-of-the-art encryption technology to safeguard your data during the booking process. Additionally, we
-            adhere to strict privacy policies and comply with industry standards to protect your information. Rest
-            assured that your details are used solely for the purpose of facilitating your travel arrangements, and we
-            do not share your information with third parties without your consent. For more details, please refer to our
-            Privacy Policy.</p>
-          <button class="faq-toggle">
-            <i class="fas fa-chevron-down"></i>
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-        <div class="faq" data-aos="zoom-in">
-          <h3 class="faq-title">Can I make changes to my booking or cancel it if needed?</h3>
-          <p class="faq-text">Yes, we understand that plans can change. Depending on the terms and conditions of your
-            specific booking, you may be able to make modifications or cancel your reservation. Log in to your account
-            on our website, navigate to the "Manage Booking" section, and follow the provided instructions. Keep in mind
-            that there may be associated fees or restrictions depending on the type of booking and the time of the
-            requested changes. For further assistance, feel free to contact our customer support team, and they will
-            guide you through the process.</p>
-          <button class="faq-toggle">
-            <i class="fas fa-chevron-down"></i>
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".swiper-container", {
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        coverflowEffect: {
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 2,
-          slideShadows: true,
-        },
-        loop: true,
-      });
-    </script>
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".swiper-container", {
+                effect: 'coverflow',
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 2,
+                    slideShadows: true,
+                },
+                loop: true,
+            });
+        </script>
 
 
 
 
-    <!--------------------------------------- Updated Contact Us Section ----------------------------------------------->
+        <!--------------------------------------- Updated Contact Us Section ----------------------------------------------->
 
-    <!-- <section class="contact" id="contact">
+        <!-- <section class="contact" id="contact">
     <h2 class="section__title" align-items="center" data-aos="slide-right">Contact Us</h2>
     <div class="contact-form" data-aos="fade-in">
       <div class="left">
@@ -848,243 +798,237 @@
 
   </section> -->
 
-    <section>
-      <div class="container" id="cnt-form">
-        <div class="items">
-          <div class="contact" data-aos="slide-right">
-            <div>
-              <h1 class="section__title" style="height: 90px;">Contact Us</h1>
-              <p>Feel Free to drop us a message with any inquiries or feedback.We're here to assist you!</p>
-              <img src="./img/flat-design-illustration-customer-support_23-2148887720.avif">
+        <section>
+            <div class="container" id="cnt-form">
+                <div class="items">
+                    <div class="contact" data-aos="slide-right">
+                        <div>
+                            <h1 class="section__title" style="height: 90px;">Contact Us</h1>
+                            <p>Feel Free to drop us a message with any inquiries or feedback.We're here to assist you!</p>
+                            <img src="./img/flat-design-illustration-customer-support_23-2148887720.avif">
+                        </div>
+                    </div>
+                    <div class="contact-form" data-aos="fade-in">
+                        <h1>Contact Us</h1>
+                        <form id="contact-form" name="CalcDiverse Contact" autocomplete="off">
+                            <input type="text" id="Name" placeholder="Name" required>
+                            <input type="email" id="email" placeholder="Email" required>
+                            <textarea id="message" placeholder="Type your message here.." required></textarea><br>
+                            <button type="submit" class="btn btn-style" data-aos="fade-in" id="btn-style" style="margin-right: 40px;box-shadow: 2px 2px 8px red;">Send</button>
+                            <button onclick="window.location.href='feed.html'" class="btn  btn-style" data-aos="fade-in" id="btn-style" style="box-shadow: 2px 2px 8px red;">Feedback</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="contact-form" data-aos="fade-in">
-            <h1>Contact Us</h1>
-            <form id="contact-form" name="CalcDiverse Contact" autocomplete="off">
-              <input type="text" id="Name" placeholder="Name" required>
-              <input type="email" id="email" placeholder="Email" required>
-              <textarea id="message" placeholder="Type your message here.." required></textarea><br>
-              <button type="submit" class="btn btn-style" data-aos="fade-in" id="btn-style"
-                style="margin-right: 40px;box-shadow: 2px 2px 8px red;">Send</button>
-              <button onclick="window.location.href='feed.html'" class="btn  btn-style" data-aos="fade-in"
-                id="btn-style" style="box-shadow: 2px 2px 8px red;">Feedback</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
 
 
 
-    <section class="subscribe" id="Contact">
-      <div class="section__container subscribe__container">
-        <div class="subscribe__content">
-          <h2 class="section__title" data-aos="fade-up">Subscribe to get special prize</h2>
-          <p class="section__subtitle" data-aos="fade-up">
-            Explore your suitable and dream places around the world. Here you
-            can find your right destination.
-          </p>
-        </div>
-        <div class="subscribe__form" data-aos="fade-up">
-          <form>
-            <input type="email" placeholder="Your email here" id="emailInput" required />
-            <button class="btn-send" id="send" type="submit" style="box-shadow: 2px 2px 8px blue;">Subscribe</button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer" data-aos="fade-up">
-      <div class="section__container footer__container">
-        <div class="footer__col">
-          <h3 class="footer__title">Tourguide<span>.</span></h3>
-          <p class="footer__text">
-            Explore your suitable and dream places around the world. Here you
-            can find your right destination.
-          </p>
-        </div>
-        <div class="footer__col">
-          <div class="footer__area">
-            <h4 class="footer__subtitle">Support</h4>
-          <p><a href="./faq.html" class="footer__link">FAQs</a></p>
-          <p><a href="./tnc.html" class="footer__link">Terms & Conditions</a></p>
-          <p><a href="./privacy.html" class="footer__link">Privacy Policy</a></p>
-          <p><a href="#cnt-form" class="footer__link">Contact</a></p>
-          </div>
-        </div>
-        
-        <div class="footer__col">
-          <h4>Address</h4>
-          <div class="mapouter">
-            <div class="gmap_canvas"><iframe width="200" height="200" id="gmap_canvas"
-                src="https://maps.google.com/maps?q=wellington%20street%20kolkata&t=k&z=11&ie=UTF8&iwloc=&output=embed"
-                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
-                href="https://embedgooglemap.net/124/">invincible 123movies</a><br>
-              <style>
-                .mapouter {
-                  position: relative;
-                  text-align: right;
-                  height: 200px;
-                  width: 200px;
-                }
-              </style><a href="https://www.embedgooglemap.net">embed google map on website</a>
-              <style>
-                .gmap_canvas {
-                  overflow: hidden;
-                  background: none !important;
-                  height: 200px;
-                  width: 200px;
-                }
-              </style>
+        <section class="subscribe" id="Contact">
+            <div class="section__container subscribe__container">
+                <div class="subscribe__content">
+                    <h2 class="section__title" data-aos="fade-up">Subscribe to get special prize</h2>
+                    <p class="section__subtitle" data-aos="fade-up">
+                        Explore your suitable and dream places around the world. Here you can find your right destination.
+                    </p>
+                </div>
+                <div class="subscribe__form" data-aos="fade-up">
+                    <form>
+                        <input type="email" placeholder="Your email here" id="emailInput" required />
+                        <button class="btn-send" id="send" type="submit" style="box-shadow: 2px 2px 8px blue;">Subscribe</button>
+                    </form>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="footer__col">
-          <h4>Reach Out To Us</h4>
-          <p><span>Email:</span> tour@tourguide.com</p>
-          <p><span>Phone:</span> +91 8562145852</p>
-        </div>
-        <div class="footer__col">
-          <div id="google_element"></div>
-          <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
-          <script>
-            function loadGoogleTranslate() {
-              new google.translate.TranslateElement({
-                pageLanguage: 'en'
-              }, 'google_element');
-            }
-          </script>
-      </div>
+        </section>
+
+        <footer class="footer" data-aos="fade-up">
+            <div class="section__container footer__container">
+                <div class="footer__col">
+                    <h3 class="footer__title">Tourguide<span>.</span></h3>
+                    <p class="footer__text">
+                        Explore your suitable and dream places around the world. Here you can find your right destination.
+                    </p>
+                </div>
+                <div class="footer__col">
+                    <div class="footer__area">
+                        <h4 class="footer__subtitle">Support</h4>
+                        <p><a href="./faq.html" class="footer__link">FAQs</a></p>
+                        <p><a href="./tnc.html" class="footer__link">Terms & Conditions</a></p>
+                        <p><a href="./privacy.html" class="footer__link">Privacy Policy</a></p>
+                        <p><a href="#cnt-form" class="footer__link">Contact</a></p>
+                    </div>
+                </div>
+
+                <div class="footer__col">
+                    <h4>Address</h4>
+                    <div class="mapouter">
+                        <div class="gmap_canvas"><iframe width="200" height="200" id="gmap_canvas" src="https://maps.google.com/maps?q=wellington%20street%20kolkata&t=k&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            <a href="https://embedgooglemap.net/124/">invincible 123movies</a><br>
+                            <style>
+                                .mapouter {
+                                    position: relative;
+                                    text-align: right;
+                                    height: 200px;
+                                    width: 200px;
+                                }
+                            </style><a href="https://www.embedgooglemap.net">embed google map on website</a>
+                            <style>
+                                .gmap_canvas {
+                                    overflow: hidden;
+                                    background: none !important;
+                                    height: 200px;
+                                    width: 200px;
+                                }
+                            </style>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <h4>Reach Out To Us</h4>
+                    <p><span>Email:</span> tour@tourguide.com</p>
+                    <p><span>Phone:</span> +91 8562145852</p>
+                </div>
+                <div class="footer__col">
+                    <div id="google_element"></div>
+                    <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+                    <script>
+                        function loadGoogleTranslate() {
+                            new google.translate.TranslateElement({
+                                pageLanguage: 'en'
+                            }, 'google_element');
+                        }
+                    </script>
+                </div>
 
 
-      <!--  New copyright code to make it dynamic and display current year -->
-      <div class="footer__bar">
-        <div>
-          <li>Copyright &copy;<span id="year"></span> </span> Arpan Chowdhury. All rights reserved. </li>
-        </div>
-      </div>
+                <!--  New copyright code to make it dynamic and display current year -->
+                <div class="footer__bar">
+                    <div>
+                        <li>Copyright &copy;<span id="year"></span> </span> Arpan Chowdhury. All rights reserved. </li>
+                    </div>
+                </div>
 
-      <!--   Previous copyright code
+                <!--   Previous copyright code
 <!--  <div class="footer__bar">
         Copyright © 2023 Arpan Chowdhury. All rights reserved.
       </div> -->
 
-    </footer>
+        </footer>
 
-    <!-- adding a scrollup btn -->
-    <a class="goupbtn" href="#"><i class="fa-solid fa-arrow-up"></i></a>
-
-
-    <script>
-      // Get the button
-      var mybutton = document.getElementById("goToTopBtn");
-
-      // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function () {
-        scrollFunction();
-      };
-
-      function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
-
-      // When the user clicks on the button, scroll to the top of the document
-      function goToTop() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-    </script>
-
-    <script>
-      let hamburger = document.querySelector('.hamburger');
-      hamburger.addEventListener('click', () => {
-        let list = document.querySelector('.navLinks');
-        list.classList.toggle('activeHamburger');
-      })
-    </script>
+        <!-- adding a scrollup btn -->
+        <a class="goupbtn" href="#"><i class="fa-solid fa-arrow-up"></i></a>
 
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 1500,
-        offset: 120
-      });
-    </script>
+        <script>
+            // Get the button
+            var mybutton = document.getElementById("goToTopBtn");
 
-    <!-- typing animation -->
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-      var typed = new Typed(".auto-typed", {
-        strings: ["Wonders", "Gems", "Secrets"],
-        typeSpeed: 150,
-        backSpeed: 50,
-        loop: true
-      })
-    </script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction();
+            };
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-        //initailizing emailjs 
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
 
-        (function () {
-          emailjs.init("kHyqhzLTyzP0cw1px");
-        })();
+            // When the user clicks on the button, scroll to the top of the document
+            function goToTop() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
 
-      document.getElementById("contact-form").addEventListener('submit', function (event) {
-        event.preventDefault();
-        var email = document.getElementById("email").value;
-        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-        if (!emailPattern.test(email)) {
-          alert("Please enter a valid email");
-          return;
-        }
-        sendEmail(email);
-        event.target.reset();
-      });
+        <script>
+            let hamburger = document.querySelector('.hamburger');
+            hamburger.addEventListener('click', () => {
+                let list = document.querySelector('.navLinks');
+                list.classList.toggle('activeHamburger');
+            })
+        </script>
 
-      function sendEmail(email) {
-        var params = {
-          name: document.getElementById("Name").value,
-          email: email,
-          message: document.getElementById("message").value
-        }
 
-        const serviceID = "service_txp05dc";
-        const templateID = "template_16rbum9";
-
-        emailjs.send(serviceID, templateID, params)
-          .then(function (response) {
-            console.log("Success!", response.status, response.text);
-            alert("Email sent successfully!");
-          },
-            function (error) {
-              console.log("Failed to send email...", error);
-              alert("Failed to send Email. Please try again later.");
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1500,
+                offset: 120
             });
-      }
-    </script>
+        </script>
 
-    <script src="index.js"></script>
+        <!-- typing animation -->
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script>
+            var typed = new Typed(".auto-typed", {
+                strings: ["Wonders", "Gems", "Secrets"],
+                typeSpeed: 150,
+                backSpeed: 50,
+                loop: true
+            })
+        </script>
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script>
+            //initailizing emailjs 
+
+            (function() {
+                emailjs.init("kHyqhzLTyzP0cw1px");
+            })();
+
+            document.getElementById("contact-form").addEventListener('submit', function(event) {
+                event.preventDefault();
+                var email = document.getElementById("email").value;
+                var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                if (!emailPattern.test(email)) {
+                    alert("Please enter a valid email");
+                    return;
+                }
+                sendEmail(email);
+                event.target.reset();
+            });
+
+            function sendEmail(email) {
+                var params = {
+                    name: document.getElementById("Name").value,
+                    email: email,
+                    message: document.getElementById("message").value
+                }
+
+                const serviceID = "service_txp05dc";
+                const templateID = "template_16rbum9";
+
+                emailjs.send(serviceID, templateID, params)
+                    .then(function(response) {
+                            console.log("Success!", response.status, response.text);
+                            alert("Email sent successfully!");
+                        },
+                        function(error) {
+                            console.log("Failed to send email...", error);
+                            alert("Failed to send Email. Please try again later.");
+                        });
+            }
+        </script>
+
+        <script src="index.js"></script>
 
 
-    <script>
-      window.embeddedChatbotConfig = {
-        chatbotId: "yDQ_EheFvX0HAPr9beQ5L",
-        domain: "www.chatbase.co"
-      }
-    </script>
-    <script src="https://www.chatbase.co/embed.min.js" chatbotId="yDQ_EheFvX0HAPr9beQ5L" domain="www.chatbase.co" defer>
-    </script>
+        <script>
+            window.embeddedChatbotConfig = {
+                chatbotId: "yDQ_EheFvX0HAPr9beQ5L",
+                domain: "www.chatbase.co"
+            }
+        </script>
+        <script src="https://www.chatbase.co/embed.min.js" chatbotId="yDQ_EheFvX0HAPr9beQ5L" domain="www.chatbase.co" defer>
+        </script>
 
 
 
-    <!-- Start of Conferbot Script 
+        <!-- Start of Conferbot Script 
 
     <script type="text/javascript">
         (function (d, s, id) {
@@ -1107,10 +1051,8 @@
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- 
     <script>
       (function ($) {
         var isDarkMode = false; // Assuming initially in light mode
@@ -1371,126 +1313,127 @@
       })(jQuery);
     </script> -->
 
-    <script>
-      let pre = document.querySelector('#pre-loader');
-      window.addEventListener("load", function () {
-        pre.style.display = "none";
-      })
-    </script>
+        <script>
+            let pre = document.querySelector('#pre-loader');
+            window.addEventListener("load", function() {
+                pre.style.display = "none";
+            })
+        </script>
 
-    <script>
+        <script>
+            // To highlight active navbar
+            document.addEventListener("DOMContentLoaded", function() {
+                const navLinks = document.querySelectorAll('.navLinks a');
 
-      // To highlight active navbar
-      document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll('.navLinks a');
+                function highlightNavLink() {
+                    const scrollPosition = window.scrollY;
 
-        function highlightNavLink() {
-          const scrollPosition = window.scrollY;
+                    navLinks.forEach(link => {
+                        const sectionId = link.getAttribute('href').substring(1);
+                        const section = document.getElementById(sectionId);
 
-          navLinks.forEach(link => {
-            const sectionId = link.getAttribute('href').substring(1);
-            const section = document.getElementById(sectionId);
+                        // Adjust this value to control when the link should be highlighted
+                        const offsetPercentage = 20;
 
-            // Adjust this value to control when the link should be highlighted
-            const offsetPercentage = 20;
+                        if (section.offsetTop - window.innerHeight * (offsetPercentage / 100) <= scrollPosition &&
+                            section.offsetTop + section.offsetHeight > scrollPosition) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    });
+                }
 
-            if (section.offsetTop - window.innerHeight * (offsetPercentage / 100) <= scrollPosition &&
-              section.offsetTop + section.offsetHeight > scrollPosition) {
-              link.classList.add('active');
-            } else {
-              link.classList.remove('active');
+                document.addEventListener('scroll', highlightNavLink);
+                window.addEventListener('resize', highlightNavLink);
+
+                // Initialize AOS library
+                AOS.init();
+            });
+        </script>
+        <script>
+            let progress = document.getElementById("progressbar");
+
+            let totalHeight = document.body.scrollHeight - window.innerHeight;
+            window.onscroll = function() {
+                let progressHeight = (window.pageYOffset / totalHeight) * 100;
+                progress.style.height = progressHeight + "%";
             }
-          });
-        }
+        </script>
 
-        document.addEventListener('scroll', highlightNavLink);
-        window.addEventListener('resize', highlightNavLink);
 
-        // Initialize AOS library
-        AOS.init();
-      });</script>
+
+
+    </body>
     <script>
+        function replaceDivs() {
+            // Get references to the original and new divs
+            var originalDiv = document.getElementById("originalDiv");
+            var newDiv = document.getElementById("newDiv");
 
-      let progress = document.getElementById("progressbar");
+            // Check if the original div exists
+            if (originalDiv) {
+                // Hide the original div
+                originalDiv.style.display = "none";
 
-      let totalHeight = document.body.scrollHeight - window.innerHeight;
-      window.onscroll = function () {
-        let progressHeight = (window.pageYOffset / totalHeight) * 100;
-        progress.style.height = progressHeight + "%";
-      }
+                // Show the new div
+                newDiv.style.display = "block";
+            }
+        }
+    </script>
+    <script src="./Image-Gallery/script.js"></script>
+    <script src="./index.js"></script>
 
+    <script src="faq-website.js"></script>
+
+    <script>
+        window.onload = function() {
+            var link = top.document.createElement("link");
+            link.type = "image/x-icon";
+            link.rel = "icon";
+            link.href = "favicon.ico?v=1";
+            top.document.getElementsByTagName("head")[0].appendChild(link);
+        }
+    </script>
+    =======
+
+    <!--  Adding copyright javascript code to make it dynamic and display current year -->
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
     </script>
 
 
-
-
-  </body>
-  <script>
-    function replaceDivs() {
-      // Get references to the original and new divs
-      var originalDiv = document.getElementById("originalDiv");
-      var newDiv = document.getElementById("newDiv");
-
-      // Check if the original div exists
-      if (originalDiv) {
-        // Hide the original div
-        originalDiv.style.display = "none";
-
-        // Show the new div
-        newDiv.style.display = "block";
-      }
-    }
-  </script>
-  <script src="./Image-Gallery/script.js"></script>
-  <script src="./index.js"></script>
-
-  <script src="faq-website.js"></script>
-
-  <script>
-    window.onload = function() {
-        var link = top.document.createElement("link");
-        link.type = "image/x-icon";
-        link.rel = "icon";
-        link.href = "favicon.ico?v=1";
-        top.document.getElementsByTagName("head")[0].appendChild(link);
-    }
-</script>
-  =======
-
-  <!--  Adding copyright javascript code to make it dynamic and display current year -->
-  <script>
-    document.getElementById("year").innerHTML = new Date().getFullYear();
-  </script>
-
-
-</html><!-- New bubble background start -->
+</html>
+<!-- New bubble background start -->
 
 
 <div class="bubbles">
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
 
 
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
 
 
 
+</div>
+<!-- New bubble background end -->
 </div>
 <!-- New bubble background end -->
