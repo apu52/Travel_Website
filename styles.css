@@ -284,6 +284,8 @@ body {
   max-width: var(--max-width);
   margin: auto;
   padding: 5rem 1rem;
+  
+
 }
 
 .section__header {
@@ -871,6 +873,8 @@ header {
 .trip {
   background-color: var(--secondary-color);
   max-width: var(--max-width);
+ 
+  
 }
 
 .trip__container :is(.section__title, .section__subtitle, .view__all) {
@@ -1080,7 +1084,8 @@ header {
   flex: 1;
   max-width: 200px;
   margin: 10px;
-  text-align: center;
+  padding: 5px;
+  text-align: left;
   flex-direction: column;
 }
 
@@ -1932,4 +1937,12 @@ body {
 
 #toggle:hover i {
   color: #ffffff80; /* 80% opacity white for hovering effect */
+}
+.interested {
+/* max-width: 300px; */
+list-style: none;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+
 }
