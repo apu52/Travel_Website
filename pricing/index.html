@@ -3,20 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Pricing Tables</title>
+    <title>Membership</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+
+    <link rel="stylesheet" href="path/to/aos.css">
+    <script src="path/to/aos.js"></script>
+
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script type="text/javascript">
+      
+  
+      
+      // const menuButton = document.getElementsByClassName('link');
+      function closeNav() {
+        let list = document.querySelector('.navLinks');
+        list.classList.toggle('activeHamburger');
+      }
+      // menuButton.forEach((button) => (button.onclick = () => closeNav()));
+
+    
+      let hamburger = document.querySelector('.hamburger');
+      hamburger.addEventListener('click', () => {
+        let list = document.querySelector('.navLinks');
+        list.classList.toggle('activeHamburger');
+      })
+    </script>
+  
+  
+    </script>
+  
 </head>
 <body>
   <header class="registration-header">
-  <a href="../index.html"><img src="../img/Screenshot 2024-01-23 003448.png" style="width: 130px; border-radius: 6px; margin-top: 20px; margin-left: 20px;"></a>
+    <div class="nav-container" id="top">
+      <nav class="newNav">
+        <a href="../index.html" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+
+        <ul class="navLinks">
+
+
+          <li onclick="closeNav()" class="link" data-aos=""><a href="../index.html">Home</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="../index.html"> AboutUs</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="../index.html">Destinations</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="../index.html">Pricing</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="../index.html">Trip Gallery</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="../index.html">Testimonials</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="../feedback.html">Rate Us?</a></li>
+          <li onclick="closeNav()" class="link" data-aos=""><a href="../index.html">Contact Us</a></li>
+
+
+        </ul>
+        <a href="../newLogin.html" class="contact-btn"><button class="btn" id="btn-style"
+            style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a>
+        <div class="toggle-container" data-aos="fade-down">
+          <input id="themeToggle" class="toggle" type="checkbox">
+        </div>
+        <div class="hamburger" data-aos="fade-down">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+    </div>
+  </header>
   <div class="wrapper">
     <div class="table basic">
       <div class="price-section">
         <div class="price-area">
           <div class="inner-area">
-            <span class="text">$</span>
-            <span class="price">9</span>
+            <span class="text">INR</span>
+            <span class="price">15000/-</span>
           </div>
         </div>
       </div>
@@ -61,15 +119,15 @@
           </li>
         
       </ul>
-      <a href="../payment.html" style="text-decoration: none;"><div class="btn"><button>Purchase</button></div></a>
+      <a href="../payment.html?package=basic" style="text-decoration: none;"><div class="purchase-btn"><button>Purchase</button></div></a>
     </div>
     <div class="table premium">
       <div class="ribbon"><span>Recommend</span></div>
       <div class="price-section">
         <div class="price-area">
           <div class="inner-area">
-            <span class="text">$</span>
-            <span class="price">19</span>
+            <span class="text">INR</span>
+            <span class="price">20000/-</span>
           </div>
         </div>
       </div>
@@ -100,14 +158,14 @@
             <span class="icon cross"><i class="fas fa-times"></i></span>
           </li>
       </ul>
-      <a href="../payment.html" style="text-decoration: none;"><div class="btn"><button>Purchase</button></div></a>
+      <a href="../payment.html?package=premium" style="text-decoration: none;"><div class="purchase-btn"><button>Purchase</button></div></a>
     </div>
     <div class="table ultimate">
       <div class="price-section">
         <div class="price-area">
           <div class="inner-area">
-            <span class="text">$</span>
-            <span class="price">29</span>
+            <span class="text">INR</span>
+            <span class="price">25000/-</span>
           </div>
         </div>
       </div>
@@ -131,7 +189,7 @@
             <span class="icon check"><i class="fas fa-check"></i></span>
           </li>
       </ul>
-      <a href="../payment.html" style="text-decoration: none;"><div class="btn"><button>Purchase</button></div></a>
+      <a href="../payment.html?package=ultimate" style="text-decoration: none;"><div class="purchase-btn"><button>Purchase</button></div></a>
     </div>
   </div>
 

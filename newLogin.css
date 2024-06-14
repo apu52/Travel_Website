@@ -13,6 +13,7 @@
 .main-container {
     min-height: 100vh;
     min-width: 100vw;
+    margin-top: 50px;
     background-image: url('./img/img1.jpeg');
     background-position: center;
     background-size: cover;
@@ -63,6 +64,7 @@
 }
 
 .content1 button {
+    cursor: pointer;
     font-size: 1.5rem;
     padding: 1rem 2rem;
     border-radius: 0.5rem;

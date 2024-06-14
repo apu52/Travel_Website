@@ -135,3 +135,87 @@ function validateAddress() {
         input.classList.remove('is-invalid');
     }
 }
+
+
+//Selected Package Rate
+  function getQueryParam(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  }
+
+  const selectedPackage = getQueryParam("package");
+
+  let packageCost;
+  let briefDescription;
+  switch (selectedPackage) {
+    case "basic":
+      packageCost = 15000; 
+      briefDescription = "Basic Package "; 
+      break;
+    case "premium":
+      packageCost = 20000; 
+      briefDescription = "Premium Package"; 
+      break;
+    case "ultimate":
+      packageCost = 25000; 
+      briefDescription = "Ultimate Package"; 
+      break;
+    default:
+      packageCost = 15000; 
+      briefDescription = "Package Not Selected"; 
+  }
+
+  document.getElementById("package-cost").textContent = packageCost + "/-";
+
+  document.getElementById("brief-description").textContent = briefDescription;
+
+  const promoCodeDiscount = 1000; 
+  const totalCost = packageCost - promoCodeDiscount;
+  document.getElementById("total-cost").textContent = totalCost + "/-";
+
+/*Free And express Delivary Code starts here*/
+
+document.addEventListener("DOMContentLoaded", function () {
+    const shippingSelect = document.getElementById("shipping-method");
+    const totalSpan = document.querySelector(".list-group-item strong");
+    const listGroup = document.querySelector(".list-group");
+  
+    // This is the Function to update the shipping cost
+    function updateShippingCost() {
+      const selectedOption = shippingSelect.value;
+      let shippingCost = 0;
+  
+      if (selectedOption === "standard") {
+        shippingCost = 0;
+      } else if (selectedOption === "express") {
+        shippingCost = 85;
+      }
+  
+      // This is function to remove existing shipping cost item
+      const existingShippingItem = document.getElementById("shipping-cost-item");
+      if (existingShippingItem) {
+        existingShippingItem.remove();
+      }
+  
+      // This is the function to create new shipping cost item
+      const shippingItem = document.createElement("li");
+      shippingItem.classList.add("list-group-item", "d-flex", "justify-content-between", "text-secondary");
+      shippingItem.id = "shipping-cost-item";
+      shippingItem.innerHTML = `
+        <span>Shipping</span>
+        <strong>${shippingCost === 0 ? "Free" : shippingCost + " INR"}</strong>
+      `;
+  
+      // Here is the function to insert new shipping cost item before the total
+      listGroup.insertBefore(shippingItem, totalSpan.parentNode);
+  
+      // To Update the total amount in the cart
+      const totalAmount = 14000 + shippingCost; //imagine total amount is 14000 INR
+      totalSpan.textContent = `${totalAmount} INR`;
+    }
+  
+    shippingSelect.addEventListener("change", updateShippingCost);
+  
+    updateShippingCost();
+  });
+  
