@@ -511,9 +511,11 @@ body {
 
 nav {
   background-color: #091020;
+  display: flex;
+  align-items: center;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vh;
   z-index: 1001;
 }
 
@@ -523,12 +525,13 @@ nav {
   font-weight: 600;
   color: #ffffff;
   cursor: pointer;
+  margin-left: 10px;
   /* border: 2px solid white; */
 }
 
 .nav__logo span {
-  color: #3685fb;
-  /* Assuming this is your primary color */
+  color:  #3685fb;
+  /* Assuming this is your primary color ;*/
 }
 
 /* .nav__links {
@@ -631,6 +634,11 @@ header {
   position: absolute;
   top: 50%;
   left: 55%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  max-height: 50vh;
+  max-width: 50vw;
   border: 0.5rem solid var(--img-color);
   border-radius: 2rem;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
@@ -639,7 +647,7 @@ header {
 .header__image img:nth-child(1) {
   /* max-width: 350px; */
   max-width: 20vw;
-  transform: translate(-75%, -50%);
+  transform: translate(-75%, -50%); 
 }
 
 .header__image img:nth-child(2) {
@@ -1969,7 +1977,7 @@ body {
     cursor: pointer;
   }
   .nav__logo{
-    margin-left:-80px;
+    margin-left:10px;
   }
   .navLinks {
     position: absolute;
