@@ -133,3 +133,5 @@ document.getElementById('emailInput').addEventListener('focus', function() {
 document.getElementById('emailInput').addEventListener('blur', function() {
   document.getElementById('send').classList.remove('focused');
 });
+
+
