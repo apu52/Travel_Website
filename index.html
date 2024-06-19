@@ -185,10 +185,10 @@
         </ul>
 
 
-        <a href="newLogin.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
+        <a href="login.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
             data-aos="fade-down">Login/SignUp</button></a>
             <a href="mapa.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
-              data-aos="fade-down">view <map name=""></map></button></a>
+              data-aos="fade-down">View <map name=""></map></button></a>
 
         <a href="loginPage.html" class="contact-btn"><button class="btn" id="logout-btn" style="margin: 0; display: none;"
               data-aos="fade-down" disabled>Log Out</button></a>
@@ -1022,6 +1022,27 @@ $('.carousel').flipster({
             }
           </script>
       </div>
+      <div class="footer_col">
+        <h4 style="margin-bottom:10px; font-weight: 600;">Total Visitors</h4>
+        <span class="visits" style="font-size: 24px; font-weight: 600; color: crimson;" id="countVisitors" data-val="748">0000</span>
+    </div>
+    <script>
+        let valueDisplays = document.querySelectorAll(".visits");
+        let interval = 0.00000021;
+        valueDisplays.forEach((display) => {
+            let startValue = 0;
+            let endValue = parseInt(display.getAttribute("data-val"));
+            let duration = Math.floor(interval / endValue);
+            let counter = setInterval(function () {
+                startValue += 1;
+                display.textContent = startValue;
+                if (startValue == endValue) {
+                    clearInterval(counter);
+                }
+            }, duration);
+        });
+    </script>
+    
 
 
       <!--  New copyright code to make it dynamic and display current year -->
