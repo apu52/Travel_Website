@@ -1039,33 +1039,31 @@ $('.carousel').flipster({
 
     </footer>
 
-    <!-- adding a scrollup btn -->
-    <a class="goupbtn" href="#"><i class="fa-solid fa-arrow-up"></i></a>
+    <a class="goupbtn" href="#" onclick="goToTop()"><i class="fa-solid fa-arrow-up"></i></a>
+
+<script>
+  // Get the button
+  var mybutton = document.querySelector(".goupbtn");
+
+  // When the user scrolls, check if the button should be displayed
+  window.addEventListener("scroll", function() {
+    if (window.scrollY > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  });
+
+  // When the user clicks on the button, scroll to the top of the document
+  function goToTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+</script>
+
+    
 
 
-    <script>
-      // Get the button
-      var mybutton = document.getElementById("goToTopBtn");
-
-      // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function () {
-        scrollFunction();
-      };
-
-      function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
-
-      // When the user clicks on the button, scroll to the top of the document
-      function goToTop() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-    </script>
 
     <script>
       let hamburger = document.querySelector('.hamburger');

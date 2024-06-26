@@ -2208,6 +2208,7 @@ body {
   font-size: 22px;
   transition: all 0.5s;
   transition: box-shadow 0.3s; /* Added transition for box-shadow */
+  display: none;
 }
 
 .goupbtn:hover {
