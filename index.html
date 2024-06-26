@@ -17,6 +17,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="./Image-Gallery/style.css">
   <link rel="stylesheet" href="./Image-Gallery/stylecaptions.css">
@@ -29,6 +30,7 @@
   <script src="mouseEffect.js"></script>
   <link rel="stylesheet" href="mouseEffect.css">
   <script src="Theme.js" defer></script>
+
 
   <link rel="stylesheet" href="path/to/aos.css">
   <script src="path/to/aos.js"></script>
@@ -168,6 +170,8 @@
   </nav> -->
     <div class="nav-container" id="top">
       <nav class="newNav">
+        <img src="./img/A T logo with a white background and a square shape, connected to nature for a travel company.png" style="width:30px;height:30px;border-radius:50%;">
+        
         <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
 
         <ul class="navLinks">
@@ -187,6 +191,8 @@
 
         <a href="newLogin.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
             data-aos="fade-down">Login/SignUp</button></a>
+            <a href="mapa.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
+              data-aos="fade-down">view <map name=""></map></button></a>
 
         <a href="loginPage.html" class="contact-btn"><button class="btn" id="logout-btn" style="margin: 0; display: none;"
               data-aos="fade-down" disabled>Log Out</button></a>
@@ -212,8 +218,8 @@
         </div>
         <div class="header__content">
           <div>
-            <h1 data-aos="fade-in">Find Your Perfect Getaway<br />Discover the World's Best Kept <span
-                class="auto-typed" style="color: var(--head-text);"></span></h1>
+            <h1 data-aos="fade-in">Find Your Perfect Getaway<br />Discover the World's Best Kept   <div> <span
+                class="auto-typed" style="color: var(--head-text);"></span></div></h1>
             <p class="section__subtitle" data-aos="fade-in">
               Make your travel more enjoyable with us. We are the best travel
               agency and we are providing the best travel services for our
@@ -426,8 +432,7 @@
       <div>
         <h2 class="section__title" data-aos="fade-in">Explore top destinations</h2>
         <p class="section__subtitle" data-aos="fade-in">
-          Explore your suitable and dream places around the world. Here you
-          can find your right destination.
+          Explore your dream places around the world. Here you can find your perfect destination.
         </p>
       </div>
     </div>
@@ -454,29 +459,31 @@
       <img src="./img/goa.jpg" style="width:100%">
     </div>
 
-    <div class="mySlides">
-      <img src="./img/maldives.jpg" style="width:100%">
-    </div>
-    <div class="imageDots">
-      <span class="active"></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div> -->
-<div class="outer-box">
-  <div class="containers">
-    
-    <div class="card active" style="
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
-        url('./img/eiffelTower.webp')
-    ">
-      <div class="info">
-        <img src="./img/eiffelTower.webp" alt="Eiffel Tower" style="width:100%">
-        <p>||Eiffel Tower||</p>
-        <h3>PARIS</h3>
-      </div>
-    </div>
+        <div class="mySlides">
+          <img src="./img/maldives.jpg" style="width:100%">
+        </div>
+        <div class="imageDots">
+          <span class="active"></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div> -->
+    <div class="outer-box">
+      <div class="containers">
+            
+          <div class="card active" style="
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+              url('/img/paris.jpg')
+          ">
+          <div class="info">
+
+            <p>
+              ||Eiffel Tower||
+            </p>
+            <h3>PARIS</h3>
+          </div>
+        </div>
 
     <div class="card" style="
       background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
@@ -521,8 +528,7 @@
       <div class="section__container trip__container">
         <h2 class="section__title">Best trip packages</h2>
         <p class="section__subtitle">
-          Explore your suitable and dream places around the world. Here you can
-          find your right destination.
+          Top trip deals curated for you. Get the best package for your adventure and save more.
         </p>
         <div class="trip__grid">
           <div class="trip__card">
@@ -611,8 +617,8 @@ $('.carousel').flipster({
             Our trip gallery that will inspire you
           </h2>
           <p class="section__subtitle" data-aos="zoom-in">
-            Explore your suitable and dream places around the world. Here you
-            can find your right destination.
+            Visual Stories of Adventure to Spark Your Imagination.<br>
+            Get inspired for your next journey.
           </p>
           <button class="btn btn-style" id="btn-page" onclick="replaceDivs()" data-aos="zoom-in"
             style="box-shadow: 2px 2px 8px rgb(0, 191, 255);">View All</button>
@@ -741,50 +747,107 @@ $('.carousel').flipster({
 
     <section class="testimonials" id="testimonials">
       <h2 class="testimonial-heading section__title" align-items="center" data-aos="fade-in">Testimonials</h2>
-      <div class="testimonial-container">
-        <div class="testimonial-user" data-aos="fade-up">
-          <img class="testi-img" src="./img/testimonial1.jpg" alt="">
-          <div>
-            <p><sup><i class="fas fa-quote-left"></i></sup>TourGuide made our dream vacation a reality! From the
-              breathtaking landscapes to the seamless logistics, every moment was a new adventure. The personalized
-              itinerary and expert guides added a special touch to our journey. We can't wait to book our next trip with
-              TourGuide!<sup><i class="fas fa-quote-right"></i></sup></p>
-            <div class="user-info">
-              <h3>Joseph</h3>
+      <div class="marquee">
+        <div class="track">
+          <div class="content">
+            <div class="testimonial-container">
+              <div class="testimonial-user">
+                <img class="testi-img" src="./img/testimonial1.jpg" alt="">
+                <div>
+                  <p><sup><i class="fas fa-quote-left"></i></sup>TourGuide made our dream vacation a reality! From the
+                    breathtaking landscapes to the seamless logistics, every moment was a new adventure. The personalized
+                    itinerary and expert guides added a special touch to our journey. We can't wait to book our next trip with
+                    TourGuide!<sup><i class="fas fa-quote-right"></i></sup></p>
+                  <div class="user-info">
+                    <h3>Joseph</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-user" >
+                <img class="testi-img" src="./img/Abhisek Tamang.jpg" alt="">
+                <div>
+                  <p><sup><i class="fas fa-quote-left"></i></sup>Our cultural tour with TourGuide exceeded all expectations.
+                    The
+                    immersive experiences, knowledgeable guides, and carefully curated activities allowed us to connect with
+                    the
+                    local culture in a way we never thought possible. Thanks to TourGuide.<sup><i
+                        class="fas fa-quote-right"></i></sup></p>
+                  <div class="user-info">
+                    <h3>Charles</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-user" >
+                <img class="testi-img" src="./img/testimonial2.jpg" alt="">
+                <div>
+                  <p><sup><i class="fas fa-quote-left"></i></sup>Traveling with the family has never been easier! TourGuide
+                    took
+                    care of every detail, ensuring a stress-free and enjoyable vacation for all. The kid-friendly activities
+                    and
+                    family-oriented guides made our trip unforgettable.<sup><i class="fas fa-quote-right"></i></sup></p>
+                  <div class="user-info">
+                    <h3>Katie</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-user">
+                <img class="testi-img" src="./img/testimonial1.jpg" alt="">
+                <div>
+                  <p><sup><i class="fas fa-quote-left"></i></sup>TourGuide made our dream vacation a reality! From the
+                    breathtaking landscapes to the seamless logistics, every moment was a new adventure. The personalized
+                    itinerary and expert guides added a special touch to our journey. We can't wait to book our next trip with
+                    TourGuide!<sup><i class="fas fa-quote-right"></i></sup></p>
+                  <div class="user-info">
+                    <h3>Joseph</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-user" >
+                <img class="testi-img" src="./img/Abhisek Tamang.jpg" alt="">
+                <div>
+                  <p><sup><i class="fas fa-quote-left"></i></sup>Our cultural tour with TourGuide exceeded all expectations.
+                    The
+                    immersive experiences, knowledgeable guides, and carefully curated activities allowed us to connect with
+                    the
+                    local culture in a way we never thought possible. Thanks to TourGuide.<sup><i
+                        class="fas fa-quote-right"></i></sup></p>
+                  <div class="user-info">
+                    <h3>Charles</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-user" >
+                <img class="testi-img" src="./img/testimonial2.jpg" alt="">
+                <div>
+                  <p><sup><i class="fas fa-quote-left"></i></sup>Traveling with the family has never been easier! TourGuide
+                    took
+                    care of every detail, ensuring a stress-free and enjoyable vacation for all. The kid-friendly activities
+                    and
+                    family-oriented guides made our trip unforgettable.<sup><i class="fas fa-quote-right"></i></sup></p>
+                  <div class="user-info">
+                    <h3>Katie</h3>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="testimonial-user" data-aos="fade-up">
-          <img class="testi-img" src="./img/Abhisek Tamang.jpg" alt="">
-          <div>
-            <p><sup><i class="fas fa-quote-left"></i></sup>Our cultural tour with TourGuide exceeded all expectations.
-              The
-              immersive experiences, knowledgeable guides, and carefully curated activities allowed us to connect with
-              the
-              local culture in a way we never thought possible. Thanks to TourGuide.<sup><i
-                  class="fas fa-quote-right"></i></sup></p>
-            <div class="user-info">
-              <h3>Charles</h3>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-user" data-aos="fade-up">
-          <img class="testi-img" src="./img/testimonial2.jpg" alt="">
-          <div>
-            <p><sup><i class="fas fa-quote-left"></i></sup>Traveling with the family has never been easier! TourGuide
-              took
-              care of every detail, ensuring a stress-free and enjoyable vacation for all. The kid-friendly activities
-              and
-              family-oriented guides made our trip unforgettable.<sup><i class="fas fa-quote-right"></i></sup></p>
-            <div class="user-info">
-              <h3>Katie</h3>
-            </div>
+
           </div>
         </div>
       </div>
+      
     </section>
 
 
+
+
+
+
+   
+
+
+
+
+    
 
     <!----------------------------------------------------- FAQ section ---------------------- -->
 
@@ -831,6 +894,7 @@ $('.carousel').flipster({
             <i class="fas fa-times"></i>
           </button>
         </div>
+        
 
       </div>
     </section>
@@ -903,7 +967,7 @@ $('.carousel').flipster({
 
     <section>
       <div class="container" id="cnt-form">
-        <div class="items" style="box-shadow:rgba(50,50,93,0.25) 0px 50px 100px -20px,rgba(0,0,0,0.3) 0px 30px 60px -30px,rgba(10,37,64,0.35) 0px -2px 6px 0px inset;">
+        <div class="items">
           <div class="contact" data-aos="slide-right">
             <div>
               <h1 class="section__title" style="height: 90px;">Contact Us</h1>
@@ -944,8 +1008,7 @@ $('.carousel').flipster({
         <div class="subscribe__content">
           <h2 class="section__title" data-aos="fade-up">Subscribe to get special prize</h2>
           <p class="section__subtitle" data-aos="fade-up">
-            Explore your suitable and dream places around the world. Here you
-            can find your right destination.
+            Subscribe to get special travel prizes. Unlock exclusive deals and offers just for you.
           </p>
         </div>
         <div class="subscribe__form" data-aos="fade-up">
@@ -973,9 +1036,11 @@ $('.carousel').flipster({
         </div>
         <div class="footer__col">
           <h3 class="footer__title">Tourguide<span>.</span></h3>
+          <p>
+            Ready for your next adventure? Let's make it unforgettable.<br>
+          </p>
           <p class="footer__text">
-            Explore your suitable and dream places around the world. Here you
-            can find your right destination.
+            Start planning your dream trip with us and explore the world.
           </p>
         </div>
         <div class="footer__col">
@@ -987,7 +1052,14 @@ $('.carousel').flipster({
           <p><a href="#cnt-form" class="footer__link">Contact Us</a></p>
           </div>
         </div>
-        
+        <div class="footer__col">
+          <p>Social Media</p>
+          <section class="social-icon">
+            <a href="#" class="fa-brands fa-facebook fa-2xl"></a>
+            <a href="#" class="fa-brands fa-instagram fa-2xl"></a>
+            <a href="#" class="fa-brands fa-twitter fa-2xl"></a>
+        </section>
+        </div>
         <div class="footer__col">
           <h4>Address</h4>
           <div class="mapouter">
@@ -1048,33 +1120,31 @@ $('.carousel').flipster({
 
     </footer>
 
-    <!-- adding a scrollup btn -->
-    <a class="goupbtn" href="#"><i class="fa-solid fa-arrow-up"></i></a>
+    <a class="goupbtn" href="#" onclick="goToTop()"><i class="fa-solid fa-arrow-up"></i></a>
+
+<script>
+  // Get the button
+  var mybutton = document.querySelector(".goupbtn");
+
+  // When the user scrolls, check if the button should be displayed
+  window.addEventListener("scroll", function() {
+    if (window.scrollY > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  });
+
+  // When the user clicks on the button, scroll to the top of the document
+  function goToTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+</script>
+
+    
 
 
-    <script>
-      // Get the button
-      var mybutton = document.getElementById("goToTopBtn");
-
-      // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function () {
-        scrollFunction();
-      };
-
-      function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
-
-      // When the user clicks on the button, scroll to the top of the document
-      function goToTop() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-    </script>
 
     <script>
       let hamburger = document.querySelector('.hamburger');
@@ -1106,7 +1176,7 @@ $('.carousel').flipster({
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
-        //initailizing emailjs 
+        //initailizing emailjs
 
         (function () {
           emailjs.init("kHyqhzLTyzP0cw1px");
@@ -1160,7 +1230,7 @@ $('.carousel').flipster({
 
 
 
-    <!-- Start of Conferbot Script 
+    <!-- Start of Conferbot Script
 
     <script type="text/javascript">
         (function (d, s, id) {
@@ -1186,7 +1256,7 @@ $('.carousel').flipster({
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
       integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- 
+    <!--
     <script>
       (function ($) {
         var isDarkMode = false; // Assuming initially in light mode
@@ -1562,6 +1632,9 @@ $('.carousel').flipster({
       }
   });
   </script>
+
+
+
 
 
 </html><!-- New bubble background start -->
