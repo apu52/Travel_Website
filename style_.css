@@ -441,6 +441,7 @@ p {
   min-height: 80vh;
   width: 80vw;
   gap:0em;
+  scale:0.8;
   box-shadow: 0 2px 4px grey;
   margin-top: 102px;
   margin-bottom: 23px;
