@@ -979,6 +979,8 @@ header {
 .trip {
   background-color: var(--secondary-color);
   max-width: var(--max-width);
+ 
+  
 }
 
 .trip_container :is(.sectiontitle, .sectionsubtitle, .view_all) {
@@ -1210,7 +1212,8 @@ body.dark-theme #emailInput {
   display: flex ;
   max-width: 200px;
   margin: 10px;
-  text-align: center;
+  padding: 5px;
+  text-align: left;
   flex-direction: column;
 }
 .social-icon a {
