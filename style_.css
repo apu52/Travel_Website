@@ -52,6 +52,7 @@ body {
   align-items: center;
   margin: 0px;
   padding: 0px;
+  background:linear-gradient(#D8E3FF, white);
 }
 
 .glassmorphism-container {
