@@ -2,7 +2,7 @@
 
 /* Google Fonts */
 body {
-  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url("./img/sunset.jpg");
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url("./img/greenbackgroung.jpeg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -10,7 +10,7 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  /background: linear-gradient(to right, #4DA0B0, #fff);/ font-family: "Arial", sans-serif;
+  /* background: linear-gradient(to right, #4DA0B0, #fff);/ font-family: "Arial", sans-serif; */
 }
 
 .feedback-heading {
@@ -51,7 +51,7 @@ body {
 
 .glassmorphism-container {
   background: rgba(46, 123, 225, 0.1);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(0.5px);
   border-radius: 15px;
 
   padding: 20px;
@@ -102,7 +102,7 @@ p {
       #231557 0%,
       #44107a 29%,
       #ff1361 67%,
-      #fff800 100%);
+      #dc3545 100%);
 
   background-size: auto auto;
   background-clip: border-box;
