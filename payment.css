@@ -359,3 +359,7 @@ header {
 
 
 /* New NAvbar CSS Ends Here*/
+
+.hr:hover{
+  color: whitesmoke;
+}
