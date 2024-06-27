@@ -21,11 +21,8 @@
 .footer__link[href*="linkedin.com"]:hover {
   color: #0A66C2; 
 }
-.footer__link {
-  color: white;
-  margin-right: 15px; 
-  transition: color 0.3s ease; 
-}
+
+
 :root {
   --primary-color: #3685fb;
   --primary-color-dark: #2f73d9;
@@ -1274,18 +1271,14 @@ body.dark-theme #emailInput {
 }
 */
 
-.footer__link{
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s;
+.footer__link {
   color: white;
+  margin-right: 15px; /* Adjust spacing between icons */
+  font-size: 1.3em; /* Initial font size */
 }
 
-
 .footer__link:hover {
-  color: #ff0000;
-  font-size: 13px;
-  overflow: hidden;
+  transform: scale(10); /* Scale up the icon on hover */
 }
 
 .footer__col p span {
