@@ -43,6 +43,9 @@ Close #<issue_no>
 ##Are you contributing under any Open-source programme?
 <!--Mention it here-->
 
+- [ ] I am contributing under `GSSOC'24`
+- [ ] I am contributing under `VSOC'24`
 
+<!-- [X] - put a cross/X inside [] to check the box -->
 
 

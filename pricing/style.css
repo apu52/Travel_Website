@@ -401,6 +401,7 @@ header {
 }
 .basic .features li::selection{
   background: #ffd861;
+  
 }
 .basic ::selection,
 .basic .price-area,
@@ -411,6 +412,7 @@ header {
   border: 2px solid #ffd861;
   background: #fff;
   color: #ffd861;
+  margin-top: 8px;
 }
 .basic .purchase-btn button:hover{
   background: #ffd861;
@@ -418,12 +420,19 @@ header {
 }
 .premium ::selection,
 .premium .price-area,
-.premium .inner-area,
-.premium .purchase-btn button{
+.premium .inner-area{
   background: #a26bfa;
 }
-.premium .puchase-btn button:hover{
+.premium .purchase-btn button{
+  border: 2px solid #a26bfa;
+  color: #833af8;
+  background: #fff;
+}
+
+.premium .purchase-btn button:hover{
+  color: #fff;
   background: #833af8;
+
 }
 .ultimate ::selection,
 .ultimate .price-area,
@@ -434,10 +443,12 @@ header {
   border: 2px solid #43ef8b;
   color: #43ef8b;
   background: #fff;
+  margin-top: 30px;
 }
 .ultimate .purchase-btn button:hover{
   background: #43ef8b;
   color: #fff;
+  
 }
 .basic .package-name{
   background: #ffecb3;
@@ -536,4 +547,3 @@ header img {
   }
   
 }
-

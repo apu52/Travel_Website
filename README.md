@@ -75,6 +75,15 @@
  
 ![GSSOC](https://github.com/apu52/METAVERSE/assets/114172928/e79eb6de-81b1-4ffb-b6ed-f018bb977e88)
 
+<div align="center">
+  
+  <img src="img/VSOC new.png" width="100%">
+</div>
+
+
+
+
+
 ### This project was part of following Open Source Programs
 
 <div align="center">

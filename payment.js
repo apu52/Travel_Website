@@ -172,7 +172,7 @@ function validateAddress() {
   const promoCodeDiscount = 1000; 
   const totalCost = packageCost - promoCodeDiscount;
   document.getElementById("total-cost").textContent = totalCost + "/-";
-
+  
 /*Free And express Delivary Code starts here*/
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
       listGroup.insertBefore(shippingItem, totalSpan.parentNode);
   
       // To Update the total amount in the cart
-      const totalAmount = 14000 + shippingCost; //imagine total amount is 14000 INR
+      const totalAmount = totalCost + shippingCost; //imagine total amount is 14000 INR
       totalSpan.textContent = `${totalAmount} INR`;
     }
   

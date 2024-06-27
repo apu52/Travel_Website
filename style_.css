@@ -2,7 +2,9 @@
 
 /* Google Fonts */
 body {
-  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url("./img/sunset.jpg");
+  /* background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url("./img/sunset.jpg"); */
+ background: linear-gradient(#D8E3FF, white);
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url("./img/greenbackgroung.jpeg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -10,19 +12,19 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  /background: linear-gradient(to right, #4DA0B0, #fff);/ font-family: "Arial", sans-serif;
+
+  /* /background: linear-gradient(to right, #4DA0B0, #fff);/ font-family: "Arial", sans-serif; */
+
 }
 
 .feedback-heading {
   font-size: 3rem;
-
-  font-family: Georgia, "Times New Roman", Times, serif;
   text-transform: uppercase;
   background-image: linear-gradient(-225deg,
       #231557 0%,
       #44107a 29%,
       #ff1361 67%,
-      #fff800 100%);
+      #510134 100%);
 
   background-size: auto auto;
 
@@ -45,44 +47,64 @@ body {
 .container {
   display: flex;
   flex-direction: column;
+  flex-basis: 100%;
   justify-content: center;
   align-items: center;
+  margin: 0px;
+  padding: 0px;
+  background:linear-gradient(#D8E3FF, white);
 }
 
 .glassmorphism-container {
   background: rgba(46, 123, 225, 0.1);
   backdrop-filter: blur(10px);
+  /* border-radius: 15px; */
+  background-size: cover;
+
   border-radius: 15px;
 
+
   padding: 20px;
-  margin-top: 102px;
-  margin-bottom: 23px;
+  /* margin-top: 102px;
+  margin-bottom: 23px; */
 
   text-align: center;
   max-width: 800px;
-  width: 90%;
-  margin-bottom: 20px;
+  width: 100%;
+
 }
 
 p {
-  line-height: 1.2em;
+  line-height: 1.1em;
   margin: 0;
+  font-size: 18px;
   font-family: Poppins, sans-serif;
-  font-size: 20px;
-  color: #07147a;
-  padding: 8px 5px;
-  text-align: center;
+  color: #2e345c;
+  padding: 2px 5px;
+  text-align:left;
   text-rendering: optimizeLegibility;
 }
 
+.rate{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-right: 20px;
+}
+.rate p{
+  text-align: center;
+  color:#231557;
+  font-weight: 500;
+}
 .stars {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .star {
-  color: #eae3be;
+  color: #f4df78;
   font-size: 2rem;
   cursor: pointer;
   transition: color 0.2s ease-in-out;
@@ -102,7 +124,7 @@ p {
       #231557 0%,
       #44107a 29%,
       #ff1361 67%,
-      #fff800 100%);
+      #dc3545 100%);
 
   background-size: auto auto;
   background-clip: border-box;
@@ -354,10 +376,10 @@ p {
   align-items: center;
   appearance: none;
   background-image: radial-gradient(100% 100% at 100% 0,
-      #5adaff 0,
-      #5468ff 100%);
+      #020c38 0,
+      #1730ee 100%);
   border: 0;
-  border-radius: 6px;
+  border-radius: 2px !important;
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
   box-sizing: border-box;
@@ -375,17 +397,21 @@ p {
   padding-right: 16px;
   border-radius: 50px;
   /* transition: all .1s ease-in-out; */
-  border: 2px solid #6a5acd;
-  color: #ff0000;
+  /* border: 2px solid #6a5acd; */
+  color: #ffffff;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 2px;
   vertical-align: middle;
   text-decoration: none;
   white-space: nowrap;
-  box-shadow: 2px 2px 8px red;
+  box-shadow: 0px 1px 1px 1px rgb(50, 46, 46);
   margin-bottom: 20px;
   box-sizing: border-box;
+}
+.button2{
+  background-color: #3c4fe0 !important;
+  background-image: none !important;
 }
 
 .button:focus {
@@ -397,7 +423,8 @@ p {
   /* box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
   transform: translateY(-2px); */
-  background-color: #6a5acd;
+  background-image: none;
+  background-color: #6a5acd !important;
    color: #fff;
 
 }
@@ -407,4 +434,26 @@ p {
   box-shadow: #3c4fe0 0 3px 7px inset;
   transform: translateY(2px);
 }
+.sidebyside {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Corrected from 's: 1fr 1fr;' */
+  margin: 0 auto;
+  min-height: 80vh;
+  width: 80vw;
+  gap:0em;
+  scale:0.8;
+  box-shadow: 0 2px 4px grey;
+  margin-top: 102px;
+  margin-bottom: 23px;
+  /* margin:105px; */
+}
 
+.sidebyside .image {
+  background-size: cover;
+  background: url(./img/rateus.jpg) center/cover no-repeat !important;
+  /* margin-top: 102px;
+  margin-bottom: 23px; */
+  /* Ensure the div takes up the full space within the grid cell */
+  /* width: 100%;
+  height: 100%; */
+}

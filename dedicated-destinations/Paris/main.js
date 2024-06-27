@@ -20,6 +20,21 @@ function setImg(){
 	return slider_img.setAttribute('src', "./gallery/"+images[i]);
 	
 }
+const url =
+  "https://api.shecodes.io/weather/v1/forecast?query=Paris&key=057314561f8344abb8d5d80t6761o6ae&units=metric";
+axios.get(url).then(weather);
+function weather(response) {
+  let max_temp = document.querySelector(".max");
+  maximum = Math.round(response.data.daily[0].temperature.maximum);
+  max_temp.innerHTML = maximum;
+  let min_temp = document.querySelector(".min");
+  minimum = Math.round(response.data.daily[0].temperature.minimum);
+  min_temp.innerHTML = minimum;
+  let hum = document.querySelector(".humidity");
+  humidity = Math.round(response.data.daily[0].temperature.humidity);
+  hum.innerHTML = humidity;
+}
+/*
 const url = 'https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Paris';
 const options = {
     method: 'GET',
@@ -49,4 +64,4 @@ fetch(url, options)
         
         weatherInfoContainer.innerHTML = weatherInfoHTML;
     })
-    .catch(error => console.error('Error fetching weather data:', error));
+    .catch(error => console.error('Error fetching weather data:', error));*/
