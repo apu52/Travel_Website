@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="./Image-Gallery/style.css">
   <link rel="stylesheet" href="./Image-Gallery/stylecaptions.css">
   <link rel="stylesheet" href="explore.css">
@@ -45,13 +45,6 @@
 
       window.location.href = 'plantrip.html';
     }
-    // const menuButton = document.getElementsByClassName('link');
-    //function closeNav() {
-    //  let list = document.querySelector('.navLinks');
-    //  list.classList.toggle('activeHamburger');
-    //}
-    // menuButton.forEach((button) => (button.onclick = () => closeNav()));
-
   </script>
 
 
@@ -61,7 +54,7 @@
     }
   </style>
   <style>
-    .active {
+    /* .active {
       color: red !important;
     }
     @media screen and (max-width:390px){
@@ -96,7 +89,7 @@
       .line{
         width: 190%;
       }
-    }
+    } */
     .gallery-rotate-image .image-container {
   display: flex;
   flex-wrap: wrap;
@@ -150,66 +143,40 @@
     </div>
     <div id="progressbar"></div>
     <div id="scrollPath"></div>
-    <!-- <canvas id="canvas"></canvas> -->
-    <!-- <nav>
-
-    <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
-    <ul class="nav__links">
-      <li class="link" data-aos="fade-down"><a href="#Home">Home</a></li>
-      <li class="link" data-aos="fade-down"><a href="#AboutUs">AboutUs</a></li>
-      <li class="link" data-aos="fade-down"><a href="#Destinations">Destinations</a></li>
-      <li class="link" data-aos="fade-down"><a href="#trip">Pricing</a></li>
-      <li class="link" data-aos="fade-down"><a href="#testimonials">Testimonials</a></li>
-      <li class="link" data-aos="fade-down"><a href="#ReviewGallery">Reviews</a></li>
-      <li class="link" data-aos="fade-down"><a href="feedback.html">Rate Us?</a></li>
-      <li class="link" data-aos="fade-down"><a href="login.html">Login</a></li>
-
-    </ul>
-    <button id="toggle" data-aos="fade-down">Dark Theme</button>
-    <a href="#contact"><button class="btn" id="btn-style">Contact Us</button></a>
-  </nav> -->
-    <div class="nav-container" id="top">
-      <nav class="newNav">
-        <img src="./img/A T logo with a white background and a square shape, connected to nature for a travel company.png" style="width:30px;height:30px;border-radius:50%;">
-        
-        <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
-
-        <ul class="navLinks">
-
-          <li class="link" data-aos=""><a href="#Home">Home</a></li>
-          <li class="link" data-aos=""><a href="#AboutUs"> AboutUs</a></li>
-          <li class="link" data-aos=""><a href="#Destinations">Destinations</a></li>
-          <li class="link" data-aos=""><a href="#trip">Pricing</a></li>
-          <li class="link" data-aos=""><a href="#ReviewGallery">Trip Gallery</a></li>
-          <li class="link" data-aos=""><a href="#testimonials">Testimonials</a></li>
-          <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
-          <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
-
-
-        </ul>
-
-
-        <a href="newLogin.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
-            data-aos="fade-down">Login/SignUp</button></a>
-            <a href="mapa.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
-              data-aos="fade-down">view <map name=""></map></button></a>
-
-        <a href="loginPage.html" class="contact-btn"><button class="btn" id="logout-btn" style="margin: 0; display: none;"
-              data-aos="fade-down" disabled>Log Out</button></a>
-
-        <!-- <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
-            style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a> -->
-
-        <div class="toggle-container" data-aos="fade-down">
-          <input id="themeToggle" class="toggle" type="checkbox">
-        </div>
-        <div class="hamburger" data-aos="fade-down">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
-      </nav>
-    </div>
+    
+    <!-- navbar start -->
+  <div class="nav-container" id="top">
+    <nav class="newNav">
+      <img src="./img/A T logo with a white background and a square shape, connected to nature for a travel company.png" style="width:30px;height:30px;border-radius:50%;">
+      
+      <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+  
+      <ul class="navLinks">
+  
+        <li class="link" data-aos=""><a href="#Home">Home</a></li>
+        <li class="link" data-aos=""><a href="#AboutUs"> AboutUs</a></li>
+        <li class="link" data-aos=""><a href="#ReviewGallery">Gallery</a></li>
+        <li class="link" data-aos=""><a href="#testimonials">Testimonials</a></li>
+        <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+        <li class="link" data-aos=""><a href="#cnt-form">Contact</a></li>
+  
+      </ul>
+      <a href="newLogin.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;" data-aos="fade-down">Login</button></a>
+      <a href="mapa.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;" data-aos="fade-down">view <map name=""></map></button></a>
+  
+      <a href="loginPage.html" class="contact-btn"><button class="btn" id="logout-btn" style="margin: 0; display: none;" data-aos="fade-down" disabled>Log Out</button></a>
+      <div class="toggle-container" data-aos="fade-down">
+        <input id="themeToggle" class="toggle" type="checkbox">
+      </div>
+      <div class="hamburger" data-aos="fade-down">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+  </div>
+  <!-- navbar end -->
+   
     <header>
       <section class="section__container header__container" id="Home">
         <div class="header__image" data-aos="fade-down-right">
@@ -241,7 +208,7 @@
               <div class="video">
                 <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" type="video/mp4"
                   style="box-shadow:2px 2px 8px blue;">
-                <!-- link to the hmtl page with the video -->
+                <!-- link to the html page with the video -->
                 <a href="story.html" class="btn_video">
                   <span><i class="ri-play-fill"></i></span>
               </div>
@@ -1164,7 +1131,7 @@ $('.carousel').flipster({
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
-        //initailizing emailjs
+        //initializing emailjs
 
         (function () {
           emailjs.init("kHyqhzLTyzP0cw1px");
