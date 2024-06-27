@@ -128,9 +128,25 @@
   }
   
   
+  .more{
+    padding: 50px;
+    background-color: aliceblue;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .more p{
+    color:grey;
+  }
   
-  
-  
+  .moreemail{
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(40, 87, 241);
+  }
   
   
   
