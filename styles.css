@@ -2361,6 +2361,143 @@ body {
   background-image: none;
 }
 
+/*View Local Events Start*/
+.events-container {
+  text-align: center;
+}
+
+.open-popup-btn {
+  padding: 15px 30px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 8px rgb(0, 191, 255);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.open-popup-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s;
+}
+
+.popup {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow-y: auto;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #000;
+}
+
+/* Existing CSS styles */
+
+.custom-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+
+.events-list {
+  max-height: calc(80vh - 60px); /* Adjusted for padding and header */
+  overflow-y: auto;
+  color: #000;
+}
+
+.events-list h3 {
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.events-list ul {
+  list-style-type: none;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.events-list li {
+  margin-bottom: 5px;
+}
+
+.popup-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .popup {
+      width: 95%;
+      max-width: 100%;
+      max-height: 85vh;
+      padding: 15px;
+  }
+
+  .open-popup-btn {
+      padding: 10px 20px;
+      font-size: 14px;
+  }
+
+  .events-list h3 {
+      font-size: 1.2em;
+  }
+
+  .events-list ul {
+      padding-left: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .popup {
+      width: 100%;
+      max-width: 100%;
+      max-height: 90vh;
+      padding: 10px;
+  }
+
+  .open-popup-btn {
+      padding: 8px 15px;
+      font-size: 12px;
+  }
+
+  .events-list h3 {
+      font-size: 1em;
+  }
+
+  .events-list ul {
+      padding-left: 10px;
+  }
+}
+
 
 
 
@@ -2433,3 +2570,4 @@ body {
     margin: 0 auto; /* Center the subtitle */
   }
 }
+

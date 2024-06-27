@@ -575,7 +575,83 @@
               All</button></a>
         </div>
       </div>
+         <!--View Local Events Start-->
+  <div class="events-container">
+    <button class="open-popup-btn">View Local Events</button>
+</div>
+
+<div class="popup-overlay">
+    <div class="popup">
+        <h2>Local Events Calendar</h2>
+        <span class="custom-close-btn">&times;</span>
+        <div class="events-list">
+            <h3>Santorini, Aegean Sea</h3>
+            <ul>
+                <li>Wine Tasting Tour - June 10, 2024</li>
+                <li>Volcano Excursion - June 15, 2024</li>
+            </ul>
+            <h3>Machu Picchu, Peru</h3>
+            <ul>
+                <li>Hiking Adventure - July 5, 2024</li>
+                <li>Cultural Festival - July 10, 2024</li>
+            </ul>
+            <h3>Grand Canyon National Park, Arizona</h3>
+            <ul>
+                <li>Guided Tour - August 1, 2024</li>
+                <li>Stargazing Event - August 5, 2024</li>
+            </ul>
+            <h3>London</h3>
+            <ul>
+                <li>Music Festival - June 20, 2024</li>
+                <li>Historical Walk - June 25, 2024</li>
+            </ul>
+            <h3>Dubai</h3>
+            <ul>
+                <li>Desert Safari - September 10, 2024</li>
+                <li>Shopping Festival - September 15, 2024</li>
+            </ul>
+            <h3>New York</h3>
+            <ul>
+                <li>Broadway Show - October 5, 2024</li>
+                <li>Central Park Concert - October 10, 2024</li>
+            </ul>
+            <h3>Paris</h3>
+            <ul>
+                <li>Art Exhibition - November 1, 2024</li>
+                <li>Fashion Week - November 5, 2024</li>
+            </ul>
+            <h3>Goa</h3>
+            <ul>
+                <li>Beach Party - December 20, 2024</li>
+                <li>Yoga Retreat - December 25, 2024</li>
+            </ul>
+            <h3>Kashmir</h3>
+            <ul>
+                <li>Shikara Ride - January 5, 2025</li>
+                <li>Snow Festival - January 10, 2025</li>
+            </ul>
+            <h3>Maldives</h3>
+            <ul>
+                <li>Scuba Diving - February 15, 2025</li>
+                <li>Resort Gala - February 20, 2025</li>
+            </ul>
+            <h3>Bali</h3>
+            <ul>
+                <li>Temple Tour - March 5, 2025</li>
+                <li>Beach Cleanup - March 10, 2025</li>
+            </ul>
+            <h3>Brazil</h3>
+            <ul>
+                <li>Carnival Parade - February 10, 2025</li>
+                <li>Rainforest Expedition - February 15, 2025</li>
+            </ul>
+        </div>
+    </div>
+</div>    
     </section>
+
+ 
+<!--View Local Events Ends-->
     <div class="hero">
       <div class="carousel">
         <ul>
@@ -1250,7 +1326,28 @@ $('.carousel').flipster({
     End of Conferbot Script
   -->
 
+<script>
+ document.addEventListener('DOMContentLoaded', function() {
+    const openPopupBtn = document.querySelector('.open-popup-btn');
+    const customCloseBtn = document.querySelector('.custom-close-btn');
+    const popupOverlay = document.querySelector('.popup-overlay');
 
+    openPopupBtn.addEventListener('click', function() {
+        popupOverlay.classList.add('active');
+    });
+
+    customCloseBtn.addEventListener('click', function() {
+        popupOverlay.classList.remove('active');
+    });
+
+    popupOverlay.addEventListener('click', function(e) {
+        if (e.target === popupOverlay) {
+            popupOverlay.classList.remove('active');
+        }
+    });
+});
+
+</script>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
