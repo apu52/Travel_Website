@@ -1237,6 +1237,12 @@ body.dark-theme #emailInput {
   text-align: left;
   flex-direction: column;
 }
+
+.social-icon{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .social-icon a {
   transition: transform 0.3s ease;
   padding: 10px;
