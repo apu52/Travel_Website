@@ -9,8 +9,8 @@ document.addEventListener('mousemove', function(event) {
     ripple.className = 'ripple';
     let relativeX = x + scrollLeft;
     let relativeY = y + scrollTop;
-    ripple.style.left = `${relativeX  - 5}px`;
-    ripple.style.top = `${relativeY - 5}px`;
+    ripple.style.left = `${relativeX  - 1}px`;
+    ripple.style.top = `${relativeY - 12}px`;
     
     document.body.appendChild(ripple);
 
