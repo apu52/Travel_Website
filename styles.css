@@ -2,6 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Oxygen:wght@300&display=swap');
 
 
+.footer__link:hover {
+  color: inherit; 
+}
+
+.footer__link[href*="facebook.com"]:hover {
+  color: #1877F2; 
+}
+
+.footer__link[href*="twitter.com"]:hover {
+  color: #1DA1F2; /
+}
+
+.footer__link[href*="instagram.com"]:hover {
+  color: #E4405F; 
+}
+
+.footer__link[href*="linkedin.com"]:hover {
+  color: #0A66C2; 
+}
+
+
 :root {
   --primary-color: #3685fb;
   --primary-color-dark: #2f73d9;
@@ -381,6 +402,7 @@ body {
   ;
 
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1250,18 +1272,14 @@ body.dark-theme #emailInput {
 }
 */
 
-.footer__link{
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s;
+.footer__link {
   color: white;
+  margin-right: 15px; /* Adjust spacing between icons */
+  font-size: 1.3em; /* Initial font size */
 }
 
-
 .footer__link:hover {
-  color: #ff0000;
-  font-size: 13px;
-  overflow: hidden;
+  transform: scale(10); /* Scale up the icon on hover */
 }
 
 .footer__col p span {
