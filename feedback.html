@@ -16,31 +16,122 @@
     <link rel="stylesheet" href="style_.css">
 
     <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="imstyle.css">
+<link rel="stylesheet" href="jquery.flipster.min.css">
+    <script src="mouseEffect.js"></script>
+    <link rel="stylesheet" href="mouseEffect.css">
+    <script src="Theme.js" defer></script>
 
-
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./Image-Gallery/style.css">
+    <link rel="stylesheet" href="./Image-Gallery/stylecaptions.css">
+    <link rel="stylesheet" href="explore.css">
+    <!-- adding a fav-icon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    
+    <script src="index.js" defer></script>
+    
+    
+    <link rel="stylesheet" href="path/to/aos.css">
+    <script src="path/to/aos.js"></script>
 
     <!-- FontAwsome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <style>
+      .active {
+        color: red !important;
+      }
+    
+      @media screen and (max-width:390px) {
+        .nav__logo {
+          position: relative;
+          right: 1.9rem;
+        }
+    
+        .contact-btn {
+          position: relative;
+          right: 2.5rem;
+        }
+    
+        .toggle-container {
+          position: relative;
+          right: 2.5rem;
+    
+        }
+    
+        .toggle {
+          width: 130%;
+        }
+    
+        .line {
+          width: 130%;
+        }
+    
+        .hamburger {
+          position: relative;
+          right: 1rem;
+        }
+      }
+    
+      @media screen and (max-width:364px) {
+        .toggle {
+          width: 190%;
+        }
+    
+        .line {
+          width: 190%;
+        }
+      }
+    
+      .btn-container {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        /* Adjust the gap between buttons */
+      }
+    </style>
 </head>
 
 <body>
-    <div class="nav-container">
+    <div class="nav-container" id="top">
       <nav class="newNav">
+        <img src="./img/A T logo with a white background and a square shape, connected to nature for a travel company.png"
+          style="width:30px;height:30px;border-radius:50%;">
+    
         <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
-
+    
         <ul class="navLinks">
-          <li class="link home" data-aos="fade-down"><a href="./index.html#home" target="_blank">Home</a></li>
-          <li class="link" data-aos="fade-down"><a href="./index.html#AboutUs" target="_blank">AboutUs</a></li>
-          <li class="link" data-aos="fade-down"><a href="./index.html#Destinations" target="_blank">Destinations</a></li>
-          <li class="link" data-aos="fade-down"><a href="./index.html#trip" target="_blank">Pricing</a></li>
-          <li class="link" data-aos="fade-down"><a href="./index.html#ReviewGallery" target="_blank">Trip Gallery</a></li>
-          <li class="link" data-aos="fade-down"><a href="./index.html#testimonials" target="_blank">Testimonials</a></li>
-          <li class="link" data-aos="fade-down"><a href="./index.htmlfeedback.html" target="_blank">Rate Us?</a></li>
-          <li class="link" data-aos="fade-down"><a href="./index.html#contact" target="_blank">Contact Us</a></li>
-
+    
+          <li class="link" data-aos=""><a href="./index.html#Home">Home</a></li>
+          <li class="link" data-aos=""><a href="./index.html#AboutUs"> AboutUs</a></li>
+          <li class="link" data-aos=""><a href="./index.html#Destinations">Destinations</a></li>
+          <li class="link" data-aos=""><a href="./index.html#trip">Pricing</a></li>
+          <li class="link" data-aos=""><a href="./index.html#ReviewGallery">Trip Gallery</a></li>
+          <li class="link" data-aos=""><a href="./index.html#testimonials">Testimonials</a></li>
+          <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+          <li class="link" data-aos=""><a href="./index.html#cnt-form">Contact Us</a></li>
+    
+    
         </ul>
+    
+    
         <a href="newLogin.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
-          data-aos="fade-down">Login/SignUp</button></a>
+            data-aos="fade-down">Login/SignUp</button></a>
+        <a href="mapa.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
+            data-aos="fade-down">view <map name=""></map></button></a>
+    
+        <a href="loginPage.html" class="contact-btn"><button class="btn" id="logout-btn" style="margin: 0; display: none;"
+            data-aos="fade-down" disabled>Log Out</button></a>
+    
+        <!-- <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
+                style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a> -->
+    
         <div class="toggle-container" data-aos="fade-down">
           <input id="themeToggle" class="toggle" type="checkbox">
         </div>
