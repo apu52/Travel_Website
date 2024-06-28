@@ -55,6 +55,7 @@
 
 /* new bubble start*/
 
+/*
 .bubbles {
   position: fixed;
   width: 100%;
@@ -64,13 +65,11 @@
   top: 0;
   left: 0;
   pointer-events: none;
-  /* Ensure bubbles don't interfere with other elements */
 }
 
 .bubble {
   position: absolute;
   bottom: 0;
-  /* Start from the bottom of the page */
   width: 40px;
   height: 40px;
   background: var(--bubble-color);
@@ -250,10 +249,12 @@
 
   100% {
     bottom: 100vh;
-    /* Use viewport height to ensure it reaches the top */
     transform: translateX(-200px);
   }
 }
+*/
+
+
 
 /* new bubble end */
 #scrollPath {
