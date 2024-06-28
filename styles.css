@@ -1271,8 +1271,12 @@ body.dark-theme #emailInput {
   border-top: 1px solid var(--text-light);
 }
 
-.footer__area{
-   margin-left: 2.3rem;
+.footer__area {
+  margin-left: 2.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer__area a{
@@ -2382,4 +2386,21 @@ body {
   }
 }
 
+#google_element img {
+  width: 160px;
+  height: 50px;
+}
 
+#google_element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.goog-te-combo, .VIpgJd-ZVi9od-ORHb *, .VIpgJd-ZVi9od-SmfZ *, .VIpgJd-ZVi9od-xl07Ob *, .VIpgJd-ZVi9od-vH1Gmf *, .VIpgJd-ZVi9od-l9xktf * {
+  font-family: arial;
+  font-size: 10pt;
+  height: 23px;
+  border-radius: 6px;
+  background-image: linear-gradient(135deg, #7cfaea80 10%, #f067b4b5 100%);
+}
