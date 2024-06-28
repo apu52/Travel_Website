@@ -1247,7 +1247,12 @@ body.dark-theme #emailInput {
   transition: transform 0.3s ease;
   padding: 10px;
 }
-
+.footer__text a{
+  color: white;
+}
+.footer__text a:hover{
+  color: red;
+}
 
 .social-icon a:hover {
   transform: scale(1.1);
