@@ -2450,3 +2450,76 @@ body {
     margin: 0 auto; /* Center the subtitle */
   }
 }
+
+/*STYLE FOR SIDE DISCOUNT DIVISION*/
+
+.popup {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background:linear-gradient(to right,rgb(222, 125, 222),rgb(222, 177, 222));
+  border: 1px solid #cccccc;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 300px;
+  height:260px;
+  z-index: 1000;
+  display: none; /* Initially hide the popup */
+}
+
+.popup h2 {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+.popup p {
+  margin-bottom: 15px;
+}
+
+form {
+  align-items: center;
+}
+
+input[type="email"] {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #7325b3;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+button:hover {
+  background-color: #6200b3;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #0d0101;
+}
+.pop_up_heading{
+  font-size: 20px;
+  color:rgb(109, 27, 109);
+  font-weight:bold;
+}
+.pop_up_content{
+  font-size: 13px;
+  color:white;
+}
