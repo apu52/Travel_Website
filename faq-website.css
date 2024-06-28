@@ -19,6 +19,7 @@
   position: relative;
   transition: 0.3s ease;
   cursor: pointer;
+  
 }
 
 .faq.active {
@@ -52,7 +53,7 @@
 }
 .faq-title:hover {
   transform: scale(1.1);
-  font-size: 24px;
+  /* font-size: 20px;*/ /* commenting to remove flickering of elements */
 }
 
 .faq-text {
@@ -78,7 +79,7 @@
   padding: 0;
   position: absolute;
   right: 30px;
-  top: 30px;
+  top: 10px;   /* Moving toggle button to top to remove overlapping with faq-title  */
   width: 30px;
 }
 .faq-toggle .fa-times,
