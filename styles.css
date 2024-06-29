@@ -390,7 +390,8 @@ body {
   font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 15px;
-  text-align: left;
+/*   text-align: left; */
+  text-align: center;
   display: inline-block;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -409,7 +410,8 @@ body {
   font-size: 1rem;
   color: var(--text-dark);
   max-width: calc(var(--max-width) / 2);
-  text-align: right;
+/*   text-align: right; */
+  text-align: center;
 }
 
 .section_header .section_subtitle {
