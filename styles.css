@@ -2075,7 +2075,40 @@ body {
   }
 
 }
+.footer-head {
+  position: relative;
+  display: inline-block;
+  padding: 10px 0;
+}
 
+.footer-head::before,
+.footer-head::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  transition: width 0.2s ease-in;
+}
+
+.footer-head::before {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer-head::after {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer-head:hover::before{
+  width: 100%;
+}
+.footer-head:hover::after{
+  width: 100%;
+}
 .navLinks .link a:active {
   color:red;
 
