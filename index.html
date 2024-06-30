@@ -887,13 +887,36 @@
           </p>
         </div>
         <div class="subscribe__form" data-aos="fade-up">
-          <form>
+          <form id="subscriptionForm">
             <input type="email" placeholder="Your email here" id="emailInput" required />
             <button class="btn-send" id="send" type="submit" style="box-shadow: 2px 2px 8px blue;">Subscribe</button>
           </form>
+          <p id="subscriptionMessage" style="display: none; color: green; margin-top: 10px;">Subscription successful! 🎉</p>
         </div>
       </div>
     </section>
+    <!--DISPLAY SUBSCRIPTION SUCCESS MESSAGE-->
+    <script>
+      document.getElementById('subscriptionForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent submission
+    
+        
+    
+        //  success message 
+        showSubscriptionMessage();
+      });
+    
+      function showSubscriptionMessage() {
+        var messageElement = document.getElementById('subscriptionMessage');
+        messageElement.style.display = 'block';
+    
+        // Hide message after 4 seconds
+        setTimeout(function() {
+          messageElement.style.display = 'none';
+        }, 4000); // 4000 milliseconds = 4 seconds
+      }
+    </script>
+    
 
     <footer class="footer" data-aos="fade-up">
       <div class="section__container footer__container">
