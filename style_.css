@@ -216,9 +216,7 @@ p {
   }
 }
 
-
 /* New NAvbar CSS Starts Here*/
-
 
 .nav-container {
   height: auto;
@@ -230,7 +228,6 @@ p {
   left: 0;
   z-index: 9999;
 }
-
 .newNav {
   display: flex;
   justify-content: space-between;
@@ -251,17 +248,15 @@ p {
   position: relative;
   top: 0.5rem;
   z-index: 10;
-
-
 }
 
-.link a {
+.link a{
   position: relative;
 }
 
 .link a::before {
   position: absolute;
-  content: "";
+  content: '';
   height: 2px;
   width: 0%;
   bottom: -5px;
@@ -271,7 +266,7 @@ p {
 
 .link a::after {
   position: absolute;
-  content: "";
+  content: '';
   height: 2px;
   width: 0%;
   top: -5px;
@@ -280,17 +275,17 @@ p {
   transition: all 0.2s ease-in-out;
 }
 
-.link a:hover::before {
+.link a:hover::before{
   width: 100%;
   transition: all 0.2s ease-in-out;
 }
 
-.link a:hover::after {
+.link a:hover::after{
   width: 100%;
   transition: all 0.2s ease-in-out;
 }
 
-.hamburger {
+.hamburger{
   height: 2rem;
   width: 1.7rem;
   display: flex;
@@ -300,19 +295,18 @@ p {
   transition: 0.2s;
 }
 
-.line {
+.line{
   height: 5px;
   width: 100%;
   background-color: white;
   border-radius: 2px;
 }
 
-@media screen and (max-width: 1220px) {
+@media screen and (max-width : 1220px) {
   .hamburger {
     display: flex;
     cursor: pointer;
   }
-
   .navLinks {
     position: absolute;
     top: 70px;
@@ -339,28 +333,7 @@ p {
 
   #btn-style {
     font-size: 0.6rem;
-
-
   }
-}
-
-#btn-style {
-  display: inline-block;
-  border-radius: 50px;
-  transition: all .4s ease-in-out;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  width: auto;
-  background-color: transparent;
-  border: 2px solid rgb(41, 0, 128);
-  color: red;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 2px;
-  vertical-align: middle;
-  text-decoration: none;
 }
 
 .navLinks.activeHamburger {
