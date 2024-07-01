@@ -43,8 +43,8 @@ window.onload = openModal;
 
 const slideDots = document.querySelectorAll(".imageDots span");
 const slides = document.querySelectorAll(".mySlides");
-let activeSlide = 0;
-let slideInterval;
+activeSlide = 0;
+slideInterval=null;
 
 const destinationTitles = [
   "Eiffel Tower",
@@ -135,3 +135,8 @@ document.getElementById('emailInput').addEventListener('blur', function() {
 });
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> b48381bbd608d449bfa48f02153fdba96e940af9
