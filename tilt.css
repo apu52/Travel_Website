@@ -1,0 +1,11 @@
+.tilt-effect:hover {
+    transform: rotate3d(1, 1, 0, 20deg); /* Increased angle for more tilt */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect and shadow */
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.5); /* Shadow for depth */
+  }
+  
+  .tilt-effect {
+    transform: rotate3d(1, 1, 0, 0deg); /* Element returns to normal on hover */
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5); /* Shadow disappears on hover */
+  }
+  
