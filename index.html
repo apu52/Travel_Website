@@ -27,6 +27,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="stylesheet" href="tilt.css">
   <script src="tilt.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
 
   <script src="index.js" defer></script>
   <script src="mouseEffect.js"></script>
@@ -333,7 +334,7 @@
               <circle cx="8.5" cy="7" r="4" />
               <polyline points="17 11 19 13 23 9" />
             </svg>
-            <h3
+            <h3 id="guidesCount"
               class="font-semibold text-4xl md:text-3xl group-hover:text-thq_green-500 text-gray-900 dark:text-white mt-3.5"
               data-aos="fade-in">25000</h3>
             <p
@@ -354,7 +355,7 @@
               <line x1="12" y1="18" x2="12" y2="22" />
               <line x1="8" y1="22" x2="16" y2="22" />
             </svg>
-            <h3
+            <h3 id="toursCount"
               class="font-semibold text-4xl md:text-3xl  group-hover:text-thq_green-500 text-gray-900 dark:text-white mt-3.5"
               data-aos="fade-in">20000</h3>
             <p class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300"
@@ -375,7 +376,7 @@
               <line x1="9" y1="4" x2="9" y2="17" />
               <line x1="15" y1="15" x2="15" y2="20" />
             </svg>
-            <h3
+            <h3 id="destinationsCount"
               class="font-semibold text-4xl md:text-3xl  group-hover:text-thq_green-500 text-black-900 dark:text-black mt-3.5"
               data-aos="fade-in">10994</h3>
             <p class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300"
@@ -1660,6 +1661,34 @@ $('.carousel').flipster({
       }
   });
   </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    function animateValue(id, start, end, duration) {
+      const obj = document.getElementById(id);
+      const startTime = performance.now();
+
+      function updateValue(timestamp) {
+        const elapsedTime = timestamp - startTime;
+        const progress = Math.min(elapsedTime / duration, 1);
+        const currentValue = Math.floor(progress * (end - start) + start);
+        obj.textContent = currentValue;
+        if (progress < 1) {
+          requestAnimationFrame(updateValue);
+        }
+      }
+
+      requestAnimationFrame(updateValue);
+    }
+
+    // Call the function for each count-up element
+    animateValue("guidesCount", 0, 25000, 20000);
+    animateValue("toursCount", 0, 20000, 20000);
+    animateValue("destinationsCount", 0, 10994, 20000);
+  });
+</script>
+
+
 
 
 
