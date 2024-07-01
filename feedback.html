@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="style_.css">
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    
 
 
 
@@ -29,14 +31,14 @@
         <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
 
         <ul class="navLinks">
-          <li class="link home" data-aos="fade-down"><a href="./index.html#home" target="_blank">Home</a></li>
-          <li class="link" data-aos="fade-down"><a href="./index.html#AboutUs" target="_blank">AboutUs</a></li>
-          <li class="link" data-aos="fade-down"><a href="./index.html#Destinations" target="_blank">Destinations</a></li>
-          <li class="link" data-aos="fade-down"><a href="./index.html#trip" target="_blank">Pricing</a></li>
-          <li class="link" data-aos="fade-down"><a href="./index.html#ReviewGallery" target="_blank">Trip Gallery</a></li>
-          <li class="link" data-aos="fade-down"><a href="./index.html#testimonials" target="_blank">Testimonials</a></li>
-          <li class="link" data-aos="fade-down"><a href="./index.htmlfeedback.html" target="_blank">Rate Us?</a></li>
-          <li class="link" data-aos="fade-down"><a href="./index.html#contact" target="_blank">Contact Us</a></li>
+          <li class="link" data-aos=""><a href="./index.html#home" target="_blank">Home</a></li>
+          <li class="link" data-aos=""><a href="./index.html#AboutUs" target="_blank">AboutUs</a></li>
+          <li class="link" data-aos=""><a href="./index.html#Destinations" target="_blank">Destinations</a></li>
+          <li class="link" data-aos=""><a href="./index.html#trip" target="_blank">Pricing</a></li>
+          <li class="link" data-aos=""><a href="./index.html#ReviewGallery" target="_blank">Trip Gallery</a></li>
+          <li class="link" data-aos=""><a href="./index.html#testimonials" target="_blank">Testimonials</a></li>
+          <li class="link" data-aos=""><a href="./index.htmlfeedback.html" target="_blank">Rate Us?</a></li>
+          <li class="link" data-aos=""><a href="./index.html#contact" target="_blank">Contact Us</a></li>
 
         </ul>
         <a href="newLogin.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
@@ -44,7 +46,7 @@
         <div class="toggle-container" data-aos="fade-down">
           <input id="themeToggle" class="toggle" type="checkbox">
         </div>
-        <div class="hamburger" data-aos="fade-down">
+        <div class="hamburger" data-aos="fade-down" onclick="">
           <div class="line"></div>
           <div class="line"></div>
           <div class="line"></div>
@@ -110,3 +112,41 @@
     <script src="feedback.js" defer></script>
 </body>
 </html>
+<script>
+  let hamburger = document.querySelector('.hamburger');
+  hamburger.addEventListener('click', () => {
+    let list = document.querySelector('.navLinks');
+    list.classList.toggle('activeHamburger');
+  })
+</script>
+<script>
+
+  // To highlight active navbar
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll('.navLinks a');
+
+    function highlightNavLink() {
+      const scrollPosition = window.scrollY;
+
+      navLinks.forEach(link => {
+        const sectionId = link.getAttribute('href').substring(1);
+        const section = document.getElementById(sectionId);
+
+        // Adjust this value to control when the link should be highlighted
+        const offsetPercentage = 20;
+
+        if (section.offsetTop - window.innerHeight * (offsetPercentage / 100) <= scrollPosition &&
+          section.offsetTop + section.offsetHeight > scrollPosition) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
+
+    document.addEventListener('scroll', highlightNavLink);
+    window.addEventListener('resize', highlightNavLink);
+
+    // Initialize AOS library
+    AOS.init();
+  });</script>
