@@ -377,7 +377,7 @@ body {
 }
 
 .section__header {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
@@ -386,6 +386,7 @@ body {
 }
 
 .section__title {
+  /* text-align: center; */
   font-size: 2rem;
   font-weight: 600;
   color: var(--text-dark);
@@ -409,7 +410,7 @@ body {
   font-size: 1rem;
   color: var(--text-dark);
   max-width: calc(var(--max-width) / 2);
-  text-align: right;
+  /* text-align: right; */
 }
 
 .section_header .section_subtitle {
@@ -1075,7 +1076,7 @@ header {
 .gallary__container {
   display: flex;
   background-color: var(--secondary-color);
-  width: 80%;
+  /* width: 80%; */
   justify-content: center;
   align-items: center;
   gap: 4rem;
@@ -1114,7 +1115,7 @@ header {
 }
 
 .gallary__content>div {
-  max-width: 400px;
+  max-width: 750px;
 }
 
 .gallary__content h2 {
