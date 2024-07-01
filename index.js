@@ -135,5 +135,8 @@ document.getElementById('emailInput').addEventListener('blur', function() {
 });
 
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> b48381bbd608d449bfa48f02153fdba96e940af9
