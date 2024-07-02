@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tourguide</title>
   <link rel="stylesheet" href="./Machu_tour.css">
-
+  <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
@@ -184,7 +184,10 @@
               document.getElementById("myLink").click();
             </script>
             <div id="weatherInfo">
-
+              <h2>Climate Info </h2>
+              <div>Maximum Temperature:<span class="max"></span>°C</div>
+              <div>Minimum Temperature:<span class="min"></span>°C</div>
+              <div>Humidity:<span class="humidity"></span>%</div>
               <!-- Weather information will be inserted here -->
             </div>
 
