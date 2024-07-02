@@ -2,6 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Oxygen:wght@300&display=swap');
 
 
+.footer__link:hover {
+  color: inherit; 
+}
+
+.footer__link[href*="facebook.com"]:hover {
+  color: #1877F2; 
+}
+
+.footer__link[href*="twitter.com"]:hover {
+  color: #1DA1F2; /
+}
+
+.footer__link[href*="instagram.com"]:hover {
+  color: #E4405F; 
+}
+
+.footer__link[href*="linkedin.com"]:hover {
+  color: #0A66C2; 
+}
+
+
 :root {
   --primary-color: #3685fb;
   --primary-color-dark: #2f73d9;
@@ -275,6 +296,7 @@ body {
   align-items: center;
   background-color: #0e1525;
   overflow-x: hidden;
+
 }
 
 #toggle {
@@ -309,7 +331,7 @@ body {
 
 /*Creating Curved Corners for the Video*/
 .section__container {
-  max-width: var(--max-width);
+  /* max-width: var(--max-width); */
   margin: auto;
   padding: 5rem 1rem;
   margin-top: 20px;
@@ -616,7 +638,7 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   /* border: 2px solid green; */
-  width: var(--max-width);
+  /* width: var(--max-width); */
   padding: 0 2rem;
 }
 
@@ -629,8 +651,9 @@ header {
 
 .header__image img {
   position: absolute;
+  
   top: 50%;
-  left: 55%;
+  left: 75%;
   border: 0.5rem solid var(--img-color);
   border-radius: 2rem;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
@@ -1250,18 +1273,14 @@ body.dark-theme #emailInput {
 }
 */
 
-.footer__link{
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s;
+.footer__link {
   color: white;
+  margin-right: 15px; /* Adjust spacing between icons */
+  font-size: 1.3em; /* Initial font size */
 }
 
-
 .footer__link:hover {
-  color: #ff0000;
-  font-size: 13px;
-  overflow: hidden;
+  transform: scale(10); /* Scale up the icon on hover */
 }
 
 .footer__col p span {
@@ -2433,3 +2452,40 @@ body {
     margin: 0 auto; /* Center the subtitle */
   }
 }
+@media (max-width: 768px) {
+  .header__image img:nth-child(1) {
+    max-width: 50vw; /* Adjust image size for smaller devices */
+    transform: translate(-90%, -40%); /* Center image horizontally and vertically */
+  }
+
+  .header__image img:nth-child(2) {
+    max-width: 30vw; /* Adjust image size for smaller devices */
+    transform: translate(-30%, -75%); /* Center image vertically */
+  }
+
+  .header__content h1 {
+    font-size: 1.5rem; /* Adjust font size for smaller devices */
+    line-height: 1.5rem; /* Adjust line height for smaller devices */
+  }
+
+  .header__content .action__btns {
+    gap: 1.5rem; /* Add gap between buttons */
+  }
+
+  .section__subtitle {
+    font-size: 0.8rem; /* Adjust font size for smaller devices */
+    max-width: 40%; /* Limit width to prevent overflow */
+  }
+
+  .newNav {
+    justify-content: right;
+    gap: 27px;
+  }
+  .nav-container {
+    width: 100%;
+    justify-content: center;
+    font-size: small;
+  }
+  
+}
+
