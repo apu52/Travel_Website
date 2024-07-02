@@ -1,6 +1,7 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: black;
+  background: url("dubai.jpg") no-repeat center center fixed;
+  background-size: cover;
   padding: 20px;
   color: #333;
 }
@@ -8,7 +9,7 @@ body {
 .container {
   max-width: 800px;
   margin: auto;
-  background: #fff;
+  background: rgba(173, 227, 241, 0.6); /* Translucent background */
   padding: 40px;
   border-radius: 10px;
   box-shadow: 10px 10px 15px rgb(88, 87, 87);
@@ -16,80 +17,83 @@ body {
 
 h2 {
   text-align: center;
-  color: #003366; 
+  color: #340384;
   margin-bottom: 20px;
   margin-top: 12px;
+  font-size: 3em; /* Increased font size */
 }
 
 h3 {
-  margin-top: 30px; 
-  color: #003366; 
-  margin-bottom: 20px; 
-}
-#bookingProcess,#accuracyInformation,#paymentOptions,#securityMeasures,#customerSupport{
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 30px;
+  color: #0a0b0c;
+  margin-bottom: 20px;
+  font-size: 1.5em; /* Increased font size */
 }
 
 .mb-3 {
-  margin-bottom: 1.5rem; 
+  margin-bottom: 1.5rem;
 }
-p{
-  color: #003366; 
+
+p {
+  color: #0e0e0f;
+  font-size: 1.2em; /* Increased font size */
 }
 
 .form-label {
   font-weight: bold;
-  color: #1d3557; 
+  color: #090a0b;
   margin-bottom: 30px;
-}
-
-#navigationEase{
-  margin-top: 10px;
 }
 
 .form-control {
   width: 100%;
   padding: 12px;
-  border: 1px solid #e8e8e8;
+  border: 1px solid #010101;
   border-radius: 5px;
   margin-top: 10px;
+  font-size: 1.1em; /* Increased font size */
 }
 
 .btn {
   padding: 12px 24px;
-  border: none;
+  border: 3px solid rgb(0, 49, 79);
   border-radius: 5px;
   cursor: pointer;
-  background: linear-gradient(#003366,#9f4bee);
+  background: linear-gradient(#227fdd, #860cf8);
   color: white;
-  display: block; 
-  margin: 20px auto 0; 
-  text-align: center; 
+  display: block;
+  margin: 20px auto 0;
+  text-align: center;
+  font-size: 1.2em;
+  transition: transform 0.3s ease;
 }
 
 .btn:hover {
-  background: linear-gradient(#007bff,#e534bf); 
+  background: linear-gradient(#010e10, #4a51df);
+  transform: scale(1.1);
 }
 
 .star {
   font-size: 24px;
-  color: #ccc;
+  color: #f9f7f7;
   cursor: pointer;
 }
 
 .star.checked {
-  color: #f0cd04;
+  color: #cc0213;
 }
 
-#navigationEase, 
-#bookingProcess, 
-#accuracyInformation, 
-#paymentOptions, 
-#securityMeasures, 
-#customerSupport, 
+#navigationEase,
+#bookingProcess,
+#accuracyInformation,
+#paymentOptions,
+#securityMeasures,
+#customerSupport,
 #overallExperience {
   gap: 5px;
+  display: flex;
+  margin-top: 14px;
+  color: black;
 }
 
 #navigationEase-rating-text,
@@ -99,14 +103,15 @@ p{
 #securityMeasures-rating-text,
 #customerSupport-rating-text,
 #overallExperience-rating-text {
-  color: #003366; 
-  margin-top: 10px; 
+  color: #050506;
+  margin-top: 20px;
+  margin-top: 20px;
+  font-size: 1.1em;
 }
 
-.col-md-6{
- margin-bottom: 20px;
+.col-md-6 {
+  margin-bottom: 20px;
   position: relative;
-  
 }
 .col-md-6 .icon {
   position: absolute;
@@ -123,37 +128,136 @@ p{
   align-items: center;
 }
 
-.col-md-6 input{
+.col-md-6 input {
+  align-items: center;
   width: 90%;
   padding: 10px 10px 10px 40px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
+  border: 1.5px solid #010117;
+  border-radius: 8px;
+  font-size: 1.2em;
 }
 
-.group{
+.group {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
 }
-.text{
+.text {
   width: 50%;
   display: flex;
   justify-content: center;
 }
-.last{
+.last {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
-.form-check-label{
+.form-check-label {
   width: 2000px;
 }
-label{
-  color: #003366;
+label {
+  color: #0c0d0e;
+  font-size: 18px;
 }
 
+.icons {
+  justify-content: center;
+  display: flex;
+  gap: 25px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
 
+.icons .icon i {
+  font-size: 34px;
+  transition: all 0.3s ease;
+  color: #1c1919;
+}
+
+.icons .icon:hover i {
+  transform: scale(1.2);
+}
+
+.icons .icon:hover .fab.fa-linkedin {
+  color: #0764c1;
+}
+
+.icons .icon:hover .fab.fa-twitter {
+  color: #090e11;
+}
+
+.icons .icon:hover .fab.fa-instagram {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  background-clip: text;
+  border-radius: 20%;
+  transform: scale(1.5);
+  color: transparent;
+}
+
+.icons .icon:hover .fab.fa-youtube {
+  color: #c31a1e;
+}
+.icons .icon:hover .fab.fa-github {
+  color: #070606;
+}
+
+textarea {
+  background-color: #e3f4f7;
+  border: 3px solid #0d0c10;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-size: 2em;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+textarea:hover {
+  background-color: #e2f8f8;
+  border-color: #070707;
+}
+
+textarea:focus {
+  background-color: #eef7ff;
+  border-color: #227fdd;
+  box-shadow: 0 0 10px rgba(34, 127, 221, 0.6);
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  .group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .group .row {
+    width: 100%;
+  }
+
+  .group .col-md-12 {
+    width: 100%;
+  }
+
+  .rating-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .rating-stars {
+    justify-content: flex-start;
+  }
+
+  .rating-text {
+    width: 100%;
+    margin-top: 0;
+  }
+}

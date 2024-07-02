@@ -1,154 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tour Feedback Form</title>
     <link rel="stylesheet" href="feed.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="feed.js" defer></script>
     <script
-    src="https://kit.fontawesome.com/b08b6de27e.js"
-    crossorigin="anonymous"
-  ></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+      src="https://kit.fontawesome.com/b08b6de27e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
 
-<body>
-
+  <body>
     <div class="container">
-        <form method="post" id="myform">
-
-            <div class="row-mb-3">
-                <div class="col-md-12">
-                    <h2>Tour Feedback Form</h2>
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <div class="icon"><i class="fas fa-map-marked-alt"></i></div>
-                    <input type="text" name="event_name" placeholder="Name the tour you attended:" id="event_name" class="form-control" required="required" />
-                </div>
-                <div class="col-md-6">
-                    <div class="icon"><i class="fas fa-calendar-alt"></i></div> 
-                    <input type="date" class="form-control" placeholder="Tour Date:" name="event_date" id="event_date" />
-                </div>
-            </div>
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <div class="icon">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <input type="text" name="FullName" id="FullName" placeholder="Your Name" required="required" class="form-control" />
-                </div><br>
-                <div class="col-md-6">
-                    <div class="icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <input type="email" class="form-control"  placeholder="Email Id"  name="Email" id="Email" />
-                </div>
-            </div>
-
-            <h3>What's your opinion about:</h3>
-
-          <div class="group">
-            <div class="row mb-3">
-                <div class="col-md-12">
-                    <label >Ease of navigation?</label>
-                    <div class="d-flex flex-wrap" id="navigationEase">
-                    </div>
-                    <p id="navigationEase-rating-text">Rating: 0</p>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <div class="col-md-12">
-                    <label>Booking process</label>
-                    <div class="d-flex flex-wrap" id="bookingProcess">
-                    </div>
-                    <p id="bookingProcess-rating-text">Rating: 0</p>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <div class="col-md-12">
-                    <label>Accuracy of information provided</label>
-                    <div class="d-flex flex-wrap" id="accuracyInformation">
-                    </div>
-                    <p id="accuracyInformation-rating-text">Rating: 0</p>
-                </div>
-            </div>
+      <form method="post" id="feedback-form">
+        <div class="row-mb-3">
+          <div class="col-md-12">
+            <h2>Tour Feedback Form</h2>
+          </div>
         </div>
 
-        
-
-            <h3>How would you rate the following aspects?</h3>
-            <div class="group">
-            <div class="row mb-3">
-                <div class="col-md-12">
-                    <label>Payment options</label>
-                    <div class="d-flex flex-wrap" id="paymentOptions">
-                    </div>
-                    <p id="paymentOptions-rating-text">Rating: 0</p>
-                </div>
-              </div>
-            <div class="row mb-3">
-                <div class="col-md-12">
-                    <label>Security Measures</label>
-                    <div class="d-flex flex-wrap" id="securityMeasures">
-                    </div>
-                    <p id="securityMeasures-rating-text">Rating: 0</p>
-                </div>
-            </div>
-        
-         
-            <div class="row mb-3">
-                <div class="col-md-12">
-                    <label>Customer Support</label>
-                    <div class="d-flex flex-wrap" id="customerSupport">
-                    
-                    </div>
-                    <p id="customerSupport-rating-text">Rating: 0</p>
-                </div>
-            </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <div class="icon"><i class="fas fa-map-marked-alt"></i></div>
+            <input
+              type="text"
+              name="event_name"
+              placeholder="Name the tour you attended:"
+              id="event_name"
+              class="form-control"
+            />
+          </div>
+          <div class="col-md-6">
+            <div class="icon"><i class="fas fa-calendar-alt"></i></div>
+            <input
+              type="date"
+              class="form-control"
+              placeholder="Tour Date:"
+              name="event_date"
+              id="event_date"
+            />
+          </div>
         </div>
-            
-       
-            <div class="row mb-3">
-                <div class="col-md-12">
-                    <textarea name="suggestions" itemid="text" class="form-control"  placeholder="Your suggestions for improving future events" id="suggestions" rows="6"></textarea>
-                </div>
-            </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <div class="icon"><i class="fas fa-user"></i></div>
+            <input
+              type="text"
+              name="FullName"
+              id="FullName"
+              placeholder="Your Name"
+              class="form-control"
+            />
+          </div>
+          <br />
+          <div class="col-md-6">
+            <div class="icon"><i class="fas fa-envelope"></i></div>
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Email Id"
+              name="Email"
+              id="Email"
+            />
+          </div>
+        </div>
 
-            <div class="row mb-3">
-                <div class="col-md-6 d-flex align-items-center">
-                    <div class="last">
-                        <label for="notify_future_events" class="form-check-label">Would you like to be notified about future events?</label>
-                        <input type="checkbox" class="form-check-input" name="notify_future_events" id="notify_future_events" />
-                    </div>
-                </div>
-            </div>
+        <h3>What's your opinion about:</h3>
 
-            <div class="row mb-3">
-                <div class="col-md-6 d-flex align-items-center">
-                    <div class="last">
-                        <label for="can_follow_up" class="form-check-label">Can we contact you regarding your feedback for further clarification or follow-up?</label>
-
-                        <input type="checkbox" class="form-check-input" name="can_follow_up" id="can_follow_up" />
-                    </div>
-                </div>
+        <div class="group">
+          <div class="row mb-3">
+            <div class="col-md-12">
+              <label>Ease of navigation?</label>
+              <div class="d-flex flex-wrap" id="navigationEase"></div>
+              <p id="navigationEase-rating-text">Rating: 0</p>
             </div>
-
-            <div class="row mb-3">
-                <div class="col-md-6 d-flex align-items-center">
-                    <button type="button" class="btn btn-lg px-4" style="background-color:#007bff;border-color:#007bff;color:white;" onclick="submitFeedback()">Submit</button>
-                </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-12">
+              <label>Booking process</label>
+              <div class="d-flex flex-wrap" id="bookingProcess"></div>
+              <p id="bookingProcess-rating-text">Rating: 0</p>
             </div>
-        </form>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-12">
+              <label>Accuracy of information provided</label>
+              <div class="d-flex flex-wrap" id="accuracyInformation"></div>
+              <p id="accuracyInformation-rating-text">Rating: 0</p>
+            </div>
+          </div>
+        </div>
+
+        <h3>How would you rate the following aspects?</h3>
+        <div class="group">
+          <div class="row mb-3">
+            <div class="col-md-12">
+              <label>Payment options</label>
+              <div class="d-flex flex-wrap" id="paymentOptions"></div>
+              <p id="paymentOptions-rating-text">Rating: 0</p>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-12">
+              <label>Security Measures</label>
+              <div class="d-flex flex-wrap" id="securityMeasures"></div>
+              <p id="securityMeasures-rating-text">Rating: 0</p>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-12">
+              <label>Customer Support</label>
+              <div class="d-flex flex-wrap" id="customerSupport"></div>
+              <p id="customerSupport-rating-text">Rating: 0</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-12">
+            <textarea
+              name="comments"
+              class="form-control"
+              placeholder="Your suggestions for improving future events"
+              id="comments"
+              rows="6"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-6 d-flex align-items-center">
+            <button type="submit" class="btn btn-lg px-4">Submit</button>
+          </div>
+        </div>
+
+        <div class="icons">
+          <a href="">
+            <div class="icon">
+              <i
+                class="fab fa-linkedin"
+                title="linkedin"
+                style="cursor: pointer"
+              ></i>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="icon">
+              <i class="fab fa-twitter" title="X" style="cursor: pointer"></i>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="icon">
+              <i
+                class="fab fa-instagram"
+                title="Instagram"
+                style="cursor: pointer"
+              ></i>
+            </div>
+          </a>
+
+          <a href="" title="YouTube">
+            <div class="icon">
+              <i class="fab fa-youtube" style="cursor: pointer"></i>
+            </div>
+          </a>
+
+          <a href="" title="GitHub">
+            <div class="icon">
+              <i class="fab fa-github" style="cursor: pointer"></i>
+            </div>
+          </a>
+        </div>
+      </form>
     </div>
-
-</body>
-
+  </body>
 </html>
