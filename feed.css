@@ -232,3 +232,32 @@ textarea:focus {
   box-shadow: 0 0 10px rgba(34, 127, 221, 0.6);
   outline: none;
 }
+
+@media (max-width: 600px) {
+  .group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .group .row {
+    width: 100%;
+  }
+
+  .group .col-md-12 {
+    width: 100%;
+  }
+
+  .rating-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .rating-stars {
+    justify-content: flex-start;
+  }
+
+  .rating-text {
+    width: 100%;
+    margin-top: 0;
+  }
+}
