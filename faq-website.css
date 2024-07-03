@@ -5,7 +5,67 @@
   border-radius: 20px;
 }
 
+
 :root{
+
+.faq-container {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.faq {
+  background-color: whitesmoke;
+  border: 3px solid #6a5acd;
+  border-radius: 25px;
+  margin: 20px 0;
+  overflow: hidden;
+  padding: 30px;
+  position: relative;
+  transition: 0.3s ease;
+  cursor: pointer;
+  
+}
+
+.faq.active {
+  background: rgb(239, 239, 239);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq.active::before,
+.faq.active::after {
+  color: #2ecc71;
+  content: "\f075";
+  font-family: "Poppins" sans-serif;
+  font-size: 7rem;
+  left: 20px;
+  opacity: 0.2;
+  position: absolute;
+  top: 20px;
+  z-index: 0;
+}
+
+.faq.active::before {
+  color: #3498db;
+  left: -30px;
+  top: -10px;
+  transform: rotateY(180deg);
+}
+
+.faq-title {
+  margin: 0 35px 0 0;
+  color: #3685fb;
+}
+.faq-title:hover {
+  transform: scale(1.1);
+  /* font-size: 20px;*/ /* commenting to remove flickering of elements */
+}
+
+.faq-text {
+  display: none;
+  margin: 30px 0 0;
+  color: black;
+}
+
 
   /* Colors */
   --color-primary: #ffd54b;
@@ -57,6 +117,28 @@
       padding: 2rem;
       display: grid;
       place-items: center;
+
+.faq-toggle {
+  align-items: center;
+  background: rgb(239, 239, 239);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
+  height: 30px;
+  justify-content: center;
+  padding: 0;
+  position: absolute;
+  right: 30px;
+  top: 10px;   /* Moving toggle button to top to remove overlapping with faq-title  */
+  width: 30px;
+}
+.faq-toggle .fa-times,
+.faq.active .faq-toggle .fa-chevron-down {
+  display: none;
+}
+
 
   }
   
