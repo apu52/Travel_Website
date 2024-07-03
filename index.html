@@ -129,6 +129,13 @@
   justify-content: center;
   gap: 8px; /* Adjust the gap between buttons */
 }
+
+@media screen and (max-width: 768px) {  
+body{
+  align-items: flex-end;
+  width: auto;
+}  
+}
   </style>
 <link rel="stylesheet" href="imstyle.css">
 <link rel="stylesheet" href="jquery.flipster.min.css">
@@ -184,14 +191,12 @@
           <li class="link" data-aos=""><a href="#testimonials">Testimonials</a></li>
           <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
           <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
-
-
         </ul>
 
 
-        <a href="newLogin.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
+        <a href="newLogin.html" class="contact-btn"><button class="btn login" id="btn-style"
             data-aos="fade-down">Login/SignUp</button></a>
-            <a href="mapa.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
+        <a href="mapa.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
               data-aos="fade-down">view <map name=""></map></button></a>
 
         <a href="loginPage.html" class="contact-btn"><button class="btn" id="logout-btn" style="margin: 0; display: none;"
@@ -301,7 +306,7 @@
                   </p>
 
                   <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
-                    <strong><span style="margin-left: 80px;"></span> We welcome you to the TourGuide family - where
+                    <strong><span style="margin-left: 50px;"></span> We welcome you to the TourGuide family - where
                       every journey becomes a story worth
                       sharing!</strong>
                   </p>
@@ -430,8 +435,8 @@
     <section class="section__container destination__container" id="Destinations" data-aos="fade-up">
     <div class="section__header">
       <div>
-        <h2 class="section__title" data-aos="fade-in">Explore top destinations</h2>
-        <p class="section__subtitle" data-aos="fade-in">
+        <h2 class="section__title" data-aos="fade-in"><span style="margin-left: 300px;"></span>Explore top destinations</h2>
+        <p class="section__subtitle" data-aos="fade-in"style="margin-left: 300px;">
           Explore your dream places around the world. Here you can find your perfect destination.
         </p>
       </div>
@@ -490,7 +495,7 @@
         url('./img/london.jpg')
     ">
       <div class="info">
-        <img src="./img/london.jpg" alt="Giant Wheel" style="width:100%">
+        
         <p>||Giant Wheel||</p>
         <h3>LONDON</h3>
       </div>
@@ -501,7 +506,7 @@
         url('./img/goa.jpg')
     ">
       <div class="info">
-        <img src="./img/goa.jpg" alt="Goa Beach" style="width:100%">
+        
         <p>||Goa Beach||</p>
         <h3>GOA</h3>
       </div>
@@ -512,7 +517,7 @@
         url('./img/maldives.jpg')
     ">
       <div class="info">
-        <img src="./img/maldives.jpg" alt="Male Beach" style="width:100%">
+       
         <p>||Male Beach||</p>
         <h3>MALDIVES</h3>
       </div>
@@ -527,7 +532,7 @@
     <section class="trip" id="trip" data-aos="zoom-in" data-aos-offset="100">
       <div class="section__container trip__container">
         <h2 class="section__title">Best trip packages</h2>
-        <p class="section__subtitle">
+        <p class="section__subtitle" style="margin-left: 280px;">
           Top trip deals curated for you. Get the best package for your adventure and save more.
         </p>
         <div class="trip__grid">
@@ -613,7 +618,7 @@ $('.carousel').flipster({
     <div class="section__container gallary__container" id="originalDiv">
       <div class="gallary__content">
         <div>
-          <h2 class="section__title" data-aos="zoom-in">
+          <h2 class="section__title" data-aos="zoom-in" style="text-align: center;">
             Our trip gallery that will inspire you
           </h2>
           <p class="section__subtitle" data-aos="zoom-in">
@@ -1053,8 +1058,10 @@ $('.carousel').flipster({
           </div>
         </div>
         <div class="footer__col">
+
           <h3>Social Media</h3>
-          <section class="social-icon">
+          <section class="social-icon d-flex ">
+
             <a href="#" class="fa-brands fa-facebook fa-2xl"></a>
             <a href="#" class="fa-brands fa-instagram fa-2xl"></a>
             <a href="#" class="fa-brands fa-twitter fa-2xl"></a>
@@ -1092,10 +1099,17 @@ $('.carousel').flipster({
       <div class="section_container_footer_container2">
         <div class="footer__col">
           <div class="footer__area">
-          <h4>Reach Out To Us</h4>
-          <p><span>Email:</span><a href="mailto:tour@tourguide.com">tour@tourguide.com</a></p>
-          <p><span>Phone:</span><a href="tel:8562145852">+91 8562145852</a></p>
-        </div>
+            <h4>Reach Out To Us</h4>
+            <div class="d-flex align-items-center mb-2">
+              <span class="mr-2">Email :</span>
+              <a href="mailto:tour@tourguide.com" class="text-nowrap">tour@tourguide.com</a>
+            </div>
+            <div class="d-flex align-items-center">
+              <span class="mr-2">Phone :</span>
+              <a href="tel:8562145852" class="text-nowrap">+91 8562145852</a>
+            </div>
+          </div>
+        
         </div>
         <div class="footer__col">
           <div class="footer__area">
@@ -1670,7 +1684,7 @@ $('.carousel').flipster({
 </html><!-- New bubble background start -->
 
 
-<div class="bubbles">
+<!-- <div class="bubbles">
   <div class="bubble"></div>
   <div class="bubble"></div>
   <div class="bubble"></div>
@@ -1696,5 +1710,5 @@ $('.carousel').flipster({
 
 
 
-</div>
+</div> -->
 <!-- New bubble background end -->
