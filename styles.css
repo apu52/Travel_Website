@@ -1674,11 +1674,13 @@ textarea::-webkit-scrollbar {
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   .items {
     display: flex;
     flex-direction: column;
     height: 100%;
+    margin: auto;
+    padding: 2rem;
   }
 
   .contact {
@@ -2402,24 +2404,47 @@ body {
   }
 
   .header__container {
-    grid-template-columns: repeat(1, 1fr);
-    padding: 0 1rem; /* Adjust padding for smaller devices */
-  }
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+    margin-top: 5rem;
+} /* Adjust padding for smaller devices */
+.header__image img:nth-child(1) {
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: translate(0%,0%);
+}
+.header__image{
+  width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__image img:nth-child(2) {
+  position: absolute;
+  transform: translate(26%, 9%);
+}
+.newNav{
+  flex-wrap: wrap;
+}.aboutcon{padding: 1rem;}
   .header__image {
      /* Remove minimum height for smaller devices */
     padding-top: 20px; /* Add padding to center content vertically */
   }
-
+.VIpgJd-ZVi9od-l4eHX-hSRGPd img{
+  object-fit: contain;
+}
   .header__image img:nth-child(1) {
-    max-width: 60vw; /* Adjust image size for smaller devices */
-    transform: translate(-90%, -40%); /* Center image horizontally and vertically */
+    max-width: 60vw; /* Adjust image size for smaller devices */ /* Center image horizontally and vertically */
   }
 
   .header__image img:nth-child(2) {
     max-width: 30vw; /* Adjust image size for smaller devices */
-    transform: translate(-30%, -75%); /* Center image vertically */
-  }
+    }
 
   .header__content {/* Adjust padding for smaller devices */
     padding-top: 0;
@@ -2448,7 +2473,6 @@ body {
     font-size: 0.7rem; /* Adjust font size for smaller devices */
     padding: 0 10px; /* Add vertical padding */
     text-align: center; /* Center align text */
-    max-width: 30%; /* Limit width to prevent overflow */
     margin: 0 auto; /* Center the subtitle */
   }
 }
