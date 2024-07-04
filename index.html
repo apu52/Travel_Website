@@ -17,7 +17,9 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="counter.css" class="rel href">
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="./Image-Gallery/style.css">
   <link rel="stylesheet" href="./Image-Gallery/stylecaptions.css">
@@ -25,6 +27,9 @@
   <title>Tourguide</title>
   <!-- adding a fav-icon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="stylesheet" href="tilt.css">
+  <script src="tilt.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
 
   <script src="index.js" defer></script>
   <script src="mouseEffect.js"></script>
@@ -129,6 +134,13 @@
   justify-content: center;
   gap: 8px; /* Adjust the gap between buttons */
 }
+
+@media screen and (max-width: 768px) {  
+body{
+  align-items: flex-end;
+  width: auto;
+}  
+}
   </style>
 <link rel="stylesheet" href="imstyle.css">
 <link rel="stylesheet" href="jquery.flipster.min.css">
@@ -156,7 +168,7 @@
     <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
     <ul class="nav__links">
       <li class="link" data-aos="fade-down"><a href="#Home">Home</a></li>
-      <li class="link" data-aos="fade-down"><a href="#AboutUs">AboutUs</a></li>
+      <li class="link" data-aos="fade-down"><a href="#AboutUs">About Us</a></li>
       <li class="link" data-aos="fade-down"><a href="#Destinations">Destinations</a></li>
       <li class="link" data-aos="fade-down"><a href="#trip">Pricing</a></li>
       <li class="link" data-aos="fade-down"><a href="#testimonials">Testimonials</a></li>
@@ -184,14 +196,12 @@
           <li class="link" data-aos=""><a href="#testimonials">Testimonials</a></li>
           <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
           <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
-
-
         </ul>
 
 
-        <a href="newLogin.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
+        <a href="newLogin.html" class="contact-btn"><button class="btn login" id="btn-style"
             data-aos="fade-down">Login/SignUp</button></a>
-            <a href="mapa.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
+        <a href="mapa.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
               data-aos="fade-down">view <map name=""></map></button></a>
 
         <a href="loginPage.html" class="contact-btn"><button class="btn" id="logout-btn" style="margin: 0; display: none;"
@@ -301,7 +311,7 @@
                   </p>
 
                   <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
-                    <strong><span style="margin-left: 80px;"></span> We welcome you to the TourGuide family - where
+                    <strong><span style="margin-left: 50px;"></span> We welcome you to the TourGuide family - where
                       every journey becomes a story worth
                       sharing!</strong>
                   </p>
@@ -316,80 +326,135 @@
 
     </div>
     <!-- Right statistics container -->
+
+    <!-- <div class="container-fluid text-center">
+      <h1>Some cool facts</h1>
+      <div class="row">
+        <div class="col-sm-3">
+          <i class="fa fa-user"></i>
+          <h2 data-max="50">+ Happy Customers</h2>
+        </div>
+        <div class="col-sm-3">
+          <i class="fa fa-code"></i>
+          <h2 data-max="25000">+ Lines of code</h2>
+        </div>
+        <div class="col-sm-3">
+          <i class="fa fa-lock"></i>
+          <h2 data-max="10">+ Projects</h2>
+
     <div data-aos="fade-left" class="col-6">
 
       <div class="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-1 sm:gap-4 xl:gap-8 sm:space-y-0 md:mt-12">
-        <!-- Box 1 - Number of Guides -->
-        <div class="box1">
+         Box 1 - Number of Guides -->
+        <!-- <div class="box1">
           <div class="iconss">
 
             <svg class="w-12 h-12 mx-auto dark:text-gray-100 group-hover:text-pink-500 group-hover:dark:text-pink-500"
               viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round">
               <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-              <!-- SVG Path for the icon -->
-              <circle cx="8.5" cy="7" r="4" />
+              SVG Path for the icon -->
+              <!-- <circle cx="8.5" cy="7" r="4" />
               <polyline points="17 11 19 13 23 9" />
             </svg>
-            <h3
+            <h3 id="guidesCount"
               class="font-semibold text-4xl md:text-3xl group-hover:text-thq_green-500 text-gray-900 dark:text-white mt-3.5"
               data-aos="fade-in">25000</h3>
             <p
               class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300">
               Guides</p>
           </div>
-        </div>
+        </div>  -->
         <!-- Box 2 - Number of Tours -->
-        <div class="box1">
+        <!-- <div class="box1">
           <div class="iconss">
             <svg class="w-12 h-12 mx-auto dark:text-gray-100 group-hover:text-pink-500 group-hover:dark:text-pink-500"
               viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
               stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" />
-              <circle cx="12" cy="10" r="4" />
+              <circle cx="12" cy="10" r="4" /> -->
               <!-- SVG Path for the icon -->
-              <path d="M6.75 16a8.015 8.015 0 1 0 9.25 -13" />
+              <!-- <path d="M6.75 16a8.015 8.015 0 1 0 9.25 -13" />
               <line x1="12" y1="18" x2="12" y2="22" />
               <line x1="8" y1="22" x2="16" y2="22" />
             </svg>
-            <h3
+            <h3 id="toursCount"
               class="font-semibold text-4xl md:text-3xl  group-hover:text-thq_green-500 text-gray-900 dark:text-white mt-3.5"
               data-aos="fade-in">20000</h3>
             <p class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300"
               data-aos="fade-in">Tours</p>
           </div>
-        </div>
+        </div> -->
         <!-- Box 3 - Number of Destinations -->
-        <div class="box1">
+        <!-- <div class="box1">
           <a href="affordable-destinations.html" class="iconss">
             <svg class="w-12 h-12 mx-auto group-hover:text-pink-500 dark:text-gray-100 group-hover:dark:text-pink-500"
               viewBox="0 0 24 24" stroke-width="2" stroke="black" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
+              stroke-linejoin="round"> -->
               <!-- SVG Path for the icon -->
-              <path stroke="none" d="M0 0h24v24H0z" />
+              <!-- <path stroke="none" d="M0 0h24v24H0z" />
               <line x1="18" y1="6" x2="18" y2="6.01" />
               <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
               <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
               <line x1="9" y1="4" x2="9" y2="17" />
               <line x1="15" y1="15" x2="15" y2="20" />
             </svg>
-            <h3
+            <h3 id="destinationsCount"
               class="font-semibold text-4xl md:text-3xl  group-hover:text-thq_green-500 text-black-900 dark:text-black mt-3.5"
               data-aos="fade-in">10994</h3>
             <p class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300"
               data-aos="fade-in">Destinations</p>
           </a>
+
         </div>
-      </div>
-    </div>
+        <div class="col-sm-3">
+          <i class="fa fa-briefcase"></i>
+          <h2 data-max="30" id="test">+ Developers</h2>
+        </div>
+      </div>  -->
 
-    </div>
-    </div>
-    </div>
-    </div>
 
-    </section>
-    </header>
+      <section>
+        <div class="wrapper">
+            <div class="countitem">
+              <i class="fa-solid fa-handshake-angle"></i>
+              <span class="num" data-val="25000">000</span>
+              <span class="text">Guides</span>
+            </div>
+            <div class="countitem">
+              <i class="fa-solid fa-suitcase-rolling"></i>
+              <span class="num" data-val="20000">000</span>
+              <span class="text">Tours</span>
+            </div>
+            <div class="countitem">
+              <i class="fa-solid fa-location-dot"></i>
+              <span class="num" data-val="20000">000</span>
+              <span class="text">Destinations</span>
+            </div>
+            
+          </div>
+        </section>
+    
+<script>
+  let valueDisplays = document.querySelectorAll(".num");
+let interval = 4000;
+valueDisplays.forEach((valueDisplay) => {
+  let startValue = 0;
+  let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+  let duration = Math.floor(interval / endValue);
+  let counter = setInterval(function () {
+    startValue += 10;
+    valueDisplay.textContent = startValue;
+    if (startValue == endValue) {
+      clearInterval(counter);
+    }
+  }, duration);
+});
+</script>
+    
+
+  
+  
     <br><br>
     <!-- ending the section of About Us -->
 
@@ -430,8 +495,8 @@
     <section class="section__container destination__container" id="Destinations" data-aos="fade-up">
     <div class="section__header">
       <div>
-        <h2 class="section__title" data-aos="fade-in">Explore top destinations</h2>
-        <p class="section__subtitle" data-aos="fade-in">
+        <h2 class="section__title" data-aos="fade-in"><span style="margin-left: 300px;"></span>Explore top destinations</h2>
+        <p class="section__subtitle" data-aos="fade-in"style="margin-left: 300px;">
           Explore your dream places around the world. Here you can find your perfect destination.
         </p>
       </div>
@@ -490,7 +555,7 @@
         url('./img/london.jpg')
     ">
       <div class="info">
-        <img src="./img/london.jpg" alt="Giant Wheel" style="width:100%">
+        
         <p>||Giant Wheel||</p>
         <h3>LONDON</h3>
       </div>
@@ -501,7 +566,7 @@
         url('./img/goa.jpg')
     ">
       <div class="info">
-        <img src="./img/goa.jpg" alt="Goa Beach" style="width:100%">
+        
         <p>||Goa Beach||</p>
         <h3>GOA</h3>
       </div>
@@ -512,7 +577,7 @@
         url('./img/maldives.jpg')
     ">
       <div class="info">
-        <img src="./img/maldives.jpg" alt="Male Beach" style="width:100%">
+       
         <p>||Male Beach||</p>
         <h3>MALDIVES</h3>
       </div>
@@ -527,11 +592,11 @@
     <section class="trip" id="trip" data-aos="zoom-in" data-aos-offset="100">
       <div class="section__container trip__container">
         <h2 class="section__title">Best trip packages</h2>
-        <p class="section__subtitle">
+        <p class="section__subtitle" style="margin-left: 280px;">
           Top trip deals curated for you. Get the best package for your adventure and save more.
         </p>
         <div class="trip__grid">
-          <div class="trip__card">
+          <div class="trip__card cardd tilt-effect">
             <img src="https://i.ibb.co/60nvYwQ/Screenshot-2023-07-14-173347.png" alt="trip" height="250" width="45" />
             <div class="trip__details">
               <p>Santorini, Aegean Sea</p>
@@ -544,7 +609,7 @@
               </div>
             </div>
           </div>
-          <div class="trip__card">
+          <div class="trip__card cardd tilt-effect">
             <img src="https://i.ibb.co/h1WgH8B/Screenshot-2023-07-14-173807.png" alt="trip" height="250" width="45" />
             <div class="trip__details">
               <p>Machu Picchu, Peru</p>
@@ -557,7 +622,7 @@
               </div>
             </div>
           </div>
-          <div class="trip__card">
+          <div class="trip__card cardd tilt-effect">
             <img src="https://i.ibb.co/vc2W0wN/Screenshot-2023-07-14-174151.png" alt="trip" height="250" width="45" />
             <div class="trip__details">
               <p>Grand Canyon National Park, Arizona</p>
@@ -573,6 +638,9 @@
         <div class="view__all">
           <a href="./package.html"><button class="btn" id="btn-style" style="box-shadow: 2px 2px 8px red;">View
               All</button></a>
+              <br>
+              <br>
+            <a href="trending.html"><button class="btn" id="btn-style" style="box-shadow: 2px 2px 8px red;">View Trending</button></a>
         </div>
       </div>
     </section>
@@ -613,7 +681,7 @@ $('.carousel').flipster({
     <div class="section__container gallary__container" id="originalDiv">
       <div class="gallary__content">
         <div>
-          <h2 class="section__title" data-aos="zoom-in">
+          <h2 class="section__title" data-aos="zoom-in" style="text-align: center;">
             Our trip gallery that will inspire you
           </h2>
           <p class="section__subtitle" data-aos="zoom-in">
@@ -855,46 +923,59 @@ $('.carousel').flipster({
       <h2 class="section__title" data-aos="zoom-in">
         Frequently asked questions
       </h2>
-      <div class="faq-container">
-        <div class="faq active" data-aos="zoom-in">
-          <h3 class="faq-title">How do I book my travel arrangements through your website?</h3>
-          <p class="faq-text">Booking your travel with us is simple and convenient. Start by entering your destination,
+      <div class="accordion faq-container faq">
+        <div class="accordion__header" data-aos="zoom-in">
+          <h3 class="accordion__question faq-title">How do I book my travel arrangements through your website?</h3>
+          <span class="accordion__icon">
+            <i id="accordion-icon" class="ri-add-line"></i>
+        </span>
+        </div>
+        <div class="accordion__content">
+          <p class="faq-text accordion__answer">Booking your travel with us is simple and convenient. Start by entering your destination,
             travel dates, and other relevant details on our homepage. Browse through the available options, including
             flights, hotels, and car rentals. Once you find the perfect combination for your trip, follow the easy
             step-by-step process to confirm your booking. If you encounter any issues or have questions during the
             booking process, our customer support team is available 24/7 to assist you.</p>
-          <button class="faq-toggle">
-            <i class="fas fa-chevron-down"></i>
-            <i class="fas fa-times"></i>
-          </button>
+           
         </div>
-        <div class="faq" data-aos="zoom-in">
-          <h3 class="faq-title">What measures are in place to ensure the safety of my personal information?</h3>
-          <p class="faq-text">We take the security of your personal information seriously. Our website employs
-            state-of-the-art encryption technology to safeguard your data during the booking process. Additionally, we
-            adhere to strict privacy policies and comply with industry standards to protect your information. Rest
-            assured that your details are used solely for the purpose of facilitating your travel arrangements, and we
-            do not share your information with third parties without your consent. For more details, please refer to our
-            Privacy Policy.</p>
-          <button class="faq-toggle">
-            <i class="fas fa-chevron-down"></i>
-            <i class="fas fa-times"></i>
-          </button>
         </div>
-        <div class="faq" data-aos="zoom-in">
-          <h3 class="faq-title">Can I make changes to my booking or cancel it if needed?</h3>
-          <p class="faq-text">Yes, we understand that plans can change. Depending on the terms and conditions of your
-            specific booking, you may be able to make modifications or cancel your reservation. Log in to your account
-            on our website, navigate to the "Manage Booking" section, and follow the provided instructions. Keep in mind
-            that there may be associated fees or restrictions depending on the type of booking and the time of the
-            requested changes. For further assistance, feel free to contact our customer support team, and they will
-            guide you through the process.</p>
-          <button class="faq-toggle">
-            <i class="fas fa-chevron-down"></i>
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-        
+
+        <div class="accordion faq-container faq">
+          <div class="accordion__header" data-aos="zoom-in">
+            <h3 class="accordion__question faq-title">What measures are in place to ensure the safety of my personal information?</h3>
+            <span class="accordion__icon">
+              <i id="accordion-icon" class="ri-add-line"></i>
+          </span>
+          </div>
+          <div class="accordion__content">
+            <p class="faq-text accordion__answer">We take the security of your personal information seriously. Our website employs
+              state-of-the-art encryption technology to safeguard your data during the booking process. Additionally, we
+              adhere to strict privacy policies and comply with industry standards to protect your information. Rest
+              assured that your details are used solely for the purpose of facilitating your travel arrangements, and we
+              do not share your information with third parties without your consent. For more details, please refer to our
+              Privacy Policy.</p>
+             
+          </div>
+          </div>
+
+          <div class="accordion faq-container faq">
+            <div class="accordion__header" data-aos="zoom-in">
+              <h3 class="accordion__question faq-title">Can I make changes to my booking or cancel it if needed?</h3>
+              <span class="accordion__icon">
+                <i id="accordion-icon" class="ri-add-line"></i>
+            </span>
+            </div>
+            <div class="accordion__content">
+              <p class="faq-text accordion__answer">Yes, we understand that plans can change. Depending on the terms and conditions of your
+                specific booking, you may be able to make modifications or cancel your reservation. Log in to your account
+                on our website, navigate to the "Manage Booking" section, and follow the provided instructions. Keep in mind
+                that there may be associated fees or restrictions depending on the type of booking and the time of the
+                requested changes. For further assistance, feel free to contact our customer support team, and they will
+                guide you through the process.</p>
+               
+            </div>
+            </div>
+    
 
       </div>
     </section>
@@ -1012,30 +1093,53 @@ $('.carousel').flipster({
           </p>
         </div>
         <div class="subscribe__form" data-aos="fade-up">
-          <form>
+          <form id="subscriptionForm">
             <input type="email" placeholder="Your email here" id="emailInput" required />
             <button class="btn-send" id="send" type="submit" style="box-shadow: 2px 2px 8px blue;">Subscribe</button>
           </form>
+          <p id="subscriptionMessage" style="display: none; color: green; margin-top: 10px;">Subscription successful! 🎉</p>
         </div>
       </div>
     </section>
+    <!--DISPLAY SUBSCRIPTION SUCCESS MESSAGE-->
+    <script>
+      document.getElementById('subscriptionForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent submission
+    
+        
+    
+        //  success message 
+        showSubscriptionMessage();
+      });
+    
+      function showSubscriptionMessage() {
+        var messageElement = document.getElementById('subscriptionMessage');
+        messageElement.style.display = 'block';
+    
+        // Hide message after 4 seconds
+        setTimeout(function() {
+          messageElement.style.display = 'none';
+        }, 4000); // 4000 milliseconds = 4 seconds
+      }
+    </script>
+    
 
     <footer class="footer" data-aos="fade-up">
       <div class="section__container footer__container">
         <div class="footer__col">
-          <h3 class="footer__title">Places You May Want to Visit<span>.</span></h3>
+          <h3 class="footer-head" class="footer__title">Places You May Want to Visit<span>.</span></h3>
           <p class="footer__text"> 
-           <ul class="interested  " >
-            <li><a href="Cultural_Exp.html">Cultural Experiences</a></li>
            
-            <li><a href="HoneyMoon.html">Honeymoon Places</a></li>
-            <li><a href="Adventure.html">Adventure travel</a></li>
+            <a href="Cultural_Exp.html">Cultural Experiences</a>
            
-           </ul>
+            <a href="HoneyMoon.html">Honeymoon Places</a>
+            <a href="Adventure.html">Adventure travel</a>
+           
+           
           </p>
         </div>
         <div class="footer__col">
-          <h3 class="footer__title">Tourguide<span>.</span></h3>
+          <h3 class="footer-head" class="footer__title">Tourguide<span>.</span></h3>
           <p>
             Ready for your next adventure? Let's make it unforgettable.<br>
           </p>
@@ -1045,7 +1149,7 @@ $('.carousel').flipster({
         </div>
         <div class="footer__col">
           <div class="footer__area">
-            <h4 class="footer__subtitle">Support</h4>
+            <h4 class="footer-head" class="footer__subtitle">Support</h4>
           <p><a href="./faq.html" class="footer__link">FAQs</a></p>
           <p><a href="./tnc.html" class="footer__link">Terms & Conditions</a></p>
           <p><a href="./privacy.html" class="footer__link">Privacy Policy</a></p>
@@ -1054,14 +1158,14 @@ $('.carousel').flipster({
         </div>
         <div class="footer__col">
           <p>Social Media</p>
-          <section class="social-icon">
+          <section class="social-icon d-flex ">
             <a href="#" class="fa-brands fa-facebook fa-2xl"></a>
             <a href="#" class="fa-brands fa-instagram fa-2xl"></a>
             <a href="#" class="fa-brands fa-twitter fa-2xl"></a>
         </section>
         </div>
         <div class="footer__col">
-          <h4>Address</h4>
+          <h4 class="footer-head" style="padding-left: 35px;">  Address</h4>
           <div class="mapouter">
             <div class="gmap_canvas"><iframe width="200" height="200" id="gmap_canvas"
                 src="https://maps.google.com/maps?q=wellington%20street%20kolkata&t=k&z=11&ie=UTF8&iwloc=&output=embed"
@@ -1088,31 +1192,38 @@ $('.carousel').flipster({
         </div>
         <div class="footer__col">
           <div class="footer__area">
-          <h4>Reach Out To Us</h4>
-          <p><span>Email:</span><a href="mailto:tour@tourguide.com">tour@tourguide.com</a></p>
-          <p><span>Phone:</span><a href="tel:8562145852">+91 8562145852</a></p>
-        </div>
+            <h4>Reach Out To Us</h4>
+            <div class="d-flex align-items-center mb-2">
+              <span class="mr-2">Email :</span>
+              <a href="mailto:tour@tourguide.com" class="text-nowrap">tour@tourguide.com</a>
+            </div>
+            <div class="d-flex align-items-center">
+              <span class="mr-2">Phone :</span>
+              <a href="tel:8562145852" class="text-nowrap">+91 8562145852</a>
+            </div>
+          </div>
+        
         </div>
         <div class="footer__col">
           <div class="footer__area">
-            <h4>Follow Us</h4>
-            
-              <a href="https://www.facebook.com/yourpage" target="_blank" class="footer__link">
+            <h4 class="footer-head" style="margin-left: -43px;" >Follow Us</h4>
+            <br>
+              <a style="margin-left: -43px;" href="https://www.facebook.com/yourpage" target="_blank" class="footer__link">
                 <i class="fab fa-facebook-f"></i> 
               </a>
             
             
-              <a href="https://twitter.com/ArpanCh40193288" target="_blank" class="footer__link">
+              <a style="margin-left: -10px;" href="https://twitter.com/ArpanCh40193288" target="_blank" class="footer__link">
                 <i class="fab fa-twitter"></i> 
               </a>
             
             
-              <a href="https://www.instagram.com/anuragbasu1973/" target="_blank" class="footer__link">
+              <a style="margin-left: -10px;" href="https://www.instagram.com/anuragbasu1973/" target="_blank" class="footer__link">
                 <i class="fab fa-instagram"></i> 
               </a>
             
             
-              <a href="https://www.linkedin.com/in/arpan-chowdhury-775294251" target="_blank" class="footer__link">
+              <a style="margin-left: -10px;" href="https://www.linkedin.com/in/arpan-chowdhury-775294251" target="_blank" class="footer__link">
                 <i class="fab fa-linkedin-in"></i> 
               </a>
             
@@ -1627,7 +1738,9 @@ $('.carousel').flipster({
         top.document.getElementsByTagName("head")[0].appendChild(link);
     }
 </script>
-  =======
+
+<script src="index.js"></script>
+
 
   <!--  Adding copyright javascript code to make it dynamic and display current year -->
   <script>
@@ -1659,6 +1772,36 @@ $('.carousel').flipster({
   });
   </script>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    function animateValue(id, start, end, duration) {
+      const obj = document.getElementById(id);
+      const startTime = performance.now();
+
+      function updateValue(timestamp) {
+        const elapsedTime = timestamp - startTime;
+        const progress = Math.min(elapsedTime / duration, 1);
+        const currentValue = Math.floor(progress * (end - start) + start);
+        obj.textContent = currentValue;
+        if (progress < 1) {
+          requestAnimationFrame(updateValue);
+        }
+      }
+
+      requestAnimationFrame(updateValue);
+    }
+
+    // Call the function for each count-up element
+    animateValue("guidesCount", 0, 25000, 20000);
+    animateValue("toursCount", 0, 20000, 20000);
+    animateValue("destinationsCount", 0, 10994, 20000);
+  });
+</script>
+
+
+
+
+
 
 
 
@@ -1666,7 +1809,7 @@ $('.carousel').flipster({
 </html><!-- New bubble background start -->
 
 
-<div class="bubbles">
+<!-- <div class="bubbles">
   <div class="bubble"></div>
   <div class="bubble"></div>
   <div class="bubble"></div>
@@ -1692,5 +1835,5 @@ $('.carousel').flipster({
 
 
 
-</div>
+</div> -->
 <!-- New bubble background end -->

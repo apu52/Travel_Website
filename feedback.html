@@ -36,7 +36,7 @@
           <li class="link" data-aos="fade-down"><a href="./index.html#ReviewGallery" target="_blank">Trip Gallery</a></li>
           <li class="link" data-aos="fade-down"><a href="./index.html#testimonials" target="_blank">Testimonials</a></li>
           <li class="link" data-aos="fade-down"><a href="./index.htmlfeedback.html" target="_blank">Rate Us?</a></li>
-          <li class="link" data-aos="fade-down"><a href="./index.html#contact" target="_blank">Contact Us</a></li>
+          <li class="link" data-aos="fade-down"><a href="./index.html#cnt-form" target="_blank">Contact Us</a></li>
 
         </ul>
         <a href="newLogin.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
@@ -106,6 +106,13 @@
     </div>
     
     <!-- SweetAlert2 -->
+    <script>
+      let hamburger = document.querySelector('.hamburger');
+      hamburger.addEventListener('click', () => {
+        let list = document.querySelector('.navLinks');
+        list.classList.toggle('activeHamburger');
+      })
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="feedback.js" defer></script>
 </body>
