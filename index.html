@@ -17,7 +17,9 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="counter.css" class="rel href">
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="./Image-Gallery/style.css">
   <link rel="stylesheet" href="./Image-Gallery/stylecaptions.css">
@@ -324,19 +326,35 @@ body{
 
     </div>
     <!-- Right statistics container -->
+
+    <!-- <div class="container-fluid text-center">
+      <h1>Some cool facts</h1>
+      <div class="row">
+        <div class="col-sm-3">
+          <i class="fa fa-user"></i>
+          <h2 data-max="50">+ Happy Customers</h2>
+        </div>
+        <div class="col-sm-3">
+          <i class="fa fa-code"></i>
+          <h2 data-max="25000">+ Lines of code</h2>
+        </div>
+        <div class="col-sm-3">
+          <i class="fa fa-lock"></i>
+          <h2 data-max="10">+ Projects</h2>
+
     <div data-aos="fade-left" class="col-6">
 
       <div class="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-1 sm:gap-4 xl:gap-8 sm:space-y-0 md:mt-12">
-        <!-- Box 1 - Number of Guides -->
-        <div class="box1">
+         Box 1 - Number of Guides -->
+        <!-- <div class="box1">
           <div class="iconss">
 
             <svg class="w-12 h-12 mx-auto dark:text-gray-100 group-hover:text-pink-500 group-hover:dark:text-pink-500"
               viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round">
               <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-              <!-- SVG Path for the icon -->
-              <circle cx="8.5" cy="7" r="4" />
+              SVG Path for the icon -->
+              <!-- <circle cx="8.5" cy="7" r="4" />
               <polyline points="17 11 19 13 23 9" />
             </svg>
             <h3 id="guidesCount"
@@ -346,17 +364,17 @@ body{
               class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300">
               Guides</p>
           </div>
-        </div>
+        </div>  -->
         <!-- Box 2 - Number of Tours -->
-        <div class="box1">
+        <!-- <div class="box1">
           <div class="iconss">
             <svg class="w-12 h-12 mx-auto dark:text-gray-100 group-hover:text-pink-500 group-hover:dark:text-pink-500"
               viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
               stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" />
-              <circle cx="12" cy="10" r="4" />
+              <circle cx="12" cy="10" r="4" /> -->
               <!-- SVG Path for the icon -->
-              <path d="M6.75 16a8.015 8.015 0 1 0 9.25 -13" />
+              <!-- <path d="M6.75 16a8.015 8.015 0 1 0 9.25 -13" />
               <line x1="12" y1="18" x2="12" y2="22" />
               <line x1="8" y1="22" x2="16" y2="22" />
             </svg>
@@ -366,15 +384,15 @@ body{
             <p class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300"
               data-aos="fade-in">Tours</p>
           </div>
-        </div>
+        </div> -->
         <!-- Box 3 - Number of Destinations -->
-        <div class="box1">
+        <!-- <div class="box1">
           <a href="affordable-destinations.html" class="iconss">
             <svg class="w-12 h-12 mx-auto group-hover:text-pink-500 dark:text-gray-100 group-hover:dark:text-pink-500"
               viewBox="0 0 24 24" stroke-width="2" stroke="black" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
+              stroke-linejoin="round"> -->
               <!-- SVG Path for the icon -->
-              <path stroke="none" d="M0 0h24v24H0z" />
+              <!-- <path stroke="none" d="M0 0h24v24H0z" />
               <line x1="18" y1="6" x2="18" y2="6.01" />
               <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
               <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
@@ -387,17 +405,56 @@ body{
             <p class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300"
               data-aos="fade-in">Destinations</p>
           </a>
+
         </div>
-      </div>
-    </div>
+        <div class="col-sm-3">
+          <i class="fa fa-briefcase"></i>
+          <h2 data-max="30" id="test">+ Developers</h2>
+        </div>
+      </div>  -->
 
-    </div>
-    </div>
-    </div>
-    </div>
 
-    </section>
-    </header>
+      <section>
+        <div class="wrapper">
+            <div class="countitem">
+              <i class="fa-solid fa-handshake-angle"></i>
+              <span class="num" data-val="25000">000</span>
+              <span class="text">Guides</span>
+            </div>
+            <div class="countitem">
+              <i class="fa-solid fa-suitcase-rolling"></i>
+              <span class="num" data-val="20000">000</span>
+              <span class="text">Tours</span>
+            </div>
+            <div class="countitem">
+              <i class="fa-solid fa-location-dot"></i>
+              <span class="num" data-val="20000">000</span>
+              <span class="text">Destinations</span>
+            </div>
+            
+          </div>
+        </section>
+    
+<script>
+  let valueDisplays = document.querySelectorAll(".num");
+let interval = 4000;
+valueDisplays.forEach((valueDisplay) => {
+  let startValue = 0;
+  let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+  let duration = Math.floor(interval / endValue);
+  let counter = setInterval(function () {
+    startValue += 10;
+    valueDisplay.textContent = startValue;
+    if (startValue == endValue) {
+      clearInterval(counter);
+    }
+  }, duration);
+});
+</script>
+    
+
+  
+  
     <br><br>
     <!-- ending the section of About Us -->
 
@@ -1668,7 +1725,7 @@ $('.carousel').flipster({
         top.document.getElementsByTagName("head")[0].appendChild(link);
     }
 </script>
-  =======
+<script src="index.js"></script>
 
   <!--  Adding copyright javascript code to make it dynamic and display current year -->
   <script>
