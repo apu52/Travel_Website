@@ -1060,6 +1060,16 @@ header {
     gap: 2rem;
   }
 }
+@media screen and (max-width:768px) {
+  .hamburger{
+    position: relative;
+    left: 20px;
+  }
+  .btn{
+    position: relative;
+    left: 90px;
+  }
+}
 
 .image__gallary {
   display: grid;
@@ -2164,7 +2174,7 @@ body {
   .btn {
     position: relative;
     top: 30px;
-    right: 280px;
+    left: -147px;
   }
   .toggle-container {
     position: relative;
@@ -2173,7 +2183,6 @@ body {
   }
   .hamburger {
     position: relative;
-    top: 30px;
     right: 388px;
   }
 }
@@ -2582,6 +2591,8 @@ body {
     margin: 0 auto; /* Center the subtitle */
   }
 }
+
+
 @media (max-width: 768px) {
   .header__image img:nth-child(1) {
     max-width: 50vw; /* Adjust image size for smaller devices */
@@ -2620,3 +2631,5 @@ body {
     font-size: small;
   }
 }
+>
+
