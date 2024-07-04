@@ -1221,6 +1221,7 @@ body, html {
 }
 
 .footer__col {
+  margin-left: 15px;
   flex: 1;
   display: flex;
   max-width: 200px;
