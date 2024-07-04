@@ -26,7 +26,7 @@
     background: linear-gradient(white,rgb(153, 139, 251));
     border-bottom: 10px solid #40349c;
   }
-  i {
+  .countitem i {
     color: #06006e;
     font-size: 2.5em;
     text-align: center;
