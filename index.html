@@ -924,46 +924,59 @@ $('.carousel').flipster({
       <h2 class="section__title" data-aos="zoom-in">
         Frequently asked questions
       </h2>
-      <div class="faq-container">
-        <div class="faq active" data-aos="zoom-in">
-          <h3 class="faq-title">How do I book my travel arrangements through your website?</h3>
-          <p class="faq-text">Booking your travel with us is simple and convenient. Start by entering your destination,
+      <div class="accordion faq-container faq">
+        <div class="accordion__header" data-aos="zoom-in">
+          <h3 class="accordion__question faq-title">How do I book my travel arrangements through your website?</h3>
+          <span class="accordion__icon">
+            <i id="accordion-icon" class="ri-add-line"></i>
+        </span>
+        </div>
+        <div class="accordion__content">
+          <p class="faq-text accordion__answer">Booking your travel with us is simple and convenient. Start by entering your destination,
             travel dates, and other relevant details on our homepage. Browse through the available options, including
             flights, hotels, and car rentals. Once you find the perfect combination for your trip, follow the easy
             step-by-step process to confirm your booking. If you encounter any issues or have questions during the
             booking process, our customer support team is available 24/7 to assist you.</p>
-          <button class="faq-toggle">
-            <i class="fas fa-chevron-down"></i>
-            <i class="fas fa-times"></i>
-          </button>
+           
         </div>
-        <div class="faq" data-aos="zoom-in">
-          <h3 class="faq-title">What measures are in place to ensure the safety of my personal information?</h3>
-          <p class="faq-text">We take the security of your personal information seriously. Our website employs
-            state-of-the-art encryption technology to safeguard your data during the booking process. Additionally, we
-            adhere to strict privacy policies and comply with industry standards to protect your information. Rest
-            assured that your details are used solely for the purpose of facilitating your travel arrangements, and we
-            do not share your information with third parties without your consent. For more details, please refer to our
-            Privacy Policy.</p>
-          <button class="faq-toggle">
-            <i class="fas fa-chevron-down"></i>
-            <i class="fas fa-times"></i>
-          </button>
         </div>
-        <div class="faq" data-aos="zoom-in">
-          <h3 class="faq-title">Can I make changes to my booking or cancel it if needed?</h3>
-          <p class="faq-text">Yes, we understand that plans can change. Depending on the terms and conditions of your
-            specific booking, you may be able to make modifications or cancel your reservation. Log in to your account
-            on our website, navigate to the "Manage Booking" section, and follow the provided instructions. Keep in mind
-            that there may be associated fees or restrictions depending on the type of booking and the time of the
-            requested changes. For further assistance, feel free to contact our customer support team, and they will
-            guide you through the process.</p>
-          <button class="faq-toggle">
-            <i class="fas fa-chevron-down"></i>
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-        
+
+        <div class="accordion faq-container faq">
+          <div class="accordion__header" data-aos="zoom-in">
+            <h3 class="accordion__question faq-title">What measures are in place to ensure the safety of my personal information?</h3>
+            <span class="accordion__icon">
+              <i id="accordion-icon" class="ri-add-line"></i>
+          </span>
+          </div>
+          <div class="accordion__content">
+            <p class="faq-text accordion__answer">We take the security of your personal information seriously. Our website employs
+              state-of-the-art encryption technology to safeguard your data during the booking process. Additionally, we
+              adhere to strict privacy policies and comply with industry standards to protect your information. Rest
+              assured that your details are used solely for the purpose of facilitating your travel arrangements, and we
+              do not share your information with third parties without your consent. For more details, please refer to our
+              Privacy Policy.</p>
+             
+          </div>
+          </div>
+
+          <div class="accordion faq-container faq">
+            <div class="accordion__header" data-aos="zoom-in">
+              <h3 class="accordion__question faq-title">Can I make changes to my booking or cancel it if needed?</h3>
+              <span class="accordion__icon">
+                <i id="accordion-icon" class="ri-add-line"></i>
+            </span>
+            </div>
+            <div class="accordion__content">
+              <p class="faq-text accordion__answer">Yes, we understand that plans can change. Depending on the terms and conditions of your
+                specific booking, you may be able to make modifications or cancel your reservation. Log in to your account
+                on our website, navigate to the "Manage Booking" section, and follow the provided instructions. Keep in mind
+                that there may be associated fees or restrictions depending on the type of booking and the time of the
+                requested changes. For further assistance, feel free to contact our customer support team, and they will
+                guide you through the process.</p>
+               
+            </div>
+            </div>
+    
 
       </div>
     </section>
@@ -1719,7 +1732,9 @@ $('.carousel').flipster({
         top.document.getElementsByTagName("head")[0].appendChild(link);
     }
 </script>
+
 <script src="index.js"></script>
+
 
   <!--  Adding copyright javascript code to make it dynamic and display current year -->
   <script>
@@ -1776,6 +1791,8 @@ $('.carousel').flipster({
     animateValue("destinationsCount", 0, 10994, 20000);
   });
 </script>
+
+
 
 
 
