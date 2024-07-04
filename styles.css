@@ -2598,6 +2598,8 @@ body {
     margin: 0 auto; /* Center the subtitle */
   }
 }
+
+
 @media (max-width: 768px) {
   .header__image img:nth-child(1) {
     max-width: 50vw; /* Adjust image size for smaller devices */
@@ -2634,4 +2636,5 @@ body {
   }
   
 }
+>
 
