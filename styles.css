@@ -1192,6 +1192,16 @@ body.dark-theme #emailInput {
   color: white;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 .footer {
   width: 100%;
   background-color: #091020;
@@ -1206,6 +1216,8 @@ body.dark-theme #emailInput {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   color: var(--secondary-color);
+  margin: 0;
+    padding: 0;
 }
 
 .footer__col {
@@ -1337,6 +1349,16 @@ body.dark-theme #emailInput {
     width: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  .footer__container {
+      /* flex-direction: column;
+      align-items: center;  */
+      margin-left: 10px;
+  }
+}
+
+
 /* ====================== */
 @media (width < 1200px) {
   .header__image img:nth-child(1) {
