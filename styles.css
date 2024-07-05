@@ -386,7 +386,7 @@ body {
 }
 
 .section__title {
-  /* text-align: center; */
+  text-align: center;
   font-size: 2rem;
   font-weight: 600;
   color: var(--text-dark);
@@ -411,6 +411,8 @@ body {
   color: var(--text-dark);
   max-width: calc(var(--max-width) / 2);
   /* text-align: right; */
+  text-align: center;
+  margin-left: 280px;
 }
 
 .section_header .section_subtitle {
