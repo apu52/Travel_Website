@@ -5,6 +5,13 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    .center-card {
+      margin: 0 auto;
+      display: block;
+    }
+  </style>
   <link rel="stylesheet" href="./loader.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="faq-website.css">
@@ -88,7 +95,7 @@
         width: 130%;
       } 
       .line{
-        width: 130%;
+        width: 150%;
       }
       .hamburger{
         position: relative;
@@ -185,17 +192,18 @@ body{
       <nav class="newNav">
         <img src="./img/A T logo with a white background and a square shape, connected to nature for a travel company.png" style="width:30px;height:30px;border-radius:50%;">
         
-        <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+        <a href="#" class="nav__logo" data-aos="fade-right">Tourguide</span></a>
 
         <ul class="navLinks">
 
           <li class="link" data-aos=""><a href="#Home">Home</a></li>
-          <li class="link" data-aos=""><a href="#AboutUs"> AboutUs</a></li>
-          <li class="link" data-aos=""><a href="#Destinations">Destinations</a></li>
-          <li class="link" data-aos=""><a href="#trip">Pricing</a></li>
+          <li class="link" data-aos=""><a href="#AboutUs">About</a></li>
+          <li class="link" data-aos=""><a href="#Destinations">Destination</a></li>
+          <li class="link" data-aos=""><a href="#trip">Prices</a></li>
           <li class="link" data-aos=""><a href="#ReviewGallery">Trip Gallery</a></li>
-          <li class="link" data-aos=""><a href="#testimonials">Testimonials</a></li>
-          <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+          <li class="link" data-aos=""><a href="#tourist">Tourist Guide</a></li>
+          <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
+          <li class="link" data-aos=""><a href="feedback.html">Rate Us</a></li>
           <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
         </ul>
 
@@ -810,8 +818,24 @@ $('.carousel').flipster({
     document.getElementById('newDiv').style.display = 'block';
   }
     </script>
-    <br /><br /><br /><br /><br /><br />
+    <br /><br />
 
+    <!-- Toursit Guide Section -->
+     <section class="tourist" id ="tourist">
+      <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Tourist Guide</h2>
+       <h4 style="color: rgb(231, 62, 118); font-style: italic;font-family: cursive;">Have an amazing trip and explore the destiny</h4>
+       <br></br>
+       <h3 style="color: rgb(6, 151, 241); font-style: inherit;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Connect with the Guide</h3>
+       <br></br>
+       <div class="center-card">
+       <img src="./tg1.jpg" alt="guide1"/>
+       <br></br>
+       <img src="./tg2.jpg" alt="guide2"/>
+       <br></br>
+       <img src="./tg3.jpg" alt="guide3"/>
+      </div>
+      </section>
+    <br /><br /><br /><br />
     <!-- Testimonials Section -->
 
     <section class="testimonials" id="testimonials">
