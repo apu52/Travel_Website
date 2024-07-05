@@ -410,9 +410,10 @@ body {
   font-size: 1rem;
   color: var(--text-dark);
   max-width: calc(var(--max-width) / 2);
-  /* text-align: right; */
   text-align: center;
   margin-left: 280px;
+  /* text-align: right; */
+  
 }
 
 .section_header .section_subtitle {
