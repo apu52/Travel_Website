@@ -461,6 +461,17 @@ function filterProducts() {
   <button class="top-btn" id="goToTopBtn" onclick="goToTop()"><i class="fa-solid fa-chevron-up"
       style="color: #ffffff;"></i></button>
 
+      <!--SIDE POP UP DISCOUNT-->
+      <div class="popup" id="popup">
+        <span class="close-btn" id="close-btn"> &times;</span>
+        <p class="pop_up_heading">Unlock Your Exclusive Discount!</p>
+        <p class="pop_up_content">Enter the code <strong>DISCOUNT10</strong> to receive 10% off your first trip package!</p>
+        <form id="signup-form">
+          <input type="email" id="email" name="email" placeholder="                  email address" required>
+          <button type="submit">Sign Up Now</button>
+        </form>
+      </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
     integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -582,6 +593,17 @@ function filterProducts() {
       newDiv.style.display = "block";
     }
   }
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    document.getElementById('popup').style.display = 'block';
+  }, 5000); 
+
+  document.getElementById('close-btn').addEventListener('click', function() {
+    document.getElementById('popup').style.display = 'none';
+  });
+});
 </script>
 <script src="./Image-Gallery/script.js"></script>
 
