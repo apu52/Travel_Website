@@ -7,7 +7,7 @@
 
 html, body {
     height: 100%;
-    overflow: hidden; 
+    /* overflow: hidden;  */
 }
 
 .navbar {
@@ -41,11 +41,13 @@ html, body {
 .nav-links {
     display: flex;
     align-items: center;
+    gap: 1.3rem;
 }
 
 li {
     list-style: none;
     display: inline-block;
+    margin-bottom: 20px;
 }
 
 li a {
@@ -53,12 +55,26 @@ li a {
     margin-right: 50px;
     font-weight: bold;
     color: black;
+    transition: color 0.3s ease;
+    cursor: pointer;
 }
+
+li a:hover {
+    color: #fff; /* Change link color on hover */
+}
+
 .nav-button a {
-    padding: 10px;
+    padding: 3px 10px;
     border-radius: 10px;
     background-color: black;
     color: white;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.nav-button a:hover {
+    background-color: #444; /* Change button color on hover */
 }
 
 .burger-menu {
