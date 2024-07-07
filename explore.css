@@ -35,8 +35,21 @@
     position: relative;
     transition: flex 0.7s ease-in;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
   }
+  
+  /* .card:hover {
+      flex: 3;
+  }
+
+  .card:hover h3, .card:hover p {
+      opacity: 1;
+      transition: opacity 0.5s ease-in 0.8s;
+  }
+
+  .card:hover .info {
+      visibility: visible;
+  } */
   
   .info {
     position: absolute;
@@ -71,12 +84,7 @@
     flex: 3;
   }
   
-  .card.active h3 {
-    opacity: 1;
-    transition: opacity 0.5s ease-in 0.8s;
-  }
-  
-  .card.active p {
+  .card.active h3, .card.active p {
     opacity: 1;
     transition: opacity 0.5s ease-in 0.8s;
   }
@@ -84,9 +92,7 @@
   .card.active .info {
     visibility: visible;
   }
-  .hedd{
-    font-size: 25px;
-  }
+  
   @media (max-width: 1300px) {
     .containers {
       display: flex;
