@@ -140,7 +140,7 @@
         <li class="link" data-aos="fade-down"><a href="./index.html#testimonials">Testimonials</a></li>
         <li class="link" data-aos="fade-down"><a href="./index.html#ReviewGallery">Reviews</a></li>
         <li class="link" data-aos="fade-down"><a href="./feedback.html">Rate Us?</a></li>
-        <li class="link" data-aos="fade-down"><a href="./index.html#contact">Contact Us</a></li>
+        <li class="link" data-aos="fade-down"><a href="./index.html#cnt-form">Contact Us</a></li>
       </ul>
       <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
           data-aos="fade-down">Login</button></a>
@@ -439,16 +439,18 @@ function filterProducts() {
         <p><a href="./faq.html">FAQs</a></p>
         <p><a href="./tnc.html">Terms & Conditions</a></p>
         <p><a href="./privacy.html">Privacy Policy</a></p>
-        <p><a href="index.html#contact">Contact Us</a></p>
+        <p><a href="index.html#cnt-form">Contact Us</a></p>
         </div>
       </div>
       <div class="footer__col">
+        <div class="footer__area">
         <h4>Address</h4>
         <p>
           <span>Address:</span> 3/2 Wellington Street, Kolkata , West Bengal , India
         </p>
-        <p><span>Email:</span> tour@tourguide.com</p>
-        <p><span>Phone:</span> +91 8562145852</p>
+        <span>Email:</span><a href="mailto:tour@tourguide.com">tour@tourguide.com</a></p>
+          <p><span>Phone:</span><a href="tel:8562145852">+91 8562145852</a></p>
+      </div>
       </div>
     </div>
     <div class="footer__bar">
@@ -458,6 +460,17 @@ function filterProducts() {
 
   <button class="top-btn" id="goToTopBtn" onclick="goToTop()"><i class="fa-solid fa-chevron-up"
       style="color: #ffffff;"></i></button>
+
+      <!--SIDE POP UP DISCOUNT-->
+      <div class="popup" id="popup">
+        <span class="close-btn" id="close-btn"> &times;</span>
+        <p class="pop_up_heading">Unlock Your Exclusive Discount!</p>
+        <p class="pop_up_content">Enter the code <strong>DISCOUNT10</strong> to receive 10% off your first trip package!</p>
+        <form id="signup-form">
+          <input type="email" id="email" name="email" placeholder="                  email address" required>
+          <button type="submit">Sign Up Now</button>
+        </form>
+      </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
     integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
@@ -580,6 +593,17 @@ function filterProducts() {
       newDiv.style.display = "block";
     }
   }
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    document.getElementById('popup').style.display = 'block';
+  }, 5000); 
+
+  document.getElementById('close-btn').addEventListener('click', function() {
+    document.getElementById('popup').style.display = 'none';
+  });
+});
 </script>
 <script src="./Image-Gallery/script.js"></script>
 

@@ -15,6 +15,7 @@
    <title>TOUR GUIDE</title>
    <link rel="icon" type="image/x-icon" href="log/favicon.ico">
    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+   <script src="https://kit.fontawesome.com/f2e55912f8.js" crossorigin="anonymous"></script>
    <link rel="stylesheet" href="./login/login.css">
  </head>
  <body>
@@ -24,7 +25,14 @@
         <h1>Tour Guide</h1>
         <input type="text" placeholder="Name">
         <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password">
+
+        <div id="register-section">
+            <input type="password" placeholder="Password" id="registerPassword">
+            <button type="button" id="toggleRegisterPassword">
+              <i id="registerIcon" class="fas fa-eye"></i>
+          </button>
+        </div>
+
         <button type="submit">Register</button>
         <span id="registerMessage" style="display: none;">Account created successfully</span>
         <div class="social-container">
@@ -39,7 +47,12 @@
       <form action="#" id="loginForm">
         <h1>Tour Guide</h1>
         <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password">
+        <div id="login-section">
+          <input type="password" placeholder="Password" id="loginPassword">
+          <button type="button" id="toggleLoginPassword">
+            <i id="loginIcon" class="fas fa-eye"></i>
+        </button>
+      </div>
         <div class="content">
           <div class="checkbox">
             <input type="checkbox" name="checkbox" id="checkbox">

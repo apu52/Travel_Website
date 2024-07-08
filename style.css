@@ -196,24 +196,28 @@ input[type="submit"]{
 /* New NAvbar CSS Starts Here*/
 
 .nav-container {
-    height: auto;
-    width: 200%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    position: fixed;
-    left: 0;
-    z-index: 9999;
+  margin-top: 0;
+  height: auto;
+  width: 200%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  z-index: 9999;
+}
+  
+  
+    .newNav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      height: auto;
+      width: 100%;
+      padding: 1rem 2rem;
   }
-  .newNav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.5rem;
-    height: auto;
-    width: 100%;
-    padding: 1rem 2rem;
-  }
+  
   
   .navLinks {
     display: flex;
@@ -318,3 +322,5 @@ input[type="submit"]{
   }
   
   /* New NAvbar CSS Ends Here*/
+
+ 

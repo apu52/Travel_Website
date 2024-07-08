@@ -316,3 +316,44 @@ input {
 .social-container a:hover {
   border: 1px solid #4bb6b7;
 }
+
+#login-section{
+  display: flex;
+  align-items: center;
+  width: 100%;
+ }
+
+ #loginPassword{
+  position: relative;
+ }
+
+ #toggleLoginPassword{
+  position: absolute;
+  background: transparent;
+  border: none;
+  color: #505050;
+  right: 15%;
+  padding:2px;
+  transition: 0.3s ease-in-out;
+ }
+
+ 
+ #register-section{
+  display: flex;
+  align-items: center;
+  width: 100%;
+ }
+
+ #registerPassword{
+  position: relative;
+ }
+
+ #toggleRegisterPassword{
+  position: absolute;
+  background: transparent;
+  border: none;
+  color: #505050;
+  right: 15%;
+  padding:2px;
+  transition: 0.3s ease-in-out;
+ }
