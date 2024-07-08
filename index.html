@@ -1253,17 +1253,23 @@ $('.carousel').flipster({
         
         </div>
 
-        <div class="footer__col">
-          <div id="google_element"></div>
-          <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+        <div class="footer__col" style="text-align: center; padding: 20px; background-color: #fbeaeb;">
+          <div id="google_translate_element" style="display: inline-block; margin-top: 10px;"></div>
           <script>
-            function loadGoogleTranslate() {
+            function googleTranslateElementInit() {
               new google.translate.TranslateElement({
-                pageLanguage: 'en'
-              }, 'google_element');
+                pageLanguage: 'en',
+                includedLanguages: 'es,fr,de,ja,ko,zh-CN',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false,
+                gaTrack: true,
+                gaId: 'UA-XXXXXXXX-X'
+              }, 'google_translate_element');
             }
           </script>
-      </div>
+          <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        </div>
+        
 
       
       <!--  New copyright code to make it dynamic and display current year -->
