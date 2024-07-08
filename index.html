@@ -5,6 +5,13 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    .center-card {
+      margin: 0 auto;
+      display: block;
+    }
+  </style>
   <link rel="stylesheet" href="./loader.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="faq-website.css">
@@ -18,6 +25,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="./Image-Gallery/style.css">
   <link rel="stylesheet" href="./Image-Gallery/stylecaptions.css">
@@ -82,7 +91,7 @@
         width: 130%;
       } 
       .line{
-        width: 130%;
+        width: 150%;
       }
       .hamburger{
         position: relative;
@@ -172,17 +181,18 @@
       <nav class="newNav">
         <img src="./img/A T logo with a white background and a square shape, connected to nature for a travel company.png" style="width:30px;height:30px;border-radius:50%;">
         
-        <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+        <a href="#" class="nav__logo" data-aos="fade-right">Tourguide</span></a>
 
         <ul class="navLinks">
 
           <li class="link" data-aos=""><a href="#Home">Home</a></li>
-          <li class="link" data-aos=""><a href="#AboutUs"> AboutUs</a></li>
-          <li class="link" data-aos=""><a href="#Destinations">Destinations</a></li>
-          <li class="link" data-aos=""><a href="#trip">Pricing</a></li>
+          <li class="link" data-aos=""><a href="#AboutUs">About</a></li>
+          <li class="link" data-aos=""><a href="#Destinations">Destination</a></li>
+          <li class="link" data-aos=""><a href="#trip">Prices</a></li>
           <li class="link" data-aos=""><a href="#ReviewGallery">Trip Gallery</a></li>
-          <li class="link" data-aos=""><a href="#testimonials">Testimonials</a></li>
-          <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+          <li class="link" data-aos=""><a href="#tourist">Tourist Guide</a></li>
+          <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
+          <li class="link" data-aos=""><a href="feedback.html">Rate Us</a></li>
           <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
 
 
@@ -741,8 +751,24 @@ $('.carousel').flipster({
     document.getElementById('newDiv').style.display = 'block';
   }
     </script>
-    <br /><br /><br /><br /><br /><br />
+    <br /><br />
 
+    <!-- Toursit Guide Section -->
+     <section class="tourist" id ="tourist">
+      <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Tourist Guide</h2>
+       <h4 style="color: rgb(231, 62, 118); font-style: italic;font-family: cursive;">Have an amazing trip and explore the destiny</h4>
+       <br></br>
+       <h3 style="color: rgb(6, 151, 241); font-style: inherit;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Connect with the Guide</h3>
+       <br></br>
+       <div class="center-card">
+       <img src="./tg1.jpg" alt="guide1"/>
+       <br></br>
+       <img src="./tg2.jpg" alt="guide2"/>
+       <br></br>
+       <img src="./tg3.jpg" alt="guide3"/>
+      </div>
+      </section>
+    <br /><br /><br /><br />
     <!-- Testimonials Section -->
 
     <section class="testimonials" id="testimonials">
@@ -1036,6 +1062,7 @@ $('.carousel').flipster({
         </div>
         <div class="footer__col">
           <h3 class="footer__title">Tourguide<span>.</span></h3>
+          <h3 class="footer-head" class="footer__title">Tourguide<span>.</span></h3>
           <p>
             Ready for your next adventure? Let's make it unforgettable.<br>
           </p>
@@ -1044,11 +1071,23 @@ $('.carousel').flipster({
           </p>
         </div>
         <div class="footer__col">
+          <h3 class="footer-head" class="footer__title">Places You May Want to Visit<span>.</span></h3>
+          <p class="footer__text"> 
+           
+            <a href="Cultural_Exp.html" >Cultural Experiences</a>
+           
+            <a href="HoneyMoon.html">Honeymoon Places</a>
+            <a href="Adventure.html">Adventure travel</a>
+           
+           
+          </p>
+        </div>
+        <div class="footer__col">
           <div class="footer__area">
             <h4 class="footer__subtitle">Support</h4>
           <p><a href="./faq.html" class="footer__link">FAQs</a></p>
           <p><a href="./tnc.html" class="footer__link">Terms & Conditions</a></p>
-          <p><a href="./privacy.html" class="footer__link">Privacy Policy</a></p>
+           <p><a href="./privacy.html" class="footer__link">Privacy Policy</a></p>
           <p><a href="#cnt-form" class="footer__link">Contact Us</a></p>
           </div>
         </div>
@@ -1062,6 +1101,7 @@ $('.carousel').flipster({
         </div>
         <div class="footer__col">
           <h4>Address</h4>
+          <h4 class="footer-head" style="padding-left: 35px;">  Address</h4>
           <div class="mapouter">
             <div class="gmap_canvas"><iframe width="200" height="200" id="gmap_canvas"
                 src="https://maps.google.com/maps?q=wellington%20street%20kolkata&t=k&z=11&ie=UTF8&iwloc=&output=embed"
@@ -1119,6 +1159,49 @@ $('.carousel').flipster({
           </div>
         </div>
         
+            <h4>Contact Us</h4>
+            <div class="d-flex align-items-center mb-2">
+              <a href="mailto:tour@tourguide.com" class="text-nowrap">tour@tourguide.com</a>
+            </div>
+            <div class="d-flex align-items-center">
+              <a href="tel:8562145852" class="text-nowrap">+91 8562145852</a>
+            </div>
+            <div class="icons">
+              <a href="">
+                <div class="icon">
+                  <i class="fab fa-linkedin" title="linkedin" style="cursor: pointer;"></i>
+                </div>
+              </a>
+          
+              <a href="">
+                <div class="icon">
+                  <i class="fab fa-twitter" title="X"style="cursor: pointer;"></i>
+                </div>
+              </a>
+          
+              <a href="">
+                <div class="icon">
+                  <i class="fab fa-instagram" title="Instagram"style="cursor: pointer;"></i>
+                </div>
+              </a>
+              
+          
+              <a href="" title="YouTube">
+                <div class="icon">
+                  <i class="fab fa-youtube" style="cursor: pointer;"></i>
+                </div>
+              </a>
+          
+              <a href="">
+                <div class="icon">
+                  <i class="fab fa-github" title="Github"></i>
+                </div>
+              </a>
+             
+            </div>
+          </div>
+        
+        </div>
         <div class="footer__col">
           <div id="google_element"></div>
           <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
@@ -1139,12 +1222,7 @@ $('.carousel').flipster({
         </div>
       </div>
 
-      <!--   Previous copyright code
-<!--  <div class="footer__bar">
-        Copyright © 2023 Arpan Chowdhury. All rights reserved.
-      </div> -->
-
-    </footer>
+    </footer> 
 
     <a class="goupbtn" href="#" onclick="goToTop()"><i class="fa-solid fa-arrow-up"></i></a>
 
