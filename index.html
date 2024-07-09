@@ -427,17 +427,17 @@ body{
         <div class="wrapper">
             <div class="countitem">
               <i class="fa-solid fa-handshake-angle"></i>
-              <span class="num" data-val="25000">000</span>
+              <span class="num" data-val="25000">18000</span>
               <span class="text">Guides</span>
             </div>
             <div class="countitem">
-              <i class="fa-solid fa-suitcase-rolling"></i>
-              <span class="num" data-val="20000">000</span>
+              <i class="fa-solid fa-suitcase-rolling"></i> 
+              <span class="num" data-val="20000">10000</span>
               <span class="text">Tours</span>
             </div>
             <div class="countitem">
               <i class="fa-solid fa-location-dot"></i>
-              <span class="num" data-val="20000">000</span>
+              <span class="num" data-val="20000">10000</span>
               <span class="text">Destinations</span>
             </div>
             
@@ -446,18 +446,22 @@ body{
     
 <script>
   let valueDisplays = document.querySelectorAll(".num");
-let interval = 4000;
+let interval = 100000;
 valueDisplays.forEach((valueDisplay) => {
-  let startValue = 0;
+  let startValue = 17500;
   let endValue = parseInt(valueDisplay.getAttribute("data-val"));
-  let duration = Math.floor(interval / endValue);
+  let duration = 0.05 ;
+  if (endValue== 25000){
+    startValue= 22500;
+    // duration= 3;
+  }
   let counter = setInterval(function () {
     startValue += 10;
     valueDisplay.textContent = startValue;
     if (startValue == endValue) {
       clearInterval(counter);
     }
-  }, duration);
+  }, duration)
 });
 </script>
     
@@ -469,7 +473,7 @@ valueDisplays.forEach((valueDisplay) => {
 
     <!-- Newsletter Modal -->
 
-    <div class="modal-container">
+    <!-- <div class="modal-container">
       <div class="modal-wrapper">
         <div class="cross-container">
           <i class="fas fa-times close-btn" onclick="closeModal()"></i>
@@ -499,7 +503,7 @@ valueDisplays.forEach((valueDisplay) => {
           <img src="./img/pexels-sam-kolder-2387871.jpg" class="modal-image" alt="maldives">
         </div>
       </div>
-    </div>
+    </div> -->
 
     <section class="section__container destination__container" id="Destinations" data-aos="fade-up">
     <div class="section__header">
