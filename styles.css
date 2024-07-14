@@ -1,3 +1,6 @@
+
+
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Oxygen:wght@300&display=swap");
 
@@ -506,7 +509,7 @@ body {
 }
 
 nav {
-  background-color: #091020;
+  background-color: #123456;
   position: fixed;
   top: 0;
   width: 100%;
@@ -526,29 +529,31 @@ nav {
   color: #3685fb;
   /* Assuming this is your primary color */
 }
-
-/* .nav__links {
-  list-style: none;
+/* 
+.nav__links {
+  /* list-style: none;
   display: flex;
   align-items: center;
   gap: 1rem; /* Increased gap between links */
 /* font-size: 1.2rem; Increased font size for the links   */
 /* } */
-
 .link a {
-  /* padding: 0.5rem 1rem; Adjusted padding for links */
-  color: #ffffff;
-  transition: 0.3s;
-  font-weight: 600;
+  color: #fff; /* Sets text color to white */
+  padding-top: 1.75rem; /* Equivalent to py-7 in Tailwind, adjust according to your base font size */
+  padding-bottom: 1.75rem; /* Equivalent to py-7 in Tailwind */
+  transition: color 0.3s; /* Transition effect for color change */
+  font-weight: 600; /* Sets font weight to 600 */
 }
 
-.link a:hover {
-  color: #ff0000;
+link a:hover {
+  color: #60a5fa; 
+  background-color:red;
 }
 
 .home {
   margin-left: 210px;
 }
+
 
 header {
   background-color: var(--secondary-color);
@@ -1204,8 +1209,11 @@ body, html {
 
 .footer {
   width: 100%;
-  background-color: #091020;
+  background-color: rgb(102, 116, 204);
   padding: 2rem;
+}
+.footer:hover{
+   background-color :#16171c;
 }
 
 .footer__col p {
