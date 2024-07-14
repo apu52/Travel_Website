@@ -10,8 +10,6 @@
     .center-card {
       margin: 0 auto;
       display: block;
-      position: relative;
-      bottom: 18px;
     }
   </style>
   <link rel="stylesheet" href="./loader.css">
@@ -36,12 +34,7 @@
   <link rel="stylesheet" href="explore.css">
   <title>Tourguide</title>
   <!-- adding a fav-icon -->
-
-   <img src="Untitled (1).mp4" alt="">
-  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
-
   <link rel="stylesheet" href="tilt.css">
   <script src="tilt.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
@@ -168,27 +161,6 @@
         width: auto;
       }
     }
-
-    .circle {
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
-      pointer-events: none;
-      background: radial-gradient(circle, rgba(71, 240, 255, 0.3), rgba(0, 119, 255, 0.3));
-      transition: transform 0.1s, left 0.1s, top 0.1s;
-    }
-
-    .circle-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 9999;
-    }
-
   </style>
   <link rel="stylesheet" href="imstyle.css">
   <link rel="stylesheet" href="jquery.flipster.min.css">
@@ -199,77 +171,7 @@
 <body style="background-color: var(--secondary-color);">
 
   <body>
-    <div class="circle-container">
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-    </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const coords = { x: 0, y: 0 };
-        const circles = document.querySelectorAll(".circle");
 
-        circles.forEach(function (circle) {
-          circle.x = 0;
-          circle.y = 0;
-        });
-
-        window.addEventListener("mousemove", function (e) {
-          coords.x = e.pageX;
-          coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
-        });
-
-        function animateCircles() {
-          let x = coords.x;
-          let y = coords.y;
-
-          circles.forEach(function (circle, index) {
-            circle.style.left = `${x - 12}px`;
-            circle.style.top = `${y - 12}px`;
-            circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
-
-            const nextCircle = circles[index + 1] || circles[0];
-            circle.x = x;
-            circle.y = y;
-
-            x += (nextCircle.x - x) * 0.3;
-            y += (nextCircle.y - y) * 0.3;
-          });
-
-          requestAnimationFrame(animateCircles);
-        }
-
-        animateCircles();
-      });
-
-    </script>
     <div id="pre-loader">
       <h1>TourGuide . . .</h1>
     </div>
@@ -672,21 +574,18 @@
             </p>
             <h3>PARIS</h3>
       
-
           </div>
 
           <div class="card" style="
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
-        url('./img/london.jpg')
-    ">
-
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+          url('./img/london.jpg')
+      ">
             <div class="info">
 
               <p>||Giant Wheel||</p>
               <h3>LONDON</h3>
             </div>
           </div>
-
 
           <div class="card" style="
         background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
@@ -711,7 +610,6 @@
 
         </div>
       </div>
-
 
       <script src="explore.js"></script>
     </section>
@@ -1394,12 +1292,6 @@
                 </div>
               </a>
 
-            </div>
-            <!-- Visitor Widget -->
-            <div class="visitor-widget mt-3">
-              <a>
-                <img alt="Hits" src="https://hits.sh/apu52.github.io/Travel_Website.svg?style=for-the-badge&label=Visitors&extraCount=786&color=526180&labelColor=9bbbff"/>
-              </a>
             </div>
           </div>
 
