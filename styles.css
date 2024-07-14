@@ -1060,7 +1060,7 @@ header {
     gap: 2rem;
   }
 }
-@media screen and (max-width:768px) {
+/* @media screen and (max-width:768px) {
   .hamburger{
     position: relative;
     left: 20px;
@@ -1069,7 +1069,7 @@ header {
     position: relative;
     left: 90px;
   }
-}
+} */
 
 .image__gallary {
   display: grid;
@@ -1205,6 +1205,12 @@ body, html {
 .footer {
   width: 100%;
   background-color: #091020;
+  padding: 2rem;
+}
+
+.footer__col p {
+  font-size: 0.8rem;
+  font-weight: 100;
 }
 
 .footer__container {
@@ -1276,14 +1282,16 @@ body, html {
   margin: auto;
   padding: 0.5rem;
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.9rem;
   /*   color: var(--secondary-color); */
   color: var(--extra-light);
+  padding-top: 1rem;
+  margin-top: 1rem;
   border-top: 2px solid var(--text-light);
 }
 
 .footer__area {
-  margin-left: 2.3rem;
+  margin-left: 0rem;
 }
 
 .footer__area a {
@@ -2149,7 +2157,7 @@ body {
 .navLinks.activeHamburger {
   width: 100%;
 }
-@media screen and (max-width: 1146px) {
+/* @media screen and (max-width: 1146px) {
   .toggle-container {
     position: relative;
     right: 148px;
@@ -2158,8 +2166,16 @@ body {
     position: relative;
     right: 150px;
   }
-}
-@media screen and (max-width: 846px) {
+} */
+/* @media only screen and (max-width:957px){
+  .toggle-container{
+    left: 30px;
+  }
+  .hamburger{
+    left: 30px;
+  }
+} */
+/* @media screen and (max-width: 846px) {
   .toggle-container {
     position: relative;
     right: 200px;
@@ -2173,7 +2189,7 @@ body {
     right: 57px;
     top: 1px;
   }
-}
+} */
 @media screen and (max-width: 652px) {
   .toggle {
     width: 5vw;
@@ -2181,35 +2197,50 @@ body {
   .line {
     width: 5vw;
   }
-  .newNav {
-    height: 130px;
-  }
   .newNav img {
     position: relative;
-    bottom: 35px;
-    left: 130px;
+    bottom: 23px;
+    left: 109px;
   }
   .nav__logo {
     position: relative;
     left: 85px;
-    bottom: 35px;
+    bottom: 20px;
   }
   .btn {
     position: relative;
     top: 30px;
     left: -147px;
   }
-  .toggle-container {
+}
+@media only screen and (max-width:577px){
+  .but{
     position: relative;
-    top: 30px;
-    right: 377px;
-  }
-  .hamburger {
-    position: relative;
-    right: 388px;
+    top: -37px;
+    left: 85px;
   }
 }
-@media screen and (max-width: 430px) {
+@media only screen and (max-width: 465.5px){
+  .newNav img{
+    position: relative;
+    left: -58px;
+  }
+  .nav__logo{
+    position: relative;
+    left: -82px;
+  }
+  .but{
+    position: relative;
+    left:17px;
+    top: -4px;
+  }
+  .but2{
+    position: relative;
+    left: 30px;
+    top: -2px;
+  }
+}
+/* @media screen and (max-width: 430px) {
   .toggle-container {
     right: 374px;
   }
@@ -2219,7 +2250,7 @@ body {
   .nav__logo {
     left: 36px;
   }
-}
+} */
 /* New NAvbar CSS Ends Here*/
 /* #canvas {
   background: #232323;
@@ -2442,6 +2473,7 @@ body {
   background-color: #91b4ffe7;
   overflow: hidden;
   margin-bottom: 50px;
+  top: 45px;
 }
 
 .swiper-slide {
@@ -2723,5 +2755,32 @@ button:hover {
     width: 100%;
     justify-content: center;
     font-size: small;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .footer__container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .footer__col p {
+    font-size: 0.5rem;
+    font-weight: 100;
+  }
+
+  .footer__col h3 {
+    font-size: 0.7rem;
+  }
+
+  .footer__area h4 {
+    font-size: 0.7rem;
+  }
+
+  .footer__bar {
+    font-size: 0.6rem;
   }
 }
