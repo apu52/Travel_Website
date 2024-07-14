@@ -232,11 +232,16 @@
     color: white;
     background-color: rgb(40, 87, 241);
   }
-  
-  
-  
-  
-  
+  @media only screen and (max-width:465px){
+    .newNav img{
+      position: relative;
+      right: 14px;
+    }
+    .nav__logo{
+      position: relative;
+      right: 16px;
+    }
+  }
   
   
   
