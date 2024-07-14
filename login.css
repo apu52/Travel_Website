@@ -29,6 +29,7 @@ body {
 
 .left-section {
     flex: 3;
+    margin-top: 58px;
     display: flex;
     flex-direction: column;
     justify-content: center;

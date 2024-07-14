@@ -8,8 +8,271 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+
   </head>
 <body>
+
+  
+    <script src="index.js" defer></script>
+    <script src="mouseEffect.js"></script>
+    <link rel="stylesheet" href="mouseEffect.css">
+    <script src="Theme.js" defer></script>
+  
+  
+    <link rel="stylesheet" href="path/to/aos.css">
+    <script src="path/to/aos.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("WB9rAyWwwLZube-er");
+      })();
+  
+      function planTrip() {
+  
+        window.location.href = 'plantrip.html';
+      }
+      // const menuButton = document.getElementsByClassName('link');
+      //function closeNav() {
+      //  let list = document.querySelector('.navLinks');
+      //  list.classList.toggle('activeHamburger');
+      //}
+      // menuButton.forEach((button) => (button.onclick = () => closeNav()));
+  
+    </script>
+  
+  
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <style>
+      .active {
+        color: red !important;
+      }
+      @media screen and (max-width:390px){
+        .nav__logo{
+          position: relative;
+          right: 1.9rem;
+        }
+        .contact-btn{
+          position: relative;
+          right: 2.5rem;
+        }
+        .toggle-container{
+          position: relative;
+          right: 2.5rem;
+  
+        }
+        .toggle{
+          width: 130%;
+        } 
+        .line{
+          width: 130%;
+        }
+        .hamburger{
+          position: relative;
+          right: 1rem;
+        }
+      }
+      @media screen and (max-width:364px) {
+        .toggle{
+          width:190%;
+        }
+        .line{
+          width: 190%;
+        }
+      }
+      .gallery-rotate-image .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* Adjust the gap between images */
+  }
+  
+  .gallery-rotate-image .image-container span {
+    display: inline-block;
+  }
+  
+  .trip-gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* Adjust the gap between images */
+  }
+  
+  .trip-gallery-container .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .trip-gallery-container .image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* Adjust the gap between buttons */
+  }
+  .circle {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      pointer-events: none;
+      background: radial-gradient(circle, rgba(71, 240, 255, 0.3), rgba(0, 119, 255, 0.3));
+      transition: transform 0.1s, left 0.1s, top 0.1s;
+    }
+
+    .circle-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+    </style>
+  <link rel="stylesheet" href="imstyle.css">
+  <link rel="stylesheet" href="jquery.flipster.min.css">
+  
+  </head>
+  
+  
+  <body style="background-color: var(--secondary-color);">
+  
+    <body>
+
+      <div class="circle-container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const coords = { x: 0, y: 0 };
+          const circles = document.querySelectorAll(".circle");
+  
+          circles.forEach(function (circle) {
+            circle.x = 0;
+            circle.y = 0;
+          });
+  
+          window.addEventListener("mousemove", function (e) {
+            coords.x = e.pageX;
+            coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
+          });
+  
+          function animateCircles() {
+            let x = coords.x;
+            let y = coords.y;
+  
+            circles.forEach(function (circle, index) {
+              circle.style.left = `${x - 12}px`;
+              circle.style.top = `${y - 12}px`;
+              circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
+  
+              const nextCircle = circles[index + 1] || circles[0];
+              circle.x = x;
+              circle.y = y;
+  
+              x += (nextCircle.x - x) * 0.3;
+              y += (nextCircle.y - y) * 0.3;
+            });
+  
+            requestAnimationFrame(animateCircles);
+          }
+  
+          animateCircles();
+        });
+  
+      </script>
+  
+      
+      <div id="bg">
+        <canvas></canvas>
+        <canvas></canvas>
+        <canvas></canvas>
+      </div>
+      <div id="progressbar"></div>
+      <div id="scrollPath"></div>
+      
+      <div class="nav-container" id="top">
+        <nav class="newNav">
+          <img src="./img/A T logo with a white background and a square shape, connected to nature for a travel company.png" style="width:30px;height:30px;border-radius:50%;">
+          
+          <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+  
+          <ul class="navLinks">
+  
+            <li class="link" data-aos=""><a href="index.html#Home">Home</a></li>
+            <li class="link" data-aos=""><a href="index.html#AboutUs"> AboutUs</a></li>
+            <li class="link" data-aos=""><a href="index.html#Destinations">Destinations</a></li>
+            <li class="link" data-aos=""><a href="index.html#trip">Pricing</a></li>
+            <li class="link" data-aos=""><a href="index.html#ReviewGallery">Trip Gallery</a></li>
+            <li class="link" data-aos=""><a href="index.html#testimonials">Testimonials</a></li>
+            <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+            <li class="link" data-aos=""><a href="index.html#cnt-form">Contact Us</a></li>
+  
+  
+          </ul>
+  
+  
+          <a href="newLogin.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
+              data-aos="fade-down">Login/SignUp</button></a>
+              <a href="mapa.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
+                data-aos="fade-down">view <map name=""></map></button></a>
+  
+          <a href="loginPage.html" class="contact-btn"><button class="btn" id="logout-btn" style="margin: 0; display: none;"
+                data-aos="fade-down" disabled>Log Out</button></a>
+  
+          <!-- <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
+              style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a> -->
+  
+          <div class="toggle-container" data-aos="fade-down">
+            <input id="themeToggle" class="toggle" type="checkbox">
+          </div>
+          <div class="hamburger" data-aos="fade-down">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </nav>
+      </div>
+      <header>
+    
+
+
 
     <a href="./index.html"><img src="./img/Screenshot 2024-01-23 003448.png" style="width: 130px; margin-top: 20px; margin-left: 20px; border-radius: 6px;"></a>
 
@@ -104,10 +367,86 @@
           </div>
         </div>
 
+    </div>
+
+    <div class="more">
+      <div>
+      <h2>Have More questions?</h2>
+      <p>Feel Free to Email us!</p>
+    </div>
+    <div>
+      <button class="moreemail" onclick="sendEmail()">Send Email</button>
+    </div>
+    </div>
+
+    <script>
+      let hamburger = document.querySelector('.hamburger');
+      hamburger.addEventListener('click', () => {
+        let list = document.querySelector('.navLinks');
+        list.classList.toggle('activeHamburger');
+      })
+    </script>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1500,
+        offset: 120
+      });
+    </script>
+
+    <script>
+    // To highlight active navbar
+    document.addEventListener("DOMContentLoaded", function () {
+      const navLinks = document.querySelectorAll('.navLinks a');
+
+      function highlightNavLink() {
+        const scrollPosition = window.scrollY;
+
+        navLinks.forEach(link => {
+          const sectionId = link.getAttribute('href').substring(1);
+          const section = document.getElementById(sectionId);
+
+          // Adjust this value to control when the link should be highlighted
+          const offsetPercentage = 20;
+
+          if (section.offsetTop - window.innerHeight * (offsetPercentage / 100) <= scrollPosition &&
+            section.offsetTop + section.offsetHeight > scrollPosition) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+
+
 
 
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    if (isLoggedIn === 'true') {
+        loginButton.style.display = 'none';
+        logoutButton.style.display = 'block';
+        loginButton.disabled = true ;
+        logoutButton.disabled = false;
+        logoutButton.style.cursor = 'pointer';
+        logoutButton.addEventListener('click', function() {
+            localStorage.setItem('isLoggedIn', 'false');
+            window.location.href = './index.html';
+        });
+    } else {
+        loginButton.style.display = 'block';
+        logoutButton.disabled = true;
+    }
+});
+
+
+function sendEmail() {
+  window.location.href = "mailto:arpanchowdhury003@gmail.com";
+}
+</script>
 
 </body>
 </html>
