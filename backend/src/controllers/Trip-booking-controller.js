@@ -19,19 +19,24 @@ const bookLocation = async (req,res)=>{
             return res.status(StatusCodes.NOT_FOUND).json({message:'Location not found'});
         }
         // console.log("a2");
-        const user = await User.findById(userId);
+        const user = await User.findById(userId).populate('booking');
         if(!user){
             return res.status(StatusCodes.NOT_FOUND).json({message:'User not found'});
         }
         // Check if the user has already booked the Location
+        let bookingFound = false;
         if(user.booking.length!=0){
-            user.booking.some((booking)=>{
-                console.log("trip:",booking,"Id",id);
-                if(booking.trip_id.toString() === id){
-                    return res.status(StatusCodes.UNPROCESSABLE_ENTITY).json({message:'You have already booked this Location'})}
-            })
+            user.booking.map((b)=>{
+                // console.log("trip:",b);
+                if(b.trip_id.toString() === id){
+                    bookingFound = true;
+                }
+        })
         }
-
+        if (bookingFound) {
+            return res.status(StatusCodes.UNPROCESSABLE_ENTITY).json({message:'You have already booked this Location'})
+        }
+ 
         const newBooking = await Trip.create({
             trip_id:id,
             user_id:userId,

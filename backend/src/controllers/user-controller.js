@@ -77,8 +77,7 @@ const login = async (req, res) => {
         return res.status(StatusCodes.OK).json({
             success: true,
             message: "Login successful",
-            user,
-            accessToken,
+            id:user._id,
         });
     } catch (err) {
         return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
