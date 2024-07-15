@@ -1403,27 +1403,43 @@
 
         </div>
 
-        <div class="footer__col" style="text-align: center; padding: 20px; background-color: #fbeaeb;">
+        <div class="footer__col">
+          <label for="google_translate_element" style="display: block; font-weight: bold; margin-bottom: 5px;">Select Language:</label>
           <div id="google_translate_element" style="display: inline-block; margin-top: 10px;"></div>
-          <script>
-            function googleTranslateElementInit() {
-              new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'es,fr,de,ja,ko,zh-CN',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                autoDisplay: false,
-                gaTrack: true,
-                gaId: 'UA-XXXXXXXX-X'
-              }, 'google_translate_element');
-            }
-          </script>
-
-          <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         </div>
         
-
-        </div>
-
+        <script>
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+              pageLanguage: 'en',
+              includedLanguages: 'es,fr,de,ja,ko,zh-CN',
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+              autoDisplay: false,
+              gaTrack: true,
+              gaId: 'UA-XXXXXXXX-X'
+            }, 'google_translate_element');
+          }
+        </script>
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
+        <script>
+          // Apply inline styling to the select element once it is created by Google Translate
+          window.addEventListener('load', function() {
+            var interval = setInterval(function() {
+              var select = document.querySelector('#google_translate_element select');
+              if (select) {
+                select.style.padding = '5px';
+                select.style.border = '1px solid #ccc';
+                select.style.borderRadius = '0'; // Remove rounded corners to make it rectangular
+                select.style.appearance = 'none'; // Remove default styling
+                select.style.backgroundColor = '#fff';
+                select.style.cursor = 'pointer';
+                clearInterval(interval); // Stop the interval once the select element is found and styled
+              }
+            }, 100); // Check every 100ms
+          });
+        </script>
+        
 
 
         <!--  New copyright code to make it dynamic and display current year -->
