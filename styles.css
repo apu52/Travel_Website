@@ -1,3 +1,6 @@
+
+
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Oxygen:wght@300&display=swap");
 
@@ -232,6 +235,30 @@
 }
 */
 
+.footer__link {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+.footer__link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+}
+.footer__link:hover {
+  color: red;
+}
+.footer__link:hover::after {
+  width: 100%;
+  background-color: red;
+}
+
 /* new bubble end */
 #scrollPath {
   position: fixed;
@@ -357,7 +384,6 @@ body {
   justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap;
-  margin-bottom: 4rem;
 }
 
 .section__title {
@@ -506,7 +532,7 @@ body {
 }
 
 nav {
-  background-color: #091020;
+  background-color: #123456;
   position: fixed;
   top: 0;
   width: 100%;
@@ -526,29 +552,31 @@ nav {
   color: #3685fb;
   /* Assuming this is your primary color */
 }
-
-/* .nav__links {
-  list-style: none;
+/* 
+.nav__links {
+  /* list-style: none;
   display: flex;
   align-items: center;
   gap: 1rem; /* Increased gap between links */
 /* font-size: 1.2rem; Increased font size for the links   */
 /* } */
-
 .link a {
-  /* padding: 0.5rem 1rem; Adjusted padding for links */
-  color: #ffffff;
-  transition: 0.3s;
-  font-weight: 600;
+  color: #fff; /* Sets text color to white */
+  padding-top: 1.75rem; /* Equivalent to py-7 in Tailwind, adjust according to your base font size */
+  padding-bottom: 1.75rem; /* Equivalent to py-7 in Tailwind */
+  transition: color 0.3s; /* Transition effect for color change */
+  font-weight: 600; /* Sets font weight to 600 */
 }
 
-.link a:hover {
-  color: #ff0000;
+link a:hover {
+  color: #60a5fa; 
+  background-color:red;
 }
 
 .home {
   margin-left: 210px;
 }
+
 
 header {
   background-color: var(--secondary-color);
@@ -1060,7 +1088,7 @@ header {
     gap: 2rem;
   }
 }
-@media screen and (max-width:768px) {
+/* @media screen and (max-width:768px) {
   .hamburger{
     position: relative;
     left: 20px;
@@ -1069,7 +1097,7 @@ header {
     position: relative;
     left: 90px;
   }
-}
+} */
 
 .image__gallary {
   display: grid;
@@ -1204,7 +1232,16 @@ body, html {
 
 .footer {
   width: 100%;
-  background-color: #091020;
+  background-color: rgb(102, 116, 204);
+  padding: 2rem;
+}
+.footer:hover{
+   background-color :#16171c;
+}
+
+.footer__col p {
+  font-size: 0.8rem;
+  font-weight: 100;
 }
 
 .footer__container {
@@ -1224,18 +1261,18 @@ body, html {
   margin-left: 15px;
   flex: 1;
   display: flex;
-  max-width: 200px;
+  max-width: 220px;
   text-align: left;
   flex-direction: column;
 }
 
-.footer__text a {
+/* .footer__text a {
   margin-top: 5px;
   color: white;
 }
 .footer__text a:hover {
   color: red;
-}
+} */
 
 .footer:hover {
   background: linear-gradient(135deg, #654ea3, #eaafc8);
@@ -1251,15 +1288,15 @@ body, html {
   color: var(--primary-color);
 }
 
-.footer__link {
+/* .footer__link {
   color: white;
-  margin-right: 15px; /* Adjust spacing between icons */
-  font-size: 1em; /* Initial font size */
+  margin-right: 15px; 
+  font-size: 1em; 
 }
 
 .footer__link:hover {
-  transform: scale(10); /* Scale up the icon on hover */
-}
+  transform: scale(10);
+} */
 
 .footer__col p span {
   font-weight: 600;
@@ -1276,14 +1313,16 @@ body, html {
   margin: auto;
   padding: 0.5rem;
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.9rem;
   /*   color: var(--secondary-color); */
   color: var(--extra-light);
+  padding-top: 1rem;
+  margin-top: 1rem;
   border-top: 2px solid var(--text-light);
 }
 
 .footer__area {
-  margin-left: 2.3rem;
+  margin-left: 0rem;
 }
 
 .footer__area a {
@@ -2114,7 +2153,7 @@ body {
   padding: 10px 0;
 }
 
-.footer-head::before,
+/* .footer-head::before,
 .footer-head::after {
   content: "";
   position: absolute;
@@ -2122,7 +2161,7 @@ body {
   height: 2px;
   background-color: red;
   transition: width 0.2s ease-in;
-}
+} */
 
 .footer-head::before {
   top: 0;
@@ -2136,20 +2175,20 @@ body {
   transform: translateX(-50%);
 }
 
-.footer-head:hover::before {
-  width: 100%;
-}
-.footer-head:hover::after {
-  width: 100%;
-}
-.navLinks .link a:active {
+  /* .footer-head:hover::before {
+    width: 100%;
+  }
+  .footer-head:hover::after {
+    width: 100%;
+  } */
+.navLinks:active {
   color: red;
 }
 
 .navLinks.activeHamburger {
   width: 100%;
 }
-@media screen and (max-width: 1146px) {
+/* @media screen and (max-width: 1146px) {
   .toggle-container {
     position: relative;
     right: 148px;
@@ -2158,8 +2197,16 @@ body {
     position: relative;
     right: 150px;
   }
-}
-@media screen and (max-width: 846px) {
+} */
+/* @media only screen and (max-width:957px){
+  .toggle-container{
+    left: 30px;
+  }
+  .hamburger{
+    left: 30px;
+  }
+} */
+/* @media screen and (max-width: 846px) {
   .toggle-container {
     position: relative;
     right: 200px;
@@ -2173,7 +2220,7 @@ body {
     right: 57px;
     top: 1px;
   }
-}
+} */
 @media screen and (max-width: 652px) {
   .toggle {
     width: 5vw;
@@ -2181,35 +2228,50 @@ body {
   .line {
     width: 5vw;
   }
-  .newNav {
-    height: 130px;
-  }
   .newNav img {
     position: relative;
-    bottom: 35px;
-    left: 130px;
+    bottom: 23px;
+    left: 109px;
   }
   .nav__logo {
     position: relative;
     left: 85px;
-    bottom: 35px;
+    bottom: 20px;
   }
   .btn {
     position: relative;
     top: 30px;
     left: -147px;
   }
-  .toggle-container {
+}
+@media only screen and (max-width:577px){
+  .but{
     position: relative;
-    top: 30px;
-    right: 377px;
-  }
-  .hamburger {
-    position: relative;
-    right: 388px;
+    top: -37px;
+    left: 85px;
   }
 }
-@media screen and (max-width: 430px) {
+@media only screen and (max-width: 465.5px){
+  .newNav img{
+    position: relative;
+    left: -58px;
+  }
+  .nav__logo{
+    position: relative;
+    left: -82px;
+  }
+  .but{
+    position: relative;
+    left:17px;
+    top: -4px;
+  }
+  .but2{
+    position: relative;
+    left: 30px;
+    top: -2px;
+  }
+}
+/* @media screen and (max-width: 430px) {
   .toggle-container {
     right: 374px;
   }
@@ -2219,7 +2281,7 @@ body {
   .nav__logo {
     left: 36px;
   }
-}
+} */
 /* New NAvbar CSS Ends Here*/
 /* #canvas {
   background: #232323;
@@ -2442,6 +2504,7 @@ body {
   background-color: #91b4ffe7;
   overflow: hidden;
   margin-bottom: 50px;
+  top: 45px;
 }
 
 .swiper-slide {
@@ -2724,4 +2787,52 @@ button:hover {
     justify-content: center;
     font-size: small;
   }
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+}
+a:hover {
+  color: red;
+}
+a:hover::after {
+  width: 100%;
+  background-color: red;
+}
+/* Footer specific styles */
+.footer__link {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+.footer__link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+}
+.footer__link:hover {
+  color: red;
+}
+.footer__link:hover::after {
+  width: 100%;
+  background-color: red;
 }
