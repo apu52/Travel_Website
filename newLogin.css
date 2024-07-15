@@ -28,11 +28,11 @@
     align-items: center;
     text-decoration: none;
     color: white;
-    margin-top: 20px;
 }
 
 .back-to-home svg  {
     margin-right: 8px;
+    margin-left: 500px;
 }
 
 .form-container {
@@ -64,6 +64,7 @@
     text-shadow: 0px 0px 20px #010618, 0px 0px 40px #010618;
     text-align: center;
     position: relative;
+    
 }
 
 .content1 p {
