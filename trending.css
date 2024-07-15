@@ -50,7 +50,7 @@ div.niha{
 
 #button1 {
     color: black;
-    margin: 18px 18px 50px 680px;
+    margin: 18px 18px 50px 540px;
     transition: 1s;
     border: none;
     background-color:#C07F00;
@@ -63,6 +63,8 @@ div.niha{
     font-weight: bold;
     border-radius: 20px ;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px, rgba(255, 255, 255, 1) 0px 0px 10px;
+
    
 }
 
@@ -89,15 +91,19 @@ a {
 
 #container2 {
     text-align: center;
-    width: 1360px;
+    /* width:  1360px; */
+    width: 1159px;
     height: 500px;
     display: flex;
     flex-direction: row;
-    margin-left: 75px;
-    margin-right: 100px;
+    margin-left: 40px;
+    margin-right: 40px;
     margin-top:5px;
     margin-bottom: 110px;
+    box-sizing:border-box;
     border: 10 solid rgb(255, 130, 130);
+    /* align-items:center; */
+    justify-content:space-between;
 }
 
 #box5 {
@@ -109,6 +115,8 @@ a {
     margin-right: 10px;
     position: relative;
     border: 2px solid rgb(206, 9, 6);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px, rgba(255, 255, 255, 1) 0px 0px 10px;
+
 }
 
 #box5:hover {
@@ -116,6 +124,7 @@ a {
     border: 3px solid rgb(206, 9, 6);
     transition: 0.9s;
     box-shadow: rgb(206, 9, 6);
+   
 }
 
 #box6 {
@@ -129,6 +138,8 @@ a {
     position: relative;
     top: 45px;
     border: 2px solid rgb(206, 9, 6);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px, rgba(255, 255, 255, 1) 0px 0px 10px;
+
 
 }
 
@@ -136,6 +147,7 @@ a {
     transform: scale(1.1);
     border: 5px solid rgb(206, 9, 6);
     transition: 0.9s;
+   
 }
 
 #box7 {
@@ -150,6 +162,8 @@ a {
     top: 80px;
     text-align: center;
     border: 2px solid rgb(206, 9, 6);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px, rgba(255, 255, 255, 1) 0px 0px 10px;
+
 
 
 
@@ -159,6 +173,7 @@ a {
     transform: scale(1.1);
     border: 5px solid rgb(206, 9, 6);
     transition: 0.9s;
+   
 }
 
 #box8 {
@@ -172,6 +187,9 @@ a {
     position: relative;
     top: 45px;
     border: 2px solid rgb(206, 9, 6);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px, rgba(255, 255, 255, 1) 0px 0px 10px;
+
+  
     
 }
 
@@ -180,7 +198,6 @@ a {
     border: 5px solid rgb(206, 9, 6);
     transition: 0.9s;
 }
-
 #box9 {
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPF21UstFZ23Hy_Kfnad_8zlAcnMohJLuoBg&s");
     background-size: cover;
@@ -191,13 +208,16 @@ a {
     margin-left: 10px;
     position: relative;
     border: 2px solid rgb(206, 9, 6);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px, rgba(255, 255, 255, 1) 0px 0px 10px;
 
+   
 }
 
 #box9:hover {
     transform: scale(1.1);
     border: 5px solid rgb(206, 9, 6);
     transition: 0.9s;
+  
 }
 #text1{
     color: #c84d4d;
