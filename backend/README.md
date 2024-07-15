@@ -1,48 +1,93 @@
-This is a base node js project template, which anyone can use as it has been prepared, by keeping some of the most important code principles and project management recommendations. Feel free to change anything. 
+## Backend Module - Travel Booking API
 
+This is the backend module for a travel booking API. It utilizes MongoDB for data storage and Express.js for server-side development.
 
-`src` -> Inside the src folder all the actual source code regarding the project will reside, this will not include any kind of tests. (You might want to make separate tests folder)
+### Environment Variables
 
-Lets take a look inside the `src` folder
+The following environment variables are required and should be defined in a `.env` file:
 
- - `config` -> In this folder anything and everything regarding any configurations or setup of a library or module will be done. For example: setting up `dotenv` so that we can use the environment variables anywhere in a cleaner fashion, this is done in the `server-config.js`. One more example can be to setup you logging library that can help you to prepare meaningful logs, so configuration for this library should also be done here. 
+* `PORT`: The port on which the server will listen (default: 5000)
+* `DATABASE_URL`: The MongoDB connection string
+* `JWT_SECRET_KEY`: The secret key used for signing JSON Web Tokens (JWT)
+* `TOKEN_EXP`: The expiration time for JWTs (e.g., "1h" for 1 hour)
 
- - `routes` -> In the routes folder, we register a route and the corresponding middleware and controllers to it. 
+**Example .env file:**
 
- - `middlewares` -> they are just going to intercept the incoming requests where we can write our validators, authenticators etc. 
+```
+PORT=5000
+DATABASE_URL="mongodb+srv://username:password@cluster0.3bdpkm7.mongodb.net/?appName=Cluster0"
+JWT_SECRET_KEY="authorizationAndAuthentication"
+TOKEN_EXP="1h"
+```
 
- - `controllers` -> they are kind of the last middlewares as post them you call you business layer to execute the budiness logic. In controllers we just receive the incoming requests and data and then pass it to the business layer, and once business layer returns an output, we structure the API response in controllers and send the output. 
+**How to create a `.env` file:**
 
- - `repositories` -> this folder contains all the logic using which we interact the DB by writing queries, all the raw queries or ORM queries will go here.
+1. Create a file named `.env` in the root directory of your project.
+2. Add the environment variables as key-value pairs on separate lines.
+3. **Do not** commit the `.env` file to your version control system (e.g., Git).
 
- - `services` -> contains the buiness logic and interacts with repositories for data from the database
+### Dependencies
 
- - `utils` -> contains helper methods, error classes etc.
+This project uses the following dependencies:
 
-### Setup the project
+* express: Web framework for building server-side applications
+* mongoose: Object Document Mapper (ODM) for MongoDB
+* http-status-codes: Provides convenient HTTP status code handling
+* bcryptjs: Password hashing library
+* jsonwebtoken: Library for generating and verifying JWTs
 
- - Download this template from github and open it in your favourite text editor. 
- - Go inside the folder path and execute the following command:
-  ```
-  npm install
-  ```
- - In the root directory create a `.env` file and add the following env variables
-    ```
-        PORT=<port number of your choice>
-    ```
-    ex: 
-    ```
-        PORT=3000
-    ```
- - go inside the `src` folder and execute the following command:
-    ```
-      npx sequelize init
-    ```
- - By executing the above command you will get migrations and seeders folder along with a config.json inside the config folder. 
- - If you're setting up your development environment, then write the username of your db, password of your db and in dialect mention whatever db you are using for ex: mysql, mariadb etc
- - If you're setting up test or prod environment, make sure you also replace the host with the hosted db url.
+**Installation:**
 
- - To run the server execute
- ```
- npm run dev
- ```
+```bash
+cd backend
+npm install
+```
+
+### Starting the Server
+
+Start the development server with the following command:
+
+```bash
+npm run dev
+```
+
+This will start the server on the port specified in the `PORT` environment variable (default: 5000).
+
+### API Endpoints
+
+Here's a breakdown of the API endpoints available in this module:
+
+**1. Locations Routes (`/locations`):**
+
+* **GET /locations** (Public): Retrieves all locations from the database.
+* **GET /locations/:id** (Public): Retrieves a specific location by its ID.
+* **POST /locations/create** (**Authorization Required - Admin Role**): Creates a new location. Requires the following request body:
+    * `img` (String): URL of the location image.
+    * `locationName` (String): Name of the location.
+    * `locationMapLink` (String): Link to the location on a map service.
+    * `price` (Number): Price per night for the location.
+    * `rating` (Number): Average rating of the location (optional).
+    * `description` (String): Description of the location (optional).
+    * `climateInfo` (String): Information about the location's climate (optional).
+    * `transportationType` (Array of Strings): Types of transportation available to reach the location (optional).
+    * `thingsToDo` (Array of Strings): Things to do around the location (optional).
+* **PUT /locations/:id** (**Authorization Required - Admin Role**): Updates an existing location by its ID. Requires the same request body format as `POST /locations/create`.
+* **DELETE /locations/:id** (**Authorization Required - Admin Role**): Deletes a location by its ID.
+
+**2. User Routes (`/auth`):**
+
+* **POST /auth/signup** (Public): Creates a new user account. Requires the following request body:
+    * `name` (String): User's full name.
+    * `email` (String): User's email address.
+    * `password` (String): User's password.
+    * `role` (String - optional): User's role (default: "Customer"). Can be "Admin" for admin users.
+* **POST /auth/login** (Public): Logs a user in and returns an access token. Requires the following request body:
+    * `email` (String): User's email address.
+    * `password` (String): User's password.
+* **GET /auth/logout** (**Authorization Required**): Logs the currently authenticated user out.
+
+**3. Trip Booking Routes (`/trip`):**
+
+* **POST /trip/book** (**Authorization Required**): Books a location for the currently authenticated user. Requires the following request body:
+    * `id` (String): ID of the location to be booked.
+    * `checkin` (Date): Check-in date
