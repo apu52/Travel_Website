@@ -2318,20 +2318,26 @@ body {
 
 /* ///////////////////// */
 
-/* ******* */
+/* Sub-header Hover Effect */
 .sub__header:hover {
   background-color: transparent;
   color: var(--primary-color);
+  transition: color 0.3s ease; /* Smooth transition for color change */
 }
 
-/* Light mode  And Dark mode of AboutUs*/
-
+/* Light Mode and Dark Mode of AboutUs */
 .headingofAbout {
-  font-weight: bolder;
-  /* Set font weight to bolder */
+  font-weight: bold; /* Make the heading bold */
   text-align: center;
-  color: var(--text-dark);
-  /* Use the text-dark custom property for color */
+  color: yellow; /* Set heading color to yellow */
+  font-size: 2.5rem; /* Increase font size */
+  margin: 20px 0; /* Add margin for spacing */
+  text-shadow: 
+      -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000; /* Dark black outline around each letter */
+  font-family: 'Roboto', sans-serif; /* Use Roboto font family */
 }
 
 /* Styling for elements with .aboutcon class */
@@ -2340,17 +2346,48 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background-color: var(--body-light);
-  /* Use the text-dark custom property for color */
+  background: linear-gradient(135deg, #7b4397, #dc2430); /* Gradient background */
+  padding: 40px 20px; /* Add padding for spacing */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
 /* Styling for elements with .aboutcontent class */
 .aboutcontent {
   text-align: center;
   color: var(--text-dark);
-  /* Use the text-dark custom property for color */
   margin-bottom: 20px;
+  flex: 1 1 300px; /* Make flex items responsive */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Background color for content */
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for transform and background color */
 }
+
+/* Hover Effect for aboutcontent */
+.aboutcontent:hover {
+  transform: scale(1); /* Slightly enlarge on hover */
+  background-color: rgba(255, 255, 255, 1); /* Change background color on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .aboutcon {
+      flex-direction: column; /* Stack items vertically on small screens */
+  }
+
+  .headingofAbout {
+      font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+}
+/* Adjust hover effect for touch devices */
+@media (hover: none) {
+  .aboutcontent:hover {
+      transform: none; /* Remove scaling on touch devices */
+  }
+}
+
 
 /* Styling for SVG elements inside .iconss class */
 .iconss svg {
