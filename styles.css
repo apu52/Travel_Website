@@ -2098,6 +2098,10 @@ body {
   box-sizing: border-box;
 }
 
+#themeToggle {
+  width: inherit;
+}
+
 .hamburger {
   height: 2rem;
   width: 1.7rem;
@@ -2188,6 +2192,11 @@ body {
 .navLinks.activeHamburger {
   width: 100%;
 }
+
+/* Initially the Login Button and View button are not in Hamburger Menu */
+.navLinks #LogIn-link, .navLinks #View-link {
+  display: none;
+}
 /* @media screen and (max-width: 1146px) {
   .toggle-container {
     position: relative;
@@ -2221,6 +2230,64 @@ body {
     top: 1px;
   }
 } */
+
+/* Move Login from newNav to Hamburger */
+@media screen and (max-width: 690px) {
+  .navLinks #LogIn-link {
+    display: inline;
+  }
+  .newNav #nav-login-btn {
+    display: none;
+  }
+}
+
+/* Move Login from Hamburger to newNav */
+@media screen and (min-width: 690px) {
+  .navLinks #LogIn-link {
+    display: none;
+  }
+  .newNav #nav-login-btn {
+    display: inline;
+  }
+}
+
+/* Move View from newNav to Hamburger */
+@media screen and (max-width: 510px) {
+  .navLinks #View-link {
+    display: inline;
+  }
+  .newNav #nav-view-btn {
+    display: none;
+  }
+  .newNav img{
+    position: relative;
+  }
+}
+
+/* Move View from Hamburger to newNav */
+@media screen and (min-width: 510px) {
+  .navLinks #View-link {
+    display: none;
+  }
+  .newNav #nav-view-btn {
+    display: inline;
+  }
+}
+
+/* TO prevent unnecessary wrapping */
+@media screen and (max-width: 400px) {
+  .newNav {
+    gap: 0;
+  }
+}
+
+/* Hide the logo name */
+@media screen and (max-width: 350px) {
+  .newNav .nav__logo {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 652px) {
   .toggle {
     width: 5vw;
@@ -2228,21 +2295,7 @@ body {
   .line {
     width: 5vw;
   }
-  .newNav img {
-    position: relative;
-    bottom: 23px;
-    left: 109px;
-  }
-  .nav__logo {
-    position: relative;
-    left: 85px;
-    bottom: 20px;
-  }
-  .btn {
-    position: relative;
-    top: 30px;
-    left: -147px;
-  }
+
 }
 @media only screen and (max-width:577px){
   .but{
@@ -2252,14 +2305,7 @@ body {
   }
 }
 @media only screen and (max-width: 465.5px){
-  .newNav img{
-    position: relative;
-    left: -58px;
-  }
-  .nav__logo{
-    position: relative;
-    left: -82px;
-  }
+
   .but{
     position: relative;
     left:17px;
@@ -2778,10 +2824,6 @@ button:hover {
     max-width: 40%; /* Limit width to prevent overflow */
   }
 
-  .newNav {
-    justify-content: right;
-    gap: 27px;
-  }
   .nav-container {
     width: 100%;
     justify-content: center;
