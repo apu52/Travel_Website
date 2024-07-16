@@ -573,6 +573,11 @@ link a:hover {
   background-color:red;
 }
 
+.navLinks a:hover{
+  text-decoration: underline;
+  color: red;
+}
+
 .home {
   margin-left: 210px;
 }
@@ -2083,10 +2088,10 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.link a:hover::before {
+/* .link a:hover::before {
   width: 100%;
   transition: all 0.2s ease-in-out;
-}
+} */
 
 .link a:hover::after {
   width: 100%;
