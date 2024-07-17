@@ -156,7 +156,7 @@
   <section class="trip" id="trip">
     <div class="section__container trip__container">
       <h2 class="section__title">Best trip package</h2>
-      <p class="section__subtitle">
+      <p class="section__subtitle text-center">
         Explore your suitable and dream places around the world. Here you can find your right destination.</p>
       </b></h2>
 
@@ -202,13 +202,20 @@
     background-color: #f0f0f0;
     border-color: #999;
 }
-
-
+.info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.info .tags i{
+  margin:2px;
+  color:cornflowerblue;
+}
       .search-bar{
         width: 1500px;
         height: 50%;
         max-width: 400%;
-        background:rgba(0, 13, 79, 0.696);
+        /* background:rgba(0, 13, 79, 0.696); */
         display: flex;
         align-items: center;
         border-radius: 58px;
@@ -275,6 +282,44 @@ function filterProducts() {
 </script>
 
       <!-- end of search button -->
+
+      <div class="categories">
+        <span class="each">
+          <svg viewBox="0 0 24 24" width="20px" height="20px" class="d Vb UmNoP"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.895 5.275h6.176V11.5h-1.643V8.08l-7.879 7.88-3.346-3.347-6.112 6.112-1.162-1.162 7.274-7.274 3.346 3.347 6.718-6.718h-3.372V5.275z"></path></svg>
+          <h5>Trending</h5>
+        </span>
+
+        <span class="each">
+          <svg viewBox="0 0 24 24" width="20px" height="20px" class="d Vb UmNoP"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.718 5.172H5.982v.384l-.276.225-1.697 1.381c.127.084.275.18.434.28.41.26.873.538 1.172.715l.242.144.088.268c.216.659.74 1.694 1.587 2.566.837.862 1.953 1.533 3.378 1.58l.724.025v4.845l-.57.14c-.565.141-1.415.44-2.104.866-.707.438-1.008.855-1.033 1.188.054.018.15.037.308.037H15.465c.158 0 .254-.02.308-.037-.025-.333-.326-.75-1.034-1.188-.688-.425-1.538-.725-2.104-.865l-.57-.141V12.74l.725-.024c1.425-.048 2.541-.719 3.378-1.581.846-.872 1.37-1.907 1.587-2.566l.088-.268.242-.144c.3-.177.761-.456 1.172-.715.159-.1.307-.196.434-.28l-1.697-1.38-.276-.226v-.384zm-2.196 16.143c.567-.01 1.042-.169 1.369-.5.314-.318.412-.714.383-1.036-.023-1.162-.95-1.972-1.746-2.464a9.152 9.152 0 00-1.963-.882v-2.285c1.56-.237 2.783-1.044 3.68-1.969a8.74 8.74 0 001.838-2.87c.288-.173.646-.39.975-.598.212-.135.418-.268.586-.382.147-.1.326-.227.438-.338.29-.291.371-.654.324-.967a1.244 1.244 0 00-.292-.625l-.041-.047-.048-.039-1.807-1.47v-1.17H4.482v1.17l-1.807 1.47-.048.04-.041.046c-.118.134-.25.35-.292.625-.047.313.033.676.324.967.111.111.291.238.437.338.169.114.375.247.587.382.33.207.687.425.974.598a8.74 8.74 0 001.839 2.87c.897.925 2.12 1.732 3.68 1.97v2.284a9.152 9.152 0 00-1.963.882c-.796.492-1.723 1.302-1.746 2.464-.029.322.069.718.383 1.036.338.342.834.5 1.426.5H15.522zm-7.655-1.562l.002.001-.002-.001zm7.966 0l-.002.001.002-.001z"></path></svg>         
+           <h5>Top </h5>
+        </span>
+
+        <span class="each">
+          <svg viewBox="0 0 24 24" width="20px" height="20px" class="d Vb UmNoP"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.005 3.893l9.844 16.214H2.15l4.535-7.141 5.319-9.073zM7.94 13.79l-3.06 4.818h14.302l-2.564-4.224-.072.06c-.436.348-1.099.664-2.031.664-.549 0-1.02-.185-1.42-.408a9.386 9.386 0 01-.945-.634l-.139-.102c-.686-.499-1.26-.856-1.996-.856-.868 0-1.408.215-1.713.395a1.65 1.65 0 00-.362.287zm7.875-.728l-3.789-6.24-2.837 4.84c.253-.034.528-.054.826-.054 1.265 0 2.19.642 2.879 1.143l.154.113c.294.215.534.39.778.526.272.152.488.218.689.218.568 0 .905-.184 1.094-.336.1-.08.166-.156.204-.208l.002-.002z"></path></svg>
+          <h5>Nature</h5>
+        </span>
+
+        <span class="each">
+          <svg viewBox="0 0 24 24" width="20px" height="20px" class="d Vb UmNoP"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.578 4.891L16.25 2.22l1.06 1.06-2.671 2.672c-.679.679-1.055 1.462-1.12 2.199-.043.5.054 1.003.327 1.472L18.75 4.72l1.06 1.06-4.906 4.906c.473.281.974.387 1.466.354.718-.047 1.467-.394 2.096-1.023A869.223 869.223 0 0021.02 7.45l.226-.228h.001l1.066 1.055-.227.23a983.524 983.524 0 01-2.56 2.57c-.849.849-1.927 1.384-3.057 1.459a4.026 4.026 0 01-2.647-.768L12.591 13l7.72 7.72-1.061 1.06-5.97-5.97-3 3-1.75-1.75-4.72 4.72-1.06-1.06L7.47 16 3.077 11.61a4.75 4.75 0 010-6.718l.702-.702 7.75 7.75 1.232-1.232a3.971 3.971 0 01-.737-2.686c.1-1.147.67-2.246 1.553-3.13zm-1.359 9.86L3.808 6.338a3.25 3.25 0 00.33 4.21l6.142 6.14 1.94-1.939z"></path></svg>
+          <h5>Food</h5>
+        </span>
+
+        <span class="each">
+          <svg viewBox="0 0 24 24" width="20px" height="20px" class="d Vb UmNoP"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.844 14.907c.641-1.435.82-2.898.49-4.272-.348-1.457-1.249-2.744-2.63-3.754C13.965 4.88 9.322 3.946 2.983 4.763l-.769.1.125.764c.53 3.276 3.15 7.269 6.258 9.679 1.562 1.211 3.323 2.083 5.085 2.213 1.499.11 2.948-.321 4.2-1.435 1.164 1.323 2.075 2.565 2.64 3.448l1.263-.807c-.63-.988-1.647-2.367-2.94-3.818zm-1.134-1.214c.32-.96.365-1.876.165-2.71-.254-1.062-.92-2.06-2.056-2.89-2.192-1.603-6.112-2.55-11.834-1.938.714 2.693 2.907 5.93 5.531 7.965 1.431 1.11 2.915 1.803 4.277 1.903 1.08.08 2.126-.208 3.075-1.044-.268-.279-.546-.558-.833-.835-2.057-1.989-4.512-3.806-7.055-4.634l.465-1.426c2.853.928 5.502 2.921 7.633 4.981.215.209.426.418.632.628z"></path></svg>
+          <h5>Sustainable</h5>
+        </span>
+
+        <span class="each">
+          <svg viewBox="0 0 24 24" width="20px" height="20px" class="d Vb UmNoP"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.686l9.75 5.958v1.67h-3v9.5H21v1.5H3v-.75-.75h2.25v-9.5h-3v-1.67L12 2.686zm-5.25 7.629v9.5h2.5v-9.5h-2.5zm4 0v9.5h2.5v-9.5h-2.5zm4 0v9.5h2.5v-9.5h-2.5zm-9.903-1.5h14.306L12 4.443 4.847 8.815z"></path></svg>
+          <h5>Cultural</h5>
+        </span>
+
+        <span class="each">
+          <svg viewBox="0 0 24 24" width="20px" height="20px" class="d Vb UmNoP"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.871 20.474l.3.199.3-.25c.5-.297 4.7-3.051 4.7-5.2 0-1.598-1.353-2.9-3.002-2.9-.748 0-1.397.35-1.897.65a.315.315 0 01-.3 0c-.45-.3-1.102-.65-1.8-.65-1.65 0-3 1.35-3 2.95 0 2.099 4.2 4.902 4.7 5.2zm.266-1.623A18.684 18.684 0 0018.01 17.4c.513-.458.964-.93 1.276-1.367.332-.469.386-.732.386-.808 0-.72-.63-1.4-1.502-1.4-.301 0-.64.144-1.123.435l-.048.029-.05.025a1.814 1.814 0 01-1.658-.003l-.079-.04-.073-.049a3.11 3.11 0 00-.54-.296 1.166 1.166 0 00-.426-.101c-.84 0-1.5.695-1.5 1.449 0 .058.047.313.384.785.314.438.767.912 1.281 1.375.66.593 1.345 1.1 1.8 1.418z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M7.82 4.831c1.17 0 2.263.587 3.016 1.09a.529.529 0 00.505 0c.838-.505 1.927-1.09 3.18-1.09 2.766 0 5.035 2.182 5.035 4.863 0 .664-.24 1.362-.635 2.063l-1.13-1.078c.186-.399.265-.728.265-.985 0-1.802-1.546-3.363-3.534-3.363-.808 0-1.586.38-2.408.875l-.047.029-.05.025c-.592.3-1.265.302-1.862-.003l-.079-.04-.073-.049c-.692-.462-1.474-.837-2.184-.837-1.957 0-3.532 1.608-3.532 3.445 0 .413.226 1.053.835 1.906.585.82 1.404 1.67 2.295 2.471a33.417 33.417 0 003.614 2.795l1.177 1.123c-.25.166-.436.282-.535.34l-.502.42-.503-.334c-.836-.5-7.88-5.201-7.88-8.72 0-2.684 2.263-4.946 5.031-4.946z"></path></svg>
+          <h5>HoneyMoon</h5>
+        </span>
+
+      </div>
         
       <div class="trip__grid">
 
@@ -282,7 +327,15 @@ function filterProducts() {
           <img src="https://i.ibb.co/60nvYwQ/Screenshot-2023-07-14-173347.png" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>Santorini ,Aegean Sea</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fa-solid fa-umbrella-beach"></i>
+                <i class="fa-solid fa-utensils"></i>
+                <i class="fa-solid fa-martini-glass"></i>
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            </div>
+           
             <div class="booking__price">
               <div class="price" id="filter" data-price="300"><span>From</span> $300</div>
               <a href="./dedicated-destinations/santorini-aegean-sea/start.html"><button class="book__now">Book
@@ -290,11 +343,21 @@ function filterProducts() {
             </div>
           </div>
         </div>
+
+
         <div class="trip__card">
           <img src="https://i.ibb.co/h1WgH8B/Screenshot-2023-07-14-173807.png" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>Machu Picchu ,Peru</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fa-solid fa-landmark"></i>
+                <i class="fa-solid fa-mountain"></i>
+                <i class="fa-solid fa-leaf"></i>
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            </div>
+
             <div class="booking__price">
               <div class="price"id="filter" data-price="450"><span>From</span> $450</div>
               <a href="./dedicated-destinations/machu-picchu-peru/Machu_start.html"><button class="book__now">Book
@@ -306,7 +369,15 @@ function filterProducts() {
           <img src="https://i.ibb.co/vc2W0wN/Screenshot-2023-07-14-174151.png" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>Grand Canyon National Park ,Arizona</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fa-solid fa-person-hiking"></i>
+                <i class="fa-solid fa-mountain"></i>
+                <i class="fa-solid fa-leaf"></i>
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            </div>
+           
             <div class="booking__price">
               <div class="price" id="filter" data-price="400"><span>From</span> $400</div>
               <a href="./dedicated-destinations/grand-canyon-national-park-arizona/Grand_start.html"><button
@@ -318,7 +389,16 @@ function filterProducts() {
           <img src="./img/london.jpg" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>London</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fa-solid fa-landmark"></i>
+                <i class="fa-solid fa-ship"></i>
+                <i class="fas fa-water"></i>
+                <i class="fa-solid fa-city"></i>
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            </div>
+        
             <div class="booking__price">
               <div class="price" id="filter" data-price="300"><span>From</span> $300</div>
               <a href="./dedicated-destinations/london/start.html"><button class="book__now">Book Now</button></a>
@@ -329,7 +409,15 @@ function filterProducts() {
           <img src="./img/dubai.webp" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>Dubai</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fa-solid fa-landmark"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-city"></i>
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            </div>
+      
             <div class="booking__price">
               <div class="price"id="filter" data-price="450"><span>From</span> $450</div>
               <a href="./dedicated-destinations/dubai/start.html"><button class="book__now">Book Now</button></a>
@@ -340,7 +428,15 @@ function filterProducts() {
           <img src="./img/nyc.avif" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>New York</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fas fa-archway"></i>
+                <i class="fas fa-building"></i>
+                <i class="fa-solid fa-city"></i>
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            </div>
+            
             <div class="booking__price">
               <div class="price" id="filter" data-price="400"><span>From</span> $400</div>
               <a href="./dedicated-destinations/new-york/start.html"><button class="book__now">Book Now</button></a>
@@ -352,29 +448,57 @@ function filterProducts() {
           <img src="./img/paris.jpg" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>Paris</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fas fa-archway"></i>
+                <i class="fas fa-landmark"></i>
+                <i class="fas fa-church"></i>
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            </div>
+             
             <div class="booking__price">
               <div class="price" id="filter" data-price="300"><span>From</span> $300</div>
               <a href="./dedicated-destinations/paris/start.html"><button class="book__now">Book Now</button></a>
             </div>
           </div>
         </div>
+
         <div class="trip__card">
           <img src="./img/goa.jpg" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>Goa</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fas fa-umbrella-beach"></i>
+                <i class="fas fa-landmark"></i>
+                <i class="fas fa-music"></i>
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            </div>
+
             <div class="booking__price">
               <div class="price" id="filter" data-price="450"><span>From</span> $450</div>
               <a href="./dedicated-destinations/goa/start.html"><button class="book__now">Book Now</button></a>
             </div>
           </div>
         </div>
+
+
         <div class="trip__card">
           <img src="./img/kashmir.avif" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>Kashmir</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fas fa-mountain"></i>
+                <i class="fa-solid fa-snowflake"></i>
+                <i class="fas fa-skiing"></i>
+                <i class="fas fa-water"></i>
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            </div>
+
             <div class="booking__price">
               <div class="price" id="filter" data-price="400"><span>From</span> $400</div>
               <a href="./dedicated-destinations/kashmir/start.html"><button class="book__now">Book Now</button></a>
@@ -385,18 +509,37 @@ function filterProducts() {
           <img src="./img/maldives.jpg" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>Maldives</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fas fa-umbrella-beach"></i>
+                <i class="fa-solid fa-cloud-sun"></i>
+                <i class="fas fa-spa"></i>
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            </div>
+         
             <div class="booking__price">
               <div class="price" id="filter" data-price="300"><span>From</span> $300</div>
               <a href="./dedicated-destinations/maldives/start.html"><button class="book__now">Book Now</button></a>
             </div>
           </div>
         </div>
+
+
         <div class="trip__card">
           <img src="./img/bali.webp" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>Bali</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fas fa-umbrella-beach"></i>
+                <i class="fas fa-shopping-bag"></i>
+                <i class="fas fa-swimmer"></i>
+                <i class="fas fa-place-of-worship"></i>
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            </div>
+
             <div class="booking__price">
               <div class="price" id="filter" data-price="450"><span>From</span> $450</div>
               <a href="./dedicated-destinations/bali/start.html"><button class="book__now">Book Now</button></a>
@@ -408,7 +551,16 @@ function filterProducts() {
             width="45" />
           <div class="trip__details">
             <p>Brazil</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fas fa-tree"></i>
+                <i class="fas fa-umbrella-beach"></i>
+                <i class="fas fa-drum"></i>
+                <i class="fa-solid fa-futbol"></i>
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            </div>
+
             <div class="booking__price">
               <div class="price" id="filter" data-price="400"><span>From</span> $400</div>
               <a href="./dedicated-destinations/brazil/start.html"><button class="book__now">Book Now</button></a>
