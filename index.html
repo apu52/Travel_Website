@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -342,6 +343,10 @@
       </nav>
     </div>
     <header>
+      <div class="nav-wrapperr">
+        <div class="progress-bar"></div>
+      </div>
+      
       <section class="section__container header__container" id="Home">
         <div class="header__image" data-aos="fade-down-right">
           <img src="https://i.ibb.co/88Qnjxg/pexels-josh-hild-2422259.jpg" alt="header" />
@@ -1940,30 +1945,50 @@
     });
   </script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      function animateValue(id, start, end, duration) {
-        const obj = document.getElementById(id);
-        const startTime = performance.now();
 
-        function updateValue(timestamp) {
-          const elapsedTime = timestamp - startTime;
-          const progress = Math.min(elapsedTime / duration, 1);
-          const currentValue = Math.floor(progress * (end - start) + start);
-          obj.textContent = currentValue;
-          if (progress < 1) {
-            requestAnimationFrame(updateValue);
-          }
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    function animateValue(id, start, end, duration) {
+      const obj = document.getElementById(id);
+      const startTime = performance.now();
+
+      function updateValue(timestamp) {
+        const elapsedTime = timestamp - startTime;
+        const progress = Math.min(elapsedTime / duration, 1);
+        const currentValue = Math.floor(progress * (end - start) + start);
+        obj.textContent = currentValue;
+        if (progress < 1) {
+          requestAnimationFrame(updateValue);
+
         }
 
         requestAnimationFrame(updateValue);
       }
+</script>
+
+
+<script>
+    const scrollline = document.querySelector('.progress-bar');
+
+  function fillscrollline(){
+    const windowHeight = window.innerHeight;
+    const fullHeight = document.body.clientHeight;
+    const scrolled = window.scrollY;
+    const percentScrolled = (scrolled / (fullHeight - windowHeight)) * 100;
+
+    scrollline.style.width = percentScrolled + '%';
+  };
+
+    window.addEventListener('scroll', fillscrollline);
+
 
       // Call the function for each count-up element
       animateValue("guidesCount", 0, 25000, 20000);
       animateValue("toursCount", 0, 20000, 20000);
       animateValue("destinationsCount", 0, 10994, 20000);
     });
+
   </script>
 
 
