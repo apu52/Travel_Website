@@ -1248,18 +1248,14 @@ body, html {
   width: 100%;
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
-  /* align-items: flex-start; */
-  justify-content: space-between;
-  /* grid-template-columns: repeat(3, 1fr); */
-  /* gap: 20px; */
+  flex-wrap: wrap;
+  align-items: flex-start;
+  grid-template-columns: repeat(3, 1fr);
   color: var(--secondary-color);
-  margin: 0;
-    padding: 0;
 }
 
 .footer__col {
-  margin-left: 15px;
+  margin-left: 20px;
   flex: 1;
   display: flex;
   max-width: 220px;
@@ -1318,7 +1314,7 @@ body, html {
   /*   color: var(--secondary-color); */
   color: var(--extra-light);
   padding-top: 1rem;
-  margin-top: 1rem;
+  margin-top: 3rem;
   border-top: 2px solid var(--text-light);
 }
 
@@ -2506,6 +2502,25 @@ body {
   overflow: hidden;
   margin-bottom: 50px;
   top: 45px;
+}
+
+/* Light theme */
+.testimonials .testimonial-user{  
+  background-color: #efefef;
+}
+.testimonials .testimonial-user p{
+  color: #2a2e31;
+}
+/* Dark theme */
+body.dark-theme .testimonials {
+  background-color: #002152;
+}
+
+body.dark-theme .testimonials .testimonial-user{
+  background-color: black;
+}
+body.dark-theme .testimonials .testimonial-user p{
+  color: white;
 }
 
 .swiper-slide {
