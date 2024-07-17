@@ -1,74 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="./Image-Gallery/style.css">
-    <title>Arpan Codes | Tourguide</title>
-    <!-- adding a fav-icon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-    
-    <script src="index.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Image-Gallery/style.css" />
+    <link rel="stylesheet" href="Image-Gallery/stylecaptions.css" />
+    <link rel="stylesheet" href="explore.css" />
+    <link rel="stylesheet" href="tilt.css" />
+    <link rel="stylesheet" href="jquery.flipster.min.css" />
+    <link rel="stylesheet" href="mouseEffect.css" />
+    <title>Story-Tourguide</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("WB9rAyWwwLZube-er");
-   })();
-</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
+    <script src="tilt.js"></script>
+    <script src="index.js" defer></script>
+    <script src="mouseEffect.js"></script>
+    <script src="Theme.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("WB9rAyWwwLZube-er");
+      })();
 
-  <style>
-  html {
-    scroll-behavior: smooth;
-  }
-  </style>
+      function planTrip() {
+        window.location.href = "plantrip.html";
+      }
+    </script>
 
+    <style>
+      body {
+        background: #d8e4ffe7 !important;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .active {
+        color: red !important;
+      }
+
+      @media screen and (max-width: 390px) {
+        .nav__logo {
+          position: relative;
+          right: 1.9rem;
+        }
+
+        .contact-btn {
+          position: relative;
+          right: 2.5rem;
+        }
+
+        .toggle-container {
+          position: relative;
+          right: 2.5rem;
+        }
+
+        .toggle {
+          width: 130%;
+        }
+
+        .line {
+          width: 150%;
+        }
+
+        .hamburger {
+          position: relative;
+          right: 1rem;
+        }
+      }
+
+      @media screen and (max-width: 364px) {
+        .toggle {
+          width: 190%;
+        }
+
+        .line {
+          width: 190%;
+        }
+      }
+
+      .gallery-rotate-image .image-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        /* Adjust the gap between images */
+      }
+
+      .gallery-rotate-image .image-container span {
+        display: inline-block;
+      }
+
+      .trip-gallery-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        /* Adjust the gap between images */
+      }
+
+      .trip-gallery-container .image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .trip-gallery-container .image-container img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .btn-container {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        /* Adjust the gap between buttons */
+      }
+
+      @media screen and (max-width: 768px) {
+        body {
+          align-items: flex-end;
+          width: auto;
+        }
+      }
+
+      .circle {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        pointer-events: none;
+        background: radial-gradient(
+          circle,
+          rgba(71, 240, 255, 0.3),
+          rgba(0, 119, 255, 0.3)
+        );
+        transition: transform 0.1s, left 0.1s, top 0.1s;
+      }
+
+      .circle-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9999;
+      }
+    </style>
   </head>
-  <body>
-    <!-- <nav>
-      <div class="nav__logo">Tourguide<span>.</span></div>
-      <ul class="nav__links">
-        <li class="link"><a href="#Home">Home</a></li>
-        <li class="link"><a href="#Destinations">Destinations</a></li>
-        <li class="link"><a href="#trip">Pricing</a></li>
-        <li class="link"><a href="#ReviewGallery">Reviews</a></li>
-      </ul>
-      <a href="#contact"><button class="btn">Contact Us</button></a>
-    </nav> -->
-    <div class="nav-container">
-      <nav class="newNav">
-        <div class="logo">
-          <video id="logo-video" autoplay loop muted>
-              <source src="Untitled (1).mp4" type="video/mp4">
-              Your browser does not support the video tag.
-          </video>
-          </div>
-        <ul class="navLinks">
-          <li class="link home" data-aos="fade-down"><a href="index.html">Home</a></li>
-          <li class="link" data-aos="fade-down"><a href="index.html#AboutUs">AboutUs</a></li>
-          <li class="link" data-aos="fade-down"><a href="index.html#Destinations">Destinations</a></li>
-          <li class="link" data-aos="fade-down"><a href="index.html#trip">Pricing</a></li>
-          <li class="link" data-aos="fade-down"><a href="index.html#ReviewGallery">Trip Gallery</a></li>
-          <li class="link" data-aos="fade-down"><a href="index.html#testimonials">Testimonials</a></li>
-          <li class="link" data-aos="fade-down"><a href="feedback.html">Rate Us?</a></li>
-          <li class="link" data-aos="fade-down"><a href="index.html#contact">Contact Us</a></li>
 
+  <body>
+    <div class="nav-container" id="top">
+      <nav class="newNav">
+        <img
+          src="./img/A T logo with a white background and a square shape, connected to nature for a travel company.png"
+          style="width: 30px; height: 30px; border-radius: 50%"
+        />
+
+        <a href="#" class="nav__logo" data-aos="fade-right">Tourguide</a>
+
+        <ul class="navLinks">
+         
+          <li>
+            <a style="color: white; font-weight: 600" href="/index.html"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              style="color: white; font-weight: 600"
+              href="/index.html/#AboutUs"
+              >About</a
+            >
+          </li>
+          <li>
+            <a style="color: white; font-weight: 600" href="#trip">Prices</a>
+          </li>
+          <li>
+            <a style="color: white; font-weight: 600" href="#ReviewGallery"
+              >Trip Gallery</a
+            >
+          </li>
+          <li>
+            <a style="color: white; font-weight: 600" href="#tourist"
+              >Tourist Guide</a
+            >
+          </li>
+          <li>
+            <a style="color: white; font-weight: 600" href="#Destinations"
+              >Destination</a
+            >
+          </li>
+          <li>
+            <a style="color: white; font-weight: 600" href="#hotel"
+              >Hotel & Resort</a
+            >
+          </li>
+          <li>
+            <a style="color: white; font-weight: 600" href="#testimonials"
+              >Testimonial</a
+            >
+          </li>
+          <li>
+            <a style="color: white; font-weight: 600" href="feedback.html"
+              >Rate Us</a
+            >
+          </li>
+          <li>
+            <a style="color: white; font-weight: 600" href="#cnt-form"
+              >Contact Us</a
+            >
+          </li>
+          
+          
+          
         </ul>
-        <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
-            data-aos="fade-down">Login</button></a>
-        <div class="toggle-container" data-aos="fade-down" style="background-color: red;">
-          <input id="themeToggle" class="toggle" type="checkbox">
+
+        <a href="newLogin.html" class="contact-btn" id="nav-login-btn"
+          ><button class="btn login" id="btn-style" data-aos="fade-down">
+            Login/SignUp
+          </button></a
+        >
+        <a href="mapa.html" class="contact-btn" id="nav-view-btn"
+          ><button
+            class="btn"
+            id="btn-style"
+            style="margin: 0"
+            data-aos="fade-down"
+          >
+            View
+          </button></a
+        >
+
+        <a href="loginPage.html" class="contact-btn"
+          ><button
+            class="btn"
+            id="logout-btn"
+            style="margin: 0; display: none"
+            data-aos="fade-down"
+            disabled
+          >
+            Log Out
+          </button></a
+        >
+
+        <div class="toggle-container" data-aos="fade-down">
+          <input id="themeToggle" class="toggle" type="checkbox" />
         </div>
         <div class="hamburger" data-aos="fade-down">
           <div class="line"></div>
@@ -78,18 +273,20 @@
       </nav>
     </div>
 
-    <!-- inserted a video in the header section to reflect "watch our story" -->
     <header>
-      <section class="section__container" style="margin-top: 20px; margin-bottom: -28px;background:rgb(241, 239, 239);">
+      <section
+        class="section__container"
+        style="
+          margin-top: 20px;
+          margin-bottom: -28px;
+          background: #d8e4ffe7 ";
+      >
         <video class="sized-video" autoplay controls>
-          <source src="img/travel_video.mp4" type="video/mp4">
+          <source src="img/travel_video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <!-- </div> -->
       </section>
     </header>
-
-    <!-- omitted uneccessary sections -->
 
     <footer class="footer">
       <div class="section__container footer__container">
@@ -103,68 +300,64 @@
         <div class="footer__col">
           <div class="footer__area">
             <h4>Support</h4>
-          <p><a href="./faq.html">FAQs</a></p>
-          <p><a href="./tnc.html">Terms & Conditions</a></p>
-          <p><a href="./privacy.html">Privacy Policy</a></p>
-          <p><a href="./index.html#cnt-form">Contact Us</a></p>
+            <p><a href="./faq.html">FAQs</a></p>
+            <p><a href="./tnc.html">Terms & Conditions</a></p>
+            <p><a href="./privacy.html">Privacy Policy</a></p>
+            <p><a href="./index.html#cnt-form">Contact Us</a></p>
           </div>
         </div>
         <div class="footer__col">
           <div class="footer__area">
-          <h4>Address</h4>
-          <p>
-            <span>Address:</span> 3/2 Wellington Street, Kolkata , West Bengal , India 
-          </p>
-          <p><span>Email:</span><a href="mailto:tour@tourguide.com">tour@tourguide.com</a></p>
-          <p><span>Phone:</span><a href="tel:8562145852"> +91 8562145852</a></p>
-        </div>
+            <h4>Address</h4>
+            <p>
+              <span>Address:</span> 3/2 Wellington Street, Kolkata, West Bengal,
+              India
+            </p>
+            <p>
+              <span>Email:</span
+              ><a href="mailto:tour@tourguide.com">tour@tourguide.com</a>
+            </p>
+            <p>
+              <span>Phone:</span><a href="tel:8562145852"> +91 8562145852</a>
+            </p>
+          </div>
         </div>
       </div>
       <div class="footer__bar">
         Copyright © 2023 Arpan Chowdhury. All rights reserved.
       </div>
     </footer>
-    <!-- adding a btn -->
-    <button id="goToTopBtn" onclick="goToTop()">Go to Top</button>
+
+    <a class="goupbtn" href="#" onclick="goToTop()"
+      ><i class="fa-solid fa-arrow-up"></i
+    ></a>
+
     <script>
-      // Get the button
-      var mybutton = document.getElementById("goToTopBtn");
-    
-      // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function () {
-        scrollFunction();
-      };
-    
-      function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      var mybutton = document.querySelector(".goupbtn");
+
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 20) {
           mybutton.style.display = "block";
         } else {
           mybutton.style.display = "none";
         }
-      }
-    
-      // When the user clicks on the button, scroll to the top of the document
+      });
+
       function goToTop() {
-        document.body.scrollTop = 0; 
-        document.documentElement.scrollTop = 0; 
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+      function replaceDivs() {
+        var originalDiv = document.getElementById("originalDiv");
+        var newDiv = document.getElementById("newDiv");
+
+        if (originalDiv) {
+          originalDiv.style.display = "none";
+          newDiv.style.display = "block";
+        }
       }
     </script>
+    <script src="./Image-Gallery/script.js"></script>
   </body>
-  <script>
-    function replaceDivs() {
-      // Get references to the original and new divs
-      var originalDiv = document.getElementById("originalDiv");
-      var newDiv = document.getElementById("newDiv");
-
-      // Check if the original div exists
-      if (originalDiv) {
-          // Hide the original div
-          originalDiv.style.display = "none";
-
-          // Show the new div
-          newDiv.style.display = "block";
-      }
-  }
-  </script>
-  <script src="./Image-Gallery/script.js"></script>
 </html>
