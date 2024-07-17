@@ -2507,6 +2507,25 @@ body {
   top: 45px;
 }
 
+/* Light theme */
+.testimonials .testimonial-user{  
+  background-color: #efefef;
+}
+.testimonials .testimonial-user p{
+  color: #2a2e31;
+}
+/* Dark theme */
+body.dark-theme .testimonials {
+  background-color: #002152;
+}
+
+body.dark-theme .testimonials .testimonial-user{
+  background-color: black;
+}
+body.dark-theme .testimonials .testimonial-user p{
+  color: white;
+}
+
 .swiper-slide {
   background-position: center;
   background-size: cover;
