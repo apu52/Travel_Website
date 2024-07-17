@@ -573,6 +573,11 @@ link a:hover {
   background-color:red;
 }
 
+.navLinks a:hover{
+  text-decoration: underline;
+  color: red;
+}
+
 .home {
   margin-left: 210px;
 }
@@ -1251,11 +1256,14 @@ body, html {
   flex-wrap: wrap;
   align-items: flex-start;
   grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   color: var(--secondary-color);
+  margin: 0;
+    padding: 0;
 }
 
 .footer__col {
-  margin-left: 20px;
+  margin-left: 15px;
   flex: 1;
   display: flex;
   max-width: 220px;
@@ -1314,7 +1322,7 @@ body, html {
   /*   color: var(--secondary-color); */
   color: var(--extra-light);
   padding-top: 1rem;
-  margin-top: 3rem;
+  margin-top: 1rem;
   border-top: 2px solid var(--text-light);
 }
 
@@ -2080,10 +2088,10 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.link a:hover::before {
+/* .link a:hover::before {
   width: 100%;
   transition: all 0.2s ease-in-out;
-}
+} */
 
 .link a:hover::after {
   width: 100%;
@@ -2093,6 +2101,10 @@ body {
   position: relative;
   right: 15px;
   box-sizing: border-box;
+}
+
+#themeToggle {
+  width: inherit;
 }
 
 .hamburger {
@@ -2185,6 +2197,11 @@ body {
 .navLinks.activeHamburger {
   width: 100%;
 }
+
+/* Initially the Login Button and View button are not in Hamburger Menu */
+.navLinks #LogIn-link, .navLinks #View-link {
+  display: none;
+}
 /* @media screen and (max-width: 1146px) {
   .toggle-container {
     position: relative;
@@ -2218,6 +2235,64 @@ body {
     top: 1px;
   }
 } */
+
+/* Move Login from newNav to Hamburger */
+@media screen and (max-width: 690px) {
+  .navLinks #LogIn-link {
+    display: inline;
+  }
+  .newNav #nav-login-btn {
+    display: none;
+  }
+}
+
+/* Move Login from Hamburger to newNav */
+@media screen and (min-width: 690px) {
+  .navLinks #LogIn-link {
+    display: none;
+  }
+  .newNav #nav-login-btn {
+    display: inline;
+  }
+}
+
+/* Move View from newNav to Hamburger */
+@media screen and (max-width: 510px) {
+  .navLinks #View-link {
+    display: inline;
+  }
+  .newNav #nav-view-btn {
+    display: none;
+  }
+  .newNav img{
+    position: relative;
+  }
+}
+
+/* Move View from Hamburger to newNav */
+@media screen and (min-width: 510px) {
+  .navLinks #View-link {
+    display: none;
+  }
+  .newNav #nav-view-btn {
+    display: inline;
+  }
+}
+
+/* TO prevent unnecessary wrapping */
+@media screen and (max-width: 400px) {
+  .newNav {
+    gap: 0;
+  }
+}
+
+/* Hide the logo name */
+@media screen and (max-width: 350px) {
+  .newNav .nav__logo {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 652px) {
   .toggle {
     width: 5vw;
@@ -2225,21 +2300,7 @@ body {
   .line {
     width: 5vw;
   }
-  .newNav img {
-    position: relative;
-    bottom: 23px;
-    left: 109px;
-  }
-  .nav__logo {
-    position: relative;
-    left: 85px;
-    bottom: 20px;
-  }
-  .btn {
-    position: relative;
-    top: 30px;
-    left: -147px;
-  }
+
 }
 @media only screen and (max-width:577px){
   .but{
@@ -2249,14 +2310,7 @@ body {
   }
 }
 @media only screen and (max-width: 465.5px){
-  .newNav img{
-    position: relative;
-    left: -58px;
-  }
-  .nav__logo{
-    position: relative;
-    left: -82px;
-  }
+
   .but{
     position: relative;
     left:17px;
@@ -2794,10 +2848,6 @@ button:hover {
     max-width: 40%; /* Limit width to prevent overflow */
   }
 
-  .newNav {
-    justify-content: right;
-    gap: 27px;
-  }
   .nav-container {
     width: 100%;
     justify-content: center;
