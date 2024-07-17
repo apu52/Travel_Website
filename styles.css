@@ -1625,7 +1625,7 @@ body.dark-theme .items {
 }
 
 .contact-form input {
-  width: 50%;
+  /* width: 50%; */
   padding-left: 10px;
   padding-bottom: 10px;
   margin: 20px;
@@ -1668,7 +1668,7 @@ body.dark-theme .items {
   font-weight: 200;
   font-size: 15px;
   outline: none;
-  width: 50%;
+  /* width: 50%; */
 }
 
 .icon1 {
@@ -1747,6 +1747,7 @@ textarea::-webkit-scrollbar {
 
   .contact-form textarea {
     width: 75%;
+    color: var(--text-dark);
   }
   .icon1 {
     left: 14.8%;
@@ -1796,7 +1797,7 @@ textarea::-webkit-scrollbar {
 
 .contact-form input,
 .contact-form textarea {
-  width: 50%;
+  /* width: 50%; */
   padding-left: 10px;
   padding-bottom: 10px;
   margin: 20px;
@@ -1820,17 +1821,8 @@ textarea::-webkit-scrollbar {
   .contact-form input,
   .contact-form textarea {
     width: 75%;
-    color: var(--text-dark);
   }
-  .icon1 {
-    left: 14.8%;
-  }
-  .icon2 {
-    left: 14.8%;
-  }
-  .icon3 {
-    left: 14.8%;
-  }
+
 }
 
 @media (max-width: 700px) {
@@ -2779,7 +2771,6 @@ form {
 
 input[type="email"] {
   padding: 10px;
-  width: 250px;
   border: 1px solid #ccc;
   border-radius: 3px;
   margin-right: 10px;
