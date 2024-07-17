@@ -32,7 +32,7 @@ body {
 
 .dark-theme {
   --secondary-color: #0e1525;
-  --text-dark: #0e1525;
+  --text-dark: #8c0ffa;
   --arr-light: white;
   --body-light: #0e1525;
   --img-color:red;
@@ -180,7 +180,7 @@ body {
 .goog-te-gadget img {
   vertical-align: middle;
   border: none;
-  width: 100px; /* Ensure the width is set to auto */
+  width: 110px; /* Ensure the width is set to auto */
   height: auto; /* Ensure the height is set to auto */
   max-width: 100%; /* Adjust this value if needed */
   max-height: 100%; /* Adjust this value if needed */
