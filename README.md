@@ -75,6 +75,15 @@
  
 ![GSSOC](https://github.com/apu52/METAVERSE/assets/114172928/e79eb6de-81b1-4ffb-b6ed-f018bb977e88)
 
+<div align="center">
+  
+  <img src="img/VSOC new.png" width="100%">
+</div>
+
+
+
+
+
 ### This project was part of following Open Source Programs
 
 <div align="center">
@@ -199,6 +208,15 @@ Show some ❤️&nbsp; by giving <img src="https://imgur.com/o7ncZFp.jpg" height
 
 <table>
 <tr>
+<td align="center"><a href="https://github.com/itsekta"><img src="img/Ekta.jfif" width=130px height=130px /></a></br> <h4 style="color:red;">Ekta Chaudhary</h4>
+ <a href="https://www.linkedin.com/in/ekta-software-engineer/"><img src="https://img.icons8.com/fluency/2x/linkedin.png" width="32px" height="32px"></img></a>
+   </td>
+
+</tr>
+</table>
+
+<table>
+<tr>
 <td align="center"><a href="https://github.com/Ghanshyam89"><img src="img/GhanshyamNewPic.jpg" width=130px height=130px /></a></br> <h4 style="color:red;">Ghanshyam Prajapati</h4>
  <a href="https://www.linkedin.com/in/ghanshyam-prajapati/"><img src="https://img.icons8.com/fluency/2x/linkedin.png" width="32px" height="32px"></img></a>
    </td>
@@ -226,6 +244,10 @@ Show some ❤️&nbsp; by giving <img src="https://imgur.com/o7ncZFp.jpg" height
 ## Contributing is fun🧡
 <p align ="center">
   <img src="https://github.com/shruti-sen2004/Travel_Website/assets/115914670/d544fd3b-aed2-4a05-a2f8-0b7a2ff9014f" width="700" height= "250" />
+</p>
+
+<p align ="center">
+  <img src="https://api.vaunt.dev/v1/github/entities/apu52/repositories/Travel_Website/contributors?format=svg&limit=54" width="700" height= "250" />
 </p>
 
 <a href="https://github.com/apu52/Travel_Website/graphs/contributors">

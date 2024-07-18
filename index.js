@@ -43,8 +43,8 @@ window.onload = openModal;
 
 const slideDots = document.querySelectorAll(".imageDots span");
 const slides = document.querySelectorAll(".mySlides");
-let activeSlide = 0;
-let slideInterval;
+activeSlide = 0;
+slideInterval=null;
 
 const destinationTitles = [
   "Eiffel Tower",
@@ -133,3 +133,8 @@ document.getElementById('emailInput').addEventListener('focus', function() {
 document.getElementById('emailInput').addEventListener('blur', function() {
   document.getElementById('send').classList.remove('focused');
 });
+
+
+
+
+

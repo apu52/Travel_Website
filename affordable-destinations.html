@@ -94,6 +94,85 @@
                 width: calc(100% - 40px);
             }
         }
+        body {
+    background-color: #f7f7fc;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.background-circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevent interaction with the background elements */
+    z-index: -1; /* Ensure circles are in the background */
+}
+
+.circle {
+    position: absolute;
+    background-color: rgba(167, 139, 250, 0.3);
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+/* Define the sizes and positions of the circles */
+.circle1 {
+    width: 10vw;
+    height: 10vw;
+    top: 10%;
+    left: 20%;
+}
+
+.circle2 {
+    width: 15vw;
+    height: 15vw;
+    top: 30%;
+    right: 10%;
+}
+
+.circle3 {
+    width: 5vw;
+    height: 5vw;
+    top: 60%;
+    left: 40%;
+}
+
+.circle4 {
+    width: 12vw;
+    height: 12vw;
+    bottom: 20%;
+    right: 25%;
+}
+
+.circle5 {
+    width: 8vw;
+    height: 8vw;
+    bottom: 15%;
+    left: 10%;
+}
+
+.circle6 {
+    width: 20vw;
+    height: 20vw;
+    top: 5%;
+    right: 15%;
+}
+
+.circle7 {
+    width: 7vw;
+    height: 7vw;
+    top: 50%;
+    right: 50%;
+}
+
+.circle8 {
+    width: 9vw;
+    height: 9vw;
+    bottom: 10%;
+    left: 60%;
+}
+
     </style>
 </head>
 <body>
@@ -110,7 +189,7 @@
             { name: "Paris, France", price: "$500", rating: "4.6", imgSrc: "paris.jpg" },
             { name: "Kyoto, Japan", price: "$400", rating: "4.7", imgSrc: "japan.jpg" },
             { name: "Rome, Italy", price: "$450", rating: "4.5", imgSrc: "italy.jpg" },
-            { name: "Sydney, Australia", price: "$480", rating: "4.6", imgSrc: "sydney.jpg" },
+            { name: "Sydney, Australia", price: "$480", rating: "4.6", imgSrc: "Sydney.jpg" },
             { name: "New York, USA", price: "$550", rating: "4.7", imgSrc: "usa.jpg" },
             { name: "Cape Town, South Africa", price: "$420", rating: "4.5", imgSrc: "capetown.jpg" },
             { name: "Barcelona, Spain", price: "$390", rating: "4.6", imgSrc: "spain.jpg" },
@@ -138,5 +217,15 @@
             window.location.href = "index.html";
         });
     </script>
+    <div class="background-circles">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <div class="circle circle4"></div>
+        <div class="circle circle5"></div>
+        <div class="circle circle6"></div>
+        <div class="circle circle7"></div>
+        <div class="circle circle8"></div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="login.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <button class="back-button" onclick="window.location.href='index.html'"><img src="img/button.png" width="50px" height="50px"/></button>
+            <h1 class="animated-heading">Tourguide<span class="blinking-cursor">|</span></h1>
+            <p class="description">
+                Welcome to TourGuide, where we firmly believe that life's
+                true purpose unfolds amidst the thrill of exploration, the embrace of the unfamiliar, and the
+                pursuit of the extraordinary! Our mission is to embolden you, the intrepid traveler, to unveil this
+                purpose and elevate your journey by providing unparalleled assistance and guidance.
+            </p>
+            <form id="signupForm" class="login-form">
+                <input type="text" id="name" placeholder="Name" class="input-field">
+                <input type="text" id="username" placeholder="Username" class="input-field">
+                <input type="email" id="email" placeholder="Email" class="input-field">
+                <input type="password" id="password" placeholder="Password" class="input-field">
+                <button type="submit" class="submit-button">Sign up</button>
+            </form>
+            <p class="already-signed-up">
+                Already signed up? <a href="login-modified.html">Login</a>
+            </p>
+        </div>
+        <div class="right-section">
+            <img src="./img/login1.jpg" alt="travel_pics" class="transition-image">
+            <img src="./img/login2.jpg" alt="travel_pics" class="transition-image">
+            <img src="./img/login3.jpg" alt="travel_pics" class="transition-image">
+            <img src="./img/login4.jpg" alt="travel_pics" class="transition-image">
+            <img src="./img/login5.jpg" alt="travel_pics" class="transition-image">
+            <img src="./img/login6.jpg" alt="travel_pics" class="transition-image">
+            <img src="./img/login7.jpg" alt="travel_pics" class="transition-image">
+        </div>
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.transition-image');
+        let currentImageIndex = 0;
+
+        function showNextImage() {
+            images[currentImageIndex].style.opacity = 0;
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            images[currentImageIndex].style.opacity = 1;
+        }
+
+        setInterval(showNextImage, 3000);
+    </script>
+</body>
+</html>
