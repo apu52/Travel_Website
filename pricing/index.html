@@ -13,24 +13,6 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <script type="text/javascript">
-      
-  
-      
-      // const menuButton = document.getElementsByClassName('link');
-      function closeNav() {
-        let list = document.querySelector('.navLinks');
-        list.classList.toggle('activeHamburger');
-      }
-      // menuButton.forEach((button) => (button.onclick = () => closeNav()));
-
-    
-      let hamburger = document.querySelector('.hamburger');
-      hamburger.addEventListener('click', () => {
-        let list = document.querySelector('.navLinks');
-        list.classList.toggle('activeHamburger');
-      })
-    </script>
-  
   
     </script>
   
@@ -192,6 +174,22 @@
       <a href="../payment.html?package=ultimate" style="text-decoration: none;"><div class="purchase-btn"><button>Purchase</button></div></a>
     </div>
   </div>
+
+  <script>
+    // const menuButton = document.getElementsByClassName('link');
+    function closeNav() {
+      let list = document.querySelector('.navLinks');
+      list.classList.toggle('activeHamburger');
+    }
+    // menuButton.forEach((button) => (button.onclick = () => closeNav()));
+
+  
+    let hamburger = document.querySelector('.hamburger');
+    hamburger.addEventListener('click', () => {
+      let list = document.querySelector('.navLinks');
+      list.classList.toggle('activeHamburger');
+    })
+  </script>
 
 </body>
 </html>
