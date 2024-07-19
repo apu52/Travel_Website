@@ -2356,7 +2356,7 @@ body {
 /* Styling for elements with .aboutcontent class */
 .aboutcontent {
   text-align: center;
-  color: var(--text-dark);
+  color: black;
   margin-bottom: 20px;
   flex: 1 1 300px; /* Make flex items responsive */
   padding: 20px;

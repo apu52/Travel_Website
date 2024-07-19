@@ -32,7 +32,7 @@ body {
 
 .dark-theme {
   --secondary-color: #0e1525;
-  --text-dark: #8c0ffa;
+  --text-dark: white;
   --arr-light: white;
   --body-light: #0e1525;
   --img-color:red;
