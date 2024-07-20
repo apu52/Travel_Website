@@ -22,6 +22,7 @@ h1 {
   font-weight: 700;
   letter-spacing: -1.5px;
   margin: 0;
+  display: contents;
   margin-bottom: 15px;
 }
 
@@ -357,3 +358,16 @@ input {
   padding:2px;
   transition: 0.3s ease-in-out;
  }
+
+      /* Add styles for the success banners */
+      .success-banner {
+        display: none;
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10000;
+    }
