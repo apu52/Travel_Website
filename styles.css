@@ -2346,7 +2346,7 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background: linear-gradient(135deg, #7b4397, #dc2430); /* Gradient background */
+  background: linear-gradient(135deg, #7b4397, #32b1fa, rgb(254, 71, 227)); /* Gradient background */
   padding: 40px 20px; /* Add padding for spacing */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
