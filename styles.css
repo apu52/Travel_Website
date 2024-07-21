@@ -2568,6 +2568,27 @@ body {
     0 0 200px black;
 }
 
+.hotel .center-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.hotel .center-card div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hotel .center-card div .btn{
+  bottom: 0;
+}
+
+
+
 /* Testimonial Section */
 @media (min-width: 320px) {
   .testimonials {

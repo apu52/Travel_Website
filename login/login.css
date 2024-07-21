@@ -55,9 +55,7 @@ a {
   transition: 0.3s ease-in-out;
 }
 
-a:hover {
-  color: #4bb6b7;
-}
+
 
 .content {
   display: flex;
@@ -314,9 +312,7 @@ input {
   transition: 0.3s ease-in-out;
 }
 
-.social-container a:hover {
-  border: 1px solid #4bb6b7;
-}
+
 
 #login-section{
   display: flex;
@@ -359,6 +355,7 @@ input {
   transition: 0.3s ease-in-out;
  }
 
+
       /* Add styles for the success banners */
       .success-banner {
         display: none;
@@ -371,3 +368,18 @@ input {
         width: 100%;
         z-index: 10000;
     }
+
+/* hover ibn social icons */
+.social-container .fb:hover {
+  color: white;
+  background-color: #1877F2;
+}
+.social-container .goog:hover {
+  color: white;
+  background-color: #DB4437;
+}
+.social-container .lin:hover {
+  color: white;
+  background-color: #0A66C2;
+}
+
