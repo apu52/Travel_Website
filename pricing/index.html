@@ -193,5 +193,22 @@
     </div>
   </div>
 
+  <script>
+          // const menuButton = document.getElementsByClassName('link');
+          function closeNav() {
+            let list = document.querySelector('.navLinks');
+            list.classList.toggle('activeHamburger');
+          }
+          // menuButton.forEach((button) => (button.onclick = () => closeNav()));
+    
+        
+          hamburger = document.querySelector('.hamburger');
+          hamburger.addEventListener('click', () => {
+            let list = document.querySelector('.navLinks');
+            list.classList.toggle('activeHamburger');
+          })
+        </script>
+  </script>
+
 </body>
 </html>

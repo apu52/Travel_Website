@@ -111,7 +111,6 @@ header {
   position: relative;
   z-index: 10;
   margin-right: 20px;
-
 }
 
 .link a {
@@ -169,6 +168,10 @@ header {
 }
 
 @media screen and (max-width: 1220px) {
+
+  .newNav {
+    text-align: center;
+  }
   .hamburger {
     display: flex;
     cursor: pointer;
@@ -193,6 +196,11 @@ header {
     background-color: #1f2532;
     z-index: 10;
   }
+
+  .navLinks li a {
+    font-weight: 600;
+  }
+
 
   #toggle {
     font-size: 0.6rem;
@@ -337,6 +345,7 @@ header {
   position: absolute;
   top: 3px;
   left: 60px;
+  margin-left: 2rem;
 }
 .price-area .inner-area .price{
   font-size: 45px;

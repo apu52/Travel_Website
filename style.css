@@ -53,12 +53,50 @@ button, input[type="submit"]{
     align-items: center;
     
 }
-.logo a{
-    font-size: 2.4rem;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
+/* 
+ */
+ .logo {
+  display: flex;
+  align-items: center;
 }
+
+.logo video {
+  height: 100px;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.logo video:hover {
+  transform: scale(1.1);
+}
+
+.logo h1 {
+  font-size: 24px;
+  color: #0d213f;;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color:  #0d213f;;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  color: #007bff;
+}
+
 
 main{
     min-height: 80vh;
@@ -196,24 +234,28 @@ input[type="submit"]{
 /* New NAvbar CSS Starts Here*/
 
 .nav-container {
-    height: auto;
-    width: 200%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    position: fixed;
-    left: 0;
-    z-index: 9999;
+  margin-top: 0;
+  height: auto;
+  width: 200%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  z-index: 9999;
+}
+  
+  
+    .newNav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      height: auto;
+      width: 100%;
+      padding: 1rem 2rem;
   }
-  .newNav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.5rem;
-    height: auto;
-    width: 100%;
-    padding: 1rem 2rem;
-  }
+  
   
   .navLinks {
     display: flex;
@@ -318,3 +360,5 @@ input[type="submit"]{
   }
   
   /* New NAvbar CSS Ends Here*/
+
+ 

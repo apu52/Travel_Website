@@ -1,0 +1,316 @@
+div.niha{
+
+    width: 500px;
+    border: 2px solid rgb(151, 228, 240);
+    display: inline-block;
+    color: rgb(151, 228, 240);
+    font-size: small;
+}
+/* Typing Effect CSS */
+/* 
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from , to { border-color: transparent; }
+    50% { border-color: transparent; }
+} */
+
+#heading2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    color: #d6cece;
+    border-right: 0.15em solid #f5f3f3;
+    white-space: nowrap;
+    overflow: hidden;
+    /* width: 0; Ensures the text is hidden initially */
+    /* animation: 
+        typing 10s steps(2000, end) forwards,
+        blink-caret 0.75s step-end infinite; */
+}
+
+
+#container {
+    color: rgb(8, 9, 10);
+    text-align: center;
+    width: 1240px;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 150px;
+    margin-right: 120px;
+    margin-top: 90px;
+    margin-bottom: 110px;
+    align-content: center;
+    
+}
+
+
+#button1 {
+    color: black;
+    margin: 18px 18px 50px 540px;
+    transition: 1s;
+    border: none;
+    background-color:#C07F00;
+    padding: 13px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 20px ;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px, rgba(255, 255, 255, 1) 0px 0px 10px;
+
+   
+}
+
+#button1:hover {
+    background: #C07F00;
+    box-shadow: 0 0 90px#C07F00
+    /* transform: scale(1.3); */
+}
+
+a {
+    text-decoration: none;
+    color: rgb(94, 4, 4);
+}
+
+#heading2 {
+    color: #36fe9a;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+
+}
+
+
+#container2 {
+    text-align: center;
+    /* width:  1360px; */
+    width: 1159px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top:5px;
+    margin-bottom: 110px;
+    box-sizing:border-box;
+    border: 10 solid rgb(255, 130, 130);
+    /* align-items:center; */
+    justify-content:space-between;
+}
+
+#box5 {
+    background-image: url("https://www.pariaoutdoorproducts.com/cdn/shop/articles/Kesugi_Ridge_Trail.jpg?v=1483048098");
+    background-size: cover;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-right: 10px;
+    position: relative;
+    border: 2px solid rgb(206, 9, 6);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px, rgba(255, 255, 255, 1) 0px 0px 10px;
+
+}
+
+#box5:hover {
+    transform: scale(1.1);
+    border: 3px solid rgb(206, 9, 6);
+    transition: 0.9s;
+    box-shadow: rgb(206, 9, 6);
+   
+}
+
+#box6 {
+    background-image: url("https://plutoniclove.files.wordpress.com/2019/03/39223328504_a7dc3c9054_o.jpg?w=1280");
+    background-size: cover;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    position: relative;
+    top: 45px;
+    border: 2px solid rgb(206, 9, 6);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px, rgba(255, 255, 255, 1) 0px 0px 10px;
+
+
+}
+
+#box6:hover {
+    transform: scale(1.1);
+    border: 5px solid rgb(206, 9, 6);
+    transition: 0.9s;
+   
+}
+
+#box7 {
+    background-image: url("https://cdn.bookatrekking.com/data/images/2020/06/shutterstock-1013024953.jpg");
+    background-size: cover;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    position: relative;
+    top: 80px;
+    text-align: center;
+    border: 2px solid rgb(206, 9, 6);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px, rgba(255, 255, 255, 1) 0px 0px 10px;
+
+
+
+
+}
+
+#box7:hover {
+    transform: scale(1.1);
+    border: 5px solid rgb(206, 9, 6);
+    transition: 0.9s;
+   
+}
+
+#box8 {
+    background-image: url("https://media.cntraveler.com/photos/643d5d0a5722b1af03793a06/16:9/w_2560%2Cc_limit/Dal%2520Lake_GettyImages-1323846766.jpg");
+    background-size: cover;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-right: 13px;
+    margin-left: 13px;
+    position: relative;
+    top: 45px;
+    border: 2px solid rgb(206, 9, 6);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px, rgba(255, 255, 255, 1) 0px 0px 10px;
+
+  
+    
+}
+
+#box8:hover {
+    transform: scale(1.1);
+    border: 5px solid rgb(206, 9, 6);
+    transition: 0.9s;
+}
+#box9 {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPF21UstFZ23Hy_Kfnad_8zlAcnMohJLuoBg&s");
+    background-size: cover;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    position: relative;
+    border: 2px solid rgb(206, 9, 6);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px, rgba(255, 255, 255, 1) 0px 0px 10px;
+
+   
+}
+
+#box9:hover {
+    transform: scale(1.1);
+    border: 5px solid rgb(206, 9, 6);
+    transition: 0.9s;
+  
+}
+#text1{
+    color: #c84d4d;
+    align-content: center;
+    padding-top: 10%;
+}
+#text2{
+    color: #c84d4d;
+    padding-top: 10%;
+}
+#text3{
+    color: #c84d4d;
+    padding-top: 10%;
+}
+#text4{
+    color:#c84d4d;
+    padding-top: 10%;
+}
+#text0{
+    color: #c84d4d;
+    padding-top: 10%;
+}
+p{
+    color: #c84d4d;
+}
+#pre{
+    text-align: center;
+}
+.bottom-background {
+    position: fixed;
+    top:0;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%; /* Adjust height as needed */
+    background-image: url("img/trendingbg.mp4"); /* Your moving background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1; /* Ensure it stays behind other content */
+    right:0%;
+}
+pre{
+    text-align: center;
+    color: #c84d4d;
+    
+}
+.golden-button {
+    position: absolute;
+    bottom: 30px; /* Adjust as needed */
+    left: 20%;
+    text-align: center;
+    touch-action: manipulation;
+    display: inline-block;
+    outline: none;
+    font-family: inherit;
+    font-size: 1em;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 0.3em;
+    height: 2em;
+    line-height: 2.5em;
+    text-transform: uppercase;
+    padding: 0 1em;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(110, 80, 20, 0.4),
+      inset 0 -2px 5px 1px rgba(139, 66, 8, 1),
+      inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+    background-image: linear-gradient(
+      160deg,
+      #a54e07,
+      #b47e11,
+      #fef1a2,
+      #bc881b,
+      #a54e07
+    );
+    border: 1px solid #a55d07;
+    color: rgb(120, 50, 5);
+    text-shadow: 0 2px 2px rgba(250, 227, 133, 1);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-size: 100% 100%;
+    background-position: center;
+  }
+  
+  .golden-button:focus,
+  .golden-button:hover {
+    background-size: 150% 150%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23),
+      inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+    border: 1px solid rgba(165, 93, 7, 0.6);
+    color: rgba(120, 50, 5, 0.8);
+  }
+  
+  .golden-button:active {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(110, 80, 20, 0.4),
+      inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+  }

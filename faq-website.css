@@ -2,11 +2,38 @@
 
 * {
   box-sizing: border-box;
+  border-radius: 20px;
 }
+
+
+:root{
+  --color-primary: #ffd54b;
+  --color-text: #545d7a;
+  --color-white: #fff;
+  --color-title: #242e4c;
+  --color-background: #f7f8fb;
+  --color-border: #dae1f5;
+  
+  /* Fonts */
+  /* --font-family: "Satoshi", sans-serif;
+  --fs-sm: 1.4rem;
+  --fs-md: 1.6rem;
+  --fs-lg: 2.2rem;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700; */
+  
+  /* Transition & Box Shadow */
+  --transition: 0.4s ease-in-out; 
+  --shadow: 0px 60px 56px -12px rgba(9, 40, 163, 0.05); 
+  
+  }
+  
 
 .faq-container {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 900px !important;
+  width: 80%;
 }
 
 .faq {
@@ -19,6 +46,7 @@
   position: relative;
   transition: 0.3s ease;
   cursor: pointer;
+  
 }
 
 .faq.active {
@@ -52,19 +80,46 @@
 }
 .faq-title:hover {
   transform: scale(1.1);
-  font-size: 24px;
+  /* font-size: 20px;*/ /* commenting to remove flickering of elements */
 }
 
 .faq-text {
-  display: none;
+  /* display: none; */
   margin: 30px 0 0;
   color: black;
 }
 
-.faq.active .faq-text {
-  display: block;
-}
 
+  /* Colors */
+ 
+  /* html {
+      font-size: 62.5%;
+  } */
+  
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      /* box-sizing: content-box; */
+  }
+  
+  body {
+      background-color: var(--color-background);
+      font-family: var(--font-family);
+      color: var(--color-text);
+      font-size: var(--fs-md);
+      font-weight: var(--fw-regular);
+  }
+  
+  .container{ 
+      width: 100% !important;
+
+      margin: auto;
+      min-height: 100vh;
+      padding: 2rem;
+      display: grid;
+      place-items: center;
+  }
 .faq-toggle {
   align-items: center;
   background: rgb(239, 239, 239);
@@ -78,7 +133,7 @@
   padding: 0;
   position: absolute;
   right: 30px;
-  top: 30px;
+  top: 10px;   /* Moving toggle button to top to remove overlapping with faq-title  */
   width: 30px;
 }
 .faq-toggle .fa-times,
@@ -86,15 +141,118 @@
   display: none;
 }
 
-.faq.active .faq-toggle .fa-times {
-  color: #fff;
-  display: block;
-}
 
-.faq-toggle .fa-chevron-down {
-  display: block;
-}
-
-.faq.active .faq-toggle {
-  background-color: #9fa4a8;
-}
+  
+  
+  .accordion__wrapper {
+      background-color: var(--color-white);
+      box-shadow: var(--shadow);
+      border-radius:10px;
+      width: 100%;
+      /* max-width: 60rem; */
+      padding: 5rem;
+  }
+  
+  .accordion__title{
+      font-size: 25px;
+      font-weight:800;
+      color: var(--color-title);
+      text-align: center;
+      margin-bottom: 4rem;
+  }
+  
+  .accordion {
+      border-bottom: 0.1rem solid var(--color-border);
+      padding-bottom: 2rem;
+      margin-bottom: 3rem;
+      width: 100%;
+  }
+  
+  .accordion__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      cursor: pointer;
+  } 
+  
+  .accordion__icon {
+      background-color: var(--color-primary);
+      width: 2.2rem;
+      height: 2.2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      color: var(--color-white);
+      flex-shrink: 0;
+  }
+  
+  .accordion__question{
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-title);
+      width: 100%;
+  }
+  
+  .accordion__answer{
+      padding: 2rem 0;
+      font-size: 16px;
+  }
+  
+  .accordion__content{
+      overflow: hidden;
+      height: 0;
+      transition: var(--transition);
+  }
+  
+  @media screen and (min-width: 580px) {
+      .accordion__wrapper {
+          padding: 5rem 8rem;
+      }
+  }
+  
+  
+  .more{
+    padding: 50px;
+    background-color: aliceblue;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .more p{
+    color:grey;
+  }
+  
+  .moreemail{
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(40, 87, 241);
+  }
+  @media only screen and (max-width:465px){
+    .newNav img{
+      position: relative;
+      right: 14px;
+    }
+    .nav__logo{
+      position: relative;
+      right: 16px;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
