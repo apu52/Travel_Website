@@ -128,6 +128,98 @@
     }
 
     .gallery-rotate-image .image-container {
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Adjust the gap between images */
+}
+
+.gallery-rotate-image .image-container span {
+  display: inline-block;
+}
+
+/* .trip-gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.trip-gallery-container .image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trip-gallery-container .image-container img {
+  max-width: 100%;
+  height: auto;
+} */
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .cardi {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 20vh;
+      border-radius: 20px;
+      color: #fff;
+      cursor: pointer;
+      flex: 0.5;
+      margin: 4px;
+      margin-right: 29px;
+      position: relative;
+      transition: flex 0.7s ease-in;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .cardi img {
+      width: 100%;
+      height: 100%;
+      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .cardi:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      border: 1px solid transparent;
+      background-clip: padding-box;
+    }
+
+    .cardi:hover img {
+      filter: blur(4px);
+      backdrop-filter:box-shadow(0 8px 16px rgba);
+    }
+
+    .card__content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      transform: rotateX(-90deg);
+      transform-origin: bottom;
+      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      z-index: 1;
+    }
+
+    .card__overlay {
+      position: absolute;
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
@@ -186,8 +278,77 @@
       left: 0;
       width: 100%;
       height: 100%;
+      background-color: rgba(1, 0, 0, 0.7); /* Darker semi-transparent background */
+      opacity: 0;
+      transition: opacity 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      z-index: 0;
+    }
+
+    .cardi:hover .card__overlay {
+      opacity: 1;
+    }
+
+    .cardi:hover .card__content {
+      transform: rotateX(0deg);
+    }
+
+    .card__title {
+      margin: 0;
+      font-size: 24px;
+      color: #ffdf60;
+      font-weight: 700;
+    }
+
+    .card__description {
+      margin: 10px 0 0;
+      font-size: 14px;
+      color: #fff;
+      line-height: 1.4;
+    }
+
+    .card__description:hover {
+      cursor: pointer;
+      color: #fff;
+    }
+
+    @media (max-width: 1200px) {
+      .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (max-width: 992px) {
+      .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px; /* Adjust the gap between buttons */
+}
+
       pointer-events: none;
       z-index: 9999;
+    }
+
+    @media screen and (max-width: 768px){
+      .circle-container {
+        display: none;
+      }
+
     }
 
   </style>
@@ -200,6 +361,32 @@
 <body style="background-color: var(--secondary-color);">
 
   <body>
+  <!-- chatbot -->
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script>
+    window.botpressWebChat.init({
+        "composerPlaceholder": "Ask me anything!",
+        "botConversationDescription": "TourGuide",
+        "botId": "7d93db89-5ddd-48ac-91c7-d5f35eae9bdc",
+        "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+        "messagingUrl": "https://messaging.botpress.cloud",
+        "clientId": "7d93db89-5ddd-48ac-91c7-d5f35eae9bdc",
+        "webhookId": "c874de53-fdf6-4bee-bd45-30a736b1a42e",
+        "lazySocket": true,
+        "themeName": "prism",
+        "botName": "TourGuide",
+        "avatarUrl": "https://previews.123rf.com/images/hgucuk/hgucuk2012/hgucuk201200075/161468561-world-tourism-the-tour-guide-%C3%A4%C2%B0con-design.jpg",
+        "stylesheet": "https://webchat-styler-css.botpress.app/prod/28032111-a170-4e9e-be60-9c9222f20935/v72246/style.css",
+        "frontendVersion": "v1",
+        "useSessionStorage": true,
+        "enableConversationDeletion": true,
+        "theme": "prism",
+        "themeColor": "#2563eb",
+        "allowedOrigins": []
+    });
+  </script>
+
+
     <div class="circle-container">
       <div class="circle"></div>
       <div class="circle"></div>
@@ -321,6 +508,7 @@
           <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
           <li class="link" data-aos=""><a href="feedback.html">Rate Us</a></li>
           <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
+          <li class="link" data-aos=""><a href="contributors.html">Contributors</a></li>
         </ul>
 
 
@@ -725,7 +913,7 @@
     <section class="trip" id="trip" data-aos="zoom-in" data-aos-offset="100">
       <div class="section__container trip__container">
         <h2 class="section__title">Best trip packages</h2>
-        <p class="section__subtitle" style="margin-left: 280px;">
+        <p class="section__subtitle" >
           Top trip deals curated for you. Get the best package for your adventure and save more.
         </p>
         <div class="trip__grid">
@@ -877,68 +1065,147 @@
           <button class="btn btn-style" id="next">Next</button>
         </div>
         <!-- Trip Photo Gallery -->
-        <div class="trip-gallery-container">
-
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo1.png" height="250" width="200">
-            <p><a href="https://maps.app.goo.gl/4ULWYJxSVD8AcUin6" target="_blank">LADAKH</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo2.png" height="250" width="200">
-            <p><a href="https://maps.app.goo.gl/zrA5UgDQoeUtRhhn7" target="_blank">RANNERDALE KNOTTS</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo3.jpg" height="250" width="200">
-            <p><a href="https://maps.app.goo.gl/eTfvw4peKN3AcMUy8" target="_blank">AMALPHI COAST</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo4.png" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/tBZLQcZbCHRWsgGX7" target="_blank">THE GOLDEN TEMPLE,PERIYAPATTNA</a>
-            </p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo5.jpg" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/8Y3rnjtxU563KVvE9" target="_blank">MALSHEJ GHAT</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo6.png" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/cj2UZZoyCTzeoQjEA" target="_blank">SAHARA DESERT</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo7.png" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/Gk1fQts4zeVRdAWu6" target="_blank">MALDIVES</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo8.jpg" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/DbWvrFgfwwwTWuBT8" target="_blank">PUNAKHA SUSPENSION BRIDGE</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo9.jpg" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/gBGuxUNXXemiZ2Td8" target="_blank">ARU VALLEY</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo10.jpg" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/tQ4BT4gDoFtauReM9" target="_blank">THE GOLDEN BRIDGE</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo11.jpg" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/oqDnmF2pCqRxV5Cp6" target="_blank">LAKE DISTRICT</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo13.jpg" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/pHjaA4aqP41JxdAh9" target="_blank">MUNNAR</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo19.jpg" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/84rV6GhhginGXgbc8" target="_blank">STATUE OF LIBERTY</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo20.png" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/GzVALHoLp4MgFmgw5" target="_blank">NAKKI LAKE</a></p>
-          </figure>
-
-          <!-- <img src="./img/Trip_Photos/photo3.jpg" height="240" width="200"> -->
-
+        <div class="grid-container">
+          <div class="cardi">
+            <img src="./img/Trip_Photos/photo1.png" alt="Card image">
+            <div class="card__overlay"></div>
+            <center>
+              <div class="card__content">
+                <h4 class="card__title" style="color:#ffce52; font-size:18px">LADAKH</h4>
+                <a class="card__description" href="https://maps.app.goo.gl/4ULWYJxSVD8AcUin6" target="_blank">Read More</a>
+              </div>
+            </center>
+          </div>
+          <div class="cardi">
+            <img src="./img/Trip_Photos/photo2.png" alt="Card image">
+            <div class="card__overlay"></div>
+            <center>
+              <div class="card__content">
+                <h4 class="card__title"  style="color:#ffce52; font-size:18px">RANNERDALE KNOTTS</h4>
+                <a class="card__description" href="https://maps.app.goo.gl/zrA5UgDQoeUtRhhn7" target="_blank">Read More</a>
+              </div>
+            </center>
+          </div>
+          <div class="cardi">
+            <img src="./img/Trip_Photos/photo3.jpg" alt="Card image">
+            <div class="card__overlay"></div>
+            <center>
+              <div class="card__content">
+                <h4 class="card__title"  style="color:#ffce52; font-size:18px">AMALPHI COAST</h4>
+                <a class="card__description" href="https://maps.app.goo.gl/eTfvw4peKN3AcMUy8" target="_blank">Read More</a>
+              </div>
+            </center>
+          </div>
+          <div class="cardi">
+            <img src="./img/Trip_Photos/photo4.png" alt="Card image">
+            <div class="card__overlay"></div>
+            <center>
+              <div class="card__content">
+                <h4 class="card__title"  style="color:#ffce52; font-size:18px">THE GOLDEN TEMPLE,PERIYAPATTNA</h4>
+                <a class="card__description" href="https://maps.app.goo.gl/tBZLQcZbCHRWsgGX7" target="_blank">Read More</a>
+              </div>
+            </center>
+          </div>
+          <div class="cardi">
+            <img src="./img/Trip_Photos/photo5.jpg" alt="Card image">
+            <div class="card__overlay"></div>
+            <center>
+              <div class="card__content">
+                <h4 class="card__title"  style="color:#ffce52; font-size:18px">MALSHEJ GHAT</h4>
+                <a class="card__description" href="https://maps.app.goo.gl/8Y3rnjtxU563KVvE9" target="_blank">Read More</a>
+              </div>
+            </center>
+          </div>
+          <div class="cardi">
+            <img src="./img/Trip_Photos/photo6.png" alt="Card image">
+            <div class="card__overlay"></div>
+            <center>
+              <div class="card__content">
+                <h4 class="card__title"  style="color:#ffce52; font-size:18px">SAHARA DESERT</h4>
+                <a class="card__description" href="https://maps.app.goo.gl/cj2UZZoyCTzeoQjEA" target="_blank">Read More</a>
+              </div>
+            </center>
+          </div>
+          <div class="cardi">
+            <img src="./img/Trip_Photos/photo7.png" alt="Card image">
+            <div class="card__overlay"></div>
+            <center>
+              <div class="card__content">
+                <h4 class="card__title"  style="color:#ffce52; font-size:18px">MALDIVES</h4>
+                <a class="card__description" href="https://maps.app.goo.gl/Gk1fQts4zeVRdAWu6" target="_blank">Read More</a>
+              </div>
+            </center>
+          </div>
+          <div class="cardi">
+            <img src="./img/Trip_Photos/photo8.jpg" alt="Card image">
+            <div class="card__overlay"></div>
+            <center>
+              <div class="card__content">
+                <h4 class="card__title"  style="color:#ffce52; font-size:18px">PUNAKHA SUSPENSION BRIDGE</h4>
+                <a class="card__description" href="https://maps.app.goo.gl/DbWvrFgfwwwTWuBT8" target="_blank">Read More</a>
+              </div>
+            </center>
+          </div>
+          <div class="cardi">
+            <img src="./img/Trip_Photos/photo9.jpg" alt="Card image">
+            <div class="card__overlay"></div>
+            <center>
+              <div class="card__content">
+                <h4 class="card__title"  style="color:#ffce52; font-size:18px">ARU VALLEY</h4>
+                <a class="card__description" href="https://maps.app.goo.gl/gBGuxUNXXemiZ2Td8" target="_blank">Read More</a>
+              </div>
+            </center>
+          </div>
+          <div class="cardi">
+            <img src="./img/Trip_Photos/photo10.jpg" alt="Card image">
+            <div class="card__overlay"></div>
+            <center>
+              <div class="card__content">
+                <h4 class="card__title"  style="color:#ffce52; font-size:18px">THE GOLDEN BRIDGE</h4>
+                <a class="card__description" href="https://maps.app.goo.gl/tQ4BT4gDoFtauReM9" target="_blank">Read More</a>
+              </div>
+            </center>
+          </div>
+          <div class="cardi">
+            <img src="./img/Trip_Photos/photo11.jpg" alt="Card image">
+            <div class="card__overlay"></div>
+            <center>
+              <div class="card__content">
+                <h4 class="card__title"  style="color:#ffce52; font-size:18px">LAKE DISTRICT</h4>
+                <a class="card__description" href="https://maps.app.goo.gl/oqDnmF2pCqRxV5Cp6" target="_blank">Read More</a>
+              </div>
+            </center>
+          </div>
+          <div class="cardi">
+            <img src="./img/Trip_Photos/photo13.jpg" alt="Card image">
+            <div class="card__overlay"></div>
+            <center>
+              <div class="card__content">
+                <h4 class="card__title"  style="color:#ffce52; font-size:18px">MUNNAR</h4>
+                <a class="card__description" href="https://maps.app.goo.gl/pHjaA4aqP41JxdAh9" target="_blank">Read More</a>
+              </div>
+            </center>
+          </div>
+          <div class="cardi">
+            <img src="./img/Trip_Photos/photo19.jpg" alt="Card image">
+            <div class="card__overlay"></div>
+            <center>
+              <div class="card__content">
+                <h4 class="card__title"  style="color:#ffce52; font-size:18px">STATUE OF LIBERTY</h4>
+                <a class="card__description" href="https://maps.app.goo.gl/84rV6GhhginGXgbc8" target="_blank">Read More</a>
+              </div>
+            </center>
+          </div>
+          <div class="cardi">
+            <img src="./img/Trip_Photos/photo20.png" alt="Card image">
+            <div class="card__overlay"></div>
+            <center>
+              <div class="card__content">
+                <h4 class="card__title"  style="color:#ffce52; font-size:18px">NAKKI LAKE</h4>
+                <a class="card__description" href="https://maps.app.goo.gl/GzVALHoLp4MgFmgw5" target="_blank">Read More</a>
+              </div>
+            </center>
+          </div>
         </div>
       </div>
     </section>
@@ -973,30 +1240,33 @@
 
     <!-- Hotel & Resort Section -->
     <section class="hotel" id ="hotel">
-      <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Hotels & Resorts</h2>
       
-       <br></br>
-       <h3 style="color: rgb(151, 6, 241); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Best Place for Beautiful Trip</h3>
-       <br></br>
-       <div class="center-card">
-       <img src="./h1.png" alt="hr1"/>
-       <br></br>
-       <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
-       <br></br>
-       <br></br>
-       <img src="./h2.png" alt="hr2"/>
-       <br></br>
-       <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
-       <br></br>
-       <br></br>
-       <img src="./h3.png" alt="hr3"/>
-       <br></br>
-       <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
-       <br></br>
-       <br></br>
-       <img src="./h4.png" alt="hr4"/>
-       <br></br>
-       <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
+      <div class="center-card">
+        <div>
+          <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Hotels & Resorts</h2> 
+          <h3 style="color: rgb(151, 6, 241); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Best Place for Beautiful Trip</h3>
+        </div>
+
+        <div>
+          <img src="./h1.png" alt="hr1"/>
+          <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
+        </div>
+        
+        <div>
+          <img src="./h2.png" alt="hr2"/>
+          <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
+        </div>
+        
+        <div>
+          <img src="./h3.png" alt="hr3"/>
+          <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
+        </div>
+        
+        <div>
+          <img src="./h4.png" alt="hr4"/>
+          <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
+        </div>
+        
       </div>
       </section>
     <br /><br /><br /><br />
@@ -1342,8 +1612,10 @@
     </script>
 
 
+<!-- footer  -->
+
     <footer class="footer" data-aos="fade-up">
-      <div class="section__container footer__container">
+      <div class="footer__container">
         <div class="footer__col">
           <h3 class="footer-head" class="footer__title" style="cursor: default;">Tourguide<span>.</span></h3>
           <p>
@@ -1401,6 +1673,7 @@
             </div>
           </div>
         </div>
+     
         <div class="footer__col">
           <div class="footer__area">
             <h4>Contact Us</h4>
@@ -1453,10 +1726,11 @@
             </div>
           </div>
 
-        </div>
+         
 
+        </div>
         <div class="footer__col">
-          <div id="google_element"></div>
+          <div id="google_element" style="z-index: 1;"></div>
           <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
           <script>
             function loadGoogleTranslate() {
@@ -1466,16 +1740,22 @@
             }
           </script>
         </div>
+       
 
+        
+        </div>
+      
+       
 
         <!--  New copyright code to make it dynamic and display current year -->
+       
         <div class="footer__bar">
           <div>
             <li>Copyright &copy;<span id="year"></span> </span> Arpan Chowdhury. All rights reserved. </li>
           </div>
         </div>
-
     </footer>
+    
 
     <a class="goupbtn" href="#" onclick="goToTop()"><i class="fa-solid fa-arrow-up"></i></a>
 
@@ -1576,14 +1856,14 @@
     <script src="index.js"></script>
 
 
-    <script>
+    <!-- <script>
       window.embeddedChatbotConfig = {
         chatbotId: "yDQ_EheFvX0HAPr9beQ5L",
         domain: "www.chatbase.co"
       }
     </script>
     <script src="https://www.chatbase.co/embed.min.js" chatbotId="yDQ_EheFvX0HAPr9beQ5L" domain="www.chatbase.co" defer>
-    </script>
+    </script> -->
 
 
 
@@ -2034,7 +2314,7 @@
       animateValue("guidesCount", 0, 25000, 20000);
       animateValue("toursCount", 0, 20000, 20000);
       animateValue("destinationsCount", 0, 10994, 20000);
-    });
+})
 
   </script>
 
