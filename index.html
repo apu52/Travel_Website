@@ -85,7 +85,6 @@
     .active {
       color: red !important;
     }
-
     @media screen and (max-width:390px) {
       .nav__logo {
         position: relative;
@@ -340,9 +339,9 @@
   gap: 8px; /* Adjust the gap between buttons */
 }
 
-      pointer-events: none;
+      /* pointer-events: none;
       z-index: 9999;
-    }
+    } */
 
     @media screen and (max-width: 768px){
       .circle-container {
@@ -466,7 +465,7 @@
       <canvas></canvas>
       <canvas></canvas>
     </div>
-    <div id="progressbar"></div>
+    <!-- <div id="progressbar"></div> -->
     <div id="scrollPath"></div>
     <!-- <canvas id="canvas"></canvas> -->
     <!-- <nav>
@@ -2287,18 +2286,18 @@
         obj.textContent = currentValue;
         if (progress < 1) {
           requestAnimationFrame(updateValue);
-
         }
-
         requestAnimationFrame(updateValue);
       }
+    }
+  })
 </script>
 
 
 <script>
     const scrollline = document.querySelector('.progress-bar');
 
-  function fillscrollline(){
+  function fillscrollline() {
     const windowHeight = window.innerHeight;
     const fullHeight = document.body.clientHeight;
     const scrolled = window.scrollY;
@@ -2314,7 +2313,6 @@
       animateValue("guidesCount", 0, 25000, 20000);
       animateValue("toursCount", 0, 20000, 20000);
       animateValue("destinationsCount", 0, 10994, 20000);
-})
 
   </script>
 
