@@ -522,8 +522,11 @@ a {
 }
 
 img {
-  width: 8%;
+  width: 100%;
   display: block;
+}
+.sitelogo{
+  width: 8%;
 }
 
 body {
