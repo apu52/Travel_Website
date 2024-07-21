@@ -1,96 +1,95 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tourguide</title>
-
- <html lang="en">
- <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>TOUR GUIDE</title>
-   <link rel="icon" type="image/x-icon" href="log/favicon.ico">
-   <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
-   <script src="https://kit.fontawesome.com/f2e55912f8.js" crossorigin="anonymous"></script>
-   <link rel="stylesheet" href="./login/login.css">
- </head>
- <body>
-  <div class="container" id="container">
-    <div class="form-container register-container">
-      <form action="#" id="registerForm">
-        <h1>Tour Guide</h1>
-        <input type="text" placeholder="Name">
-        <input type="email" placeholder="Email">
-
-        <div id="register-section">
-            <input type="password" placeholder="Password" id="registerPassword">
-            <button type="button" id="toggleRegisterPassword">
-              <i id="registerIcon" class="fas fa-eye"></i>
-          </button>
-        </div>
-
-        <button type="submit">Register</button>
-        <span id="registerMessage" style="display: none;">Account created successfully</span>
-        <div class="social-container">
-          <a href="www.facebook.com" class="social"><i class="lni lni-facebook-fill"></i></a>
-          <a href="www.google.com" class="social"><i class="lni lni-google"></i></a>
-          <a href="www.linkedin.com" class="social"><i class="lni lni-linkedin-original"></i></a>
-        </div>
-      </form>
-    </div>
-
-    <div class="form-container login-container">
-      <form action="#" id="loginForm">
-        <h1>Tour Guide</h1>
-        <input type="email" placeholder="Email">
-        <div id="login-section">
-          <input type="password" placeholder="Password" id="loginPassword">
-          <button type="button" id="toggleLoginPassword">
-            <i id="loginIcon" class="fas fa-eye"></i>
-        </button>
-      </div>
-        <div class="content">
-          <div class="checkbox">
-            <input type="checkbox" name="checkbox" id="checkbox">
-            <label>Remember me</label>
+  <link rel="icon" type="image/x-icon" href="log/favicon.ico">
+  <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/f2e55912f8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./login/login.css">
+</head>
+<body>
+  <div class="main-container">
+    <div class="container" id="container">
+      <div class="form-container register-container">
+        <form action="#" id="registerForm">
+          <h1>Tour Guide</h1>
+          <input type="text" placeholder="Name">
+          <input type="email" placeholder="Email">
+          <div id="register-section">
+              <input type="password" placeholder="Password" id="registerPassword">
+              <button type="button" id="toggleRegisterPassword">
+                <i id="registerIcon" class="fas fa-eye"></i>
+            </button>
           </div>
-          <div class="pass-link">
-            <a href="#">Forgot password?</a>
+          <button type="submit">Register</button>
+          <span id="registerMessage" style="display: none;">Account created successfully</span>
+          <div class="social-container">
+            <a href="www.facebook.com" class="social"><i class="lni lni-facebook-fill"></i></a>
+            <a href="www.google.com" class="social"><i class="lni lni-google"></i></a>
+            <a href="www.linkedin.com" class="social"><i class="lni lni-linkedin-original"></i></a>
           </div>
-        </div>
-        <button type="submit">Login</button>
-        <span>or use your account</span>
-        <div class="social-container">
-          <a href="www.facebook.com" class="social"><i class="lni lni-facebook-fill"></i></a>
-          <a href="www.google.com" class="social"><i class="lni lni-google"></i></a>
-          <a href="www.linkedin.com" class="social"><i class="lni lni-linkedin-original"></i></a>
-        </div>
-      </form>
-    </div>
+        </form>
+      </div>
 
-    <div class="overlay-container">
-      <div class="overlay">
-        <div class="overlay-panel overlay-left">
-          <h1 class="title">Hello <br> friends</h1>
-          <p>if you have an account, login here and have fun</p>
-          <button class="ghost" id="login">Login
-            <i class="lni lni-arrow-left login"></i>
+      <div class="form-container login-container">
+        <form action="#" id="loginForm">
+          
+          <h1><a style="margin-right: 300px;" href="index.html" class="back-to-home">
+           
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+          </a>Tour Guide</h1>
+          <input type="email" placeholder="Email">
+          <div id="login-section">
+            <input type="password" placeholder="Password" id="loginPassword">
+            <button type="button" id="toggleLoginPassword">
+              <i id="loginIcon" class="fas fa-eye"></i>
           </button>
         </div>
-        <div class="overlay-panel overlay-right">
-          <h1 class="title">Start your <br> journey now</h1>
-          <p>if you don't have an account yet, join us and start your journey.</p>
-          <button class="ghost" id="register">Register
-            <i class="lni lni-arrow-right register"></i>
-          </button>
+          <div class="content">
+            <div class="checkbox">
+              <input type="checkbox" name="checkbox" id="checkbox">
+              <label>Remember me</label>
+            </div>
+            <div class="pass-link">
+              <a href="#">Forgot password?</a>
+            </div>
+          </div>
+          <button type="submit">Login</button>
+          <span>or use your account</span>
+          <div class="social-container">
+            <a href="www.facebook.com" class="social"><i class="lni lni-facebook-fill"></i></a>
+            <a href="www.google.com" class="social"><i class="lni lni-google"></i></a>
+            <a href="www.linkedin.com" class="social"><i class="lni lni-linkedin-original"></i></a>
+          </div>
+          <!-- Back to Home Button -->
+         
+        </form>
+      </div>
+
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1 class="title">Hello <br> friends</h1>
+            <p>if you have an account, login here and have fun</p>
+            <button class="ghost" id="login">Login
+              <i class="lni lni-arrow-left login"></i>
+            </button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1 class="title">Start your <br> journey now</h1>
+            <p>if you don't have an account yet, join us and start your journey.</p>
+            <button class="ghost" id="register">Register
+              <i class="lni lni-arrow-right register"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-
   </div>
   <script src="login\script.js"></script>
   <script>
