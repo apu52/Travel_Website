@@ -1,0 +1,82 @@
+ 
+
+  /* counter */
+  .wrapper {
+   
+    width: 80%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  .countitem {
+    width: 28vmin;
+    height: 28vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1.5em 1px;
+    margin:0px 10px;
+    font-size: 16px;
+    border-width: 0.5px ;
+    border-color: solid purple;
+    border-radius: 0.5em;
+    background: linear-gradient(white,rgb(153, 139, 251));
+    border-bottom: 10px solid #40349c;
+  }
+  .countitem i {
+    color: #06006e;
+    font-size: 2.5em;
+    text-align: center;
+  }
+  span.num {
+    color: #32316a;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    font-size: 3em;
+  }
+  span.text {
+    color: #6c2121;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 0em 00em;
+    font-weight: 400;
+    margin-bottom: 1em;
+    line-height: 0;
+  }
+  @media screen and (max-width: 1024px) {
+    .wrapper {
+      width: 85vw;
+    }
+    .countitem{
+      height: 26vmin;
+      width: 26vmin;
+      font-size: 12px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .wrapper {
+      width: 90vw;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .countitem {
+      width: calc(50% - 40px);
+      height: 30vmin;
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .wrapper {
+      gap: 15px;
+    }
+    .countitem {
+      width: 100%;
+      height: 25vmin;
+      font-size: 8px;
+    }
+  }

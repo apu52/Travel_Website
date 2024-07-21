@@ -87,7 +87,7 @@
     margin: 10px 0; }
     #terms-and-conditions .terms-and-conditions-section.grey {
       background-color: #f8f8fb; }
-    #terms-and-conditions .terms-and-conditions-section .section-title {
+    #terms-and-conditions .terms-and-conditions-section {
       color: #979797; }
   
   #about .about-section {
@@ -114,18 +114,7 @@
       height: 100px;
       margin-top: -50px; }
   
-  .title {
-    font-family: Lato;
-    font-weight: 100;
-    font-style: italic;
-    color: #979797;
-    margin-bottom: 30px; }
-  
-  .section-header {
-    font-family: Aller;
-    font-weight: bold;
-    color: #6e7fd8; }
-  
+
   .subtext {
     font-family: Lato;
     font-size: 18px;
@@ -145,3 +134,87 @@
         margin-top: 0; }
     .how-to-image {
       height: 200px; } }
+
+    .container-fluid .logo {
+        width: 130px;
+        border-radius: 6px;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    
+    .container.terms-container {
+        max-width: 70%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #0e1525;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-background {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      opacity: 0.3;
+  }
+
+    
+    .container-fluid .title {
+        font-size: 4.3em;
+        color: #0d94ba;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-bottom: 20px;
+        font-weight: 700;
+
+    }
+    
+    .container-fluid .section-title {
+        font-size: 2em;
+        color: #0dcaf0;
+        margin-top: 20px;
+    }
+    
+    .container-fluid .content p {
+        font-size: 1.2em;
+        line-height: 1.6;
+        color: #f0f0f0;
+        margin-bottom: 20px;
+    }
+    .text-center hr {
+      width: 50%;
+      color: #d56fa1;
+      opacity: 0.3;
+    }
+    
+    @media (max-width: 768px) {
+        .container-fluid .title {
+            font-size: 2em;
+        }
+    
+        .container-fluid .section-title {
+            font-size: 1.5em;
+        }
+    
+        .container-fluid .content p {
+            font-size: 1em;
+        }
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      /* background-color: #0e1525; */
+      background: linear-gradient(to top, #080f21, #06255b);
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+  }
+  .copyright-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    font-size: 17px;
+    color: rgb(185, 185, 185);
+  }

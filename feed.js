@@ -1,59 +1,82 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const ratingCategories = [
-        'navigationEase',
-        'bookingProcess',
-        'accuracyInformation',
-        'paymentOptions',
-        'securityMeasures',
-        'customerSupport',
-        'overallExperience'
-    ];
+document.addEventListener("DOMContentLoaded", () => {
+  const ratingCategories = [
+    "navigationEase",
+    "bookingProcess",
+    "accuracyInformation",
+    "paymentOptions",
+    "securityMeasures",
+    "customerSupport",
+    "overallExperience",
+  ];
 
-    ratingCategories.forEach(category => {
-        const container = document.getElementById(category);
-        for (let i = 1; i <= 5; i++) {
-            const star = document.createElement('i');
-            star.classList.add('fa', 'fa-star', 'star');
-            star.dataset.rating = i;
-            star.addEventListener('click', () => setRating(category, i));
-            container.appendChild(star);
-        }
-    });
+  ratingCategories.forEach((category) => {
+    const container = document.getElementById(category);
+    for (let i = 1; i <= 5; i++) {
+      const star = document.createElement("i");
+      star.classList.add("fa", "fa-star", "star");
+      star.dataset.rating = i;
+      star.addEventListener("click", () => setRating(category, i));
+      container.appendChild(star);
+    }
+  });
 });
 
 function setRating(category, rating) {
-    const stars = document.querySelectorAll(`#${category} .star`);
-    const ratingText = document.getElementById(`${category}-rating-text`);
+  const stars = document.querySelectorAll(`#${category} .star`);
+  const ratingText = document.getElementById(`${category}-rating-text`);
 
-    stars.forEach(star => {
-        star.classList.toggle('checked', star.dataset.rating <= rating);
-    });
+  stars.forEach((star) => {
+    star.classList.toggle("checked", star.dataset.rating <= rating);
+  });
 
-    ratingText.textContent = `Rating: ${rating}`;
+  ratingText.textContent = `Rating: ${rating}`;
 }
 
-function submitFeedback() {
-    const feedback = {
-        event_name: document.getElementById('event_name').value,
-        event_date: document.getElementById('event_date').value,
-        FullName: document.getElementById('FullName').value,
-        Email: document.getElementById('Email').value,
-        navigationEase: document.querySelectorAll('#navigationEase .star.checked').length,
-        bookingProcess: document.querySelectorAll('#bookingProcess .star.checked').length,
-        accuracyInformation: document.querySelectorAll('#accuracyInformation .star.checked').length,
-        paymentOptions: document.querySelectorAll('#paymentOptions .star.checked').length,
-        securityMeasures: document.querySelectorAll('#securityMeasures .star.checked').length,
-        customerSupport: document.querySelectorAll('#customerSupport .star.checked').length,
-        overallExperience: document.querySelectorAll('#overallExperience .star.checked').length,
-        suggestions: document.getElementById('suggestions').value,
-        notify_future_events: document.getElementById('notify_future_events').checked,
-        can_follow_up: document.getElementById('can_follow_up').checked
-    };
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("feedback-form");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Get form elements
+    const eventName = document.getElementById("event_name").value.trim();
+    const eventDate = document.getElementById("event_date").value;
+    const fullName = document.getElementById("FullName").value.trim();
+    const email = document.getElementById("Email").value.trim();
+    const comments = document.getElementById("comments").value.trim();
+
+    // Check if the feedback is empty
+    if (comments === "") {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Please enter your feedback before submitting.",
+        customClass: {
+          popup: "swal-popup",
+          title: "swal-title",
+          content: "swal-content",
+          confirmButton: "swal-confirm-button",
+        },
+      });
+      return; // Exit the function if feedback is empty
+    }
+
+    // Show a success message
     Swal.fire({
-        title: 'Thank you!',
-        text: 'Your feedback has been submitted successfully.',
-        icon: 'success',
-        confirmButtonText: 'OK'
+      icon: "success",
+      title: "Success!",
+      text: "Your response has been recorded.",
+      customClass: {
+        popup: "swal-popup",
+        title: "swal-title",
+        content: "swal-content",
+        confirmButton: "swal-confirm-button",
+      },
+    }).then((result) => {
+      // Clear the feedback form after the user acknowledges the success modal
+      if (result.isConfirmed || result.isDismissed) {
+        form.reset();
+      }
     });
-}
-
+  });
+});

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,6 +6,15 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    .center-card {
+      margin: 0 auto;
+      display: block;
+      position: relative;
+      bottom: 18px;
+    }
+  </style>
   <link rel="stylesheet" href="./loader.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="faq-website.css">
@@ -16,7 +26,10 @@
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="counter.css" class="rel href">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="./Image-Gallery/style.css">
@@ -24,7 +37,15 @@
   <link rel="stylesheet" href="explore.css">
   <title>Tourguide</title>
   <!-- adding a fav-icon -->
+
+   <img src="Untitled (1).mp4" alt="">
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <link rel="stylesheet" href="tilt.css">
+  <script src="tilt.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
 
   <script src="index.js" defer></script>
   <script src="mouseEffect.js"></script>
@@ -64,40 +85,50 @@
     .active {
       color: red !important;
     }
-    @media screen and (max-width:390px){
-      .nav__logo{
+
+    @media screen and (max-width:390px) {
+      .nav__logo {
         position: relative;
         right: 1.9rem;
       }
-      .contact-btn{
+
+      .contact-btn {
         position: relative;
         right: 2.5rem;
       }
-      .toggle-container{
+
+      .toggle-container {
         position: relative;
         right: 2.5rem;
 
       }
-      .toggle{
-        width: 130%;
-      } 
-      .line{
+
+      .toggle {
         width: 130%;
       }
-      .hamburger{
+
+      .line {
+        width: 150%;
+      }
+
+      .hamburger {
         position: relative;
         right: 1rem;
       }
     }
+
     @media screen and (max-width:364px) {
-      .toggle{
-        width:190%;
+      .toggle {
+        width: 190%;
       }
-      .line{
+
+      .line {
         width: 190%;
       }
     }
+
     .gallery-rotate-image .image-container {
+
   display: flex;
   flex-wrap: wrap;
   gap: 16px; /* Adjust the gap between images */
@@ -189,6 +220,60 @@
 
     .card__overlay {
       position: absolute;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      /* Adjust the gap between images */
+    }
+
+    .gallery-rotate-image .image-container span {
+      display: inline-block;
+    }
+
+    .trip-gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      /* Adjust the gap between images */
+    }
+
+    .trip-gallery-container .image-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .trip-gallery-container .image-container img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      /* Adjust the gap between buttons */
+    }
+
+    @media screen and (max-width: 768px) {
+      body {
+        align-items: flex-end;
+        width: auto;
+      }
+    }
+
+    .circle {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      pointer-events: none;
+      background: radial-gradient(circle, rgba(71, 240, 255, 0.3), rgba(0, 119, 255, 0.3));
+      transition: transform 0.1s, left 0.1s, top 0.1s;
+    }
+
+    .circle-container {
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
@@ -254,9 +339,14 @@
   justify-content: center;
   gap: 8px; /* Adjust the gap between buttons */
 }
+
+      pointer-events: none;
+      z-index: 9999;
+    }
+
   </style>
-<link rel="stylesheet" href="imstyle.css">
-<link rel="stylesheet" href="jquery.flipster.min.css">
+  <link rel="stylesheet" href="imstyle.css">
+  <link rel="stylesheet" href="jquery.flipster.min.css">
 
 </head>
 
@@ -264,7 +354,77 @@
 <body style="background-color: var(--secondary-color);">
 
   <body>
+    <div class="circle-container">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const coords = { x: 0, y: 0 };
+        const circles = document.querySelectorAll(".circle");
 
+        circles.forEach(function (circle) {
+          circle.x = 0;
+          circle.y = 0;
+        });
+
+        window.addEventListener("mousemove", function (e) {
+          coords.x = e.pageX;
+          coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
+        });
+
+        function animateCircles() {
+          let x = coords.x;
+          let y = coords.y;
+
+          circles.forEach(function (circle, index) {
+            circle.style.left = `${x - 12}px`;
+            circle.style.top = `${y - 12}px`;
+            circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
+
+            const nextCircle = circles[index + 1] || circles[0];
+            circle.x = x;
+            circle.y = y;
+
+            x += (nextCircle.x - x) * 0.3;
+            y += (nextCircle.y - y) * 0.3;
+          });
+
+          requestAnimationFrame(animateCircles);
+        }
+
+        animateCircles();
+      });
+
+    </script>
     <div id="pre-loader">
       <h1>TourGuide . . .</h1>
     </div>
@@ -281,7 +441,7 @@
     <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
     <ul class="nav__links">
       <li class="link" data-aos="fade-down"><a href="#Home">Home</a></li>
-      <li class="link" data-aos="fade-down"><a href="#AboutUs">AboutUs</a></li>
+      <li class="link" data-aos="fade-down"><a href="#AboutUs">About Us</a></li>
       <li class="link" data-aos="fade-down"><a href="#Destinations">Destinations</a></li>
       <li class="link" data-aos="fade-down"><a href="#trip">Pricing</a></li>
       <li class="link" data-aos="fade-down"><a href="#testimonials">Testimonials</a></li>
@@ -295,32 +455,37 @@
   </nav> -->
     <div class="nav-container" id="top">
       <nav class="newNav">
-        <img src="./img/A T logo with a white background and a square shape, connected to nature for a travel company.png" style="width:30px;height:30px;border-radius:50%;">
-        
-        <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+        <img
+          src="./img/A T logo with a white background and a square shape, connected to nature for a travel company.png"
+          style="width:30px;height:30px;border-radius:50%;">
+
+        <a href="#" class="nav__logo" data-aos="fade-right">Tourguide</span></a>
 
         <ul class="navLinks">
 
+          <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
+          <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
           <li class="link" data-aos=""><a href="#Home">Home</a></li>
-          <li class="link" data-aos=""><a href="#AboutUs"> AboutUs</a></li>
-          <li class="link" data-aos=""><a href="#Destinations">Destinations</a></li>
-          <li class="link" data-aos=""><a href="#trip">Pricing</a></li>
+          <li class="link" data-aos=""><a href="#AboutUs">About</a></li>
+          <li class="link" data-aos=""><a href="#Destinations">Destination</a></li>
+          <li class="link" data-aos=""><a href="#trip">Prices</a></li>
           <li class="link" data-aos=""><a href="#ReviewGallery">Trip Gallery</a></li>
-          <li class="link" data-aos=""><a href="#testimonials">Testimonials</a></li>
-          <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+          <li class="link" data-aos=""><a href="#tourist">Tourist Guide</a></li>
+          <li class="link" data-aos=""><a href="#hotel">Hotel & Resort</a></li>
+          <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
+          <li class="link" data-aos=""><a href="feedback.html">Rate Us</a></li>
           <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
-
-
+          <li class="link" data-aos=""><a href="contributors.html">Contributors</a></li>
         </ul>
 
 
-        <a href="newLogin.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
+        <a href="newLogin.html" class="contact-btn" id="nav-login-btn"><button class="btn login" id="btn-style"
             data-aos="fade-down">Login/SignUp</button></a>
-            <a href="mapa.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
-              data-aos="fade-down">view <map name=""></map></button></a>
+        <a href="mapa.html" class="contact-btn" id="nav-view-btn"><button class="btn" id="btn-style" style="margin: 0;"
+            data-aos="fade-down">view <map name=""></map></button></a>
 
-        <a href="loginPage.html" class="contact-btn"><button class="btn" id="logout-btn" style="margin: 0; display: none;"
-              data-aos="fade-down" disabled>Log Out</button></a>
+        <a href="loginPage.html" class="contact-btn"><button class="btn" id="logout-btn"
+            style="margin: 0; display: none;" data-aos="fade-down" disabled>Log Out</button></a>
 
         <!-- <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
             style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a> -->
@@ -336,6 +501,10 @@
       </nav>
     </div>
     <header>
+      <div class="nav-wrapperr">
+        <div class="progress-bar"></div>
+      </div>
+      
       <section class="section__container header__container" id="Home">
         <div class="header__image" data-aos="fade-down-right">
           <img src="https://i.ibb.co/88Qnjxg/pexels-josh-hild-2422259.jpg" alt="header" />
@@ -343,8 +512,9 @@
         </div>
         <div class="header__content">
           <div>
-            <h1 data-aos="fade-in">Find Your Perfect Getaway<br />Discover the World's Best Kept   <div> <span
-                class="auto-typed" style="color: var(--head-text);"></span></div></h1>
+            <h1 data-aos="fade-in">Find Your Perfect Getaway<br />Discover the World's Best Kept <div> <span
+                  class="auto-typed" style="color: var(--head-text);"></span></div>
+            </h1>
             <p class="section__subtitle" data-aos="fade-in">
               Make your travel more enjoyable with us. We are the best travel
               agency and we are providing the best travel services for our
@@ -359,7 +529,7 @@
                   style="box-shadow: 2px 2px 8px red;">Book Now</button></a>
             </div>
 
-              
+
             <br>
             <div class="story">
               <div class="video">
@@ -368,6 +538,7 @@
                 <!-- link to the hmtl page with the video -->
                 <a href="story.html" class="btn_video">
                   <span><i class="ri-play-fill"></i></span>
+                </a>
               </div>
                
             </div>
@@ -426,7 +597,7 @@
                   </p>
 
                   <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
-                    <strong><span style="margin-left: 80px;"></span> We welcome you to the TourGuide family - where
+                    <strong><span style="margin-left: 50px;"></span> We welcome you to the TourGuide family - where
                       every journey becomes a story worth
                       sharing!</strong>
                   </p>
@@ -441,80 +612,135 @@
 
     </div>
     <!-- Right statistics container -->
+
+    <!-- <div class="container-fluid text-center">
+      <h1>Some cool facts</h1>
+      <div class="row">
+        <div class="col-sm-3">
+          <i class="fa fa-user"></i>
+          <h2 data-max="50">+ Happy Customers</h2>
+        </div>
+        <div class="col-sm-3">
+          <i class="fa fa-code"></i>
+          <h2 data-max="25000">+ Lines of code</h2>
+        </div>
+        <div class="col-sm-3">
+          <i class="fa fa-lock"></i>
+          <h2 data-max="10">+ Projects</h2>
+
     <div data-aos="fade-left" class="col-6">
 
       <div class="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-1 sm:gap-4 xl:gap-8 sm:space-y-0 md:mt-12">
-        <!-- Box 1 - Number of Guides -->
-        <div class="box1">
+         Box 1 - Number of Guides -->
+    <!-- <div class="box1">
           <div class="iconss">
 
             <svg class="w-12 h-12 mx-auto dark:text-gray-100 group-hover:text-pink-500 group-hover:dark:text-pink-500"
               viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round">
               <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-              <!-- SVG Path for the icon -->
-              <circle cx="8.5" cy="7" r="4" />
+              SVG Path for the icon -->
+    <!-- <circle cx="8.5" cy="7" r="4" />
               <polyline points="17 11 19 13 23 9" />
             </svg>
-            <h3
+            <h3 id="guidesCount"
               class="font-semibold text-4xl md:text-3xl group-hover:text-thq_green-500 text-gray-900 dark:text-white mt-3.5"
               data-aos="fade-in">25000</h3>
             <p
               class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300">
               Guides</p>
           </div>
-        </div>
-        <!-- Box 2 - Number of Tours -->
-        <div class="box1">
+        </div>  -->
+    <!-- Box 2 - Number of Tours -->
+    <!-- <div class="box1">
           <div class="iconss">
             <svg class="w-12 h-12 mx-auto dark:text-gray-100 group-hover:text-pink-500 group-hover:dark:text-pink-500"
               viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
               stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" />
-              <circle cx="12" cy="10" r="4" />
-              <!-- SVG Path for the icon -->
-              <path d="M6.75 16a8.015 8.015 0 1 0 9.25 -13" />
+              <circle cx="12" cy="10" r="4" /> -->
+    <!-- SVG Path for the icon -->
+    <!-- <path d="M6.75 16a8.015 8.015 0 1 0 9.25 -13" />
               <line x1="12" y1="18" x2="12" y2="22" />
               <line x1="8" y1="22" x2="16" y2="22" />
             </svg>
-            <h3
+            <h3 id="toursCount"
               class="font-semibold text-4xl md:text-3xl  group-hover:text-thq_green-500 text-gray-900 dark:text-white mt-3.5"
               data-aos="fade-in">20000</h3>
             <p class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300"
               data-aos="fade-in">Tours</p>
           </div>
-        </div>
-        <!-- Box 3 - Number of Destinations -->
-        <div class="box1">
+        </div> -->
+    <!-- Box 3 - Number of Destinations -->
+    <!-- <div class="box1">
           <a href="affordable-destinations.html" class="iconss">
             <svg class="w-12 h-12 mx-auto group-hover:text-pink-500 dark:text-gray-100 group-hover:dark:text-pink-500"
               viewBox="0 0 24 24" stroke-width="2" stroke="black" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
-              <!-- SVG Path for the icon -->
-              <path stroke="none" d="M0 0h24v24H0z" />
+              stroke-linejoin="round"> -->
+    <!-- SVG Path for the icon -->
+    <!-- <path stroke="none" d="M0 0h24v24H0z" />
               <line x1="18" y1="6" x2="18" y2="6.01" />
               <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
               <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
               <line x1="9" y1="4" x2="9" y2="17" />
               <line x1="15" y1="15" x2="15" y2="20" />
             </svg>
-            <h3
+            <h3 id="destinationsCount"
               class="font-semibold text-4xl md:text-3xl  group-hover:text-thq_green-500 text-black-900 dark:text-black mt-3.5"
               data-aos="fade-in">10994</h3>
             <p class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300"
               data-aos="fade-in">Destinations</p>
           </a>
+
         </div>
+        <div class="col-sm-3">
+          <i class="fa fa-briefcase"></i>
+          <h2 data-max="30" id="test">+ Developers</h2>
+        </div>
+      </div>  -->
+
+
+    <section>
+      <div class="wrapper">
+        <div class="countitem">
+          <i class="fa-solid fa-handshake-angle"></i>
+          <span class="num" data-val="25000">000</span>
+          <span class="text">Guides</span>
+        </div>
+        <div class="countitem">
+          <i class="fa-solid fa-suitcase-rolling"></i>
+          <span class="num" data-val="20000">000</span>
+          <span class="text">Tours</span>
+        </div>
+        <div class="countitem">
+          <i class="fa-solid fa-location-dot"></i>
+          <span class="num" data-val="20000">000</span>
+          <span class="text">Destinations</span>
+        </div>
+
       </div>
-    </div>
-
-    </div>
-    </div>
-    </div>
-    </div>
-
     </section>
-    </header>
+
+    <script>
+      let valueDisplays = document.querySelectorAll(".num");
+      let interval = 4000;
+      valueDisplays.forEach((valueDisplay) => {
+        let startValue = 0;
+        let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+        let duration = Math.floor(interval / endValue);
+        let counter = setInterval(function () {
+          startValue += 10;
+          valueDisplay.textContent = startValue;
+          if (startValue == endValue) {
+            clearInterval(counter);
+          }
+        }, duration);
+      });
+    </script>
+
+
+
+
     <br><br>
     <!-- ending the section of About Us -->
 
@@ -553,26 +779,27 @@
     </div>
 
     <section class="section__container destination__container" id="Destinations" data-aos="fade-up">
-    <div class="section__header">
-      <div>
-        <h2 class="section__title" data-aos="fade-in">Explore top destinations</h2>
-        <p class="section__subtitle" data-aos="fade-in">
-          Explore your dream places around the world. Here you can find your perfect destination.
-        </p>
+      <div class="section__header">
+        <div>
+          <h2 class="section__title" data-aos="fade-in"><span style="margin-left: 300px;"></span>Explore top
+            destinations</h2>
+          <p class="section__subtitle" data-aos="fade-in" style="margin-left: 300px;">
+            Explore your dream places around the world. Here you can find your perfect destination.
+          </p>
+        </div>
       </div>
-    </div>
 
-    <!-- slideshow -->
-<!-- <div class="slideshow-container" data-aos="fade-up"> -->
+      <!-- slideshow -->
+      <!-- <div class="slideshow-container" data-aos="fade-up"> -->
 
-<!-- Next and previous buttons -->
-<!-- <div class="destination__nav">
+      <!-- Next and previous buttons -->
+      <!-- <div class="destination__nav">
       <span onclick="pullSlide(-1)"><i class="ri-arrow-left-s-line"></i></span>
       <span onclick="pullSlide(1)"><i class="ri-arrow-right-s-line"></i></span>
     </div> -->
 
-<!-- Full-width images with number and caption text -->
-<!-- <div class="mySlides">
+      <!-- Full-width images with number and caption text -->
+      <!-- <div class="mySlides">
       <img src="./img/eiffelTower.webp" style="width:100%">
     </div>
 
@@ -594,69 +821,70 @@
           <span></span>
         </div>
       </div> -->
-    <div class="outer-box">
-      <div class="containers">
-            
-          <div class="card active" style="
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
-              url('/img/paris.jpg')
-          ">
-          <div class="info">
 
-            <p>
-              ||Eiffel Tower||
-            </p>
-            <h3>PARIS</h3>
+      <div class="outer-box">
+        <div class="containers">
+              
+            <div class="card active" style="
+              background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+                url('./img/paris.jpg')
+            ">
+            <div class="info">
+  
+              <p>
+                ||Eiffel Tower||
+              </p>
+              <h3>PARIS</h3>
+            </div>
           </div>
+  
+      <div class="card" style="
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+          url('./img/london.jpg')
+      ">
+        <div class="info">
+          
+          <p>||Giant Wheel||</p>
+          <h3>LONDON</h3>
         </div>
-
-    <div class="card" style="
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
-        url('./img/london.jpg')
-    ">
-      <div class="info">
-        <img src="./img/london.jpg" alt="Giant Wheel" style="width:100%">
-        <p>||Giant Wheel||</p>
-        <h3>LONDON</h3>
       </div>
-    </div>
-
-    <div class="card" style="
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
-        url('./img/goa.jpg')
-    ">
-      <div class="info">
-        <img src="./img/goa.jpg" alt="Goa Beach" style="width:100%">
-        <p>||Goa Beach||</p>
-        <h3>GOA</h3>
+  
+      <div class="card" style="
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+          url('./img/goa.jpg')
+      ">
+        <div class="info">
+          
+          <p>||Goa Beach||</p>
+          <h3>GOA</h3>
+        </div>
       </div>
-    </div>
-
-    <div class="card" style="
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
-        url('./img/maldives.jpg')
-    ">
-      <div class="info">
-        <img src="./img/maldives.jpg" alt="Male Beach" style="width:100%">
-        <p>||Male Beach||</p>
-        <h3>MALDIVES</h3>
+  
+      <div class="card" style="
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+          url('./img/maldives.jpg')
+      ">
+        <div class="info">
+         
+          <p>||Male Beach||</p>
+          <h3>MALDIVES</h3>
+        </div>
       </div>
+  
     </div>
-
   </div>
-</div>
-
-    <script src="explore.js"></script>
+  
+      <script src="explore.js"></script>
     </section>
 
     <section class="trip" id="trip" data-aos="zoom-in" data-aos-offset="100">
       <div class="section__container trip__container">
         <h2 class="section__title">Best trip packages</h2>
-        <p class="section__subtitle">
+        <p class="section__subtitle" style="margin-left: 280px;">
           Top trip deals curated for you. Get the best package for your adventure and save more.
         </p>
         <div class="trip__grid">
-          <div class="trip__card">
+          <div class="trip__card cardd tilt-effect">
             <img src="https://i.ibb.co/60nvYwQ/Screenshot-2023-07-14-173347.png" alt="trip" height="250" width="45" />
             <div class="trip__details">
               <p>Santorini, Aegean Sea</p>
@@ -669,7 +897,7 @@
               </div>
             </div>
           </div>
-          <div class="trip__card">
+          <div class="trip__card cardd tilt-effect">
             <img src="https://i.ibb.co/h1WgH8B/Screenshot-2023-07-14-173807.png" alt="trip" height="250" width="45" />
             <div class="trip__details">
               <p>Machu Picchu, Peru</p>
@@ -682,7 +910,7 @@
               </div>
             </div>
           </div>
-          <div class="trip__card">
+          <div class="trip__card cardd tilt-effect">
             <img src="https://i.ibb.co/vc2W0wN/Screenshot-2023-07-14-174151.png" alt="trip" height="250" width="45" />
             <div class="trip__details">
               <p>Grand Canyon National Park, Arizona</p>
@@ -698,59 +926,69 @@
         <div class="view__all">
           <a href="./package.html"><button class="btn" id="btn-style" style="box-shadow: 2px 2px 8px red;">View
               All</button></a>
+          <br>
+          <br>
+          <a href="trending.html"><button class="btn" id="btn-style" style="box-shadow: 2px 2px 8px red;">View
+              Trending</button></a>
         </div>
       </div>
     </section>
     <div class="hero">
       <div class="carousel">
         <ul>
-            <li><img src="https://i.ibb.co/ZYDJ6vv/pexels-spencer-davis-4356144.jpg"></li>
-            <li><img src="https://i.ibb.co/W3HTbYG/pexels-zakaria-boumliha-2827374.jpg"></li>
-            <li><img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg"></li>
-            <li><img src="https://www.shutterstock.com/image-photo/attractive-young-female-tourist-exploring-260nw-2206967581.jpg"></li>
-            <li><img src="https://thumbs.dreamstime.com/b/young-man-tourist-sail-long-tail-thailand-boat-ocean-sea-vacation-travel-trip-beautiful-nature-87331931.jpg"></li>
-            <li><img src="https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/Feature-Akshardham-Temple.jpg"></li>
-            <li><img src="https://etimg.etb2bimg.com/photo/106124800.cms"></li>
-            <li><img src="https://i.insider.com/5dcc2f02e94e860aff271137?width=700"></li>
-            <li><img src="https://static01.nyt.com/images/2022/03/23/multimedia/23-virus-briefing-capitol/23-virus-briefing-capitol-articleLarge.jpg?quality=75&auto=webp&disable=upscale"></li>
-            <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWh9aGHycWhRya4V6ZiJFL26LyIHheiu-EoQ&s"></li>
-        
+          <li><img src="https://i.ibb.co/ZYDJ6vv/pexels-spencer-davis-4356144.jpg"></li>
+          <li><img src="https://i.ibb.co/W3HTbYG/pexels-zakaria-boumliha-2827374.jpg"></li>
+          <li><img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg"></li>
+          <li><img
+              src="https://www.shutterstock.com/image-photo/attractive-young-female-tourist-exploring-260nw-2206967581.jpg">
+          </li>
+          <li><img
+              src="https://thumbs.dreamstime.com/b/young-man-tourist-sail-long-tail-thailand-boat-ocean-sea-vacation-travel-trip-beautiful-nature-87331931.jpg">
+          </li>
+          <li><img src="https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/Feature-Akshardham-Temple.jpg">
+          </li>
+          <li><img src="https://etimg.etb2bimg.com/photo/106124800.cms"></li>
+          <li><img src="https://i.insider.com/5dcc2f02e94e860aff271137?width=700"></li>
+          <li><img
+              src="https://static01.nyt.com/images/2022/03/23/multimedia/23-virus-briefing-capitol/23-virus-briefing-capitol-articleLarge.jpg?quality=75&auto=webp&disable=upscale">
+          </li>
+          <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWh9aGHycWhRya4V6ZiJFL26LyIHheiu-EoQ&s">
+          </li>
+
         </ul>
       </div>
-    
-     
 
-</div>
 
-    <script
-    src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-    crossorigin="anonymous"></script>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="jquery.flipster.min.js"></script>
-<script>
-$('.carousel').flipster({
-    style:'carousel',
-    spacing: -0.3,
-});
-</script>
-<section class="gallary" id="ReviewGallery">
-  <div class="section__container gallary__container">
-    <div class="section__container gallary__container" id="originalDiv">
-      <div class="gallary__content">
-        <div>
-          <h2 class="section__title" data-aos="zoom-in">
-            Our trip gallery that will inspire you
-          </h2>
-          <p class="section__subtitle" data-aos="zoom-in">
-            Visual Stories of Adventure to Spark Your Imagination.<br>
-            Get inspired for your next journey.
-          </p>
-          <button class="btn btn-style" id="btn-page" onclick="replaceDivs()" data-aos="zoom-in"
-            style="box-shadow: 2px 2px 8px rgb(0, 191, 255);">View All</button>
+    <script>
+      $('.carousel').flipster({
+        style: 'carousel',
+        spacing: -0.3,
+      });
+    </script>
+    <section class="gallary" id="ReviewGallery">
+      <div class="section__container gallary__container">
+        <div class="section__container gallary__container" id="originalDiv">
+          <div class="gallary__content">
+            <div>
+              <h2 class="section__title" data-aos="zoom-in" style="text-align: center;">
+                Our trip gallery that will inspire you
+              </h2>
+              <p class="section__subtitle" data-aos="zoom-in">
+                Visual Stories of Adventure to Spark Your Imagination.<br>
+                Get inspired for your next journey.
+              </p>
+              <button class="btn btn-style" id="btn-page" onclick="replaceDivs()" data-aos="zoom-in"
+                style="box-shadow: 2px 2px 8px rgb(0, 191, 255);">View All</button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
       <br><br>
       <!-- New div components (hidden initially) -->
       <div id="newDiv" style="display: none;" data-aos="zoom-in">
@@ -940,13 +1178,65 @@ $('.carousel').flipster({
     </section>
     <script>
       function replaceDivs() {
-    document.querySelector('.hero').style.display = 'none';
-    document.getElementById('originalDiv').style.display = 'none';
-    document.getElementById('newDiv').style.display = 'block';
-  }
+        document.querySelector('.hero').style.display = 'none';
+        document.getElementById('originalDiv').style.display = 'none';
+        document.getElementById('newDiv').style.display = 'block';
+      }
     </script>
-    <br /><br /><br /><br /><br /><br />
+    <br /><br />
 
+    <!-- Toursit Guide Section -->
+    <section class="tourist" id="tourist">
+      <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Tourist Guide</h2>
+      <h4 style="color: rgb(231, 62, 118); font-style: italic;font-family: cursive;">Have an amazing trip and explore
+        the destiny</h4>
+      <br></br>
+      <h3
+        style="color: rgb(6, 151, 241); font-style: inherit;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+        Connect with the Guide</h3>
+      <br></br>
+      <div class="center-card">
+        <img src="./tg1.jpg" alt="guide1" />
+        <br></br>
+        <img src="./tg2.jpg" alt="guide2" />
+        <br></br>
+        <img src="./tg3.jpg" alt="guide3" />
+      </div>
+    </section>
+    <br /><br /><br /><br />
+
+    <!-- Hotel & Resort Section -->
+    <section class="hotel" id ="hotel">
+      
+      <div class="center-card">
+        <div>
+          <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Hotels & Resorts</h2> 
+          <h3 style="color: rgb(151, 6, 241); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Best Place for Beautiful Trip</h3>
+        </div>
+
+        <div>
+          <img src="./h1.png" alt="hr1"/>
+          <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
+        </div>
+        
+        <div>
+          <img src="./h2.png" alt="hr2"/>
+          <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
+        </div>
+        
+        <div>
+          <img src="./h3.png" alt="hr3"/>
+          <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
+        </div>
+        
+        <div>
+          <img src="./h4.png" alt="hr4"/>
+          <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
+        </div>
+        
+      </div>
+      </section>
+    <br /><br /><br /><br />
     <!-- Testimonials Section -->
 
     <section class="testimonials" id="testimonials">
@@ -959,20 +1249,24 @@ $('.carousel').flipster({
                 <img class="testi-img" src="./img/testimonial1.jpg" alt="">
                 <div>
                   <p><sup><i class="fas fa-quote-left"></i></sup>TourGuide made our dream vacation a reality! From the
-                    breathtaking landscapes to the seamless logistics, every moment was a new adventure. The personalized
-                    itinerary and expert guides added a special touch to our journey. We can't wait to book our next trip with
+                    breathtaking landscapes to the seamless logistics, every moment was a new adventure. The
+                    personalized
+                    itinerary and expert guides added a special touch to our journey. We can't wait to book our next
+                    trip with
                     TourGuide!<sup><i class="fas fa-quote-right"></i></sup></p>
                   <div class="user-info">
                     <h3>Joseph</h3>
                   </div>
                 </div>
               </div>
-              <div class="testimonial-user" >
+              <div class="testimonial-user">
                 <img class="testi-img" src="./img/Abhisek Tamang.jpg" alt="">
                 <div>
-                  <p><sup><i class="fas fa-quote-left"></i></sup>Our cultural tour with TourGuide exceeded all expectations.
+                  <p><sup><i class="fas fa-quote-left"></i></sup>Our cultural tour with TourGuide exceeded all
+                    expectations.
                     The
-                    immersive experiences, knowledgeable guides, and carefully curated activities allowed us to connect with
+                    immersive experiences, knowledgeable guides, and carefully curated activities allowed us to connect
+                    with
                     the
                     local culture in a way we never thought possible. Thanks to TourGuide.<sup><i
                         class="fas fa-quote-right"></i></sup></p>
@@ -981,12 +1275,14 @@ $('.carousel').flipster({
                   </div>
                 </div>
               </div>
-              <div class="testimonial-user" >
+              <div class="testimonial-user">
                 <img class="testi-img" src="./img/testimonial2.jpg" alt="">
                 <div>
-                  <p><sup><i class="fas fa-quote-left"></i></sup>Traveling with the family has never been easier! TourGuide
+                  <p><sup><i class="fas fa-quote-left"></i></sup>Traveling with the family has never been easier!
+                    TourGuide
                     took
-                    care of every detail, ensuring a stress-free and enjoyable vacation for all. The kid-friendly activities
+                    care of every detail, ensuring a stress-free and enjoyable vacation for all. The kid-friendly
+                    activities
                     and
                     family-oriented guides made our trip unforgettable.<sup><i class="fas fa-quote-right"></i></sup></p>
                   <div class="user-info">
@@ -998,20 +1294,24 @@ $('.carousel').flipster({
                 <img class="testi-img" src="./img/testimonial1.jpg" alt="">
                 <div>
                   <p><sup><i class="fas fa-quote-left"></i></sup>TourGuide made our dream vacation a reality! From the
-                    breathtaking landscapes to the seamless logistics, every moment was a new adventure. The personalized
-                    itinerary and expert guides added a special touch to our journey. We can't wait to book our next trip with
+                    breathtaking landscapes to the seamless logistics, every moment was a new adventure. The
+                    personalized
+                    itinerary and expert guides added a special touch to our journey. We can't wait to book our next
+                    trip with
                     TourGuide!<sup><i class="fas fa-quote-right"></i></sup></p>
                   <div class="user-info">
                     <h3>Joseph</h3>
                   </div>
                 </div>
               </div>
-              <div class="testimonial-user" >
+              <div class="testimonial-user">
                 <img class="testi-img" src="./img/Abhisek Tamang.jpg" alt="">
                 <div>
-                  <p><sup><i class="fas fa-quote-left"></i></sup>Our cultural tour with TourGuide exceeded all expectations.
+                  <p><sup><i class="fas fa-quote-left"></i></sup>Our cultural tour with TourGuide exceeded all
+                    expectations.
                     The
-                    immersive experiences, knowledgeable guides, and carefully curated activities allowed us to connect with
+                    immersive experiences, knowledgeable guides, and carefully curated activities allowed us to connect
+                    with
                     the
                     local culture in a way we never thought possible. Thanks to TourGuide.<sup><i
                         class="fas fa-quote-right"></i></sup></p>
@@ -1020,12 +1320,14 @@ $('.carousel').flipster({
                   </div>
                 </div>
               </div>
-              <div class="testimonial-user" >
+              <div class="testimonial-user">
                 <img class="testi-img" src="./img/testimonial2.jpg" alt="">
                 <div>
-                  <p><sup><i class="fas fa-quote-left"></i></sup>Traveling with the family has never been easier! TourGuide
+                  <p><sup><i class="fas fa-quote-left"></i></sup>Traveling with the family has never been easier!
+                    TourGuide
                     took
-                    care of every detail, ensuring a stress-free and enjoyable vacation for all. The kid-friendly activities
+                    care of every detail, ensuring a stress-free and enjoyable vacation for all. The kid-friendly
+                    activities
                     and
                     family-oriented guides made our trip unforgettable.<sup><i class="fas fa-quote-right"></i></sup></p>
                   <div class="user-info">
@@ -1038,7 +1340,7 @@ $('.carousel').flipster({
           </div>
         </div>
       </div>
-      
+
     </section>
 
 
@@ -1046,12 +1348,12 @@ $('.carousel').flipster({
 
 
 
-   
 
 
 
 
-    
+
+
 
     <!----------------------------------------------------- FAQ section ---------------------- -->
 
@@ -1059,46 +1361,63 @@ $('.carousel').flipster({
       <h2 class="section__title" data-aos="zoom-in">
         Frequently asked questions
       </h2>
-      <div class="faq-container">
-        <div class="faq active" data-aos="zoom-in">
-          <h3 class="faq-title">How do I book my travel arrangements through your website?</h3>
-          <p class="faq-text">Booking your travel with us is simple and convenient. Start by entering your destination,
+      <div class="accordion faq-container faq">
+        <div class="accordion__header" data-aos="zoom-in">
+          <h3 class="accordion__question faq-title">How do I book my travel arrangements through your website?</h3>
+          <span class="accordion__icon">
+            <i id="accordion-icon" class="ri-add-line"></i>
+          </span>
+        </div>
+        <div class="accordion__content">
+          <p class="faq-text accordion__answer">Booking your travel with us is simple and convenient. Start by entering
+            your destination,
             travel dates, and other relevant details on our homepage. Browse through the available options, including
             flights, hotels, and car rentals. Once you find the perfect combination for your trip, follow the easy
             step-by-step process to confirm your booking. If you encounter any issues or have questions during the
             booking process, our customer support team is available 24/7 to assist you.</p>
-          <button class="faq-toggle">
-            <i class="fas fa-chevron-down"></i>
-            <i class="fas fa-times"></i>
-          </button>
+
         </div>
-        <div class="faq" data-aos="zoom-in">
-          <h3 class="faq-title">What measures are in place to ensure the safety of my personal information?</h3>
-          <p class="faq-text">We take the security of your personal information seriously. Our website employs
+      </div>
+
+      <div class="accordion faq-container faq">
+        <div class="accordion__header" data-aos="zoom-in">
+          <h3 class="accordion__question faq-title">What measures are in place to ensure the safety of my personal
+            information?</h3>
+          <span class="accordion__icon">
+            <i id="accordion-icon" class="ri-add-line"></i>
+          </span>
+        </div>
+        <div class="accordion__content">
+          <p class="faq-text accordion__answer">We take the security of your personal information seriously. Our website
+            employs
             state-of-the-art encryption technology to safeguard your data during the booking process. Additionally, we
             adhere to strict privacy policies and comply with industry standards to protect your information. Rest
             assured that your details are used solely for the purpose of facilitating your travel arrangements, and we
             do not share your information with third parties without your consent. For more details, please refer to our
             Privacy Policy.</p>
-          <button class="faq-toggle">
-            <i class="fas fa-chevron-down"></i>
-            <i class="fas fa-times"></i>
-          </button>
+
         </div>
-        <div class="faq" data-aos="zoom-in">
-          <h3 class="faq-title">Can I make changes to my booking or cancel it if needed?</h3>
-          <p class="faq-text">Yes, we understand that plans can change. Depending on the terms and conditions of your
+      </div>
+
+      <div class="accordion faq-container faq">
+        <div class="accordion__header" data-aos="zoom-in">
+          <h3 class="accordion__question faq-title">Can I make changes to my booking or cancel it if needed?</h3>
+          <span class="accordion__icon">
+            <i id="accordion-icon" class="ri-add-line"></i>
+          </span>
+        </div>
+        <div class="accordion__content">
+          <p class="faq-text accordion__answer">Yes, we understand that plans can change. Depending on the terms and
+            conditions of your
             specific booking, you may be able to make modifications or cancel your reservation. Log in to your account
             on our website, navigate to the "Manage Booking" section, and follow the provided instructions. Keep in mind
             that there may be associated fees or restrictions depending on the type of booking and the time of the
             requested changes. For further assistance, feel free to contact our customer support team, and they will
             guide you through the process.</p>
-          <button class="faq-toggle">
-            <i class="fas fa-chevron-down"></i>
-            <i class="fas fa-times"></i>
-          </button>
+
         </div>
-        
+      </div>
+
 
       </div>
     </section>
@@ -1184,18 +1503,30 @@ $('.carousel').flipster({
             <form id="contact-form" name="CalcDiverse Contact" autocomplete="off">
               <div class="one" style="position: relative;">
                 <i class="icon1 fa-solid fa-user"></i>
-                <input type="text" id="Name" placeholder="Name"  style="padding-left: 6%;">
+                <input type="text" id="Name" placeholder="Name" style="padding-left: 6%;">
               </div>
               <div style="position: relative;">
-                <i class="icon2 fa-solid fa-envelope" ></i>
-                <input type="email" id="email" placeholder="Email"style="padding-left:6%;" required>
+                <i class="icon2 fa-solid fa-envelope"></i>
+                <input type="email" id="email" placeholder="Email" class="contact-us-email-fix" style="padding-left:6%; width: 50% !important;
+                padding-left: 6% !important;
+                padding-bottom: 10px !important;
+                margin: 20px !important;
+                margin-left: 30px !important;
+                outline: none !important;
+                border: none !important;
+                font-size: 15px !important;
+                background: none !important;
+                border-bottom: 1px solid var(--text-dark) !important;
+                color: var(--text-dark) !important;
+                font-family: 'Oxygen', sans-serif !important; border-radius: 20px;" required>
               </div>
               <div style="position: relative;">
                 <i class="icon3 fa-solid fa-message"></i>
-                <textarea id="message" placeholder="Type your message here.." style="padding-left:6%;" required></textarea><br>
+                <textarea id="message" placeholder="Type your message here.." style="padding-left:6%;"
+                  required></textarea><br>
               </div>
               <button type="submit" class="btn btn-style" data-aos="fade-in" id="btn-style"
-              style="margin-right: 40px;box-shadow: 2px 2px 8px red;">Send</button>
+                style="margin-right: 40px;box-shadow: 2px 2px 8px red;">Send</button>
               <button onclick="window.location.href='feed.html'" class="btn  btn-style" data-aos="fade-in"
                 id="btn-style" style="box-shadow: 2px 2px 8px red;">Feedback</button>
             </form>
@@ -1216,30 +1547,44 @@ $('.carousel').flipster({
           </p>
         </div>
         <div class="subscribe__form" data-aos="fade-up">
-          <form>
-            <input type="email" placeholder="Your email here" id="emailInput" required />
-            <button class="btn-send" id="send" type="submit" style="box-shadow: 2px 2px 8px blue;">Subscribe</button>
+          <form id="subscriptionForm">
+            <input type="email"  style="border: none; font-size: 15px; margin: auto;" placeholder="Your email here" id="emailInput" required />
+            <button class="btn-send" id="send" type="submit" style="box-shadow: 0px 4px 8px blue; font-weight:530;">Subscribe</button>
           </form>
+          <p id="subscriptionMessage" style="display: none; color: green; margin-top: 10px;">Subscription successful! 🎉
+          </p>
         </div>
       </div>
     </section>
+    <!--DISPLAY SUBSCRIPTION SUCCESS MESSAGE-->
+    <script>
+      document.getElementById('subscriptionForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent submission
+
+
+
+        //  success message 
+        showSubscriptionMessage();
+      });
+
+      function showSubscriptionMessage() {
+        var messageElement = document.getElementById('subscriptionMessage');
+        messageElement.style.display = 'block';
+
+        // Hide message after 4 seconds
+        setTimeout(function () {
+          messageElement.style.display = 'none';
+        }, 4000); // 4000 milliseconds = 4 seconds
+      }
+    </script>
+
+
+<!-- footer  -->
 
     <footer class="footer" data-aos="fade-up">
-      <div class="section__container footer__container">
+      <div class="footer__container">
         <div class="footer__col">
-          <h3 class="footer__title">Places You May Want to Visit<span>.</span></h3>
-          <p class="footer__text"> 
-           <ul class="interested  " >
-            <li><a href="Cultural_Exp.html">Cultural Experiences</a></li>
-           
-            <li><a href="HoneyMoon.html">Honeymoon Places</a></li>
-            <li><a href="Adventure.html">Adventure travel</a></li>
-           
-           </ul>
-          </p>
-        </div>
-        <div class="footer__col">
-          <h3 class="footer__title">Tourguide<span>.</span></h3>
+          <h3 class="footer-head" class="footer__title" style="cursor: default;">Tourguide<span>.</span></h3>
           <p>
             Ready for your next adventure? Let's make it unforgettable.<br>
           </p>
@@ -1248,24 +1593,29 @@ $('.carousel').flipster({
           </p>
         </div>
         <div class="footer__col">
+          <h3 class="footer-head" class="footer__title">Places You May Want to Visit<span>.</span></h3>
+          <p class="footer__text">
+
+            <a href="Cultural_Exp.html">Cultural Experiences</a>
+
+            <a href="HoneyMoon.html">Honeymoon Places</a>
+            <a href="Adventure.html">Adventure travel</a>
+
+
+          </p>
+        </div>
+        <div class="footer__col">
           <div class="footer__area">
-            <h4 class="footer__subtitle">Support</h4>
-          <p><a href="./faq.html" class="footer__link">FAQs</a></p>
-          <p><a href="./tnc.html" class="footer__link">Terms & Conditions</a></p>
-          <p><a href="./privacy.html" class="footer__link">Privacy Policy</a></p>
-          <p><a href="#cnt-form" class="footer__link">Contact Us</a></p>
+            <h4 class="footer-head" class="footer__subtitle">Support</h4>
+            <p><a href="./faq.html" class="footer__link">FAQs</a></p>
+            <p><a href="./tnc.html" class="footer__link">Terms & Conditions</a></p>
+            <p><a href="./privacy.html" class="footer__link">Privacy Policy</a></p>
+            <p><a href="./Licensing.html" class="footer__link">Licensing</a></p>
+            <p><a href="#cnt-form" class="footer__link">Contact Us</a></p>
           </div>
         </div>
         <div class="footer__col">
-          <p>Social Media</p>
-          <section class="social-icon">
-            <a href="#" class="fa-brands fa-facebook fa-2xl"></a>
-            <a href="#" class="fa-brands fa-instagram fa-2xl"></a>
-            <a href="#" class="fa-brands fa-twitter fa-2xl"></a>
-        </section>
-        </div>
-        <div class="footer__col">
-          <h4>Address</h4>
+          <h4 class="footer-head" style="padding-left: 35px;"> Address</h4>
           <div class="mapouter">
             <div class="gmap_canvas"><iframe width="200" height="200" id="gmap_canvas"
                 src="https://maps.google.com/maps?q=wellington%20street%20kolkata&t=k&z=11&ie=UTF8&iwloc=&output=embed"
@@ -1290,15 +1640,64 @@ $('.carousel').flipster({
             </div>
           </div>
         </div>
+     
         <div class="footer__col">
           <div class="footer__area">
-          <h4>Reach Out To Us</h4>
-          <p><span>Email:</span><a href="mailto:tour@tourguide.com">tour@tourguide.com</a></p>
-          <p><span>Phone:</span><a href="tel:8562145852">+91 8562145852</a></p>
-        </div>
+            <h4>Contact Us</h4>
+            <div class="d-flex align-items-center mb-2">
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M14.851 11.923c-.179-.641-.521-1.246-1.025-1.749-1.562-1.562-4.095-1.563-5.657 0l-4.998 4.998c-1.562 1.563-1.563 4.095 0 5.657 1.562 1.563 4.096 1.561 5.656 0l3.842-3.841.333.009c.404 0 .802-.04 1.189-.117l-4.657 4.656c-.975.976-2.255 1.464-3.535 1.464-1.28 0-2.56-.488-3.535-1.464-1.952-1.951-1.952-5.12 0-7.071l4.998-4.998c.975-.976 2.256-1.464 3.536-1.464 1.279 0 2.56.488 3.535 1.464.493.493.861 1.063 1.105 1.672l-.787.784zm-5.703.147c.178.643.521 1.25 1.026 1.756 1.562 1.563 4.096 1.561 5.656 0l4.999-4.998c1.563-1.562 1.563-4.095 0-5.657-1.562-1.562-4.095-1.563-5.657 0l-3.841 3.841-.333-.009c-.404 0-.802.04-1.189.117l4.656-4.656c.975-.976 2.256-1.464 3.536-1.464 1.279 0 2.56.488 3.535 1.464 1.951 1.951 1.951 5.119 0 7.071l-4.999 4.998c-.975.976-2.255 1.464-3.535 1.464-1.28 0-2.56-.488-3.535-1.464-.494-.495-.863-1.067-1.107-1.678l.788-.785z"/></svg>
+              <a href="mailto:tour@tourguide.com" class="text-nowrap">tour@tourguide.com</a>
+            </div>
+            <div class="d-flex align-items-center">
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M8.26 1.289l-1.564.772c-5.793 3.02 2.798 20.944 9.31 20.944.46 0 .904-.094 1.317-.284l1.542-.755-2.898-5.594-1.54.754c-.181.087-.384.134-.597.134-2.561 0-6.841-8.204-4.241-9.596l1.546-.763-2.875-5.612zm7.746 22.711c-5.68 0-12.221-11.114-12.221-17.832 0-2.419.833-4.146 2.457-4.992l2.382-1.176 3.857 7.347-2.437 1.201c-1.439.772 2.409 8.424 3.956 7.68l2.399-1.179 3.816 7.36s-2.36 1.162-2.476 1.215c-.547.251-1.129.376-1.733.376"/></svg>
+              <a href="tel:8562145852" class="text-nowrap">+91 8562145852</a>
+            </div>
+            <div class="icons">
+              <a href="">
+                <div class="icon">
+                  <i class="fab fa-linkedin" title="linkedin" style="cursor: pointer;"></i>
+                </div>
+              </a>
+
+              <a href="">
+                <div class="icon">
+                  <i class="fab fa-twitter" title="X" style="cursor: pointer;"></i>
+                </div>
+              </a>
+
+              <a href="">
+                <div class="icon">
+                  <i class="fab fa-instagram" title="Instagram" style="cursor: pointer;"></i>
+                </div>
+              </a>
+
+
+              <a href="" title="YouTube">
+                <div class="icon">
+                  <i class="fab fa-youtube" style="cursor: pointer;"></i>
+                </div>
+              </a>
+
+              <a href="">
+                <div class="icon">
+                  <i class="fab fa-github" title="Github"></i>
+                </div>
+              </a>
+
+            </div>
+            <!-- Visitor Widget -->
+            <div class="visitor-widget mt-3">
+              <a>
+                <img alt="Hits" src="https://hits.sh/apu52.github.io/Travel_Website.svg?style=for-the-badge&label=Visitors&extraCount=786&color=526180&labelColor=9bbbff"/>
+              </a>
+            </div>
+          </div>
+
+         
+
         </div>
         <div class="footer__col">
-          <div id="google_element"></div>
+          <div id="google_element" style="z-index: 1;"></div>
           <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
           <script>
             function loadGoogleTranslate() {
@@ -1307,46 +1706,47 @@ $('.carousel').flipster({
               }, 'google_element');
             }
           </script>
-      </div>
-
-
-      <!--  New copyright code to make it dynamic and display current year -->
-      <div class="footer__bar">
-        <div>
-          <li>Copyright &copy;<span id="year"></span> </span> Arpan Chowdhury. All rights reserved. </li>
         </div>
-      </div>
+       
 
-      <!--   Previous copyright code
-<!--  <div class="footer__bar">
-        Copyright © 2023 Arpan Chowdhury. All rights reserved.
-      </div> -->
+        
+        </div>
+      
+       
 
+        <!--  New copyright code to make it dynamic and display current year -->
+       
+        <div class="footer__bar">
+          <div>
+            <li>Copyright &copy;<span id="year"></span> </span> Arpan Chowdhury. All rights reserved. </li>
+          </div>
+        </div>
     </footer>
+    
 
     <a class="goupbtn" href="#" onclick="goToTop()"><i class="fa-solid fa-arrow-up"></i></a>
 
-<script>
-  // Get the button
-  var mybutton = document.querySelector(".goupbtn");
+    <script>
+      // Get the button
+      var mybutton = document.querySelector(".goupbtn");
 
-  // When the user scrolls, check if the button should be displayed
-  window.addEventListener("scroll", function() {
-    if (window.scrollY > 20) {
-      mybutton.style.display = "block";
-    } else {
-      mybutton.style.display = "none";
-    }
-  });
+      // When the user scrolls, check if the button should be displayed
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      });
 
-  // When the user clicks on the button, scroll to the top of the document
-  function goToTop() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-  }
-</script>
+      // When the user clicks on the button, scroll to the top of the document
+      function goToTop() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+    </script>
 
-    
+
 
 
 
@@ -1797,15 +2197,17 @@ $('.carousel').flipster({
   <script src="faq-website.js"></script>
 
   <script>
-    window.onload = function() {
-        var link = top.document.createElement("link");
-        link.type = "image/x-icon";
-        link.rel = "icon";
-        link.href = "favicon.ico?v=1";
-        top.document.getElementsByTagName("head")[0].appendChild(link);
+    window.onload = function () {
+      var link = top.document.createElement("link");
+      link.type = "image/x-icon";
+      link.rel = "icon";
+      link.href = "favicon.ico?v=1";
+      top.document.getElementsByTagName("head")[0].appendChild(link);
     }
-</script>
-  =======
+  </script>
+
+  <script src="index.js"></script>
+
 
   <!--  Adding copyright javascript code to make it dynamic and display current year -->
   <script>
@@ -1813,29 +2215,79 @@ $('.carousel').flipster({
   </script>
 
   <script>
-        // Logout Button
+    // Logout Button
 
-      document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function () {
       var isLoggedIn = localStorage.getItem('isLoggedIn');
       var loginButton = document.getElementById('btn-style');
       var logoutButton = document.getElementById('logout-btn');
 
       if (isLoggedIn === 'true') {
-          loginButton.style.display = 'none';
-          logoutButton.style.display = 'block';
-          loginButton.disabled = true ;
-          logoutButton.disabled = false;
-          logoutButton.style.cursor = 'pointer';
-          logoutButton.addEventListener('click', function() {
-              localStorage.setItem('isLoggedIn', 'false');
-              window.location.href = './index.html';
-          });
+        loginButton.style.display = 'none';
+        logoutButton.style.display = 'block';
+        loginButton.disabled = true;
+        logoutButton.disabled = false;
+        logoutButton.style.cursor = 'pointer';
+        logoutButton.addEventListener('click', function () {
+          localStorage.setItem('isLoggedIn', 'false');
+          window.location.href = './index.html';
+        });
       } else {
-          loginButton.style.display = 'block';
-          logoutButton.disabled = true;
+        loginButton.style.display = 'block';
+        logoutButton.disabled = true;
       }
-  });
+    });
   </script>
+
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    function animateValue(id, start, end, duration) {
+      const obj = document.getElementById(id);
+      const startTime = performance.now();
+
+      function updateValue(timestamp) {
+        const elapsedTime = timestamp - startTime;
+        const progress = Math.min(elapsedTime / duration, 1);
+        const currentValue = Math.floor(progress * (end - start) + start);
+        obj.textContent = currentValue;
+        if (progress < 1) {
+          requestAnimationFrame(updateValue);
+
+        }
+
+        requestAnimationFrame(updateValue);
+      }
+</script>
+
+
+<script>
+    const scrollline = document.querySelector('.progress-bar');
+
+  function fillscrollline(){
+    const windowHeight = window.innerHeight;
+    const fullHeight = document.body.clientHeight;
+    const scrolled = window.scrollY;
+    const percentScrolled = (scrolled / (fullHeight - windowHeight)) * 100;
+
+    scrollline.style.width = percentScrolled + '%';
+  };
+
+    window.addEventListener('scroll', fillscrollline);
+
+
+      // Call the function for each count-up element
+      animateValue("guidesCount", 0, 25000, 20000);
+      animateValue("toursCount", 0, 20000, 20000);
+      animateValue("destinationsCount", 0, 10994, 20000);
+})
+
+  </script>
+
+
+
+
 
 
 
@@ -1844,7 +2296,7 @@ $('.carousel').flipster({
 </html><!-- New bubble background start -->
 
 
-<div class="bubbles">
+<!-- <div class="bubbles">
   <div class="bubble"></div>
   <div class="bubble"></div>
   <div class="bubble"></div>
@@ -1870,5 +2322,5 @@ $('.carousel').flipster({
 
 
 
-</div>
+</div> -->
 <!-- New bubble background end -->
