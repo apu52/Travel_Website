@@ -344,6 +344,13 @@
       z-index: 9999;
     }
 
+    @media screen and (max-width: 768px){
+      .circle-container {
+        display: none;
+      }
+
+    }
+
   </style>
   <link rel="stylesheet" href="imstyle.css">
   <link rel="stylesheet" href="jquery.flipster.min.css">
@@ -354,6 +361,32 @@
 <body style="background-color: var(--secondary-color);">
 
   <body>
+  <!-- chatbot -->
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script>
+    window.botpressWebChat.init({
+        "composerPlaceholder": "Ask me anything!",
+        "botConversationDescription": "TourGuide",
+        "botId": "7d93db89-5ddd-48ac-91c7-d5f35eae9bdc",
+        "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+        "messagingUrl": "https://messaging.botpress.cloud",
+        "clientId": "7d93db89-5ddd-48ac-91c7-d5f35eae9bdc",
+        "webhookId": "c874de53-fdf6-4bee-bd45-30a736b1a42e",
+        "lazySocket": true,
+        "themeName": "prism",
+        "botName": "TourGuide",
+        "avatarUrl": "https://previews.123rf.com/images/hgucuk/hgucuk2012/hgucuk201200075/161468561-world-tourism-the-tour-guide-%C3%A4%C2%B0con-design.jpg",
+        "stylesheet": "https://webchat-styler-css.botpress.app/prod/28032111-a170-4e9e-be60-9c9222f20935/v72246/style.css",
+        "frontendVersion": "v1",
+        "useSessionStorage": true,
+        "enableConversationDeletion": true,
+        "theme": "prism",
+        "themeColor": "#2563eb",
+        "allowedOrigins": []
+    });
+  </script>
+
+
     <div class="circle-container">
       <div class="circle"></div>
       <div class="circle"></div>
@@ -880,7 +913,7 @@
     <section class="trip" id="trip" data-aos="zoom-in" data-aos-offset="100">
       <div class="section__container trip__container">
         <h2 class="section__title">Best trip packages</h2>
-        <p class="section__subtitle" style="margin-left: 280px;">
+        <p class="section__subtitle" >
           Top trip deals curated for you. Get the best package for your adventure and save more.
         </p>
         <div class="trip__grid">
@@ -1823,14 +1856,14 @@
     <script src="index.js"></script>
 
 
-    <script>
+    <!-- <script>
       window.embeddedChatbotConfig = {
         chatbotId: "yDQ_EheFvX0HAPr9beQ5L",
         domain: "www.chatbase.co"
       }
     </script>
     <script src="https://www.chatbase.co/embed.min.js" chatbotId="yDQ_EheFvX0HAPr9beQ5L" domain="www.chatbase.co" defer>
-    </script>
+    </script> -->
 
 
 
