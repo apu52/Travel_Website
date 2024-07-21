@@ -11,21 +11,23 @@
   <link rel="stylesheet" href="./login/login.css">
 </head>
 <body>
+  <div id="loginSuccessBanner" class="success-banner">Logged in successfully</div>
+    <div id="registerSuccessBanner" class="success-banner">Registered successfully</div>
   <div class="main-container">
     <div class="container" id="container">
       <div class="form-container register-container">
-        <form action="#" id="registerForm">
+        <form  id="registerForm">
           <h1>Tour Guide</h1>
-          <input type="text" placeholder="Name">
-          <input type="email" placeholder="Email">
-          <div id="register-section">
+          <input type="text" placeholder="Name" id="registerName">
+          <input type="email" placeholder="Email" id="registerEmail">
+          <div id="register-section" class="input-container">
               <input type="password" placeholder="Password" id="registerPassword">
               <button type="button" id="toggleRegisterPassword">
                 <i id="registerIcon" class="fas fa-eye"></i>
             </button>
           </div>
           <button type="submit">Register</button>
-          <span id="registerMessage" style="display: none;">Account created successfully</span>
+          <!-- <span id="registerMessage" style="display: none;">Account created successfully</span> -->
           <div class="social-container">
             <a class="fb" href="www.facebook.com" class="social"><i class="lni lni-facebook-fill"></i></a>
             <a class="goog" href="www.google.com" class="social"><i class="lni lni-google"></i></a>
@@ -35,16 +37,16 @@
       </div>
 
       <div class="form-container login-container">
-        <form action="#" id="loginForm">
+        <form  id="loginForm">
           
           <h1><a style="margin-right: 300px;" href="index.html" class="back-to-home">
            
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24">
               <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+              </svg> -->
           </a>Tour Guide</h1>
-          <input type="email" placeholder="Email">
-          <div id="login-section">
+          <input type="email" placeholder="Email" id="loginEmail">
+          <div id="login-section" class="input-container">
             <input type="password" placeholder="Password" id="loginPassword">
             <button type="button" id="toggleLoginPassword">
               <i id="loginIcon" class="fas fa-eye"></i>
@@ -103,5 +105,113 @@
       });
     });
   </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const registerButton = document.getElementById("register");
+      const loginButton = document.getElementById("login");
+      const container = document.getElementById("container");
+      const loginSuccessBanner = document.getElementById("loginSuccessBanner");
+      const registerSuccessBanner = document.getElementById("registerSuccessBanner");
+
+      registerButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        container.classList.add("right-panel-active");
+        document.getElementById("registerForm").scrollIntoView({ behavior: "smooth" });
+      });
+
+      loginButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        container.classList.remove("right-panel-active");
+        document.getElementById("loginForm").scrollIntoView({ behavior: "smooth" });
+      });
+
+      // Form validation and submission
+      document.getElementById("registerForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+        validateForm("register");
+      });
+
+      document.getElementById("loginForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+        validateForm("login");
+      });
+
+      function validateForm(formType) {
+        let email, password, name;
+        const spcharRegex = /[<>"/]/;
+        if (formType === "register") {
+          name = document.getElementById("registerName").value;
+          email = document.getElementById("registerEmail").value;
+          password = document.getElementById("registerPassword").value;
+          if (name === "" || email === "" || password === "") {
+            alert("Please fill in all fields");
+            return;
+          }
+          if (!validateEmail(email)) {
+            alert("Please enter a valid email address");
+            return;
+          }
+          if (spcharRegex.test(name) || spcharRegex.test(password)) {
+            alert('Name Or Password Cannot Contain <,>,", or /');
+            return;
+          }
+          // Show register success banner
+          registerSuccessBanner.style.display = "block";
+          setTimeout(() => {
+            registerSuccessBanner.style.display = "none";
+          }, 3000);
+        } else {
+          email = document.getElementById("loginEmail").value;
+          password = document.getElementById("loginPassword").value;
+          if (email === "" || password === "") {
+            alert("Please fill in all fields");
+            return;
+          }
+          if (!validateEmail(email)) {
+            alert("Please enter a valid email address");
+            return;
+          }
+          if (spcharRegex.test(password)) {
+            alert('Password cannot contain <,>,", or /');
+            return;
+          }
+          // Show login success banner
+          loginSuccessBanner.style.display = "block";
+          setTimeout(() => {
+            loginSuccessBanner.style.display = "none";
+          }, 3000);
+        }
+      }
+
+      function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+      }
+
+      // Password toggle visibility for login
+      const togglePassword = document.getElementById("togglePassword");
+      const passwordInput = document.getElementById("loginPassword");
+
+      togglePassword.addEventListener("click", function () {
+        const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+        passwordInput.setAttribute("type", type);
+
+        this.classList.toggle("fa-eye");
+        this.classList.toggle("fa-eye-slash");
+      });
+
+      // Password toggle visibility for register
+      const toggleRegisterPassword = document.getElementById("toggleRegisterPassword");
+      const passwordRegisterInput = document.getElementById("registerPassword");
+
+      toggleRegisterPassword.addEventListener("click", function () {
+        const type = passwordRegisterInput.getAttribute("type") === "password" ? "text" : "password";
+        passwordRegisterInput.setAttribute("type", type);
+
+        this.classList.toggle("fa-eye");
+        this.classList.toggle("fa-eye-slash");
+      });
+    });
+    </script>
 </body>
 </html>
