@@ -447,15 +447,15 @@ body {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   transition: all 0.4s ease-in-out;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 0px;
+  /* padding-right: 20px; */
   width: auto;
   border: none;
   background-color: transparent;
   color: slateblue;
   font-weight: 500;
-  font-size: 28px;
-  letter-spacing: 2px;
+  font-size: 27px;
+  letter-spacing: 1.59px;
   vertical-align: middle;
   text-decoration: none;
   white-space: nowrap;
