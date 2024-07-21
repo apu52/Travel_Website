@@ -206,7 +206,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 8px solid #6A5ACD;
+  border-radius: 15px solid #6A5ACD;
   transition: transform 0.3s ease;
 }
 
