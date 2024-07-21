@@ -217,7 +217,7 @@
   top: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.7);
-  border: none;
+  border-radius: 15px solid #6A5ACD;
   color: #fff;
   padding: 30px;
   display: flex;
@@ -269,6 +269,7 @@
 .card.active {
   transform: scale(1.05);
   z-index: 10;
+  color: #6A5ACD;
 }
 
 .card.active .card-body {
