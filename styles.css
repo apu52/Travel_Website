@@ -526,6 +526,9 @@ img {
   width: 100%;
   display: block;
 }
+.sitelogo{
+  width: 8%;
+}
 
 body {
   font-family: "Poppins", sans-serif;
