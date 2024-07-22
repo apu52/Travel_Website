@@ -1,120 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hotel Booking Form</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url(https://w0.peakpx.com/wallpaper/371/1012/HD-wallpaper-maldives-at-night-resort-maldives-beautiful-lights.jpg); /* Replace 'background.jpg' with your image path */
-            background-size: cover;
-            background-position: center;
-            color: #333;
-            padding: 20px;
-            transition: background-color 0.3s, color 0.3s;
-           
-        }
-        
-        .container {
-            
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.9);
-            max-width: 600px;
-            margin: auto;
-            transition: background-color 0.3s, color 0.3s;
-            background-color: rgba(50, 50, 50, 0.9);
-        }
-        h2 {
-            text-align: center;
-            color: red;
+      body {
+        font-family: Arial, sans-serif;
+        background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAgEx3UTsYmOsw00pc-dRtsGkOEgFmS7ca-w&s")
+          no-repeat center fixed;
+        background-size: cover;
+        color: #333;
+        padding: 20px;
+        overflow-x: hidden; /* Prevent horizontal scrolling due to animations */
+      }
 
+      .container {
+        padding: 30px;
+        border-radius: 8px;
+        max-width: 600px;
+        margin: auto;
+        transition: background-color 0.3s, color 0.3s;
+        background-color: #d7d8ff66;
+        border: 1px solid rgb(9, 9, 13);
+        box-shadow: 0 0 10px rgba(7, 6, 13, 0.9);
+      }
+
+      h2 {
+        text-align: center;
+        color: rgb(5, 5, 245);
+        font-size: 35px;
+      }
+
+      label {
+        margin-top: 20px;
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: rgb(11, 10, 10);
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="date"],
+      input[type="number"],
+      select,
+      textarea {
+        width: 100%;
+        background: #d1e8f8;
+        padding: 10px;
+        margin-bottom: 20px;
+        color: black;
+        border: 1.5px solid #070505;
+        border-radius: 4px;
+        box-sizing: border-box;
+        transition: border-color 0.3s;
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+      }
+
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="date"]:focus,
+      input[type="number"]:focus,
+      select:focus,
+      textarea:focus {
+        border-color: #4caf50;
+      }
+
+      input[type="submit"],
+      .btn-book {
+        background-color: #64d068;
+        margin-left: 15rem;
+        color: rgb(15, 14, 14);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+        opacity: 0;
+        animation: fadeIn 3s forwards;
+      }
+
+      input[type="submit"]:hover,
+      .btn-book:hover {
+        background-color: #026a07;
+        color: white;
+        border: 1px solid black;
+        box-shadow: 0 0 10px rgba(7, 6, 13, 0.9);
+      }
+
+      .btn-book {
+        text-decoration: none;
+      }
+
+      .flex-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .flex-item {
+        flex: 1 1 calc(50% - 10px);
+        margin-right: 10px;
+        opacity: 0;
+        animation: slideInFromLeft 1s forwards;
+      }
+
+      .flex-item:last-child {
+        margin-right: 0;
+        animation: slideInFromRight 1s forwards;
+      }
+
+      .flex-item:nth-child(even) {
+        animation: slideInFromRight 2s forwards;
+      }
+
+      .flex-item:nth-child(odd) {
+        animation: slideInFromLeft 2s forwards;
+      }
+
+      textarea,
+      .btn-book {
+        animation-delay: 1s;
+      }
+
+      @keyframes slideInFromLeft {
+        0% {
+          transform: translateX(-100%);
+          opacity: 0;
         }
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: white;
+        100% {
+          transform: translateX(0);
+          opacity: 1;
         }
-        input[type="text"], input[type="email"], input[type="date"], input[type="number"], select, textarea {
-            width: 100%;
-            background: #ccc;
-            padding: 10px;
-            margin-bottom: 20px;
-            color: black;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            transition: border-color 0.3s;
+      }
+
+      @keyframes slideInFromRight {
+        0% {
+          transform: translateX(100%);
+          opacity: 0;
         }
-        input[type="text"]:focus, input[type="email"]:focus, input[type="date"]:focus, input[type="number"]:focus, select:focus, textarea:focus {
-            border-color: #4CAF50;
+        100% {
+          transform: translateX(0);
+          opacity: 1;
         }
-        input[type="submit"], .btn-book {
-            background-color: #4CAF50;
-            margin-left: 15rem;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
         }
-        input[type="submit"]:hover, .btn-book:hover {
-            background-color: #45a049;
+        100% {
+          opacity: 1;
         }
-         .btn-book {
-            text-decoration: none;
+      }
+
+      .home-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: #f60303;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        text-decoration: none;
+      }
+
+      .home-button:hover {
+        background-color: #f2444d;
+        color: rgb(8, 6, 6);
+        border: 1px solid black;
+        box-shadow: #070505;
+        box-shadow: 0 0 10px rgba(7, 6, 13, 0.9);
+      }
+
+      @media (max-width: 768px) {
+        .flex-item {
+          flex: 1 1 100%;
+          margin-right: 0;
         }
-        
+
+        input[type="submit"],
+        .btn-book {
+          margin-left: 0;
+          width: 100%;
+          text-align: center;
+        }
+      }
     </style>
-</head>
-<body>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  </head>
+  <body>
+    <a href="index.html" class="home-button">Home</a>
     <div class="container">
-        <h2>Hotel Booking Form</h2>
-        <form action="#" method="post">
+      <h2>Hotel Booking Form</h2>
+      <form
+        id="feedback-form"
+        action="#"
+        method="post"
+        onsubmit="submitFeedback(event)"
+      >
+        <div class="flex-container">
+          <div class="flex-item">
             <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your first name.." required>
-
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Your first name.."
+              required
+            />
+          </div>
+          <div class="flex-item">
             <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Your last name.."
+              required
+            />
+          </div>
+        </div>
 
+        <div class="flex-container">
+          <div class="flex-item">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Your email.." required>
-
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your email.."
+              required
+            />
+          </div>
+          <div class="flex-item">
             <label for="phone">Phone Number</label>
-            <input type="text" id="phone" name="phone" placeholder="Your phone number.." required>
-
+            <input
+              type="text"
+              id="phone"
+              name="phone"
+              placeholder="Your phone number.."
+              required
+            />
+          </div>
+        </div>
+        <div class="flex-container">
+          <div class="flex-item">
             <label for="checkin">Check-in Date</label>
-            <input type="date" id="checkin" name="checkin" required>
-
+            <input type="date" id="checkin" name="checkin" required />
+          </div>
+          <div class="flex-item">
             <label for="checkout">Check-out Date</label>
-            <input type="date" id="checkout" name="checkout" required>
+            <input type="date" id="checkout" name="checkout" required />
+          </div>
+        </div>
 
+        <div class="flex-container">
+          <div class="flex-item">
             <label for="adults">Number of Adults</label>
-            <input type="number" id="adults" name="adults" min="1" max="10" required>
-
+            <input
+              type="number"
+              id="adults"
+              name="adults"
+              min="1"
+              max="10"
+              required
+            />
+          </div>
+          <div class="flex-item">
             <label for="children">Number of Children</label>
-            <input type="number" id="children" name="children" min="0" max="10">
+            <input
+              type="number"
+              id="children"
+              name="children"
+              min="0"
+              max="10"
+            />
+          </div>
+        </div>
 
-            <label for="room">Room Type</label>
-            <select id="room" name="room" required>
-                <option value="single">Single Room</option>
-                <option value="double">Double Room</option>
-                <option value="suite">Suite</option>
-            </select>
+        <label for="room">Room Type</label>
+        <select id="room" name="room" required>
+          <option value="single">Single Room</option>
+          <option value="double">Double Room</option>
+          <option value="suite">Suite</option>
+        </select>
 
-            <label for="special-requests">Special Requests</label>
-            <textarea id="special-requests" name="special_requests" placeholder="Any special requests.." style="height:100px"></textarea>
-            <a href="./Thank.html" target="_blank" class="btn-book">Book Now</a>
-        </form>
-       
+        <label for="special-requests">Special Requests</label>
+        <textarea
+          id="special-requests"
+          name="special_requests"
+          placeholder="Any special requests.."
+          style="height: 100px"
+        ></textarea>
+        <input type="submit" class="btn-book" value="Book Now" />
+      </form>
     </div>
+    <script>
+      function submitFeedback(event) {
+        event.preventDefault(); // Prevent default form submission
 
-    
+        // Get form elements
+        var fname = document.getElementById("fname").value.trim();
+        var lname = document.getElementById("lname").value.trim();
+        var email = document.getElementById("email").value.trim();
+        var phone = document.getElementById("phone").value.trim();
+        var checkin = document.getElementById("checkin").value;
+        var checkout = document.getElementById("checkout").value;
+        var adults = document.getElementById("adults").value;
+        var children = document.getElementById("children").value;
+        var room = document.getElementById("room").value;
+        var specialRequests = document
+          .getElementById("special-requests")
+          .value.trim();
 
-</body>
+        // Check if the form is completely filled
+        if (
+          !fname ||
+          !lname ||
+          !email ||
+          !phone ||
+          !checkin ||
+          !checkout ||
+          !adults ||
+          !room
+        ) {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Please fill in all required fields before submitting.",
+            customClass: {
+              popup: "swal-popup",
+              title: "swal-title",
+              content: "swal-content",
+              confirmButton: "swal-confirm-button",
+            },
+          });
+          return; // Exit the function if any required field is empty
+        }
+
+        // Show a success message
+        Swal.fire({
+          icon: "success",
+          title: "Success!",
+          text: "Your booking request has been submitted.",
+          customClass: {
+            popup: "swal-popup",
+            title: "swal-title",
+            content: "swal-content",
+            confirmButton: "swal-confirm-button",
+          },
+        }).then((result) => {
+          // Clear the booking form after the user acknowledges the success modal
+          if (result.isConfirmed || result.isDismissed) {
+            document.getElementById("feedback-form").reset();
+          }
+        });
+      }
+    </script>
+  </body>
 </html>
