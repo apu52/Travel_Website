@@ -146,6 +146,39 @@
       pointer-events: none;
       z-index: 9999;
     }
+
+    @media screen and (max-width: 768px){
+      .circle-container {
+        display: none;
+      }
+
+    }
+
+    body.dark-theme .accordion{
+      background-color: #040565;
+    }
+    body.dark-theme #btn-style{
+      border: 2px solid red;
+      color: #fdbb2dbf
+    }
+    body.dark-theme .accordion__title{
+      color: white;
+    }
+    body.light-theme .accordion__title{
+      color: black;
+    }
+    body.dark-theme .accordion__question{
+      color: white;
+    }
+    body.light-theme .accordion__question{
+      color: black;
+    }
+    body.dark-theme .accordion__answer{
+      color: white;
+    }
+    body.light-theme .accordion__answer{
+      color: black;
+    }
     </style>
   <link rel="stylesheet" href="imstyle.css">
   <link rel="stylesheet" href="jquery.flipster.min.css">
@@ -286,7 +319,7 @@
 
 
   <!-- --FAQ-- -->
-    <div class="accordion__wrapper">
+    <div class="accordion__wrapper" id="acc">
       <h1 class="accordion__title">Frequently Asked Questions</h1>
   
       <!-- Accordion 1 -->
