@@ -1,0 +1,70 @@
+ /* Dark mode styles */
+ body.dark-theme {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+  }
+
+  body.dark-theme .container{
+    background: #333;
+  }
+
+  body.dark-theme .image{
+    background-color: #555;
+  }
+
+  body.dark-theme .image{
+    background-color: #555;
+  }
+
+  /* Glassmorphism container */
+  body.dark-theme .glassmorphism-container {
+    background-color: rgba(50, 50, 50, 1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+
+  /* Feedback heading */
+  body.dark-theme .glassmorphism-container .feedback-heading {
+    background-image: none;
+    -webkit-text-fill-color: #f0f0f0;
+  }
+
+  body.dark-theme .glassmorphism-container p {
+    color: #f5f5f5 !important;
+  }
+
+  /* Rating sections */
+  body.dark-theme .rate {
+    color: #f0f0f0;
+  }
+
+  body.dark-theme .stars {
+    color: #ffd700;
+  }
+
+  body.dark-theme #rating-text{
+    background-image: none;
+    -webkit-text-fill-color: #f0f0f0;
+  }
+
+  /* Feedback textarea */
+  body.dark-theme textarea {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    border: 1px solid #444;
+  }
+
+  /* Submit button */
+  body.dark-theme input[type="submit"] {
+    
+    background-color: #3a3a3a;
+    color: #f0f0f0;
+  }
+
+  body.dark-theme input[type="submit"]:hover {
+    background-color: #4a4a4a;
+  }
+
+  /* Return to Home Page link */
+  body.dark-theme div:last-child {
+    color: #4a90e2;
+  }
