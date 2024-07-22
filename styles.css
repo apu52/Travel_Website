@@ -1,6 +1,3 @@
-
-
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Oxygen:wght@300&display=swap");
 
@@ -330,7 +327,7 @@ body {
   padding: 5rem 1rem;
 }*/
 
-/*Creating Curved Corners for the Video*/
+/Creating Curved Corners for the Video/
 .section__container {
   /* max-width: var(--max-width); */
   margin: auto;
@@ -413,7 +410,7 @@ body {
 .section__subtitle {
   font-size: 1rem;
   color: var(--text-dark);
-  max-width: calc(var(--max-width) / 2);
+  /* max-width: calc(var(--max-width) / 2); */
   /*   text-align: right; */
   text-align: center;
 }
@@ -447,15 +444,15 @@ body {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   transition: all 0.4s ease-in-out;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 0px;
+  /* padding-right: 20px; */
   width: auto;
   border: none;
   background-color: transparent;
   color: slateblue;
   font-weight: 500;
-  font-size: 28px;
-  letter-spacing: 2px;
+  font-size: 27px;
+  letter-spacing: 1.59px;
   vertical-align: middle;
   text-decoration: none;
   white-space: nowrap;
@@ -526,6 +523,9 @@ img {
   width: 100%;
   display: block;
 }
+.sitelogo{
+  width: 8%;
+}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -571,6 +571,11 @@ nav {
 link a:hover {
   color: #60a5fa; 
   background-color:red;
+}
+
+.navLinks a:hover{
+  text-decoration: underline;
+  color: red;
 }
 
 .home {
@@ -1573,7 +1578,7 @@ body.dark-theme .items {
   backdrop-filter: blur(10px);
   box-shadow: rgba(255, 255, 255, 0.25) 0px 50px 100px -20px,
     /* Light shadow */ rgba(255, 255, 255, 0.3) 0px 30px 60px -30px,
-    /* Light shadow */ rgba(255, 255, 255, 0.35) 0px -2px 6px 0px inset; /* Light inset shadow */
+    /* Light shadow / rgba(255, 255, 255, 0.35) 0px -2px 6px 0px inset; / Light inset shadow */
 }
 
 .contact {
@@ -2083,10 +2088,10 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.link a:hover::before {
+/* .link a:hover::before {
   width: 100%;
   transition: all 0.2s ease-in-out;
-}
+} */
 
 .link a:hover::after {
   width: 100%;
@@ -2096,6 +2101,10 @@ body {
   position: relative;
   right: 15px;
   box-sizing: border-box;
+}
+
+#themeToggle {
+  width: inherit;
 }
 
 .hamburger {
@@ -2188,6 +2197,11 @@ body {
 .navLinks.activeHamburger {
   width: 100%;
 }
+
+/* Initially the Login Button and View button are not in Hamburger Menu */
+.navLinks #LogIn-link, .navLinks #View-link {
+  display: none;
+}
 /* @media screen and (max-width: 1146px) {
   .toggle-container {
     position: relative;
@@ -2221,6 +2235,64 @@ body {
     top: 1px;
   }
 } */
+
+/* Move Login from newNav to Hamburger */
+@media screen and (max-width: 690px) {
+  .navLinks #LogIn-link {
+    display: inline;
+  }
+  .newNav #nav-login-btn {
+    display: none;
+  }
+}
+
+/* Move Login from Hamburger to newNav */
+@media screen and (min-width: 690px) {
+  .navLinks #LogIn-link {
+    display: none;
+  }
+  .newNav #nav-login-btn {
+    display: inline;
+  }
+}
+
+/* Move View from newNav to Hamburger */
+@media screen and (max-width: 510px) {
+  .navLinks #View-link {
+    display: inline;
+  }
+  .newNav #nav-view-btn {
+    display: none;
+  }
+  .newNav img{
+    position: relative;
+  }
+}
+
+/* Move View from Hamburger to newNav */
+@media screen and (min-width: 510px) {
+  .navLinks #View-link {
+    display: none;
+  }
+  .newNav #nav-view-btn {
+    display: inline;
+  }
+}
+
+/* TO prevent unnecessary wrapping */
+@media screen and (max-width: 400px) {
+  .newNav {
+    gap: 0;
+  }
+}
+
+/* Hide the logo name */
+@media screen and (max-width: 350px) {
+  .newNav .nav__logo {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 652px) {
   .toggle {
     width: 5vw;
@@ -2228,21 +2300,7 @@ body {
   .line {
     width: 5vw;
   }
-  .newNav img {
-    position: relative;
-    bottom: 23px;
-    left: 109px;
-  }
-  .nav__logo {
-    position: relative;
-    left: 85px;
-    bottom: 20px;
-  }
-  .btn {
-    position: relative;
-    top: 30px;
-    left: -147px;
-  }
+
 }
 @media only screen and (max-width:577px){
   .but{
@@ -2252,14 +2310,7 @@ body {
   }
 }
 @media only screen and (max-width: 465.5px){
-  .newNav img{
-    position: relative;
-    left: -58px;
-  }
-  .nav__logo{
-    position: relative;
-    left: -82px;
-  }
+
   .but{
     position: relative;
     left:17px;
@@ -2517,6 +2568,27 @@ body {
     0 0 200px black;
 }
 
+.hotel .center-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.hotel .center-card div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hotel .center-card div .btn{
+  bottom: 0;
+}
+
+
+
 /* Testimonial Section */
 @media (min-width: 320px) {
   .testimonials {
@@ -2542,6 +2614,25 @@ body {
   overflow: hidden;
   margin-bottom: 50px;
   top: 45px;
+}
+
+/* Light theme */
+.testimonials .testimonial-user{  
+  background-color: #efefef;
+}
+.testimonials .testimonial-user p{
+  color: #2a2e31;
+}
+/* Dark theme */
+body.dark-theme .testimonials {
+  background-color: #002152;
+}
+
+body.dark-theme .testimonials .testimonial-user{
+  background-color: black;
+}
+body.dark-theme .testimonials .testimonial-user p{
+  color: white;
 }
 
 .swiper-slide {
@@ -2677,7 +2768,7 @@ body {
     object-fit: contain;
   }
   .header__image img:nth-child(1) {
-    max-width: 60vw; /* Adjust image size for smaller devices */ /* Center image horizontally and vertically */
+    max-width: 60vw; /* Adjust image size for smaller devices / / Center image horizontally and vertically */
   }
 
   .header__image img:nth-child(2) {
@@ -2701,7 +2792,7 @@ body {
     font-size: 1rem;
   }
 
-  .header__content .action__btns {
+  .header_content .action_btns {
     flex-direction: column; /* Stack buttons vertically */
     gap: 1rem; /* Add gap between buttons */
     margin-top: 1rem; /* Adjust top margin */
@@ -2714,7 +2805,7 @@ body {
     margin: 0 auto; /* Center the subtitle */
   }
 }
-/*STYLE FOR SIDE DISCOUNT DIVISION*/
+/STYLE FOR SIDE DISCOUNT DIVISION/
 
 .popup {
   position: fixed;
@@ -2806,7 +2897,7 @@ button:hover {
     line-height: 1.5rem; /* Adjust line height for smaller devices */
   }
 
-  .header__content .action__btns {
+  .header_content .action_btns {
     gap: 1.5rem; /* Add gap between buttons */
   }
 
@@ -2815,10 +2906,6 @@ button:hover {
     max-width: 40%; /* Limit width to prevent overflow */
   }
 
-  .newNav {
-    justify-content: right;
-    gap: 27px;
-  }
   .nav-container {
     width: 100%;
     justify-content: center;
@@ -2873,6 +2960,8 @@ a:hover::after {
   width: 100%;
   background-color: red;
 }
+
+
 .categories{
   margin-left: auto;
   margin-right: 60px;
