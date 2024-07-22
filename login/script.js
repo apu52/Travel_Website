@@ -27,16 +27,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 2000);
   });
 
-  loginForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-
-    //  login success
-    alert("Login successful!");
-    setTimeout(() => {
-      window.location.href = "index.html"; 
-    }, 1000); 
-  });
 });
 
 function togglePasswordVisibility(buttonId, inputId, iconId) {

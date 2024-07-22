@@ -98,6 +98,8 @@
     href="img/A T logo with a white background and a square shape, connected to nature for a travel company.png"
     type="image/x-icon" />
   <script src="index.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
   </script>
@@ -154,19 +156,195 @@
     </nav>
   </div>
   <section class="trip" id="trip">
+
     <div class="section__container trip__container">
       <h2 class="section__title">Adventure Travel</h2>
       <p class="section__subtitle">
         "Unleash Your Adventurous Spirit: Discover the Most Thrilling Destinations Around the Globe!"
       </p>
       </b></h2>
+  
+        <!-- filter html -->
+        <div class="filter-search">
+          <select class="price-filter" id="priceFilter" onchange="filterProducts()">
+            <option value="">All Prices</option>
+          <option value="400">Below $400</option>
+          <option value="500">Below $500</option>
+          <!-- Add more options as needed -->
+        </select>
+        
+        <!-- search button html -->
+        <form onsubmit="search(event)" class="search-bar"> 
+          <input type="text" id ="find" placeholder="search places" onkeyup="search()" name="q">
+          <button type="submit" value="search" ><b>GO!</b></button>
+        </form>
+      </div>
+      <h2 id="noResults" style="display: none;" ><b>NO RESULTS FOUND</b> <img src="notFound.jpg" ></h2>
+      <!-- search styling -->
+      <style>
+        .filter-search {
+        display: flex;
+        align-items: center; 
+  }
+        .price-filter {
+      display: flex;
+      align-items: center; /* Align items vertically */
+      justify-content: center; /* Align items horizontally */
+      position: relative; /* Change to relative positioning */
+      
+      margin-left: auto; /* Adjust margin */
+      padding: 0.5rem 1rem; /* Adjust padding */
+      border: 1px solid #ccc;
+      border-radius: 0.25rem; /* Adjust border radius */
+      background-color: #fcfdff;
+      color: #333;
+      font-size: 1rem; /* Adjust font size */
+  }
+  
+  /* Optional: Add hover effects or additional styling */
+  .price-filter:hover {
+      background-color: #f0f0f0;
+      border-color: #999;
+  }
+  .info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .info .tags i{
+    margin:2px;
+    color:cornflowerblue;
+  }
+        .search-bar{
+          width: 1500px;
+          height: 50%;
+          max-width: 400%;
+          /* background:rgba(0, 13, 79, 0.696); */
+          display: flex;
+          align-items: center;
+          border-radius: 58px;
+          padding: 10px 10px;
+        }
+        .search-bar input{
+          background: rgb(255, 255, 255);
+          flex: 1;
+          border-radius: 60px;
+          outline: none;
+          padding: 10px 20px;
+          font-size: 15px;
+          color: #0c0c0c;
+        }
+        .search-bar button{
+          border: 0;
+          border-radius: 40%;
+          width: 50px;
+          height: 40px;
+          color: #0b0a0a;
+          font-size: small;
+          background:#ffffffb8;
+          cursor: pointer;
+        }
+
+        .info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.info .tags i{
+  margin:2px;
+  color:cornflowerblue;
+}
+      </style>
+  
+       <!--javascript for functionality of search button-->
+       <script type="text/javascript">
+        function search(event){
+          event.preventDefault();
+          let filter = document.getElementById('find').value.toUpperCase();
+          let item = document.querySelectorAll('.trip__card');
+          let l = document.getElementsByTagName('p');
+          var found = false;
+          for(var i = 0; i < l.length; i++){
+            let a = item[i].getElementsByTagName('p')[0];
+            let value = a.innerHTML || a.innerText || a.textContent;
+            if(value.toUpperCase().indexOf(filter) > -1) {
+              item[i].style.display = "";
+              found = true;
+            }
+      else {
+        item[i].style.display = "none";
+        document.getElementById("noResults").style.display = found ? "none" : "block";
+      }
+      }
+     }
+  </script>
+  <!-- filter's functionality -->
+  <script>
+  function filterProducts() {
+      var priceFilter = document.getElementById('priceFilter').value;
+      var products = document.getElementsByClassName('trip__card');
+  
+      for (var i = 0; i < products.length; i++) {
+          var productPrice = parseFloat(products[i].querySelector('.price').getAttribute('data-price'));
+          if (priceFilter === "" || productPrice <= parseFloat(priceFilter)) {
+              products[i].style.display = "block";
+          } else {
+              products[i].style.display = "none";
+          }
+      }
+  }
+  </script>
+  
+        <!-- end of search button -->
+
+
+        <div class="categories">
+          <span class="each">
+            <svg viewBox="0 0 24 24" width="20px" height="20px" class="d Vb UmNoP"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.895 5.275h6.176V11.5h-1.643V8.08l-7.879 7.88-3.346-3.347-6.112 6.112-1.162-1.162 7.274-7.274 3.346 3.347 6.718-6.718h-3.372V5.275z"></path></svg>
+            <h5>Trending</h5>
+          </span>
+  
+          <span class="each">
+            <svg viewBox="0 0 24 24" width="20px" height="20px" class="d Vb UmNoP"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.718 5.172H5.982v.384l-.276.225-1.697 1.381c.127.084.275.18.434.28.41.26.873.538 1.172.715l.242.144.088.268c.216.659.74 1.694 1.587 2.566.837.862 1.953 1.533 3.378 1.58l.724.025v4.845l-.57.14c-.565.141-1.415.44-2.104.866-.707.438-1.008.855-1.033 1.188.054.018.15.037.308.037H15.465c.158 0 .254-.02.308-.037-.025-.333-.326-.75-1.034-1.188-.688-.425-1.538-.725-2.104-.865l-.57-.141V12.74l.725-.024c1.425-.048 2.541-.719 3.378-1.581.846-.872 1.37-1.907 1.587-2.566l.088-.268.242-.144c.3-.177.761-.456 1.172-.715.159-.1.307-.196.434-.28l-1.697-1.38-.276-.226v-.384zm-2.196 16.143c.567-.01 1.042-.169 1.369-.5.314-.318.412-.714.383-1.036-.023-1.162-.95-1.972-1.746-2.464a9.152 9.152 0 00-1.963-.882v-2.285c1.56-.237 2.783-1.044 3.68-1.969a8.74 8.74 0 001.838-2.87c.288-.173.646-.39.975-.598.212-.135.418-.268.586-.382.147-.1.326-.227.438-.338.29-.291.371-.654.324-.967a1.244 1.244 0 00-.292-.625l-.041-.047-.048-.039-1.807-1.47v-1.17H4.482v1.17l-1.807 1.47-.048.04-.041.046c-.118.134-.25.35-.292.625-.047.313.033.676.324.967.111.111.291.238.437.338.169.114.375.247.587.382.33.207.687.425.974.598a8.74 8.74 0 001.839 2.87c.897.925 2.12 1.732 3.68 1.97v2.284a9.152 9.152 0 00-1.963.882c-.796.492-1.723 1.302-1.746 2.464-.029.322.069.718.383 1.036.338.342.834.5 1.426.5H15.522zm-7.655-1.562l.002.001-.002-.001zm7.966 0l-.002.001.002-.001z"></path></svg>         
+             <h5>Top </h5>
+          </span>
+
+          <span class="each">
+            <svg viewBox="0 0 24 24" width="20px" height="20px" class="d Vb UmNoP"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.844 14.907c.641-1.435.82-2.898.49-4.272-.348-1.457-1.249-2.744-2.63-3.754C13.965 4.88 9.322 3.946 2.983 4.763l-.769.1.125.764c.53 3.276 3.15 7.269 6.258 9.679 1.562 1.211 3.323 2.083 5.085 2.213 1.499.11 2.948-.321 4.2-1.435 1.164 1.323 2.075 2.565 2.64 3.448l1.263-.807c-.63-.988-1.647-2.367-2.94-3.818zm-1.134-1.214c.32-.96.365-1.876.165-2.71-.254-1.062-.92-2.06-2.056-2.89-2.192-1.603-6.112-2.55-11.834-1.938.714 2.693 2.907 5.93 5.531 7.965 1.431 1.11 2.915 1.803 4.277 1.903 1.08.08 2.126-.208 3.075-1.044-.268-.279-.546-.558-.833-.835-2.057-1.989-4.512-3.806-7.055-4.634l.465-1.426c2.853.928 5.502 2.921 7.633 4.981.215.209.426.418.632.628z"></path></svg>
+            <h5>Beginner</h5>
+          </span>
+  
+          <span class="each">
+            <svg viewBox="0 0 24 24" width="20px" height="20px" class="d Vb UmNoP"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.005 3.893l9.844 16.214H2.15l4.535-7.141 5.319-9.073zM7.94 13.79l-3.06 4.818h14.302l-2.564-4.224-.072.06c-.436.348-1.099.664-2.031.664-.549 0-1.02-.185-1.42-.408a9.386 9.386 0 01-.945-.634l-.139-.102c-.686-.499-1.26-.856-1.996-.856-.868 0-1.408.215-1.713.395a1.65 1.65 0 00-.362.287zm7.875-.728l-3.789-6.24-2.837 4.84c.253-.034.528-.054.826-.054 1.265 0 2.19.642 2.879 1.143l.154.113c.294.215.534.39.778.526.272.152.488.218.689.218.568 0 .905-.184 1.094-.336.1-.08.166-.156.204-.208l.002-.002z"></path></svg>
+            <h5>Nature</h5>
+          </span>
+  
+          <span class="each">
+            <svg viewBox="0 0 24 24" width="20px" height="20px" class="d Vb UmNoP"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.844 14.907c.641-1.435.82-2.898.49-4.272-.348-1.457-1.249-2.744-2.63-3.754C13.965 4.88 9.322 3.946 2.983 4.763l-.769.1.125.764c.53 3.276 3.15 7.269 6.258 9.679 1.562 1.211 3.323 2.083 5.085 2.213 1.499.11 2.948-.321 4.2-1.435 1.164 1.323 2.075 2.565 2.64 3.448l1.263-.807c-.63-.988-1.647-2.367-2.94-3.818zm-1.134-1.214c.32-.96.365-1.876.165-2.71-.254-1.062-.92-2.06-2.056-2.89-2.192-1.603-6.112-2.55-11.834-1.938.714 2.693 2.907 5.93 5.531 7.965 1.431 1.11 2.915 1.803 4.277 1.903 1.08.08 2.126-.208 3.075-1.044-.268-.279-.546-.558-.833-.835-2.057-1.989-4.512-3.806-7.055-4.634l.465-1.426c2.853.928 5.502 2.921 7.633 4.981.215.209.426.418.632.628z"></path></svg>
+            <h5>Sustainable</h5>
+          </span>
+
+  
+  
+        </div>
+
+        <!-- packages cards  -->
+    
       <div class="trip__grid">
 
         <div class="trip__card">
           <img src="img/narinder-pal-b9xWxpbe9vw-unsplash.jpg" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>Rishikesh</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fa-solid fa-ship"></i>
+                <i class="fa-solid fa-campground"></i>
+                <i class="fas fa-hiking"></i> 
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            </div>
+            
             <div class="booking__price">
               <div class="price"><span>From</span> $400</div>
               <a href="./dedicated destinations/Rishikesh/Rishi.html"><button class="book__now">Book
@@ -174,11 +352,22 @@
             </div>
           </div>
         </div>
+
+
         <div class="trip__card">
           <img src="img/ladakh.jpg" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>Ladakh</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fas fa-biking"></i> 
+                <i class="fas fa-binoculars"></i>
+                <i class="fa-solid fa-campground"></i>
+                <i class="fas fa-hiking"></i> 
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            </div>
+                  
             <div class="booking__price">
               <div class="price"><span>From</span> $450</div>
               <a href="./dedicated destinations/Ladakh/ladakh.html"><button class="book__now">Book
@@ -190,7 +379,15 @@
           <img src="https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcTTFsmx8EYTq7rL77gCALdtP-2Sfs9R4Q67I-AsN1rwg6XCmvOCNW4Bsb9doeJuEy3e" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>Gulmargh</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fas fa-skiing-nordic"></i>
+                <i class="fas fa-parachute-box"></i> 
+                <i class="fas fa-hiking"></i> 
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            </div>
+            
             <div class="booking__price">
               <div class="price"><span>From</span> $400</div>
               <a href="./dedicated destinations/Gulmargh/G.html"><button
@@ -202,7 +399,15 @@
           <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/The_Coral_Reef_at_the_Andaman_Islands.jpg" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>Andaman and Nicobar Island </p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fas fa-fish"></i>
+                <i class="fas fa-swimmer"></i>
+                <i class="fas fa-ship"></i> 
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            </div>
+            
             <div class="booking__price">
               <div class="price"><span>From</span> $300</div>
               <a href="./dedicated destinations/Andaman/a.html"><button class="book__now">Book Now</button></a>
@@ -213,7 +418,16 @@
           <img src="img/joey-csunyo-2EGuIR00UTk-unsplash.jpg" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>Australia</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fas fa-hiking"></i>
+                <i class="fas fa-surfer"></i>
+                <i class="fas fa-ship"></i> 
+                <i class="fas fa-bicycle"></i>
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            </div>
+            
             <div class="booking__price">
               <div class="price"><span>From</span> $450</div>
               <a href="./dedicated destinations/Australia/Australia.html"><button class="book__now">Book Now</button></a>
@@ -224,7 +438,15 @@
           <img src="./img/willian-justen-de-vasconcellos-4hMET7vYTAQ-unsplash.jpg" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>Peru</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fas fa-hiking"></i>
+                <i class="fas fa-mountain"></i>
+                <i class="fas fa-compass"></i> 
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            </div>
+           
             <div class="booking__price">
               <div class="price"><span>From</span> $400</div>
               <a href="./dedicated destinations/peru/p.html"><button class="book__now">Book Now</button></a>
@@ -236,7 +458,15 @@
           <img src="https://static.toiimg.com/img/88863845/Master.jpg" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>Thailand</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fas fa-umbrella-beach"></i>
+                <i class="fas fa-swimmer"></i>
+                <i class="fas fa-parachute-box"></i> 
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            </div>
+
             <div class="booking__price">
               <div class="price"><span>From</span> $300</div>
               <a href="./dedicated destinations/thailand/t.html"><button class="book__now">Book Now</button></a>
@@ -247,7 +477,16 @@
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Spiti_River_Kaza_Himachal_Jun18_D72_7232.jpg/1200px-Spiti_River_Kaza_Himachal_Jun18_D72_7232.jpg" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p> Spiti</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fas fa-hiking"></i>
+                <i class="fas fa-swimmer"></i>
+                <i class="fas fa-campground"></i> 
+                <i class="fas fa-skiing"></i> 
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            </div>
+
             <div class="booking__price">
               <div class="price"><span>From</span> $450</div>
               <a href="./dedicated destinations/spiti/spiti.html"><button class="book__now">Book Now</button></a>
@@ -258,7 +497,15 @@
           <img src="https://images.cnbctv18.com/wp-content/uploads/2022/05/Goa-shutterstock-1000x573.jpg" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>Goa</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fas fa-umbrella-beach"></i>
+                <i class="fas fa-swimmer"></i>
+                <i class="fas fa-water"></i> 
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            </div>
+
             <div class="booking__price">
               <div class="price"><span>From</span> $400</div>
               <a href="./dedicated destinations/Goa/start.html"><button class="book__now">Book Now</button></a>
@@ -274,35 +521,147 @@
 
 
 
-  <footer class="footer">
-    <div class="section__container footer__container">
-      <div class="footer__col">
-        <h3>Tourguide<span>.</span></h3>
-        <p>
-          Explore your suitable and dream places around the world. Here you
-          can find your right destination.
-        </p>
-      </div>
-      <div class="footer__col">
-        <h4>Support</h4>
-        <p><a href="./faq.html">FAQs</a></p>
-        <p><a href="./tnc.html">Terms & Conditions</a></p>
-        <p><a href="./privacy.html">Privacy Policy</a></p>
-        <p>Contact Us</p>
-      </div>
-      <div class="footer__col">
-        <h4>Address</h4>
-        <p>
-          <span>Address:</span> 3/2 Wellington Street, Kolkata , West Bengal , India
-        </p>
-        <p><span>Email:</span> tour@tourguide.com</p>
-        <p><span>Phone:</span> +91 8562145852</p>
+<!-- footer  -->
+
+<footer class="footer" data-aos="fade-up">
+  <div class="footer__container">
+    <div class="footer__col">
+      <h3 class="footer-head" class="footer__title">Tourguide<span>.</span></h3>
+      <p>
+        Ready for your next adventure? Let's make it unforgettable.<br>
+      </p>
+      <p class="footer__text">
+        Start planning your dream trip with us and explore the world.
+      </p>
+    </div>
+    <div class="footer__col">
+      <h3 class="footer-head" class="footer__title">Places You May Want to Visit<span>.</span></h3>
+      <p class="footer__text">
+
+        <a href="Cultural_Exp.html">Cultural Experiences</a>
+
+        <a href="HoneyMoon.html">Honeymoon Places</a>
+        <a href="Adventure.html">Adventure travel</a>
+
+
+      </p>
+    </div>
+    <div class="footer__col">
+      <div class="footer__area">
+        <h4 class="footer-head" class="footer__subtitle">Support</h4>
+        <p><a href="./faq.html" class="footer__link">FAQs</a></p>
+        <p><a href="./tnc.html" class="footer__link">Terms & Conditions</a></p>
+        <p><a href="./privacy.html" class="footer__link">Privacy Policy</a></p>
+        <p><a href="#cnt-form" class="footer__link">Contact Us</a></p>
       </div>
     </div>
+    <div class="footer__col">
+      <h4 class="footer-head" style="padding-left: 35px;"> Address</h4>
+      <div class="mapouter">
+        <div class="gmap_canvas"><iframe width="200" height="200" id="gmap_canvas"
+            src="https://maps.google.com/maps?q=wellington%20street%20kolkata&t=k&z=11&ie=UTF8&iwloc=&output=embed"
+            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+            href="https://embedgooglemap.net/124/">invincible 123movies</a><br>
+          <style>
+            .mapouter {
+              position: relative;
+              text-align: right;
+              height: 200px;
+              width: 200px;
+            }
+          </style><a href="https://www.embedgooglemap.net">embed google map on website</a>
+          <style>
+            .gmap_canvas {
+              overflow: hidden;
+              background: none !important;
+              height: 200px;
+              width: 200px;
+            }
+          </style>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="footer__col">
+      <div class="footer__area">
+        <h4>Contact Us</h4>
+        <div class="d-flex align-items-center mb-2">
+          <a href="mailto:tour@tourguide.com" class="text-nowrap">tour@tourguide.com</a>
+        </div>
+        <div class="d-flex align-items-center">
+          <a href="tel:8562145852" class="text-nowrap">+91 8562145852</a>
+        </div>
+        <div class="icons">
+          <a href="">
+            <div class="icon">
+              <i class="fab fa-linkedin" title="linkedin" style="cursor: pointer;"></i>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="icon">
+              <i class="fab fa-twitter" title="X" style="cursor: pointer;"></i>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="icon">
+              <i class="fab fa-instagram" title="Instagram" style="cursor: pointer;"></i>
+            </div>
+          </a>
+
+
+          <a href="" title="YouTube">
+            <div class="icon">
+              <i class="fab fa-youtube" style="cursor: pointer;"></i>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="icon">
+              <i class="fab fa-github" title="Github"></i>
+            </div>
+          </a>
+
+        </div>
+        <!-- Visitor Widget -->
+        <div class="visitor-widget mt-3">
+          <a>
+            <img alt="Hits" src="https://hits.sh/apu52.github.io/Travel_Website.svg?style=for-the-badge&label=Visitors&extraCount=786&color=526180&labelColor=9bbbff"/>
+          </a>
+        </div>
+      </div>
+
+     
+
+    </div>
+    <div class="footer__col">
+      <div id="google_element" style="z-index: 1;"></div>
+      <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+      <script>
+        function loadGoogleTranslate() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en'
+          }, 'google_element');
+        }
+      </script>
+    </div>
+   
+
+    
+    </div>
+  
+   
+
+    <!--  New copyright code to make it dynamic and display current year -->
+   
     <div class="footer__bar">
-      Copyright © 2023 Arpan Chowdhury. All rights reserved.
+      <div>
+        <li>Copyright &copy;<span id="year"></span> </span> Arpan Chowdhury. All rights reserved. </li>
+      </div>
     </div>
-  </footer>
+</footer>
+
 
   <button class="top-btn" id="goToTopBtn" onclick="goToTop()"><i class="fa-solid fa-chevron-up"
       style="color: #ffffff;"></i></button>

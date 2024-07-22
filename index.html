@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,6 +28,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="counter.css" class="rel href">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -300,29 +302,30 @@
   </nav> -->
     <div class="nav-container" id="top">
       <nav class="newNav">
-        <img
-          src="./img/A T logo with a white background and a square shape, connected to nature for a travel company.png"
-          style="width:30px;height:30px;border-radius:50%;">
-
-        <a href="#" class="nav__logo" data-aos="fade-right">Tourguide</span></a>
+        <img src="./img/tour1.png" class="sitelogo">
+        
+        <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
 
         <ul class="navLinks">
 
+          <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
+          <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
           <li class="link" data-aos=""><a href="#Home">Home</a></li>
           <li class="link" data-aos=""><a href="#AboutUs">About</a></li>
           <li class="link" data-aos=""><a href="#Destinations">Destination</a></li>
           <li class="link" data-aos=""><a href="#trip">Prices</a></li>
           <li class="link" data-aos=""><a href="#ReviewGallery">Trip Gallery</a></li>
           <li class="link" data-aos=""><a href="#tourist">Tourist Guide</a></li>
+          <li class="link" data-aos=""><a href="#hotel">Hotel & Resort</a></li>
           <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
           <li class="link" data-aos=""><a href="feedback.html">Rate Us</a></li>
           <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
         </ul>
 
 
-        <a href="newLogin.html" class="contact-btn"><button class="btn login" id="btn-style"
+        <a href="newLogin.html" class="contact-btn" id="nav-login-btn"><button class="btn login" id="btn-style"
             data-aos="fade-down">Login/SignUp</button></a>
-        <a href="mapa.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
+        <a href="mapa.html" class="contact-btn" id="nav-view-btn"><button class="btn" id="btn-style" style="margin: 0;"
             data-aos="fade-down">view <map name=""></map></button></a>
 
         <a href="loginPage.html" class="contact-btn"><button class="btn" id="logout-btn"
@@ -342,6 +345,10 @@
       </nav>
     </div>
     <header>
+      <div class="nav-wrapperr">
+        <div class="progress-bar"></div>
+      </div>
+      
       <section class="section__container header__container" id="Home">
         <div class="header__image" data-aos="fade-down-right">
           <img src="https://i.ibb.co/88Qnjxg/pexels-josh-hild-2422259.jpg" alt="header" />
@@ -615,7 +622,7 @@
       </div>
     </div>
 
-    <section class="section__container destination__container" id="Destinations" data-aos="fade-up">
+<!--  <section class="section__container destination__container" id="Destinations" data-aos="fade-up">
       <div class="section__header">
         <div>
           <h2 class="section__title" data-aos="fade-in"><span style="margin-left: 300px;"></span>Explore top
@@ -626,17 +633,17 @@
         </div>
       </div>
 
-      <!-- slideshow -->
-      <!-- <div class="slideshow-container" data-aos="fade-up"> -->
+       slideshow 
+       <div class="slideshow-container" data-aos="fade-up"> 
 
-      <!-- Next and previous buttons -->
-      <!-- <div class="destination__nav">
+       Next and previous buttons 
+       <div class="destination__nav"
       <span onclick="pullSlide(-1)"><i class="ri-arrow-left-s-line"></i></span>
       <span onclick="pullSlide(1)"><i class="ri-arrow-right-s-line"></i></span>
-    </div> -->
+    </div>
 
-      <!-- Full-width images with number and caption text -->
-      <!-- <div class="mySlides">
+    Full-width images with number and caption text
+     <div class="mySlides">
       <img src="./img/eiffelTower.webp" style="width:100%">
     </div>
 
@@ -657,62 +664,147 @@
           <span></span>
           <span></span>
         </div>
-      </div> -->
+      </div> 
 
-      <div class="outer-box">
-        <div class="containers">
-              
-            <div class="card active" style="
-              background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
-                url('./img/paris.jpg')
-            ">
-            <div class="info">
-  
-              <p>
-                ||Eiffel Tower||
-              </p>
-              <h3>PARIS</h3>
+<div class="outer-box">
+          <div class="containers">
+                
+              <div class="card active" style="
+                background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+                  url('./img/paris.jpg')
+              ">
+              <div class="info">
+    
+                <p>
+                  ||Eiffel Tower||
+                </p>
+                <h3>PARIS</h3>
+              </div>
             </div>
+    
+        <div class="card" style="
+          background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+            url('./img/london.jpg')
+        ">
+          <div class="info">
+            
+            <p>||Giant Wheel||</p>
+            <h3>LONDON</h3>
           </div>
-  
-      <div class="card" style="
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
-          url('./img/london.jpg')
-      ">
-        <div class="info">
+        </div>
+    
+        <div class="card" style="
+          background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+            url('./img/goa.jpg')
+        ">
+          <div class="info">
+            
+            <p>||Goa Beach||</p>
+            <h3>GOA</h3>
+          </div>
+        </div>
+    
+        <div class="card" style="
+          background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+            url('./img/maldives.jpg')
+        ">
+          <div class="info">
           
-          <p>||Giant Wheel||</p>
-          <h3>LONDON</h3>
+            <p>||Male Beach||</p>
+            <h3>MALDIVES</h3>
+          </div>
         </div>
+    
       </div>
-  
-      <div class="card" style="
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
-          url('./img/goa.jpg')
-      ">
-        <div class="info">
-          
-          <p>||Goa Beach||</p>
-          <h3>GOA</h3>
-        </div>
-      </div>
-  
-      <div class="card" style="
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
-          url('./img/maldives.jpg')
-      ">
-        <div class="info">
-         
-          <p>||Male Beach||</p>
-          <h3>MALDIVES</h3>
-        </div>
-      </div>
-  
     </div>
-  </div>
-  
       <script src="explore.js"></script>
     </section>
+  -->
+
+    <!-- Destination Section -->
+    <div class="section__container destination__container" id="Destinations" data-aos="fade-up">
+      <div class="section__header">
+        <div>
+          <h2 class="section__title" data-aos="fade-in">Explore Top Destinations</h2>
+          <p class="section__subtitle" data-aos="fade-in">
+            Explore your dream places around the world. Here you can find your perfect destination.
+          </p>
+        </div>
+      </div>
+
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide card">
+            <img src="./img/eiffelTower2.webp" class="card-img" alt="Eiffel Tower">
+            <div class="card-body">
+              <h1 class="card-title">Eiffel Tower</h1>
+              <p class="card-info">The Eiffel Tower is an iconic iron lattice tower in Paris, built for the 1889 World's Fair, standing at 324 meters tall.</p>
+              <button class="card-btn" onclick="window.open('./dedicated-destinations/Paris/start.html', '_blank')">Book Tour</button>
+            </div>
+          </div>
+
+          <div class="swiper-slide card">
+            <img src="./img/giantWheel.webp" class="card-img" alt="The London Eye">
+            <div class="card-body">
+              <h1 class="card-title">The London Eye</h1>
+              <p class="card-info">The London Eye, a striking 135-meter tall observation wheel on the South Bank of the Thames, offers panoramic views of the city's landmarks.</p>
+                <button class="card-btn" onclick="window.open('./dedicated-destinations/London/start.html', '_blank')">Book Tour</button>
+            </div>
+          </div>
+
+          <div class="swiper-slide card">
+            <img src="./img/maldives.jpg" class="card-img" alt="Male Beach">
+            <div class="card-body">
+              <h1 class="card-title">Male Beach</h1>
+              <p class="card-info">Male Beach, the pristine stretch of golden sand on Malé Atoll, offers a serene escape with crystal-clear waters and vibrant marine life.</p>
+              <button class="card-btn" onclick="window.open('./dedicated-destinations/Maldives/start.html', '_blank')">Book Tour</button>
+            </div>
+          </div>
+
+          <div class="swiper-slide card">
+            <img src="./img/MuseumofFuture.jpg" class="card-img" alt="Museum of the Future">
+            <div class="card-body">
+              <h1 class="card-title">Museum of the Future</h1>
+              <p class="card-info">The Museum of the Future in Dubai is a visionary architectural gem that explores cutting-edge innovations and the potential of tomorrow's technology.</p>
+              <button class="card-btn" onclick="window.open('./dedicated-destinations/Dubai/start.html', '_blank')">Book Tour</button>
+            </div>
+          </div>
+
+          <div class="swiper-slide card">
+            <img src="./img/TajMahal.jpg" class="card-img" alt="Taj Mahal">
+            <div class="card-body">
+              <h1 class="card-title">Taj Mahal</h1>
+              <p class="card-info">The Taj Mahal, a majestic white marble mausoleum in Agra, is a timeless symbol of love and architectural brilliance.</p>
+           <button class="card-btn" onclick="window.open('./dedicated destinations/Taj_Mahal/Taj.html', '_blank')">Book Tour</button>
+            </div>
+          </div>
+
+          <div class="swiper-slide card">
+            <img src="./img/lehLadakh.jpg" class="card-img" alt="Leh Ladakh">
+            <div class="card-body">
+              <h1 class="card-title">Leh Ladakh</h1>
+              <p class="card-info">Leh Ladakh, a breathtaking high-altitude region in northern India, captivates with its rugged landscapes, serene monasteries, and vibrant cultural heritage.</p>
+              <button class="card-btn" onclick="window.open('./dedicated destinations/Ladakh/ladakh.html', '_blank')">Book Tour</button>
+            </div>
+          </div>
+
+          <div class="swiper-slide card">
+            <img src="./img/TimesSquare.jpg" class="card-img" alt="Times Square">
+            <div class="card-body">
+              <h1 class="card-title">Times Square</h1>
+              <p class="card-info">Times Square is a vibrant commercial and entertainment hub in New York City, renowned for its bright lights, Broadway theaters, and bustling atmosphere.</p>
+              <button class="card-btn" onclick="window.open('./dedicated-destinations/new-york/start.html', '_blank')">Book Tour</button>
+            </div>
+          </div>
+        </div>
+        <button class="swiper-button-prev"></button>
+        <button class="swiper-button-next"></button>  
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+      <script src="explore.js"></script>
+    </section>
+  <!-- End Destination Section -->
 
     <section class="trip" id="trip" data-aos="zoom-in" data-aos-offset="100">
       <div class="section__container trip__container">
@@ -868,6 +960,7 @@
           <button class="btn btn-style" id="prev">Prev</button>
           <button class="btn btn-style" id="next">Next</button>
         </div>
+
         <!-- Trip Photo Gallery -->
         <div class="trip-gallery-container">
 
@@ -962,8 +1055,38 @@
       </div>
     </section>
     <br /><br /><br /><br />
-    <!-- Testimonials Section -->
 
+    <!-- Hotel & Resort Section -->
+    <section class="hotel" id ="hotel">
+      <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Hotels & Resorts</h2>
+      
+       <br></br>
+       <h3 style="color: rgb(151, 6, 241); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Best Place for Beautiful Trip</h3>
+       <br></br>
+       <div class="center-card">
+       <img src="./h1.png" alt="hr1"/>
+       <br></br>
+       <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
+       <br></br>
+       <br></br>
+       <img src="./h2.png" alt="hr2"/>
+       <br></br>
+       <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
+       <br></br>
+       <br></br>
+       <img src="./h3.png" alt="hr3"/>
+       <br></br>
+       <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
+       <br></br>
+       <br></br>
+       <img src="./h4.png" alt="hr4"/>
+       <br></br>
+       <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
+      </div>
+      </section>
+    <br /><br /><br /><br />
+
+    <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
       <h2 class="testimonial-heading section__title" align-items="center" data-aos="fade-in">Testimonials</h2>
       <div class="marquee">
@@ -1067,18 +1190,6 @@
       </div>
 
     </section>
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!----------------------------------------------------- FAQ section ---------------------- -->
 
@@ -1232,7 +1343,18 @@
               </div>
               <div style="position: relative;">
                 <i class="icon2 fa-solid fa-envelope"></i>
-                <input type="email" id="email" placeholder="Email" style="padding-left:6%;" required>
+                <input type="email" id="email" placeholder="Email" class="contact-us-email-fix" style="padding-left:6%; width: 50% !important;
+                padding-left: 6% !important;
+                padding-bottom: 10px !important;
+                margin: 20px !important;
+                margin-left: 30px !important;
+                outline: none !important;
+                border: none !important;
+                font-size: 15px !important;
+                background: none !important;
+                border-bottom: 1px solid var(--text-dark) !important;
+                color: var(--text-dark) !important;
+                font-family: 'Oxygen', sans-serif !important; border-radius: 20px;" required>
               </div>
               <div style="position: relative;">
                 <i class="icon3 fa-solid fa-message"></i>
@@ -1262,8 +1384,8 @@
         </div>
         <div class="subscribe__form" data-aos="fade-up">
           <form id="subscriptionForm">
-            <input type="email" placeholder="Your email here" id="emailInput" required />
-            <button class="btn-send" id="send" type="submit" style="box-shadow: 2px 2px 8px blue;">Subscribe</button>
+            <input type="email"  style="border: none; font-size: 15px; margin: auto;" placeholder="Your email here" id="emailInput" required />
+            <button class="btn-send" id="send" type="submit" style="box-shadow: 0px 4px 8px blue; font-weight:530;">Subscribe</button>
           </form>
           <p id="subscriptionMessage" style="display: none; color: green; margin-top: 10px;">Subscription successful! 🎉
           </p>
@@ -1296,7 +1418,7 @@
     <footer class="footer" data-aos="fade-up">
       <div class="section__container footer__container">
         <div class="footer__col">
-          <h3 class="footer-head" class="footer__title">Tourguide<span>.</span></h3>
+          <h3 class="footer-head" class="footer__title" style="cursor: default;">Tourguide<span>.</span></h3>
           <p>
             Ready for your next adventure? Let's make it unforgettable.<br>
           </p>
@@ -1323,6 +1445,7 @@
             <p><a href="./faq.html" class="footer__link">FAQs</a></p>
             <p><a href="./tnc.html" class="footer__link">Terms & Conditions</a></p>
             <p><a href="./privacy.html" class="footer__link">Privacy Policy</a></p>
+            <p><a href="./Licensing.html" class="footer__link">Licensing</a></p>
             <p><a href="#cnt-form" class="footer__link">Contact Us</a></p>
           </div>
         </div>
@@ -1356,9 +1479,11 @@
           <div class="footer__area">
             <h4>Contact Us</h4>
             <div class="d-flex align-items-center mb-2">
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M14.851 11.923c-.179-.641-.521-1.246-1.025-1.749-1.562-1.562-4.095-1.563-5.657 0l-4.998 4.998c-1.562 1.563-1.563 4.095 0 5.657 1.562 1.563 4.096 1.561 5.656 0l3.842-3.841.333.009c.404 0 .802-.04 1.189-.117l-4.657 4.656c-.975.976-2.255 1.464-3.535 1.464-1.28 0-2.56-.488-3.535-1.464-1.952-1.951-1.952-5.12 0-7.071l4.998-4.998c.975-.976 2.256-1.464 3.536-1.464 1.279 0 2.56.488 3.535 1.464.493.493.861 1.063 1.105 1.672l-.787.784zm-5.703.147c.178.643.521 1.25 1.026 1.756 1.562 1.563 4.096 1.561 5.656 0l4.999-4.998c1.563-1.562 1.563-4.095 0-5.657-1.562-1.562-4.095-1.563-5.657 0l-3.841 3.841-.333-.009c-.404 0-.802.04-1.189.117l4.656-4.656c.975-.976 2.256-1.464 3.536-1.464 1.279 0 2.56.488 3.535 1.464 1.951 1.951 1.951 5.119 0 7.071l-4.999 4.998c-.975.976-2.255 1.464-3.535 1.464-1.28 0-2.56-.488-3.535-1.464-.494-.495-.863-1.067-1.107-1.678l.788-.785z"/></svg>
               <a href="mailto:tour@tourguide.com" class="text-nowrap">tour@tourguide.com</a>
             </div>
             <div class="d-flex align-items-center">
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M8.26 1.289l-1.564.772c-5.793 3.02 2.798 20.944 9.31 20.944.46 0 .904-.094 1.317-.284l1.542-.755-2.898-5.594-1.54.754c-.181.087-.384.134-.597.134-2.561 0-6.841-8.204-4.241-9.596l1.546-.763-2.875-5.612zm7.746 22.711c-5.68 0-12.221-11.114-12.221-17.832 0-2.419.833-4.146 2.457-4.992l2.382-1.176 3.857 7.347-2.437 1.201c-1.439.772 2.409 8.424 3.956 7.68l2.399-1.179 3.816 7.36s-2.36 1.162-2.476 1.215c-.547.251-1.129.376-1.733.376"/></svg>
               <a href="tel:8562145852" class="text-nowrap">+91 8562145852</a>
             </div>
             <div class="icons">
@@ -1941,30 +2066,50 @@
     });
   </script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      function animateValue(id, start, end, duration) {
-        const obj = document.getElementById(id);
-        const startTime = performance.now();
 
-        function updateValue(timestamp) {
-          const elapsedTime = timestamp - startTime;
-          const progress = Math.min(elapsedTime / duration, 1);
-          const currentValue = Math.floor(progress * (end - start) + start);
-          obj.textContent = currentValue;
-          if (progress < 1) {
-            requestAnimationFrame(updateValue);
-          }
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    function animateValue(id, start, end, duration) {
+      const obj = document.getElementById(id);
+      const startTime = performance.now();
+
+      function updateValue(timestamp) {
+        const elapsedTime = timestamp - startTime;
+        const progress = Math.min(elapsedTime / duration, 1);
+        const currentValue = Math.floor(progress * (end - start) + start);
+        obj.textContent = currentValue;
+        if (progress < 1) {
+          requestAnimationFrame(updateValue);
+
         }
 
         requestAnimationFrame(updateValue);
       }
+</script>
+
+
+<script>
+    const scrollline = document.querySelector('.progress-bar');
+
+  function fillscrollline(){
+    const windowHeight = window.innerHeight;
+    const fullHeight = document.body.clientHeight;
+    const scrolled = window.scrollY;
+    const percentScrolled = (scrolled / (fullHeight - windowHeight)) * 100;
+
+    scrollline.style.width = percentScrolled + '%';
+  };
+
+    window.addEventListener('scroll', fillscrollline);
+
 
       // Call the function for each count-up element
       animateValue("guidesCount", 0, 25000, 20000);
       animateValue("toursCount", 0, 20000, 20000);
       animateValue("destinationsCount", 0, 10994, 20000);
     });
+
   </script>
 
 
