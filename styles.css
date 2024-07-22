@@ -1,6 +1,3 @@
-
-
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Oxygen:wght@300&display=swap");
 
@@ -337,7 +334,7 @@ body {
   padding: 5rem 1rem;
 }*/
 
-/*Creating Curved Corners for the Video*/
+/Creating Curved Corners for the Video/
 .section__container {
   /* max-width: var(--max-width); */
   margin: auto;
@@ -532,6 +529,9 @@ a {
 img {
   width: 100%;
   display: block;
+}
+.sitelogo{
+  width: 8%;
 }
 
 body {
@@ -1585,7 +1585,7 @@ body.dark-theme .items {
   backdrop-filter: blur(10px);
   box-shadow: rgba(255, 255, 255, 0.25) 0px 50px 100px -20px,
     /* Light shadow */ rgba(255, 255, 255, 0.3) 0px 30px 60px -30px,
-    /* Light shadow */ rgba(255, 255, 255, 0.35) 0px -2px 6px 0px inset; /* Light inset shadow */
+    /* Light shadow / rgba(255, 255, 255, 0.35) 0px -2px 6px 0px inset; / Light inset shadow */
 }
 
 .contact {
@@ -2404,7 +2404,7 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background: linear-gradient(135deg, #7b4397, #dc2430); /* Gradient background */
+  background: linear-gradient(135deg, #7b4397, #32b1fa, rgb(254, 71, 227)); /* Gradient background */
   padding: 40px 20px; /* Add padding for spacing */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
@@ -2414,7 +2414,7 @@ body {
 /* Styling for elements with .aboutcontent class */
 .aboutcontent {
   text-align: center;
-  color: var(--text-dark);
+  color: black;
   margin-bottom: 20px;
   flex: 1 1 300px; /* Make flex items responsive */
   padding: 20px;
@@ -2775,7 +2775,7 @@ body.dark-theme .testimonials .testimonial-user p{
     object-fit: contain;
   }
   .header__image img:nth-child(1) {
-    max-width: 60vw; /* Adjust image size for smaller devices */ /* Center image horizontally and vertically */
+    max-width: 60vw; /* Adjust image size for smaller devices / / Center image horizontally and vertically */
   }
 
   .header__image img:nth-child(2) {
@@ -2799,7 +2799,7 @@ body.dark-theme .testimonials .testimonial-user p{
     font-size: 1rem;
   }
 
-  .header__content .action__btns {
+  .header_content .action_btns {
     flex-direction: column; /* Stack buttons vertically */
     gap: 1rem; /* Add gap between buttons */
     margin-top: 1rem; /* Adjust top margin */
@@ -2812,7 +2812,7 @@ body.dark-theme .testimonials .testimonial-user p{
     margin: 0 auto; /* Center the subtitle */
   }
 }
-/*STYLE FOR SIDE DISCOUNT DIVISION*/
+/STYLE FOR SIDE DISCOUNT DIVISION/
 
 .popup {
   position: fixed;
@@ -2904,7 +2904,7 @@ button:hover {
     line-height: 1.5rem; /* Adjust line height for smaller devices */
   }
 
-  .header__content .action__btns {
+  .header_content .action_btns {
     gap: 1.5rem; /* Add gap between buttons */
   }
 
@@ -3007,4 +3007,3 @@ a:hover::after {
   margin-bottom: auto;
   font-size: 14px;
   font-weight: 600;
-}
