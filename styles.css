@@ -413,7 +413,7 @@ body {
 .section__subtitle {
   font-size: 1rem;
   color: var(--text-dark);
-  max-width: calc(var(--max-width) / 2);
+  /* max-width: calc(var(--max-width) / 2); */
   /*   text-align: right; */
   text-align: center;
 }
@@ -447,15 +447,15 @@ body {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   transition: all 0.4s ease-in-out;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 0px;
+  /* padding-right: 20px; */
   width: auto;
   border: none;
   background-color: transparent;
   color: slateblue;
   font-weight: 500;
-  font-size: 28px;
-  letter-spacing: 2px;
+  font-size: 27px;
+  letter-spacing: 1.59px;
   vertical-align: middle;
   text-decoration: none;
   white-space: nowrap;
@@ -526,6 +526,9 @@ img {
   width: 100%;
   display: block;
 }
+.sitelogo{
+  width: 8%;
+}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -571,6 +574,11 @@ nav {
 link a:hover {
   color: #60a5fa; 
   background-color:red;
+}
+
+.navLinks a:hover{
+  text-decoration: underline;
+  color: red;
 }
 
 .home {
@@ -2083,10 +2091,10 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.link a:hover::before {
+/* .link a:hover::before {
   width: 100%;
   transition: all 0.2s ease-in-out;
-}
+} */
 
 .link a:hover::after {
   width: 100%;
@@ -2096,6 +2104,10 @@ body {
   position: relative;
   right: 15px;
   box-sizing: border-box;
+}
+
+#themeToggle {
+  width: inherit;
 }
 
 .hamburger {
@@ -2188,6 +2200,11 @@ body {
 .navLinks.activeHamburger {
   width: 100%;
 }
+
+/* Initially the Login Button and View button are not in Hamburger Menu */
+.navLinks #LogIn-link, .navLinks #View-link {
+  display: none;
+}
 /* @media screen and (max-width: 1146px) {
   .toggle-container {
     position: relative;
@@ -2221,6 +2238,64 @@ body {
     top: 1px;
   }
 } */
+
+/* Move Login from newNav to Hamburger */
+@media screen and (max-width: 690px) {
+  .navLinks #LogIn-link {
+    display: inline;
+  }
+  .newNav #nav-login-btn {
+    display: none;
+  }
+}
+
+/* Move Login from Hamburger to newNav */
+@media screen and (min-width: 690px) {
+  .navLinks #LogIn-link {
+    display: none;
+  }
+  .newNav #nav-login-btn {
+    display: inline;
+  }
+}
+
+/* Move View from newNav to Hamburger */
+@media screen and (max-width: 510px) {
+  .navLinks #View-link {
+    display: inline;
+  }
+  .newNav #nav-view-btn {
+    display: none;
+  }
+  .newNav img{
+    position: relative;
+  }
+}
+
+/* Move View from Hamburger to newNav */
+@media screen and (min-width: 510px) {
+  .navLinks #View-link {
+    display: none;
+  }
+  .newNav #nav-view-btn {
+    display: inline;
+  }
+}
+
+/* TO prevent unnecessary wrapping */
+@media screen and (max-width: 400px) {
+  .newNav {
+    gap: 0;
+  }
+}
+
+/* Hide the logo name */
+@media screen and (max-width: 350px) {
+  .newNav .nav__logo {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 652px) {
   .toggle {
     width: 5vw;
@@ -2228,21 +2303,7 @@ body {
   .line {
     width: 5vw;
   }
-  .newNav img {
-    position: relative;
-    bottom: 23px;
-    left: 109px;
-  }
-  .nav__logo {
-    position: relative;
-    left: 85px;
-    bottom: 20px;
-  }
-  .btn {
-    position: relative;
-    top: 30px;
-    left: -147px;
-  }
+
 }
 @media only screen and (max-width:577px){
   .but{
@@ -2252,14 +2313,7 @@ body {
   }
 }
 @media only screen and (max-width: 465.5px){
-  .newNav img{
-    position: relative;
-    left: -58px;
-  }
-  .nav__logo{
-    position: relative;
-    left: -82px;
-  }
+
   .but{
     position: relative;
     left:17px;
@@ -2517,6 +2571,27 @@ body {
     0 0 200px black;
 }
 
+.hotel .center-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.hotel .center-card div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hotel .center-card div .btn{
+  bottom: 0;
+}
+
+
+
 /* Testimonial Section */
 @media (min-width: 320px) {
   .testimonials {
@@ -2542,6 +2617,25 @@ body {
   overflow: hidden;
   margin-bottom: 50px;
   top: 45px;
+}
+
+/* Light theme */
+.testimonials .testimonial-user{  
+  background-color: #efefef;
+}
+.testimonials .testimonial-user p{
+  color: #2a2e31;
+}
+/* Dark theme */
+body.dark-theme .testimonials {
+  background-color: #002152;
+}
+
+body.dark-theme .testimonials .testimonial-user{
+  background-color: black;
+}
+body.dark-theme .testimonials .testimonial-user p{
+  color: white;
 }
 
 .swiper-slide {
@@ -2815,10 +2909,6 @@ button:hover {
     max-width: 40%; /* Limit width to prevent overflow */
   }
 
-  .newNav {
-    justify-content: right;
-    gap: 27px;
-  }
   .nav-container {
     width: 100%;
     justify-content: center;
@@ -2872,4 +2962,45 @@ a:hover::after {
 .footer__link:hover::after {
   width: 100%;
   background-color: red;
+}
+
+
+.categories{
+  margin-left: auto;
+  margin-right: 60px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  -ms-overflow-style: none;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  /* max-width: 50%; */
+}
+
+.categories .each{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2px;
+  width: 100%;
+  padding: 2px 6px;
+  border: 1.2px solid #5c5c5c;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.each:active{
+  background-color: #a8d6fd;
+  
+}
+
+.each h5{
+  margin-left: 2px;
+  margin-top: auto;
+  color:#0077b5;
+  margin-bottom: auto;
+  font-size: 14px;
+  font-weight: 600;
 }
