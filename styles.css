@@ -26,10 +26,17 @@
   margin: 0;
   box-sizing: border-box;
 }
-
-::-webkit-scrollbar {
-  width: 0;
-}
+  ::-webkit-scrollbar{
+    width: 15px;
+  }
+  ::-webkit-scrollbar-track{
+    background: #d1e5ff;
+  }
+  ::-webkit-scrollbar-thumb{
+    background: linear-gradient( 90deg,rgb(63, 120, 244),rgb(245, 89, 239) );
+    border-radius: 10px;
+    height:  100px;
+  }
 
 /* new bubble start*/
 
@@ -257,7 +264,7 @@
 }
 
 /* new bubble end */
-#scrollPath {
+/* #scrollPath {
   position: fixed;
   top: 0;
   right: 0;
@@ -274,7 +281,7 @@
   height: 100%;
   background: linear-gradient(to top, #008aff, #00ffe7);
   z-index: 333333;
-}
+} */
 
 .dark-theme {
   --secondary-color: #0e1525;
@@ -1690,9 +1697,9 @@ body.dark-theme .items {
   color: grey;
 }
 
-textarea::-webkit-scrollbar {
+/* textarea::-webkit-scrollbar {
   width: 1em;
-}
+} */
 
 /* .contact-form #button{
   border: none;
@@ -1851,22 +1858,22 @@ textarea::-webkit-scrollbar {
 }
 
 /* Custom scrollbar for WebKit browsers */
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
   width: 8px;
-  /* Width of the scrollbar */
-}
+  Width of the scrollbar
+} */
 
-body::-webkit-scrollbar-thumb {
+/* body::-webkit-scrollbar-thumb {
   background-color: var(--primary-color);
-  /* Color of the scrollbar thumb */
+  Color of the scrollbar thumb
   border-radius: 6px;
-  /* Rounded corners of the thumb */
-}
+  Rounded corners of the thumb
+} */
 
-body::-webkit-scrollbar-track {
+/* body::-webkit-scrollbar-track {
   background-color: var(--extra-light);
-  /* Color of the scrollbar track */
-}
+  Color of the scrollbar track
+} */
 
 body::-webkit-scrollbar-thumb:hover {
   background-color: var(--primary-color-dark);
@@ -1923,9 +1930,9 @@ body {
   width: 100%;
   left: 0;
   bottom: -1px;
-  -webkit-transition: all 250ms ease 0s;
+  /* -webkit-transition: all 250ms ease 0s; */
   transition: all 250ms ease 0s;
-  -webkit-transform: scale(0);
+  /* -webkit-transform: scale(0); */
   transform: scale(0);
 }
 
@@ -1977,9 +1984,9 @@ body {
   padding: 20px;
 }
 
-.testimonial-container::-webkit-scrollbar {
+/* .testimonial-container::-webkit-scrollbar {
   display: none;
-}
+} */
 
 .testimonial-user {
   display: flex;
