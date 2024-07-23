@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
   <style>
     .center-card {
       margin: 0 auto;
@@ -14,7 +15,9 @@
       position: relative;
       bottom: 18px;
     }
-  </style>
+</style>
+
+
   <link rel="stylesheet" href="./loader.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="faq-website.css">
@@ -255,9 +258,7 @@
 
 
 
-      pointer-events: none;
-      z-index: 9999;
-    }
+     
 
 
     @media screen and (max-width: 768px){
@@ -489,12 +490,14 @@
               </div>
               <br>
                 <!-- Article with about us content -->
-                <article class="w-full text-left format sm:format-base lg:format-lg format-blue dark:format-invert">
+                <article class="w-full text-left format sm:format-base lg:format-lg format-blue dark:format-invert" 
+               >
+               <div  style="background-color: #fc93dc;">
                   <!-- Adding the content -->
                   <style>
                     /* CSS for hover effect */
                     .aboutcontent:hover {
-                      transform: scale(1.8);
+                      transform: scale(1.9);
                       transition: transform 0.8s ease;
                     }
                   </style>
@@ -522,7 +525,7 @@
                     horizons of possibilities for discovering the world. With TourGuide by your side, there's no limit
                     to the different ways you can embark on an unforgettable journey!
                   </p>
-
+                </div>
                   <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
                     <strong><span style="margin-left: 50px;"></span> We welcome you to the TourGuide family - where
                       every journey becomes a story worth
@@ -558,8 +561,12 @@
     <div data-aos="fade-left" class="col-6">
 
       <div class="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-1 sm:gap-4 xl:gap-8 sm:space-y-0 md:mt-12">
+
          Box 1 - Number of Guides -->
     <!-- <div class="box1">
+
+        <!-- Box 1 - Number of Guides -->
+        <div class="box1" style="background-color: plum;">
           <div class="iconss">
 
             <svg class="w-12 h-12 mx-auto dark:text-gray-100 group-hover:text-pink-500 group-hover:dark:text-pink-500"
@@ -577,9 +584,10 @@
               class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300">
               Guides</p>
           </div>
-        </div>  -->
-    <!-- Box 2 - Number of Tours -->
-    <!-- <div class="box1">
+
+        <!-- Box 2 - Number of Tours -->
+        <div class="box1" style="background-color: plum;">
+
           <div class="iconss">
             <svg class="w-12 h-12 mx-auto dark:text-gray-100 group-hover:text-pink-500 group-hover:dark:text-pink-500"
               viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
@@ -597,13 +605,17 @@
             <p class="text-base font-semibold text-gray-600 dark:text-gray-300 group-hover:text-gray-900 group-hover:dark:text-gray-300"
               data-aos="fade-in">Tours</p>
           </div>
-        </div> -->
-    <!-- Box 3 - Number of Destinations -->
-    <!-- <div class="box1">
+
+        <!-- Box 3 - Number of Destinations -->
+        <div class="box1" style="background-color: plum;">
+
           <a href="affordable-destinations.html" class="iconss">
             <svg class="w-12 h-12 mx-auto group-hover:text-pink-500 dark:text-gray-100 group-hover:dark:text-pink-500"
               viewBox="0 0 24 24" stroke-width="2" stroke="black" fill="none" stroke-linecap="round"
-              stroke-linejoin="round"> -->
+              stroke-linejoin="round"></svg>
+              </div>
+              
+            
     <!-- SVG Path for the icon -->
     <!-- <path stroke="none" d="M0 0h24v24H0z" />
               <line x1="18" y1="6" x2="18" y2="6.01" />
@@ -2190,7 +2202,7 @@
       animateValue("guidesCount", 0, 25000, 20000);
       animateValue("toursCount", 0, 20000, 20000);
       animateValue("destinationsCount", 0, 10994, 20000);
-    });
+    };
 
   </script>
 
@@ -2202,7 +2214,7 @@
 
 
 
-</html><!-- New bubble background start -->
+<!-- New bubble background start -->
 
 
 <!-- <div class="bubbles">
