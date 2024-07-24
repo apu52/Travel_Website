@@ -11,7 +11,7 @@ body {
   --text-light: #767268;
   --extra-light: #ffffff;
   --foot-light: #0d213f;
-  --arr-light: #3685fb;
+  --arr-light: #ffffff;
   --body-light: #ffffff;
   --secondary-color: #fafcff;
   --text-dark: #0d213f;
@@ -122,9 +122,9 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   width: auto;
-  background-color: transparent;
+  background-color: var(--btn-border);
   border: 2px solid var(--btn-border);
-  color: var(--btn-color);
+  color: var(--arr-light);
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 2px;
