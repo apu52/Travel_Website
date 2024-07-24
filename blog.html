@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <a href="./index.html" class="home-button">
+        <i class="fas fa-home"></i> TourGuide
+    </a>
+    <video autoplay muted loop id="background-video">
+        <source src="./flying_balloon.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay"></div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Our TourGuide Blogs</h1>
+            <p>Discover amazing travel stories and experiences.</p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h2>Scroll down to see the blogs</h2>
+            <h1>↓</h1>
+        </div>
+    </section>
+
+    <div class="content-wrapper">
+        <main>
+            <section id="blog-posts">
+                <!-- Blog posts will be dynamically inserted here -->
+            </section>
+            <aside>
+                <div class="widget semi-transparent-box">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Backpacker <span>(6)</span></a></li>
+                        <li><a href="#">Hiking <span>(1)</span></a></li>
+                        <li><a href="#">Tips <span>(2)</span></a></li>
+                        <li><a href="#">Tourism <span>(4)</span></a></li>
+                        <li><a href="#">Travel <span>(6)</span></a></li>
+                        <li><a href="#">Travel Tips <span>(7)</span></a></li>
+                        <li><a href="#">Traveling <span>(5)</span></a></li>
+                        <li><a href="#">Uncategorized <span>(1)</span></a></li>
+                        <li><a href="#">World Tour <span>(21)</span></a></li>
+                    </ul>
+                </div>
+                <div class="widget semi-transparent-box">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="#">Travel Insurance Guide</a></li>
+                        <li><a href="#">Packing Essentials Checklist</a></li>
+                        <li><a href="#">Budget Travel Hacks</a></li>
+                        <li><a href="#">Solo Travel Safety Tips</a></li>
+                    </ul>
+                </div>
+                <div class="widget semi-transparent-box">
+                    <h3>Related Posts</h3>
+                    <!-- Related posts will be dynamically inserted here -->
+                </div>
+                <div class="widget semi-transparent-box">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const blogPosts = [
+                {
+                    title: "Island Hopping in Greece: A Mediterranean Odyssey",
+                    date: "July 12, 2024",
+                    author: "Nikos Papadopoulos",
+                    image: "/img/pexels-josh-hild-2422259.jpg",
+                    content: "Embark on a sun-soaked journey through the Greek islands, from the iconic white-washed buildings of Santorini to the vibrant nightlife of Mykonos and the historical wonders of Crete. Discover hidden beaches, indulge in mouthwatering cuisine, and immerse yourself in the rich tapestry of Greek culture.",
+                    tags: ["Greece", "Islands", "Mediterranean", "Culture"],
+                    likes: 342,
+                    comments: 56,
+                    link: "#"
+                },
+                {
+                    title: "A Week in Bali: Discovering Paradise and Inner Peace",
+                    date: "July 16, 2024",
+                    author: "Emma Thompson",
+                    image: "/img/bali.jpg",
+                    content: "Bali, the Island of Gods, offers a perfect blend of spiritual awakening and tropical bliss. From the serene rice terraces of Ubud to the bustling beaches of Seminyak, experience a week of yoga retreats, traditional ceremonies, and unforgettable sunsets that will rejuvenate your body and soul.",
+                    tags: ["Bali", "Wellness", "Beaches", "Culture"],
+                    likes: 287,
+                    comments: 42,
+                    link: "#"
+                },
+                {
+                    title: "Conquering the Inca Trail: A Journey to Machu Picchu",
+                    date: "July 15, 2024",
+                    author: "Carlos Rodriguez",
+                    image: "/img/machu picchu.jpg",
+                    content: "Follow in the footsteps of ancient Incas as we trek through the challenging but rewarding Inca Trail. Witness breathtaking Andean vistas, explore mysterious ruins, and finally arrive at the magnificent lost city of Machu Picchu. An adventure that will test your limits and leave you in awe.",
+                    tags: ["Peru", "Hiking", "History", "Adventure"],
+                    likes: 401,
+                    comments: 73,
+                    link: "#"
+                },
+                {
+                    title: "Cherry Blossom Magic: Springtime in Japan",
+                    date: "July 14, 2024",
+                    author: "Yuki Tanaka",
+                    image: "/img/cherry_blossom.jpg",
+                    content: "Experience the ephemeral beauty of Japan's cherry blossom season. From the bustling streets of Tokyo to the serene gardens of Kyoto, witness the country transform into a pink wonderland. Partake in hanami picnics, visit ancient temples, and immerse yourself in the timeless traditions of Japan.",
+                    tags: ["Japan", "Cherry Blossoms", "Culture", "Spring"],
+                    likes: 365,
+                    comments: 58,
+                    link: "#"
+                }
+            ];
+
+            const blogSection = document.getElementById("blog-posts");
+            blogPosts.forEach(post => {
+                const article = document.createElement("article");
+                article.className = "blog-post semi-transparent-box";
+                article.innerHTML = `
+                    <img src="${post.image}" alt="${post.title}" class="blog-image">
+                    <div class="blog-content">
+                        <h2>${post.title}</h2>
+                        <div class="post-meta">
+                            <span class="author"><i class="fas fa-user"></i> ${post.author}</span>
+                            <span class="date"><i class="far fa-calendar-alt"></i> ${post.date}</span>
+                            <span class="likes"><i class="fas fa-heart"></i> ${post.likes}</span>
+                            <span class="comments"><i class="fas fa-comment"></i> ${post.comments}</span>
+                        </div>
+                        <p>${post.content}</p>
+                        <div class="tags">
+                            ${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                        </div>
+                        <a href="${post.link}" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                `;
+                blogSection.appendChild(article);
+            });
+
+            const relatedPosts = blogPosts.slice(1, 4);
+            const relatedWidget = document.querySelector('.widget:nth-child(3)');
+            relatedPosts.forEach(post => {
+                const relatedPost = document.createElement('div');
+                relatedPost.className = 'related-post';
+                relatedPost.innerHTML = `
+                    <img src="${post.image}" alt="${post.title}">
+                    <div>
+                        <h4>${post.title}</h4>
+                        <p>${post.date}</p>
+                    </div>
+                `;
+                relatedWidget.appendChild(relatedPost);
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.hero');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

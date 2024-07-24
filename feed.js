@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const comments = document.getElementById("comments").value.trim();
 
     // Check if the feedback is empty
-    if (comments === "") {
+    if (comments === "" || comments.length < 4) {
       Swal.fire({
         icon: "error",
         title: "Oops...",
@@ -76,6 +76,26 @@ document.addEventListener("DOMContentLoaded", function () {
       // Clear the feedback form after the user acknowledges the success modal
       if (result.isConfirmed || result.isDismissed) {
         form.reset();
+
+      // Reset star ratings
+        const ratingCategories = [
+          "navigationEase",
+          "bookingProcess",
+          "accuracyInformation",
+          "paymentOptions",
+          "securityMeasures",
+          "customerSupport",
+          "overallExperience",
+        ];
+
+        ratingCategories.forEach((category) => {
+          const stars = document.querySelectorAll(`#${category} .star`);
+          stars.forEach((star) => {
+            star.classList.remove("checked");
+          });
+          const ratingText = document.getElementById(`${category}-rating-text`);
+          ratingText.textContent = `Rating: 0`;
+        });
       }
     });
   });

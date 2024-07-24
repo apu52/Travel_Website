@@ -46,37 +46,60 @@
       </ul>
       <a href="#contact"><button class="btn">Contact Us</button></a>
     </nav> -->
-    <div class="nav-container">
+    
+    <div class="nav-container" id="top">
       <nav class="newNav">
-        <div class="logo">
-          <video id="logo-video" autoplay loop muted>
-              <source src="Untitled (1).mp4" type="video/mp4">
-              Your browser does not support the video tag.
-          </video>
-          </div>
-        <ul class="navLinks">
-          <li class="link home" data-aos="fade-down"><a href="index.html">Home</a></li>
-          <li class="link" data-aos="fade-down"><a href="index.html#AboutUs">AboutUs</a></li>
-          <li class="link" data-aos="fade-down"><a href="index.html#Destinations">Destinations</a></li>
-          <li class="link" data-aos="fade-down"><a href="index.html#trip">Pricing</a></li>
-          <li class="link" data-aos="fade-down"><a href="index.html#ReviewGallery">Trip Gallery</a></li>
-          <li class="link" data-aos="fade-down"><a href="index.html#testimonials">Testimonials</a></li>
-          <li class="link" data-aos="fade-down"><a href="feedback.html">Rate Us?</a></li>
-          <li class="link" data-aos="fade-down"><a href="index.html#contact">Contact Us</a></li>
+        <img src="./img/tour1.png" class="sitelogo">
 
+        <a href="#" class="nav__logo" data-aos="fade-right">Tourguide</span></a>
+
+        <ul class="navLinks">
+
+          <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
+          <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
+          <li class="link" data-aos=""><a href="index.html/#Home">Home</a></li>
+          <li class="link" data-aos=""><a href="index.html/#AboutUs">About</a></li>
+          <li class="link" data-aos=""><a href="index.html/#Destinations">Destination</a></li>
+          <li class="link" data-aos=""><a href="index.html/#trip">Prices</a></li>
+          <li class="link" data-aos=""><a href="index.html/#ReviewGallery">Trip Gallery</a></li>
+          <li class="link" data-aos=""><a href="index.html/#tourist">Tourist Guide</a></li>
+          <li class="link" data-aos=""><a href="index.html/#hotel">Hotel & Resort</a></li>
+          <li class="link" data-aos=""><a href="index.html/#testimonials">Testimonial</a></li>
+          <li class="link" data-aos=""><a href="feedback.html">Rate Us</a></li>
+          <li class="link" data-aos=""><a href="index.html/#cnt-form">Contact Us</a></li>
         </ul>
+
+
+
         <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
-            data-aos="fade-down">Login</button></a>
-        <div class="toggle-container" data-aos="fade-down" style="background-color: red;">
+          data-aos="fade-down">Login</button></a>
+
+        <a href="loginPage.html" class="contact-btn"><button class="btn" id="logout-btn"
+            style="margin: 0; display: none;" data-aos="fade-down" disabled>Log Out</button></a>
+
+        <!-- <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
+            style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a> -->
+
+        <div class="toggle-container" data-aos="fade-down">
           <input id="themeToggle" class="toggle" type="checkbox">
         </div>
         <div class="hamburger" data-aos="fade-down">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
+	@@ -78,6 +94,19 @@
       </nav>
     </div>
+
+
+    <style>
+      .nav-container .newNav {
+        display: flex;
+        justify-content: space-around;
+        gap: 0;
+      }
+
+      .nav-container .newNav .navLinks {
+        padding: 20px;
+      }
+    </style>
 
     <!-- inserted a video in the header section to reflect "watch our story" -->
     <header>
@@ -123,7 +146,7 @@
         <p><a href="./faq.html" class="footer__link">FAQs</a></p>
         <p><a href="./tnc.html" class="footer__link">Terms & Conditions</a></p>
         <p><a href="./privacy.html" class="footer__link">Privacy Policy</a></p>
-        <p><a href="#cnt-form" class="footer__link">Contact Us</a></p>
+        <p><a href="index.html/#cnt-form" class="footer__link">Contact Us</a></p>
       </div>
     </div>
     <div class="footer__col">

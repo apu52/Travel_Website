@@ -1,6 +1,3 @@
-
-
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Oxygen:wght@300&display=swap");
 
@@ -29,10 +26,17 @@
   margin: 0;
   box-sizing: border-box;
 }
-
-::-webkit-scrollbar {
-  width: 0;
-}
+  ::-webkit-scrollbar{
+    width: 15px;
+  }
+  ::-webkit-scrollbar-track{
+    background: #d1e5ff;
+  }
+  ::-webkit-scrollbar-thumb{
+    background: linear-gradient( 90deg,rgb(63, 120, 244),rgb(245, 89, 239) );
+    border-radius: 10px;
+    height:  100px;
+  }
 
 /* new bubble start*/
 
@@ -260,7 +264,7 @@
 }
 
 /* new bubble end */
-#scrollPath {
+/* #scrollPath {
   position: fixed;
   top: 0;
   right: 0;
@@ -277,7 +281,7 @@
   height: 100%;
   background: linear-gradient(to top, #008aff, #00ffe7);
   z-index: 333333;
-}
+} */
 
 .dark-theme {
   --secondary-color: #0e1525;
@@ -320,7 +324,7 @@ body {
   color: #fff;
 }
 
-*/ #toggle:hover {
+#toggle:hover {
   filter: brightness(1.5);
 }
 
@@ -330,7 +334,7 @@ body {
   padding: 5rem 1rem;
 }*/
 
-/*Creating Curved Corners for the Video*/
+/* /Creating Curved Corners for the Video/ */
 .section__container {
   /* max-width: var(--max-width); */
   margin: auto;
@@ -447,15 +451,15 @@ body {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   transition: all 0.4s ease-in-out;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 0px;
+  /* padding-right: 20px; */
   width: auto;
   border: none;
   background-color: transparent;
   color: slateblue;
   font-weight: 500;
-  font-size: 28px;
-  letter-spacing: 2px;
+  font-size: 27px;
+  letter-spacing: 1.59px;
   vertical-align: middle;
   text-decoration: none;
   white-space: nowrap;
@@ -526,6 +530,9 @@ img {
   width: 100%;
   display: block;
 }
+.sitelogo{
+  width: 8%;
+}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -574,7 +581,7 @@ link a:hover {
 }
 
 .navLinks a:hover{
-  text-decoration: underline;
+  /* text-decoration: underline; */
   color: red;
 }
 
@@ -1578,7 +1585,7 @@ body.dark-theme .items {
   backdrop-filter: blur(10px);
   box-shadow: rgba(255, 255, 255, 0.25) 0px 50px 100px -20px,
     /* Light shadow */ rgba(255, 255, 255, 0.3) 0px 30px 60px -30px,
-    /* Light shadow */ rgba(255, 255, 255, 0.35) 0px -2px 6px 0px inset; /* Light inset shadow */
+    /* Light shadow / rgba(255, 255, 255, 0.35) 0px -2px 6px 0px inset; / Light inset shadow */
 }
 
 .contact {
@@ -1690,9 +1697,9 @@ body.dark-theme .items {
   color: grey;
 }
 
-textarea::-webkit-scrollbar {
+/* textarea::-webkit-scrollbar {
   width: 1em;
-}
+} */
 
 /* .contact-form #button{
   border: none;
@@ -1851,22 +1858,22 @@ textarea::-webkit-scrollbar {
 }
 
 /* Custom scrollbar for WebKit browsers */
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
   width: 8px;
-  /* Width of the scrollbar */
-}
+  Width of the scrollbar
+} */
 
-body::-webkit-scrollbar-thumb {
+/* body::-webkit-scrollbar-thumb {
   background-color: var(--primary-color);
-  /* Color of the scrollbar thumb */
+  Color of the scrollbar thumb
   border-radius: 6px;
-  /* Rounded corners of the thumb */
-}
+  Rounded corners of the thumb
+} */
 
-body::-webkit-scrollbar-track {
+/* body::-webkit-scrollbar-track {
   background-color: var(--extra-light);
-  /* Color of the scrollbar track */
-}
+  Color of the scrollbar track
+} */
 
 body::-webkit-scrollbar-thumb:hover {
   background-color: var(--primary-color-dark);
@@ -1923,9 +1930,9 @@ body {
   width: 100%;
   left: 0;
   bottom: -1px;
-  -webkit-transition: all 250ms ease 0s;
+  /* -webkit-transition: all 250ms ease 0s; */
   transition: all 250ms ease 0s;
-  -webkit-transform: scale(0);
+  /* -webkit-transform: scale(0); */
   transform: scale(0);
 }
 
@@ -1977,9 +1984,9 @@ body {
   padding: 20px;
 }
 
-.testimonial-container::-webkit-scrollbar {
+/* .testimonial-container::-webkit-scrollbar {
   display: none;
-}
+} */
 
 .testimonial-user {
   display: flex;
@@ -2067,7 +2074,7 @@ body {
   position: relative;
 }
 
-.link a::before {
+/* .link a::before {
   position: absolute;
   content: "";
   height: 2px;
@@ -2075,9 +2082,9 @@ body {
   bottom: -5px;
   left: 0;
   background-color: red;
-}
+} */
 
-.link a::after {
+/* .link a::after {
   position: absolute;
   content: "";
   height: 2px;
@@ -2086,17 +2093,17 @@ body {
   right: 0;
   background-color: red;
   transition: all 0.2s ease-in-out;
-}
+} */
 
 /* .link a:hover::before {
   width: 100%;
   transition: all 0.2s ease-in-out;
 } */
-
+/* 
 .link a:hover::after {
   width: 100%;
   transition: all 0.2s ease-in-out;
-}
+} */
 .contact-btn {
   position: relative;
   right: 15px;
@@ -2397,7 +2404,7 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background: linear-gradient(135deg, #7b4397, #dc2430); /* Gradient background */
+  background: linear-gradient(135deg, #7b4397, #32b1fa, rgb(254, 71, 227)); /* Gradient background */
   padding: 40px 20px; /* Add padding for spacing */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
@@ -2407,7 +2414,7 @@ body {
 /* Styling for elements with .aboutcontent class */
 .aboutcontent {
   text-align: center;
-  color: var(--text-dark);
+  color: black;
   margin-bottom: 20px;
   flex: 1 1 300px; /* Make flex items responsive */
   padding: 20px;
@@ -2768,7 +2775,7 @@ body.dark-theme .testimonials .testimonial-user p{
     object-fit: contain;
   }
   .header__image img:nth-child(1) {
-    max-width: 60vw; /* Adjust image size for smaller devices */ /* Center image horizontally and vertically */
+    max-width: 60vw; /* Adjust image size for smaller devices / / Center image horizontally and vertically */
   }
 
   .header__image img:nth-child(2) {
@@ -2792,7 +2799,7 @@ body.dark-theme .testimonials .testimonial-user p{
     font-size: 1rem;
   }
 
-  .header__content .action__btns {
+  .header_content .action_btns {
     flex-direction: column; /* Stack buttons vertically */
     gap: 1rem; /* Add gap between buttons */
     margin-top: 1rem; /* Adjust top margin */
@@ -2805,7 +2812,7 @@ body.dark-theme .testimonials .testimonial-user p{
     margin: 0 auto; /* Center the subtitle */
   }
 }
-/*STYLE FOR SIDE DISCOUNT DIVISION*/
+/* /STYLE FOR SIDE DISCOUNT DIVISION/ */
 
 .popup {
   position: fixed;
@@ -2897,7 +2904,7 @@ button:hover {
     line-height: 1.5rem; /* Adjust line height for smaller devices */
   }
 
-  .header__content .action__btns {
+  .header_content .action_btns {
     gap: 1.5rem; /* Add gap between buttons */
   }
 

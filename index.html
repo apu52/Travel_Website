@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="counter.css" class="rel href">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -85,7 +86,6 @@
     .active {
       color: red !important;
     }
-
     @media screen and (max-width:390px) {
       .nav__logo {
         position: relative;
@@ -279,7 +279,7 @@
       <canvas></canvas>
       <canvas></canvas>
     </div>
-    <div id="progressbar"></div>
+    <!-- <div id="progressbar"></div> -->
     <div id="scrollPath"></div>
     <!-- <canvas id="canvas"></canvas> -->
     <!-- <nav>
@@ -301,11 +301,9 @@
   </nav> -->
     <div class="nav-container" id="top">
       <nav class="newNav">
-        <img
-          src="./img/A T logo with a white background and a square shape, connected to nature for a travel company.png"
-          style="width:30px;height:30px;border-radius:50%;">
-
-        <a href="#" class="nav__logo" data-aos="fade-right">Tourguide</span></a>
+        <img src="./img/tour1.png" class="sitelogo">
+        
+        <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
 
         <ul class="navLinks">
 
@@ -321,7 +319,6 @@
           <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
           <li class="link" data-aos=""><a href="feedback.html">Rate Us</a></li>
           <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
-          <li class="link" data-aos=""><a href="contributors.html">Contributors</a></li>
         </ul>
 
 
@@ -367,11 +364,11 @@
               clients.
             </p>
             <div class="action__btns">
-              <a href="pricing/index.html"><button class="btn" data-aos="fade-in" id="btn-style"
+              <a href="pricing/index.html"><button class="btn" data-aos="fade-in"
                   style="box-shadow: 2px 2px 8px red;">Membership</button></a>
-              <button class="btn" data-aos="fade-in" id="btn-style" onclick="planTrip()"
+              <button class="btn" data-aos="fade-in" onclick="planTrip()"
                 style="box-shadow: 2px 2px 8px red;">Plan a Trip</button>
-              <a href="./payment.html"><button class="btn" data-aos="fade-in" id="btn-style"
+              <a href="./payment.html"><button class="btn" data-aos="fade-in" 
                   style="box-shadow: 2px 2px 8px red;">Book Now</button></a>
             </div>
 
@@ -624,7 +621,7 @@
       </div>
     </div>
 
-    <section class="section__container destination__container" id="Destinations" data-aos="fade-up">
+<!--  <section class="section__container destination__container" id="Destinations" data-aos="fade-up">
       <div class="section__header">
         <div>
           <h2 class="section__title" data-aos="fade-in"><span style="margin-left: 300px;"></span>Explore top
@@ -635,17 +632,17 @@
         </div>
       </div>
 
-      <!-- slideshow -->
-      <!-- <div class="slideshow-container" data-aos="fade-up"> -->
+       slideshow 
+       <div class="slideshow-container" data-aos="fade-up"> 
 
-      <!-- Next and previous buttons -->
-      <!-- <div class="destination__nav">
+       Next and previous buttons 
+       <div class="destination__nav"
       <span onclick="pullSlide(-1)"><i class="ri-arrow-left-s-line"></i></span>
       <span onclick="pullSlide(1)"><i class="ri-arrow-right-s-line"></i></span>
-    </div> -->
+    </div>
 
-      <!-- Full-width images with number and caption text -->
-      <!-- <div class="mySlides">
+    Full-width images with number and caption text
+     <div class="mySlides">
       <img src="./img/eiffelTower.webp" style="width:100%">
     </div>
 
@@ -666,62 +663,147 @@
           <span></span>
           <span></span>
         </div>
-      </div> -->
+      </div> 
 
-      <div class="outer-box">
-        <div class="containers">
-              
-            <div class="card active" style="
-              background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
-                url('./img/paris.jpg')
-            ">
-            <div class="info">
-  
-              <p>
-                ||Eiffel Tower||
-              </p>
-              <h3>PARIS</h3>
+<div class="outer-box">
+          <div class="containers">
+                
+              <div class="card active" style="
+                background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+                  url('./img/paris.jpg')
+              ">
+              <div class="info">
+    
+                <p>
+                  ||Eiffel Tower||
+                </p>
+                <h3>PARIS</h3>
+              </div>
             </div>
+    
+        <div class="card" style="
+          background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+            url('./img/london.jpg')
+        ">
+          <div class="info">
+            
+            <p>||Giant Wheel||</p>
+            <h3>LONDON</h3>
           </div>
-  
-      <div class="card" style="
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
-          url('./img/london.jpg')
-      ">
-        <div class="info">
+        </div>
+    
+        <div class="card" style="
+          background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+            url('./img/goa.jpg')
+        ">
+          <div class="info">
+            
+            <p>||Goa Beach||</p>
+            <h3>GOA</h3>
+          </div>
+        </div>
+    
+        <div class="card" style="
+          background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
+            url('./img/maldives.jpg')
+        ">
+          <div class="info">
           
-          <p>||Giant Wheel||</p>
-          <h3>LONDON</h3>
+            <p>||Male Beach||</p>
+            <h3>MALDIVES</h3>
+          </div>
         </div>
+    
       </div>
-  
-      <div class="card" style="
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
-          url('./img/goa.jpg')
-      ">
-        <div class="info">
-          
-          <p>||Goa Beach||</p>
-          <h3>GOA</h3>
-        </div>
-      </div>
-  
-      <div class="card" style="
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 7%, rgba(255, 255, 255, 0) 50%),
-          url('./img/maldives.jpg')
-      ">
-        <div class="info">
-         
-          <p>||Male Beach||</p>
-          <h3>MALDIVES</h3>
-        </div>
-      </div>
-  
     </div>
-  </div>
-  
       <script src="explore.js"></script>
     </section>
+  -->
+
+    <!-- Destination Section -->
+    <div class="section__container destination__container" id="Destinations" data-aos="fade-up">
+      <div class="section__header">
+        <div>
+          <h2 class="section__title" data-aos="fade-in">Explore Top Destinations</h2>
+          <p class="section__subtitle" data-aos="fade-in">
+            Explore your dream places around the world. Here you can find your perfect destination.
+          </p>
+        </div>
+      </div>
+
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide card">
+            <img src="./img/eiffelTower2.webp" class="card-img" alt="Eiffel Tower">
+            <div class="card-body">
+              <h1 class="card-title">Eiffel Tower</h1>
+              <p class="card-info">The Eiffel Tower is an iconic iron lattice tower in Paris, built for the 1889 World's Fair, standing at 324 meters tall.</p>
+              <button class="card-btn" onclick="window.open('./dedicated-destinations/Paris/start.html', '_blank')">Book Tour</button>
+            </div>
+          </div>
+
+          <div class="swiper-slide card">
+            <img src="./img/giantWheel.webp" class="card-img" alt="The London Eye">
+            <div class="card-body">
+              <h1 class="card-title">The London Eye</h1>
+              <p class="card-info">The London Eye, a striking 135-meter tall observation wheel on the South Bank of the Thames, offers panoramic views of the city's landmarks.</p>
+                <button class="card-btn" onclick="window.open('./dedicated-destinations/London/start.html', '_blank')">Book Tour</button>
+            </div>
+          </div>
+
+          <div class="swiper-slide card">
+            <img src="./img/maldives.jpg" class="card-img" alt="Male Beach">
+            <div class="card-body">
+              <h1 class="card-title">Male Beach</h1>
+              <p class="card-info">Male Beach, the pristine stretch of golden sand on Malé Atoll, offers a serene escape with crystal-clear waters and vibrant marine life.</p>
+              <button class="card-btn" onclick="window.open('./dedicated-destinations/Maldives/start.html', '_blank')">Book Tour</button>
+            </div>
+          </div>
+
+          <div class="swiper-slide card">
+            <img src="./img/MuseumofFuture.jpg" class="card-img" alt="Museum of the Future">
+            <div class="card-body">
+              <h1 class="card-title">Museum of the Future</h1>
+              <p class="card-info">The Museum of the Future in Dubai is a visionary architectural gem that explores cutting-edge innovations and the potential of tomorrow's technology.</p>
+              <button class="card-btn" onclick="window.open('./dedicated-destinations/Dubai/start.html', '_blank')">Book Tour</button>
+            </div>
+          </div>
+
+          <div class="swiper-slide card">
+            <img src="./img/TajMahal.jpg" class="card-img" alt="Taj Mahal">
+            <div class="card-body">
+              <h1 class="card-title">Taj Mahal</h1>
+              <p class="card-info">The Taj Mahal, a majestic white marble mausoleum in Agra, is a timeless symbol of love and architectural brilliance.</p>
+           <button class="card-btn" onclick="window.open('./dedicated destinations/Taj_Mahal/Taj.html', '_blank')">Book Tour</button>
+            </div>
+          </div>
+
+          <div class="swiper-slide card">
+            <img src="./img/lehLadakh.jpg" class="card-img" alt="Leh Ladakh">
+            <div class="card-body">
+              <h1 class="card-title">Leh Ladakh</h1>
+              <p class="card-info">Leh Ladakh, a breathtaking high-altitude region in northern India, captivates with its rugged landscapes, serene monasteries, and vibrant cultural heritage.</p>
+              <button class="card-btn" onclick="window.open('./dedicated destinations/Ladakh/ladakh.html', '_blank')">Book Tour</button>
+            </div>
+          </div>
+
+          <div class="swiper-slide card">
+            <img src="./img/TimesSquare.jpg" class="card-img" alt="Times Square">
+            <div class="card-body">
+              <h1 class="card-title">Times Square</h1>
+              <p class="card-info">Times Square is a vibrant commercial and entertainment hub in New York City, renowned for its bright lights, Broadway theaters, and bustling atmosphere.</p>
+              <button class="card-btn" onclick="window.open('./dedicated-destinations/new-york/start.html', '_blank')">Book Tour</button>
+            </div>
+          </div>
+        </div>
+        <button class="swiper-button-prev"></button>
+        <button class="swiper-button-next"></button>  
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+      <script src="explore.js"></script>
+    </section>
+  <!-- End Destination Section -->
 
     <section class="trip" id="trip" data-aos="zoom-in" data-aos-offset="100">
       <div class="section__container trip__container">
@@ -877,6 +959,7 @@
           <button class="btn btn-style" id="prev">Prev</button>
           <button class="btn btn-style" id="next">Next</button>
         </div>
+
         <!-- Trip Photo Gallery -->
         <div class="trip-gallery-container">
 
@@ -974,38 +1057,35 @@
 
     <!-- Hotel & Resort Section -->
     <section class="hotel" id ="hotel">
+      <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Hotels & Resorts</h2>
       
-      <div class="center-card">
-        <div>
-          <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Hotels & Resorts</h2> 
-          <h3 style="color: rgb(151, 6, 241); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Best Place for Beautiful Trip</h3>
-        </div>
-
-        <div>
-          <img src="./h1.png" alt="hr1"/>
-          <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
-        </div>
-        
-        <div>
-          <img src="./h2.png" alt="hr2"/>
-          <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
-        </div>
-        
-        <div>
-          <img src="./h3.png" alt="hr3"/>
-          <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
-        </div>
-        
-        <div>
-          <img src="./h4.png" alt="hr4"/>
-          <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
-        </div>
-        
+       <br></br>
+       <h3 style="color: rgb(151, 6, 241); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Best Place for Beautiful Trip</h3>
+       <br></br>
+       <div class="center-card">
+       <img src="./h1.png" alt="hr1"/>
+       <br></br>
+       <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
+       <br></br>
+       <br></br>
+       <img src="./h2.png" alt="hr2"/>
+       <br></br>
+       <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
+       <br></br>
+       <br></br>
+       <img src="./h3.png" alt="hr3"/>
+       <br></br>
+       <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
+       <br></br>
+       <br></br>
+       <img src="./h4.png" alt="hr4"/>
+       <br></br>
+       <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
       </div>
       </section>
     <br /><br /><br /><br />
-    <!-- Testimonials Section -->
 
+    <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
       <h2 class="testimonial-heading section__title" align-items="center" data-aos="fade-in">Testimonials</h2>
       <div class="marquee">
@@ -1109,18 +1189,6 @@
       </div>
 
     </section>
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!----------------------------------------------------- FAQ section ---------------------- -->
 
@@ -1346,10 +1414,8 @@
     </script>
 
 
-<!-- footer  -->
-
     <footer class="footer" data-aos="fade-up">
-      <div class="footer__container">
+      <div class="section__container footer__container">
         <div class="footer__col">
           <h3 class="footer-head" class="footer__title" style="cursor: default;">Tourguide<span>.</span></h3>
           <p>
@@ -1374,6 +1440,7 @@
         <div class="footer__col">
           <div class="footer__area">
             <h4 class="footer-head" class="footer__subtitle">Support</h4>
+            <p><a href="./blog.html" class="footer__link">Our Blogs</a></p>
             <p><a href="./faq.html" class="footer__link">FAQs</a></p>
             <p><a href="./tnc.html" class="footer__link">Terms & Conditions</a></p>
             <p><a href="./privacy.html" class="footer__link">Privacy Policy</a></p>
@@ -1407,7 +1474,6 @@
             </div>
           </div>
         </div>
-     
         <div class="footer__col">
           <div class="footer__area">
             <h4>Contact Us</h4>
@@ -1460,11 +1526,10 @@
             </div>
           </div>
 
-         
-
         </div>
+
         <div class="footer__col">
-          <div id="google_element" style="z-index: 1;"></div>
+          <div id="google_element"></div>
           <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
           <script>
             function loadGoogleTranslate() {
@@ -1474,22 +1539,16 @@
             }
           </script>
         </div>
-       
 
-        
-        </div>
-      
-       
 
         <!--  New copyright code to make it dynamic and display current year -->
-       
         <div class="footer__bar">
           <div>
             <li>Copyright &copy;<span id="year"></span> </span> Arpan Chowdhury. All rights reserved. </li>
           </div>
         </div>
+
     </footer>
-    
 
     <a class="goupbtn" href="#" onclick="goToTop()"><i class="fa-solid fa-arrow-up"></i></a>
 
@@ -2021,18 +2080,18 @@
         obj.textContent = currentValue;
         if (progress < 1) {
           requestAnimationFrame(updateValue);
-
         }
-
         requestAnimationFrame(updateValue);
       }
+    }
+  })
 </script>
 
 
 <script>
     const scrollline = document.querySelector('.progress-bar');
 
-  function fillscrollline(){
+  function fillscrollline() {
     const windowHeight = window.innerHeight;
     const fullHeight = document.body.clientHeight;
     const scrolled = window.scrollY;
@@ -2048,7 +2107,8 @@
       animateValue("guidesCount", 0, 25000, 20000);
       animateValue("toursCount", 0, 20000, 20000);
       animateValue("destinationsCount", 0, 10994, 20000);
-})
+  
+
 
   </script>
 
