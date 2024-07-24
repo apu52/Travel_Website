@@ -324,7 +324,7 @@ body {
   color: #fff;
 }
 
-*/ #toggle:hover {
+#toggle:hover {
   filter: brightness(1.5);
 }
 
@@ -334,7 +334,7 @@ body {
   padding: 5rem 1rem;
 }*/
 
-/Creating Curved Corners for the Video/
+/* /Creating Curved Corners for the Video/ */
 .section__container {
   /* max-width: var(--max-width); */
   margin: auto;
@@ -581,7 +581,7 @@ link a:hover {
 }
 
 .navLinks a:hover{
-  text-decoration: underline;
+  /* text-decoration: underline; */
   color: red;
 }
 
@@ -2074,7 +2074,7 @@ body {
   position: relative;
 }
 
-.link a::before {
+/* .link a::before {
   position: absolute;
   content: "";
   height: 2px;
@@ -2082,9 +2082,9 @@ body {
   bottom: -5px;
   left: 0;
   background-color: red;
-}
+} */
 
-.link a::after {
+/* .link a::after {
   position: absolute;
   content: "";
   height: 2px;
@@ -2093,17 +2093,17 @@ body {
   right: 0;
   background-color: red;
   transition: all 0.2s ease-in-out;
-}
+} */
 
 /* .link a:hover::before {
   width: 100%;
   transition: all 0.2s ease-in-out;
 } */
-
+/* 
 .link a:hover::after {
   width: 100%;
   transition: all 0.2s ease-in-out;
-}
+} */
 .contact-btn {
   position: relative;
   right: 15px;
@@ -2812,7 +2812,7 @@ body.dark-theme .testimonials .testimonial-user p{
     margin: 0 auto; /* Center the subtitle */
   }
 }
-/STYLE FOR SIDE DISCOUNT DIVISION/
+/* /STYLE FOR SIDE DISCOUNT DIVISION/ */
 
 .popup {
   position: fixed;
@@ -3007,3 +3007,4 @@ a:hover::after {
   margin-bottom: auto;
   font-size: 14px;
   font-weight: 600;
+}

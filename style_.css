@@ -260,8 +260,8 @@ p {
 }
 
 .link a::before {
-  position: absolute;
-  content: "";
+  /* position: absolute; */
+  /* content: ""; */
   height: 2px;
   width: 0%;
   bottom: -5px;
@@ -270,8 +270,8 @@ p {
 }
 
 .link a::after {
-  position: absolute;
-  content: "";
+  /* position: absolute;
+  content: ""; */
   height: 2px;
   width: 0%;
   top: -5px;
