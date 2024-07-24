@@ -363,3 +363,57 @@ header {
 .hr:hover{
   color: whitesmoke;
 }
+/* Light mode styles (default) */
+body {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.nav-container {
+  background-color: #ffffff;
+}
+
+.footer {
+  background-color: #ffffff;
+  color: #212529;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #212529;
+  color: #ffffff;
+}
+
+body.dark-mode .nav-container {
+  background-color: #343a40;
+}
+
+body.dark-mode .footer {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+/* Toggle button styles */
+.toggle-container {
+  position: fixed; /* Change this as needed for positioning */
+  top: 10px;
+  right: 10px;
+}
+
+.toggle {
+  width: 50px; /* Adjust size as needed */
+  height: 25px; /* Adjust size as needed */
+  appearance: none;
+  background-color: #ccc;
+  cursor: pointer;
+  border-radius: 25px;
+  position: relative;
+  outline: none;
+}
+
+.toggle:checked {
+  background-color: #333;
+}
+.toggle:checked:before {
+  transform: translateX(25px);
+}
