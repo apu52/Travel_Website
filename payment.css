@@ -146,7 +146,7 @@ header {
 
 .nav-container {
   height: auto;
-  width: 200%;
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -217,15 +217,7 @@ header {
 }
 
 
-.hamburger {
-  height: 2rem;
-  width: 1.7rem;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  display: none;
-  transition: 0.2s;
-}
+
 
 .line {
   height: 5px;
@@ -235,10 +227,7 @@ header {
 }
 
 @media screen and (max-width: 1220px) {
-  .hamburger {
-    display: flex;
-    cursor: pointer;
-  }
+  
 
   .navLinks {
     position: absolute;
