@@ -57,4 +57,124 @@ body {
   .contributor-card p {
     color: #666;
   }
-  
+  /* Toggle button styles */
+.toggle-container {
+  position: fixed; /* Change this as needed for positioning */
+  top: 25px;
+  right: 40px;
+}
+
+.toggle {
+  width: 50px; /* Adjust size as needed */
+  height: 25px; /* Adjust size as needed */
+  appearance: none;
+  background-color: #ccc;
+  cursor: pointer;
+  border-radius: 25px;
+  position: relative;
+  outline: none;
+}
+
+.toggle:checked {
+  background-color: #333;
+}
+.toggle:checked:before {
+  transform: translateX(25px);
+}
+
+
+body {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.nav-container {
+  background-color: #ffffff;
+}
+
+.footer {
+  background-color: #ffffff;
+  color: #212529;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: #ffffff;
+}
+
+body.dark-mode .nav-container {
+  background-color: #343a40;
+}
+
+body.dark-mode .footer {
+  background-color: #343a40;
+  color: #ffffff;
+}
+#toggle {
+  display: inline-block;
+  border-radius: 50px;
+  transition: all 0.4s ease-in-out;
+  padding: 10px 10px;
+  background-color: transparent;
+  border: 2px solid #c6c9d8bf;
+  color: #c6c9d8bf;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+.toggle-container {
+  --size: 2rem;
+  width: var(--size);
+  height: var(--size);
+}
+
+.toggle {
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
+  border-radius: 999px;
+  color: hsl(240, 100%, 95%);
+  transition: all 500ms;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &:checked {
+    --ray-size: calc(var(--size) * -0.4);
+    --offset-orthogonal: calc(var(--size) * 0.65);
+    --offset-diagonal: calc(var(--size) * 0.45);
+    transform: scale(0.75);
+    color: hsl(40, 100%, 50%);
+    box-shadow: inset 0 0 0 var(--size),
+      calc(var(--offset-orthogonal) * -1) 0 0 var(--ray-size),
+      var(--offset-orthogonal) 0 0 var(--ray-size),
+      0 calc(var(--offset-orthogonal) * -1) 0 var(--ray-size),
+      0 var(--offset-orthogonal) 0 var(--ray-size),
+      calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0
+        var(--ray-size),
+      var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size),
+      calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size),
+      var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
+  }
+}
+
+/* Apply fade-down animation to the toggle container */
+.toggle-container[data-aos="fade-down"] {
+  transition: opacity 500ms ease-in-out;
+  opacity: 0;
+}
+
+.toggle-container[data-aos="fade-down"].aos-animate {
+  opacity: 1;
+}
+body.dark-mode .contributor-card{
+  background: #212529;
+}
+body.dark-mode .contributor-card p{
+  color: white;
+}
