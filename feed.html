@@ -40,6 +40,7 @@
               placeholder="Name the tour you attended:"
               id="event_name"
               class="form-control"
+              required
             />
           </div>
           <div class="col-md-6">
@@ -50,6 +51,7 @@
               placeholder="Tour Date:"
               name="event_date"
               id="event_date"
+              required
             />
           </div>
         </div>
@@ -62,6 +64,7 @@
               id="FullName"
               placeholder="Your Name"
               class="form-control"
+              required
             />
           </div>
           <br />
@@ -73,6 +76,7 @@
               placeholder="Email Id"
               name="Email"
               id="Email"
+              required
             />
           </div>
         </div>
@@ -83,21 +87,21 @@
           <div class="row mb-3">
             <div class="col-md-12">
               <label>Ease of navigation?</label>
-              <div class="d-flex flex-wrap" id="navigationEase"></div>
+              <div class="d-flex flex-wrap" id="navigationEase" required></div>
               <p id="navigationEase-rating-text">Rating: 0</p>
             </div>
           </div>
           <div class="row mb-3">
             <div class="col-md-12">
               <label>Booking process</label>
-              <div class="d-flex flex-wrap" id="bookingProcess"></div>
+              <div class="d-flex flex-wrap" id="bookingProcess" required></div>
               <p id="bookingProcess-rating-text">Rating: 0</p>
             </div>
           </div>
           <div class="row mb-3">
             <div class="col-md-12">
               <label>Accuracy of information provided</label>
-              <div class="d-flex flex-wrap" id="accuracyInformation"></div>
+              <div class="d-flex flex-wrap" id="accuracyInformation" required></div>
               <p id="accuracyInformation-rating-text">Rating: 0</p>
             </div>
           </div>
@@ -108,14 +112,14 @@
           <div class="row mb-3">
             <div class="col-md-12">
               <label>Payment options</label>
-              <div class="d-flex flex-wrap" id="paymentOptions"></div>
+              <div class="d-flex flex-wrap" id="paymentOptions" required></div>
               <p id="paymentOptions-rating-text">Rating: 0</p>
             </div>
           </div>
           <div class="row mb-3">
             <div class="col-md-12">
               <label>Security Measures</label>
-              <div class="d-flex flex-wrap" id="securityMeasures"></div>
+              <div class="d-flex flex-wrap" id="securityMeasures" required></div>
               <p id="securityMeasures-rating-text">Rating: 0</p>
             </div>
           </div>
@@ -123,7 +127,7 @@
           <div class="row mb-3">
             <div class="col-md-12">
               <label>Customer Support</label>
-              <div class="d-flex flex-wrap" id="customerSupport"></div>
+              <div class="d-flex flex-wrap" id="customerSupport" required></div>
               <p id="customerSupport-rating-text">Rating: 0</p>
             </div>
           </div>
@@ -187,6 +191,17 @@
           </a>
         </div>
       </form>
-    </div>
+    </div><script>
+      document.addEventListener("DOMContentLoaded", () => { //for date check and preventing future selection
+        // Get today's date in ISO format (YYYY-MM-DD)
+        const today = new Date().toISOString().split("T")[0];
+      
+        // Set min attribute for all date inputs to today's date
+        const dateInputs = document.querySelectorAll('input[type="date"]');
+        dateInputs.forEach((input) => {
+          input.setAttribute("max", today);
+        });
+      });
+      </script>
   </body>
 </html>
