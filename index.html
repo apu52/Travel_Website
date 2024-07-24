@@ -189,6 +189,88 @@
       pointer-events: none;
       z-index: 9999;
     }
+ 
+    /* cookie-consent */
+    #cookie-consent {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  background-color: #e3e4fc;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  height: fit-content;
+  z-index: 10000;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin: 20px;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  transition: border-color 0.3s;
+  border: 1px solid rgb(4, 4, 215);
+  border-bottom: #3950ac;
+}
+
+#cookie-consent:hover {
+  border-right:6px solid #0207a3;
+  border-bottom:6px solid #3202a3;
+}
+
+#cookie-consent p {
+  color: black;  /* Make the text black for better visibility */
+  text-align: center;  /* Center align the text */
+}
+
+.accept-cookies,
+.reject-cookies {
+  width: 260px;  /* Decrease the button width */
+  height: 35px;  /* Decrease the button height */
+  color: white;
+  background-color: #150267;
+  border: none;
+  border-radius: 5px;  /* Add rounded corners */
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;  /* Smooth transition for effects */
+}
+
+.reject-cookies {
+  margin-top: 10px;
+}
+
+.accept-cookies:hover,
+.reject-cookies:hover {
+  transform: scale(0.95);
+  box-shadow: 0 0 15px rgb(75, 215, 239,0.6);  /* Reduce the shadow size */
+}
+
+.accept-cookies:hover {
+  background-color: rgb(57, 159, 222);
+  color: #0d0b0b;
+  border: 1px solid rgb(2, 2, 53);
+}
+
+.reject-cookies:hover {
+  background-color: rgb(57, 159, 222);
+  color: #0d0b0b;
+  border: 1px solid rgb(2, 2, 53);
+}
+
+#learn-more-link,
+#show-less-link {
+  color: #f90814;  
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#cookie-content {
+  display: none;
+  margin-top: 10px;
+}
+
 
   </style>
   <link rel="stylesheet" href="imstyle.css">
@@ -281,6 +363,90 @@
     </div>
     <!-- <div id="progressbar"></div> -->
     <div id="scrollPath"></div>
+
+    <div id="cookie-consent">
+      <p>
+        We use cookies to enhance your experience on our website. By continuing to browse, you agree to our use of cookies as described in our Cookie Policy.
+          <a href="#" id="learn-more-link">Learn More</a>
+  
+      </p>
+      <div id="learn-more-content" style="display: none;">
+        <p>Cookies are small text files used by websites to enhance user experience. According to the law, we can store cookies on your device if they are essential for the operation of this site. For other types of cookies, we need your consent.</p>
+        <p>This site employs various types of cookies. Some cookies are set by third-party services that appear on our pages.</p>
+      </div>
+  
+      <a href="#" id="show-less-link" style="display: none;">Show Less</a>
+      <button class="accept-cookies">Accept</button>
+      <button class="reject-cookies">Reject</button>
+    </div>
+
+    <script>
+
+
+
+      document.addEventListener('DOMContentLoaded', function() {
+      const cookieConsent = document.getElementById('cookie-consent');
+      const acceptButton = document.querySelector('.accept-cookies');
+      const rejectButton = document.querySelector('.reject-cookies');
+      const learnMoreLink = document.getElementById('learn-more-link');
+      const learnMoreContent = document.getElementById('learn-more-content');
+    
+      // Hide preloader after page load
+      window.addEventListener('load', function() {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+          preloader.style.display = 'none';
+        }
+        cookieConsent.style.display = 'block';
+      });
+    
+      // Check if localStorage is available
+      function localStorageAvailable() {
+        try {
+          const test = '__localStorage_test__';
+          localStorage.setItem(test, test);
+          localStorage.removeItem(test);
+          return true;
+        } catch (e) {
+          return false;
+        }
+      }
+    
+      if (localStorageAvailable()) {
+        // Check if the user has already made a choice
+        if (localStorage.getItem('cookieConsent')) {
+          cookieConsent.style.display = 'none';
+        }
+    
+        // Function to handle cookie consent choice
+        function handleConsent(choice) {
+          localStorage.setItem('cookieConsent', choice);
+          cookieConsent.style.display = 'none';
+        }
+    
+        // Add event listeners to buttons
+        acceptButton.addEventListener('click', function() {
+          handleConsent('accepted');
+        });
+    
+        rejectButton.addEventListener('click', function() {
+          handleConsent('rejected');
+        });
+      } else {
+        // Hide consent if localStorage is not available
+        cookieConsent.style.display = 'none';
+      }
+    
+      // Add event listener to "Learn More" link
+      learnMoreLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        learnMoreContent.style.display = 'block';
+        learnMoreLink.style.display = 'none';
+      });
+    });
+    </script>
+
+
     <!-- <canvas id="canvas"></canvas> -->
     <!-- <nav>
 
