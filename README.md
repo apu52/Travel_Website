@@ -50,7 +50,14 @@
 <h2>Overview📌</h2>
 <p>This repository contains my project on a Travel Website✈️ using HTML, CSS and JavaScript. It features a landing page for a travel tour company website. Finding the perfect travel destination can be a challenge. This project aims to streamline that process🚤. We welcome all contributions to make this a fantastic resource for travelers. Jump in and contribute to this grand project! Read the guidelines📚 and get started building!</p>
 
-<h2>Live Project -- https://apu52.github.io/Travel_Website/</h2>
+<h2>Live Demo</h2>
+
+Check out the live project [here](https://apu52.github.io/Travel_Website/).
+
+<p align="center">
+  <img src="https://github.com/avanimathur/Travel_Website/assets/151984867/1024d506-92c6-4b35-a4ab-2d4eaca78199" alt="Live Demo">
+</p>
+
 <h2>Features</h2>
 
 - **Introductory Page**: Welcomes visitors with an engaging introductory page that highlights the essence of our travel website and sets the tone for exploration.
@@ -72,31 +79,25 @@
 <h2>Open-Source-Programmes⭐</h2>
 
  ### This project is now OFFICIALLY accepted for
- 
-![GSSOC](https://github.com/apu52/METAVERSE/assets/114172928/e79eb6de-81b1-4ffb-b6ed-f018bb977e88)
 
 <div align="center">
-  
-  <img src="img/VSOC new.png" width="100%">
+  <img src="https://github.com/apu52/METAVERSE/assets/114172928/e79eb6de-81b1-4ffb-b6ed-f018bb977e88" alt="GSSOC" width="80%">
 </div>
 
-
-
-
+<div align="center">
+  <img src="img/VSOC new.png" alt="VSOC" width="80%">
+</div>
 
 ### This project was part of following Open Source Programs
 
 <div align="center">
-  
-  <img src="img/JWOC.png" width="50%">
+  <img src="img/JWOC.png" alt="JWOC" width="50%">
 </div>
-
 <h2>Getting Started💥</h2>
 
 <h3>Local Installation video</h3>
 
 [video](https://drive.google.com/file/d/1LsBudIUtZLDMSlmBDdOfT001QRqGBSbN/view?usp=sharing)
-
 
 
 ## How to make a Pull Request?
