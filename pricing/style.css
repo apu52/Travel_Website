@@ -556,3 +556,72 @@ header img {
   }
   
 }
+.dark-theme {
+  --secondary-color: #0e1525;
+  --text-dark: #ffffff;
+  --arr-light: white;
+  --body-light: #0e1525;
+  --img-color: red;
+  --head-text: red;
+  --btn-border: red;
+  --btn-color: #fdbb2dbf;
+  --footer-text-color: #ffffff;
+}
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .nav-container {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .navLinks li a {
+  color: #ffffff;
+}
+
+body.dark-mode .btn {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+body.dark-mode .wrapper .table {
+  background-color: #1e1e1e;
+  border: 1px solid #444444;
+}
+
+body.dark-mode .wrapper .table .price-section {
+  background-color: #2e2e2e;
+}
+
+body.dark-mode .wrapper .table .purchase-btn button {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* Additional styles */
+.hamburger .line {
+  background-color: #000000;
+}
+
+body.dark-mode .hamburger .line {
+  background-color: #ffffff;
+}
+body.dark-mode .table .package-name::before{
+  background: #1e1e1e;
+}
+body.dark-mode .wrapper .table {
+  background-color: #1e1e1e;
+  border: 1px solid #444444;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .wrapper .table .price-section {
+  background-color: #2e2e2e;
+}
+
+body.dark-mode .wrapper .table .purchase-btn button {
+  background-color: #333333;
+  color: #ffffff;
+}
