@@ -155,6 +155,7 @@
     </nav>
   </div>
 
+  
 
 
 
@@ -165,13 +166,189 @@
         Discover the rich tapestry of cultural heritage at our curated list of must-visit cultural sites, where history, art, and tradition come alive."
       </p>
       </b></h2>
+      
+
+              <!-- filter html -->
+              <div class="filter-search">
+                <select class="price-filter" id="priceFilter" onchange="filterProducts()">
+                  <option value="">All Prices</option>
+                <option value="400">Below $400</option>
+                <option value="500">Below $500</option>
+                <!-- Add more options as needed -->
+              </select>
+              
+              <!-- search button html -->
+              <form onsubmit="search(event)" class="search-bar"> 
+                <input type="text" id ="find" placeholder="search places" onkeyup="search()" name="q">
+                <button type="submit" value="search" ><b>GO!</b></button>
+              </form>
+            </div>
+            <h2 id="noResults" style="display: none;" ><b>NO RESULTS FOUND</b> <img src="notFound.jpg" ></h2>
+            <!-- search styling -->
+            <style>
+              .filter-search {
+              display: flex;
+              align-items: center; 
+        }
+              .price-filter {
+            display: flex;
+            align-items: center; /* Align items vertically */
+            justify-content: center; /* Align items horizontally */
+            position: relative; /* Change to relative positioning */
+            
+            margin-left: auto; /* Adjust margin */
+            padding: 0.5rem 1rem; /* Adjust padding */
+            border: 1px solid #ccc;
+            border-radius: 0.25rem; /* Adjust border radius */
+            background-color: #fcfdff;
+            color: #333;
+            font-size: 1rem; /* Adjust font size */
+        }
+        
+        /* Optional: Add hover effects or additional styling */
+        .price-filter:hover {
+            background-color: #f0f0f0;
+            border-color: #999;
+        }
+        .info{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        .info .tags i{
+          margin:2px;
+          color:cornflowerblue;
+        }
+              .search-bar{
+                width: 1500px;
+                height: 50%;
+                max-width: 400%;
+                /* background:rgba(0, 13, 79, 0.696); */
+                display: flex;
+                align-items: center;
+                border-radius: 58px;
+                padding: 10px 10px;
+              }
+              .search-bar input{
+                background: rgb(255, 255, 255);
+                flex: 1;
+                border-radius: 60px;
+                outline: none;
+                padding: 10px 20px;
+                font-size: 15px;
+                color: #0c0c0c;
+              }
+              .search-bar button{
+                border: 0;
+                border-radius: 40%;
+                width: 50px;
+                height: 40px;
+                color: #0b0a0a;
+                font-size: small;
+                background:#ffffffb8;
+                cursor: pointer;
+              }
+      
+              .info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .info .tags i{
+        margin:2px;
+        color:cornflowerblue;
+      }
+            </style>
+        
+             <!--javascript for functionality of search button-->
+             <script type="text/javascript">
+              function search(event){
+                event.preventDefault();
+                let filter = document.getElementById('find').value.toUpperCase();
+                let item = document.querySelectorAll('.trip__card');
+                let l = document.getElementsByTagName('p');
+                var found = false;
+                for(var i = 0; i < l.length; i++){
+                  let a = item[i].getElementsByTagName('p')[0];
+                  let value = a.innerHTML || a.innerText || a.textContent;
+                  if(value.toUpperCase().indexOf(filter) > -1) {
+                    item[i].style.display = "";
+                    found = true;
+                  }
+            else {
+              item[i].style.display = "none";
+              document.getElementById("noResults").style.display = found ? "none" : "block";
+            }
+            }
+           }
+        </script>
+        <!-- filter's functionality -->
+        <script>
+        function filterProducts() {
+            var priceFilter = document.getElementById('priceFilter').value;
+            var products = document.getElementsByClassName('trip__card');
+        
+            for (var i = 0; i < products.length; i++) {
+                var productPrice = parseFloat(products[i].querySelector('.price').getAttribute('data-price'));
+                if (priceFilter === "" || productPrice <= parseFloat(priceFilter)) {
+                    products[i].style.display = "block";
+                } else {
+                    products[i].style.display = "none";
+                }
+            }
+        }
+        </script>
+        
+              <!-- end of search button -->
+      
+              
+              <div class="categories">
+                <span class="each">
+                  <svg viewBox="0 0 24 24" width="20px" height="20px" class="d Vb UmNoP"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.895 5.275h6.176V11.5h-1.643V8.08l-7.879 7.88-3.346-3.347-6.112 6.112-1.162-1.162 7.274-7.274 3.346 3.347 6.718-6.718h-3.372V5.275z"></path></svg>
+                  <h5>Trending</h5>
+                </span>
+        
+                <span class="each">
+                  <svg viewBox="0 0 24 24" width="20px" height="20px" class="d Vb UmNoP"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.718 5.172H5.982v.384l-.276.225-1.697 1.381c.127.084.275.18.434.28.41.26.873.538 1.172.715l.242.144.088.268c.216.659.74 1.694 1.587 2.566.837.862 1.953 1.533 3.378 1.58l.724.025v4.845l-.57.14c-.565.141-1.415.44-2.104.866-.707.438-1.008.855-1.033 1.188.054.018.15.037.308.037H15.465c.158 0 .254-.02.308-.037-.025-.333-.326-.75-1.034-1.188-.688-.425-1.538-.725-2.104-.865l-.57-.141V12.74l.725-.024c1.425-.048 2.541-.719 3.378-1.581.846-.872 1.37-1.907 1.587-2.566l.088-.268.242-.144c.3-.177.761-.456 1.172-.715.159-.1.307-.196.434-.28l-1.697-1.38-.276-.226v-.384zm-2.196 16.143c.567-.01 1.042-.169 1.369-.5.314-.318.412-.714.383-1.036-.023-1.162-.95-1.972-1.746-2.464a9.152 9.152 0 00-1.963-.882v-2.285c1.56-.237 2.783-1.044 3.68-1.969a8.74 8.74 0 001.838-2.87c.288-.173.646-.39.975-.598.212-.135.418-.268.586-.382.147-.1.326-.227.438-.338.29-.291.371-.654.324-.967a1.244 1.244 0 00-.292-.625l-.041-.047-.048-.039-1.807-1.47v-1.17H4.482v1.17l-1.807 1.47-.048.04-.041.046c-.118.134-.25.35-.292.625-.047.313.033.676.324.967.111.111.291.238.437.338.169.114.375.247.587.382.33.207.687.425.974.598a8.74 8.74 0 001.839 2.87c.897.925 2.12 1.732 3.68 1.97v2.284a9.152 9.152 0 00-1.963.882c-.796.492-1.723 1.302-1.746 2.464-.029.322.069.718.383 1.036.338.342.834.5 1.426.5H15.522zm-7.655-1.562l.002.001-.002-.001zm7.966 0l-.002.001.002-.001z"></path></svg>         
+                   <h5>Top</h5>
+                </span>
+      
+                <span class="each">
+                  <svg viewBox="0 0 24 24" width="20px" height="20px" class="d Vb UmNoP"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.844 14.907c.641-1.435.82-2.898.49-4.272-.348-1.457-1.249-2.744-2.63-3.754C13.965 4.88 9.322 3.946 2.983 4.763l-.769.1.125.764c.53 3.276 3.15 7.269 6.258 9.679 1.562 1.211 3.323 2.083 5.085 2.213 1.499.11 2.948-.321 4.2-1.435 1.164 1.323 2.075 2.565 2.64 3.448l1.263-.807c-.63-.988-1.647-2.367-2.94-3.818zm-1.134-1.214c.32-.96.365-1.876.165-2.71-.254-1.062-.92-2.06-2.056-2.89-2.192-1.603-6.112-2.55-11.834-1.938.714 2.693 2.907 5.93 5.531 7.965 1.431 1.11 2.915 1.803 4.277 1.903 1.08.08 2.126-.208 3.075-1.044-.268-.279-.546-.558-.833-.835-2.057-1.989-4.512-3.806-7.055-4.634l.465-1.426c2.853.928 5.502 2.921 7.633 4.981.215.209.426.418.632.628z"></path></svg>
+                  <h5>Soulful</h5>
+                </span>
+        
+                <span class="each">
+                  <svg viewBox="0 0 24 24" width="20px" height="20px" class="d Vb UmNoP"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.005 3.893l9.844 16.214H2.15l4.535-7.141 5.319-9.073zM7.94 13.79l-3.06 4.818h14.302l-2.564-4.224-.072.06c-.436.348-1.099.664-2.031.664-.549 0-1.02-.185-1.42-.408a9.386 9.386 0 01-.945-.634l-.139-.102c-.686-.499-1.26-.856-1.996-.856-.868 0-1.408.215-1.713.395a1.65 1.65 0 00-.362.287zm7.875-.728l-3.789-6.24-2.837 4.84c.253-.034.528-.054.826-.054 1.265 0 2.19.642 2.879 1.143l.154.113c.294.215.534.39.778.526.272.152.488.218.689.218.568 0 .905-.184 1.094-.336.1-.08.166-.156.204-.208l.002-.002z"></path></svg>
+                  <h5>Nature</h5>
+                </span>
+        
+                <span class="each">
+                  <svg viewBox="0 0 24 24" width="20px" height="20px" class="d Vb UmNoP"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.844 14.907c.641-1.435.82-2.898.49-4.272-.348-1.457-1.249-2.744-2.63-3.754C13.965 4.88 9.322 3.946 2.983 4.763l-.769.1.125.764c.53 3.276 3.15 7.269 6.258 9.679 1.562 1.211 3.323 2.083 5.085 2.213 1.499.11 2.948-.321 4.2-1.435 1.164 1.323 2.075 2.565 2.64 3.448l1.263-.807c-.63-.988-1.647-2.367-2.94-3.818zm-1.134-1.214c.32-.96.365-1.876.165-2.71-.254-1.062-.92-2.06-2.056-2.89-2.192-1.603-6.112-2.55-11.834-1.938.714 2.693 2.907 5.93 5.531 7.965 1.431 1.11 2.915 1.803 4.277 1.903 1.08.08 2.126-.208 3.075-1.044-.268-.279-.546-.558-.833-.835-2.057-1.989-4.512-3.806-7.055-4.634l.465-1.426c2.853.928 5.502 2.921 7.633 4.981.215.209.426.418.632.628z"></path></svg>
+                  <h5>Sustainable</h5>
+                </span>
+      
+        
+        
+              </div>
+      
+
+    
       <div class="trip__grid">
 
         <div class="trip__card">
           <img src="https://www.holidify.com/images/bgImages/HAMPI.jpg" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>Hampi</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fas fa-mountain"></i> 
+                <i class="fa-solid fa-om"></i>
+                <i class="fas fa-landmark"></i> 
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            </div>
+
             <div class="booking__price">
               <div class="price"><span>From</span> $700</div>
               <a href="./dedicated destinations/Hampi/hampi.html"><button class="book__now">Book
@@ -183,7 +360,15 @@
           <img src="https://149349246.v2.pressablecdn.com/wp-content/uploads/2019/04/monument_evening-106-1024x576.jpg" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>Akshardham Temple,Delhi</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fas fa-place-of-worship"></i> 
+                <i class="fa-solid fa-om"></i>
+                <i class="fas fa-landmark"></i> 
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            </div>
+            
             <div class="booking__price">
               <div class="price"><span>From</span> $400</div>
               <a href="./dedicated destinations/Akshardham/Akshardham.html"><button class="book__now">Book
@@ -194,8 +379,16 @@
         <div class="trip__card">
           <img src="https://vajiram-prod.s3.ap-south-1.amazonaws.com/Buddhist_Monuments_at_Sanchi_6c6b65cf9f.png" alt="trip" height="250" width="45" />
           <div class="trip__details">
-            <p>Sanchi,Raisen District (State of Madhya Pradesh)</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            <p>Sanchi,Raisen District, Madhya Pradesh</p>
+            <div class="info">
+              <div class="tags">
+                <i class="fas fa-place-of-worship"></i> 
+                <i class="fas fa-praying-hands"></i>
+                <i class="fa-solid fa-landmark-dome"></i>
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            </div>
+            
             <div class="booking__price">
               <div class="price"><span>From</span> $300</div>
               <a href="./dedicated destinations/sanchi/sanchi.html"><button
@@ -207,7 +400,15 @@
           <img src="https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcTFnV6sjgqd1sRo5uW6RU8jUZ0N503m-XVXjUUeqAuWvEuqR718HUAG_Pah_P0dDoiZ" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p> Elephanta Caves</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fas fa-landmark"></i> 
+                <i class="fas fa-torii-gate"></i>
+                <i class="fa-solid fa-landmark-dome"></i>
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            </div>
+            
             <div class="booking__price">
               <div class="price"><span>From</span> $250</div>
               <a href="./dedicated destinations/elephanta/ele.html"><button class="book__now">Book Now</button></a>
@@ -218,7 +419,15 @@
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/A_collage_of_Great_living_Chola_temples_UNESCO_heritage_site.jpg/1200px-A_collage_of_Great_living_Chola_temples_UNESCO_heritage_site.jpg" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>Chola Temples,Tamil Nadu</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fas fa-landmark"></i> 
+                <i class="fas fa-praying-hands"></i>
+                <i class="fa-solid fa-place-of-worship"></i>
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.25</div>
+            </div>
+            
             <div class="booking__price">
               <div class="price"><span>From</span> $450</div>
               <a href="./dedicated destinations/chola/chola.html"><button class="book__now">Book Now</button></a>
@@ -229,7 +438,15 @@
           <img src="./img/jovyn-chamb-iWMfiInivp4-unsplash.jpg" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>Taj Mahal</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fas fa-landmark"></i> 
+                <i class="fas fa-monument"></i>
+                <i class="fa-solid fa-place-of-worship"></i>
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            </div>
+            
             <div class="booking__price">
               <div class="price"><span>From</span> $400</div>
               <a href="./dedicated destinations/Taj_Mahal/Taj.html"><button class="book__now">Book Now</button></a>
@@ -241,7 +458,15 @@
           <img src="./img/goldentemple.jpg" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>Golden Temple</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fas fa-landmark"></i> 
+                <i class="fas fa-praying-hands"></i>
+                <i class="fa-solid fa-place-of-worship"></i>
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            </div>
+          
             <div class="booking__price">
               <div class="price"><span>From</span> $300</div>
               <a href="./dedicated destinations/Golden_Temple/Gold.html"><button class="book__now">Book Now</button></a>
@@ -252,7 +477,15 @@
           <img src="./img/swapnil-deshpandey-nHTj_6Boxdg-unsplash.jpg" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>Red Fort</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fas fa-landmark"></i> 
+                <i class="fas fa-monument"></i>
+                <i class="fas fa-archway"></i>
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            </div>
+          
             <div class="booking__price">
               <div class="price"><span>From</span> $450</div>
               <a href="./dedicated destinations/Red_Fort/red.html"><button class="book__now">Book Now</button></a>
@@ -263,7 +496,16 @@
           <img src="./img/fuu-j-O2Eb1TZGX9E-unsplash.jpg" alt="trip" height="250" width="45" />
           <div class="trip__details">
             <p>Agra Fort</p>
-            <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            <div class="info">
+              <div class="tags">
+                <i class="fas fa-landmark"></i> 
+                <i class="fas fa-shield-alt"></i>
+                <i class="fa-solid fa-monument"></i>
+              </div>
+              <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            </div>
+          
+            
             <div class="booking__price">
               <div class="price"><span>From</span> $400</div>
               <a href="./dedicated destinations/Agra_Fort/agra.html"><button class="book__now">Book Now</button></a>
