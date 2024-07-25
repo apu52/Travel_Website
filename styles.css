@@ -1227,7 +1227,7 @@ body.light-theme #emailInput {
   color: black;
 }
 
-body.dark-theme #emailInput {
+body.dark-theme #emailInput, body.dark-theme #subscriptionForm {
   background-color: #222f4b;
   color: white;
 }
