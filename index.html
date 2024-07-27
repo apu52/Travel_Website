@@ -196,6 +196,53 @@
       }
     }
 
+    .trips__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .trip__card {
+      flex: 1 1 calc(33.333% - 40px); /* Adjust 40px to your desired gap size */
+      box-sizing: border-box;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: calc(33.333% - 40px); /* Same as above */
+    }
+    .trip__card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .trip__details {
+      padding: 10px;
+    }
+    .booking__price {
+      margin-top: auto; /* Pushes the button to the bottom */
+      padding: 10px;
+      width: 100%;
+      text-align: center;
+    }
+    .book__now {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+    .book__now:hover {
+      background-color: #0056b3;
+    }
+
   </style>
   <link rel="stylesheet" href="imstyle.css">
   <link rel="stylesheet" href="jquery.flipster.min.css">
@@ -822,6 +869,93 @@
         <button class="swiper-button-prev"></button>
         <button class="swiper-button-next"></button>  
       </div>
+      <br>
+      <br>
+      <br>
+      <div class="section__header center-align">
+        <div>
+            <h2 class="section__title" data-aos="fade-in">Explore Cultural Events and Festivals</h2>
+            <p class="section__subtitle" data-aos="fade-in">
+                Enjoy and be the part of cultural celebration and festivals.
+            </p>
+        </div>
+    </div>
+    </div>
+    <div class="trips__container">
+      <div class="trip__card">
+        <img src="./d1.jpeg" alt="trip" />
+        <div class="trip__details">
+          <h4 style="color: rgb(249, 9, 129);">Beat the Heat Season 3 Concerts - Dubai</h4>
+          <p style="font-style: italic;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Meet international artists like Siilawy, Marwan Moussa in July</p>
+        </div>
+        <div class="booking__price">
+          <a href="./dedicated-destinations/dubai/start.html">
+            <button class="book__now">Book Now</button>
+          </a>
+        </div>
+      </div>
+      <div class="trip__card">
+        <img src="./d2.jpeg" alt="trip" />
+        <div class="trip__details">
+          <h4 style="color: rgb(220, 7, 174);">Latino Life in the Park - London</h4>
+          <p style="font-style: italic;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Experience the largest Latin music festival in the UK</p>
+        </div>
+        <div class="booking__price">
+          <a href="./dedicated-destinations/london/start.html">
+            <button class="book__now">Book Now</button>
+          </a>
+        </div>
+      </div>
+      <div class="trip__card">
+        <img src="./d3.jpeg" alt="trip" />
+        <div class="trip__details">
+          <h4 style="color: rgb(250, 12, 147);">Bonderache Fest - Goa</h4>
+          <p style="font-style: italic;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Celebrate the ancient tradition of marking land borders with flags</p>
+        </div>
+        <div class="booking__price">
+          <a href="./dedicated-destinations/goa/start.html">
+            <button class="book__now">Book Now</button>
+          </a>
+        </div>
+      </div>
+      <div class="trip__card">
+        <img src="./d4.jpeg" alt="trip" />
+        <div class="trip__details">
+          <h4 style="color: rgb(220, 7, 174);">Whale Shark Festival - Maldives</h4>
+          <p style="font-style: italic;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Celebrate marine life with parades, music, and educational events</p>
+        </div>
+        <div class="booking__price">
+          <a href="./dedicated-destinations/maldives/start.html">
+            <button class="book__now">Book Now</button>
+          </a>
+        </div>
+      </div>
+      <div class="trip__card">
+        <img src="./d5.jpg" alt="trip" />
+        <div class="trip__details">
+          <h4 style="color: rgb(220, 7, 106);">Bali Arts Festival - Bali</h4>
+          <p style="font-style: italic;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Traditional culutral celebration in Islands</p>
+        </div>
+        <div class="booking__price">
+          <a href="./dedicated-destinations/bali/start.html">
+            <button class="book__now">Book Now</button>
+          </a>
+        </div>
+      </div>
+      <div class="trip__card">
+        <img src="./d6.jpeg" alt="trip" />
+        <div class="trip__details">
+          <h4 style="color: rgb(230, 29, 244);">Festa de São João - Brazil</h4>
+          <p style="font-style: italic;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Festival of John the Baptist with lively parties and traditonal food</p>
+        </div>
+        <div class="booking__price">
+          <a href="./dedicated-destinations/brazil/start.html">
+            <button class="book__now">Book Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
 
       <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
       <script src="explore.js"></script>
