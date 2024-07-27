@@ -238,6 +238,27 @@
   }
 }
 */
+#google_translate_element {
+  transform: scale(1); /* Increase the size of the select language bar and Google icon */
+  transform-origin: top left; /* Adjust the origin to make the scaling look better */
+}
+
+/* Target the Google icon within the Google Translate element */
+#google_translate_element img {
+  height: 35px; /* Increase the height of the Google icon */
+}
+
+#google_translate_element .goog-te-gadget-simple {
+  padding: 0.5em 0.5em 0.5em 0.5em !important;
+  font-size: 18px !important;
+  border-color: #f2f2f2 !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  display: inline-block;
+  white-space: nowrap;
+  border-radius: 5px;
+}
+
 
 .footer__link {
   position: relative;
