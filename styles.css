@@ -2054,7 +2054,7 @@ body {
   gap: 0.5rem;
   height: auto;
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
 }
 
 .navLinks {
@@ -2070,10 +2070,46 @@ body {
   right: 24px;
 }
 
-.link a {
+.link {
   position: relative;
 }
+.link > a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+.link > a:hover {
+  background-color: #575757;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #123456;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
 
+.dropdown-menu > li {
+  float: none;
+}
+
+.dropdown-menu > li > a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-menu > li > a:hover {
+  background-color: #575757;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
 /* .link a::before {
   position: absolute;
   content: "";
@@ -2924,7 +2960,7 @@ a {
   position: relative;
   text-decoration: none;
   color: black;
-  font-size: 18px;
+  font-size: 14px;
 }
 a::after {
   content: '';
