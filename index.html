@@ -86,7 +86,6 @@
     .active {
       color: red !important;
     }
-
     @media screen and (max-width:390px) {
       .nav__logo {
         position: relative;
@@ -191,6 +190,12 @@
       z-index: 9999;
     }
 
+    @media (max-width: 725px) {
+      .circle-container{
+        display: none;
+      }
+    }
+
   </style>
   <link rel="stylesheet" href="imstyle.css">
   <link rel="stylesheet" href="jquery.flipster.min.css">
@@ -280,7 +285,7 @@
       <canvas></canvas>
       <canvas></canvas>
     </div>
-    <div id="progressbar"></div>
+    <!-- <div id="progressbar"></div> -->
     <div id="scrollPath"></div>
     <!-- <canvas id="canvas"></canvas> -->
     <!-- <nav>
@@ -365,11 +370,11 @@
               clients.
             </p>
             <div class="action__btns">
-              <a href="pricing/index.html"><button class="btn" data-aos="fade-in" id="btn-style"
+              <a href="pricing/index.html"><button class="btn" data-aos="fade-in"
                   style="box-shadow: 2px 2px 8px red;">Membership</button></a>
-              <button class="btn" data-aos="fade-in" id="btn-style" onclick="planTrip()"
+              <button class="btn" data-aos="fade-in" onclick="planTrip()"
                 style="box-shadow: 2px 2px 8px red;">Plan a Trip</button>
-              <a href="./payment.html"><button class="btn" data-aos="fade-in" id="btn-style"
+              <a href="./payment.html"><button class="btn" data-aos="fade-in" 
                   style="box-shadow: 2px 2px 8px red;">Book Now</button></a>
             </div>
 
@@ -386,7 +391,8 @@
               </div>
                
             </div>
-            <span data-aos="fade-in">Watch our story</span>
+            <br>
+            <span data-aos="fade-in" style="color: #5755b6; font-weight: 600;">Watch our story</span>
           </div>
         </div>
       </section>
@@ -1441,6 +1447,7 @@
         <div class="footer__col">
           <div class="footer__area">
             <h4 class="footer-head" class="footer__subtitle">Support</h4>
+            <p><a href="./blog.html" class="footer__link">Our Blogs</a></p>
             <p><a href="./faq.html" class="footer__link">FAQs</a></p>
             <p><a href="./tnc.html" class="footer__link">Terms & Conditions</a></p>
             <p><a href="./privacy.html" class="footer__link">Privacy Policy</a></p>
@@ -1494,7 +1501,7 @@
 
               <a href="">
                 <div class="icon">
-                  <i class="fab fa-twitter" title="X" style="cursor: pointer;"></i>
+                  <i class="fa-brands fa-x-twitter" title="X" style="cursor: pointer;"></i>
                 </div>
               </a>
 
@@ -2124,18 +2131,18 @@
         obj.textContent = currentValue;
         if (progress < 1) {
           requestAnimationFrame(updateValue);
-
         }
-
         requestAnimationFrame(updateValue);
       }
+    }
+  })
 </script>
 
 
 <script>
     const scrollline = document.querySelector('.progress-bar');
 
-  function fillscrollline(){
+  function fillscrollline() {
     const windowHeight = window.innerHeight;
     const fullHeight = document.body.clientHeight;
     const scrolled = window.scrollY;
@@ -2151,7 +2158,8 @@
       animateValue("guidesCount", 0, 25000, 20000);
       animateValue("toursCount", 0, 20000, 20000);
       animateValue("destinationsCount", 0, 10994, 20000);
-    });
+  
+
 
   </script>
 
