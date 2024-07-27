@@ -1700,18 +1700,57 @@
           </div>
 
         </div>
+        <div style="padding: 5px; background-color: #ff9fcf; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+          <label for="google_translate_element" style="display: block; font-weight: bold; margin-bottom: 10px; font-size: 18px; color: #333;">Select Language:</label>
+          <div id="google_translate_element" style="display: inline-block; margin-top: 10px; padding: 10px; border: 1px solid #ff9fcf; border-radius: 5px; background-color: #fff;"></div>
+      </div>
+      
+      
+      
+      <script type="text/javascript">
+          function googleTranslateElementInit() {
+              new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+          }
+      </script>
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-        <div class="footer__col">
-          <div id="google_element"></div>
-          <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
-          <script>
-            function loadGoogleTranslate() {
-              new google.translate.TranslateElement({
-                pageLanguage: 'en'
-              }, 'google_element');
-            }
-          </script>
+        <!-- <div class="footer__col">
+          <label for="google_translate_element" style="display: block; font-weight: bold; margin-bottom: 5px;">Select Language:</label>
+          <div id="google_translate_element" style="display: inline-block; margin-top: 10px;"></div>
         </div>
+        
+        <script>
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+              pageLanguage: 'en',
+              includedLanguages: 'es,fr,de,ja,ko,zh-CN',
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+              autoDisplay: false,
+              gaTrack: true,
+              gaId: 'UA-XXXXXXXX-X'
+            }, 'google_translate_element');
+          }
+        </script>
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
+        <script>
+          // Apply inline styling to the select element once it is created by Google Translate
+          window.addEventListener('load', function() {
+            var interval = setInterval(function() {
+              var select = document.querySelector('#google_translate_element select');
+              if (select) {
+                select.style.padding = '5px';
+                select.style.border = '1px solid #ccc';
+                select.style.borderRadius = '0'; // Remove rounded corners to make it rectangular
+                select.style.appearance = 'none'; // Remove default styling
+                select.style.backgroundColor = '#fff';
+                select.style.cursor = 'pointer';
+                clearInterval(interval); // Stop the interval once the select element is found and styled
+              }
+            }, 100); // Check every 100ms
+          });
+        </script> -->
+        
 
 
         <!--  New copyright code to make it dynamic and display current year -->
@@ -1722,7 +1761,8 @@
         </div>
 
     </footer>
-
+    
+  
     <a class="goupbtn" href="#" onclick="goToTop()"><i class="fa-solid fa-arrow-up"></i></a>
 
     <script>
