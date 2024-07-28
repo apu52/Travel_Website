@@ -531,7 +531,8 @@ img {
   display: block;
 }
 .sitelogo{
-  width: 8%;
+  width: 10%;
+  height:10%;
 }
 
 body {
@@ -577,12 +578,12 @@ nav {
 
 link a:hover {
   color: #60a5fa; 
-  background-color:red;
+  background-color: rgb(169, 35, 252);
 }
 
 .navLinks a:hover{
   /* text-decoration: underline; */
-  color: red;
+  color:  rgb(169, 35, 252);
 }
 
 .home {
@@ -2045,6 +2046,7 @@ body {
   position: fixed;
   left: 0;
   z-index: 9999;
+
 }
 
 .newNav {
@@ -2054,7 +2056,23 @@ body {
   gap: 0.5rem;
   height: auto;
   width: 100%;
-  padding: 0rem 2rem;
+  padding: 0.4rem 0.5rem;
+  z-index: 10000;
+  transition: all 0.6s;
+}
+
+.sticky{
+  /* margin: 10px 5px; */
+  border-radius: 10px;
+  margin-top: 0.5rem;
+  background: linear-gradient(#002152, #271050);
+  scale:0.99;
+  
+  /* padding: 0rem 1rem;
+  margin-top: 0.5rem;
+  margin-left:0.5rem;
+  margin-right: 0.5rem;
+  width: 99%; */
 }
 
 .navLinks {
@@ -2077,11 +2095,15 @@ body {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 20px;
+  padding: 12px 20px;
   text-decoration: none;
+  width: 100%;
+  transition: all 0.3s linear;
 }
 .link > a:hover {
-  background-color: #575757;
+  background-color: #f6ddff;
+  border-radius: 10px;
+  box-shadow: rgb(56, 0, 109) 0px 0px 8px 2px inset;
 }
 .dropdown-menu {
   display: none;
@@ -2234,7 +2256,7 @@ body {
     width: 100%;
   } */
 .navLinks:active {
-  color: red;
+  color: rgb(169, 35, 252);
 }
 
 .navLinks.activeHamburger {
