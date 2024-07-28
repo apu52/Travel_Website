@@ -2060,7 +2060,7 @@ body {
   z-index: 10000;
   transition: all 0.6s;
 }
-
+/* navbar sticky css  */
 .sticky{
   /* margin: 10px 5px; */
   border-radius: 10px;
