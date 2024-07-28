@@ -3044,3 +3044,21 @@ a:hover::after {
   font-size: 14px;
   font-weight: 600;
 }
+
+
+
+
+.footer__container {
+    padding-left: 364px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 110PX !important;
+}
+.section__container {
+    /* max-width: var(--max-width); */
+    margin: 0 auto;
+    padding: 0 20px;
+   }
