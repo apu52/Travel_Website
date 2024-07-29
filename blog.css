@@ -211,6 +211,8 @@ main {
 
 .tag:hover {
     background-color: var(--primary-color);
+    color: #f39c12;
+    transition: background-color 0.3s ease;
 }
 
 .read-more {
@@ -326,6 +328,8 @@ aside {
 
 .newsletter-form button:hover {
     background-color: var(--primary-color);
+    color: #f39c12;
+    transition: background-color 0.3s ease;
 }
 
 @media (max-width: 768px) {
