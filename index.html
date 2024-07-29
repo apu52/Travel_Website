@@ -42,8 +42,6 @@
    <img src="Untitled (1).mp4" alt="">
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
 
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-
   <link rel="stylesheet" href="tilt.css">
   <script src="tilt.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
@@ -81,7 +79,7 @@
     html {
       scroll-behavior: smooth;
     }
-  </style>
+  </style> 
   <style>
     .active {
       color: red !important;
@@ -189,6 +187,94 @@
       pointer-events: none;
       z-index: 9999;
     }
+ 
+    /* cookie-consent */
+    #cookie-consent {
+  position: fixed;
+  bottom: 10px;
+  left: 70px;
+  background-color: #e3e4fc;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  height: fit-content;
+  z-index: 10000;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin: 20px;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  transition: border-color 0.3s;
+  border: 1px solid rgb(4, 4, 215);
+  border-bottom: #3950ac;
+}
+
+#cookie-consent:hover {
+  border-right:6px solid #0207a3;
+  border-bottom:6px solid #3202a3;
+}
+
+#cookie-consent p {
+  color: black;  /* Make the text black for better visibility */
+  text-align: center;  /* Center align the text */
+}
+
+.accept-cookies,
+.reject-cookies {
+  width: 260px;  /* Decrease the button width */
+  height: 35px;  /* Decrease the button height */
+  color: white;
+  background-color: #150267;
+  border: none;
+  border-radius: 5px;  /* Add rounded corners */
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;  /* Smooth transition for effects */
+}
+
+.reject-cookies {
+  margin-top: 10px;
+}
+
+.accept-cookies:hover,
+.reject-cookies:hover {
+  transform: scale(0.95);
+  box-shadow: 0 0 15px rgb(75, 215, 239,0.6);  /* Reduce the shadow size */
+}
+
+.accept-cookies:hover {
+  background-color: rgb(57, 159, 222);
+  color: #0d0b0b;
+  border: 1px solid rgb(2, 2, 53);
+}
+
+.reject-cookies:hover {
+  background-color: rgb(57, 159, 222);
+  color: #0d0b0b;
+  border: 1px solid rgb(2, 2, 53);
+}
+
+#learn-more-link,
+#show-less-link {
+  color: #f90814;  
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#cookie-content {
+  display: none;
+  margin-top: 10px;
+}
+
+
+    @media (max-width: 725px) {
+      .circle-container{
+        display: none;
+      }
+    }
 
   </style>
   <link rel="stylesheet" href="imstyle.css">
@@ -271,6 +357,15 @@
       });
 
     </script>
+
+  <!-- sticky animation  -->
+ <script type="text/javascript">
+  window.addEventListener("scroll", function () {
+    var header = document.querySelector("nav");
+    header.classList.toggle("sticky", window.scrollY > 50)
+  })
+</script>
+
     <div id="pre-loader">
       <h1>TourGuide . . .</h1>
     </div>
@@ -281,6 +376,90 @@
     </div>
     <!-- <div id="progressbar"></div> -->
     <div id="scrollPath"></div>
+
+    <div id="cookie-consent">
+      <p>
+        We use cookies to enhance your experience on our website. By continuing to browse, you agree to our use of cookies as described in our Cookie Policy.
+          <a href="#" id="learn-more-link">Learn More</a>
+  
+      </p>
+      <div id="learn-more-content" style="display: none;">
+        <p>Cookies are small text files used by websites to enhance user experience. According to the law, we can store cookies on your device if they are essential for the operation of this site. For other types of cookies, we need your consent.</p>
+        <p>This site employs various types of cookies. Some cookies are set by third-party services that appear on our pages.</p>
+      </div>
+  
+      <a href="#" id="show-less-link" style="display: none;">Show Less</a>
+      <button class="accept-cookies">Accept</button>
+      <button class="reject-cookies">Reject</button>
+    </div>
+
+    <script>
+
+
+
+      document.addEventListener('DOMContentLoaded', function() {
+      const cookieConsent = document.getElementById('cookie-consent');
+      const acceptButton = document.querySelector('.accept-cookies');
+      const rejectButton = document.querySelector('.reject-cookies');
+      const learnMoreLink = document.getElementById('learn-more-link');
+      const learnMoreContent = document.getElementById('learn-more-content');
+    
+      // Hide preloader after page load
+      window.addEventListener('load', function() {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+          preloader.style.display = 'none';
+        }
+        cookieConsent.style.display = 'block';
+      });
+    
+      // Check if localStorage is available
+      function localStorageAvailable() {
+        try {
+          const test = '__localStorage_test__';
+          localStorage.setItem(test, test);
+          localStorage.removeItem(test);
+          return true;
+        } catch (e) {
+          return false;
+        }
+      }
+    
+      if (localStorageAvailable()) {
+        // Check if the user has already made a choice
+        if (localStorage.getItem('cookieConsent')) {
+          cookieConsent.style.display = 'none';
+        }
+    
+        // Function to handle cookie consent choice
+        function handleConsent(choice) {
+          localStorage.setItem('cookieConsent', choice);
+          cookieConsent.style.display = 'none';
+        }
+    
+        // Add event listeners to buttons
+        acceptButton.addEventListener('click', function() {
+          handleConsent('accepted');
+        });
+    
+        rejectButton.addEventListener('click', function() {
+          handleConsent('rejected');
+        });
+      } else {
+        // Hide consent if localStorage is not available
+        cookieConsent.style.display = 'none';
+      }
+    
+      // Add event listener to "Learn More" link
+      learnMoreLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        learnMoreContent.style.display = 'block';
+        learnMoreLink.style.display = 'none';
+      });
+    });
+    </script>
+
+
     <!-- <canvas id="canvas"></canvas> -->
     <!-- <nav>
 
@@ -299,28 +478,34 @@
     <button id="toggle" data-aos="fade-down">Dark Theme</button>
     <a href="#contact"><button class="btn" id="btn-style">Contact Us</button></a>
   </nav> -->
+
     <div class="nav-container" id="top">
       <nav class="newNav">
+        <div style="display: flex; flex-direction: row; align-items: center;">
         <img src="./img/tour1.png" class="sitelogo">
         
         <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+      </div>
 
         <ul class="navLinks">
-
           <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
           <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
           <li class="link" data-aos=""><a href="#Home">Home</a></li>
           <li class="link" data-aos=""><a href="#AboutUs">About</a></li>
-          <li class="link" data-aos=""><a href="#Destinations">Destination</a></li>
-          <li class="link" data-aos=""><a href="#trip">Prices</a></li>
-          <li class="link" data-aos=""><a href="#ReviewGallery">Trip Gallery</a></li>
-          <li class="link" data-aos=""><a href="#tourist">Tourist Guide</a></li>
-          <li class="link" data-aos=""><a href="#hotel">Hotel & Resort</a></li>
+          <li class="link dropdown" data-aos="">
+              <a href="#Services" class="dropdown">Services</a>
+              <ul class="dropdown-menu">
+                  <li><a href="#Destinations">Destination</a></li>
+                  <li><a href="#trip">Prices</a></li>
+                  <li><a href="#ReviewGallery">Trip Gallery</a></li>
+                  <li><a href="#tourist">Tourist Guide</a></li>
+                  <li><a href="#hotel">Hotel & Resort</a></li>
+              </ul>
+          </li>
           <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
-          <li class="link" data-aos=""><a href="feedback.html">Rate Us</a></li>
+          <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
           <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
-        </ul>
-
+      </ul>
 
         <a href="newLogin.html" class="contact-btn" id="nav-login-btn"><button class="btn login" id="btn-style"
             data-aos="fade-down">Login/SignUp</button></a>
@@ -385,7 +570,8 @@
               </div>
                
             </div>
-            <span data-aos="fade-in">Watch our story</span>
+            <br>
+            <span data-aos="fade-in" style="color: #5755b6; font-weight: 600;">Watch our story</span>
           </div>
         </div>
       </section>
@@ -413,7 +599,23 @@
                       transform: scale(1.8);
                       transition: transform 0.8s ease;
                     }
+                    .video-container {
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      height: 30vh;
+                    }
+                    .iframe {
+                       width: 760px;
+                       height: 515px;
+                       border: none;
+
+                    }
                   </style>
+                  <br>
+                  <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/veULUjsSrPg?si=eq3sDAt3-yZnZUme" allowfullscreen></iframe>
+                  </div>
                   <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
                     <span style="margin-left: 80px;"></span>Welcome to TourGuide, where we firmly believe that life's
                     true purpose unfolds amidst the thrill of exploration, the embrace of the unfamiliar, and the
@@ -1446,6 +1648,7 @@
             <p><a href="./privacy.html" class="footer__link">Privacy Policy</a></p>
             <p><a href="./Licensing.html" class="footer__link">Licensing</a></p>
             <p><a href="#cnt-form" class="footer__link">Contact Us</a></p>
+            <p><a href="contributors.html" class="footer__link">Our Contributors</a></p>
           </div>
         </div>
         <div class="footer__col">
@@ -1494,7 +1697,7 @@
 
               <a href="">
                 <div class="icon">
-                  <i class="fab fa-twitter" title="X" style="cursor: pointer;"></i>
+                  <i class="fa-brands fa-x-twitter" title="X" style="cursor: pointer;"></i>
                 </div>
               </a>
 
@@ -1527,18 +1730,59 @@
           </div>
 
         </div>
+        <div style="padding: 32px; background-color: #9fbaff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+          <label for="google_translate_element" style="display: block; font-weight: bold; margin-bottom: 10px; font-size: 20px; color: #333;">Select Language:</label>
+          <div id="google_translate_element" style="display: inline-block; margin-top: 10px; padding: 20px; border: 1px solid #ff9fcf; border-radius: 5px; background-color: #fff;"></div>
+      </div>
+      
+      
+      
+      
+      <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
 
-        <div class="footer__col">
-          <div id="google_element"></div>
-          <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
-          <script>
-            function loadGoogleTranslate() {
-              new google.translate.TranslateElement({
-                pageLanguage: 'en'
-              }, 'google_element');
-            }
-          </script>
+        <!-- <div class="footer__col">
+          <label for="google_translate_element" style="display: block; font-weight: bold; margin-bottom: 5px;">Select Language:</label>
+          <div id="google_translate_element" style="display: inline-block; margin-top: 10px;"></div>
         </div>
+        
+        <script>
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+              pageLanguage: 'en',
+              includedLanguages: 'es,fr,de,ja,ko,zh-CN',
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+              autoDisplay: false,
+              gaTrack: true,
+              gaId: 'UA-XXXXXXXX-X'
+            }, 'google_translate_element');
+          }
+        </script>
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
+        <script>
+          // Apply inline styling to the select element once it is created by Google Translate
+          window.addEventListener('load', function() {
+            var interval = setInterval(function() {
+              var select = document.querySelector('#google_translate_element select');
+              if (select) {
+                select.style.padding = '5px';
+                select.style.border = '1px solid #ccc';
+                select.style.borderRadius = '0'; // Remove rounded corners to make it rectangular
+                select.style.appearance = 'none'; // Remove default styling
+                select.style.backgroundColor = '#fff';
+                select.style.cursor = 'pointer';
+                clearInterval(interval); // Stop the interval once the select element is found and styled
+              }
+            }, 100); // Check every 100ms
+          });
+        </script> -->
+        
 
 
         <!--  New copyright code to make it dynamic and display current year -->
@@ -1549,7 +1793,8 @@
         </div>
 
     </footer>
-
+    
+  
     <a class="goupbtn" href="#" onclick="goToTop()"><i class="fa-solid fa-arrow-up"></i></a>
 
     <script>
