@@ -357,6 +357,15 @@
       });
 
     </script>
+
+  <!-- sticky animation  -->
+ <script type="text/javascript">
+  window.addEventListener("scroll", function () {
+    var header = document.querySelector("nav");
+    header.classList.toggle("sticky", window.scrollY > 50)
+  })
+</script>
+
     <div id="pre-loader">
       <h1>TourGuide . . .</h1>
     </div>
@@ -469,11 +478,14 @@
     <button id="toggle" data-aos="fade-down">Dark Theme</button>
     <a href="#contact"><button class="btn" id="btn-style">Contact Us</button></a>
   </nav> -->
+
     <div class="nav-container" id="top">
       <nav class="newNav">
+        <div style="display: flex; flex-direction: row; align-items: center;">
         <img src="./img/tour1.png" class="sitelogo">
         
         <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+      </div>
 
         <ul class="navLinks">
           <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
@@ -491,7 +503,7 @@
               </ul>
           </li>
           <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
-          <li class="link" data-aos=""><a href="feedback.html">Rate Us</a></li>
+          <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
           <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
       </ul>
 
