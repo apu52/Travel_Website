@@ -2087,7 +2087,7 @@ body {
   border-radius: 10px;
   margin-top: 0.5rem;
   background: linear-gradient(#002152, #271050);
-  scale:0.99;
+  scale:0.99 !important;
   
   /* padding: 0rem 1rem;
   margin-top: 0.5rem;
