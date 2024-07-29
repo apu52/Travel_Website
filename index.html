@@ -41,8 +41,6 @@
   <img src="Untitled (1).mp4" alt="">
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-
   <link rel="stylesheet" href="tilt.css">
   <script src="tilt.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
@@ -80,7 +78,7 @@
     html {
       scroll-behavior: smooth;
     }
-  </style>
+  </style> 
   <style>
     .active {
       color: red !important;
@@ -365,6 +363,15 @@
       });
 
     </script>
+
+  <!-- sticky animation  -->
+ <script type="text/javascript">
+  window.addEventListener("scroll", function () {
+    var header = document.querySelector("nav");
+    header.classList.toggle("sticky", window.scrollY > 50)
+  })
+</script>
+
     <div id="pre-loader">
       <h1>TourGuide . . .</h1>
     </div>
@@ -481,11 +488,14 @@
     <button id="toggle" data-aos="fade-down">Dark Theme</button>
     <a href="#contact"><button class="btn" id="btn-style">Contact Us</button></a>
   </nav> -->
+
     <div class="nav-container" id="top">
       <nav class="newNav">
+        <div style="display: flex; flex-direction: row; align-items: center;">
         <img src="./img/tour1.png" class="sitelogo">
 
         <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+      </div>
 
         <ul class="navLinks">
           <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
@@ -503,7 +513,7 @@
             </ul>
           </li>
           <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
-          <li class="link" data-aos=""><a href="feedback.html">Rate Us</a></li>
+          <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
           <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
         </ul>
 
@@ -1677,6 +1687,7 @@
             <p><a href="./privacy.html" class="footer__link">Privacy Policy</a></p>
             <p><a href="./Licensing.html" class="footer__link">Licensing</a></p>
             <p><a href="#cnt-form" class="footer__link">Contact Us</a></p>
+            <p><a href="contributors.html" class="footer__link">Our Contributors</a></p>
           </div>
         </div>
       </div>
@@ -1767,6 +1778,7 @@
           </div>
 
         </div>
+
         <div
           style="padding: 5px; background-color: #ff9fcf; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
           <label for="google_translate_element"
@@ -1786,6 +1798,22 @@
         </script>
         <script type="text/javascript"
           src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        <div style="padding: 32px; background-color: #9fbaff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+          <label for="google_translate_element" style="display: block; font-weight: bold; margin-bottom: 10px; font-size: 20px; color: #333;">Select Language:</label>
+          <div id="google_translate_element" style="display: inline-block; margin-top: 10px; padding: 20px; border: 1px solid #ff9fcf; border-radius: 5px; background-color: #fff;"></div>
+      </div>
+      
+      
+      
+      
+      <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+ 
 
         <!-- <div class="footer__col">
           <label for="google_translate_element" style="display: block; font-weight: bold; margin-bottom: 5px;">Select Language:</label>
