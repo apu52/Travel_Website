@@ -3055,10 +3055,10 @@ a:hover::after {
     flex-direction: row;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 110PX !important;
+    gap: 240PX !important;
 }
-.section__container {
+.footer__container .section__container {
     /* max-width: var(--max-width); */
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 10px 20px;
    }
