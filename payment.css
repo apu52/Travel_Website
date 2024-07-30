@@ -380,7 +380,7 @@ body {
 
 /* Dark mode styles */
 body.dark-mode {
-  background-color: #212529;
+  background-color: #002152;
   color: #ffffff;
 }
 
@@ -416,4 +416,19 @@ body.dark-mode .footer {
 }
 .toggle:checked:before {
   transform: translateX(25px);
+}
+
+.text-center h2{
+  background: linear-gradient(120deg, #1c99fe 20.69%, #7644ff 50.19%, #fd4766 79.69%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-weight: 600;
+}
+body.dark-mode #inst{
+  background: black;
+}
+.newNav #btn-style{
+  background-color: var(--btn-border) !important;
+  border: 2px solid var(--btn-border) !important;
 }
