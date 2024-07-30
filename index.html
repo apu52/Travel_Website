@@ -127,41 +127,79 @@
       }
     }
 
-    .gallery-rotate-image .image-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      /* Adjust the gap between images */
-    }
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
 
-    .gallery-rotate-image .image-container span {
-      display: inline-block;
-    }
+.section__header {
+    text-align: center;
+    padding: 2em 0;
+}
 
-    .trip-gallery-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      /* Adjust the gap between images */
-    }
+.center-align {
+    text-align: center;
+}
 
-    .trip-gallery-container .image-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+.trips__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    padding: 1em;
+}
 
-    .trip-gallery-container .image-container img {
-      max-width: 100%;
-      height: auto;
-    }
+.trip__card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px; /* Adjusted width */
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
 
-    .btn-container {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      /* Adjust the gap between buttons */
-    }
+.trip__card img {
+    width: 100%;
+    height: 150px; /* Adjusted height */
+    object-fit: cover;
+}
+
+.trip__details {
+    padding: 0.5em; /* Reduced padding */
+}
+
+.trip__details h4 {
+    font-size: 1.1em; /* Reduced font size */
+    margin: 0;
+}
+
+.trip__details p {
+    font-size: 0.9em; /* Reduced font size */
+    margin: 0.5em 0 0;
+}
+
+.booking__price {
+    padding: 0.5em;
+    text-align: center;
+}
+
+.book__now {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book__now:hover {
+    background-color: #45a049;
+}
 
     @media screen and (max-width: 768px) {
       body {
@@ -242,6 +280,124 @@
     .book__now:hover {
       background-color: #0056b3;
     }
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.trip-section {
+    padding: 2em 0;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+.title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 2em;
+}
+
+.trip-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-details {
+    padding: 1em;
+}
+
+.card-details p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.rating {
+    margin: 0.5em 0;
+    font-size: 1em;
+    color: #f39c12;
+}
+
+.price-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-size: 1.2em;
+}
+
+.book-now-button {
+    background-color: #940a97;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-now-button:hover {
+    background-color: #8a0bd8;
+}
+
+.view-all-buttons {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.view-all-buttons .btn {
+    background-color: #970cd8;
+    color: white;
+    border: none;
+    padding: 0.5em 2em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 1em;
+    transition: background-color 0.3s ease;
+}
+
+.view-all-buttons .btn:hover {
+    background-color: #45a049;
+}
+
 
   </style>
   <link rel="stylesheet" href="imstyle.css">
@@ -881,80 +1037,102 @@
         </div>
     </div>
     </div>
-    <div class="trips__container">
+    <div class="section__header center-align">
+      <div>
+          <h2 class="section__title" data-aos="fade-in">Explore Cultural Events and Festivals</h2>
+          <p class="section__subtitle" data-aos="fade-in">
+              Enjoy and be the part of cultural celebration and festivals.
+          </p>
+      </div>
+  </div>
+  
+  <div class="trips__container">
       <div class="trip__card">
-        <img src="./d1.jpeg" alt="trip" />
-        <div class="trip__details">
-          <h4 style="color: rgb(249, 9, 129);">Beat the Heat Season 3 Concerts - Dubai</h4>
-          <p style="font-style: italic;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Meet international artists like Siilawy, Marwan Moussa in July</p>
-        </div>
-        <div class="booking__price">
-          <a href="./dedicated-destinations/dubai/start.html">
-            <button class="book__now">Book Now</button>
-          </a>
-        </div>
+          <img src="./d1.jpeg" alt="Beat the Heat Season 3 Concerts - Dubai" />
+          <div class="trip__details">
+              <h4 style="color: rgb(249, 9, 129);">Beat the Heat Season 3 Concerts - Dubai</h4>
+              <p style="font-style: italic; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                  Meet international artists like Siilawy, Marwan Moussa in July
+              </p>
+          </div>
+          <div class="booking__price">
+              <a href="./dedicated-destinations/dubai/start.html">
+                  <button class="book__now">Book Now</button>
+              </a>
+          </div>
       </div>
       <div class="trip__card">
-        <img src="./d2.jpeg" alt="trip" />
-        <div class="trip__details">
-          <h4 style="color: rgb(220, 7, 174);">Latino Life in the Park - London</h4>
-          <p style="font-style: italic;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Experience the largest Latin music festival in the UK</p>
-        </div>
-        <div class="booking__price">
-          <a href="./dedicated-destinations/london/start.html">
-            <button class="book__now">Book Now</button>
-          </a>
-        </div>
+          <img src="./d2.jpeg" alt="Latino Life in the Park - London" />
+          <div class="trip__details">
+              <h4 style="color: rgb(220, 7, 174);">Latino Life in the Park - London</h4>
+              <p style="font-style: italic; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                  Experience the largest Latin music festival in the UK
+              </p>
+          </div>
+          <div class="booking__price">
+              <a href="./dedicated-destinations/london/start.html">
+                  <button class="book__now">Book Now</button>
+              </a>
+          </div>
       </div>
       <div class="trip__card">
-        <img src="./d3.jpeg" alt="trip" />
-        <div class="trip__details">
-          <h4 style="color: rgb(250, 12, 147);">Bonderache Fest - Goa</h4>
-          <p style="font-style: italic;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Celebrate the ancient tradition of marking land borders with flags</p>
-        </div>
-        <div class="booking__price">
-          <a href="./dedicated-destinations/goa/start.html">
-            <button class="book__now">Book Now</button>
-          </a>
-        </div>
+          <img src="./d3.jpeg" alt="Bonderache Fest - Goa" />
+          <div class="trip__details">
+              <h4 style="color: rgb(250, 12, 147);">Bonderache Fest - Goa</h4>
+              <p style="font-style: italic; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                  Celebrate the ancient tradition of marking land borders with flags
+              </p>
+          </div>
+          <div class="booking__price">
+              <a href="./dedicated-destinations/goa/start.html">
+                  <button class="book__now">Book Now</button>
+              </a>
+          </div>
       </div>
       <div class="trip__card">
-        <img src="./d4.jpeg" alt="trip" />
-        <div class="trip__details">
-          <h4 style="color: rgb(220, 7, 174);">Whale Shark Festival - Maldives</h4>
-          <p style="font-style: italic;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Celebrate marine life with parades, music, and educational events</p>
-        </div>
-        <div class="booking__price">
-          <a href="./dedicated-destinations/maldives/start.html">
-            <button class="book__now">Book Now</button>
-          </a>
-        </div>
+          <img src="./d4.jpeg" alt="Whale Shark Festival - Maldives" />
+          <div class="trip__details">
+              <h4 style="color: rgb(220, 7, 174);">Whale Shark Festival - Maldives</h4>
+              <p style="font-style: italic; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                  Celebrate marine life with parades, music, and educational events
+              </p>
+          </div>
+          <div class="booking__price">
+              <a href="./dedicated-destinations/maldives/start.html">
+                  <button class="book__now">Book Now</button>
+              </a>
+          </div>
       </div>
       <div class="trip__card">
-        <img src="./d5.jpg" alt="trip" />
-        <div class="trip__details">
-          <h4 style="color: rgb(220, 7, 106);">Bali Arts Festival - Bali</h4>
-          <p style="font-style: italic;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Traditional culutral celebration in Islands</p>
-        </div>
-        <div class="booking__price">
-          <a href="./dedicated-destinations/bali/start.html">
-            <button class="book__now">Book Now</button>
-          </a>
-        </div>
+          <img src="./d5.jpg" alt="Bali Arts Festival - Bali" />
+          <div class="trip__details">
+              <h4 style="color: rgb(220, 7, 106);">Bali Arts Festival - Bali</h4>
+              <p style="font-style: italic; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                  Traditional cultural celebration in Islands
+              </p>
+          </div>
+          <div class="booking__price">
+              <a href="./dedicated-destinations/bali/start.html">
+                  <button class="book__now">Book Now</button>
+              </a>
+          </div>
       </div>
       <div class="trip__card">
-        <img src="./d6.jpeg" alt="trip" />
-        <div class="trip__details">
-          <h4 style="color: rgb(230, 29, 244);">Festa de São João - Brazil</h4>
-          <p style="font-style: italic;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Festival of John the Baptist with lively parties and traditonal food</p>
-        </div>
-        <div class="booking__price">
-          <a href="./dedicated-destinations/brazil/start.html">
-            <button class="book__now">Book Now</button>
-          </a>
-        </div>
+          <img src="./d6.jpeg" alt="Festa de São João - Brazil" />
+          <div class="trip__details">
+              <h4 style="color: rgb(230, 29, 244);">Festa de São João - Brazil</h4>
+              <p style="font-style: italic; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                  Festival of John the Baptist with lively parties and traditional food
+              </p>
+          </div>
+          <div class="booking__price">
+              <a href="./dedicated-destinations/brazil/start.html">
+                  <button class="book__now">Book Now</button>
+              </a>
+          </div>
       </div>
-    </div>
+  </div>
+  
 
 
       <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
@@ -962,62 +1140,59 @@
     </section>
   <!-- End Destination Section -->
 
-    <section class="trip" id="trip" data-aos="zoom-in" data-aos-offset="100">
-      <div class="section__container trip__container">
-        <h2 class="section__title">Best trip packages</h2>
-        <p class="section__subtitle" style="margin-left: 280px;">
-          Top trip deals curated for you. Get the best package for your adventure and save more.
+  <section class="trip-section" id="trip">
+    <div class="container">
+        <h2 class="title">Best Trip Packages</h2>
+        <p class="subtitle">
+            Top trip deals curated for you. Get the best package for your adventure and save more.
         </p>
-        <div class="trip__grid">
-          <div class="trip__card cardd tilt-effect">
-            <img src="https://i.ibb.co/60nvYwQ/Screenshot-2023-07-14-173347.png" alt="trip" height="250" width="45" />
-            <div class="trip__details">
-              <p>Santorini, Aegean Sea</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $300</div>
-                <a href="./dedicated-destinations/santorini-aegean-sea/start.html"><button class="book__now btn-style"
-                    style="box-shadow: 2px 2px 8px red;">Book
-                    Now</button></a>
-              </div>
+        <div class="trip-grid">
+            <div class="card">
+                <img src="https://i.ibb.co/60nvYwQ/Screenshot-2023-07-14-173347.png" alt="Santorini, Aegean Sea">
+                <div class="card-details">
+                    <p>Santorini, Aegean Sea</p>
+                    <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+                    <div class="price-info">
+                        <div class="price"><span>From</span> $300</div>
+                        <a href="./dedicated-destinations/santorini-aegean-sea/start.html">
+                            <button class="book-now-button">Book Now</button>
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="trip__card cardd tilt-effect">
-            <img src="https://i.ibb.co/h1WgH8B/Screenshot-2023-07-14-173807.png" alt="trip" height="250" width="45" />
-            <div class="trip__details">
-              <p>Machu Picchu, Peru</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $450</div>
-                <a href="./dedicated-destinations/machu-picchu-peru/Machu_start.html"><button
-                    class="book__now btn-style" style="box-shadow: 2px 2px 8px red;">Book
-                    Now</button></a>
-              </div>
+            <div class="card">
+                <img src="https://i.ibb.co/h1WgH8B/Screenshot-2023-07-14-173807.png" alt="Machu Picchu, Peru">
+                <div class="card-details">
+                    <p>Machu Picchu, Peru</p>
+                    <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+                    <div class="price-info">
+                        <div class="price"><span>From</span> $450</div>
+                        <a href="./dedicated-destinations/machu-picchu-peru/Machu_start.html">
+                            <button class="book-now-button">Book Now</button>
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="trip__card cardd tilt-effect">
-            <img src="https://i.ibb.co/vc2W0wN/Screenshot-2023-07-14-174151.png" alt="trip" height="250" width="45" />
-            <div class="trip__details">
-              <p>Grand Canyon National Park, Arizona</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $400</div>
-                <a href="./dedicated-destinations/grand-canyon-national-park-arizona/Grand_start.html"><button
-                    class="book__now btn-style" style="box-shadow: 2px 2px 8px red;">Book Now</button></a>
-              </div>
+            <div class="card">
+                <img src="https://i.ibb.co/vc2W0wN/Screenshot-2023-07-14-174151.png" alt="Grand Canyon National Park, Arizona">
+                <div class="card-details">
+                    <p>Grand Canyon National Park, Arizona</p>
+                    <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+                    <div class="price-info">
+                        <div class="price"><span>From</span> $400</div>
+                        <a href="./dedicated-destinations/grand-canyon-national-park-arizona/Grand_start.html">
+                            <button class="book-now-button">Book Now</button>
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="view__all">
-          <a href="./package.html"><button class="btn" id="btn-style" style="box-shadow: 2px 2px 8px red;">View
-              All</button></a>
-          <br>
-          <br>
-          <a href="trending.html"><button class="btn" id="btn-style" style="box-shadow: 2px 2px 8px red;">View
-              Trending</button></a>
+        <div class="view-all-buttons">
+            <a href="./package.html"><button class="btn">View All</button></a>
+            <a href="trending.html"><button class="btn">View Trending</button></a>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
     <div class="hero">
       <div class="carousel">
         <ul>
