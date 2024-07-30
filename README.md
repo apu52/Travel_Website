@@ -50,7 +50,14 @@
 <h2>Overview📌</h2>
 <p>This repository contains my project on a Travel Website✈️ using HTML, CSS and JavaScript. It features a landing page for a travel tour company website. Finding the perfect travel destination can be a challenge. This project aims to streamline that process🚤. We welcome all contributions to make this a fantastic resource for travelers. Jump in and contribute to this grand project! Read the guidelines📚 and get started building!</p>
 
-<h2>Live Project -- https://apu52.github.io/Travel_Website/</h2>
+<h2>Live Demo</h2>
+
+Check out the live project [here](https://apu52.github.io/Travel_Website/).
+
+<p align="center">
+  <img src="https://github.com/avanimathur/Travel_Website/assets/151984867/1024d506-92c6-4b35-a4ab-2d4eaca78199" alt="Live Demo">
+</p>
+
 <h2>Features</h2>
 
 - **Introductory Page**: Welcomes visitors with an engaging introductory page that highlights the essence of our travel website and sets the tone for exploration.
@@ -72,31 +79,25 @@
 <h2>Open-Source-Programmes⭐</h2>
 
  ### This project is now OFFICIALLY accepted for
- 
-![GSSOC](https://github.com/apu52/METAVERSE/assets/114172928/e79eb6de-81b1-4ffb-b6ed-f018bb977e88)
 
 <div align="center">
-  
-  <img src="img/VSOC new.png" width="100%">
+  <img src="https://github.com/apu52/METAVERSE/assets/114172928/e79eb6de-81b1-4ffb-b6ed-f018bb977e88" alt="GSSOC" width="80%">
 </div>
 
-
-
-
+<div align="center">
+  <img src="img/VSOC new.png" alt="VSOC" width="80%">
+</div>
 
 ### This project was part of following Open Source Programs
 
 <div align="center">
-  
-  <img src="img/JWOC.png" width="50%">
+  <img src="img/JWOC.png" alt="JWOC" width="50%">
 </div>
-
 <h2>Getting Started💥</h2>
 
 <h3>Local Installation video</h3>
 
 [video](https://drive.google.com/file/d/1LsBudIUtZLDMSlmBDdOfT001QRqGBSbN/view?usp=sharing)
-
 
 
 ## How to make a Pull Request?
@@ -201,30 +202,18 @@ Show some ❤️&nbsp; by giving <img src="https://imgur.com/o7ncZFp.jpg" height
 <tr>
 <td align="center"><a href="https://github.com/KrishnenduDG"><img src="img/krishnendu DG.png" width=130px height=130px /></a></br> <h4 style="color:red;">Krishnendu Dasgupta</h4>
  <a href="https://www.linkedin.com/in/krishnendu-dasgupta-450391186/"><img src="https://img.icons8.com/fluency/2x/linkedin.png" width="32px" height="32px"></img></a>
-   </td>
+</td>
 
-</tr>
-</table>
-
-<table>
-<tr>
 <td align="center"><a href="https://github.com/itsekta"><img src="img/Ekta.jfif" width=130px height=130px /></a></br> <h4 style="color:red;">Ekta Chaudhary</h4>
  <a href="https://www.linkedin.com/in/ekta-software-engineer/"><img src="https://img.icons8.com/fluency/2x/linkedin.png" width="32px" height="32px"></img></a>
-   </td>
+</td>
 
-</tr>
-</table>
-
-<table>
-<tr>
 <td align="center"><a href="https://github.com/Ghanshyam89"><img src="img/GhanshyamNewPic.jpg" width=130px height=130px /></a></br> <h4 style="color:red;">Ghanshyam Prajapati</h4>
  <a href="https://www.linkedin.com/in/ghanshyam-prajapati/"><img src="https://img.icons8.com/fluency/2x/linkedin.png" width="32px" height="32px"></img></a>
-   </td>
-
+</td>
 </tr>
 </table>
 
-</div>
   
  # Project Admin⚡
  
@@ -246,6 +235,11 @@ Show some ❤️&nbsp; by giving <img src="https://imgur.com/o7ncZFp.jpg" height
   <img src="https://github.com/shruti-sen2004/Travel_Website/assets/115914670/d544fd3b-aed2-4a05-a2f8-0b7a2ff9014f" width="700" height= "250" />
 </p>
 
+
+## Acknowledgements
+
+Thank you to all the amazing contributors who have made this project possible! 💝
+
 <p align ="center">
   <img src="https://api.vaunt.dev/v1/github/entities/apu52/repositories/Travel_Website/contributors?format=svg&limit=54" width="700" height= "250" />
 </p>
@@ -254,10 +248,15 @@ Show some ❤️&nbsp; by giving <img src="https://imgur.com/o7ncZFp.jpg" height
   <img align="center" src="https://contrib.rocks/image?max=100&repo=apu52/Travel_Website" />
 </a> 
 <br><br>
-Thank you to all the amazing contributors who have made this project possible!!💝
 
-## License 
-<img src = "https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge">
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+<p align="center">
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="License: MIT">
+</p>
+
 
 <p align="right"><a href="#top"><img src="https://img.shields.io/badge/Move%20to%20top-Blue?style=plastic" alt="Back To Top"></a></p>
 

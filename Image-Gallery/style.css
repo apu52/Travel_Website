@@ -102,7 +102,7 @@ body {
 }
 
 .btn {
-  bottom: -80px;
+  top : -40px;
   background-color: slateblue;
   color: white;
   border: none;
