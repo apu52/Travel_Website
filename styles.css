@@ -1280,15 +1280,17 @@ body, html {
 
 .footer__container {
   width: 100%;
+  /* max-width: 1800px; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: space-between;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   color: var(--secondary-color);
   margin: 0;
-    padding: 0;
+  padding: 0;
 }
 
 .footer__col {
