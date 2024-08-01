@@ -2353,6 +2353,16 @@ body {
   .newNav img{
     position: relative;
   }
+  .header__image img:nth-child(1) {
+      transform: translate(0, 0%) !important;
+  }
+  .section__subtitle {
+    max-width: 100vw !important;
+    margin-left: 0 !important;
+  }
+  .testimonials {
+    padding: 0px 10px;
+  }
 }
 
 /* Move View from Hamburger to newNav */
