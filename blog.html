@@ -42,27 +42,20 @@
                 <!-- Blog posts will be dynamically inserted here -->
             </section>
             <aside>
-                <div class="widget semi-transparent-box">
-                    <h3>Categories</h3>
-                    <ul>
-                        <li><a href="#">Backpacker <span>(6)</span></a></li>
-                        <li><a href="#">Hiking <span>(1)</span></a></li>
-                        <li><a href="#">Tips <span>(2)</span></a></li>
-                        <li><a href="#">Tourism <span>(4)</span></a></li>
-                        <li><a href="#">Travel <span>(6)</span></a></li>
-                        <li><a href="#">Travel Tips <span>(7)</span></a></li>
-                        <li><a href="#">Traveling <span>(5)</span></a></li>
-                        <li><a href="#">Uncategorized <span>(1)</span></a></li>
-                        <li><a href="#">World Tour <span>(21)</span></a></li>
+                <div class="widget semi-transparent-box" id="categories-widget">
+                    <h3>Popular Categories</h3>
+                    <ul id="categories-list">
+                        <!-- Categories will be dynamically inserted here -->
                     </ul>
                 </div>
+                
                 <div class="widget semi-transparent-box">
                     <h3>Useful Links</h3>
                     <ul>
-                        <li><a href="#">Travel Insurance Guide</a></li>
-                        <li><a href="#">Packing Essentials Checklist</a></li>
-                        <li><a href="#">Budget Travel Hacks</a></li>
-                        <li><a href="#">Solo Travel Safety Tips</a></li>
+                        <li><a href="./plantrip.html">Plan Your Trip</a></li>
+                        <li><a href="./index.html#hotel">Book Your Hotel</a></li>
+                        <li><a href="./feedback.html">Rate Our Services</a></li>
+                        <li><a href="./index.html#testimonials">Know from Our Past Customers</a></li>
                     </ul>
                 </div>
                 <div class="widget semi-transparent-box">
@@ -263,6 +256,43 @@
                 relatedWidget.appendChild(relatedPost);
             });
         });
+
+        function displayTopCategories() {
+        const categoriesCount = {};
+
+        blogPosts.forEach(post => {
+            post.tags.forEach(tag => {
+                if (categoriesCount[tag]) {
+                    categoriesCount[tag]++;
+                } else {
+                    categoriesCount[tag] = 1;
+                }
+            });
+        });
+
+        const sortedCategories = Object.entries(categoriesCount)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, 5);
+
+        const categoriesList = document.getElementById('categories-list');
+        categoriesList.innerHTML = '';
+
+        sortedCategories.forEach(([category, count]) => {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `<a href="#" onclick="filterPostsByTag('${category}')">${category} <span>(${count})</span></a>`;
+            categoriesList.appendChild(listItem);
+        });
+    }
+
+    // Display posts and top categories when the document is loaded
+    displayPosts(blogPosts);
+    displayTopCategories();
+
+    // Add event listener for reset filters button
+    document.getElementById('reset-filters').addEventListener('click', () => {
+        displayPosts(blogPosts);
+    });
+
 
         window.addEventListener('scroll', () => {
             const header = document.querySelector('.hero');
