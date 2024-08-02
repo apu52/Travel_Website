@@ -277,6 +277,31 @@
     }
 
   </style>
+  <style>
+    #progress-container {
+    position: fixed ;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    z-index: 99990;
+    /* background: #f3f3f3; */
+}
+
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 7px;
+    width: 0;
+    background: linear-gradient(90deg, rgb(0, 72, 255) 0%, rgb(153, 187, 255) 50%, rgb(0, 184, 250) 100%);
+    box-shadow: 0 0 4px rgba(0, 166, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.7);
+    transition: width 0.09s ease-in-out;
+    border-radius: 10px;
+}
+
+  </style>
   <link rel="stylesheet" href="imstyle.css">
   <link rel="stylesheet" href="jquery.flipster.min.css">
 
@@ -286,6 +311,8 @@
 <body style="background-color: var(--secondary-color);">
 
   <body>
+
+
     <div class="circle-container">
       <div class="circle"></div>
       <div class="circle"></div>
@@ -374,91 +401,11 @@
       <canvas></canvas>
       <canvas></canvas>
     </div>
+    
+
     <!-- <div id="progressbar"></div> -->
-    <div id="scrollPath"></div>
 
-    <div id="cookie-consent">
-      <p>
-        We use cookies to enhance your experience on our website. By continuing to browse, you agree to our use of cookies as described in our Cookie Policy.
-          <a href="#" id="learn-more-link">Learn More</a>
-  
-      </p>
-      <div id="learn-more-content" style="display: none;">
-        <p>Cookies are small text files used by websites to enhance user experience. According to the law, we can store cookies on your device if they are essential for the operation of this site. For other types of cookies, we need your consent.</p>
-        <p>This site employs various types of cookies. Some cookies are set by third-party services that appear on our pages.</p>
-      </div>
-  
-      <a href="#" id="show-less-link" style="display: none;">Show Less</a>
-      <button class="accept-cookies">Accept</button>
-      <button class="reject-cookies">Reject</button>
-    </div>
-
-    <script>
-
-
-
-      document.addEventListener('DOMContentLoaded', function() {
-      const cookieConsent = document.getElementById('cookie-consent');
-      const acceptButton = document.querySelector('.accept-cookies');
-      const rejectButton = document.querySelector('.reject-cookies');
-      const learnMoreLink = document.getElementById('learn-more-link');
-      const learnMoreContent = document.getElementById('learn-more-content');
-    
-      // Hide preloader after page load
-      window.addEventListener('load', function() {
-        const preloader = document.getElementById('preloader');
-        if (preloader) {
-          preloader.style.display = 'none';
-        }
-        cookieConsent.style.display = 'block';
-      });
-    
-      // Check if localStorage is available
-      function localStorageAvailable() {
-        try {
-          const test = '__localStorage_test__';
-          localStorage.setItem(test, test);
-          localStorage.removeItem(test);
-          return true;
-        } catch (e) {
-          return false;
-        }
-      }
-    
-      if (localStorageAvailable()) {
-        // Check if the user has already made a choice
-        if (localStorage.getItem('cookieConsent')) {
-          cookieConsent.style.display = 'none';
-        }
-    
-        // Function to handle cookie consent choice
-        function handleConsent(choice) {
-          localStorage.setItem('cookieConsent', choice);
-          cookieConsent.style.display = 'none';
-        }
-    
-        // Add event listeners to buttons
-        acceptButton.addEventListener('click', function() {
-          handleConsent('accepted');
-        });
-    
-        rejectButton.addEventListener('click', function() {
-          handleConsent('rejected');
-        });
-      } else {
-        // Hide consent if localStorage is not available
-        cookieConsent.style.display = 'none';
-      }
-    
-      // Add event listener to "Learn More" link
-      learnMoreLink.addEventListener('click', function(event) {
-        event.preventDefault();
-        learnMoreContent.style.display = 'block';
-        learnMoreLink.style.display = 'none';
-      });
-    });
-    </script>
-
+    <!-- <div id="scrollPath"></div> -->
 
     <!-- <canvas id="canvas"></canvas> -->
     <!-- <nav>
@@ -530,7 +477,26 @@
     </div>
     <header>
       <div class="nav-wrapperr">
-        <div class="progress-bar"></div>
+        <div id="progress-container">
+          <div id="progress-bar"></div>
+        </div>
+    
+        <script>
+        window.addEventListener('scroll', function() {
+    // Get the current scroll position
+    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    
+    // Get the total scrollable height
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    
+    // Calculate the percentage scrolled
+    const scrolled = (winScroll / height) * 100;
+    
+    // Set the progress bar width
+    document.getElementById('progress-bar').style.width = scrolled + '%';
+});
+
+        </script>
       </div>
       
       <section class="section__container header__container" id="Home">
@@ -2255,17 +2221,7 @@
         // Initialize AOS library
         AOS.init();
       });</script>
-    <script>
-
-      let progress = document.getElementById("progressbar");
-
-      let totalHeight = document.body.scrollHeight - window.innerHeight;
-      window.onscroll = function () {
-        let progressHeight = (window.pageYOffset / totalHeight) * 100;
-        progress.style.height = progressHeight + "%";
-      }
-
-    </script>
+    
 
 
 
@@ -2359,16 +2315,7 @@
 
 
 <script>
-    const scrollline = document.querySelector('.progress-bar');
-
-  function fillscrollline() {
-    const windowHeight = window.innerHeight;
-    const fullHeight = document.body.clientHeight;
-    const scrolled = window.scrollY;
-    const percentScrolled = (scrolled / (fullHeight - windowHeight)) * 100;
-
-    scrollline.style.width = percentScrolled + '%';
-  };
+    
 
     window.addEventListener('scroll', fillscrollline);
 
