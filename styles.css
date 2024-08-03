@@ -1280,15 +1280,17 @@ body, html {
 
 .footer__container {
   width: 100%;
+  /* max-width: 1800px; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: space-between;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   color: var(--secondary-color);
   margin: 0;
-    padding: 0;
+  padding: 0;
 }
 
 .footer__col {
@@ -2352,6 +2354,16 @@ body {
   }
   .newNav img{
     position: relative;
+  }
+  .header__image img:nth-child(1) {
+      transform: translate(0, 0%) !important;
+  }
+  .section__subtitle {
+    max-width: 100vw !important;
+    margin-left: 0 !important;
+  }
+  .testimonials {
+    padding: 0px 10px;
   }
 }
 
