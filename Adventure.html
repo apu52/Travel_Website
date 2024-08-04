@@ -165,6 +165,67 @@
       color: cornflowerblue;
     }
   </style>
+  <style>
+    /* Toggle button styles */
+.toggle-container {
+  position: fixed; /* Change this as needed for positioning */
+  top: 10px;
+  right: 10px;
+}
+
+.toggle {
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset calc(var(--size)* 0.33) calc(var(--size)* -0.25) 0;
+    border-radius: 999px;
+    color: hsl(240, 100%, 95%);
+    transition: all 500ms;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.toggle:checked {
+  background-color: #333;
+}
+.toggle:checked:before {
+  transform: translateX(25px);
+}
+.sticky {
+    margin: 10px 5px;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    background: linear-gradient(#002152, #271050);
+    scale: 0.99;
+}
+nav {
+    background-color: #123456;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+/* Dark mode feature */
+body.dark-mode{
+  --secondary-color:#0e1525;
+  --btn-border: red;
+}
+body.dark-mode {
+  background-color: var(--secondary-color);
+}
+
+body.dark-mode .nav-container {
+  background-color: #343a40;
+}
+
+body.dark-mode .section__container {
+  background-color: #002152;
+  color: #ffffff;
+}
+  </style>
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script type="text/javascript">
@@ -175,46 +236,36 @@
 </head>
 
 <body>
-  <div class="nav-container" id="top">
+  <!-- <nav>
+      <div class="nav__logo">Tourguide<span>.</span></div>
+      <ul class="nav__links">
+        <li class="link"><a href="./index.html">Home</a></li>
+        <li class="link"><a href="/index.html" >AboutUs</a></li>
+        <li class="link"><a href="./index.html">Destinations</a></li>
+        <li class="link"><a href="/index.html">Pricing</a></li>
+        <li class="link"><a href="/index.html">Testimonials</a></li>
+        <li class="link"><a href="/index.html">Reviews</a></li>
+        
+        <li class="link"><a href="login.html">Login</a></li>
+      </ul>
+      <a href="/index.html"><button class="btn">Contact Us</button></a>
+    </nav> -->
+  <div class="nav-container">
     <nav class="newNav">
-      <div style="display: flex; flex-direction: row; align-items: center;">
-        <img src="./img/tour1.png" class="sitelogo" alt="Site Logo">
-        <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
-      </div>
+      <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
 
       <ul class="navLinks">
-        <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
-        <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
-        <li class="link" data-aos=""><a href="#Home">Home</a></li>
-        <li class="link" data-aos=""><a href="#AboutUs">About</a></li>
-        <li class="link dropdown" data-aos="">
-          <a href="#Services" class="dropdown">Services</a>
-          <ul class="dropdown-menu">
-            <li><a href="#Destinations">Destination</a></li>
-            <li><a href="#trip">Prices</a></li>
-            <li><a href="#ReviewGallery">Trip Gallery</a></li>
-            <li><a href="#tourist">Tourist Guide</a></li>
-            <li><a href="#hotel">Hotel & Resort</a></li>
-          </ul>
-        </li>
-        <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
-        <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
-        <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
+        <li class="link" data-aos="fade-down"><a href="./index.html#Home">Home</a></li>
+        <li class="link" data-aos="fade-down"><a href="./index.html#AboutUs">AboutUs</a></li>
+        <li class="link" data-aos="fade-down"><a href="./index.html#Destinations">Destinations</a></li>
+        <li class="link" data-aos="fade-down"><a href="./index.html#trip">Pricing</a></li>
+        <li class="link" data-aos="fade-down"><a href="./index.html#testimonials">Testimonials</a></li>
+        <li class="link" data-aos="fade-down"><a href="./index.html#ReviewGallery">Reviews</a></li>
+        <li class="link" data-aos="fade-down"><a href="./feedback.html">Rate Us?</a></li>
+        <li class="link" data-aos="fade-down"><a href="./login.html">Login</a></li>
       </ul>
-
-      <a href="newLogin.html" class="contact-btn" id="nav-login-btn">
-        <button class="btn login" id="btn-style" data-aos="fade-down">Login/SignUp</button>
-      </a>
-      <a href="mapa.html" class="contact-btn" id="nav-view-btn">
-        <button class="btn" id="btn-style" style="margin: 0;" data-aos="fade-down">view <map name=""></map></button>
-      </a>
-      <a href="loginPage.html" class="contact-btn">
-        <button class="btn" id="logout-btn" style="margin: 0; display: none;" data-aos="fade-down" disabled>Log Out</button>
-      </a>
-
-      <div class="toggle-container" data-aos="fade-down">
-        <input id="themeToggle" class="toggle" type="checkbox">
-      </div>
+      <a href="./index.html#contact" class="contact-btn"><button class="btn" id="btn-style" style="margin: 0;"
+          data-aos="fade-down">Contact Us</button></a>
       <div class="hamburger" data-aos="fade-down">
         <div class="line"></div>
         <div class="line"></div>
@@ -222,7 +273,6 @@
       </div>
     </nav>
   </div>
-
   <section class="trip" id="trip">
     <div class="section__container trip__container">
       <h2 class="section__title">Adventure Travel</h2>
@@ -733,15 +783,15 @@
   <button class="top-btn" id="goToTopBtn" onclick="goToTop()"><i class="fa-solid fa-chevron-up"
       style="color: #ffffff;"></i></button>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
     integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <script>
+  <script> -->
 
 
 
-    var tl = gsap.timeline();
+    <!-- var tl = gsap.timeline();
 
     tl.from("nav", {
       opacity: 0,
@@ -777,7 +827,7 @@
       opacity: 0,
       x:-50,
       duration: 0.7,
-    })
+    }) -->
 
   </script>
 
@@ -854,6 +904,30 @@
       newDiv.style.display = "block";
     }
   }
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleCheckbox = document.getElementById('themeToggle');
+    const body = document.body;
+
+    // Load saved dark mode preference from localStorage
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+      body.classList.add('dark-mode');
+      toggleCheckbox.checked = true;
+    } else {
+      toggleCheckbox.checked = false;
+    }
+
+    toggleCheckbox.addEventListener('change', () => {
+      if (toggleCheckbox.checked) {
+        body.classList.add('dark-mode');
+        localStorage.setItem('dark-mode', 'enabled');
+      } else {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('dark-mode', 'disabled');
+      }
+    });
+  });
 </script>
 <script src="./Image-Gallery/script.js"></script>
 
