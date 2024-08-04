@@ -1319,6 +1319,7 @@ body, html {
   font-weight: 600;
   margin-bottom: 20px;
   color: #123456;
+  font-weight: bold;
 }
 
 .footer__col h3 span {
@@ -1341,9 +1342,9 @@ body, html {
 
 .footer__col h4 {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: bold;
   margin-bottom: 15px;
-  color: #ff0000;
+  color: #123456;
 }
 
 .footer__bar {
@@ -1356,6 +1357,7 @@ body, html {
   color: var(--extra-light);
   padding-top: 1rem;
   margin-top: 1rem;
+  background: linear-gradient(to right, rgba(204, 204, 204, 0), #123456, rgba(204, 204, 204, 0)); /* Gradient effect */
   border-top: 2px solid var(--text-light);
 }
 
