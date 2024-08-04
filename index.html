@@ -33,6 +33,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="./Image-Gallery/style.css">
   <link rel="stylesheet" href="./Image-Gallery/stylecaptions.css">
   <link rel="stylesheet" href="explore.css">
@@ -263,11 +264,14 @@
   cursor: pointer;
   font-size: 16px;
 }
+.header__image{
+  margin-right: 15rem;
+}
 
 #cookie-content {
   display: none;
   margin-top: 10px;
-}
+} 
 
 
     @media (max-width: 725px) {
@@ -275,6 +279,87 @@
         display: none;
       }
     }
+/* testimonials */
+    .card1 {
+  width: 330px;
+  height: 450px;
+  transition: opacity 0.5s ease;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.card1:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background-color: rgb(228, 224, 238);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.card-img-top {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+@media (max-width: 995px) {
+  .row1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card1 {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+
+  </style>
+  <style>
+    #progress-container {
+    position: fixed ;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    z-index: 99990;
+    /* background: #f3f3f3; */
+}
+
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 7px;
+    width: 0;
+    background: linear-gradient(90deg, rgb(0, 72, 255) 0%, rgb(153, 187, 255) 50%, rgb(0, 184, 250) 100%);
+    box-shadow: 0 0 4px rgba(0, 166, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.7);
+    transition: width 0.09s ease-in-out;
+    border-radius: 10px;
+}
 
   </style>
   <link rel="stylesheet" href="imstyle.css">
@@ -286,6 +371,8 @@
 <body style="background-color: var(--secondary-color);">
 
   <body>
+
+
     <div class="circle-container">
       <div class="circle"></div>
       <div class="circle"></div>
@@ -374,91 +461,11 @@
       <canvas></canvas>
       <canvas></canvas>
     </div>
+    
+
     <!-- <div id="progressbar"></div> -->
-    <div id="scrollPath"></div>
 
-    <div id="cookie-consent">
-      <p>
-        We use cookies to enhance your experience on our website. By continuing to browse, you agree to our use of cookies as described in our Cookie Policy.
-          <a href="#" id="learn-more-link">Learn More</a>
-  
-      </p>
-      <div id="learn-more-content" style="display: none;">
-        <p>Cookies are small text files used by websites to enhance user experience. According to the law, we can store cookies on your device if they are essential for the operation of this site. For other types of cookies, we need your consent.</p>
-        <p>This site employs various types of cookies. Some cookies are set by third-party services that appear on our pages.</p>
-      </div>
-  
-      <a href="#" id="show-less-link" style="display: none;">Show Less</a>
-      <button class="accept-cookies">Accept</button>
-      <button class="reject-cookies">Reject</button>
-    </div>
-
-    <script>
-
-
-
-      document.addEventListener('DOMContentLoaded', function() {
-      const cookieConsent = document.getElementById('cookie-consent');
-      const acceptButton = document.querySelector('.accept-cookies');
-      const rejectButton = document.querySelector('.reject-cookies');
-      const learnMoreLink = document.getElementById('learn-more-link');
-      const learnMoreContent = document.getElementById('learn-more-content');
-    
-      // Hide preloader after page load
-      window.addEventListener('load', function() {
-        const preloader = document.getElementById('preloader');
-        if (preloader) {
-          preloader.style.display = 'none';
-        }
-        cookieConsent.style.display = 'block';
-      });
-    
-      // Check if localStorage is available
-      function localStorageAvailable() {
-        try {
-          const test = '__localStorage_test__';
-          localStorage.setItem(test, test);
-          localStorage.removeItem(test);
-          return true;
-        } catch (e) {
-          return false;
-        }
-      }
-    
-      if (localStorageAvailable()) {
-        // Check if the user has already made a choice
-        if (localStorage.getItem('cookieConsent')) {
-          cookieConsent.style.display = 'none';
-        }
-    
-        // Function to handle cookie consent choice
-        function handleConsent(choice) {
-          localStorage.setItem('cookieConsent', choice);
-          cookieConsent.style.display = 'none';
-        }
-    
-        // Add event listeners to buttons
-        acceptButton.addEventListener('click', function() {
-          handleConsent('accepted');
-        });
-    
-        rejectButton.addEventListener('click', function() {
-          handleConsent('rejected');
-        });
-      } else {
-        // Hide consent if localStorage is not available
-        cookieConsent.style.display = 'none';
-      }
-    
-      // Add event listener to "Learn More" link
-      learnMoreLink.addEventListener('click', function(event) {
-        event.preventDefault();
-        learnMoreContent.style.display = 'block';
-        learnMoreLink.style.display = 'none';
-      });
-    });
-    </script>
-
+    <!-- <div id="scrollPath"></div> -->
 
     <!-- <canvas id="canvas"></canvas> -->
     <!-- <nav>
@@ -530,7 +537,26 @@
     </div>
     <header>
       <div class="nav-wrapperr">
-        <div class="progress-bar"></div>
+        <div id="progress-container">
+          <div id="progress-bar"></div>
+        </div>
+    
+        <script>
+        window.addEventListener('scroll', function() {
+    // Get the current scroll position
+    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    
+    // Get the total scrollable height
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    
+    // Calculate the percentage scrolled
+    const scrolled = (winScroll / height) * 100;
+    
+    // Set the progress bar width
+    document.getElementById('progress-bar').style.width = scrolled + '%';
+});
+
+        </script>
       </div>
       
       <section class="section__container header__container" id="Home">
@@ -1288,7 +1314,220 @@
     <br /><br /><br /><br />
 
     <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
+    <section id="testimo" class="testimo">
+      <h2 class="testimonial-heading section__title" align-items="center" data-aos="fade-in">Testimonials</h2>
+      <div class="container" style="display: flex; flex-wrap: wrap">
+        <div
+          class="card text-center card1"
+          style="
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            perspective: 1000px;
+            transition: transform 0.8s;
+          "
+        >
+          <div
+            class="card-inner"
+            style="
+              position: relative;
+              width: 100%;
+              height: 100%;
+              text-align: center;
+              transform-style: preserve-3d;
+              transition: transform 0.8s;
+            "
+          >
+            <div
+              class="card-front"
+              style="
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+              "
+            >
+              <img
+                src="./img/testimonial1.jpg"
+                class="card-img-top"
+                alt="Broccoli"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </div>
+            <div
+              class="card-back"
+              style="
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                transform: rotateY(180deg);
+                background-color: rgb(228, 224, 238);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: black;
+              "
+            >
+            <p><sup><i class="fas fa-quote-left"></i></sup>TourGuide made our dream vacation a reality! From the
+              breathtaking landscapes to the seamless logistics, every moment was a new adventure. The
+              personalized
+              itinerary and expert guides added a special touch to our journey. We can't wait to book our next
+              trip with
+              TourGuide!<sup><i class="fas fa-quote-right"></i></sup></p>
+            <div class="user-info">
+              <h3>Joseph</h3>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card text-center card1"
+          style="
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            perspective: 1000px;
+            transition: transform 0.8s;
+          "
+        >
+          <div
+            class="card-inner"
+            style="
+              position: relative;
+              width: 100%;
+              height: 100%;
+              text-align: center;
+              transform-style: preserve-3d;
+              transition: transform 0.8s;
+            "
+          >
+            <div
+              class="card-front"
+              style="
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+              "
+            >
+              <img
+                src="./img/testimonial2.jpg"
+                class="card-img-top"
+                alt="Tomato"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </div>
+            <div
+              class="card-back"
+              style="
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                transform: rotateY(180deg);
+                background-color: rgb(228, 224, 238);;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: black;
+              "
+            >
+            <p><sup><i class="fas fa-quote-left"></i></sup>Traveling with the family has never been easier!
+              TourGuide
+              took
+              care of every detail, ensuring a stress-free and enjoyable vacation for all. The kid-friendly
+              activities
+              and
+              family-oriented guides made our trip unforgettable.<sup><i class="fas fa-quote-right"></i></sup></p>
+            <div class="user-info">
+              <h3>Katie</h3>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card text-center card1"
+          style="
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            perspective: 1000px;
+            transition: transform 0.8s;
+          "
+        >
+          <div
+            class="card-inner"
+            style="
+              position: relative;
+              width: 100%;
+              height: 100%;
+              text-align: center;
+              transform-style: preserve-3d;
+              transition: transform 0.8s;
+            "
+          >
+            <div
+              class="card-front"
+              style="
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+              "
+            >
+              <img
+                src="/img/Abhisek Tamang.jpg"
+                class="card-img-top"
+                alt="Broccoli"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </div>
+            <div
+              class="card-back"
+              style="
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                transform: rotateY(180deg);
+                background-color: rgb(228, 224, 238);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: black;
+              "
+            >
+            <p><sup><i class="fas fa-quote-left"></i></sup>Our cultural tour with TourGuide exceeded all
+              expectations.
+              The
+              immersive experiences, knowledgeable guides, and carefully curated activities allowed us to connect
+              with
+              the
+              local culture in a way we never thought possible. Thanks to TourGuide.<sup><i
+                  class="fas fa-quote-right"></i></sup></p>
+            <div class="user-info">
+              <h3>Charles</h3>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> 
+
+    <!-- <section class="testimonials" id="testimonials">
       <h2 class="testimonial-heading section__title" align-items="center" data-aos="fade-in">Testimonials</h2>
       <div class="marquee">
         <div class="track">
@@ -1390,7 +1629,7 @@
         </div>
       </div>
 
-    </section>
+    </section> -->
 
     <!----------------------------------------------------- FAQ section ---------------------- -->
 
@@ -1617,7 +1856,7 @@
 
 
     <footer class="footer" data-aos="fade-up">
-      <div class="section__container footer__container">
+      <div class=" footer__container">
         <div class="footer__col">
           <h3 class="footer-head" class="footer__title" style="cursor: default;">Tourguide<span>.</span></h3>
           <p>
@@ -1629,14 +1868,12 @@
         </div>
         <div class="footer__col">
           <h3 class="footer-head" class="footer__title">Places You May Want to Visit<span>.</span></h3>
-          <p class="footer__text">
+          <p class="footer__text footer_text">
 
             <a href="Cultural_Exp.html">Cultural Experiences</a>
 
             <a href="HoneyMoon.html">Honeymoon Places</a>
             <a href="Adventure.html">Adventure travel</a>
-
-
           </p>
         </div>
         <div class="footer__col">
@@ -1689,32 +1926,32 @@
               <a href="tel:8562145852" class="text-nowrap">+91 8562145852</a>
             </div>
             <div class="icons">
-              <a href="">
+              <a href="https://www.linkedin.com/in/arpan-chowdhury-775294251/?original_referer=https%3A%2F%2Fin%2Esearch%2Eyahoo%2Ecom%2F&originalSubdomain=in">
                 <div class="icon">
                   <i class="fab fa-linkedin" title="linkedin" style="cursor: pointer;"></i>
                 </div>
               </a>
 
-              <a href="">
+              <a href="https://x.com/ArpanCh40193288">
                 <div class="icon">
                   <i class="fa-brands fa-x-twitter" title="X" style="cursor: pointer;"></i>
                 </div>
               </a>
 
-              <a href="">
+              <a href="https://www.instagram.com/anuragbasu1973/">
                 <div class="icon">
                   <i class="fab fa-instagram" title="Instagram" style="cursor: pointer;"></i>
                 </div>
               </a>
 
 
-              <a href="" title="YouTube">
+              <a href="https://www.youtube.com/@arpanchowdhury53" title="YouTube">
                 <div class="icon">
                   <i class="fab fa-youtube" style="cursor: pointer;"></i>
                 </div>
               </a>
 
-              <a href="">
+              <a href="https://github.com/apu52">
                 <div class="icon">
                   <i class="fab fa-github" title="Github"></i>
                 </div>
@@ -1730,9 +1967,17 @@
           </div>
 
         </div>
-        <div style="padding: 32px; background-color: #9fbaff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-          <label for="google_translate_element" style="display: block; font-weight: bold; margin-bottom: 10px; font-size: 20px; color: #333;">Select Language:</label>
+        <div style="padding: 32px; background-color: transparent; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+          <label for="google_translate_element" style="display: block; font-weight: bold; margin-bottom: 10px; font-size: 20px; color: white;">Select Language:</label>
           <div id="google_translate_element" style="display: inline-block; margin-top: 10px; padding: 20px; border: 1px solid #ff9fcf; border-radius: 5px; background-color: #fff;"></div>
+        </div>
+      </div>
+
+      <!--  New copyright code to make it dynamic and display current year -->
+      <div class="footer__bar">
+        <div>
+          <li>Copyright &copy;<span id="year"></span> </span> Arpan Chowdhury. All rights reserved. </li>
+        </div>
       </div>
       
       
@@ -1783,14 +2028,6 @@
           });
         </script> -->
         
-
-
-        <!--  New copyright code to make it dynamic and display current year -->
-        <div class="footer__bar">
-          <div>
-            <li>Copyright &copy;<span id="year"></span> </span> Arpan Chowdhury. All rights reserved. </li>
-          </div>
-        </div>
 
     </footer>
     
@@ -1894,13 +2131,38 @@
     <script src="index.js"></script>
 
 
-    <script>
+    <!-- <script>
       window.embeddedChatbotConfig = {
         chatbotId: "yDQ_EheFvX0HAPr9beQ5L",
         domain: "www.chatbase.co"
       }
     </script>
     <script src="https://www.chatbase.co/embed.min.js" chatbotId="yDQ_EheFvX0HAPr9beQ5L" domain="www.chatbase.co" defer>
+    </script> -->
+
+    <!-- chatbot -->
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script>
+      window.botpressWebChat.init({
+          "composerPlaceholder": "Ask me anything!",
+          "botConversationDescription": "TourGuide",
+          "botId": "7d93db89-5ddd-48ac-91c7-d5f35eae9bdc",
+          "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+          "messagingUrl": "https://messaging.botpress.cloud",
+          "clientId": "7d93db89-5ddd-48ac-91c7-d5f35eae9bdc",
+          "webhookId": "c874de53-fdf6-4bee-bd45-30a736b1a42e",
+          "lazySocket": true,
+          "themeName": "prism",
+          "botName": "TourGuide",
+          "avatarUrl": "https://previews.123rf.com/images/hgucuk/hgucuk2012/hgucuk201200075/161468561-world-tourism-the-tour-guide-%C3%A4%C2%B0con-design.jpg",
+          "stylesheet": "https://webchat-styler-css.botpress.app/prod/28032111-a170-4e9e-be60-9c9222f20935/v72246/style.css",
+          "frontendVersion": "v1",
+          "useSessionStorage": true,
+          "enableConversationDeletion": true,
+          "theme": "prism",
+          "themeColor": "#2563eb",
+          "allowedOrigins": []
+      });
     </script>
 
 
@@ -2230,17 +2492,7 @@
         // Initialize AOS library
         AOS.init();
       });</script>
-    <script>
-
-      let progress = document.getElementById("progressbar");
-
-      let totalHeight = document.body.scrollHeight - window.innerHeight;
-      window.onscroll = function () {
-        let progressHeight = (window.pageYOffset / totalHeight) * 100;
-        progress.style.height = progressHeight + "%";
-      }
-
-    </script>
+    
 
 
 
@@ -2334,16 +2586,7 @@
 
 
 <script>
-    const scrollline = document.querySelector('.progress-bar');
-
-  function fillscrollline() {
-    const windowHeight = window.innerHeight;
-    const fullHeight = document.body.clientHeight;
-    const scrolled = window.scrollY;
-    const percentScrolled = (scrolled / (fullHeight - windowHeight)) * 100;
-
-    scrollline.style.width = percentScrolled + '%';
-  };
+    
 
     window.addEventListener('scroll', fillscrollline);
 
