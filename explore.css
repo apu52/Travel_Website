@@ -134,6 +134,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100vw;
 }
 .section__title {
   margin: 10px;
