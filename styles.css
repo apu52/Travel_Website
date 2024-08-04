@@ -1294,6 +1294,7 @@ body, html {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 20px;
+  color: #123456;
 }
 
 .footer__col h3 span {
@@ -1318,6 +1319,7 @@ body, html {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 15px;
+  color: #ff0000;
 }
 
 .footer__bar {
@@ -2959,7 +2961,7 @@ button:hover {
 a {
   position: relative;
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 14px;
 }
 a::after {
