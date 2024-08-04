@@ -33,6 +33,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="./Image-Gallery/style.css">
   <link rel="stylesheet" href="./Image-Gallery/stylecaptions.css">
   <link rel="stylesheet" href="explore.css">
@@ -41,8 +42,6 @@
 
    <img src="Untitled (1).mp4" alt="">
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
   <link rel="stylesheet" href="tilt.css">
   <script src="tilt.js"></script>
@@ -81,7 +80,7 @@
     html {
       scroll-behavior: smooth;
     }
-  </style>
+  </style> 
   <style>
     .active {
       color: red !important;
@@ -189,12 +188,178 @@
       pointer-events: none;
       z-index: 9999;
     }
+ 
+    /* cookie-consent */
+    #cookie-consent {
+  position: fixed;
+  bottom: 10px;
+  left: 70px;
+  background-color: #e3e4fc;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  height: fit-content;
+  z-index: 10000;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin: 20px;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  transition: border-color 0.3s;
+  border: 1px solid rgb(4, 4, 215);
+  border-bottom: #3950ac;
+}
+
+#cookie-consent:hover {
+  border-right:6px solid #0207a3;
+  border-bottom:6px solid #3202a3;
+}
+
+#cookie-consent p {
+  color: black;  /* Make the text black for better visibility */
+  text-align: center;  /* Center align the text */
+}
+
+.accept-cookies,
+.reject-cookies {
+  width: 260px;  /* Decrease the button width */
+  height: 35px;  /* Decrease the button height */
+  color: white;
+  background-color: #150267;
+  border: none;
+  border-radius: 5px;  /* Add rounded corners */
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;  /* Smooth transition for effects */
+}
+
+.reject-cookies {
+  margin-top: 10px;
+}
+
+.accept-cookies:hover,
+.reject-cookies:hover {
+  transform: scale(0.95);
+  box-shadow: 0 0 15px rgb(75, 215, 239,0.6);  /* Reduce the shadow size */
+}
+
+.accept-cookies:hover {
+  background-color: rgb(57, 159, 222);
+  color: #0d0b0b;
+  border: 1px solid rgb(2, 2, 53);
+}
+
+.reject-cookies:hover {
+  background-color: rgb(57, 159, 222);
+  color: #0d0b0b;
+  border: 1px solid rgb(2, 2, 53);
+}
+
+#learn-more-link,
+#show-less-link {
+  color: #f90814;  
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+.header__image{
+  margin-right: 15rem;
+}
+
+#cookie-content {
+  display: none;
+  margin-top: 10px;
+} 
+
 
     @media (max-width: 725px) {
       .circle-container{
         display: none;
       }
     }
+/* testimonials */
+    .card1 {
+  width: 330px;
+  height: 450px;
+  transition: opacity 0.5s ease;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.card1:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background-color: rgb(228, 224, 238);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.card-img-top {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+@media (max-width: 995px) {
+  .row1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card1 {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+
+  </style>
+  <style>
+    #progress-container {
+    position: fixed ;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    z-index: 99990;
+    /* background: #f3f3f3; */
+}
+
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 7px;
+    width: 0;
+    background: linear-gradient(90deg, rgb(0, 72, 255) 0%, rgb(153, 187, 255) 50%, rgb(0, 184, 250) 100%);
+    box-shadow: 0 0 4px rgba(0, 166, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.7);
+    transition: width 0.09s ease-in-out;
+    border-radius: 10px;
+}
 
   </style>
   <link rel="stylesheet" href="imstyle.css">
@@ -206,6 +371,8 @@
 <body style="background-color: var(--secondary-color);">
 
   <body>
+
+
     <div class="circle-container">
       <div class="circle"></div>
       <div class="circle"></div>
@@ -277,6 +444,15 @@
       });
 
     </script>
+
+  <!-- sticky animation  -->
+ <script type="text/javascript">
+  window.addEventListener("scroll", function () {
+    var header = document.querySelector("nav");
+    header.classList.toggle("sticky", window.scrollY > 50)
+  })
+</script>
+
     <div id="pre-loader">
       <h1>TourGuide . . .</h1>
     </div>
@@ -285,8 +461,12 @@
       <canvas></canvas>
       <canvas></canvas>
     </div>
+    
+
     <!-- <div id="progressbar"></div> -->
-    <div id="scrollPath"></div>
+
+    <!-- <div id="scrollPath"></div> -->
+
     <!-- <canvas id="canvas"></canvas> -->
     <!-- <nav>
 
@@ -305,11 +485,14 @@
     <button id="toggle" data-aos="fade-down">Dark Theme</button>
     <a href="#contact"><button class="btn" id="btn-style">Contact Us</button></a>
   </nav> -->
+
     <div class="nav-container" id="top">
       <nav class="newNav">
+        <div style="display: flex; flex-direction: row; align-items: center;">
         <img src="./img/tour1.png" class="sitelogo">
         
         <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+      </div>
 
         <ul class="navLinks">
           <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
@@ -327,7 +510,7 @@
               </ul>
           </li>
           <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
-          <li class="link" data-aos=""><a href="feedback.html">Rate Us</a></li>
+          <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
           <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
       </ul>
 
@@ -354,7 +537,26 @@
     </div>
     <header>
       <div class="nav-wrapperr">
-        <div class="progress-bar"></div>
+        <div id="progress-container">
+          <div id="progress-bar"></div>
+        </div>
+    
+        <script>
+        window.addEventListener('scroll', function() {
+    // Get the current scroll position
+    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    
+    // Get the total scrollable height
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    
+    // Calculate the percentage scrolled
+    const scrolled = (winScroll / height) * 100;
+    
+    // Set the progress bar width
+    document.getElementById('progress-bar').style.width = scrolled + '%';
+});
+
+        </script>
       </div>
       
       <section class="section__container header__container" id="Home">
@@ -423,7 +625,23 @@
                       transform: scale(1.8);
                       transition: transform 0.8s ease;
                     }
+                    .video-container {
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      height: 30vh;
+                    }
+                    .iframe {
+                       width: 760px;
+                       height: 515px;
+                       border: none;
+
+                    }
                   </style>
+                  <br>
+                  <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/veULUjsSrPg?si=eq3sDAt3-yZnZUme" allowfullscreen></iframe>
+                  </div>
                   <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
                     <span style="margin-left: 80px;"></span>Welcome to TourGuide, where we firmly believe that life's
                     true purpose unfolds amidst the thrill of exploration, the embrace of the unfamiliar, and the
@@ -1096,7 +1314,220 @@
     <br /><br /><br /><br />
 
     <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
+    <section id="testimo" class="testimo">
+      <h2 class="testimonial-heading section__title" align-items="center" data-aos="fade-in">Testimonials</h2>
+      <div class="container" style="display: flex; flex-wrap: wrap">
+        <div
+          class="card text-center card1"
+          style="
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            perspective: 1000px;
+            transition: transform 0.8s;
+          "
+        >
+          <div
+            class="card-inner"
+            style="
+              position: relative;
+              width: 100%;
+              height: 100%;
+              text-align: center;
+              transform-style: preserve-3d;
+              transition: transform 0.8s;
+            "
+          >
+            <div
+              class="card-front"
+              style="
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+              "
+            >
+              <img
+                src="./img/testimonial1.jpg"
+                class="card-img-top"
+                alt="Broccoli"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </div>
+            <div
+              class="card-back"
+              style="
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                transform: rotateY(180deg);
+                background-color: rgb(228, 224, 238);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: black;
+              "
+            >
+            <p><sup><i class="fas fa-quote-left"></i></sup>TourGuide made our dream vacation a reality! From the
+              breathtaking landscapes to the seamless logistics, every moment was a new adventure. The
+              personalized
+              itinerary and expert guides added a special touch to our journey. We can't wait to book our next
+              trip with
+              TourGuide!<sup><i class="fas fa-quote-right"></i></sup></p>
+            <div class="user-info">
+              <h3>Joseph</h3>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card text-center card1"
+          style="
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            perspective: 1000px;
+            transition: transform 0.8s;
+          "
+        >
+          <div
+            class="card-inner"
+            style="
+              position: relative;
+              width: 100%;
+              height: 100%;
+              text-align: center;
+              transform-style: preserve-3d;
+              transition: transform 0.8s;
+            "
+          >
+            <div
+              class="card-front"
+              style="
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+              "
+            >
+              <img
+                src="./img/testimonial2.jpg"
+                class="card-img-top"
+                alt="Tomato"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </div>
+            <div
+              class="card-back"
+              style="
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                transform: rotateY(180deg);
+                background-color: rgb(228, 224, 238);;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: black;
+              "
+            >
+            <p><sup><i class="fas fa-quote-left"></i></sup>Traveling with the family has never been easier!
+              TourGuide
+              took
+              care of every detail, ensuring a stress-free and enjoyable vacation for all. The kid-friendly
+              activities
+              and
+              family-oriented guides made our trip unforgettable.<sup><i class="fas fa-quote-right"></i></sup></p>
+            <div class="user-info">
+              <h3>Katie</h3>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card text-center card1"
+          style="
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            perspective: 1000px;
+            transition: transform 0.8s;
+          "
+        >
+          <div
+            class="card-inner"
+            style="
+              position: relative;
+              width: 100%;
+              height: 100%;
+              text-align: center;
+              transform-style: preserve-3d;
+              transition: transform 0.8s;
+            "
+          >
+            <div
+              class="card-front"
+              style="
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+              "
+            >
+              <img
+                src="/img/Abhisek Tamang.jpg"
+                class="card-img-top"
+                alt="Broccoli"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </div>
+            <div
+              class="card-back"
+              style="
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                transform: rotateY(180deg);
+                background-color: rgb(228, 224, 238);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: black;
+              "
+            >
+            <p><sup><i class="fas fa-quote-left"></i></sup>Our cultural tour with TourGuide exceeded all
+              expectations.
+              The
+              immersive experiences, knowledgeable guides, and carefully curated activities allowed us to connect
+              with
+              the
+              local culture in a way we never thought possible. Thanks to TourGuide.<sup><i
+                  class="fas fa-quote-right"></i></sup></p>
+            <div class="user-info">
+              <h3>Charles</h3>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> 
+
+    <!-- <section class="testimonials" id="testimonials">
       <h2 class="testimonial-heading section__title" align-items="center" data-aos="fade-in">Testimonials</h2>
       <div class="marquee">
         <div class="track">
@@ -1198,7 +1629,7 @@
         </div>
       </div>
 
-    </section>
+    </section> -->
 
     <!----------------------------------------------------- FAQ section ---------------------- -->
 
@@ -1425,7 +1856,7 @@
 
 
     <footer class="footer" data-aos="fade-up">
-      <div class="section__container footer__container">
+      <div class=" footer__container">
         <div class="footer__col">
           <h3 class="footer-head" class="footer__title" style="cursor: default;">Tourguide<span>.</span></h3>
           <p>
@@ -1437,14 +1868,12 @@
         </div>
         <div class="footer__col">
           <h3 class="footer-head" class="footer__title">Places You May Want to Visit<span>.</span></h3>
-          <p class="footer__text">
+          <p class="footer__text footer_text">
 
             <a href="Cultural_Exp.html">Cultural Experiences</a>
 
             <a href="HoneyMoon.html">Honeymoon Places</a>
             <a href="Adventure.html">Adventure travel</a>
-
-
           </p>
         </div>
         <div class="footer__col">
@@ -1456,6 +1885,7 @@
             <p><a href="./privacy.html" class="footer__link">Privacy Policy</a></p>
             <p><a href="./Licensing.html" class="footer__link">Licensing</a></p>
             <p><a href="#cnt-form" class="footer__link">Contact Us</a></p>
+            <p><a href="contributors.html" class="footer__link">Our Contributors</a></p>
           </div>
         </div>
         <div class="footer__col">
@@ -1496,32 +1926,32 @@
               <a href="tel:8562145852" class="text-nowrap">+91 8562145852</a>
             </div>
             <div class="icons">
-              <a href="">
+              <a href="https://www.linkedin.com/in/arpan-chowdhury-775294251/?original_referer=https%3A%2F%2Fin%2Esearch%2Eyahoo%2Ecom%2F&originalSubdomain=in">
                 <div class="icon">
                   <i class="fab fa-linkedin" title="linkedin" style="cursor: pointer;"></i>
                 </div>
               </a>
 
-              <a href="">
+              <a href="https://x.com/ArpanCh40193288">
                 <div class="icon">
                   <i class="fa-brands fa-x-twitter" title="X" style="cursor: pointer;"></i>
                 </div>
               </a>
 
-              <a href="">
+              <a href="https://www.instagram.com/anuragbasu1973/">
                 <div class="icon">
                   <i class="fab fa-instagram" title="Instagram" style="cursor: pointer;"></i>
                 </div>
               </a>
 
 
-              <a href="" title="YouTube">
+              <a href="https://www.youtube.com/@arpanchowdhury53" title="YouTube">
                 <div class="icon">
                   <i class="fab fa-youtube" style="cursor: pointer;"></i>
                 </div>
               </a>
 
-              <a href="">
+              <a href="https://github.com/apu52">
                 <div class="icon">
                   <i class="fab fa-github" title="Github"></i>
                 </div>
@@ -1537,29 +1967,71 @@
           </div>
 
         </div>
-
-        <div class="footer__col">
-          <div id="google_element"></div>
-          <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
-          <script>
-            function loadGoogleTranslate() {
-              new google.translate.TranslateElement({
-                pageLanguage: 'en'
-              }, 'google_element');
-            }
-          </script>
+        <div style="padding: 32px; background-color: transparent; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+          <label for="google_translate_element" style="display: block; font-weight: bold; margin-bottom: 10px; font-size: 20px; color: white;">Select Language:</label>
+          <div id="google_translate_element" style="display: inline-block; margin-top: 10px; padding: 20px; border: 1px solid #ff9fcf; border-radius: 5px; background-color: #fff;"></div>
         </div>
+      </div>
 
-
-        <!--  New copyright code to make it dynamic and display current year -->
-        <div class="footer__bar">
-          <div>
-            <li>Copyright &copy;<span id="year"></span> </span> Arpan Chowdhury. All rights reserved. </li>
-          </div>
+      <!--  New copyright code to make it dynamic and display current year -->
+      <div class="footer__bar">
+        <div>
+          <li>Copyright &copy;<span id="year"></span> </span> Arpan Chowdhury. All rights reserved. </li>
         </div>
+      </div>
+      
+      
+      
+      
+      <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+
+        <!-- <div class="footer__col">
+          <label for="google_translate_element" style="display: block; font-weight: bold; margin-bottom: 5px;">Select Language:</label>
+          <div id="google_translate_element" style="display: inline-block; margin-top: 10px;"></div>
+        </div>
+        
+        <script>
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+              pageLanguage: 'en',
+              includedLanguages: 'es,fr,de,ja,ko,zh-CN',
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+              autoDisplay: false,
+              gaTrack: true,
+              gaId: 'UA-XXXXXXXX-X'
+            }, 'google_translate_element');
+          }
+        </script>
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
+        <script>
+          // Apply inline styling to the select element once it is created by Google Translate
+          window.addEventListener('load', function() {
+            var interval = setInterval(function() {
+              var select = document.querySelector('#google_translate_element select');
+              if (select) {
+                select.style.padding = '5px';
+                select.style.border = '1px solid #ccc';
+                select.style.borderRadius = '0'; // Remove rounded corners to make it rectangular
+                select.style.appearance = 'none'; // Remove default styling
+                select.style.backgroundColor = '#fff';
+                select.style.cursor = 'pointer';
+                clearInterval(interval); // Stop the interval once the select element is found and styled
+              }
+            }, 100); // Check every 100ms
+          });
+        </script> -->
+        
 
     </footer>
-
+    
+  
     <a class="goupbtn" href="#" onclick="goToTop()"><i class="fa-solid fa-arrow-up"></i></a>
 
     <script>
@@ -1659,13 +2131,38 @@
     <script src="index.js"></script>
 
 
-    <script>
+    <!-- <script>
       window.embeddedChatbotConfig = {
         chatbotId: "yDQ_EheFvX0HAPr9beQ5L",
         domain: "www.chatbase.co"
       }
     </script>
     <script src="https://www.chatbase.co/embed.min.js" chatbotId="yDQ_EheFvX0HAPr9beQ5L" domain="www.chatbase.co" defer>
+    </script> -->
+
+    <!-- chatbot -->
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script>
+      window.botpressWebChat.init({
+          "composerPlaceholder": "Ask me anything!",
+          "botConversationDescription": "TourGuide",
+          "botId": "7d93db89-5ddd-48ac-91c7-d5f35eae9bdc",
+          "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+          "messagingUrl": "https://messaging.botpress.cloud",
+          "clientId": "7d93db89-5ddd-48ac-91c7-d5f35eae9bdc",
+          "webhookId": "c874de53-fdf6-4bee-bd45-30a736b1a42e",
+          "lazySocket": true,
+          "themeName": "prism",
+          "botName": "TourGuide",
+          "avatarUrl": "https://previews.123rf.com/images/hgucuk/hgucuk2012/hgucuk201200075/161468561-world-tourism-the-tour-guide-%C3%A4%C2%B0con-design.jpg",
+          "stylesheet": "https://webchat-styler-css.botpress.app/prod/28032111-a170-4e9e-be60-9c9222f20935/v72246/style.css",
+          "frontendVersion": "v1",
+          "useSessionStorage": true,
+          "enableConversationDeletion": true,
+          "theme": "prism",
+          "themeColor": "#2563eb",
+          "allowedOrigins": []
+      });
     </script>
 
 
@@ -1995,17 +2492,7 @@
         // Initialize AOS library
         AOS.init();
       });</script>
-    <script>
-
-      let progress = document.getElementById("progressbar");
-
-      let totalHeight = document.body.scrollHeight - window.innerHeight;
-      window.onscroll = function () {
-        let progressHeight = (window.pageYOffset / totalHeight) * 100;
-        progress.style.height = progressHeight + "%";
-      }
-
-    </script>
+    
 
 
 
@@ -2099,16 +2586,7 @@
 
 
 <script>
-    const scrollline = document.querySelector('.progress-bar');
-
-  function fillscrollline() {
-    const windowHeight = window.innerHeight;
-    const fullHeight = document.body.clientHeight;
-    const scrolled = window.scrollY;
-    const percentScrolled = (scrolled / (fullHeight - windowHeight)) * 100;
-
-    scrollline.style.width = percentScrolled + '%';
-  };
+    
 
     window.addEventListener('scroll', fillscrollline);
 
