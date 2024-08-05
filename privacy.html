@@ -113,6 +113,22 @@
                 font-size: 1.5rem;
             }
         }
+
+        .Lastupdate {
+    margin-bottom: 15px;
+    font-size: 19px !important;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, serif !important;
+    font-weight: 500;
+    margin-top: 0px;
+    color: rgb(255, 255, 255) !important;
+  }
+
+  #last-updated-date {
+    font-size: 18px;
+    color: rgb(255, 255, 255) !important;
+    font-weight: 400 !important;
+  }
+
     </style>
 </head>
 <body id="terms-and-conditions">
@@ -198,6 +214,9 @@
             </div>
             <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
                 <div class="content">
+                    <div class="Lastupdate">Last updated: 
+                        <span id="last-updated-date"></span>
+                    </div>
                     <p>
                         Tourguide, LLC ("Tourguide") built the Tourguide Platform as a Commercial service. This SERVICE is provided by Tourguide and is intended for use as is.
                         This page is used to inform visitors regarding Tourguide's policies with the collection, use, and disclosure of Personal Information if anyone decides to use the Tourguide Platform.
@@ -255,6 +274,44 @@
           document.documentElement.scrollTop = 0;
         }
       </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      setTimeout(() => {
+        const loader = document.getElementById("loader");
+        if (loader) {
+          loader.style.display = "none";
+        } else {
+          console.error("Element with ID 'loader' not found.");
+        }
+      }, 500);
+
+      // Update the date dynamically
+      function updateLastUpdatedDate() {
+        const dateElement = document.getElementById("last-updated-date");
+        const now = new Date();
+        const day = now.getDate();
+        const monthNames = [
+          "January", "February", "March", "April", "May", "June",
+          "July", "August", "September", "October", "November", "December"
+        ];
+        const month = monthNames[now.getMonth()]; 
+        const year = now.getFullYear();
+        dateElement.textContent = `${month} ${day}, ${year}`;
+      }
+
+      function updateWeekly() {
+        const now = new Date();
+        const dayOfWeek = now.getDay(); // 0 (Sunday) to 6 (Saturday)
+        const timeUntilNextUpdate = (7 - dayOfWeek) * 24 * 60 * 60 * 1000; // Time until next Sunday
+        updateLastUpdatedDate();
+        setTimeout(updateWeekly, timeUntilNextUpdate);
+      }
+
+      updateWeekly();
+    });
+  </script>
+  
     <div class="copyright-footer">
         Copyright &copy; <span id="year"></span> Arpan Chowdhury. All rights reserved.
     </div>
