@@ -241,3 +241,18 @@ html {
     font-size: 17px;
     color: rgb(185, 185, 185);
   }
+
+  .Lastupdate {
+    margin-bottom: 15px;
+    font-size: 19px !important;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, serif !important;
+    font-weight: 500;
+    margin-top: 0px;
+    color: rgb(255, 255, 255) !important;
+  }
+
+  #last-updated-date {
+    font-size: 18px;
+    color: rgb(255, 255, 255) !important;
+    font-weight: 400 !important;
+  }
