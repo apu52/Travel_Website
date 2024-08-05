@@ -18,10 +18,7 @@
   <title>Arpan Codes | Tourguide</title>
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
+   
     .top-btn {
       display: none;
       width: 50px;
@@ -168,9 +165,9 @@
   <style>
     /* Toggle button styles */
 .toggle-container {
-  position: fixed; /* Change this as needed for positioning */
-  top: 10px;
-  right: 10px;
+  /* position: fixed; Change this as needed for positioning */
+  /* top: 10px; */
+  /* right: 10px; */
 }
 
 .toggle {
@@ -225,6 +222,38 @@ body.dark-mode .section__container {
   background-color: #002152;
   color: #ffffff;
 }
+
+
+@media screen and (max-width:390px) {
+      .nav__logo {
+        position: relative;
+        right: 1.9rem;
+      }
+
+      .contact-btn {
+        position: relative;
+        right: 2.5rem;
+      }
+
+      .toggle-container {
+        position: relative;
+        right: 2.5rem;
+
+      }
+
+      .toggle {
+        width: 130%;
+      }
+
+      .line {
+        width: 150%;
+      }
+
+      .hamburger {
+        position: relative;
+        right: 1rem;
+      }
+    }
   </style>
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -233,6 +262,13 @@ body.dark-mode .section__container {
       emailjs.init("WB9rAyWwwLZube-er");
     })();
   </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
 </head>
 
 <body>

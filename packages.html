@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip & Hotel Packages</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #d6eaf7;
+            --secondary-color: #e73e76;
+            --bg-color: #f4f4f9;
+            --text-color: #333;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: none;
+            color: var(--text-color);
+        }
+
+        #background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    object-fit: cover;
+    background-size: cover;
+}
+
+.video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -999;
+}
+
+
+        .nav-container {
+            margin-top: 0;
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 9999;
+        }
+
+        .sticky {
+            border-radius: 10px;
+            background: linear-gradient(#002152, #271050);
+            scale: 0.99;
+        }
+
+        .navLinks {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.16rem;
+            list-style: none;
+            gap: 0.97rem;
+            z-index: 10;
+            right: 24px;
+        }
+
+        .newNav {
+            margin-top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            height: auto;
+            width: 100%;
+            padding: 0.4rem 0.5rem;
+            z-index: 10000;
+            transition: all 0.6s;
+        }
+
+        .sitelogo {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .nav__logo {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .nav__logo span {
+            color: #e73e76;
+        }
+
+        .link {
+            position: relative;
+        }
+
+        .link>a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            text-decoration: none;
+            width: 100%;
+            transition: all 0.3s linear;
+        }
+
+        .link>a:hover {
+            background-color: #f6ddff;
+            border-radius: 10px;
+            box-shadow: rgb(56, 0, 109) 0px 0px 8px 2px inset;
+            color: #002152;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #123456;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-menu>li {
+            float: none;
+        }
+
+        .dropdown-menu>li>a {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            color: white;
+        }
+
+        .dropdown-menu>li>a:hover {
+            background-color: #575757;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .contact-btn {
+            position: relative;
+            right: 15px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            color: white;
+            background-color: #0697f1;
+        }
+
+        .btn:hover {
+            background-color: #0578c1;
+        }
+
+        #themeToggle {
+            width: inherit;
+        }
+
+        .toggle-container {
+            margin-left: 15px;
+        }
+
+        .hamburger {
+            height: 2rem;
+            width: 1.7rem;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            display: none;
+            transition: 0.2s;
+        }
+
+        .line {
+            height: 5px;
+            width: 100%;
+            background-color: white;
+            border-radius: 2px;
+        }
+
+        .main-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 0 40px;
+        }
+
+        .package-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .package-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .package-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .package-info {
+            padding: 20px;
+        }
+
+        .package-info h3 {
+            margin: 0 0 10px;
+            color: #0697f1;
+        }
+
+        .package-info p {
+            margin: 0;
+            color: #666;
+        }
+
+        @media (max-width: 1024px) {
+            .navLinks {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.2em;
+            margin: 90px 0 20px !important;
+            font-weight: 800;
+            font-family: 'Poppins',sans-serif;
+            color: var(--primary-color);
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        .subtitle {
+            color: var(--secondary-color);
+            font-style: italic;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            font-weight: 800;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            animation: fadeInUp 0.5s ease-out 0.2s both;
+        }
+
+        .center-card {
+            
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .center-card img {
+            max-width: 400px;
+            height: auto;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        .center-card img:hover {
+            transform: scale(1.05) translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .hotel-packages {
+            padding: 40px 0;
+            margin-top: 10px;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        .pricing-section {
+    padding: 60px 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    margin-top: 40px;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 6vh;
+}
+
+.table {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.table:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.ribbon {
+    position: absolute;
+    right: -34px;
+    top: 30px;
+    background: #e73e76;
+    color: white;
+    padding: 5px 40px;
+    transform: rotate(45deg);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.price-section {
+    margin-bottom: 20px;
+}
+
+.price-area {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    padding: 2px;
+    margin: 0 auto;
+    background: linear-gradient(#0697f1, #e73e76);
+}
+
+.inner-area {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    color: #fff;
+    line-height: 117px;
+    text-align: center;
+}
+.basic-price{
+    background: #ffd861;
+}
+.premium-price {
+    background: #a26bfa; 
+}
+
+.ultimate-price {
+    background: #32cd32; 
+}
+
+.text {
+    font-size: 25px;
+    font-weight: 600;
+    display: block;
+}
+
+.features li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    list-style-type: none;
+}
+
+.features .list-name {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.features .icon {
+    font-size: 15px;
+}
+
+.features .icon.check {
+    color: #0697f1;
+}
+
+.features .icon.cross {
+    color: #cd3241;
+}
+
+.purchase-btn {
+    margin-top: 30px;
+}
+
+.purchase-btn button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: #0697f1;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.purchase-btn button:hover {
+    background: #e73e76;
+    transform: scale(1.05);
+}
+
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .section-title {
+                font-size: 1.8em;
+            }
+
+            .subtitle {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="./packages_bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay"></div>
+
+    <div class="nav-container" id="top">
+        <nav class="newNav sticky">
+            <div style="display: flex; flex-direction: row; align-items: center;">
+                <img src="./img/tour1.png" class="sitelogo">
+                <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+            </div>
+            <ul class="navLinks">
+                <li class="link" data-aos=""><a href="./index.html">Home</a></li>
+                <li class="link" data-aos=""><a href="#AboutUs">About</a></li>
+                <li class="link dropdown" data-aos="">
+                    <a href="#Services" class="dropdown">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#Destinations">Destination</a></li>
+                        <li><a href="#trip">Prices</a></li>
+                        <li><a href="#ReviewGallery">Trip Gallery</a></li>
+                        <li><a href="#tourist">Tourist Guide</a></li>
+                        <li><a href="#hotel">Hotel & Resort</a></li>
+                    </ul>
+                </li>
+                <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
+                <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+                <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
+            </ul>
+            <a href="newLogin.html" class="contact-btn" id="nav-login-btn">
+                <button class="btn login" id="btn-style" data-aos="fade-down">Login/SignUp</button>
+            </a>
+            <a href="mapa.html" class="contact-btn" id="nav-view-btn">
+                <button class="btn" id="btn-style" style="margin: 0;" data-aos="fade-down">view</button>
+            </a>
+            <a href="loginPage.html" class="contact-btn">
+                <button class="btn" id="logout-btn" style="margin: 0; display: none;" data-aos="fade-down" disabled>Log
+                    Out</button>
+            </a>
+            <div class="hamburger" data-aos="fade-down">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </div>
+
+
+    <section class="tourist part" id="tourist">
+        <h2 class="section-title">Tourist Guide</h2>
+        <p class="subtitle">Have an amazing trip and explore the destiny</p>
+        <div class="center-card">
+            <img src="./tg1.jpg" alt="guide1" />
+            <img src="./tg2.jpg" alt="guide2" />
+            <img src="./tg3.jpg" alt="guide3" />
+        </div>
+    </section>
+
+
+    <section class="hotel-packages" id="hotels">
+        <h2 class="section-title animate-fadeInUp">Hotel Packages</h2>
+        <p class="subtitle animate-fadeInUp">Luxurious stays for your perfect getaway</p>
+        <div class="center-card">
+            <img src="./h1.png" alt="Luxury Hotel 1" class=" center-card" style="animation-delay: 0.2s;" />
+            <img src="./h2.png" alt="Luxury Hotel 2" class=" center-card" style="animation-delay: 0.4s;" />
+            <img src="./h3.png" alt="Luxury Hotel 3" class=" center-card" style="animation-delay: 0.6s;" />
+            <img src="./h4.png" alt="Luxury Hotel 4" class=" center-card" style="animation-delay: 0.8s;" />
+        </div>
+    </section>
+
+    <section class="pricing-section" id="pricing">
+        <h2 class="section-title animate-fadeInUp">Our Pricing Plans</h2>
+        <p class="subtitle animate-fadeInUp">Choose the perfect plan for your journey</p>
+        <div class="pricing-container">
+            <div class="table basic animate-fadeInUp" style="animation-delay: 0.1s;">
+                <div class="price-section">
+                    <div class="price-area">
+                        <div class="inner-area basic-price">
+                            <span class="text">₹2500/- </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="package-name"></div>
+                <ul class="features">
+                    <li>
+                        <span class="list-name">5% Discounts on Accommodations</span>
+                        <span class="icon check"><i class="fas fa-check"></i></span>
+                    </li>
+                    <li>
+                        <span class="list-name">Exclusive Travel Guides</span>
+                        <span class="icon cross"><i class="fas fa-times"></i></span>
+                    </li>
+                    <li>
+                        <span class="list-name">Monthly Travel Webinars</span>
+                        <span class="icon check"><i class="fas fa-check"></i></span>
+                    </li>
+                    <li>
+                        <span class="list-name">Priority Customer Support</span>
+                        <span class="icon check"><i class="fas fa-check"></i></span>
+                    </li>
+        
+                </ul>
+                <div class="purchase-btn"><button>Purchase</button></div>
+            </div>
+
+
+            <div class="table premium animate-fadeInUp" style="animation-delay: 0.2s;">
+                <div class="ribbon"><span>Recommend</span></div>
+                <div class="price-section">
+                    <div class="price-area">
+                        <div class="inner-area premium-price">
+                            <span class="text">₹1500/- </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="package-name"></div>
+                <ul class="features">
+                    <li>
+                        <span class="list-name">15% Discounts on Accommodations</span>
+                        <span class="icon check"><i class="fas fa-check"></i></span>
+                    </li>
+                    <li>
+                        <span class="list-name">Exclusive Travel Guides</span>
+                        <span class="icon check"><i class="fas fa-check"></i></span>
+                    </li>
+                    <li>
+                        <span class="list-name">Monthly Travel Webinars</span>
+                        <span class="icon check"><i class="fas fa-check"></i></span>
+                    </li>
+                    <li>
+                        <span class="list-name">Points/Rewards Program</span>
+                        <span class="icon cross"><i class="fas fa-times"></i></span>
+                    </li>
+                    <li>
+                        <span class="list-name">Cancellation Protection</span>
+                        <span class="icon cross"><i class="fas fa-times"></i></span>
+                    </li>
+                    <li>
+                        <span class="list-name">Exclusive Travel Merchandise</span>
+                        <span class="icon cross"><i class="fas fa-times"></i></span>
+                    </li>
+                </ul>
+                <div class="purchase-btn"><button>Purchase</button></div>
+            </div>
+            <div class="table ultimate animate-fadeInUp" style="animation-delay: 0.4s;">
+                <div class="price-section">
+                    <div class="price-area">
+                        <div class="inner-area ultimate-price">
+                            <span class="text">₹2500/- </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="package-name"></div>
+                <ul class="features">
+                    <li>
+                        <span class="list-name">25% Discounts on Accommodations</span>
+                        <span class="icon check"><i class="fas fa-check"></i></span>
+                    </li>
+                    <li>
+                        <span class="list-name">Basic and Premium plan perks included</span>
+                        <span class="icon check"><i class="fas fa-check"></i></span>
+                    </li>
+                    <li>
+                        <span class="list-name">Airport Lounge Access and Free Travel Insurance</span>
+                        <span class="icon check"><i class="fas fa-check"></i></span>
+                    </li>
+                    <li>
+                        <span class="list-name">Unlimited Access to Premium Content</span>
+                        <span class="icon check"><i class="fas fa-check"></i></span>
+                    </li>
+                </ul>
+                <div class="purchase-btn"><button>Purchase</button></div>
+            </div>
+        </div>
+    </section>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const animatedElements = document.querySelectorAll('.animate-fadeInUp');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            animatedElements.forEach(el => {
+                el.style.opacity = 0;
+                el.style.transform = 'translateY(20px)';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+
+</html>

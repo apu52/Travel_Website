@@ -1,3 +1,26 @@
+html {
+  scroll-behavior: smooth;
+}
+.top-btn {
+  display: none;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 10px;
+  right: 0px;
+  background-color: #ab45e7;
+  color: #fff;
+  padding: 2px;
+  border: none;
+  margin-right: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.top-btn:hover {
+  background-color: #0056b3;
+}
 @font-face {
     font-family: Aller;
     src: url("../fonts/aller/aller_bd.eot");
