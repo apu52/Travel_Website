@@ -94,6 +94,59 @@
         opacity: 1;
       }
     }
+    /* Dark mode feature */
+body.dark-mode{
+  --secondary-color:#0e1525;
+  --btn-border: red;
+}
+body.dark-mode {
+  background-color: var(--secondary-color);
+}
+
+body.dark-mode .nav-container {
+  background-color: #343a40;
+}
+
+body.dark-mode .section__container {
+  background-color: #002152;
+  color: #ffffff;
+}
+
+    
+    body.dark-mode .each{
+      background-color: #ffffffab;
+    
+      border: 1px solid #ffffff;
+    }
+
+    body.dark-mode .each h5{
+      color:#0c4581;
+    }
+
+    body.dark-mode .trip__details{
+      background-color: #0a0035;
+    }
+    body.dark-mode .trip__details p{
+      color:#caf9ff;
+    }
+    body.dark-mode .price span{
+      color:#dbdbdb;
+    }
+    body.dark-mode .price{
+      color:#dbdbdb;
+    }
+    body.dark-mode .info .tags i{
+      color:#8cc0ff;
+    }
+
+    body.dark-mode .trip__details button{
+      background-color: #cfe4fb;
+    }
+
+    body.dark-mode .trip__details button:hover{
+      background-color: transparent;
+    }
+
   </style>
 
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
@@ -817,5 +870,29 @@
   }
 </script>
 <script src="./Image-Gallery/script.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleCheckbox = document.getElementById('themeToggle');
+    const body = document.body;
+
+    // Load saved dark mode preference from localStorage
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+      body.classList.add('dark-mode');
+      toggleCheckbox.checked = true;
+    } else {
+      toggleCheckbox.checked = false;
+    }
+
+    toggleCheckbox.addEventListener('change', () => {
+      if (toggleCheckbox.checked) {
+        body.classList.add('dark-mode');
+        localStorage.setItem('dark-mode', 'enabled');
+      } else {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('dark-mode', 'disabled');
+      }
+    });
+  });
+</script>
 
 </html>
