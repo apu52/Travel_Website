@@ -7,6 +7,7 @@
     <title>Trip & Hotel Packages</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
     <style>
         :root {
             --primary-color: #d6eaf7;
@@ -27,6 +28,7 @@
             margin: 0;
             padding: 0;
             overflow-x: hidden;
+           
         }
 
         body {
@@ -35,6 +37,7 @@
             padding: 0;
             background-color: none;
             color: var(--text-color);
+            display: block;
         }
 
         #background-video {
@@ -59,7 +62,13 @@
     background-color: rgba(0, 0, 0, 0.5);
     z-index: -999;
 }
-
+/* nav {
+  background-color: #123456;
+  position: fixed;
+  top: 0;
+  width: 100px;
+  z-index: 1001;
+}
 
         .nav-container {
             margin-top: 0;
@@ -72,17 +81,17 @@
             left: 0;
             top: 0;
             z-index: 9999;
-        }
+        } */
 
-        .sticky {
+        /* .sticky {
             border-radius: 10px;
             background: linear-gradient(#002152, #271050);
             scale: 0.99;
-        }
+        } */
 
-        .navLinks {
-            display: flex;
-            justify-content: center;
+        /* .navLinks {
+            display: flex; */
+            /* justify-content: center;
             align-items: center;
             font-size: 1.16rem;
             list-style: none;
@@ -92,21 +101,21 @@
         }
 
         .newNav {
-            margin-top: 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 0.5rem;
-            height: auto;
-            width: 100%;
-            padding: 0.4rem 0.5rem;
-            z-index: 10000;
-            transition: all 0.6s;
-        }
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           gap: 0.5rem;
+           height: auto;
+           width: 100%;
+           padding: 0.4rem 0.5rem;
+           z-index: 10000;
+           transition: all 0.6s;
+            } */
 
         .sitelogo {
             height: 40px;
             margin-right: 10px;
+            min-width: fit-content;
         }
 
         .nav__logo {
@@ -128,10 +137,12 @@
             display: block;
             color: white;
             text-align: center;
-            padding: 12px 20px;
+            padding:6px 10px;
             text-decoration: none;
             width: 100%;
             transition: all 0.3s linear;
+            align-items: center;
+            margin-top: -15px;
         }
 
         .link>a:hover {
@@ -139,6 +150,11 @@
             border-radius: 10px;
             box-shadow: rgb(56, 0, 109) 0px 0px 8px 2px inset;
             color: #002152;
+        }
+        .navigationbar_package{
+               align-items: center;
+              display: flex;
+               gap: 5px;
         }
 
         .dropdown-menu {
@@ -177,13 +193,15 @@
         }
 
         .btn {
-            padding: 0.5rem 1rem;
+            padding: 1rem 1rem;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             transition: background-color 0.3s ease;
             color: white;
             background-color: #0697f1;
+            margin: 0;
+
         }
 
         .btn:hover {
@@ -221,7 +239,7 @@
         }
 
         .package-grid {
-            display: grid;
+            /* display: grid; */
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             padding: 0 40px;
@@ -257,6 +275,16 @@
         .package-info p {
             margin: 0;
             color: #666;
+        }
+
+        .login_packages{
+            color: white !important;
+            background-color: #6a5acd!important;
+        }
+        .login_packages:hover{
+            background-color: #ff0000 !important;
+            border-color: #ff0000 !important;
+           color: #fff !important;
         }
 
         @media (max-width: 1024px) {
@@ -507,6 +535,7 @@
                 <img src="./img/tour1.png" class="sitelogo">
                 <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
             </div>
+            <div class="navigationbar_package">
             <ul class="navLinks">
                 <li class="link" data-aos=""><a href="./index.html">Home</a></li>
                 <li class="link" data-aos=""><a href="#AboutUs">About</a></li>
@@ -524,11 +553,11 @@
                 <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
                 <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
             </ul>
-            <a href="newLogin.html" class="contact-btn" id="nav-login-btn">
-                <button class="btn login" id="btn-style" data-aos="fade-down">Login/SignUp</button>
+            <a href="newLogin.html" class="contact-btn "  id="nav-login-btn">
+                <button class="btn login login_packages" id="btn-style" data-aos="fade-down">Login/SignUp</button>
             </a>
-            <a href="mapa.html" class="contact-btn" id="nav-view-btn">
-                <button class="btn" id="btn-style" style="margin: 0;" data-aos="fade-down">view</button>
+            <a href="mapa.html"  class="contact-btn " id="nav-view-btn">
+                <button class="btn login_packages" id="btn-style" style="margin: 0;" data-aos="fade-down">view</button>
             </a>
             <a href="loginPage.html" class="contact-btn">
                 <button class="btn" id="logout-btn" style="margin: 0; display: none;" data-aos="fade-down" disabled>Log
@@ -539,8 +568,31 @@
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
+            </div>
         </nav>
     </div>
+    <div class="nav-wrapperr">
+        <div id="progress-container">
+          <div id="progress-bar"></div>
+        </div>
+    
+        <script>
+        window.addEventListener('scroll', function() {
+    // Get the current scroll position
+    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    
+    // Get the total scrollable height
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    
+    // Calculate the percentage scrolled
+    const scrolled = (winScroll / height) * 100;
+    
+    // Set the progress bar width
+    document.getElementById('progress-bar').style.width = scrolled + '%';
+});
+
+        </script>
+      </div>
 
 
     <section class="tourist part" id="tourist">
