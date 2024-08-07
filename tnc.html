@@ -46,7 +46,6 @@
 
     }
 
-
 </style>
    
   </head>
@@ -54,6 +53,9 @@
   <body id="terms-and-conditions">
 
     <body id="terms-and-conditions">
+      <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
       <div class="circle-container">
         <div class="circle"></div>
         <div class="circle"></div>
@@ -260,6 +262,18 @@
           updateWeekly();
         });
       </script>
+
+  <script>
+
+  window.addEventListener('scroll', function() {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+  });
+  </script>
+
+
       <div>
        <div  class="copyright-footer"> Copyright &copy;<span id="year"></span> </span> Arpan Chowdhury. All rights reserved. </div>
       </div>
