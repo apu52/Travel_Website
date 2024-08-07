@@ -79,6 +79,21 @@
     color: rgb(185, 185, 185);
 }
 
+.Lastupdate {
+    margin-bottom: 55px;
+    font-size: 19px !important;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, serif !important;
+    font-weight: 500;
+    margin-top: 0px;
+    color: rgb(255, 255, 255) !important;
+  }
+
+  #last-updated-date {
+    font-size: 18px;
+    color: rgb(255, 255, 255) !important;
+    font-weight: 400 !important;
+  }
+
     </style>
     <style>
         #progress-container {
@@ -144,6 +159,10 @@
                 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
                 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
                 SOFTWARE.</p>
+
+                <div class="Lastupdate">Last updated: 
+                    <span id="last-updated-date"></span>
+                </div>
         </div>
         <hr>
         <button class="top-btn" id="goToTopBtn" onclick="goToTop()"><i class="fa-solid fa-chevron-up"
@@ -171,6 +190,44 @@
               document.documentElement.scrollTop = 0;
             }
           </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      setTimeout(() => {
+        const loader = document.getElementById("loader");
+        if (loader) {
+          loader.style.display = "none";
+        } else {
+          console.error("Element with ID 'loader' not found.");
+        }
+      }, 500);
+
+      // Update the date dynamically
+      function updateLastUpdatedDate() {
+        const dateElement = document.getElementById("last-updated-date");
+        const now = new Date();
+        const day = now.getDate();
+        const monthNames = [
+          "January", "February", "March", "April", "May", "June",
+          "July", "August", "September", "October", "November", "December"
+        ];
+        const month = monthNames[now.getMonth()]; 
+        const year = now.getFullYear();
+        dateElement.textContent = `${month} ${day}, ${year}`;
+      }
+
+      function updateWeekly() {
+        const now = new Date();
+        const dayOfWeek = now.getDay(); // 0 (Sunday) to 6 (Saturday)
+        const timeUntilNextUpdate = (7 - dayOfWeek) * 24 * 60 * 60 * 1000; // Time until next Sunday
+        updateLastUpdatedDate();
+        setTimeout(updateWeekly, timeUntilNextUpdate);
+      }
+
+      updateWeekly();
+    });
+  </script>
+
         <footer class="copyright-footer">
             <p>&copy; 2023 Arpan Chowdhury. All rights reserved.</p>
         </footer>

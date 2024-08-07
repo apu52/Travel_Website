@@ -1,0 +1,388 @@
+/* New NAvbar CSS Starts Here*/
+
+.nav-container {
+    margin-top: 0;
+    height: auto;
+    width: 200%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    z-index: 9999;
+  
+  }
+  
+  .newNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    height: auto;
+    width: 100%;
+    padding: 0.4rem 0.5rem;
+    z-index: 10000;
+    transition: all 0.6s;
+  }
+  /* navbar sticky css  */
+  .sticky{
+    /* margin: 10px 5px; */
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    background: linear-gradient(#002152, #271050);
+    scale:0.99;
+    
+    /* padding: 0rem 1rem;
+    margin-top: 0.5rem;
+    margin-left:0.5rem;
+    margin-right: 0.5rem;
+    width: 99%; */
+  }
+  
+  .navLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.16rem;
+    list-style: none;
+    gap: 0.97rem;
+    position: relative;
+    top: 0.5rem;
+    z-index: 10;
+    right: 24px;
+  }
+  
+  .link {
+    position: relative;
+  }
+  .link > a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    width: 100%;
+    transition: all 0.3s linear;
+  }
+  .link > a:hover {
+    background-color: #f6ddff;
+    border-radius: 10px;
+    box-shadow: rgb(56, 0, 109) 0px 0px 8px 2px inset;
+  }
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #123456;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-menu > li {
+    float: none;
+  }
+  
+  .dropdown-menu > li > a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-menu > li > a:hover {
+    background-color: #575757;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  /* .link a::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: -5px;
+    left: 0;
+    background-color: red;
+  } */
+  
+  /* .link a::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0%;
+    top: -5px;
+    right: 0;
+    background-color: red;
+    transition: all 0.2s ease-in-out;
+  } */
+  
+  /* .link a:hover::before {
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+  } */
+  /* 
+  .link a:hover::after {
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+  } */
+  .contact-btn {
+    position: relative;
+    right: 15px;
+    box-sizing: border-box;
+  }
+  
+  #themeToggle {
+    width: inherit;
+  }
+  
+  .hamburger {
+    height: 2rem;
+    width: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    display: none;
+    transition: 0.2s;
+  }
+  
+  .line {
+    height: 5px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+  }
+  
+  @media screen and (max-width: 1220px) {
+    .hamburger {
+      display: flex;
+      cursor: pointer;
+    }
+    .nav__logo {
+      margin-left: 0px;
+    }
+    .navLinks {
+      position: absolute;
+      top: 70px;
+      background-color: #091020;
+      width: 0%;
+      left: 0;
+      height: 100vh;
+      padding: 2rem 0;
+      flex-direction: column;
+      transition: 0.2s;
+      overflow: hidden;
+    }
+  
+    .navLinks li {
+      width: 100%;
+      padding: 0.5rem 0;
+      background-color: #1f2532;
+      z-index: 10;
+    }
+  
+    #toggle {
+      font-size: 0.6rem;
+    }
+  }
+  .footer-head {
+    position: relative;
+    display: inline-block;
+    padding: 10px 0;
+  }
+  
+  /* .footer-head::before,
+  .footer-head::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: red;
+    transition: width 0.2s ease-in;
+  } */
+  
+  .footer-head::before {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .footer-head::after {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+    /* .footer-head:hover::before {
+      width: 100%;
+    }
+    .footer-head:hover::after {
+      width: 100%;
+    } */
+  .navLinks:active {
+    color: rgb(169, 35, 252);
+  }
+  
+  .navLinks.activeHamburger {
+    width: 100%;
+  }
+  
+  /* Initially the Login Button and View button are not in Hamburger Menu */
+  .navLinks #LogIn-link, .navLinks #View-link {
+    display: none;
+  }
+  /* @media screen and (max-width: 1146px) {
+    .toggle-container {
+      position: relative;
+      right: 148px;
+    }
+    .hamburger {
+      position: relative;
+      right: 150px;
+    }
+  } */
+  /* @media only screen and (max-width:957px){
+    .toggle-container{
+      left: 30px;
+    }
+    .hamburger{
+      left: 30px;
+    }
+  } */
+  /* @media screen and (max-width: 846px) {
+    .toggle-container {
+      position: relative;
+      right: 200px;
+    }
+    .hamburger {
+      position: relative;
+      right: 245px;
+    }
+    .btn {
+      position: relative;
+      right: 57px;
+      top: 1px;
+    }
+  } */
+  
+  /* Move Login from newNav to Hamburger */
+  @media screen and (max-width: 690px) {
+    .navLinks #LogIn-link {
+      display: inline;
+    }
+    .newNav #nav-login-btn {
+      display: none;
+    }
+  }
+  
+  /* Move Login from Hamburger to newNav */
+  @media screen and (min-width: 690px) {
+    .navLinks #LogIn-link {
+      display: none;
+    }
+    .newNav #nav-login-btn {
+      display: inline;
+    }
+  }
+  
+  /* Move View from newNav to Hamburger */
+  @media screen and (max-width: 510px) {
+    .navLinks #View-link {
+      display: inline;
+    }
+    .newNav #nav-view-btn {
+      display: none;
+    }
+    .newNav img{
+      position: relative;
+    }
+    .header__image img:nth-child(1) {
+        transform: translate(0, 0%) !important;
+    }
+    .section__subtitle {
+      max-width: 100vw !important;
+      margin-left: 0 !important;
+    }
+    .testimonials {
+      padding: 0px 10px;
+    }
+  }
+  
+  /* Move View from Hamburger to newNav */
+  @media screen and (min-width: 510px) {
+    .navLinks #View-link {
+      display: none;
+    }
+    .newNav #nav-view-btn {
+      display: inline;
+    }
+  }
+  
+  /* TO prevent unnecessary wrapping */
+  @media screen and (max-width: 400px) {
+    .newNav {
+      gap: 0;
+    }
+  }
+  
+  /* Hide the logo name */
+  @media screen and (max-width: 350px) {
+    .newNav .nav__logo {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 652px) {
+    .toggle {
+      width: 5vw;
+    }
+    .line {
+      width: 5vw;
+    }
+  
+  }
+  @media only screen and (max-width:577px){
+    .but{
+      position: relative;
+      top: -37px;
+      left: 85px;
+    }
+  }
+  @media only screen and (max-width: 465.5px){
+  
+    .but{
+      position: relative;
+      left:17px;
+      top: -4px;
+    }
+    .but2{
+      position: relative;
+      left: 30px;
+      top: -2px;
+    }
+  }
+  /* @media screen and (max-width: 430px) {
+    .toggle-container {
+      right: 374px;
+    }
+    .newNav img {
+      left: 75px;
+    }
+    .nav__logo {
+      left: 36px;
+    }
+  } */
+  /* New NAvbar CSS Ends Here*/
+  /* #canvas {
+    background: #232323;
+    width: 300%;
+    position: absolute;
+    z-index: -9999;
+    left: 0;
+    top: 0;
+    height: 800%;
+  } */
+  
+  /* body, html {
+      background: #090d00;
+  } */
