@@ -1395,7 +1395,7 @@ body, html {
   color: #3b5998;
 }
 
-.icons .icon:hover .fab.fa-twitter {
+.icons .icon:hover .fab.fa-twitter, .icons .icon:hover .fa-x-twitter {
   color: #090e11;
 }
 
