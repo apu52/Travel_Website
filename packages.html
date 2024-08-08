@@ -41,6 +41,28 @@
         }
 
         #background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1000;
+            object-fit: cover;
+            background-size: cover;
+        }
+
+        .video-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -999;
+        }
+
     position: fixed;
     right: 0;
     bottom: 0;
@@ -296,12 +318,13 @@
                 display: flex;
             }
         }
+
         .section-title {
             text-align: center;
             font-size: 2.2em;
             margin: 90px 0 20px !important;
             font-weight: 800;
-            font-family: 'Poppins',sans-serif;
+            font-family: 'Poppins', sans-serif;
             color: var(--primary-color);
             animation: fadeInUp 0.5s ease-out;
         }
@@ -318,7 +341,7 @@
         }
 
         .center-card {
-            
+
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -373,137 +396,140 @@
         .animate-fadeInUp {
             animation: fadeInUp 0.6s ease-out;
         }
+
         .pricing-section {
-    padding: 60px 0;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    margin-top: 40px;
-}
+            padding: 60px 0;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            margin-top: 40px;
+        }
 
-.pricing-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-bottom: 6vh;
-}
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-bottom: 6vh;
+        }
 
-.table {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    padding: 30px;
-    text-align: center;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    flex: 1;
-    min-width: 280px;
-    max-width: 350px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
+        .table {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            flex: 1;
+            min-width: 280px;
+            max-width: 350px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
 
-.table:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
-}
+        .table:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+        }
 
-.ribbon {
-    position: absolute;
-    right: -34px;
-    top: 30px;
-    background: #e73e76;
-    color: white;
-    padding: 5px 40px;
-    transform: rotate(45deg);
-    font-size: 12px;
-    font-weight: bold;
-}
+        .ribbon {
+            position: absolute;
+            right: -34px;
+            top: 30px;
+            background: #e73e76;
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: 12px;
+            font-weight: bold;
+        }
 
-.price-section {
-    margin-bottom: 20px;
-}
+        .price-section {
+            margin-bottom: 20px;
+        }
 
-.price-area {
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
-    padding: 2px;
-    margin: 0 auto;
-    background: linear-gradient(#0697f1, #e73e76);
-}
+        .price-area {
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            padding: 2px;
+            margin: 0 auto;
+            background: linear-gradient(#0697f1, #e73e76);
+        }
 
-.inner-area {
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-    border: 3px solid #fff;
-    color: #fff;
-    line-height: 117px;
-    text-align: center;
-}
-.basic-price{
-    background: #ffd861;
-}
-.premium-price {
-    background: #a26bfa; 
-}
+        .inner-area {
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            color: #fff;
+            line-height: 117px;
+            text-align: center;
+        }
 
-.ultimate-price {
-    background: #32cd32; 
-}
+        .basic-price {
+            background: #ffd861;
+        }
 
-.text {
-    font-size: 25px;
-    font-weight: 600;
-    display: block;
-}
+        .premium-price {
+            background: #a26bfa;
+        }
 
-.features li {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-    list-style-type: none;
-}
+        .ultimate-price {
+            background: #32cd32;
+        }
 
-.features .list-name {
-    font-size: 14px;
-    font-weight: 400;
-}
+        .text {
+            font-size: 25px;
+            font-weight: 600;
+            display: block;
+        }
 
-.features .icon {
-    font-size: 15px;
-}
+        .features li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            list-style-type: none;
+        }
 
-.features .icon.check {
-    color: #0697f1;
-}
+        .features .list-name {
+            font-size: 14px;
+            font-weight: 400;
+        }
 
-.features .icon.cross {
-    color: #cd3241;
-}
+        .features .icon {
+            font-size: 15px;
+        }
 
-.purchase-btn {
-    margin-top: 30px;
-}
+        .features .icon.check {
+            color: #0697f1;
+        }
 
-.purchase-btn button {
-    border: none;
-    outline: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    background: #0697f1;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
+        .features .icon.cross {
+            color: #cd3241;
+        }
 
-.purchase-btn button:hover {
-    background: #e73e76;
-    transform: scale(1.05);
-}
+        .purchase-btn {
+            margin-top: 30px;
+        }
+
+        .purchase-btn button {
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            background: #0697f1;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .purchase-btn button:hover {
+            background: #e73e76;
+            transform: scale(1.05);
+        }
 
 
         @media (max-width: 768px) {
@@ -533,25 +559,25 @@
         <nav class="newNav sticky">
             <div style="display: flex; flex-direction: row; align-items: center;">
                 <img src="./img/tour1.png" class="sitelogo">
-                <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+                <a href="./index.html" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
             </div>
             <div class="navigationbar_package">
             <ul class="navLinks">
                 <li class="link" data-aos=""><a href="./index.html">Home</a></li>
-                <li class="link" data-aos=""><a href="#AboutUs">About</a></li>
+                <li class="link" data-aos=""><a href="./index.html#AboutUs">About</a></li>
                 <li class="link dropdown" data-aos="">
-                    <a href="#Services" class="dropdown">Services</a>
+                    <a href="./index.html#Services" class="dropdown">Services</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#Destinations">Destination</a></li>
-                        <li><a href="#trip">Prices</a></li>
-                        <li><a href="#ReviewGallery">Trip Gallery</a></li>
-                        <li><a href="#tourist">Tourist Guide</a></li>
-                        <li><a href="#hotel">Hotel & Resort</a></li>
+                        <li><a href="./index.html#Destinations">Destination</a></li>
+                        <li><a href="./index.html#trip">Prices</a></li>
+                        <li><a href="./index.html#ReviewGallery">Trip Gallery</a></li>
+                        <li><a href="./index.html#tourist">Tourist Guide</a></li>
+                        <li><a href="./index.html#hotel">Hotel & Resort</a></li>
                     </ul>
                 </li>
-                <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
+                <li class="link" data-aos=""><a href="./index.html#testimonials">Testimonial</a></li>
                 <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
-                <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
+                <li class="link" data-aos=""><a href="./index.html#cnt-form">Contact Us</a></li>
             </ul>
             <a href="newLogin.html" class="contact-btn "  id="nav-login-btn">
                 <button class="btn login login_packages" id="btn-style" data-aos="fade-down">Login/SignUp</button>
@@ -610,10 +636,17 @@
         <h2 class="section-title animate-fadeInUp">Hotel Packages</h2>
         <p class="subtitle animate-fadeInUp">Luxurious stays for your perfect getaway</p>
         <div class="center-card">
-            <img src="./h1.png" alt="Luxury Hotel 1" class=" center-card" style="animation-delay: 0.2s;" />
-            <img src="./h2.png" alt="Luxury Hotel 2" class=" center-card" style="animation-delay: 0.4s;" />
-            <img src="./h3.png" alt="Luxury Hotel 3" class=" center-card" style="animation-delay: 0.6s;" />
-            <img src="./h4.png" alt="Luxury Hotel 4" class=" center-card" style="animation-delay: 0.8s;" />
+            <a href="./hotel.html"><img src="./h1.png" alt="Luxury Hotel 1" class=" center-card"
+                    style="animation-delay: 0.2s;" /></a>
+            <a href="./hotel.html"><img src="./h2.png" alt="Luxury Hotel 2" class=" center-card"
+                    style="animation-delay: 0.4s;" /></a>
+            <a href="./hotel.html"><img src="./h3.png" alt="Luxury Hotel 3" class=" center-card"
+                    style="animation-delay: 0.6s;" /></a>
+            <a href="./hotel.html"><img src="./h4.png" alt="Luxury Hotel 4" class=" center-card"
+                    style="animation-delay: 0.8s;" /></a>
+
+
+
         </div>
     </section>
 
@@ -625,7 +658,7 @@
                 <div class="price-section">
                     <div class="price-area">
                         <div class="inner-area basic-price">
-                            <span class="text">₹2500/- </span>
+                            <span class="text">₹15000/- </span>
                         </div>
                     </div>
                 </div>
@@ -636,10 +669,6 @@
                         <span class="icon check"><i class="fas fa-check"></i></span>
                     </li>
                     <li>
-                        <span class="list-name">Exclusive Travel Guides</span>
-                        <span class="icon cross"><i class="fas fa-times"></i></span>
-                    </li>
-                    <li>
                         <span class="list-name">Monthly Travel Webinars</span>
                         <span class="icon check"><i class="fas fa-check"></i></span>
                     </li>
@@ -647,9 +676,13 @@
                         <span class="list-name">Priority Customer Support</span>
                         <span class="icon check"><i class="fas fa-check"></i></span>
                     </li>
-        
+                    <li>
+                        <span class="list-name">Exclusive Travel Guides</span>
+                        <span class="icon cross"><i class="fas fa-times"></i></span>
+                    </li>
+
                 </ul>
-                <div class="purchase-btn"><button>Purchase</button></div>
+                <div class="purchase-btn"><a href="./payment.html?package=basic"><button>Purchase</button></a></div>
             </div>
 
 
@@ -658,7 +691,7 @@
                 <div class="price-section">
                     <div class="price-area">
                         <div class="inner-area premium-price">
-                            <span class="text">₹1500/- </span>
+                            <span class="text">₹20000/- </span>
                         </div>
                     </div>
                 </div>
@@ -689,13 +722,13 @@
                         <span class="icon cross"><i class="fas fa-times"></i></span>
                     </li>
                 </ul>
-                <div class="purchase-btn"><button>Purchase</button></div>
+                <div class="purchase-btn"><a href="./payment.html?package=premium"><button>Purchase</button></a></div>
             </div>
             <div class="table ultimate animate-fadeInUp" style="animation-delay: 0.4s;">
                 <div class="price-section">
                     <div class="price-area">
                         <div class="inner-area ultimate-price">
-                            <span class="text">₹2500/- </span>
+                            <span class="text">₹25000/- </span>
                         </div>
                     </div>
                 </div>
@@ -718,11 +751,11 @@
                         <span class="icon check"><i class="fas fa-check"></i></span>
                     </li>
                 </ul>
-                <div class="purchase-btn"><button>Purchase</button></div>
+                <div class="purchase-btn"><a href="./payment.html?package=ultimate"><button>Purchase</button></a></div>
             </div>
         </div>
     </section>
-    
+
 
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
