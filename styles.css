@@ -1280,15 +1280,17 @@ body, html {
 
 .footer__container {
   width: 100%;
+  /* max-width: 1800px; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: space-between;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   color: var(--secondary-color);
   margin: 0;
-    padding: 0;
+  padding: 0;
 }
 
 .footer__col {
@@ -1316,6 +1318,8 @@ body, html {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 20px;
+  color: #123456;
+  font-weight: bold;
 }
 
 .footer__col h3 span {
@@ -1338,8 +1342,9 @@ body, html {
 
 .footer__col h4 {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: bold;
   margin-bottom: 15px;
+  color: #123456;
 }
 
 .footer__bar {
@@ -1352,6 +1357,7 @@ body, html {
   color: var(--extra-light);
   padding-top: 1rem;
   margin-top: 1rem;
+  background: linear-gradient(to right, rgba(204, 204, 204, 0), #123456, rgba(204, 204, 204, 0)); /* Gradient effect */
   border-top: 2px solid var(--text-light);
 }
 
@@ -1389,7 +1395,7 @@ body, html {
   color: #3b5998;
 }
 
-.icons .icon:hover .fab.fa-twitter {
+.icons .icon:hover .fab.fa-twitter, .icons .icon:hover .fa-x-twitter {
   color: #090e11;
 }
 
@@ -2353,6 +2359,16 @@ body {
   .newNav img{
     position: relative;
   }
+  .header__image img:nth-child(1) {
+      transform: translate(0, 0%) !important;
+  }
+  .section__subtitle {
+    max-width: 100vw !important;
+    margin-left: 0 !important;
+  }
+  .testimonials {
+    padding: 0px 10px;
+  }
 }
 
 /* Move View from Hamburger to newNav */
@@ -3002,7 +3018,7 @@ button:hover {
 a {
   position: relative;
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 14px;
 }
 a::after {

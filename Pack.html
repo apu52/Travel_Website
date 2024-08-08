@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Booking Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAgEx3UTsYmOsw00pc-dRtsGkOEgFmS7ca-w&s")
+          no-repeat center fixed;
+        background-size: cover;
+        color: #333;
+        padding: 20px;
+        overflow-x: hidden; /* Prevent horizontal scrolling due to animations */
+      }
+
+      .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .packing-list {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .packing-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .packing-list ul li {
+            background: #f4f4f4;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+      .home-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: #f60303;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        text-decoration: none;
+      }
+
+      .home-button:hover {
+        background-color: #f2444d;
+        color: rgb(8, 6, 6);
+        border: 1px solid black;
+        box-shadow: #070505;
+        box-shadow: 0 0 10px rgba(7, 6, 13, 0.9);
+      }
+
+      @media (max-width: 768px) {
+        .flex-item {
+          flex: 1 1 100%;
+          margin-right: 0;
+        }
+
+        input[type="submit"],
+        .btn-book {
+          margin-left: 0;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  </head>
+  <body>
+    <a href="index.html" class="home-button">Home</a>
+    <div class="container">
+        <h1>Customizable Packing List</h1>
+        <form id="packing-form">
+            <label for="trip-type">Type of Trip:</label>
+            <select id="trip-type" name="trip-type">
+                <option value="beach">Beach</option>
+                <option value="mountains">Mountains</option>
+                <option value="city">City</option>
+                <option value="international">International</option>
+            </select>
+
+            <label for="duration">Duration (days):</label>
+            <input type="number" id="duration" name="duration" min="1" max="30">
+
+            <label for="weather">Expected Weather:</label>
+            <select id="weather" name="weather">
+                <option value="hot">Hot</option>
+                <option value="cold">Cold</option>
+                <option value="moderate">Moderate</option>
+            </select>
+
+            <button type="submit">Generate Packing List</button>
+        </form>
+
+        <div id="packing-list" class="packing-list">
+            <h2>Your Packing List</h2>
+            <ul id="list"></ul>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('packing-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const tripType = document.getElementById('trip-type').value;
+            const duration = parseInt(document.getElementById('duration').value, 10);
+            const weather = document.getElementById('weather').value;
+
+            const packingList = generatePackingList(tripType, duration, weather);
+            displayPackingList(packingList);
+        });
+
+        function generatePackingList(tripType, duration, weather) {
+            const commonItems = ['Toothbrush', 'Toothpaste', 'Shampoo', 'Conditioner', 'Body Wash', 'Deodorant', 'Underwear', 'Socks'];
+            const packingList = [...commonItems];
+
+            if (tripType === 'beach') {
+                packingList.push('Swimsuit', 'Sunscreen', 'Beach Towel', 'Flip Flops');
+            } else if (tripType === 'mountains') {
+                packingList.push('Hiking Boots', 'Jacket', 'Backpack', 'Map');
+            } else if (tripType === 'city') {
+                packingList.push('Comfortable Shoes', 'Guidebook', 'Camera', 'City Map');
+            } else if (tripType === 'international') {
+                packingList.push('Passport', 'Travel Adapter', 'Language Guide', 'Currency');
+            }
+
+            if (weather === 'hot') {
+                packingList.push('Sunglasses', 'Hat', 'Light Clothing');
+            } else if (weather === 'cold') {
+                packingList.push('Gloves', 'Scarf', 'Warm Clothing');
+            } else if (weather === 'moderate') {
+                packingList.push('Light Jacket', 'Comfortable Clothing');
+            }
+
+            for (let i = 0; i < duration; i++) {
+                packingList.push('Day ' + (i + 1) + ' Outfit');
+            }
+
+            return packingList;
+        }
+
+        function displayPackingList(packingList) {
+            const listElement = document.getElementById('list');
+            listElement.innerHTML = '';
+
+            packingList.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = item;
+                listElement.appendChild(listItem);
+            });
+        }
+    </script>
+    
+  </body>
+</html>

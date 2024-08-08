@@ -1,6 +1,6 @@
 body {
   font-family: "Poppins";
-  background-color: #f4f4f4;
+  /* background-color: #c10f0f; */
   color: #333;
   display: flex;
   justify-content: center;
@@ -18,9 +18,10 @@ body {
   font-size: 3em;
   margin-bottom: 20px;
   padding: 10px;
-  color: #055364;
-  border-radius: 20px;
-  background-color: rgba(209, 209, 255, 0.8);
+  color: #9dedff;
+  text-shadow: 1px 1px 2px rgb(60, 0, 255), 0 0 1em rgba(0, 213, 255, 0.617), 0 0 0.2em rgba(0, 234, 255, 0.623);
+  /* border-radius: 20px; */
+  /* background-color: rgba(209, 209, 255, 0.8); */
 }
 
 .contributors-grid {
@@ -33,19 +34,49 @@ body {
 }
 
 .contributor-card {
-  background-color: #e5e5f8;
-  border: 2px solid #101010;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
   width: 200px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  max-width: calc(25% - 16px); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  /* border: 1px solid #00ebdf; */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  transition: transform 0.5s ease-in-out, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  /* margin-bottom: 16px;  */
 }
 
 .contributor-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
+  transform: scale(1.02);
+  box-shadow: 1px 1px 23px rgba(0, 157, 255, 0.915);
+  border: none;
+  cursor: pointer;
+}
+
+.contributor-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(132deg, #0045ac 50%, #d8eeff 51%);
+  /* background: linear-gradient(130deg, #3b89ff 50%, #eef6ff 50%); */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translate(-100%, -100%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.contributor-card:hover::before {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .contributor-card img {
@@ -54,13 +85,177 @@ body {
   height: 100px;
   object-fit: cover;
   margin-bottom: 10px;
+  transition: box-shadow 0.3s ease-in-out, border 0.1s ease-in-out;
 }
+
+.contributor-card:hover img {
+  border:  2px solid rgb(255, 234, 0);
+  box-shadow: -1px 2px 27px rgb(0, 217, 255);
+ } 
+
+/* 
+.contributor-card h2 {
+  margin: 0 0 10px;
+} */
+/* 
+.contributor-card p {
+} */
 
 .contributor-card h2 {
   font-size: 1.2em;
-  margin: 0 0 10px;
+  color: #040404;
+  position: relative;
+  z-index: 1;
+  transition: text-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .contributor-card p {
+  font-size: 1.2em;
   color: #040404;
+  position: relative;
+  z-index: 1;
+  transition: text-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+  margin: 0 0 10px;
 }
+
+.contributor-card:hover h2 {
+  text-shadow: 1px 1px 2px rgb(0, 108, 108), 0 0 0.2em rgb(0, 14, 108), 0 0 0.8em rgb(0, 14, 108);
+  color: white;
+}
+
+.contributor-card:hover p {
+  text-shadow: 1px 1px 2px rgba(4, 0, 127, 0.715), 0 0 0.2em rgb(5, 18, 168), 0 0 0.3em rgb(134, 136, 250);
+  color: white;
+  
+  /* font-weight: 400; */
+}
+
+/* dark mode */
+  /* Toggle button styles */
+  .toggle-container {
+    position: fixed; /* Change this as needed for positioning */
+    top: 25px;
+    right: 40px;
+  }
+  
+  .toggle {
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset calc(var(--size)* 0.33) calc(var(--size)* -0.25) 0;
+    border-radius: 999px;
+    color: hsl(240, 100%, 95%);
+    transition: all 500ms;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .toggle:checked {
+    background-color: #333;
+  }
+  .toggle:checked:before {
+    transform: translateX(25px);
+  }
+  
+  
+  body {
+    background-color: #f8f9fa;
+    color: #212529;
+  }
+  
+  .nav-container {
+    background-color: #ffffff;
+  }
+  
+  .footer {
+    background-color: #ffffff;
+    color: #212529;
+  }
+  
+  /* Dark mode styles */
+  body.dark-mode {
+    background-color: #333;
+    color: #ffffff;
+  }
+  
+  body.dark-mode .nav-container {
+    background-color: #343a40;
+  }
+  
+  body.dark-mode .footer {
+    background-color: #343a40;
+    color: #ffffff;
+  }
+  #toggle {
+    display: inline-block;
+    border-radius: 50px;
+    transition: all 0.4s ease-in-out;
+    padding: 10px 10px;
+    background-color: transparent;
+    border: 2px solid #c6c9d8bf;
+    color: #c6c9d8bf;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-decoration: none;
+  }
+  .toggle-container {
+    --size: 2rem;
+    width: var(--size);
+    height: var(--size);
+  }
+  
+  .toggle {
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
+    border-radius: 999px;
+    color: hsl(240, 100%, 95%);
+    transition: all 500ms;
+    position: absolute;
+    top: 25px;
+    right: 0;
+  
+    &:checked {
+      --ray-size: calc(var(--size) * -0.4);
+      --offset-orthogonal: calc(var(--size) * 0.65);
+      --offset-diagonal: calc(var(--size) * 0.45);
+      transform: scale(0.75);
+      color: hsl(40, 100%, 50%);
+      box-shadow: inset 0 0 0 var(--size),
+        calc(var(--offset-orthogonal) * -1) 0 0 var(--ray-size),
+        var(--offset-orthogonal) 0 0 var(--ray-size),
+        0 calc(var(--offset-orthogonal) * -1) 0 var(--ray-size),
+        0 var(--offset-orthogonal) 0 var(--ray-size),
+        calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0
+          var(--ray-size),
+        var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size),
+        calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size),
+        var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
+    }
+  }
+  
+  /* Apply fade-down animation to the toggle container */
+  .toggle-container[data-aos="fade-down"] {
+    transition: opacity 500ms ease-in-out;
+    opacity: 0;
+  }
+  
+  .toggle-container[data-aos="fade-down"].aos-animate {
+    opacity: 1;
+  }
+  body.dark-mode .contributor-card{
+    background: #0e1525;
+  }
+  body.dark-mode .contributor-card p{
+    color: white;
+  }
+  body.dark-mode .contributor-card h2{
+    color: white;
+  }
