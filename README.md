@@ -202,30 +202,18 @@ Show some ❤️&nbsp; by giving <img src="https://imgur.com/o7ncZFp.jpg" height
 <tr>
 <td align="center"><a href="https://github.com/KrishnenduDG"><img src="img/krishnendu DG.png" width=130px height=130px /></a></br> <h4 style="color:red;">Krishnendu Dasgupta</h4>
  <a href="https://www.linkedin.com/in/krishnendu-dasgupta-450391186/"><img src="https://img.icons8.com/fluency/2x/linkedin.png" width="32px" height="32px"></img></a>
-   </td>
+</td>
 
-</tr>
-</table>
-
-<table>
-<tr>
 <td align="center"><a href="https://github.com/itsekta"><img src="img/Ekta.jfif" width=130px height=130px /></a></br> <h4 style="color:red;">Ekta Chaudhary</h4>
  <a href="https://www.linkedin.com/in/ekta-software-engineer/"><img src="https://img.icons8.com/fluency/2x/linkedin.png" width="32px" height="32px"></img></a>
-   </td>
+</td>
 
-</tr>
-</table>
-
-<table>
-<tr>
 <td align="center"><a href="https://github.com/Ghanshyam89"><img src="img/GhanshyamNewPic.jpg" width=130px height=130px /></a></br> <h4 style="color:red;">Ghanshyam Prajapati</h4>
  <a href="https://www.linkedin.com/in/ghanshyam-prajapati/"><img src="https://img.icons8.com/fluency/2x/linkedin.png" width="32px" height="32px"></img></a>
-   </td>
-
+</td>
 </tr>
 </table>
 
-</div>
   
  # Project Admin⚡
  
@@ -247,6 +235,11 @@ Show some ❤️&nbsp; by giving <img src="https://imgur.com/o7ncZFp.jpg" height
   <img src="https://github.com/shruti-sen2004/Travel_Website/assets/115914670/d544fd3b-aed2-4a05-a2f8-0b7a2ff9014f" width="700" height= "250" />
 </p>
 
+
+## Acknowledgements
+
+Thank you to all the amazing contributors who have made this project possible! 💝
+
 <p align ="center">
   <img src="https://api.vaunt.dev/v1/github/entities/apu52/repositories/Travel_Website/contributors?format=svg&limit=54" width="700" height= "250" />
 </p>
@@ -255,10 +248,15 @@ Show some ❤️&nbsp; by giving <img src="https://imgur.com/o7ncZFp.jpg" height
   <img align="center" src="https://contrib.rocks/image?max=100&repo=apu52/Travel_Website" />
 </a> 
 <br><br>
-Thank you to all the amazing contributors who have made this project possible!!💝
 
-## License 
-<img src = "https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge">
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+<p align="center">
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="License: MIT">
+</p>
+
 
 <p align="right"><a href="#top"><img src="https://img.shields.io/badge/Move%20to%20top-Blue?style=plastic" alt="Back To Top"></a></p>
 
