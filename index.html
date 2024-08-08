@@ -276,7 +276,58 @@
       }
     }
 
+/* tour guide section */
+.center-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.image-container {
+  margin-top: 80px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  overflow: hidden; 
+  width: 1200px; 
+  height: 400px; 
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
+  gap: 10px;
+}
+
+.carousell-item {
+  min-width: 50%; 
+  max-width: 50%;
+  height: 450px; 
+  
+}
+
+.prev, .next {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
   </style>
+
   <link rel="stylesheet" href="imstyle.css">
   <link rel="stylesheet" href="jquery.flipster.min.css">
 
@@ -1240,6 +1291,55 @@
     <!-- Toursit Guide Section -->
     <section class="tourist" id="tourist">
       <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Tourist Guide</h2>
+      <h4 style="color: rgb(231, 62, 118); font-style: italic; font-family: cursive;">
+        Have an amazing trip and explore the destiny
+      </h4>
+      <br />
+      <h3 style="color: rgb(6, 151, 241); font-style: inherit; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+        Connect with the Guide
+      </h3>
+      <br />
+      <div class="center-card">
+        <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+        <div class="image-container">
+          <div class="carousel-images">
+            <img src="./tg1.jpg" alt="guide1" class="carousell-item" />
+            <img src="./tg2.jpg" alt="guide2" class="carousell-item" />
+            <img src="./tg3.jpg" alt="guide3" class="carousell-item" />
+            <img src="./tg1.jpg" alt="guide1" class="carousell-item" />
+            <img src="./tg2.jpg" alt="guide2" class="carousell-item" />
+            <img src="./tg3.jpg" alt="guide3" class="carousell-item" />
+          </div>
+        </div>
+        <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+      </div>
+    </section>
+    <br /><br /><br /><br />
+
+<script>
+  let currentSlide = 0;
+
+function moveCarousel(step) {
+  const carousellItems = document.querySelectorAll('.carousell-item');
+  const itemsPerView = 2;
+  const totalItems = carousellItems.length;
+  const maxSlide = Math.ceil(totalItems / itemsPerView) - 1;
+
+  currentSlide = (currentSlide + step + maxSlide + 1) % (maxSlide + 1);
+  const offset = -currentSlide * 100 / itemsPerView;
+
+  document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+}
+
+// Optional: Auto-rotate carousel every 3 seconds
+setInterval(() => {
+  moveCarousel(1);
+}, 3000);
+
+</script>    
+   
+    <!-- <section class="tourist" id="tourist">
+      <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Tourist Guide</h2>
       <h4 style="color: rgb(231, 62, 118); font-style: italic;font-family: cursive;">Have an amazing trip and explore
         the destiny</h4>
       <br></br>
@@ -1255,7 +1355,7 @@
         <img src="./tg3.jpg" alt="guide3" />
       </div>
     </section>
-    <br /><br /><br /><br />
+    <br /><br /><br /><br /> -->
 
     <!-- Hotel & Resort Section -->
     <section class="hotel" id ="hotel">
