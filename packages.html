@@ -550,7 +550,7 @@
                     </ul>
                 </li>
                 <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
-                <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+                <li class="link" data-aos="" id="rate-us-button"><a href="feedback.html">Rate Us?</a></li>
                 <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
             </ul>
             <a href="newLogin.html" class="contact-btn "  id="nav-login-btn">
@@ -723,7 +723,16 @@
         </div>
     </section>
     
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const isLoggedIn = localStorage.getItem('isLoggedIn');
+          const rateUsLink = document.getElementById('rate-us-button');
+      
+          if (!isLoggedIn) {
+            rateUsLink.style.display = 'none';
+          }
+        });
+      </script>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
             const animatedElements = document.querySelectorAll('.animate-fadeInUp');
