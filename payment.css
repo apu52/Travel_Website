@@ -6,7 +6,14 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    text-align: left !important;
   }
+.guide{
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
   
   /* Breadcrumb styling */
   .breadcrumb {
@@ -34,7 +41,14 @@ body {
   .breadcrumb-item.active {
     color: #6c757d;
   }
-  
+  .input-group .btn {
+    position:static;
+  }
+  .footer{
+    margin: 0px;
+    width: 100%;
+    margin-top: 20px;
+  }
   /* Additional styles for other sections */
   .checkout-container {
     display: grid;
@@ -101,14 +115,14 @@ body {
 
 /* New NAvbar CSS Starts Here*/
 
-
+/* 
 nav {
   background-color: #091020;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1001;
-}
+} */
 
 .nav__logo {
   font-size: 1.8rem;
@@ -142,7 +156,7 @@ nav {
 header {
   background-color: var(--secondary-color);
 }
-
+/* 
 
 .nav-container {
   height: auto;
@@ -154,9 +168,9 @@ header {
   left: 0;
   z-index: 9999;
   
-}
+} */
 
-.newNav {
+/* .newNav {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -164,9 +178,9 @@ header {
   height: auto;
   width: 100%;
   padding: 1rem 2rem;
-}
+} */
 
-.navLinks {
+/* .navLinks {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,7 +192,7 @@ header {
   margin-right: 20px;
   margin-top: 20px;
 
-}
+} */
 
 .link a {
   position: relative;
@@ -260,9 +274,9 @@ header {
     z-index: 10;
   }
 
-  #toggle {
+  /* #toggle {
     font-size: 0.6rem;
-  }
+  } */
 
   #btn-style {
     font-size: 0.6rem;
@@ -305,16 +319,26 @@ header {
 
 
 /*New toggle*/
+
+.toggle-container{
+  opacity: 1 !important;
+  border-width: 0px !important;
+}
+
+.toggle-container input{
+  border-width: 0px ;
+}
 /* new toggle start */
-.toggle-container {
+/* .toggle-container {
   --size: 2rem;
   position: relative;
   width: var(--size);
   height: var(--size);
   margin-right: 71px;
-}
+  z-index: 1;
+} */
 
-.toggle {
+/* .toggle {
   appearance: none;
   outline: none;
   cursor: pointer;
@@ -345,17 +369,17 @@ header {
       calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size),
       var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
   }
-}
+} */
 
 /* Apply fade-down animation to the toggle container */
-.toggle-container[data-aos='fade-down'] {
+/* .toggle-container[data-aos='fade-down'] {
   transition: opacity 500ms ease-in-out;
   opacity: 1;
 }
 
 .toggle-container[data-aos='fade-down'].aos-animate {
   opacity: 1;
-}
+} */
 
 
 /* New NAvbar CSS Ends Here*/
@@ -395,28 +419,27 @@ body.dark-mode .footer {
 
 /* Toggle button styles */
 .toggle-container {
-  position: fixed; /* Change this as needed for positioning */
-  top: 10px;
-  right: 10px;
+  /* position: fixed; Change this as needed for positioning */
+  /* top: 10px;
+  right: 10px; */
 }
 
-.toggle {
-  width: 50px; /* Adjust size as needed */
-  height: 25px; /* Adjust size as needed */
+/* .toggle {
+  
   appearance: none;
   background-color: #ccc;
   cursor: pointer;
   border-radius: 25px;
   position: relative;
   outline: none;
-}
-
+} */
+/* 
 .toggle:checked {
   background-color: #333;
 }
 .toggle:checked:before {
   transform: translateX(25px);
-}
+} */
 
 .text-center h2{
   background: linear-gradient(120deg, #1c99fe 20.69%, #7644ff 50.19%, #fd4766 79.69%);
@@ -426,7 +449,52 @@ body.dark-mode .footer {
   font-weight: 600;
 }
 body.dark-mode #inst{
-  background: black;
+  background: #0056b3;
+}
+
+body.dark-mode form input{
+  background-color: #303234;
+  color: #ccc !important;
+}
+body.dark-mode form select{
+  background-color: #303234 !important;
+  color:#ccc;
+}
+body.dark-mode form .user{
+  background-color: #303234  !important;
+  color:rgb(198, 198, 198);
+}
+
+body.dark-mode form ::placeholder{
+  color:#ccc !important;
+}
+body.dark-mode form{
+  color:#ccc !important;
+}
+
+body.dark-mode .text-body-secondary{
+  color:#6c757d !important;
+}
+body.dark-mode form option{
+  color:#ccc !important;
+}
+body.dark-mode form select ::-ms-value{
+  color:#ccc !important;
+}
+body.dark-mode .cart{
+  background-color: #343a40;
+}
+body.dark-mode .text-primary{
+  color:aliceblue !important;
+}
+
+body.dark-mode .list-group-item {
+  background-color: #343a40 !important;
+  color: #ccc;
+}
+
+body.dark-mode small,body.dark-mode #package-cost{
+  color: white !important;
 }
 .newNav #btn-style{
   background-color: var(--btn-border) !important;
