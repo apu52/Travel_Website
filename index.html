@@ -511,7 +511,7 @@
           </li>
           <li class="link" data-aos=""><a href="./packages.html">Packages</a></li>
           <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
-          <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+          <li class="link" data-aos="" id="rate-us-button"><a href="feedback.html">Rate Us?</a></li>
           <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
       </ul>
 
@@ -2500,6 +2500,18 @@
 
 
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const isLoggedIn = localStorage.getItem('isLoggedIn');
+      const rateUsLink = document.getElementById('rate-us-button');
+  
+      if (!isLoggedIn) {
+        rateUsLink.style.display = 'none';
+      }
+    });
+  </script>
+  
+
   <script>
     function replaceDivs() {
       // Get references to the original and new divs
