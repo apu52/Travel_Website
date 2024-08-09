@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Events & Festivals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+        #events {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 1em;
+        }
+        .event-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 15px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .event-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0;
+        }
+        .event-card h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .event-card p {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+        .event-card .date {
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Discover Local Events & Festivals</h1>
+    </header>
+
+    <section id="events">
+        <!-- Events will be dynamically inserted here -->
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const events = [
+                {
+                    title: "Paris Marathon",
+                    date: "13 April 2025",
+                    description: "Join us to run the largest path with enthusiasm and enjoy the marathon.",
+                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLgjtGK_igiNGcVfS_CAGFgC0-afxp7pKDVQ&s"
+                },
+                {
+                    title: "Dubai International Film Festival",
+                    date: "19 June 2024",
+                    description: "Celebrate the Film Festival with amazing performance of famous artists.",
+                    image: "https://variety.com/wp-content/uploads/2018/04/15th-edition-of-the-region_s-leading-film-festival-to-be-held-in-2019.jpg"
+                },
+                {
+                    title: "Goa Carnival",
+                    date: "9th to 13th February 2024",
+                    description: "Experience the magic of Goan culture, food and festival vibes.",
+                    image: "https://upload.wikimedia.org/wikipedia/en/1/1f/Goa_Carnaval.jpg"
+                }
+            ];
+
+            const eventsSection = document.getElementById("events");
+
+            events.forEach(event => {
+                const eventCard = document.createElement("div");
+                eventCard.className = "event-card";
+
+                eventCard.innerHTML = `
+                    <img src="${event.image}" alt="${event.title}">
+                    <h2>${event.title}</h2>
+                    <p class="date">${event.date}</p>
+                    <p>${event.description}</p>
+                `;
+
+                eventsSection.appendChild(eventCard);
+            });
+        });
+    </script>
+</body>
+</html>
