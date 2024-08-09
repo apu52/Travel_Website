@@ -2126,6 +2126,7 @@ body {
   text-decoration: none;
   width: 100%;
   transition: all 0.3s linear;
+  font-size: 18px;
 }
 .link > a:hover {
   background-color: #f6ddff;
