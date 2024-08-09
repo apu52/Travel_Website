@@ -7,19 +7,73 @@
   <title>TourGuide Checkout</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="payment.css">
 </head>
-<link rel="stylesheet" href="styles.css" class="rel">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="./Image-Gallery/style.css">
+  <link rel="stylesheet" href="./Image-Gallery/stylecaptions.css">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+  
+  <!-- sticky animation  -->
+ <script type="text/javascript">
+  window.addEventListener("scroll", function () {
+    var header = document.querySelector("nav");
+    header.classList.toggle("sticky", window.scrollY > 50)
+  })
+</script>
 <body>
   <div class="nav-container" id="top">
     <nav class="newNav">
-      <a href="#" class="nav__logo" data-aos="fade-right" style="margin-left: -200px">Tourguide<span>.</span></a>
-
-    
-      <a href="index.html" class="contact-btn" style="margin-right: -170px;"><button class="btn" id="btn-style"
-          style="margin:0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Go to Home</button></a>
+      <div style="display: flex; flex-direction: row; align-items: center;">
+      <img src="./img/tour1.png" class="sitelogo">
       
+      <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+    </div>
+
+      <ul class="navLinks">
+        <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
+        <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
+        <li class="link" data-aos=""><a href="#Home">Home</a></li>
+        <li class="link" data-aos=""><a href="#AboutUs">About</a></li>
+        <li class="link dropdown" data-aos="">
+            <a href="#Services" class="dropdown">Services</a>
+            <ul class="dropdown-menu">
+                <li><a href="#Destinations">Destination</a></li>
+                <li><a href="#trip">Prices</a></li>
+                <li><a href="#ReviewGallery">Trip Gallery</a></li>
+                <li><a href="#tourist">Tourist Guide</a></li>
+                <li><a href="#hotel">Hotel & Resort</a></li>
+            </ul>
+        </li>
+        <li class="link" data-aos=""><a href="./packages.html">Packages</a></li>
+        <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
+        <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+        <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
+    </ul>
+
+      <a href="newLogin.html" class="contact-btn" id="nav-login-btn"><button class="btn login" id="btn-style"
+          data-aos="fade-down">Login/SignUp</button></a>
+      <a href="mapa.html" class="contact-btn" id="nav-view-btn"><button class="btn" id="btn-style" style="margin: 0;"
+          data-aos="fade-down">view <map name=""></map></button></a>
+
+      <a href="loginPage.html" class="contact-btn"><button class="btn" id="logout-btn"
+          style="margin: 0; display: none;" data-aos="fade-down" disabled>Log Out</button></a>
+
+      <!-- <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
+          style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a> -->
+
+      <div class="toggle-container" data-aos="fade-down">
+        <input id="themeToggle" class="toggle" type="checkbox">
+      </div>
       <div class="hamburger" data-aos="fade-down">
         <div class="line"></div>
         <div class="line"></div>
@@ -31,15 +85,16 @@
   <div class="container" style="margin-top: 70px;">
     <main>
 
-      <div class="py-5 text-center">
+        
+      <div class="py-4 text-left guide">
+        
+      <div class=" text-center">
 
         <h2 style="text-decoration: underline ;" >Guide</h2>
 
       </div>
-        
-      <div class="py-4 text-left">
 
-        <div style="border:2px solid #a1a1a1; padding: 2rem;">
+        <div id="inst" style="border:2px solid #a1a1a1; padding: 2rem;border-radius: 12px;">
           <p >Before you proceed to checkout, here are some instructions : </p>
           <ul class="connected list no2">
             <li>Fill in the required fields with your personal details (name, email, username etc.)</li>
@@ -73,252 +128,263 @@
         <hr class="hr">
         <br>
 
-      <div class="py-5 text-center">
-        <h2>Checkout</h2>
-      </div>
-
-
-
-      <div class="row g-5">
-        <div class="col-md-5 col-lg-4 order-md-last">
-          <h4 class="d-flex justify-content-between align-items-center mb-3">
-            <span class="text-primary">Your cart</span>
-            <span class="badge bg-primary rounded-pill">1</span>
-          </h4>
-          <ul class="list-group mb-3">
-            <li class="list-group-item d-flex justify-content-between lh-sm">
-              <div>
-                <h6 class="my-0">Your Package</h6>
-                <small id="brief-description" class="text-body-secondary">Brief description</small>
-
-              </div>
-              <span id="package-cost" class="text-body-secondary">15000/-</span>
-            </li>
-        
-            <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
-              <div class="text-success">
-                <h6 class="my-0">Promo code</h6>
-                <small>JWOC</small>
-              </div>
-              <span class="text-success">−1000/-</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between">
-              <span>Total (INR)</span>
-              <strong id="total-cost">14000/-</strong>
-            </li>
-          </ul>
-        
-          <form class="card p-2">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Promo code">
-              <button type="submit" class="btn btn-secondary">Redeem</button>
-            </div>
-          </form>
+        <div class="py-5 text-center">
+          <h2>Checkout</h2>
         </div>
-        <!--  Checkout form -->
-        <div class="col-md-7 col-lg-8">
-          <h4 class="mb-3">Billing address</h4>
-          <form class="needs-validation" novalidate>
-            <div class="row g-3">
-              <div class="col-sm-6">
-                <label for="firstName" class="form-label">First name</label>
-                <input type="text" class="form-control" id="firstName" placeholder="Eg: John" value="" required>
-                <div class="invalid-feedback">
-                  Valid first name is required.
+  
+        <div class="row g-5">
+          <div class="col-md-5 col-lg-4 order-md-last">
+            <!-- Cart Summary -->
+            <h4 class="d-flex justify-content-between align-items-center mb-3 ">
+              <span class="text-primary">Your cart</span>
+              <span class="badge bg-primary rounded-pill">1</span>
+            </h4>
+            <ul class="list-group mb-3 cart">
+              <!-- (Cart Items) -->
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h6 class="my-0">Your Package</h6>
+                  <small id="brief-description" class="text-body-secondary">Brief description</small>
                 </div>
-              </div>
-
-              <div class="col-sm-6">
-                <label for="lastName" class="form-label">Last name</label>
-                <input type="text" class="form-control" id="lastName" placeholder="Eg: Doe" value="" required>
-                <div class="invalid-feedback">
-                  Valid last name is required.
+                <span id="package-cost" class="text-body-secondary">15000/-</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
+                <div class="text-success">
+                  <h6 class="my-0">Promo code</h6>
+                  <small>JWOC</small>
                 </div>
+                <span class="text-success">−1000/-</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <span>Total (INR)</span>
+                <strong id="total-cost">14000/-</strong>
+              </li>
+            </ul>
+  
+            <!-- Promo code form -->
+            <form class="card p-2">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Promo code">
+                <button type="submit" class="btn btn-secondary">Redeem</button>
               </div>
-
-              <div class="col-12">
-                <label for="username" class="form-label">Username</label>
-                <div class="input-group has-validation">
-                  <span class="input-group-text">@</span>
-                  <input type="text" class="form-control" id="username" placeholder="Username" required>
+            </form>
+            <hr class="my-4">
+  
+            <!-- Continue to Checkout button -->
+            <a href="#payment-section" class="href"><button id="checkout-button" class="w-100 btn btn-primary btn-lg" type="button">Continue to checkout</button></a>
+          </div>
+  
+          <!-- Checkout Form -->
+          <div class="col-md-7 col-lg-8">
+            <h4 class="mb-3">Billing address</h4>
+            <form class="needs-validation" novalidate>
+              <div class="row g-3">
+                <!-- (Billing Address Form Content) -->
+                <div class="col-sm-6">
+                  <label for="firstName" class="form-label">First name</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="Eg: John" value="" required>
                   <div class="invalid-feedback">
-                    Your username is required.
+                    Valid first name is required.
                   </div>
                 </div>
-              </div>
-
-              <div class="col-12">
-                <label for="email" class="form-label">Email <span class="text-body-secondary">(Optional)</span></label>
-                <input type="email" class="form-control" id="email" placeholder="tourguide@example.com">
-                <div class="invalid-feedback">
-                  Please enter a valid email address for shipping updates.
+  
+                <div class="col-sm-6">
+                  <label for="lastName" class="form-label">Last name</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="Eg: Doe" value="" required>
+                  <div class="invalid-feedback">
+                    Valid last name is required.
+                  </div>
                 </div>
-              </div>
-
-              <div class="col-12">
-                <label for="address" class="form-label">Address</label>
-                <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
-                <div class="invalid-feedback">
-                  Please enter your shipping address.
-                </div>
-              </div>
-
-              <div class="col-12">
-                <label for="address2" class="form-label">Address 2 <span
-                    class="text-body-secondary">(Optional)</span></label>
-                <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
-              </div>
-
-              <div class="col-md-5">
-                <label for="country" class="form-label">Country</label>
-                <select class="form-select" id="country" required>
-                  <option value="">Choose...</option>
-                  <option>India</option>
-                </select>
-                <div class="invalid-feedback">
-                  Please select a valid country.
-                </div>
-
-              </div>
-
-              <div class="col-md-4">
-                <label for="state" class="form-label">State</label>
-                <select class="form-select" id="state" required>
-                  <option value="">Choose...</option>
-                  <option>Andhra Pradesh</option>
-                  <option>Arunachal Pradesh</option>
-                  <option>Assam</option>
-                  <option>Bihar</option>
-                  <option>Chhattisgarh</option>
-                  <option>Goa</option>
-                  <option>Gujarat</option>
-                  <option>Haryana</option>
-                  <option>Himachal Pradesh</option>
-                  <option>Jammu and Kashmir</option>
-                  <option>Jharkhand</option>
-                  <option>Karnataka</option>
-                  <option>Kerala</option>
-                  <option>Madhya Pradesh</option>
-                  <option>Maharashtra</option>
-                  <option>Manipur</option>
-                  <option>Meghalaya</option>
-                  <option>Mizoram</option>
-                  <option>Nagaland</option>
-                  <option>Orissa</option>
-                  <option>Punjab</option>
-                  <option>Rajasthan</option>
-                  <option>Sikkim</option>                 
-                  <option>TamilNadu</option>
-                  <option>Telangana</option>
-                  <option>Tripura</option>              
-                  <option>Uttar Pradesh</option>
-                  <option>Uttarakhand</option>
-                  <option>West Bengal</option>
-                </select>
-                <div class="invalid-feedback">
-                  Please provide a valid state.
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <label for="zip" class="form-label">Zip</label>
-                <input type="text" class="form-control" id="zip" placeholder="" required>
-                <div class="invalid-feedback">
-                  Please enter a valid Zipcode.
-                </div>
-              </div>
-
-
-            </div>
-
-                   <!--Delivary Type - Free or Express-->
-
-                   <div class="mb-3">
-                    <label for="shipping-method" class="form-label">Shipping Method</label>
-                    <select class="form-select" id="shipping-method" required>
-                      <option value="">Choose...</option>
-                      <option value="standard">Standard Shipping</option>
-                      <option value="express">Express Shipping</option>
-                    </select>
+  
+                <div class="col-12">
+                  <label for="username" class="form-label">Username</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text user">@</span>
+                    <input type="text" class="form-control" id="username" placeholder="Username" required>
                     <div class="invalid-feedback">
-                      Please select a shipping method.
+                      Your username is required.
                     </div>
                   </div>
-                  <!--Delivary Type code ends-->
-                  
-            <!-- Payment fields -->
-            <hr class="my-4">
-
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="same-address">
-              <label class="form-check-label" for="same-address">Shipping address is the same as my billing
-                address</label>
-            </div>
-
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="save-info">
-              <label class="form-check-label" for="save-info">Save this information for next time</label>
-            </div>
-
-            <hr class="my-4">
-            <h4 class="mb-3">Payment</h4>
-            <div class="my-3">
-              <div class="form-check">
-                <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
-                <label class="form-check-label" for="credit">Credit card</label>
-              </div>
-              <div class="form-check">
-                <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
-                <label class="form-check-label" for="debit">Debit card</label>
-              </div>
-              <div class="form-check">
-                <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
-                <label class="form-check-label" for="paypal">PayPal</label>
-              </div>
-            </div>
-
-            <div class="row gy-3">
-              <div class="col-md-6">
-                <label for="cc-name" class="form-label">Name on card</label>
-                <input type="text" class="form-control" id="cc-name" placeholder="" required>
-                <small class="text-body-secondary">Full name as displayed on card</small>
-                <div class="invalid-feedback">
-                  Name on card is required
+                </div>
+  
+                <div class="col-12">
+                  <label for="email" class="form-label">Email <span class="text-body-secondary">(Optional)</span></label>
+                  <input type="email" class="form-control" id="email" placeholder="tourguide@example.com">
+                  <div class="invalid-feedback">
+                    Please enter a valid email address for shipping updates.
+                  </div>
+                </div>
+  
+                <div class="col-12">
+                  <label for="address" class="form-label">Address</label>
+                  <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                  <div class="invalid-feedback">
+                    Please enter your shipping address.
+                  </div>
+                </div>
+  
+                <div class="col-12">
+                  <label for="address2" class="form-label">Address 2 <span
+                      class="text-body-secondary">(Optional)</span></label>
+                  <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                </div>
+  
+                <div class="col-md-5">
+                  <label for="country" class="form-label">Country</label>
+                  <select class="form-select" id="country" required>
+                    <option value="">Choose...</option>
+                    <option>India</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a valid country.
+                  </div>
+  
+                </div>
+  
+                <div class="col-md-4">
+                  <label for="state" class="form-label">State</label>
+                  <select class="form-select" id="state" required>
+                    <option value="">Choose...</option>
+                    <option>Andhra Pradesh</option>
+                    <option>Arunachal Pradesh</option>
+                    <option>Assam</option>
+                    <option>Bihar</option>
+                    <option>Chhattisgarh</option>
+                    <option>Goa</option>
+                    <option>Gujarat</option>
+                    <option>Haryana</option>
+                    <option>Himachal Pradesh</option>
+                    <option>Jammu and Kashmir</option>
+                    <option>Jharkhand</option>
+                    <option>Karnataka</option>
+                    <option>Kerala</option>
+                    <option>Madhya Pradesh</option>
+                    <option>Maharashtra</option>
+                    <option>Manipur</option>
+                    <option>Meghalaya</option>
+                    <option>Mizoram</option>
+                    <option>Nagaland</option>
+                    <option>Orissa</option>
+                    <option>Punjab</option>
+                    <option>Rajasthan</option>
+                    <option>Sikkim</option>                 
+                    <option>TamilNadu</option>
+                    <option>Telangana</option>
+                    <option>Tripura</option>              
+                    <option>Uttar Pradesh</option>
+                    <option>Uttarakhand</option>
+                    <option>West Bengal</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please provide a valid state.
+                  </div>
+                </div>
+  
+                <div class="col-md-3">
+                  <label for="zip" class="form-label">Zip</label>
+                  <input type="text" class="form-control" id="zip" placeholder="" required>
+                  <div class="invalid-feedback">
+                    Please enter a valid Zipcode.
+                  </div>
                 </div>
               </div>
-
-              <div class="col-md-6">
-                <label for="cc-number" class="form-label">Credit card number</label>
-                <input type="text" class="form-control" id="cc-number" placeholder="" required>
+  
+              <!-- Shipping Method -->
+              <div class="mb-3">
+                <label for="shipping-method" class="form-label">Shipping Method</label>
+                <select class="form-select" id="shipping-method" required>
+                  <option value="">Choose...</option>
+                  <option value="standard">Standard Shipping</option>
+                  <option value="express">Express Shipping</option>
+                </select>
                 <div class="invalid-feedback">
-                  Credit card number is required
+                  Please select a shipping method.
                 </div>
               </div>
-
-              <div class="col-md-3">
-                <label for="cc-expiration" class="form-label">Expiration</label>
-                <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-                <div class="invalid-feedback">
-                  Expiration date required
+  
+              <hr class="my-4">
+  
+              <!-- Payment Section (Initially Hidden) -->
+              <div id="payment-section" style="display: none;">
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="same-address">
+                  <label class="form-check-label" for="same-address">Shipping address is the same as my billing
+                    address</label>
+                </div>
+  
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="save-info">
+                  <label class="form-check-label" for="save-info">Save this information for next time</label>
+                </div>
+  
+                <hr class="my-4">
+  
+                <!-- Payment Options -->
+                <h4 class="mb-3">Payment</h4>
+                <div class="my-3">
+                  <div class="form-check">
+                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                    <label class="form-check-label" for="credit">Credit card</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                    <label class="form-check-label" for="debit">Debit card</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                    <label class="form-check-label" for="paypal">PayPal</label>
+                  </div>
+                </div>
+  
+                <div class="row gy-3">
+                  <div class="col-md-6">
+                    <label for="cc-name" class="form-label">Name on card</label>
+                    <input type="text" class="form-control" id="cc-name" placeholder="firstName lastName" required>
+                    <small class="text-body-secondary">Full name as displayed on card</small>
+                    <div class="invalid-feedback">
+                      Name on card is required
+                    </div>
+                  </div>
+  
+                  <div class="col-md-6">
+                    <label for="cc-number" class="form-label">Credit card number</label>
+                    <input type="text" class="form-control" id="cc-number" placeholder="xxxxxxxxxxxxx" required>
+                    <div class="invalid-feedback">
+                      Credit card number is required
+                    </div>
+                  </div>
+  
+                  <div class="col-md-3">
+                    <label for="cc-expiration" class="form-label">Expiration</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="cc-expiration" placeholder="MM/YY" required>
+                      <div class="input-group-append">
+                        <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                      </div>
+                      <div class="invalid-feedback">
+                        Expiration date required
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="col-md-3">
+                    <label for="cc-cvv" class="form-label">CVV</label>
+                    <input type="text" class="form-control" id="cc-cvv" placeholder="xyz" required>
+                    <div class="invalid-feedback">
+                      Security code required
+                    </div>
+                  </div>
+                  <hr class="my-4">
+  
+                  <!-- Continue to Checkout button -->
+                  <button id="checkout-button" class="w-100 btn btn-primary btn-lg" type="button">Place Order</button>
                 </div>
               </div>
-
-              <div class="col-md-3">
-                <label for="cc-cvv" class="form-label">CVV</label>
-                <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-                <div class="invalid-feedback">
-                  Security code required
-                </div>
-              </div>
-            </div>
-
-            <hr class="my-4">
-
-            <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
-          </form>
+            </form>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+  
 
   
 <!-- footer  -->
@@ -465,6 +531,13 @@
   </div>
 
   <script src="payment.js"></script>
+
+  <script>
+    document.getElementById('checkout-button').addEventListener('click', function () {
+      const paymentSection = document.getElementById('payment-section');
+      paymentSection.style.display = paymentSection.style.display === 'none' ? 'block' : 'none';
+    });
+  </script>
 
 </body>
 

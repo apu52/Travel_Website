@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Top Deals</title>
+    <style>
+
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background:url("bestdeals.jpg");
+            margin: 0;
+            padding: 20px;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            font-size: 76px;
+            margin: 0;
+            color: white;
+        }
+        .header p {
+            font-size: 18px;
+            color: #0a0a0a;
+            width: 800px;
+            margin-left: 210px;
+        }
+        .deals {
+            display: flex;
+            justify-content: space-between;
+             /* display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+            flex-wrap: wrap;
+          
+            
+
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 32%;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+       
+
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-content h2 {
+            font-size: 22px;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        .tags, .location, .price, .book-now {
+            margin-bottom: 10px;
+        }
+        .tags span, .location span, .price span {
+            background-color: #eee;
+            border-radius: 3px;
+            padding: 5px 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        .price span {
+            background-color: #f7b731;
+            color: #fff;
+        }
+        .book-now a {
+            display: block;
+            text-align: center;
+            background-color: #ff5a5f;
+            color: #fff;
+            padding: 10px;
+            border-radius: 3px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .book-now a:hover {
+            background-color: #ff787d;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="header">
+            <h1>Top deals</h1>
+            <p>"Don’t miss out on our exclusive top deals of the season! Whether you’re looking to upgrade your tech, refresh your wardrobe, or find the perfect gift, we’ve got you covered with unbeatable discounts across all categories. "</p>
+        </div>
+        <div class="deals">
+            <div class="card">
+                <img src="hotel3.jpg" alt="Hotel 1">
+                <div class="card-content">
+                    <h2>Beachfront Bliss</h2>
+                    <div class="tags">
+                        <span>#top deals</span>
+                        <span>#60% off</span>
+                    </div>
+                    <div class="location">
+                        <!-- <span>03 - 07 September, 2024</span> -->
+                        <span>Mumbai, Maharashtra</span>
+                    </div>
+                    <div class="price">
+                        <span>$404/night</span>
+                    </div>
+                    <div class="book-now">
+                        <a href="#">Book now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="hotel2.jpg" alt="Hotel 2">
+                <div class="card-content">
+                    <h2>Blissful Haven</h2>
+                    <div class="tags">
+                        <span>#top deals</span>
+                        <span>#80% off</span>
+                    </div>
+                    <div class="location">
+                        <!-- <span>03 - 07 Mar, 2025</span> -->
+                        <span>Pune, Maharashtra</span>
+                    </div>
+                    <div class="price">
+                        <span>$404/night</span>
+                    </div>
+                    <div class="book-now">
+                        <a href="#">Book now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="hotel1.jpg" alt="Hotel 3">
+                <div class="card-content">
+                    <h2>Execuease Retreat</h2>
+                    <div class="tags">
+                        <span>#top deals</span>
+                        <span>#50% off</span>
+                    </div>
+                    <div class="location">
+                        <!-- <span>23 - 09 Nov, 2024</span> -->
+                        <span>Chennai</span>
+                    </div>
+                    <div class="price">
+                        <span>$404/night</span>
+                    </div>
+                    <div class="book-now">
+                        <a href="#">Book now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="hotel4.webp" alt="Hotel 3">
+                <div class="card-content">
+                    <h2>Charmhaven Hideaway</h2>
+                    <div class="tags">
+                        <span>#top deals</span>
+                        <span>#80% off</span>
+                    </div>
+                    <div class="location">
+                        <!-- <span>03 - 07 Mar, 2017</span> -->
+                        <span>Nagpur , Maharashtra</span>
+                    </div>
+                    <div class="price">
+                        <span>$404/night</span>
+                    </div>
+                    <div class="book-now">
+                        <a href="#">Book now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="hotel5.jpg" alt="Hotel 3">
+                <div class="card-content">
+                    <h2>Luxuriouslodge Retreats</h2>
+                    <div class="tags">
+                        <span>#top deals</span>
+                        <span>#40% off</span>
+                    </div>
+                    <div class="location">
+                        <!-- <span>03 - 07 Mar, 2017</span> -->
+                        <span>Chandni Chowk , Delhi</span>
+                    </div>
+                    <div class="price">
+                        <span>$404/night</span>
+                    </div>
+                    <div class="book-now">
+                        <a href="#">Book now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="hotel6.webp" alt="Hotel 3">
+                <div class="card-content">
+                    <h2>Elite Enclave</h2>
+                    <div class="tags">
+                        <span>#top deals</span>
+                        <span>#60% off</span>
+                    </div>
+                    <div class="location">
+                        <!-- <span>03 - 07 Mar, 2017</span> -->
+                        <span>Banglore</span>
+                    </div>
+                    <div class="price">
+                        <span>$404/night</span>
+                    </div>
+                    <div class="book-now">
+                        <a href="#">Book now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

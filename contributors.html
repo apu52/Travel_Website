@@ -20,6 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <style>
       html {
@@ -55,17 +56,69 @@
         z-index: -1;
         background-size: cover;
       }
+
+      .pagination-btns {
+        margin: 50px 0px;
+      }
+
+      .pagination-btns button.btn {
+        border-radius: 5px;
+        outline: none;
+        margin: 5px 10px;
+        border: 1px solid rgb(146, 110, 110);
+      }
+
+      .pagination-btns button.btn, .pagination-btns button.btn i.bi {
+        font-size: 2rem;
+      }
+
+
+#progress-container {
+  position: fixed ;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  z-index: 99990;
+  /* background: #f3f3f3; */
+}
+
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 7px;
+  width: 0;
+  background: linear-gradient(90deg, rgb(0, 72, 255) 0%, rgb(153, 187, 255) 50%, rgb(0, 184, 250) 100%);
+  box-shadow: 0 0 4px rgba(0, 166, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.7);
+  transition: width 0.09s ease-in-out;
+  border-radius: 10px;
+}
+
+</style>
     </style>
   </head>
   <body>
+    <div id="progress-container">
+      <div id="progress-bar"></div>
+    </div>
     <video id="background-video" autoplay muted loop>
-      <source src="back5.mp4" type="video/mp4" />
+      <source src="img/bg video terms2.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
 
     <div class="container">
-      <h1 class="title">Contributors</h1>
+      <div class="toggle-container aos-init aos-animate" data-aos="fade-down">
+        <input id="themeToggle" class="toggle" type="checkbox">
+      </div>
+      <h1 class="title">Our Contributors</h1>
       <div id="contributors" class="contributors-grid"></div>
+      <div class="pagination-btns">
+        <button class="btn" id="prevBtn"> <i class="bi bi-arrow-left-circle"></i> </button>
+        <button class="btn" id="pageNoBox">1</button>
+        <button class="btn" id="nextBtn"> <i class="bi bi-arrow-right-circle"></i> </button>
+      </div>
     </div>
     <button class="top-btn" id="goToTopBtn" onclick="goToTop()">
       <i class="fa-solid fa-chevron-up" style="color: #ffffff"></i>
@@ -97,5 +150,14 @@
       }
     </script>
     <script src="contributors.js"></script>
+    <script>
+
+      window.addEventListener('scroll', function() {
+          const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+          const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          const scrolled = (winScroll / height) * 100;
+          document.getElementById('progress-bar').style.width = scrolled + '%';
+      });
+      </script>
   </body>
 </html>

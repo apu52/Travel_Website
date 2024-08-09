@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,9 @@
 </head>
 <body>
   <div id="loginSuccessBanner" class="success-banner">Logged in successfully</div>
+  <div id="loginDeclineBanner" class="decline-banner">Logged in Blocked <br> credentials didn't match</div>
     <div id="registerSuccessBanner" class="success-banner">Registered successfully</div>
+    <div id="registerDeclineBanner" class="decline-banner">Registered Blocked <br> Same email address</div>
   <div class="main-container">
     <div class="container" id="container">
       <div class="form-container register-container">
@@ -77,14 +79,14 @@
         <div class="overlay">
           <div class="overlay-panel overlay-left">
             <h1 class="title">Hello <br> friends</h1>
-            <p>if you have an account, login here and have fun</p>
+            <p>If you have an account, login here and have fun</p>
             <button class="ghost" id="login">Login
               <i class="lni lni-arrow-left login"></i>
             </button>
           </div>
           <div class="overlay-panel overlay-right">
             <h1 class="title">Start your <br> journey now</h1>
-            <p>if you don't have an account yet, join us and start your journey.</p>
+            <p>If you don't have an account yet, join us and start your journey.</p>
             <button class="ghost" id="register">Register
               <i class="lni lni-arrow-right register"></i>
             </button>
@@ -112,6 +114,8 @@
       const container = document.getElementById("container");
       const loginSuccessBanner = document.getElementById("loginSuccessBanner");
       const registerSuccessBanner = document.getElementById("registerSuccessBanner");
+      const loginDeclineBanner = document.getElementById("loginDeclineBanner");
+      const registerDeclineBanner = document.getElementById("registerDeclineBanner");
 
       registerButton.addEventListener("click", (event) => {
         event.preventDefault();
@@ -155,10 +159,25 @@
             alert('Name Or Password Cannot Contain <,>,", or /');
             return;
           }
+
+          if(localStorage.getItem("email")===email){
+            registerDeclineBanner.style.display = "block";
+            setTimeout(() => {
+              registerDeclineBanner.style.display = "none";
+            }, 6000);
+          }
+
+          localStorage.setItem("name", name)
+          localStorage.setItem("email", email)
+          localStorage.setItem("password", password)
+
           // Show register success banner
           registerSuccessBanner.style.display = "block";
           setTimeout(() => {
             registerSuccessBanner.style.display = "none";
+            document.getElementById("registerName").value = "";
+            document.getElementById("registerEmail").value = "";
+            document.getElementById("registerPassword").value = "";
           }, 3000);
         } else {
           email = document.getElementById("loginEmail").value;
@@ -175,11 +194,23 @@
             alert('Password cannot contain <,>,", or /');
             return;
           }
-          // Show login success banner
-          loginSuccessBanner.style.display = "block";
-          setTimeout(() => {
-            loginSuccessBanner.style.display = "none";
-          }, 3000);
+          const email_check = localStorage.getItem("email")
+          const password_check = localStorage.getItem("password")
+
+          if (email_check === email && password_check=== password){
+            // Show login success banner
+            loginSuccessBanner.style.display = "block";
+            setTimeout(() => {
+              loginSuccessBanner.style.display = "none";
+            }, 3000);
+            document.getElementById("loginEmail").value = "";
+            document.getElementById("loginPassword").value = "";
+          }else{
+            loginDeclineBanner.style.display = "block";
+            setTimeout(() => {
+              loginDeclineBanner.style.display = "none";
+            }, 3000);
+          }
         }
       }
 
