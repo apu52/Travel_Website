@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessibility </title>
+    <style>
+     
+        
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+        header h1 {
+            text-align: center;
+            margin: 0;
+        }
+        
+       
+      .home-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: #f60303;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        text-decoration: none;
+      }
+
+      .home-button:hover {
+        background-color: #f2444d;
+        color: rgb(8, 6, 6);
+        border: 1px solid black;
+        box-shadow: #070505;
+        box-shadow: 0 0 10px rgba(7, 6, 13, 0.9);
+      }
+
+      @media (max-width: 768px) {
+        .flex-item {
+          flex: 1 1 100%;
+          margin-right: 0;
+        }
+
+      }
+      body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            background-image: url('https://production-tcf.imgix.net/app/uploads/2024/03/05135258/GettyImages-1361595195-2-scaled.jpg?auto=format%2Ccompress&q=80&fit=crop&w=1200&h=600');
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 8px;
+            z-index: 100;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Navigation Menu */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:focus {
+            outline: 2px solid #ffcc00;
+            outline-offset: 2px;
+        }
+
+        /* Main Content */
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #005fcc;
+        }
+
+        /* Form Styling */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="email"] {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #005fcc;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:focus {
+            outline: 3px solid #ffcc00;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+   
+  </head>
+  <body>
+    <a href="index.html" class="home-button">Home</a>
+   <!-- Skip Navigation Link -->
+   <a href="#main-content" class="skip-link">Skip to main content</a>
+
+   <!-- Navigation Menu -->
+   <header>
+       <nav aria-label="Main navigation">
+           <ul>
+               
+           </ul>
+       </nav>
+   </header>
+
+   <!-- Main Content -->
+   <main id="main-content">
+       <section id="home">
+           <h1 style="color: #f60303;">Welcome to Accessible Travel</h1>
+           <p>Your guide to accessible destinations worldwide.</p>
+       </section>
+
+       <section id="accessibility-info">
+           <h2>Accessibility Information</h2>
+           <p>We are committed to making travel accessible to everyone. Our site includes features like screen reader support, keyboard navigation, high contrast text, and more.</p>
+           <p>We also provide detailed information about accessibility features available at various destinations, including:</p>
+           <ul>
+               <li>Wheelchair ramps and elevators</li>
+               <li>Accessible restrooms</li>
+               <li>Hearing assistance devices</li>
+               <li>Guided tours for visually impaired travelers</li>
+           </ul>
+       </section>
+
+       <section id="contact">
+           <h2>Contact Us</h2>
+           <form id="contact-form">
+               <label for="name">Name:</label>
+               <input type="text" id="name" name="name" aria-required="true">
+
+               <label for="email">Email:</label>
+               <input type="email" id="email" name="email" aria-required="true">
+
+               <button type="submit">Submit</button>
+           </form>
+       </section>
+   </main>
+
+   <!-- Footer -->
+   <footer>
+       <p>&copy; 2024 Accessible Travel. All rights reserved.</p>
+   </footer>
+
+   <!-- JavaScript -->
+   <script>
+       document.getElementById('contact-form').addEventListener('submit', function(event) {
+           event.preventDefault();
+           alert('Thank you for your submission! Will Contact You for Further Details ');
+       });
+   </script>
+  </body>
+</html>
