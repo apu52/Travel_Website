@@ -1,0 +1,302 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.main-wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 800px;
+    margin-top: 100px;
+    justify-content: space-between;
+    padding: 20px;
+    margin-left: 0px;
+}
+
+.packagecount{
+    text-align: left;
+    font-size: 14px;
+    color:rgb(90, 38, 38);
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.slideshow {
+    margin-left: 0px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    max-width: 564px;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.package-options h2{
+    font-size: 1rem;
+}
+
+.slide.active {
+    opacity: 1;
+}
+.row-new{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:10px;
+}
+
+.row-grid{
+    display: grid;
+    grid-auto-flow: column;
+    gap:10px;
+}
+.content {
+    height:800px;
+    width: 100%;
+    padding: 20px;
+    justify-content: space-between;
+}
+.left1{
+    /* max-width: 450px; */
+    margin-right: 0px;
+   
+}
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h1 span {
+    color: orange;
+}
+
+.package-options {
+    display: flex;
+    gap: 20px;
+}
+
+.package img{
+    transform: translateX(-28px);
+    max-width: 100%;
+    /* width: 100%; */
+    border-radius: 5px;
+}
+
+
+
+
+.package {
+    display: flex;
+    flex-direction: column;
+    background: #f4f4f4;
+    padding: 20px;
+    width: 80%;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.content p{
+    margin: 10px 0px;
+}
+.floating-bar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 10px;
+}
+
+.floating-bar .btn {
+    text-decoration: none;
+    background: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.floating-bar .btn:hover {
+    background: #e64a19;
+}
+
+.explore-destinations-section {
+    padding: 50px 0;
+    /* margin: 10px 0px;
+     */
+     scale: 0.9;
+    text-align: center;
+    width: 100%;
+}
+
+.explore-destinations-heading {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.region-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.region-tab {
+    margin: 0 15px;
+    font-size: 1.2rem;
+    color: #666;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.region-tab.active {
+    color: #333;
+    border-bottom: 2px solid orange;
+}
+
+.region-tab:hover {
+    color: #333;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.destination-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin: 0px;
+}
+
+.destination-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.destination-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: left;
+}
+
+.destination-info h3 {
+    margin: 0 0 5px;
+    font-size: 1.5rem;
+}
+
+.destination-info p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.why-choose-us-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.why-choose-us-heading {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.why-choose-us-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.why-choose-us-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 22%;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.why-choose-us-icon {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.why-choose-us-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.why-choose-us-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.experience-card {
+    background-color: #f0f7f2;
+}
+
+.experts-card {
+    background-color: #f0f8ff;
+}
+
+.hotels-card {
+    background-color: #fff4f4;
+}
+
+.value-card {
+    background-color: #fff9e6;
+}
+
+@media (max-width: 768px) {
+    .why-choose-us-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .why-choose-us-card {
+        width: 90%;
+    }
+}
