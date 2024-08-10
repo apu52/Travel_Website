@@ -5,256 +5,504 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trip & Hotel Packages</title>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="./Image-Gallery/style.css">
-  <link rel="stylesheet" href="packages.css" class="rel">
- 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        :root {
+            --primary-color: #d6eaf7;
+            --secondary-color: #e73e76;
+            --bg-color: #f4f4f9;
+            --text-color: #333;
+            --card-bg: #ffffff;
+        }
 
-      </head>
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-      <body>
-        
-    <!-- sticky animation  -->
- <script type="text/javascript">
-    window.addEventListener("scroll", function () {
-      var header = document.querySelector("nav");
-      header.classList.toggle("sticky", window.scrollY > 50)
-    })
-  </script>
-   <nav class="newNav">
-    <div style="display: flex; flex-direction: row; align-items: center;">
-    <img src="./img/tour1.png" class="sitelogo">
-    
-    <a href="#" class="nav__logo aos-init aos-animate" data-aos="fade-right">Tourguide<span>.</span></a>
-  </div>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
 
-    <ul class="navLinks">
-      <li class="link aos-init aos-animate" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
-      <li class="link aos-init aos-animate" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
-      <li class="link aos-init aos-animate" data-aos=""><a href="#Home">Home</a></li>
-      <li class="link aos-init aos-animate" data-aos=""><a href="#AboutUs">About</a></li>
-      <li class="link dropdown aos-init aos-animate" data-aos="">
-          <a href="#Services" class="dropdown">Services</a>
-          <ul class="dropdown-menu">
-              <li><a href="#Destinations">Destination</a></li>
-              <li><a href="#trip">Prices</a></li>
-              <li><a href="#ReviewGallery">Trip Gallery</a></li>
-              <li><a href="#tourist">Tourist Guide</a></li>
-              <li><a href="#hotel">Hotel &amp; Resort</a></li>
-          </ul>
-      </li>
-      <li class="link aos-init aos-animate" data-aos=""><a href="#testimonials">Testimonial</a></li>
-      <li class="link aos-init aos-animate" data-aos=""><a href="feedback.html">Rate Us?</a></li>
-      <li class="link aos-init aos-animate" data-aos=""><a href="#cnt-form">Contact Us</a></li>
-  </ul>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: none;
+            color: var(--text-color);
+            display: block;
+        }
 
-    <a href="newLogin.html" class="contact-btn" id="nav-login-btn"><button class="btn login aos-init aos-animate" id="btn-style" data-aos="fade-down" style="display: block;">Login/SignUp</button></a>
-    <a href="mapa.html" class="contact-btn" id="nav-view-btn"><button class="btn aos-init aos-animate" id="btn-style" style="margin: 0;" data-aos="fade-down">view <map name=""></map></button></a>
+        #background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1000;
+            object-fit: cover;
+            background-size: cover;
+        }
 
-    <a href="loginPage.html" class="contact-btn"><button class="btn aos-init aos-animate" id="logout-btn" style="margin: 0; display: none;" data-aos="fade-down" disabled="">Log Out</button></a>
+        .video-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -999;
+        }
 
-    <!-- <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
-        style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a> -->
+        .sitelogo {
+            height: 40px;
+            margin-right: 10px;
+            min-width: fit-content;
+        }
 
-    <div class="toggle-container aos-init aos-animate" data-aos="fade-down">
-      <input id="themeToggle" class="toggle" type="checkbox">
-    </div>
-    <div class="hamburger aos-init aos-animate" data-aos="fade-down">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
-  </nav>
-  
-   
-    <div class="nav-wrapperr">
-        <div id="progress-container">
-          <div id="progress-bar"></div>
-        </div>
-    
-        <script>
-        window.addEventListener('scroll', function() {
-    // Get the current scroll position
-    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
-    
-    // Get the total scrollable height
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    
-    // Calculate the percentage scrolled
-    const scrolled = (winScroll / height) * 100;
-    
-    // Set the progress bar width
-    document.getElementById('progress-bar').style.width = scrolled + '%';
-});
+        .nav__logo {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
 
-        </script>
-      </div>
+        .nav__logo span {
+            color: #e73e76;
+        }
 
-       <div class="main-wrapper">
-        <div class="slideshow">
-            <img src="https://i.pinimg.com/736x/ac/94/35/ac9435b1dae07a86462fa6fa691498c4.jpg" class="slide" alt="Tiger 1">
-            <img src="https://i.pinimg.com/564x/c5/39/96/c53996d4e79d2f8dcc0ca608e2613873.jpg" class="slide" alt="Tiger 2">
-            <img src="https://i.pinimg.com/564x/fd/76/77/fd767725f6663d77389b322d309189f3.jpg" class="slide" alt="Tiger 3">
-        </div>
-        <div class="content">
-            <h1>Let us plan you a perfect </h1>
-            <h1><span>Holiday</span></h1>
-            <p>Custom-Crafted Tour Packages for Unforgettable Holiday Experiences in the world, based on your interests.</p>
+        .link {
+            position: relative;
+        }
 
-            <div class="package-options">
-                <div class="package">
-                    <div class="row-new">
-                        <h2> Wildlife</h2>
-                        <i class="fa-solid fa-hippo"></i>
-                    </div>
-                    <div class="packagecount">30+ Packages</div>
-                   <div style="">
-                    <a class="img1">
-                        <img src="https://www.tourmyindia.com/imagess/wildlife.webp" alt="" class="src"/>
-                    </a>
+        .link>a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 6px 10px;
+            text-decoration: none;
+            width: 100%;
+            transition: all 0.3s linear;
+            align-items: center;
+            margin-top: -15px;
+        }
+
+        .link>a:hover {
+            background-color: #f6ddff;
+            border-radius: 10px;
+            box-shadow: rgb(56, 0, 109) 0px 0px 8px 2px inset;
+            color: #002152;
+        }
+
+        .navigationbar_package {
+            align-items: center;
+            display: flex;
+            gap: 5px;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #123456;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-menu>li {
+            float: none;
+        }
+
+        .dropdown-menu>li>a {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            color: white;
+        }
+
+        .dropdown-menu>li>a:hover {
+            background-color: #575757;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .contact-btn {
+            position: relative;
+            right: 15px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            padding: 1rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            color: white;
+            background-color: #0697f1;
+            margin: 0;
+        }
+
+        .btn:hover {
+            background-color: #0578c1;
+        }
+
+        #themeToggle {
+            width: inherit;
+        }
+
+        .toggle-container {
+            margin-left: 15px;
+        }
+
+        .hamburger {
+            height: 2rem;
+            width: 1.7rem;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            display: none;
+            transition: 0.2s;
+        }
+
+        .line {
+            height: 5px;
+            width: 100%;
+            background-color: white;
+            border-radius: 2px;
+        }
+
+        .main-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .package-grid {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 0 40px;
+        }
+
+        .package-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .package-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .package-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .package-info {
+            padding: 20px;
+        }
+
+        .package-info h3 {
+            margin: 0 0 10px;
+            color: #0697f1;
+        }
+
+        .package-info p {
+            margin: 0;
+            color: #666;
+        }
+
+        .login_packages {
+            color: white !important;
+            background-color: #6a5acd !important;
+        }
+
+        .login_packages:hover {
+            background-color: #ff0000 !important;
+            border-color: #ff0000 !important;
+            color: #fff !important;
+        }
+
+        @media (max-width: 1024px) {
+            .navLinks {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2em;
+            margin: 90px 0 20px !important;
+            font-weight: 800;
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-color);
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        .subtitle {
+            color: var(--secondary-color);
+            font-style: italic;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            font-weight: 800;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            animation: fadeInUp 0.5s ease-out 0.2s both;
+        }
+
+        .center-card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .center-card img {
+            max-width: 400px;
+            height: auto;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        .center-card img:hover {
+            transform: scale(1.05) translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .hotel-packages {
+            padding: 40px 0;
+            margin-top: 10px;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .pricing-section {
+            padding: 60px 0;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            margin-top: 40px;
+        }
+
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .pricing-card {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 30px;
+            flex: 1 1 300px;
+            min-width: 300px;
+            max-width: 400px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .pricing-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            font-family: 'Poppins', sans-serif;
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        .pricing-card p {
+            font-size: 1em;
+            color: var(--text-color);
+            margin-bottom: 30px;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+            font-size: 1em;
+            color: var(--text-color);
+        }
+
+        .pricing-card ul li {
+            margin-bottom: 10px;
+        }
+
+        .pricing-card ul li i {
+            color: var(--secondary-color);
+            margin-right: 10px;
+        }
+
+        .pricing-card .btn {
+            padding: 15px 30px;
+            font-size: 1em;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+            animation: fadeInUp 0.5s ease-out;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="background-video.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+    <header>
+        <nav>
+            <div class="container">
+                <a href="#" class="nav__logo">
+                    <img src="logo.png" alt="Logo" class="sitelogo" />
+                    Trip & Hotel Packages
+                </a>
+                <div class="navigationbar_package">
+                    <ul>
+                        <li class="link"><a href="#">Home</a></li>
+                        <li class="link"><a href="#">About Us</a></li>
+                        <li class="link dropdown">
+                            <a href="#">Packages</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Package 1</a></li>
+                                <li><a href="#">Package 2</a></li>
+                                <li><a href="#">Package 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="link"><a href="#">Contact</a></li>
+                    </ul>
                 </div>
-                  
-                   
+                <div class="toggle-container">
+                    <button id="themeToggle" class="btn">Toggle Theme</button>
                 </div>
-                <div class="package">
-                    <div class="row-new">
-                        <h2> Heritage</h2>
-                        <i class="fa-solid fa-landmark"></i>
-                    </div>
-                    <div class="packagecount">40+ Packages</div>
-                    <div style="">
-                        <a class="img1">
-                            <img src="https://www.tourmyindia.com/imagess/heritage.webp" alt="" class="src"/>
-                        </a>
-                    </div>
-                    
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
                 </div>
-                <div class="package">
-                    <div class="row-new">
-                        <h2> Romantic</h2>
-                        <i class="fa-solid fa-heart"></i>
+            </div>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section class="hotel-packages">
+            <h2 class="section-title">Our Packages</h2>
+            <p class="subtitle">Find the best deals and offers for your next adventure!</p>
+            <div class="package-grid">
+                <div class="package-card">
+                    <img src="image1.jpg" alt="Package 1">
+                    <div class="package-info">
+                        <h3>Package 1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
-                    <div class="packagecount">50+ Packages</div>
-                    <div style="">
-                        <a class="img1">
-                            <img src="https://www.tourmyindia.com/imagess/beach01.webp" alt="" class="src"/>
-                        </a>
+                </div>
+                <div class="package-card">
+                    <img src="image2.jpg" alt="Package 2">
+                    <div class="package-info">
+                        <h3>Package 2</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="package-card">
+                    <img src="image3.jpg" alt="Package 3">
+                    <div class="package-info">
+                        <h3>Package 3</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
             </div>
-
-       
-
-
-      
-          
-           
-
-        </div>
-    </div>
-
-    <div class="explore-destinations-section">
-        <h2 class="explore-destinations-heading">Explore Top Destinations by Region</h2>
-        <div class="region-tabs">
-            <span class="region-tab active">North India</span>
-            <span class="region-tab">South India</span>
-            <span class="region-tab">East India</span>
-            <span class="region-tab">West India</span>
-            <span class="region-tab">Central India</span>
-        </div>
-        <div class="row-grid">
-            <div class="destination-card left1">
-                <img src="https://www.tourmyindia.com/imagess/uttarakhand01-package.webp" alt="Uttarakhand">
-                <div class="destination-info">
-                    <h3>Uttarakhand</h3>
-                    <p>50+ Packages</p>
+        </section>
+        <section class="pricing-section">
+            <h2 class="section-title">Pricing</h2>
+            <p class="subtitle">Choose the perfect plan for your needs</p>
+            <div class="pricing-container">
+                <div class="pricing-card">
+                    <h3>Basic Plan</h3>
+                    <p>Starting at $199</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 3 Days / 2 Nights</li>
+                        <li><i class="fas fa-check"></i> Hotel Accommodation</li>
+                        <li><i class="fas fa-check"></i> Guided Tours</li>
+                    </ul>
+                    <button class="btn">Book Now</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Premium Plan</h3>
+                    <p>Starting at $399</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 5 Days / 4 Nights</li>
+                        <li><i class="fas fa-check"></i> Hotel Accommodation</li>
+                        <li><i class="fas fa-check"></i> All Meals Included</li>
+                    </ul>
+                    <button class="btn">Book Now</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Luxury Plan</h3>
+                    <p>Starting at $599</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 7 Days / 6 Nights</li>
+                        <li><i class="fas fa-check"></i> 5 Star Hotel Accommodation</li>
+                        <li><i class="fas fa-check"></i> All Meals & Drinks Included</li>
+                    </ul>
+                    <button class="btn">Book Now</button>
                 </div>
             </div>
+        </section>
+    </main>
+</body>
 
-            <div class="destination-grid">
-            
-                <div class="destination-card">
-                    <img src="https://www.tourmyindia.com/imagess/rajasthan-package.webp" alt="Rajasthan">
-                    <div class="destination-info">
-                        <h3>Rajasthan</h3>
-                        <p>30+ Packages</p>
-                    </div>
-                </div>
-                <div class="destination-card">
-                    <img src="https://www.tourmyindia.com/imagess/himachal-package.webp" alt="Himachal">
-                    <div class="destination-info">
-                        <h3>Himachal</h3>
-                        <p>60+ Packages</p>
-                    </div>
-                </div>
-                <div class="destination-card">
-                    <img src="https://www.tourmyindia.com/imagess/j&k-package.webp" alt="Jammu & Kashmir">
-                    <div class="destination-info">
-                        <h3>Jammu & Kashmir</h3>
-                        <p>30+ Packages</p>
-                    </div>
-                </div>
-                <div class="destination-card">
-                    <img src="https://www.tourmyindia.com/imagess/up-package.webp" alt="Uttar Pradesh">
-                    <div class="destination-info">
-                        <h3>Uttar Pradesh</h3>
-                        <p>25+ Packages</p>
-                    </div>
-                </div>
-                <div class="destination-card">
-                    <img src="https://www.tourmyindia.com/imagess/delhi-package.webp" alt="Delhi">
-                    <div class="destination-info">
-                        <h3>Delhi</h3>
-                        <p>20+ Packages</p>
-                    </div>
-                </div>
-                <div class="destination-card">
-                    <img src="https://www.tourmyindia.com/imagess/ladakh-trend.webp" alt="Ladakh">
-                    <div class="destination-info">
-                        <h3>Ladakh</h3>
-                        <p>25+ Packages</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        
-    </div>
-    
-
-    <div class="why-choose-us-section">
-        <h2 class="why-choose-us-heading">Why Choose Us?</h2>
-        <div class="why-choose-us-cards">
-            <div class="why-choose-us-card experience-card">
-                <div class="why-choose-us-icon">&#128077;</div>
-                <h3 class="why-choose-us-title">20+ Year Experience</h3>
-                <p class="why-choose-us-description">Boasting over two decades in the tourism and hospitality industry, Tour My India has amassed invaluable experience that sets us apart.</p>
-            </div>
-            <div class="why-choose-us-card experts-card">
-                <div class="why-choose-us-icon">&#128100;</div>
-                <h3 class="why-choose-us-title">A Team of Experts</h3>
-                <p class="why-choose-us-description">Our experienced team at Tour My India is more than just proficient; they are destination experts for every location within the mesmerizing landscape of India. Their knowledge is an invaluable asset for every traveler.</p>
-            </div>
-            <div class="why-choose-us-card hotels-card">
-                <div class="why-choose-us-icon">&#127969;</div>
-                <h3 class="why-choose-us-title">Verified Hotels</h3>
-                <p class="why-choose-us-description">We offer a meticulously selected and verified list of high-grade hotels. Our partners consistently deliver top-notch service, ensuring an exceptional experience for our guests.</p>
-            </div>
-            <div class="why-choose-us-card value-card">
-                <div class="why-choose-us-icon">&#128176;</div>
-                <h3 class="why-choose-us-title">Value for Money Tours</h3>
-                <p class="why-choose-us-description">With Tour My India, your vacation is not just about sightseeing; it's about creating memories that last a lifetime. Our holiday packages are hassle-free and designed with a focus on value for money.</p>
-            </div>
-        </div>
-    </div>
-    
-    
-    <script src="packages.js"></script>
-      </body>
+</html>
