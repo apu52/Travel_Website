@@ -40,6 +40,43 @@ body{
   -webkit-text-fill-color: transparent;
 }
 
+.gethelp{
+  padding: 12px;
+  bottom:10px;
+  right:10px;
+  max-width: 250px;
+  /* max-height: 80px; */
+  width: fit-content;
+  border-radius: 10px;
+  position:fixed;
+  background-color: #c099ff!important;
+  z-index: 10;
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.help{
+  display: flex;
+}
+.help img{
+  max-width: 45px;
+  max-height: 45px;
+  position:absolute;
+  right:0px;
+  bottom:20px;
+}
+
+.gethelp a{
+  color:white;
+  text-decoration: none;
+}
+.gethelp h3{
+  font-size: 12px;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 20px;
+}
 body.dark-mode .heading h1{
   background: -webkit-linear-gradient(#686868, #fff);
   -webkit-background-clip: text;
