@@ -23,13 +23,6 @@
     align-items: center;
 }
 
-.back-to-home {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-}
-
 .back-to-home svg  {
     margin-right: 8px;
     margin-left: 500px;
