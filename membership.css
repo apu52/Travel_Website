@@ -322,12 +322,12 @@ body.dark-mode {
 
 
 body.dark-mode .table .package-name::before{
-  background: rgb(93, 93, 93);
+  background: rgb(59, 59, 59);
 }
 body.dark-mode .wrapper .table {
-  background-color: rgb(93, 93, 93);
+  background-color: rgb(59, 59, 59);
   /* border: 1px solid black; */
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
 }
 
 body.dark-mode .wrapper .table .price-section {
