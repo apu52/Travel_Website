@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="counter.css" class="rel href">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="contactus.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -1900,56 +1901,47 @@ setInterval(() => {
 
   </section> -->
 
-    <section>
-      <div class="container" id="cnt-form">
-        <div class="items">
-          <div class="contact" data-aos="slide-right">
-            <div>
-              <h1 class="section__title" style="height: 90px;">Contact Us</h1>
-              <p>Feel Free to drop us a message with any inquiries or feedback.We're here to assist you!</p>
-              <img src="./img/flat-design-illustration-customer-support_23-2148887720.avif">
+  <section id="contact-section">
+    <div class="container" id="cnt-form">
+      <div class="contact-wrapper">
+        <div class="contact-info" data-aos="slide-right">
+          <h1 class="section__title">Contact Us</h1>
+          <p class="section__description">
+            Feel free to drop us a message with any inquiries or feedback. We're here to assist you!
+          </p>
+          <img src="./img/flat-design-illustration-customer-support_23-2148887720.avif" alt="Customer Support">
+        </div>
+        <div class="contact-form-wrapper" data-aos="fade-in">
+          <h2>Get in Touch</h2>
+          <form id="contact-form" name="CalcDiverse Contact" autocomplete="off">
+            <div class="form-group">
+              <label for="Name">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="Name" placeholder="Name" required>
+              </label>
             </div>
-          </div>
-          <div class="contact-form" data-aos="fade-in">
-            <h1>Contact Us</h1>
-            <form id="contact-form" name="CalcDiverse Contact" autocomplete="off">
-              <div class="one" style="position: relative;">
-                <i class="icon1 fa-solid fa-user"></i>
-                <input type="text" id="Name" placeholder="Name" style="padding-left: 6%;">
-              </div>
-              <div style="position: relative;">
-                <i class="icon2 fa-solid fa-envelope"></i>
-                <input type="email" id="email" placeholder="Email" class="contact-us-email-fix" style="padding-left:6%; width: 50% !important;
-                padding-left: 6% !important;
-                padding-bottom: 10px !important;
-                margin: 20px !important;
-                margin-left: 30px !important;
-                outline: none !important;
-                border: none !important;
-                font-size: 15px !important;
-                background: none !important;
-                border-bottom: 1px solid var(--text-dark) !important;
-                color: var(--text-dark) !important;
-                font-family: 'Oxygen', sans-serif !important; border-radius: 20px;" required>
-              </div>
-              <div style="position: relative;">
-                <i class="icon3 fa-solid fa-message"></i>
-                <textarea id="message" placeholder="Type your message here.." style="padding-left:6%;"
-                  required></textarea><br>
-              </div>
-              <button type="submit" class="btn btn-style" data-aos="fade-in" id="btn-style"
-                style="margin-right: 40px;box-shadow: 2px 2px 8px red;">Send</button>
-              <button onclick="window.location.href='feed.html'" class="btn  btn-style" data-aos="fade-in"
-                id="btn-style" style="box-shadow: 2px 2px 8px red;">Feedback</button>
-            </form>
-          </div>
+            <div class="form-group">
+              <label for="email">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" id="email" placeholder="Email" required>
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="message">
+                <i class="fa-solid fa-message"></i>
+                <textarea id="message" placeholder="Type your message here..." required></textarea>
+              </label>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" id="btn-submit">Send</button>
+              <button type="button" onclick="window.location.href='feed.html'" class="btn btn-secondary" id="btn-feedback">Feedback</button>
+            </div>
+          </form>
         </div>
       </div>
-    </section>
-
-
-
-
+    </div>
+  </section>
+  
     <section class="subscribe" id="Contact">
       <div class="section__container subscribe__container">
         <div class="subscribe__content">
