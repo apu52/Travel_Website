@@ -26,11 +26,30 @@ body{
 
 }
 
+.heading {
+  margin-top: 8%;
+ 
+}
+
+.heading h1{
+  font-size: 45px;
+ text-align: center;
+ font-weight: 600;
+  background: -webkit-linear-gradient(#3d00a5, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.dark-mode .heading h1{
+  background: -webkit-linear-gradient(#686868, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .wrapper{
   /* max-width: 1090px; */
   width: 100%;
-  margin-top: 10%;
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -104,7 +123,7 @@ body{
  
 }
 .features li .list-name{
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 400;
   color:#3b4d67;
 }
