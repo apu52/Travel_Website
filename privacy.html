@@ -29,7 +29,6 @@
             font-size: 2.5rem;
             font-weight: bold;
             margin-bottom: 20px;
-            color: #639ace !important;
         }
         .section-title {
             font-family: 'ABeeZee', sans-serif;
@@ -203,6 +202,12 @@
         <div class="circle"></div>
         <div class="circle"></div>
     </div>
+    <a>
+        <div class="theme-toggle">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+        </div>
+       </a>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const coords = { x: 0, y: 0 };
@@ -313,6 +318,29 @@
           document.body.scrollTop = 0;
           document.documentElement.scrollTop = 0;
         }
+      </script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const themeToggle = document.querySelector(".theme-toggle");
+        const body = document.body;
+
+        // Load the saved theme from local storage and apply it
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme && savedTheme === "dark") {
+          body.classList.add("dark-theme");
+        }
+
+        themeToggle.addEventListener("click", function () {
+          body.classList.toggle("dark-theme");
+
+          // Save the current theme in local storage
+          if (body.classList.contains("dark-theme")) {
+            localStorage.setItem("theme", "dark");
+          } else {
+            localStorage.setItem("theme", "light");
+          }
+        });
+      });
       </script>
 
 <script>

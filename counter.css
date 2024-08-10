@@ -73,6 +73,7 @@
   @media screen and (max-width: 480px) {
     .wrapper {
       gap: 15px;
+      width: 100vw;
     }
     .countitem {
       width: 100%;

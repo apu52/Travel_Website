@@ -2480,17 +2480,13 @@ body {
 
 /* Light Mode and Dark Mode of AboutUs */
 .headingofAbout {
-  font-weight: bold; /* Make the heading bold */
+  font-weight: bold;
   text-align: center;
-  color: yellow; /* Set heading color to yellow */
-  font-size: 2.5rem; /* Increase font size */
-  margin: 20px 0; /* Add margin for spacing */
-  text-shadow: 
-      -1px -1px 0 #000,  
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-       1px 1px 0 #000; /* Dark black outline around each letter */
-  font-family: 'Roboto', sans-serif; /* Use Roboto font family */
+  color: yellow;
+  font-size: 2.5rem;
+  margin: 20px 0;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Styling for elements with .aboutcon class */
@@ -2499,48 +2495,48 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background: linear-gradient(135deg, #7b4397, #32b1fa, rgb(254, 71, 227)); /* Gradient background */
-  padding: 40px 20px; /* Add padding for spacing */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  background: linear-gradient(135deg, #90b7f6, #d6edf7); /* Soft blue gradient */
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
 }
+
 
 /* Styling for elements with .aboutcontent class */
 .aboutcontent {
   text-align: center;
-  color: black;
+  color: #333;
   margin-bottom: 20px;
-  flex: 1 1 300px; /* Make flex items responsive */
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8); /* Background color for content */
-  border-radius: 10px; /* Rounded corners */
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for transform and background color */
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 /* Hover Effect for aboutcontent */
 .aboutcontent:hover {
-  transform: scale(1); /* Slightly enlarge on hover */
-  background-color: rgba(255, 255, 255, 1); /* Change background color on hover */
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 1);
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .aboutcon {
-      flex-direction: column; /* Stack items vertically on small screens */
+    flex-direction: column;
   }
 
   .headingofAbout {
-      font-size: 2rem; /* Adjust font size for smaller screens */
-  }
-}
-/* Adjust hover effect for touch devices */
-@media (hover: none) {
-  .aboutcontent:hover {
-      transform: none; /* Remove scaling on touch devices */
+    font-size: 2rem;
   }
 }
 
+/* Adjust hover effect for touch devices */
+@media (hover: none) {
+  .aboutcontent:hover {
+    transform: none;
+  }
+}
 
 /* Styling for SVG elements inside .iconss class */
 .iconss svg {
