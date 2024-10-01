@@ -1,0 +1,185 @@
+div.niha {
+
+
+    border: 2px solid rgb(151, 228, 240);
+    display: inline-block;
+    color: rgb(151, 228, 240);
+    font-size: small;
+}
+
+body {
+    background-color: lightskyblue;
+}
+
+.headingfonts {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 40px;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    text-align: center;
+}
+
+
+/* Typing Effect CSS */
+/* 
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from , to { border-color: transparent; }
+    50% { border-color: transparent; }
+} */
+
+#heading2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    color: #d6cece;
+    border-right: 0.15em solid #f5f3f3;
+    white-space: nowrap;
+    overflow: hidden;
+    /* width: 0; Ensures the text is hidden initially */
+    /* animation: 
+        typing 10s steps(2000, end) forwards,
+        blink-caret 0.75s step-end infinite; */
+}
+
+
+
+#heading2 {
+    color: #36fe9a;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+
+}
+
+.buttons {
+    background-color: blue;
+    color: white;
+    border-radius: 60%;
+    text-decoration: none;
+    width: 90px;
+    height: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.buttons a {
+    color: white;
+    /* Change link text color */
+    text-decoration: none;
+    /* Remove underline from link */
+    display: block;
+    /* Make the link a block element to fill the button */
+    width: 100%;
+    /* Make link fill the button width */
+    height: 100%;
+    /* Make link fill the button height */
+    text-align: center;
+    /* Center text */
+}
+
+.buttons:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.bottom-background {
+    position: fixed;
+    top: 0;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    /* Adjust height as needed */
+    /* background-image: url(""); */
+    /* Your moving background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    /* Ensure it stays behind other content */
+    right: 0%;
+}
+
+.card-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 16px;
+    gap: 16px;
+    overflow-x: hidden;
+    /* Hides horizontal scrollbar */
+
+
+}
+
+.cards {
+    flex: 0 1 50px;
+    /* Ensure each card has a base width of 350px */
+    margin: 8px;
+    /* Add some space around each card */
+    border: 1px solid #eaeaea;
+    /* Border for the card */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Shadow for depth */
+    background-color: white;
+}
+
+.cards:hover {
+    background: linear-gradient(to bottom, blue, white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.card-image {
+    border: 1px solid #eaeaea;
+    /* Card border */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Shadow for depth */
+    overflow: hidden;
+    /* Prevent overflow */
+}
+
+.button1 {
+    display: flex;
+    /* Flexbox for button */
+    justify-content: center;
+    /* Center the text inside */
+    align-items: center;
+    /* Center vertically */
+    height: 50px;
+    /* Button height */
+    width: 200px;
+    /* Button width */
+    cursor: pointer;
+    /* Pointer on hover */
+    background-color: #36fe9a;
+    /* Button color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Box shadow */
+    border: none;
+    /* Remove border */
+    border-radius: 5px;
+    /* Rounded corners */
+    margin-top: 20px;
+    /* Space above the button */
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+}
+
+.button1 a {
+    text-decoration: none;
+    background-color: #36fe9a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
