@@ -459,6 +459,7 @@
       <div class="circle"></div>
       <div class="circle"></div>
     </div>
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const coords = { x: 0, y: 0 };
@@ -507,14 +508,17 @@
   })
 </script>
 
-    <div id="pre-loader">
+
+
+    <!-- pre-loader taking time to load website, user can not like to wait to load main page, so its unable -->
+    <!-- <div id="pre-loader">
       <h1>TourGuide . . .</h1>
     </div>
     <div id="bg">
       <canvas></canvas>
       <canvas></canvas>
       <canvas></canvas>
-    </div>
+    </div> -->
     
 
     <!-- <div id="progressbar"></div> -->
@@ -570,10 +574,10 @@
           <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
       </ul>
 
-        <a href="newLogin.html" class="contact-btn" id="nav-login-btn"><button class="btn login" id="btn-style"
+        <a href="newLogin.html" class="contact-btn" id="nav-login-btn"><button class="btn login" id="btn-style" style="background-color: #3d77b2;border:none;"
             data-aos="fade-down">Login/SignUp</button></a>
-        <a href="mapa.html" class="contact-btn" id="nav-view-btn"><button class="btn" id="btn-style" style="margin: 0;"
-            data-aos="fade-down">view <map name=""></map></button></a>
+        <a href="mapa.html" class="contact-btn" id="nav-view-btn"><button class="btn" id="btn-style" style="margin: 0;background-color: #3d77b2;border:none;"
+            data-aos="fade-down"  >view <map name=""></map></button></a>
 
         <a href="loginPage.html" class="contact-btn"><button class="btn" id="logout-btn"
             style="margin: 0; display: none;" data-aos="fade-down" disabled>Log Out</button></a>
@@ -617,8 +621,8 @@
       
       <section class="section__container header__container" id="Home">
         <div class="header__image" data-aos="fade-down-right">
-          <img src="https://i.ibb.co/88Qnjxg/pexels-josh-hild-2422259.jpg" alt="header" />
-          <img src="https://i.ibb.co/w4Jqjdf/pexels-andrei-tanase-1271619.jpg" alt="header" />
+          <img style="border-radius:50% 10% 20% 70% / 60% 90% 50% 30%;" src="https://i.ibb.co/88Qnjxg/pexels-josh-hild-2422259.jpg" alt="header" />
+          <img style="border-radius:70% 10% 20% 70% / 60% 90% 50% 30%;" src="https://i.ibb.co/w4Jqjdf/pexels-andrei-tanase-1271619.jpg" alt="header" />
         </div>
         <div class="header__content">
           <div>
@@ -632,11 +636,11 @@
             </p>
             <div class="action__btns">
               <a href="membership.html"><button class="btn" data-aos="fade-in"
-                  style="box-shadow: 2px 2px 8px red;">Membership</button></a>
+                  style="box-shadow: 2px 2px 8px rgba(98, 89, 89, 0.373);">Membership</button></a>
               <button class="btn" data-aos="fade-in" onclick="planTrip()"
-                style="box-shadow: 2px 2px 8px red;">Plan a Trip</button>
+                style="box-shadow: 2px 2px 8px rgb(98, 89, 89,  0.373)">Plan a Trip</button>
               <a href="./payment.html"><button class="btn" data-aos="fade-in" 
-                  style="box-shadow: 2px 2px 8px red;">Book Now</button></a>
+                  style="box-shadow: 2px 2px 8px rgb(98, 89, 89,  0.373)">Book Now</button></a>
             </div>
 
 
@@ -644,7 +648,7 @@
             <div class="story">
               <div class="video">
                 <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" type="video/mp4"
-                  style="box-shadow:2px 2px 8px blue;">
+                  style="box-shadow:2px 2px 8px rgb(121, 121, 228);">
                 <!-- link to the hmtl page with the video -->
                 <a href="story.html" class="btn_video">
                   <span><i class="ri-play-fill"></i></span>
@@ -1078,8 +1082,8 @@
               <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
               <div class="booking__price">
                 <div class="price"><span>From</span> $300</div>
-                <a href="./dedicated-destinations/santorini-aegean-sea/start.html"><button class="book__now btn-style"
-                    style="box-shadow: 2px 2px 8px red;">Book
+                <a href="./dedicated-destinations/santorini-aegean-sea/start.html"><button class="book__now btn-style" style="color: #3d77b2;"
+                    >Book
                     Now</button></a>
               </div>
             </div>
@@ -1092,7 +1096,7 @@
               <div class="booking__price">
                 <div class="price"><span>From</span> $450</div>
                 <a href="./dedicated-destinations/machu-picchu-peru/Machu_start.html"><button
-                    class="book__now btn-style" style="box-shadow: 2px 2px 8px red;">Book
+                    class="book__now btn-style" style="color: #3d77b2;">Book
                     Now</button></a>
               </div>
             </div>
@@ -1105,17 +1109,17 @@
               <div class="booking__price">
                 <div class="price"><span>From</span> $400</div>
                 <a href="./dedicated-destinations/grand-canyon-national-park-arizona/Grand_start.html"><button
-                    class="book__now btn-style" style="box-shadow: 2px 2px 8px red;">Book Now</button></a>
+                    class="book__now btn-style" style="color: #3d77b2;" >Book Now</button></a>
               </div>
             </div>
           </div>
         </div>
         <div class="view__all">
-          <a href="./package.html"><button class="btn" id="btn-style" style="box-shadow: 2px 2px 8px red;">View
+          <a href="./package.html"><button class="btn" id="btn-style" >View
               All</button></a>
           <br>
           <br>
-          <a href="trending.html"><button class="btn" id="btn-style" style="box-shadow: 2px 2px 8px red;">View
+          <a href="trending.html"><button class="btn" id="btn-style" >View
               Trending</button></a>
         </div>
       </div>
@@ -1170,8 +1174,8 @@
                 Visual Stories of Adventure to Spark Your Imagination.<br>
                 Get inspired for your next journey.
               </p>
-              <button class="btn btn-style" id="btn-page" onclick="replaceDivs()" data-aos="zoom-in"
-                style="box-shadow: 2px 2px 8px rgb(0, 191, 255);">View All</button>
+              <button class="" id="btn-page" onclick="replaceDivs()" data-aos="zoom-in" style="color: white;"
+                ">View All</button>
             </div>
           </div>
         </div>
@@ -1300,15 +1304,15 @@
 
     <!--Local Events -->
     <section class="hotel" id ="hotel">
-      <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Local Events and Festival</h2>
+      <h2 style="color: rgb(70, 95, 159);"  class="" align-items="center" data-aos="fade-in">Local Events and Festival</h2>
       
        <br></br>
-       <h3 style="color: rgb(20, 80, 234); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Explore uniques culture and Festivals</h3>
+       <h3 style="color: rgb(136, 160, 220); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Explore uniques culture and Festivals</h3>
        <br></br>
        <div class="center-card">
        <img src="./loc.jpg" alt="hr1"/>
        <br>
-       <a class="btn btn-primary" href="./loc.html" role="button" class="book__now btn-style" style="box-shadow: 2px 2px 8px red;">View Now</a>
+       <a class="btn btn-primary" href="./loc.html" role="button" class="book__now btn-style" >View Now</a>
        <br>
        
       </div>
@@ -1316,12 +1320,12 @@
       <br></br>
     <!-- Toursit Guide Section -->
     <section class="tourist" id="tourist">
-      <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Tourist Guide</h2>
-      <h4 style="color: rgb(231, 62, 118); font-style: italic; font-family: cursive;">
+      <h2 style="color: rgb(70, 95, 159);" class="" align-items="center" data-aos="fade-in">Tourist Guide</h2>
+      <h4 style="color:  rgb(136, 160, 220); font-style: italic; font-family: cursive;">
         Have an amazing trip and explore the destiny
       </h4>
       <br />
-      <h3 style="color: rgb(6, 151, 241); font-style: inherit; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+      <h3 style="color: rgb(136, 160, 220); font-style: inherit; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
         Connect with the Guide
       </h3>
       <br />
@@ -1385,31 +1389,31 @@ setInterval(() => {
 
     <!-- Hotel & Resort Section -->
     <section class="hotel" id ="hotel">
-      <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Hotels & Resorts</h2>
+      <h2 style="color: rgb(70, 95, 159);" class="" align-items="center" data-aos="fade-in">Hotels & Resorts</h2>
       
        <br></br>
-       <h3 style="color: rgb(151, 6, 241); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Best Place for Beautiful Trip</h3>
+       <h3 style="color:rgb(136, 160, 220); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Best Place for Beautiful Trip</h3>
        <br></br>
        <div class="center-card">
-       <img src="./h1.png" alt="hr1"/>
+       <img style="border-radius:20% 10% 10% 10% / 60% 50% 50% 20%;" src="./h1.png" alt="hr1"/>
        <br>
        <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
        <br>
-       <button class="btn btn-style" id="btn-page" onclick="window.location.href='packages.html'" style="box-shadow: 2px 2px 8px rgb(0, 191, 255); padding: 10px 20px; font-size: 16px; cursor: pointer;">View All</button>
+       <button class="btn btn-style" id="btn-page" onclick="window.location.href='packages.html'" >View All</button>
       </div>
       </section>
     <br /><br /><br />
 <!--Packaging List-->
 <section class="hotel" id ="hotel">
-  <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Packaging List</h2>
+  <h2 style="color: rgb(70, 95, 159);" class="" align-items="center" data-aos="fade-in">Packaging List</h2>
   
    <br></br>
-   <h3 style="color: rgb(9, 27, 186); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">List for Trip</h3>
+   <h3 style="color:rgb(136, 160, 220); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">List for Trip</h3>
    <br></br>
    <div class="center-card">
-   <img src="./pack.jpg" alt="hr1"/>
+   <img style="border-radius:50% 70% 20% 20% / 60% 20% 80% 30%;" src="./pack.jpg" alt="hr1"/>
    <br>
-   <a class="btn btn-primary" href="./Pack.html" role="button" class="book__now btn-style" style="box-shadow: 2px 2px 8px red;">View Now</a>
+   <a class="btn btn-primary" href="./Pack.html" role="button" class="book__now btn-style" >View Now</a>
    <br>
    
   </div>
@@ -1417,15 +1421,15 @@ setInterval(() => {
   <br /><br />
   <!--Travel Books-->
 <section class="hotel" id ="hotel">
-  <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Travel Books</h2>
+  <h2 style="color: rgb(70, 95, 159);" class="" align-items="center" data-aos="fade-in">Travel Books</h2>
   
    <br></br>
-   <h3 style="color: rgb(104, 5, 218); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Your Travel Time Companion</h3>
+   <h3 style="color:rgb(136, 160, 220); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Your Travel Time Companion</h3>
    <br></br>
    <div class="center-card">
-   <img src="./read.jpg" alt="hr1"/>
+   <img style="border-radius:50% 10% 20% 20% / 60% 90% 50% 30%;" src="./read.jpg" alt="hr1"/>
    <br>
-   <a class="btn btn-primary" href="./read.html" role="button" class="book__now btn-style" style="box-shadow: 2px 2px 8px red;">View Now</a>
+   <a class="btn btn-primary" href="./read.html" role="button" class="book__now btn-style" >View Now</a>
    
    
   </div>
@@ -1434,15 +1438,15 @@ setInterval(() => {
   
    <!--Health and safety-->
 <section class="hotel" id ="hotel">
-  <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Health and Safety Alerts</h2>
+  <h2 style="color: rgb(70, 95, 159);" class="tourist-heading section__title" align-items="center" data-aos="fade-in">Health and Safety Alerts</h2>
   
    <br></br>
-   <h3 style="color: rgb(20, 80, 234); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Healthy life for better Journey</h3>
+   <h3 style="color:rgb(136, 160, 220); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Healthy life for better Journey</h3>
    <br></br>
    <div class="center-card">
-   <img src="./hs.jpg" alt="hr1"/>
+   <img style="border-radius: 20% 10% 20% 20% / 60% 90% 50% 30%;" src="./hs.jpg" alt="hr1"/>
    <br>
-   <a class="btn btn-primary" href="./healt.html" role="button" class="book__now btn-style" style="box-shadow: 2px 2px 8px red;">View Now</a>
+   <a class="btn btn-primary" href="./healt.html" role="button" class="book__now btn-style" >View Now</a>
    <br>
    
   </div>
@@ -1456,9 +1460,9 @@ setInterval(() => {
    <h3 style="color: rgb(20, 80, 234); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Your Support for your Journey</h3>
    <br></br>
    <div class="center-card">
-   <img src="./dis.jpg" alt="hr1"/>
+   <img style="border-radius:50% 10% 20% 70% / 60% 90% 50% 30%;" src="./dis.jpg" alt="hr1"/>
    <br>
-   <a class="btn btn-primary" href="./acce.html" role="button" class="book__now btn-style" style="box-shadow: 2px 2px 8px red;">View Now</a>
+   <a class="btn btn-primary" href="./acce.html" role="button" class="book__now btn-style" >View Now</a>
    <br>
    
   </div>
@@ -1786,14 +1790,14 @@ setInterval(() => {
     <!----------------------------------------------------- FAQ section ---------------------- -->
 
     <section>
-      <h2 class="section__title" data-aos="zoom-in">
+      <h2 class="FQ" data-aos="zoom-in">
         Frequently asked questions
       </h2>
       <div class="accordion faq-container faq">
         <div class="accordion__header" data-aos="zoom-in">
           <h3 class="accordion__question faq-title">How do I book my travel arrangements through your website?</h3>
           <span class="accordion__icon">
-            <i id="accordion-icon" class="ri-add-line"></i>
+            <i id="accordion-icon" class="ri-add-line" ></i>
           </span>
         </div>
         <div class="accordion__content">
@@ -1954,9 +1958,9 @@ setInterval(() => {
                   required></textarea><br>
               </div>
               <button type="submit" class="btn btn-style" data-aos="fade-in" id="btn-style"
-                style="margin-right: 40px;box-shadow: 2px 2px 8px red;">Send</button>
+                >Send</button>
               <button onclick="window.location.href='feed.html'" class="btn  btn-style" data-aos="fade-in"
-                id="btn-style" style="box-shadow: 2px 2px 8px red;">Feedback</button>
+                id="btn-style" >Feedback</button>
             </form>
           </div>
         </div>
@@ -1969,7 +1973,7 @@ setInterval(() => {
     <section class="subscribe" id="Contact">
       <div class="section__container subscribe__container">
         <div class="subscribe__content">
-          <h2 class="section__title" data-aos="fade-up">Subscribe to get special prize</h2>
+          <h2 class="section__titl" style="color: #8886de;" data-aos="fade-up">Subscribe to get special prize</h2>
           <p class="section__subtitle" data-aos="fade-up">
             Subscribe to get special travel prizes. Unlock exclusive deals and offers just for you.
           </p>
@@ -1977,9 +1981,9 @@ setInterval(() => {
         <div class="subscribe__form" data-aos="fade-up">
           <form id="subscriptionForm">
             <input type="email"  style="border: none; font-size: 15px; margin: auto;" placeholder="Your email here" id="emailInput" required />
-            <button class="btn-send" id="send" type="submit" style="box-shadow: 0px 4px 8px blue; font-weight:530; font-size: medium; padding-left: 13px;">Subscribe</button>
+            <button class="btn-send" id="send" type="submit" style=" font-weight:530; font-size: medium; padding-left: 13px;">Subscribe</button>
           </form>
-          <p id="subscriptionMessage" style="display: none; color: green; margin-top: 10px;">Subscription successful! 🎉
+          <p id="subscriptionMessage" style="display: none; color: rgba(0, 128, 0, 0.733); margin-top: 10px;">Subscription successful! 🎉
           </p>
         </div>
       </div>
@@ -2126,12 +2130,28 @@ setInterval(() => {
       </div>
 
       <!--  New copyright code to make it dynamic and display current year -->
-      <div class="footer__bar">
-        <div>
+      <div class="footer__bar" style="background-color: transparent;">
+        <div >
           <li>Copyright &copy;<span id="year"></span> </span> Arpan Chowdhury. All rights reserved. </li>
         </div>
       </div>
       
+
+
+
+
+
+      
+      
+
+
+
+
+
+
+
+
+
       
       
       
@@ -2182,6 +2202,20 @@ setInterval(() => {
         
 
     </footer>
+
+
+
+
+   
+    
+
+
+
+
+
+
+
+
     
   
     <a class="goupbtn" href="#" onclick="goToTop()"><i class="fa-solid fa-arrow-up"></i></a>
