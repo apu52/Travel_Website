@@ -1,152 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Registration Page </title>
-        <meta name="viewport" content="width=device-width, initial-scale=
-        1.0", maximum-scale="1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="style_.css">
-        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-       </head>
-       <body>     
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-section">
+        <button class="back-button" onclick="window.location.href='index.html'">
+          <img src="img/button.png" width="50px" height="50px" alt="Back" />
+        </button>
+        <h1 class="animated-heading">
+          Tourguide<span class="blinking-cursor">|</span>
+        </h1>
+        <p class="description">
+          Welcome to TourGuide, where we believe that life's true purpose unfolds
+          through the thrill of exploration and the pursuit of the extraordinary!
+          Embark on your journey with us.
+        </p>
+        <img
+          src="./img/login_small.jpg"
+          alt="travel_pics"
+          class="small-screen-image"
+        />
+        <form id="loginForm" class="login-form" onsubmit="handleLogin(event)">
+          <input
+            type="text"
+            id="username"
+            placeholder="Username"
+            class="input-field"
+            required
+          />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            class="input-field"
+            required
+          />
+          <button type="submit" class="submit-button">Login</button>
+        </form>
+        <p class="already-signed-up">
+          Not signed up? <a href="Signup.html">Sign Up</a>
+        </p>
+      </div>
+      <div class="right-section">
+        <img
+          src="./img/login1.jpg"
+          alt="travel_pics"
+          class="transition-image"
+        />
+        <img
+          src="./img/login2.jpg"
+          alt="travel_pics"
+          class="transition-image"
+        />
+        <img
+          src="./img/login3.jpg"
+          alt="travel_pics"
+          class="transition-image"
+        />
+        <img
+          src="./img/login4.jpg"
+          alt="travel_pics"
+          class="transition-image"
+        />
+        <img
+          src="./img/login5.jpg"
+          alt="travel_pics"
+          class="transition-image"
+        />
+        <img
+          src="./img/login6.jpg"
+          alt="travel_pics"
+          class="transition-image"
+        />
+        <img
+          src="./img/login7.jpg"
+          alt="travel_pics"
+          class="transition-image"
+        />
+      </div>
+    </div>
 
-        <header class="registration-header">
-            
-                
-                    <a href="index.html"><img src="./img/Screenshot 2024-01-23 003448.png" style="width: 130px; border-radius: 6px; margin-top: 20px; margin-left: 20px;"></a>
-                
-<div class="container">
-            </div>
-            <main>
-                <section class="user-container login-section--display">
-                    <div class="back">
-                    <div class="registration">
-                        <div class="grid-two--column">
-                            
-                            <div class="form-text">
-                          <h2>Welcome Back!</h2>
-                          <p>To keep connected with us please login with your personal information.</p> 
-                          <button class="login-btn">Login Here</button> 
-                          </div>
-                          <div class="registration-form">
-                            <h2>Create Account</h2>
-                            <div class="social-icons">
-                                <a href="https://accounts.google.com/v3/signin/identifier?ifkv=ASKXGp3o7JbWY-Xl_hjXMSHncDJR5Bg1tJjR-AcPnUkBcdPTNTLi-oYd-rV3dgIaufZcXA-T1n6HuQ&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S604814220%3A1705302051981588&theme=glif" target="_blank">
-                                <i class="fa-brands fa-google"></i></a>
-                                <a href="" target="_blank">
-                                    <i class="fa-brands fa-github"></i></a>
-                                <a href="" target="_blank">
-                                    <i class="fa-brands fa-facebook"></i>
-                                    
-                                </a>
-                                <a href="" target="_blank">
-                                    <i class="fa-brands fa-instagram"></i>
-                                    
-                                </a>
-                                
+    <script>
+      const images = document.querySelectorAll(".transition-image");
+      let currentImageIndex = 0;
 
-                            </div>
-                            <p>or</p>
-                            <form action="#" id="input-form">
-                                <div class="input-field">
-                                    <label for="username">
-                                    <input type="text" name="#" id="username" placeholder="Name" required>
-                                </label></div>
-                                <div class="input-field">
-                                <label for="Email">
-                                    <input type="email" name="#" id="Email" placeholder="Email" required>
-                                </label></div>
-                                <div class="input-field">
-                                <label for="Password">
-                                    <input type="password" name="#" id="Password" placeholder="Password" required>
-                                </label>
-                                </div>
-                                <div class="input-field">
-                                    <input type="submit" value="register">
-                                </div>
-                            </form>
-                          </div>
-                        </div>
-                    </div>
-                    
-                    <div class="login">
-                       
-                        <div class="grid-two--column">
-                            <div class="form-text">
-                          <h2>Hello, Friend!</h2>
-                          <p>Enter your personal details and start journey with us</p> 
-                          <button class="registration-btn">Register Here</button> 
-                          </div>
-                          <div class="login-form">
-                            <h2>Sign In</h2>
-                            <div class="social-icons">
-                                <a href="https://accounts.google.com/v3/signin/identifier?ifkv=ASKXGp3o7JbWY-Xl_hjXMSHncDJR5Bg1tJjR-AcPnUkBcdPTNTLi-oYd-rV3dgIaufZcXA-T1n6HuQ&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S604814220%3A1705302051981588&theme=glif" target="_blank">
-                                <i class="fa-brands fa-google"></i></a>
-                                <a href="" target="_blank">
-                                    <i class="fa-brands fa-github"></i></a>
-                                <a href="" target="_blank">
-                                    <i class="fa-brands fa-facebook"></i>
-                                    
-                                </a>
-                                <a href="" target="_blank">
-                                    <i class="fa-brands fa-instagram"></i>
-                                    
-                                </a>
-                                
+      function showNextImage() {
+        images[currentImageIndex].style.opacity = 0;
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        images[currentImageIndex].style.opacity = 1;
+      }
 
-                            </div>
-                            <p>or</p>
-                            <form action="#">
-                                
-                                <div class="input-field">
-                                <label for="Email1">
-                                    <input type="email" name="#" id="Email1" placeholder="Email" required>
-                                </label></div>
-                                <div class="input-field">
-                                <label for="Password1">
-                                    <input type="password" name="#" id="Password1" placeholder="Password" required>
-                                </label>
-                                </div>
-                                <div class="input-field">
-                                    <input type="submit" value="Log In">
-                                </div>
-                            </form>
-                          </div>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
+      setInterval(showNextImage, 3000);
 
-                </section>
-            </main>
-        </header>
-        <script>
-            document.getElementById("input-form").addEventListener('submit',function(event){
-                var email = document.getElementById("Email").value;
-                var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-                if(!emailPattern.test(email)){
-                   alert("Please enter a valid email");
-                   return;
-                }
-                else{
-                    alert("Registration successful!");
-                }
-            });
-            const user_con=document.querySelector('.user-container');
-            const regis_btn=document.querySelector('.registration-btn');
-            const login_btn=document.querySelector('.login-btn');
+      async function handleLogin(event) {
+        event.preventDefault();
 
-            regis_btn.addEventListener('click',()=>{
-                user_con.classList.add('login-section--display')
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
 
-            })
-            login_btn.addEventListener('click',()=>{
-                user_con.classList.remove('login-section--display')
-            })
-        </script>
+        try {
+          const response = await fetch("/login", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ username, password }),
+          });
 
-       </body>
-</html> 
+          if (response.ok) {
+            alert("Login successful!");
+            window.location.href = "dashboard.html";
+          } else {
+            alert("Invalid username or password");
+          }
+        } catch (error) {
+          console.error("Error during login:", error);
+        }
+      }
+    </script>
+  </body>
+</html>
+
+
