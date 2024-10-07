@@ -155,12 +155,27 @@
       height: auto;
     }
 
-    .btn-container {
+   /* .btn-container {
       display: flex;
       justify-content: center;
       gap: 8px;
       /* Adjust the gap between buttons */
+    
+
+      .btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 16px; /* Increased gap between buttons */
+    padding: 10px; /* Added padding around the container */
+}
+
+@media (max-width: 576px) {
+    .btn-container {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center the buttons when stacked */
     }
+}
+
 
     @media screen and (max-width: 768px) {
       body {
