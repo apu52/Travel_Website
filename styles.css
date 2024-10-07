@@ -2938,7 +2938,8 @@ input[type="email"] {
   width: 250px;
   border: 1px solid #ccc;
   border-radius: 3px;
-  margin-right: 10px;
+  margin-right: 20px;
+  margin-left: 0px;
   margin-bottom: 10px;
   font-size: 14px;
 }
