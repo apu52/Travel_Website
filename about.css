@@ -147,6 +147,24 @@ header {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(255, 107, 107, 0.6);
 }
+.cta-button1{
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff6b6b;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+    margin-top: 1.5rem;
+}
+.cta-button1:hover {
+    background-color: #ff8787;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.6);
+}
 
 @media (max-width: 768px) {
     .content-wrapper {
