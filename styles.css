@@ -2066,7 +2066,8 @@ body {
 .nav-container {
   margin-top: 0;
   height: auto;
-  width: 200%;
+  /* width: 200%; */
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -2083,7 +2084,7 @@ body {
   gap: 0.5rem;
   height: auto;
   width: 100%;
-  padding: 0.4rem 0.5rem;
+  padding: 0.4rem 1rem;
   z-index: 10000;
   transition: all 0.6s;
 }
@@ -2106,13 +2107,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.16rem;
+  /* font-size: 1.16rem; */
+  font-size: 1rem;
   list-style: none;
-  gap: 0.97rem;
+  /* gap: 0.97rem; */
   position: relative;
-  top: 0.5rem;
+  /* top: 0.5rem; */
+  top: 0;
   z-index: 10;
   right: 24px;
+
 }
 
 .link {
@@ -2189,6 +2193,9 @@ body {
   width: 100%;
   transition: all 0.2s ease-in-out;
 } */
+
+
+
 .contact-btn {
   position: relative;
   right: 15px;
@@ -2228,9 +2235,11 @@ body {
     position: absolute;
     top: 70px;
     background-color: #091020;
-    width: 0%;
+    /* width: 0%; */
+    width: 100%;
     left: 0;
-    height: 100vh;
+    /* height: 100vh; */
+    height: auto;
     padding: 2rem 0;
     flex-direction: column;
     transition: 0.2s;
@@ -3098,4 +3107,32 @@ a:hover::after {
   margin-bottom: auto;
   font-size: 14px;
   font-weight: 600;
+}
+
+/* For removing the red line that appears on the navbar of navlink section */
+.navLinks a, .link a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+.navLinks a::after, .link a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 0px;
+  bottom: -5px;
+  left: 0;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.navLinks a:hover, .link a:hover {
+  color: red;
+}
+
+.navLinks a:hover::after, .link a:hover::after {
+  width: 0%;
+  background-color: transparent;
 }
