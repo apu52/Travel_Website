@@ -34,6 +34,7 @@ Close #<issue_no>
 - [ ] I have tested the changes thoroughly before submitting this pull request.
 - [ ] I have provided relevant issue numbers, screenshots, and videos after making the changes.
 - [ ] I have gone through the  `contributing.md` file before contributing
+- [ ] I have Starred the Repository.
 <!-- [X] - put a cross/X inside [] to check the box -->
 
 
@@ -43,8 +44,8 @@ Close #<issue_no>
 ##Are you contributing under any Open-source programme?
 <!--Mention it here-->
 
-- [ ] I am contributing under `GSSOC'24`
-- [ ] I am contributing under `VSOC'24`
+- [ ] I am contributing under `GSSOC'24 Extended`
+- [ ] I am contributing under `Hacktoberfest'24`
 
 <!-- [X] - put a cross/X inside [] to check the box -->
 
