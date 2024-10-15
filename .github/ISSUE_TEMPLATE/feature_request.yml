@@ -36,8 +36,8 @@ body:
   - type: textarea
     id: screenShots
     attributes:
-      label: Add ScreenShots
-      description: If any...
+      label: Add ScreenShots/Videos
+      description: Add the SS/prototype video of the feature u want to add
   - type: dropdown
     id: priority
     attributes:
@@ -57,9 +57,9 @@ body:
       options:
         - label: "I have read the Contributing Guidelines"
           required: true
-        - label: "I'm a GSSOC'24 contributor"
-          required: false
-        - label: "I'm a VSOC'24 contributor"
-          required: false
+        - label: "I'm a GSSOC'24 Extended contributor"
+          required: False
+        - label: "I'm a Hacktoberfest'24  contributor"
+          required: False
         - label: "I have starred the repository"
           required: true
