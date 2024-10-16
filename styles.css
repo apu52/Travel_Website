@@ -2538,6 +2538,15 @@ body {
   }
 }
 
+.wrapper{
+  display: flex;
+  gap: 30px;
+}
+.wrapper .countitem{
+  width: 220px;
+  border-top: 1px solid black;
+}
+
 /* Styling for SVG elements inside .iconss class */
 .iconss svg {
   width: 100px;
