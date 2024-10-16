@@ -1,0 +1,131 @@
+#contact-section {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.contact-info {
+    flex: 1;
+    max-width: 45%;
+    margin-right: 20px;
+}
+
+.section__title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.section__description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.contact-info img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.contact-form-wrapper {
+    flex: 1;
+    max-width: 50%;
+    margin-top: 10px;
+}
+
+.contact-form-wrapper h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    font-weight: 500;
+    color: #6F57C7;
+    text-shadow: 2px 2px 4px rgba(111, 87, 199, 0.5);
+}
+
+.form-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+.form-group i {
+    margin-right: 10px;
+    color: #333;
+}
+
+#email,
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-group input::placeholder, 
+.form-group textarea::placeholder {
+    color: #aaa;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 180px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#btn-submit, #btn-feedback {
+    color: #ffffff;
+    background-color: #6F57C7; 
+    padding: 10px 20px;
+    width: 120px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 15px;
+    box-shadow: 0 4px 8px rgba(111, 87, 199, 0.7);
+}
+
+#btn-submit:hover, #btn-feedback:hover {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #FF5656;
+    box-shadow: 0 4px 8px rgba(255, 86, 86, 0.7);
+}
