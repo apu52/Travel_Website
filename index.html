@@ -802,6 +802,48 @@
       </div>  -->
 
 
+      <section>
+        <div class="wrapper">
+            <div class="countitem">
+              <i class="fa-solid fa-handshake-angle"></i>
+              <span class="num" data-val="25000">18000</span>
+              <span class="text">Guides</span>
+            </div>
+            <div class="countitem">
+              <i class="fa-solid fa-suitcase-rolling"></i> 
+              <span class="num" data-val="20000">10000</span>
+              <span class="text">Tours</span>
+            </div>
+            <div class="countitem">
+              <i class="fa-solid fa-location-dot"></i>
+              <span class="num" data-val="20000">10000</span>
+              <span class="text">Destinations</span>
+            </div>
+            
+          </div>
+        </section>
+    
+<script>
+  let valueDisplays = document.querySelectorAll(".num");
+let interval = 100000;
+valueDisplays.forEach((valueDisplay) => {
+  let startValue = 17500;
+  let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+  let duration = 0.05 ;
+  if (endValue== 25000){
+    startValue= 22500;
+    // duration= 3;
+  }
+  let counter = setInterval(function () {
+    startValue += 10;
+    valueDisplay.textContent = startValue;
+    if (startValue == endValue) {
+      clearInterval(counter);
+    }
+  }, duration)
+});
+</script>
+    
     <section>
       <div class="wrapper">
         <div class="countitem">
@@ -839,7 +881,6 @@
         }, duration);
       });
     </script>
-
 
 
 
