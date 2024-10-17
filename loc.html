@@ -11,43 +11,63 @@
             padding: 0;
             background-color: #f4f4f4;
         }
+
+        /* Gradient header */
         header {
-            background-color: #333;
+            background: linear-gradient(45deg, #6a0dad, #2f73d9); /* Purple to dark blue gradient */
             color: white;
             padding: 1em;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to the header */
         }
+
         #events {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            padding: 1em;
+            padding: 2em;
         }
+
+        /* Styling event cards */
         .event-card {
             background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            margin: 10px;
+            border: none;
+            border-radius: 12px;
+            margin: 15px;
             padding: 15px;
-            width: 300px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 320px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        /* Hover effect for cards */
+        .event-card:hover {
+            transform: translateY(-8px); /* Lift the card on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+        }
+
         .event-card img {
             width: 100%;
             height: auto;
-            border-radius: 8px 8px 0 0;
+            border-radius: 12px 12px 0 0; /* Round the top corners */
         }
+
         .event-card h2 {
-            font-size: 1.5em;
+            font-size: 1.6em;
+            color: #6a0dad; /* Use purple for titles */
             margin: 10px 0;
         }
+
         .event-card p {
             font-size: 1em;
             margin-bottom: 10px;
+            color: #333;
         }
+
         .event-card .date {
             font-weight: bold;
-            color: #333;
+            color: #2f73d9; /* Use dark blue for the date */
+            margin-bottom: 10px;
         }
     </style>
 </head>
