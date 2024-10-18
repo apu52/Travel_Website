@@ -5,114 +5,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hotel Booking Form</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAgEx3UTsYmOsw00pc-dRtsGkOEgFmS7ca-w&s")
-          no-repeat center fixed;
-        background-size: cover;
-        color: #333;
-        padding: 20px;
-        overflow-x: hidden; /* Prevent horizontal scrolling due to animations */
-      }
-
-      .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
+        body {
+          font-family: 'Poppins', sans-serif;
+          background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAgEx3UTsYmOsw00pc-dRtsGkOEgFmS7ca-w&s") 
+            no-repeat center fixed;
+          background-size: cover;
+          color: #333;
+          padding: 20px;
+          overflow-x: hidden;
         }
-
+      
+        .container {
+          width: 80%;
+          margin: auto;
+          overflow: hidden;
+          background: rgba(255, 255, 255, 0.7);
+          padding: 40px;
+          border-radius: 10px;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 1.0);
+          transition: all 0.3s ease;
+        }
+      
         h1, h2 {
-            text-align: center;
-        }
-
-        form {
-            background: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-        }
-
-        label {
-            display: block;
-            margin-top: 10px;
-        }
-
-        input, select, button {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        button {
-            background-color: #28a745;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #218838;
-        }
-
-        .packing-list {
-            background: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-        }
-
-        .packing-list ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .packing-list ul li {
-            background: #f4f4f4;
-            padding: 10px;
-            margin-bottom: 5px;
-            border-radius: 5px;
-        }
-      .home-button {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        background-color: #f60303;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 16px;
-        text-decoration: none;
-      }
-
-      .home-button:hover {
-        background-color: #f2444d;
-        color: rgb(8, 6, 6);
-        border: 1px solid black;
-        box-shadow: #070505;
-        box-shadow: 0 0 10px rgba(7, 6, 13, 0.9);
-      }
-
-      @media (max-width: 768px) {
-        .flex-item {
-          flex: 1 1 100%;
-          margin-right: 0;
-        }
-
-        input[type="submit"],
-        .btn-book {
-          margin-left: 0;
-          width: 100%;
           text-align: center;
+          color: #007BFF;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          position: relative;
+          overflow: hidden;
         }
-      }
-    </style>
+      
+        h1::after, h2::after {
+          content: '';
+          display: block;
+          width: 80px;
+          height: 2px;
+          background: #007BFF;
+          margin: 10px auto;
+          transition: all 0.3s ease;
+        }
+      
+        form {
+          background: #fff;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+          margin-top: 20px;
+          transition: transform 0.3s ease;
+        }
+      
+        form:hover {
+          transform: translateY(-10px);
+        }
+      
+        label {
+          display: block;
+          margin-top: 10px;
+          font-weight: bold;
+          color: #555;
+        }
+      
+        input{
+          width: 98%;
+          padding: 10px;
+          margin-top: 5px;
+          margin-bottom: 10px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+          transition: all 0.3s ease;
+        }
+        select, button {
+          width: 100%;
+          padding: 10px;
+          margin-top: 5px;
+          margin-bottom: 10px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+          transition: all 0.3s ease;
+        }
+      
+        input:focus, select:focus {
+          border-color: #007BFF;
+          box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+          outline: none;
+        }
+      
+        button {
+          background-color: #28a745;
+          color: #fff;
+          border: none;
+          cursor: pointer;
+          font-weight: bold;
+          transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+      
+        button:hover {
+          background-color: #218838;
+          transform: translateY(-2px);
+        }
+      
+        .packing-list {
+          background: rgba(255, 255, 255, 0.9);
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+          margin-top: 20px;
+        }
+      
+        .packing-list ul {
+          list-style: none;
+          padding: 0;
+        }
+      
+        .packing-list ul li {
+          background: #f8f9fa;
+          padding: 10px;
+          margin-bottom: 8px;
+          border-radius: 5px;
+          transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+      
+        .packing-list ul li:hover {
+          background-color: #e9ecef;
+          transform: scale(1.05);
+        }
+      
+        .home-button {
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          background-color: #f60303;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 16px;
+          text-decoration: none;
+          transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+      
+        .home-button:hover {
+          background-color: #f2444d;
+          color: rgb(8, 6, 6);
+          border: 1px solid black;
+          box-shadow: 0 0 10px rgba(7, 6, 13, 0.9);
+          transform: translateY(-2px);
+        }
+      
+        @media (max-width: 768px) {
+          .container {
+            width: 95%;
+          }
+      
+          input[type="submit"],
+          .btn-book {
+            margin-left: 0;
+            width: 100%;
+            text-align: center;
+          }
+        }
+      </style>
+      
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   </head>
   <body>
