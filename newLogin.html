@@ -139,6 +139,15 @@
         validateForm("register");
       });
 
+      //Form validation for registration name
+      document.getElementById("registerName").addEventListener("keypress", function (event) {
+      var char = String.fromCharCode(event.which);
+        if (!(/[a-zA-Z]/.test(char))) {
+            event.preventDefault();
+        }
+      });
+
+
       document.getElementById("loginForm").addEventListener("submit", function (event) {
         event.preventDefault();
         validateForm("login");
