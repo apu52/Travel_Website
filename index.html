@@ -824,6 +824,19 @@
     </section>
 
     <script>
+      const countItems = document.querySelectorAll('.countitem');
+
+countItems.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    item.style.transition = 'transform 0.3s ease'; 
+    item.style.transform = 'scale(1.1)'; 
+  });
+
+  item.addEventListener('mouseout', () => {
+    item.style.transform = 'scale(1)'; 
+  });
+});
+
       let valueDisplays = document.querySelectorAll(".num");
       let interval = 4000;
       valueDisplays.forEach((valueDisplay) => {
