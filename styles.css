@@ -1681,6 +1681,23 @@ body.dark-theme .items {
 .contact-form #Name {
   margin-top: 100px;
 }
+.contact-form #Email {
+  margin-top: 100px;
+}
+.contact-form #Email {
+                width: 50% !important;
+                padding-left: 10px;
+                padding-bottom: 10px;
+                margin: 20px;
+                margin-left: 30px;
+                outline: none;
+                border: none;
+                font-size: 15px;
+                background: none;
+                border-bottom: 2px solid var(--extra-light) !important;
+                color: var(--extra-light);
+                font-family: "Oxygen", sans-serif;
+}
 
 .contact-form h4 {
   color: var(--extra-light);
@@ -1779,6 +1796,9 @@ body.dark-theme .items {
   .contact-form input {
     width: 75%;
   }
+  .contact-form #Email {
+    width: 75% !important;
+  }
 
   .contact-form textarea {
     width: 75%;
@@ -1809,7 +1829,7 @@ body.dark-theme .items {
 
   .contact img {
     height: 300px;
-    width: 300px;
+    width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -1828,6 +1848,8 @@ body.dark-theme .items {
     left: 14.8%;
   }
 }
+.contact-form #Email {
+  width: 50% !important;}
 
 .contact-form input,
 .contact-form textarea {
@@ -1852,6 +1874,9 @@ body.dark-theme .items {
 }
 
 @media (max-width: 920px) {
+  .contact-form #Email {
+    width: 75% !important;
+  }
   .contact-form input,
   .contact-form textarea {
     width: 75%;
@@ -1869,6 +1894,9 @@ body.dark-theme .items {
 }
 
 @media (max-width: 700px) {
+  .contact-form #Email {
+    width: 75% ;
+  }
   .contact-form input,
   .contact-form textarea {
     width: 75%;
@@ -1884,7 +1912,53 @@ body.dark-theme .items {
     left: 14.8%;
   }
 }
-
+@media (max-width: 440px) {
+  .contact-form #Email {
+    width: 75% ;}
+  .contact-form input,
+  .contact-form textarea {
+    width: 75%;
+    color: var(--text-dark);
+  }
+  .icon1 {
+    left: 11%;
+  }
+  .icon2 {
+    left: 11%;
+  }
+  .icon3 {
+    left: 11%;
+  }
+}
+@media (max-width: 342px) {
+  .contact-form #btn-style{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media (max-width: 325px) {
+  .contact-form #btn-style{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .contact-form #Email {
+    width: 75% !important;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 75%;
+    color: var(--text-dark);
+  }
+  .icon1 {
+    left: 11%;
+  }
+  .icon2 {
+    left: 11%;
+  }
+  .icon3 {
+    left: 11%;
+  }
+}
 /* Custom scrollbar for WebKit browsers */
 /* body::-webkit-scrollbar {
   width: 8px;
