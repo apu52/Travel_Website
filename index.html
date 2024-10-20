@@ -2187,10 +2187,8 @@ setInterval(() => {
     <a class="goupbtn" href="#" onclick="goToTop()"><i class="fa-solid fa-arrow-up"></i></a>
 
     <script>
-      // Get the button
       var mybutton = document.querySelector(".goupbtn");
-
-      // When the user scrolls, check if the button should be displayed
+    
       window.addEventListener("scroll", function () {
         if (window.scrollY > 20) {
           mybutton.style.display = "block";
@@ -2198,13 +2196,32 @@ setInterval(() => {
           mybutton.style.display = "none";
         }
       });
-
-      // When the user clicks on the button, scroll to the top of the document
+    
       function goToTop() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        const currentScroll = window.scrollY;
+        const startTime = performance.now();
+        const duration = 500;
+    
+        function scrollAnimation(currentTime) {
+          const elapsedTime = currentTime - startTime;
+          const progress = Math.min(elapsedTime / duration, 1);
+          const easeOut = progress * (2 - progress);
+          const scrollPosition = currentScroll * (1 - easeOut);
+    
+          window.scrollTo(0, scrollPosition);
+    
+          if (progress < 1) {
+            requestAnimationFrame(scrollAnimation);
+          }
+        }
+    
+        requestAnimationFrame(scrollAnimation);
       }
+    
+      mybutton.addEventListener('click', goToTop);
     </script>
+    
+    
 
 
 
