@@ -20,13 +20,17 @@ function applyTheme(theme) {
   if (theme === "dark") {
     document.body.classList.add("dark-theme");
     document.body.classList.remove("light-theme");
-    themeLabel.style.background = "var(--primary-color)";
+    // themeLabel.style.background = "var(--primary-color)";
+    themeToggle.title = 'Switch to Light mode';
     themeToggle.checked = true;
+    
   } else {
     document.body.classList.add("light-theme");
     document.body.classList.remove("dark-theme");
-    themeLabel.style.background = "#fff";
+    // themeLabel.style.background = "fff";
+    themeToggle.setAttribute('title','Switch to Dark mode');
     themeToggle.checked = false; 
+    
   }
 }
 
