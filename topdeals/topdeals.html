@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+   
     <title>Top Deals</title>
+    <link rel="stylesheet" href="../styles.css">
     <style>
 
 
@@ -97,10 +98,67 @@
             background-color: #ff787d;
         }
     </style>
+     
 </head>
 <body>
     
-    <div class="container">
+
+    <div class="nav-container" id="top" style="margin-bottom: 10rem;">
+        <nav class="newNav">
+          <div style="display: flex; flex-direction: row; align-items: center;">
+          <img src="/favicon.ico" class="sitelogo">
+          
+          <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+        </div>
+  
+          <ul class="navLinks">
+            <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
+            <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
+            <li class="link" data-aos=""><a href="../index.html">Home</a></li>
+            <li class="link" data-aos=""><a href="./about.html">About</a></li>
+            <li class="link dropdown" data-aos="">
+                <a href="#Services" class="dropdown">Services</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#Destinations">Destination</a></li>
+                    <li><a href="#trip">Prices</a></li>
+                    <li><a href="#ReviewGallery">Trip Gallery</a></li>
+                    <li><a href="#tourist">Tourist Guide</a></li>
+                    <li><a href="#hotel">Hotel & Resort</a></li>
+                </ul>
+            </li>
+            <li class="link" data-aos=""><a href="../topdeals/topdeals.html">Top Deals</a></li>
+            <li class="link" data-aos=""><a href="../packages.html">Packages</a></li>
+            <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
+            <li class="link" data-aos=""><a href="../feedback.html">Rate Us?</a></li>
+            <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
+        </ul>
+  
+          <a href="newLogin.html" class="contact-btn" id="nav-login-btn"><button class="btn login" id="btn-style"
+              data-aos="fade-down">Login/SignUp</button></a>
+          <a href="mapa.html" class="contact-btn" id="nav-view-btn"><button class="btn" id="btn-style" style="margin: 0;"
+              data-aos="fade-down">view <map name=""></map></button></a>
+  
+          <a href="loginPage.html" class="contact-btn"><button class="btn" id="logout-btn"
+              style="margin: 0; display: none;" data-aos="fade-down" disabled>Log Out</button></a>
+  
+          <!-- <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
+              style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a> -->
+  
+          <div class="toggle-container" data-aos="fade-down">
+            <input id="themeToggle" class="toggle" type="checkbox">
+          </div>
+          <div class="hamburger" data-aos="fade-down">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </nav>
+      </div>
+
+
+
+
+    <div class="container" style="margin-top: 8rem;">
         <div class="header">
             <h1>Top deals</h1>
             <p>"Don’t miss out on our exclusive top deals of the season! Whether you’re looking to upgrade your tech, refresh your wardrobe, or find the perfect gift, we’ve got you covered with unbeatable discounts across all categories. "</p>
