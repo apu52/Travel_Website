@@ -2666,6 +2666,7 @@ body {
   transition: all 0.5s;
   transition: box-shadow 0.3s; /* Added transition for box-shadow */
   display: none;
+  z-index: 10;
 }
 
 .goupbtn:hover {
@@ -2862,7 +2863,7 @@ body.dark-theme .testimonials .testimonial-user p{
     transform: translate(26%, 9%);
   }
   .newNav {
-    flex-wrap: wrap;
+    flex-wrap: no-wrap;
   }
   .aboutcon {
     padding: 1rem;
