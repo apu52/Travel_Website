@@ -1855,7 +1855,6 @@ setInterval(() => {
 
 
 
-
     <section class="subscribe" id="Contact">
       <div class="section__container subscribe__container">
         <div class="subscribe__content">
@@ -1866,37 +1865,50 @@ setInterval(() => {
         </div>
         <div class="subscribe__form" data-aos="fade-up">
           <form id="subscriptionForm">
-            <input type="email"  style="border: none; font-size: 15px; margin: auto;" placeholder="Your email here" id="emailInput" required />
+            <input type="email" style="border: none; font-size: 15px; margin: auto;" placeholder="Your email here" id="emailInput" required />
             <button class="btn-send" id="send" type="submit" style="box-shadow: 0px 4px 8px blue; font-weight:530; font-size: medium; padding-left: 13px;">Subscribe</button>
           </form>
-          <p id="subscriptionMessage" style="display: none; color: green; margin-top: 10px;">Subscription successful! 🎉
-          </p>
+          <p id="subscriptionMessage" style="display: none; color: green; margin-top: 10px;">Subscription successful! 🎉</p>
+          <p id="errorMessage" style="display: none; color: red; margin-top: 10px;">Please enter a valid email address.</p>
         </div>
       </div>
     </section>
-    <!--DISPLAY SUBSCRIPTION SUCCESS MESSAGE-->
+    
     <script>
       document.getElementById('subscriptionForm').addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent submission
-
-
-
-        //  success message 
-        showSubscriptionMessage();
+        event.preventDefault(); // Prevent form submission
+    
+        var emailInput = document.getElementById('emailInput').value;
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/; // Improved regex to check for valid domain
+    
+        if (emailPattern.test(emailInput)) {
+          showSubscriptionMessage(); // Show success message if email is valid
+        } else {
+          showErrorMessage(); // Show error message if email is invalid
+        }
       });
-
+    
       function showSubscriptionMessage() {
         var messageElement = document.getElementById('subscriptionMessage');
         messageElement.style.display = 'block';
-
+    
         // Hide message after 4 seconds
         setTimeout(function () {
           messageElement.style.display = 'none';
-        }, 4000); // 4000 milliseconds = 4 seconds
+        }, 4000);
+      }
+    
+      function showErrorMessage() {
+        var errorElement = document.getElementById('errorMessage');
+        errorElement.style.display = 'block';
+    
+        // Hide error message after 4 seconds
+        setTimeout(function () {
+          errorElement.style.display = 'none';
+        }, 4000);
       }
     </script>
-
-
+    
     <footer class="footer" data-aos="fade-up">
       <div class=" footer__container">
         <div class="footer__col">
