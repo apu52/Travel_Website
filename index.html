@@ -15,6 +15,9 @@
       bottom: 18px;
     }
   </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./loader.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="faq-website.css">
@@ -79,9 +82,18 @@
   <style>
     html {
       scroll-behavior: smooth;
+      font-family: "Afacad Flux", sans-serif;
+      font-optical-sizing: auto;
+      font-weight:100;
+      font-style: normal;
+      font-variation-settings: "slnt" 0;
+      
     }
   </style> 
   <style>
+    .goupbtn{
+      z-index: 10;
+    }
     .active {
       color: red !important;
     }
@@ -114,6 +126,7 @@
         position: relative;
         right: 1rem;
       }
+
     }
 
     @media screen and (max-width:364px) {
@@ -543,10 +556,10 @@
     <div class="nav-container" id="top">
       <nav class="newNav">
         <div style="display: flex; flex-direction: row; align-items: center;">
-        <img src="/favicon.ico" class="sitelogo">
+          <img src="/favicon.ico" class="sitelogo">
         
-        <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
-      </div>
+          <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+        </div>
 
         <ul class="navLinks">
           <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
@@ -568,7 +581,7 @@
           <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
           <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
           <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
-      </ul>
+        </ul>
 
         <a href="newLogin.html" class="contact-btn" id="nav-login-btn"><button class="btn login" id="btn-style"
             data-aos="fade-down">Login/SignUp</button></a>
@@ -581,7 +594,7 @@
         <!-- <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
             style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a> -->
 
-        <div class="toggle-container" data-aos="fade-down">
+        <div class="toggle-container" data-aos="fade-down" style="margin-right: 28px;">
           <input id="themeToggle" class="toggle" type="checkbox">
         </div>
         <div class="hamburger" data-aos="fade-down">
@@ -633,6 +646,7 @@
             <div class="action__btns">
               <a href="membership.html"><button class="btn" data-aos="fade-in"
                   style="box-shadow: 2px 2px 8px red;">Membership</button></a>
+
               <a href="plantrip.html"><button class="btn" data-aos="fade-in" style="box-shadow: 2px 2px 8px red;">Plan a Trip</button></a>
               <a href="./payment.html"><button class="btn" data-aos="fade-in" 
                   style="box-shadow: 2px 2px 8px red;">Book Now</button></a>
@@ -801,7 +815,7 @@
       </div>  -->
 
 
-    <section>
+    <section class="stats">
       <div class="wrapper">
         <div class="countitem">
           <i class="fa-solid fa-handshake-angle"></i>
@@ -1465,218 +1479,95 @@ setInterval(() => {
 <br /><br /><br /><br />
 
     <!-- Testimonials Section -->
-    <section id="testimo" class="testimo">
+    <section style="    width: 100%;
+    height: 100%;" id="testimo" class="testimo">
       <h2 class="testimonial-heading section__title" align-items="center" data-aos="fade-in">Testimonials</h2>
-      <div class="container" style="display: flex; flex-wrap: wrap">
-        <div
-          class="card text-center card1"
-          style="
-            height: 450px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 10px;
-            perspective: 1000px;
-            transition: transform 0.8s;
-          "
-        >
-          <div
-            class="card-inner"
-            style="
-              position: relative;
-              width: 100%;
-              height: 100%;
-              text-align: center;
-              transform-style: preserve-3d;
-              transition: transform 0.8s;
-            "
-          >
-            <div
-              class="card-front"
-              style="
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                backface-visibility: hidden;
-              "
-            >
-              <img
-                src="./img/testimonial1.jpg"
-                class="card-img-top"
-                alt="Broccoli"
-                style="width: 100%; height: 100%; object-fit: cover"
-              />
+      <div class="container" style="display: flex; flex-wrap: wrap; justify-content: center;">
+        
+        <!-- Testimonial Card 1 -->
+        <div class="card text-center card1" style="height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
+          <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
+            <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
+              <img src="./img/testimonial1.jpg" class="card-img-top" alt="Broccoli" style="width: 100%; height: 100%; object-fit: cover" />
             </div>
-            <div
-              class="card-back"
-              style="
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                backface-visibility: hidden;
-                transform: rotateY(180deg);
-                background-color: rgb(228, 224, 238);
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                color: black;
-              "
-            >
-            <p><sup><i class="fas fa-quote-left"></i></sup>TourGuide made our dream vacation a reality! From the
-              breathtaking landscapes to the seamless logistics, every moment was a new adventure. The
-              personalized
-              itinerary and expert guides added a special touch to our journey. We can't wait to book our next
-              trip with
-              TourGuide!<sup><i class="fas fa-quote-right"></i></sup></p>
-            <div class="user-info">
-              <h3>Joseph</h3>
-            </div>
+            <div class="card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: rgb(228, 224, 238); display: flex; flex-direction: column; justify-content: center; align-items: center; color: black;">
+              <p><sup><i class="fas fa-quote-left"></i></sup>TourGuide made our dream vacation a reality! From the breathtaking landscapes to the seamless logistics, every moment was a new adventure. The personalized itinerary and expert guides added a special touch to our journey. We can't wait to book our next trip with TourGuide!<sup><i class="fas fa-quote-right"></i></sup></p>
+              <div class="user-info">
+                <h3>Joseph</h3>
+                <div class="star-rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div
-          class="card text-center card1"
-          style="
-            height: 450px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 10px;
-            perspective: 1000px;
-            transition: transform 0.8s;
-          "
-        >
-          <div
-            class="card-inner"
-            style="
-              position: relative;
-              width: 100%;
-              height: 100%;
-              text-align: center;
-              transform-style: preserve-3d;
-              transition: transform 0.8s;
-            "
-          >
-            <div
-              class="card-front"
-              style="
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                backface-visibility: hidden;
-              "
-            >
-              <img
-                src="./img/testimonial2.jpg"
-                class="card-img-top"
-                alt="Tomato"
-                style="width: 100%; height: 100%; object-fit: cover"
-              />
+        
+        <!-- Testimonial Card 2 -->
+        <div class="card text-center card1" style="height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
+          <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
+            <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
+              <img src="./img/testimonial2.jpg" class="card-img-top" alt="Tomato" style="width: 100%; height: 100%; object-fit: cover" />
             </div>
-            <div
-              class="card-back"
-              style="
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                backface-visibility: hidden;
-                transform: rotateY(180deg);
-                background-color: rgb(228, 224, 238);;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                color: black;
-              "
-            >
-            <p><sup><i class="fas fa-quote-left"></i></sup>Traveling with the family has never been easier!
-              TourGuide
-              took
-              care of every detail, ensuring a stress-free and enjoyable vacation for all. The kid-friendly
-              activities
-              and
-              family-oriented guides made our trip unforgettable.<sup><i class="fas fa-quote-right"></i></sup></p>
-            <div class="user-info">
-              <h3>Katie</h3>
-            </div>
+            <div class="card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: rgb(228, 224, 238); display: flex; flex-direction: column; justify-content: center; align-items: center; color: black;">
+              <p><sup><i class="fas fa-quote-left"></i></sup>Traveling with the family has never been easier! TourGuide took care of every detail, ensuring a stress-free and enjoyable vacation for all. The kid-friendly activities and family-oriented guides made our trip unforgettable.<sup><i class="fas fa-quote-right"></i></sup></p>
+              <div class="user-info">
+                <h3>Katie</h3>
+                <div class="star-rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div
-          class="card text-center card1"
-          style="
-            height: 450px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 10px;
-            perspective: 1000px;
-            transition: transform 0.8s;
-          "
-        >
-          <div
-            class="card-inner"
-            style="
-              position: relative;
-              width: 100%;
-              height: 100%;
-              text-align: center;
-              transform-style: preserve-3d;
-              transition: transform 0.8s;
-            "
-          >
-            <div
-              class="card-front"
-              style="
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                backface-visibility: hidden;
-              "
-            >
-              <img
-                src="./img/testimonial3.jpg"
-                class="card-img-top"
-                alt="Broccoli"
-                style="width: 100%; height: 100%; object-fit: cover"
-              />
+        
+        <!-- Testimonial Card 3 -->
+        <div class="card text-center card1" style="height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
+          <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
+            <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
+              <img src="./img/testimonial3.jpg" class="card-img-top" alt="Broccoli" style="width: 100%; height: 100%; object-fit: cover" />
             </div>
-            <div
-              class="card-back"
-              style="
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                backface-visibility: hidden;
-                transform: rotateY(180deg);
-                background-color: rgb(228, 224, 238);
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                color: black;
-              "
-            >
-            <p><sup><i class="fas fa-quote-left"></i></sup>Our cultural tour with TourGuide exceeded all
-              expectations.
-              The
-              immersive experiences, knowledgeable guides, and carefully curated activities allowed us to connect
-              with
-              the
-              local culture in a way we never thought possible. Thanks to TourGuide.<sup><i
-                  class="fas fa-quote-right"></i></sup></p>
-            <div class="user-info">
-              <h3>Charles</h3>
-            </div>
+            <div class="card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: rgb(228, 224, 238); display: flex; flex-direction: column; justify-content: center; align-items: center; color: black;">
+              <p><sup><i class="fas fa-quote-left"></i></sup>Our cultural tour with TourGuide exceeded all expectations. The immersive experiences, knowledgeable guides, and carefully curated activities allowed us to connect with the local culture in a way we never thought possible. Thanks to TourGuide.<sup><i class="fas fa-quote-right"></i></sup></p>
+              <div class="user-info">
+                <h3>Charles</h3>
+                <div class="star-rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+    
       </div>
-    </section> 
+    </section>
+<style>
+  .star-rating {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.star-rating .fa-star {
+  font-size: 20px; /* Adjust the size of the stars */
+  color: lightgray; /* Default color for unselected stars */
+}
+
+.star-rating .fa-star.checked {
+  color: gold; /* Color for selected stars */
+}
+</style>     
 
     <!-- <section class="testimonials" id="testimonials">
       <h2 class="testimonial-heading section__title" align-items="center" data-aos="fade-in">Testimonials</h2>
@@ -1964,7 +1855,6 @@ setInterval(() => {
 
 
 
-
     <section class="subscribe" id="Contact">
       <div class="section__container subscribe__container">
         <div class="subscribe__content">
@@ -1975,37 +1865,50 @@ setInterval(() => {
         </div>
         <div class="subscribe__form" data-aos="fade-up">
           <form id="subscriptionForm">
-            <input type="email"  style="border: none; font-size: 15px; margin: auto;" placeholder="Your email here" id="emailInput" required />
+            <input type="email" style="border: none; font-size: 15px; margin: auto;" placeholder="Your email here" id="emailInput" required />
             <button class="btn-send" id="send" type="submit" style="box-shadow: 0px 4px 8px blue; font-weight:530; font-size: medium; padding-left: 13px;">Subscribe</button>
           </form>
-          <p id="subscriptionMessage" style="display: none; color: green; margin-top: 10px;">Subscription successful! 🎉
-          </p>
+          <p id="subscriptionMessage" style="display: none; color: green; margin-top: 10px;">Subscription successful! 🎉</p>
+          <p id="errorMessage" style="display: none; color: red; margin-top: 10px;">Please enter a valid email address.</p>
         </div>
       </div>
     </section>
-    <!--DISPLAY SUBSCRIPTION SUCCESS MESSAGE-->
+    
     <script>
       document.getElementById('subscriptionForm').addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent submission
-
-
-
-        //  success message 
-        showSubscriptionMessage();
+        event.preventDefault(); // Prevent form submission
+    
+        var emailInput = document.getElementById('emailInput').value;
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/; // Improved regex to check for valid domain
+    
+        if (emailPattern.test(emailInput)) {
+          showSubscriptionMessage(); // Show success message if email is valid
+        } else {
+          showErrorMessage(); // Show error message if email is invalid
+        }
       });
-
+    
       function showSubscriptionMessage() {
         var messageElement = document.getElementById('subscriptionMessage');
         messageElement.style.display = 'block';
-
+    
         // Hide message after 4 seconds
         setTimeout(function () {
           messageElement.style.display = 'none';
-        }, 4000); // 4000 milliseconds = 4 seconds
+        }, 4000);
+      }
+    
+      function showErrorMessage() {
+        var errorElement = document.getElementById('errorMessage');
+        errorElement.style.display = 'block';
+    
+        // Hide error message after 4 seconds
+        setTimeout(function () {
+          errorElement.style.display = 'none';
+        }, 4000);
       }
     </script>
-
-
+    
     <footer class="footer" data-aos="fade-up">
       <div class=" footer__container">
         <div class="footer__col">
@@ -2186,10 +2089,8 @@ setInterval(() => {
     <a class="goupbtn" href="#" onclick="goToTop()"><i class="fa-solid fa-arrow-up"></i></a>
 
     <script>
-      // Get the button
       var mybutton = document.querySelector(".goupbtn");
-
-      // When the user scrolls, check if the button should be displayed
+    
       window.addEventListener("scroll", function () {
         if (window.scrollY > 20) {
           mybutton.style.display = "block";
@@ -2197,13 +2098,32 @@ setInterval(() => {
           mybutton.style.display = "none";
         }
       });
-
-      // When the user clicks on the button, scroll to the top of the document
+    
       function goToTop() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        const currentScroll = window.scrollY;
+        const startTime = performance.now();
+        const duration = 500;
+    
+        function scrollAnimation(currentTime) {
+          const elapsedTime = currentTime - startTime;
+          const progress = Math.min(elapsedTime / duration, 1);
+          const easeOut = progress * (2 - progress);
+          const scrollPosition = currentScroll * (1 - easeOut);
+    
+          window.scrollTo(0, scrollPosition);
+    
+          if (progress < 1) {
+            requestAnimationFrame(scrollAnimation);
+          }
+        }
+    
+        requestAnimationFrame(scrollAnimation);
       }
+    
+      mybutton.addEventListener('click', goToTop);
     </script>
+    
+    
 
 
 
@@ -2789,4 +2709,4 @@ setInterval(() => {
 
 
 </div> -->
-<!-- New bubble background end -->
+<!-- New bubble background end --}

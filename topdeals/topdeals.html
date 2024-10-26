@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   
     <title>Top Deals</title>
     <style>
@@ -96,14 +97,190 @@
         .book-now a:hover {
             background-color: #ff787d;
         }
+        /* navbar styles */
+      body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.nav-container {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: #0a1e3f;
+    padding: 1rem 1rem; 
+}
+
+.newNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.sitelogo {
+    width: 40px;
+    height: auto;
+}
+
+.nav__logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+.navLinks {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 1.2rem;
+    white-space: nowrap; 
+}
+
+.navLinks .link {
+    position: relative;
+}
+
+.navLinks a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navLinks a:hover {
+    background-color: rgba(238, 130, 238, 0.8);
+    color: #ff6347;
+}
+
+.active {
+    color: red !important;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #1f2532;
+    z-index: 999;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.btn {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff4500;
+}
+
+.hamburger {
+    display: none;
+}
+
+.line {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+    .navLinks {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #0a1e3f;
+    }
+
+    .navLinks.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
     </style>
 </head>
 <body>
+    <!-- adding nav bar -->
+    <div class="nav-container" id="top">
+        <nav class="newNav">
+            <div class="logo-container">
+                <img src="/favicon.ico" class="sitelogo" alt="Site Logo">
+                <a href="/index.html" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+            </div>
+    
+            <ul class="navLinks">
+                <!-- <li class="link"><a href="/mapa.html">View</a></li>
+                <li class="link"><a href="/newLogin.html">Log In</a></li> -->
+                <li class="link"><a href="/index.html#Home">Home</a></li>
+                <li class="link"><a href="/about.html">About</a></li>
+                <li class="link dropdown">
+                    <a href="/index.html#Services">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/index.html#Destinations">Destination</a></li>
+                        <li><a href="/index.html#trip">Prices</a></li>
+                        <li><a href="/index.html#ReviewGallery">Trip Gallery</a></li>
+                        <li><a href="/index.html#tourist">Tourist Guide</a></li>
+                        <li><a href="/index.html#hotel">Hotel & Resort</a></li>
+                    </ul>
+                </li>
+                <li class="link"><a href="/topdeals/topdeals.html">Top Deals</a></li>
+                <li class="link"><a href="/packages.html">Packages</a></li>
+                <li class="link"><a href="/index.html#testimonials">Testimonial</a></li>
+                <li class="link"><a href="/feedback.html">Rate Us?</a></li>
+                <li class="link"><a href="/index.html#cnt-form">Contact Us</a></li>
+            </ul>
+    
+            <div class="btn-container">
+                <a href="/newLogin.html" class="contact-btn"><button class="btn login">Login/SignUp</button></a>
+                <a href="/mapa.html" class="contact-btn"><button class="btn">View</button></a>
+                <!-- <a href="/newLogin.html" class="contact-btn"><button class="btn" id="logout-btn" disabled>Log Out</button></a> -->
+            </div>
+    
+            <div class="toggle-container">
+                <input id="themeToggle" class="toggle" type="checkbox">
+            </div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </div>    
     
     <div class="container">
         <div class="header">
-            <h1>Top deals</h1>
-            <p>"Don’t miss out on our exclusive top deals of the season! Whether you’re looking to upgrade your tech, refresh your wardrobe, or find the perfect gift, we’ve got you covered with unbeatable discounts across all categories. "</p>
+            <br><br><br><br>
+           <p style="color: #ffffff;">"Don’t miss out on our exclusive top deals of the season! Whether you’re looking to upgrade your tech, refresh your wardrobe, or find the perfect gift, we’ve got you covered with unbeatable discounts across all categories. "</p>
         </div>
         <div class="deals">
             <div class="card">
