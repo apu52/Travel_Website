@@ -14,31 +14,33 @@
 <body>
   <div id="loginSuccessBanner" class="success-banner">Logged in successfully</div>
   <div id="loginDeclineBanner" class="decline-banner">Logged in Blocked <br> credentials didn't match</div>
-    <div id="registerSuccessBanner" class="success-banner">Registered successfully</div>
-    <div id="registerDeclineBanner" class="decline-banner">Registered Blocked <br> Same email address</div>
-    <!-- Back to Home Button -->
-    <div>
-      <a href="index.html">
-        <button style="padding: 25px 25px 25px 25px; border-radius: 40px; font-size: 20px;">
-          <i class="lni lni-home"></i>
-        </button>
-      </a>
-    </div>
+  <div id="registerSuccessBanner" class="success-banner">Registered successfully</div>
+  <div id="registerDeclineBanner" class="decline-banner">Registered Blocked <br> Same email address</div>
+  
+  <div>
+    <a href="index.html">
+      <button style="padding: 25px 25px 25px 25px; border-radius: 40px; font-size: 20px;">
+        <i class="lni lni-home"></i>
+      </button>
+    </a>
+  </div>
+  
   <div class="main-container">
     <div class="container" id="container">
       <div class="form-container register-container">
-        <form  id="registerForm">
+        <form id="registerForm">
           <h1>Tour Guide</h1>
           <input type="text" placeholder="Name" id="registerName">
           <input type="email" placeholder="Email" id="registerEmail">
           <div id="register-section" class="input-container">
-              <input type="password" placeholder="Password" id="registerPassword">
+              <input type="password" placeholder="Password" id="registerPassword" oninput="checkPasswordStrength()">
               <button type="button" id="toggleRegisterPassword">
                 <i id="registerIcon" class="fas fa-eye"></i>
-            </button>
+              </button>
           </div>
+          <small id="passwordStrengthMsg" style="color: red;"></small>
           <button type="submit">Register</button>
-          <!-- <span id="registerMessage" style="display: none;">Account created successfully</span> -->
+          
           <div class="social-container">
             <a class="fb" href="www.facebook.com" class="social"><i class="lni lni-facebook-fill"></i></a>
             <a class="goog" href="www.google.com" class="social"><i class="lni lni-google"></i></a>
@@ -46,20 +48,17 @@
           </div>
         </form>
       </div>
-      
+
       <div class="form-container login-container">
-        <form  id="loginForm">          
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg> -->
+        <form id="loginForm">
           <h1>Tour Guide</h1>
           <input type="email" placeholder="Email" id="loginEmail">
           <div id="login-section" class="input-container">
             <input type="password" placeholder="Password" id="loginPassword">
             <button type="button" id="toggleLoginPassword">
               <i id="loginIcon" class="fas fa-eye"></i>
-          </button>
-        </div>
+            </button>
+          </div>
           <div class="content">
             <div class="checkbox">
               <input type="checkbox" name="checkbox" id="checkbox">
@@ -77,7 +76,6 @@
             <a class="lin" href="www.linkedin.com" class="social"><i class="lni lni-linkedin-original"></i></a>
           </div>
         </form>
-
       </div>
 
       <div class="overlay-container">
@@ -100,27 +98,31 @@
       </div>
     </div>
   </div>
-  <script src="login\script.js"></script>
+
+  <script src="login/script.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const registerButton = document.getElementById("register");
-      const container = document.getElementById("container");
-      registerButton.addEventListener("click", (event) => {
-        event.preventDefault();
-        container.classList.add("right-panel-active");
-        document.getElementById("registerForm").scrollIntoView({ behavior: "smooth" });
-      });
-    });
-  </script>
-  <script>
+    function checkPasswordStrength() {
+      const password = document.getElementById("registerPassword").value;
+      const strengthMsg = document.getElementById("passwordStrengthMsg");
+      let strength = "Weak";
+      let color = "red";
+      
+      if (password.length >= 8 && /[A-Z]/.test(password) && /[a-z]/.test(password) && /[0-9]/.test(password) && /[!@#\$%\^\&*\)\(+=._-]/.test(password)) {
+        strength = "Strong";
+        color = "green";
+      } else if (password.length >= 6 && ((/[A-Z]/.test(password) && /[a-z]/.test(password)) || /[0-9]/.test(password))) {
+        strength = "Medium";
+        color = "orange";
+      }
+
+      strengthMsg.textContent = `Password strength: ${strength}`;
+      strengthMsg.style.color = color;
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
       const registerButton = document.getElementById("register");
       const loginButton = document.getElementById("login");
       const container = document.getElementById("container");
-      const loginSuccessBanner = document.getElementById("loginSuccessBanner");
-      const registerSuccessBanner = document.getElementById("registerSuccessBanner");
-      const loginDeclineBanner = document.getElementById("loginDeclineBanner");
-      const registerDeclineBanner = document.getElementById("registerDeclineBanner");
 
       registerButton.addEventListener("click", (event) => {
         event.preventDefault();
@@ -174,18 +176,17 @@
             return;
           }
 
-          if(localStorage.getItem("email")===email){
+          if (localStorage.getItem("email") === email) {
             registerDeclineBanner.style.display = "block";
             setTimeout(() => {
               registerDeclineBanner.style.display = "none";
             }, 6000);
           }
 
-          localStorage.setItem("name", name)
-          localStorage.setItem("email", email)
-          localStorage.setItem("password", password)
+          localStorage.setItem("name", name);
+          localStorage.setItem("email", email);
+          localStorage.setItem("password", password);
 
-          // Show register success banner
           registerSuccessBanner.style.display = "block";
           setTimeout(() => {
             registerSuccessBanner.style.display = "none";
@@ -205,58 +206,34 @@
             return;
           }
           if (spcharRegex.test(password)) {
-            alert('Password cannot contain <,>,", or /');
+            alert('Password Cannot Contain <,>,", or /');
             return;
           }
-          const email_check = localStorage.getItem("email")
-          const password_check = localStorage.getItem("password")
 
-          if (email_check === email && password_check=== password){
-            // Show login success banner
+          const storedEmail = localStorage.getItem("email");
+          const storedPassword = localStorage.getItem("password");
+
+          if (email === storedEmail && password === storedPassword) {
             loginSuccessBanner.style.display = "block";
             setTimeout(() => {
               loginSuccessBanner.style.display = "none";
+              document.getElementById("loginEmail").value = "";
+              document.getElementById("loginPassword").value = "";
             }, 3000);
-            document.getElementById("loginEmail").value = "";
-            document.getElementById("loginPassword").value = "";
-          }else{
+          } else {
             loginDeclineBanner.style.display = "block";
             setTimeout(() => {
               loginDeclineBanner.style.display = "none";
-            }, 3000);
+            }, 6000);
           }
         }
       }
 
       function validateEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         return re.test(email);
       }
-
-      // Password toggle visibility for login
-      const togglePassword = document.getElementById("togglePassword");
-      const passwordInput = document.getElementById("loginPassword");
-
-      togglePassword.addEventListener("click", function () {
-        const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
-        passwordInput.setAttribute("type", type);
-
-        this.classList.toggle("fa-eye");
-        this.classList.toggle("fa-eye-slash");
-      });
-
-      // Password toggle visibility for register
-      const toggleRegisterPassword = document.getElementById("toggleRegisterPassword");
-      const passwordRegisterInput = document.getElementById("registerPassword");
-
-      toggleRegisterPassword.addEventListener("click", function () {
-        const type = passwordRegisterInput.getAttribute("type") === "password" ? "text" : "password";
-        passwordRegisterInput.setAttribute("type", type);
-
-        this.classList.toggle("fa-eye");
-        this.classList.toggle("fa-eye-slash");
-      });
     });
-    </script>
+  </script>
 </body>
 </html>
