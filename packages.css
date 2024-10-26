@@ -23,6 +23,10 @@ body {
     margin-bottom: 5px;
     font-weight: 500;
 }
+.trip-package-grid{
+    height: 150px;
+    width: 80px;
+}
 .slideshow {
     margin-left: 0px;
     width: 100%;
@@ -92,8 +96,8 @@ h1 span {
 
 .package img{
     transform: translateX(-28px);
-    max-width: 100%;
-    /* width: 100%; */
+    max-width: 80%;
+    
     border-radius: 5px;
 }
 
