@@ -1,0 +1,58 @@
+name: PR Issue Checker
+# Created by @smog-root.
+on:
+  pull_request:
+    types: [opened, edited]
+
+jobs:
+  check_pr_details:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies (if needed)
+        run: pip install re  # Install Python's regex library (not needed if using built-in)
+
+      - name: Check PR Description and Title
+        id: check_pr_details
+        run: |
+          python -c "
+import re
+import sys
+import os
+
+pr_description = os.getenv('GITHUB_EVENT_PULL_REQUEST_BODY', '')
+pr_title = os.getenv('GITHUB_EVENT_PULL_REQUEST_TITLE', '')
+
+# Check if PR description is present
+if not pr_description:
+    print('PR description is missing.')
+    sys.exit(1)
+
+# Check if the PR description contains 'Fixes #<issue-number>'
+if not re.search(r'Fixes #[0-9]+', pr_description):
+    print('The PR description should include Fixes , Close, Closes, Closed , Fix , Fixed , Resolve , Resolves #<issue-number>.')
+    sys.exit(1)
+
+# Check if the PR title starts with FIX, FEAT, or DOC
+if not re.match(r'^(Fixes|Close|Closes|Closed|Fix|Fixed|Resolve|Resolves
+Resolved)', pr_title):
+    print('The PR title should start with Fixes , Close, Closes, Closed , Fix , Fixed , Resolve , Resolves')
+    sys.exit(1)
+
+print('PR description and title are valid.')
+"
+        env:
+          GITHUB_EVENT_PULL_REQUEST_BODY: ${{ github.event.pull_request.body }}
+          GITHUB_EVENT_PULL_REQUEST_TITLE: ${{ github.event.pull_request.title }}
+
+      - name: Output result
+        run: echo "All checks passed."
+        

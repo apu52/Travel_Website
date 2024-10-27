@@ -1,9 +1,11 @@
 # <p align="center">✨Travel Website✨</p>
 <p align="center">
    
-<center>
-<img  src="https://readme-typing-svg.herokuapp.com?color=45ffaa&size=40&width=900&height=80&lines=Welcome-to-TOURGUIDE"/>
-</center>
+<div align="center"> 
+    <h1> 
+        <img src="https://readme-typing-svg.herokuapp.com?font=Jetbrains+mono&size=25&duration=3200&color=4FC3F7&center=true&vCenter=true&width=470&lines=Welcome+to+TOURGUIDE!;Explore+Your+Next+Adventure!;Find+The+Best+Travel+Destinations!;Discover+Hidden+Gems!;Plan+Your+Perfect+Getaway!;Travel+Smart+with+TOURGUIDE!;Unforgettable+Journeys+Await!" alt="Typing SVG"/> 
+    </h1>
+</div>
    
 ![image](https://github.com/avanimathur/Travel_Website/assets/151984867/1024d506-92c6-4b35-a4ab-2d4eaca78199)
 
@@ -33,11 +35,13 @@
 
 
 <div id="top"></div>
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
 <h2>Table of Contents🧾</h2>
 
 - [Overview📌](#overview)
-- [Features](#features)
+- [Features🌟](#features)
 - [Technology Used🚀](#technology-used)
 - [Open-Source-Programmes⭐](#open-source-programmes)
 - [Getting Started💥](#getting-started)
@@ -46,6 +50,8 @@
 - [Project Admin⚡](#project-admin)
 - [Contributing is fun🧡](#contributing-is-fun)
 <br>
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
 <h2>Overview📌</h2>
 <p>This repository contains my project on a Travel Website✈️ using HTML, CSS and JavaScript. It features a landing page for a travel tour company website. Finding the perfect travel destination can be a challenge. This project aims to streamline that process🚤. We welcome all contributions to make this a fantastic resource for travelers. Jump in and contribute to this grand project! Read the guidelines📚 and get started building!</p>
@@ -57,24 +63,36 @@ Check out the live project [here](https://apu52.github.io/Travel_Website/).
 <p align="center">
   <img src="https://github.com/avanimathur/Travel_Website/assets/151984867/1024d506-92c6-4b35-a4ab-2d4eaca78199" alt="Live Demo">
 </p>
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
-<h2>Features</h2>
+## Features🌟
 
-- **Introductory Page**: Welcomes visitors with an engaging introductory page that highlights the essence of our travel website and sets the tone for exploration.
-- **Top Destination Page**: Showcases top travel destinations with captivating imagery, detailed descriptions, and essential information to inspire and inform visitors.
-- **Best Trip Packages**: Presents the best trip packages tailored to different interests and budgets, complete with itinerary details, pricing, and booking options for seamless travel planning.
-- **Our Trip Gallery**: Curates a visually stunning gallery showcasing memorable moments and experiences from our trips, enticing visitors to embark on their own adventures. Includes interactive features such as user comments.
-- **Contact Us Page**: Provides a user-friendly contact page with essential contact information inquiry forms, and interactive maps for visitors to reach out and engage with our travel company effortlessly.
+- **🌐 Introductory Page**: 
+  Welcomes visitors with an engaging introductory page that highlights the essence of our travel website and sets the tone for exploration.
+
+- **📍 Top Destination Page**: 
+  Showcases top travel destinations with captivating imagery, detailed descriptions, and essential information to inspire and inform visitors.
+
+- **✈️ Best Trip Packages**: 
+  Presents the best trip packages tailored to different interests and budgets, complete with itinerary details, pricing, and booking options for seamless travel planning.
+
+- **📸 Our Trip Gallery**: 
+  Curates a visually stunning gallery showcasing memorable moments and experiences from our trips, enticing visitors to embark on their own adventures. Includes interactive features such as user comments.
+
+- **📞 Contact Us Page**: 
+  Provides a user-friendly contact page with essential contact information, inquiry forms, and interactive maps for visitors to reach out and engage with our travel company effortlessly.
+
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
 <h2>Technology Used🚀</h2>
 
-<p>
-  <a href="https://www.w3schools.com/html/"> <img src="https://img.icons8.com/color/70/000000/html-5--v1.png" alt="HTML" /></a>
-  <a href="https://www.w3schools.com/css/"> <img src="https://img.icons8.com/color/70/000000/css3.png" alt="CSS" /></a>
-   <a href="https://www.w3schools.com/js/"> <img src="https://img.icons8.com/?size=70&id=PXTY4q2Sq2lG&format=png&color=000000" alt="js" /></a>
-</p>
+<img height=50 src = "https://skillicons.dev/icons?i=html,css,js" >
 <p align="right"><a href="#top"><img src="https://img.shields.io/badge/Move%20to%20top-Blue?style=plastic" alt="Back To Top"></a></p>
 
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
 <h2>Open-Source-Programmes⭐</h2>
 
@@ -98,6 +116,10 @@ Check out the live project [here](https://apu52.github.io/Travel_Website/).
 <div align="center">
   <img src="img/JWOC.png" alt="JWOC" width="50%">
 </div>
+
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
 <h2>Getting Started💥</h2>
 
 <h3>Local Installation video</h3>
@@ -184,9 +206,13 @@ git push origin YourBranchName
  **Congratulations! You've made your first contribution! 🙌🏼**
 <p align="right"><a href="#top"><img src="https://img.shields.io/badge/Move%20to%20top-Blue?style=plastic" alt="Back To Top"></a></p>
 
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
 <h2>Contributing Guidelines📑</h2>
 
 To learn about our development process, how to propose bug fixes and improvements of our project please read our [Contributing Guidelines.](https://github.com/apu52/Travel_Website/blob/main/CONTRIBUTING.md)
+
 
 <h2>Code Of Conduct📑</h2>
 
@@ -200,7 +226,10 @@ Show some ❤️&nbsp; by giving <img src="https://imgur.com/o7ncZFp.jpg" height
 <div align="center">
 
 <div align="center">
-
+   
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+   
 ## Project Mentor
 
 <table>
@@ -219,7 +248,9 @@ Show some ❤️&nbsp; by giving <img src="https://imgur.com/o7ncZFp.jpg" height
 </tr>
 </table>
 
-  
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
  # Project Admin⚡
  
 <table>
@@ -234,12 +265,16 @@ Show some ❤️&nbsp; by giving <img src="https://imgur.com/o7ncZFp.jpg" height
 </div>
 
 
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
 ## Contributing is fun🧡
 <p align ="center">
   <img src="https://github.com/shruti-sen2004/Travel_Website/assets/115914670/d544fd3b-aed2-4a05-a2f8-0b7a2ff9014f" width="700" height= "250" />
 </p>
 
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
 ## Acknowledgements
 
@@ -253,6 +288,9 @@ Thank you to all the amazing contributors who have made this project possible! �
   <img align="center" src="https://contrib.rocks/image?max=100&repo=apu52/Travel_Website" />
 </a> 
 <br><br>
+
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
 ## License
 

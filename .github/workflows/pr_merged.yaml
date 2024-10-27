@@ -1,0 +1,34 @@
+name: Merge Thank You
+
+# Created by @smog-root
+
+on:
+  pull_request_target:
+    types: [closed]  # Trigger when a PR is closed
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  post_merge_message:
+    if: github.event.pull_request.merged == true  # Only run if the PR was merged
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Post thank you message
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}  # Ensure token is used
+          script: |
+            const prNumber = context.payload.pull_request.number;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+
+            // Post a thank you message upon PR merge
+            await github.rest.issues.createComment({
+              owner: owner,
+              repo: repo,
+              issue_number: prNumber,
+              body: `🎉🎉 Thank you for your contribution! Your PR #${prNumber} has been merged! 🎉🎉`
+            });

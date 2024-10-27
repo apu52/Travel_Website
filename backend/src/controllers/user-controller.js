@@ -1,9 +1,9 @@
 const { StatusCodes } = require('http-status-codes');
-const bcryptjs = require('bcryptjs');
+const bcrypt = require('bcrypt');  // Changed from bcryptjs to bcrypt
 const User = require('../models/User');
-// const Trip = require('../models/Location');
 const jwt = require('jsonwebtoken');
 const { ServerConfig } = require('../config/index');
+
 const signup = async (req, res) => {
     try {
         const { name, email, password, role } = req.body;
@@ -23,7 +23,11 @@ const signup = async (req, res) => {
             });
         }
 
-        let hashedPassword = await bcryptjs.hash(password, 10);
+        // Generate a salt and hash the password
+        const saltRounds = 12;  // Increased from 10 to 12 for better security
+        const salt = await bcrypt.genSalt(saltRounds);
+        const hashedPassword = await bcrypt.hash(password, salt);
+
         const newUser = await User.create({
             name: name,
             email: email,
@@ -63,7 +67,7 @@ const login = async (req, res) => {
             });
         }
 
-        const isPasswordCorrect = await bcryptjs.compare(password, user.password);
+        const isPasswordCorrect = await bcrypt.compare(password, user.password);
         if (!isPasswordCorrect) {
             return res.status(StatusCodes.UNAUTHORIZED).json({
                 success: false,
@@ -73,11 +77,17 @@ const login = async (req, res) => {
 
         const accessToken = jwt.sign({ userId: user._id }, ServerConfig.JWT_KEY, { subject: 'accessApi', expiresIn: ServerConfig.TOKEN_EXP });
 
-        res.cookie('access_token', accessToken, { httpOnly: true, maxAge:3600000 });
+        res.cookie('access_token', accessToken, { 
+            httpOnly: true, 
+            secure: process.env.NODE_ENV === 'production',  // Only send cookie over HTTPS in production
+            sameSite: 'strict',  // Protect against CSRF
+            maxAge: 3600000  // 1 hour
+        });
+        
         return res.status(StatusCodes.OK).json({
             success: true,
             message: "Login successful",
-            id:user._id,
+            id: user._id,
         });
     } catch (err) {
         return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
@@ -87,22 +97,19 @@ const login = async (req, res) => {
     }
 };
 
-const logout = async (req,res)=>{
-    try{
+const logout = async (req, res) => {
+    try {
         res.clearCookie('access_token');
         res.status(StatusCodes.NO_CONTENT).json({
-            message:"user logged out succesfully"
-        })
-    }
-    catch (err) {
+            message: "User logged out successfully"
+        });
+    } catch (err) {
         return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
             success: false,
             message: err.message
         });
     }
-
-}
-
+};
 
 const AdminSection = async (req, res) => {
     try {
@@ -137,8 +144,7 @@ const deleteAllUsers = async (req, res) => {
 module.exports = {
     signup: signup,
     login: login,
-    logout:logout,
+    logout: logout,
     AdminSection: AdminSection,
     deleteAllUsers: deleteAllUsers
 };
- 
