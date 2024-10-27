@@ -553,57 +553,171 @@
     <a href="#contact"><button class="btn" id="btn-style">Contact Us</button></a>
   </nav> -->
 
-    <div class="nav-container" id="top">
-      <nav class="newNav">
-        <div style="display: flex; flex-direction: row; align-items: center;">
-          <img src="/favicon.ico" class="sitelogo">
-        
-          <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+  <!-- <div class="nav-container" id="top"> -->
+    <nav class="newNav">
+        <div style="display: flex; align-items: center;">
+            <img src="/favicon.ico" class="sitelogo">
+            <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
         </div>
 
         <ul class="navLinks">
-          <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
-          <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
-          <li class="link" data-aos=""><a href="#Home">Home</a></li>
-          <li class="link" data-aos=""><a href="./about.html">About</a></li>
-          <li class="link dropdown" data-aos="">
-              <a href="#Services" class="dropdown">Services</a>
-              <ul class="dropdown-menu">
-                  <li><a href="#Destinations">Destination</a></li>
-                  <li><a href="#trip">Prices</a></li>
-                  <li><a href="#ReviewGallery">Trip Gallery</a></li>
-                  <li><a href="#tourist">Tourist Guide</a></li>
-                  <li><a href="#hotel">Hotel & Resort</a></li>
-              </ul>
-          </li>
-          <li class="link" data-aos=""><a href="./topdeals/topdeals.html">Top Deals</a></li>
-          <li class="link" data-aos=""><a href="./packages.html">Packages</a></li>
-          <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
-          <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
-          <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
+            <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
+            <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
+            <li class="link" data-aos=""><a href="#Home">Home</a></li>
+            <li class="link" data-aos=""><a href="./about.html">About</a></li>
+            <li class="link dropdown" data-aos="">
+                <a href="#Services" class="dropdown">Services</a>
+                <ul class="dropdown-menu">
+                    <li style="color: #000;"><a href="#Destinations">Destination</a></li>
+                    <li><a href="#trip">Prices</a></li>
+                    <li><a href="#ReviewGallery">Trip Gallery</a></li>
+                    <li><a href="#tourist">Tourist Guide</a></li>
+                    <li><a href="#hotel">Hotel & Resort</a></li>
+                </ul>
+            </li>
+            <li class="link" data-aos=""><a href="./topdeals/topdeals.html">Top Deals</a></li>
+            <li class="link" data-aos=""><a href="./packages.html">Packages</a></li>
+            <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
+            <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+            <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
         </ul>
 
-        <a href="newLogin.html" class="contact-btn" id="nav-login-btn"><button class="btn login" id="btn-style"
-            data-aos="fade-down">Login/SignUp</button></a>
-        <a href="mapa.html" class="contact-btn" id="nav-view-btn"><button class="btn" id="btn-style" style="margin: 0;"
-            data-aos="fade-down">view <map name=""></map></button></a>
-
-        <a href="loginPage.html" class="contact-btn"><button class="btn" id="logout-btn"
-            style="margin: 0; display: none;" data-aos="fade-down" disabled>Log Out</button></a>
-
-        <!-- <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
-            style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a> -->
+        <div class="contact-btns">
+            <a href="newLogin.html" class="contact-btn" id="nav-login-btn">
+                <button class="btn login" id="btn-style" data-aos="fade-down">Login/SignUp</button>
+            </a>
+            <a href="mapa.html" class="contact-btn" id="nav-view-btn">
+                <button class="btn" id="btn-style" style="margin: 0;" data-aos="fade-down">View <map name=""></map></button>
+            </a>
+            <a href="loginPage.html" class="contact-btn">
+                <button class="btn" id="logout-btn" style="margin: 0; display: none;" data-aos="fade-down" disabled>Log Out</button>
+            </a>
+        </div>
 
         <div class="toggle-container" data-aos="fade-down" style="margin-right: 28px;">
-          <input id="themeToggle" class="toggle" type="checkbox">
+            <input id="themeToggle" class="toggle" type="checkbox">
         </div>
+
         <div class="hamburger" data-aos="fade-down">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
-      </nav>
-    </div>
+    </nav>
+
+<style>
+  /* General Styles for the Navigation */
+.nav-container {
+    background-color: #ffffff; /* Change this to your desired background color */
+    padding: 10px 20px; /* Adjust padding for space around the nav */
+    display: flex;
+    justify-content: space-between; /* Align items */
+    align-items: center; /* Center items vertically */
+    
+}
+
+.newNav {
+    display: flex;
+    justify-content: space-between; /* Space out the nav items */
+    align-items: center; /* Center items vertically */
+    width: 100%;
+}
+
+.sitelogo {
+    height: 40px; /* Set a fixed height for the logo */
+    width: 40px;
+    margin-right: 20px; /* Space between logo and title */
+}
+
+.nav__logo {
+    font-size: 30px; /* Adjust font size */
+    color: #ece6e6; /* Change to your desired color */
+    text-decoration: none; /* Remove underline */
+}
+
+.navLinks {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Display items in a row */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    size: 50px;
+}
+
+.link {
+    margin: 0 15px; /* Space between links */
+}
+
+.link a {
+    text-decoration: none; /* Remove underline */
+    color: #d8d4d4; /* Link color */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.link a:hover {
+    color: #007BFF; /* Change color on hover */
+}
+
+.dropdown-menu {
+    display: none; /* Hide dropdown initially */
+    position: absolute; /* Position dropdown below the parent */
+    background-color: #fff; /* Dropdown background */
+    border: 1px solid #ccc; /* Border for dropdown */
+    z-index: 1000; /* Ensure dropdown appears above other content */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block; /* Show dropdown on hover */
+}
+
+.contact-btn {
+    margin-left: 15px; /* Space between buttons */
+}
+
+.btn {
+    padding: 10px 15px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none; /* Hide on larger screens */
+}
+
+/* Toggle Theme Container */
+.toggle-container {
+    display: flex;
+    align-items: center; /* Center vertically */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger on small screens */
+    }
+
+    .navLinks {
+        display: none; /* Hide nav links on small screens */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Position over content */
+        top: 60px; /* Position below navbar */
+        left: 0; /* Align to left */
+        background-color: #ffffff; /* Background color */
+        width: 100%; /* Full width */
+        z-index: 1000; /* Stack above other content */
+    }
+
+    .navLinks.active {
+        display: flex; /* Show links when active */
+    }
+
+    .link {
+        margin: 10px 0; /* Space between links */
+    }
+}
+
+</style>
     <header>
       <div class="nav-wrapperr">
         <div id="progress-container">
