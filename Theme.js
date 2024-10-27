@@ -21,7 +21,7 @@ function applyTheme(theme) {
     document.body.classList.add("dark-theme");
     document.body.classList.remove("light-theme");
     // themeLabel.style.background = "var(--primary-color)";
-    themeToggle.title = 'Switch to Light mode';
+    themeToggle.setAttribute('title','Switch to Light mode');
     themeToggle.checked = true;
     
   } else {
