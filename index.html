@@ -568,11 +568,11 @@
             <li class="link dropdown" data-aos="">
                 <a href="#Services" class="dropdown">Services</a>
                 <ul class="dropdown-menu">
-                    <li style="color: #000;"><a href="#Destinations">Destination</a></li>
-                    <li><a href="#trip">Prices</a></li>
-                    <li><a href="#ReviewGallery">Trip Gallery</a></li>
-                    <li><a href="#tourist">Tourist Guide</a></li>
-                    <li><a href="#hotel">Hotel & Resort</a></li>
+                    <li><a href="#Destinations" style="color: #000;">Destination</a></li>
+                    <li><a href="#trip" style="color: #000;">Prices</a></li>
+                    <li><a href="#ReviewGallery" style="color: #000;">Trip Gallery</a></li>
+                    <li><a href="#tourist" style="color: #000;">Tourist Guide</a></li>
+                    <li><a href="#hotel" style="color: #000;">Hotel & Resort</a></li>
                 </ul>
             </li>
             <li class="link" data-aos=""><a href="./topdeals/topdeals.html">Top Deals</a></li>
@@ -584,7 +584,7 @@
 
         <div class="contact-btns">
             <a href="newLogin.html" class="contact-btn" id="nav-login-btn">
-                <button class="btn login" id="btn-style" data-aos="fade-down">Login/SignUp</button>
+                <button class="btn login" id="btn-style" data-aos="fade-down">Login/<br>SignUp</button>
             </a>
             <a href="mapa.html" class="contact-btn" id="nav-view-btn">
                 <button class="btn" id="btn-style" style="margin: 0;" data-aos="fade-down">View <map name=""></map></button>
@@ -608,30 +608,29 @@
 <style>
   /* General Styles for the Navigation */
 .nav-container {
-    background-color: #ffffff; /* Change this to your desired background color */
-    padding: 10px 20px; /* Adjust padding for space around the nav */
+    background-color: #ffffff; /* Background color */
+    padding: 5px 20px; /* Reduced padding for smaller height */
     display: flex;
-    justify-content: space-between; /* Align items */
-    align-items: center; /* Center items vertically */
-    
+    justify-content: space-between;
+    align-items: center;
 }
 
 .newNav {
     display: flex;
-    justify-content: space-between; /* Space out the nav items */
-    align-items: center; /* Center items vertically */
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
 
 .sitelogo {
-    height: 40px; /* Set a fixed height for the logo */
-    width: 40px;
-    margin-right: 20px; /* Space between logo and title */
+    height: 35px; /* Slightly smaller logo */
+    width: 35px;
+    margin-right: 10px; /* Reduced space between logo and title */
 }
 
 .nav__logo {
-    font-size: 30px; /* Adjust font size */
-    color: #ece6e6; /* Change to your desired color */
+    font-size: 28px; /* Adjust font size */
+    color: #ece6e6; /* Logo color */
     text-decoration: none; /* Remove underline */
 }
 
@@ -640,14 +639,14 @@
     display: flex; /* Display items in a row */
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
-    size: 50px;
 }
 
 .link {
-    margin: 0 15px; /* Space between links */
+    margin: 0 10px; /* Reduced space between links */
 }
 
 .link a {
+    font-size: 18px; /* Increased font size */
     text-decoration: none; /* Remove underline */
     color: #d8d4d4; /* Link color */
     transition: color 0.3s ease; /* Smooth color transition */
@@ -669,12 +668,18 @@
     display: block; /* Show dropdown on hover */
 }
 
+.contact-btns {
+    display: flex; /* Align buttons side by side */
+    align-items: center;
+    gap: 10px; /* Small gap between the buttons */
+}
+
 .contact-btn {
-    margin-left: 15px; /* Space between buttons */
+    margin: 0; /* Remove extra space between buttons */
 }
 
 .btn {
-    padding: 10px 15px; /* Button padding */
+    padding: 8px 12px; /* Adjusted padding for smaller height */
     border: none; /* Remove border */
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
@@ -701,7 +706,7 @@
         display: none; /* Hide nav links on small screens */
         flex-direction: column; /* Stack links vertically */
         position: absolute; /* Position over content */
-        top: 60px; /* Position below navbar */
+        top: 50px; /* Position below navbar */
         left: 0; /* Align to left */
         background-color: #ffffff; /* Background color */
         width: 100%; /* Full width */
