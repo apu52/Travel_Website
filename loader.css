@@ -25,7 +25,7 @@
     font-size: 3rem;
     letter-spacing: 1.2px;
     animation-name: animate;
-    animation-duration: 1.5s;
+    animation-duration: 0.75s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
