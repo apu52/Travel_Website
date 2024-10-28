@@ -234,7 +234,12 @@ Show some ❤️&nbsp; by giving <img src="https://imgur.com/o7ncZFp.jpg" height
 
 <table>
 <tr>
-<td align="center"><a href="https://github.com/KrishnenduDG"><img src="img/krishnendu DG.png" width=130px height=130px /></a></br> <h4 style="color:red;">Krishnendu Dasgupta</h4>
+   
+<td align="center"><a href="https://github.com/KrishnenduDG"><img src="img/krishnendu DG.png" width=130px height=130px /></a></br> <h4 style="color:red;">Ayushmaan Singh</h4>
+ <a href="https://www.linkedin.com/in/ayushmaan03/"><img src="https://img.icons8.com/fluency/2x/linkedin.png" width="32px" height="32px"></img></a>
+</td>
+   
+<td align="center"><a href="https://github.com/Ayushmaan06"><img src="img/Ayushman.jpg" width=130px height=130px /></a></br> <h4 style="color:red;">Krishnendu Dasgupta</h4>
  <a href="https://www.linkedin.com/in/krishnendu-dasgupta-450391186/"><img src="https://img.icons8.com/fluency/2x/linkedin.png" width="32px" height="32px"></img></a>
 </td>
 
