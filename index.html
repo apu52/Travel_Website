@@ -425,6 +425,8 @@
     .next {
       right: 0;
     }
+
+    /* Style applied on translate button */
     .translate-container {
       position: fixed;
       left: 20px;
@@ -2070,12 +2072,14 @@
         }, 4000); // 4000 milliseconds = 4 seconds
       }
     </script>
+    <!-- Translate button -->
     <div class="translate-container">
       <button class="translate-button translate-label">TRANSLATE
         <div id="google_translate_element" class="translate-widget"></div>
       </button>
     </div>
   </div>
+  <!-- Translate button Script-->
   <script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
