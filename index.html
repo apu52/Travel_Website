@@ -528,32 +528,6 @@
       <canvas></canvas>
       <canvas></canvas>
     </div>
-    
-
-    <!-- <div id="progressbar"></div> -->
-
-    <!-- <div id="scrollPath"></div> -->
-
-    <!-- <canvas id="canvas"></canvas> -->
-    <!-- <nav>
-
-    <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
-    <ul class="nav__links">
-      <li class="link" data-aos="fade-down"><a href="#Home">Home</a></li>
-      <li class="link" data-aos="fade-down"><a href="#AboutUs">About Us</a></li>
-      <li class="link" data-aos="fade-down"><a href="#Destinations">Destinations</a></li>
-      <li class="link" data-aos="fade-down"><a href="#trip">Pricing</a></li>
-      <li class="link" data-aos="fade-down"><a href="#testimonials">Testimonials</a></li>
-      <li class="link" data-aos="fade-down"><a href="#ReviewGallery">Reviews</a></li>
-      <li class="link" data-aos="fade-down"><a href="feedback.html">Rate Us?</a></li>
-      <li class="link" data-aos="fade-down"><a href="login.html">Login</a></li>
-
-    </ul>
-    <button id="toggle" data-aos="fade-down">Dark Theme</button>
-    <a href="#contact"><button class="btn" id="btn-style">Contact Us</button></a>
-  </nav> -->
-
-  <!-- <div class="nav-container" id="top"> -->
     <nav class="newNav">
         <div style="display: flex; align-items: center;">
             <img src="/favicon.ico" class="sitelogo">
@@ -598,10 +572,11 @@
             <input id="themeToggle" class="toggle" type="checkbox">
         </div>
 
-        <div class="hamburger" data-aos="fade-down">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+        <div class="hamburger" id="hamburger" data-aos="fade-down">
+            <div class="line" style="margin-bottom: 5px;"></div>
+            <div class="line" style="margin-bottom: 5px;"></div>
+            <div class="line" style="margin-bottom: 5px;"></div>
+            <div class="line" style="margin-bottom: 5px;"></div>
         </div>
     </nav>
 
@@ -640,6 +615,10 @@
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
 }
+.navLinks.active {
+    display: flex; /* Show links when the 'active' class is applied */
+}
+
 
 .link {
     margin: 0 10px; /* Reduced space between links */
@@ -697,32 +676,49 @@
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
-    .hamburger {
-        display: block; /* Show hamburger on small screens */
-    }
+@media (max-width: 1168px) {
+  .hamburger {
+                display: block; /* Show hamburger on small screens */
+            }
 
-    .navLinks {
-        display: none; /* Hide nav links on small screens */
-        flex-direction: column; /* Stack links vertically */
-        position: absolute; /* Position over content */
-        top: 50px; /* Position below navbar */
-        left: 0; /* Align to left */
-        background-color: #ffffff; /* Background color */
-        width: 100%; /* Full width */
-        z-index: 1000; /* Stack above other content */
-    }
+  .navLinks {
+                display: none; /* Hide nav links on small screens */
+                flex-direction: column; /* Stack links vertically */
+                position: absolute; /* Position over content */
+                top: 60px; /* Adjusted position below navbar */
+                left: 0;
+                background-color: #ffffff; /* Background color */
+                width: 100%; /* Full width */
+                z-index: 1000; /* Stack above other content */
+                padding: 10px 0; /* Padding for spacing */
+            }
 
-    .navLinks.active {
-        display: flex; /* Show links when active */
-    }
+            .navLinks.active {
+                display: flex; /* Show links when active */
+                padding: 10px; /* Padding around links */
+            }
 
-    .link {
-        margin: 10px 0; /* Space between links */
-    }
-}
+            .link {
+                margin: 10px 0; /* Space between links */
+                text-align: center; /* Center align links */
+            }
+
+            .dropdown {
+                position: center; /* Position for dropdown menu */
+            }
+        }
 
 </style>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.querySelector('.navLinks');
+  const dropdownToggles = document.querySelectorAll('.dropdown');
+
+  hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active'); // Toggles the 'active' class
+  });
+</script>
+
     <header>
       <div class="nav-wrapperr">
         <div id="progress-container">
