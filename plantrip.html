@@ -166,15 +166,15 @@
     <div style="display: flex; flex-direction: row; align-items: center;">
     <img src="./img/tour1.png" class="sitelogo">
     
-    <a href="#" class="nav__logo aos-init aos-animate" data-aos="fade-right">Tourguide<span>.</span></a>
+    <a href="index.html" class="nav__logo aos-init aos-animate" data-aos="fade-right">Tourguide<span>.</span></a>
   </div>
 
     <ul class="navLinks">
       <li class="link aos-init aos-animate" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
       <li class="link aos-init aos-animate" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
-      <li class="link aos-init aos-animate" data-aos=""><a href="#Home">Home</a></li>
-      <li class="link aos-init aos-animate" data-aos=""><a href="#AboutUs">About</a></li>
-      <li class="link dropdown aos-init aos-animate" data-aos="">
+      <li class="link aos-init aos-animate" data-aos=""><a href="index.html">Home</a></li>
+      <li class="link aos-init aos-animate" data-aos=""><a href="about.html">About</a></li>
+      <!-- <li class="link dropdown aos-init aos-animate" data-aos="">
           <a href="#Services" class="dropdown">Services</a>
           <ul class="dropdown-menu">
               <li><a href="#Destinations">Destination</a></li>
@@ -183,7 +183,7 @@
               <li><a href="#tourist">Tourist Guide</a></li>
               <li><a href="#hotel">Hotel &amp; Resort</a></li>
           </ul>
-      </li>
+      </li> -->
       <li class="link aos-init aos-animate" data-aos=""><a href="#testimonials">Testimonial</a></li>
       <li class="link aos-init aos-animate" data-aos=""><a href="feedback.html">Rate Us?</a></li>
       <li class="link aos-init aos-animate" data-aos=""><a href="#cnt-form">Contact Us</a></li>
@@ -268,8 +268,8 @@
       </div>
     </div>
     <div class="carousel-controls">
-      <button class="carousel-button" onclick="prevSlide()">&#9664;</button>
-      <button class="carousel-button" onclick="nextSlide()">&#9654;</button>
+      <button class="carousel-button" id = "prev-btn" onclick="prevSlide()">&#9664;</button>
+      <button class="carousel-button" id = "next-btn" onclick="nextSlide()">&#9654;</button>
     </div>
   </div>
   <script>
@@ -283,29 +283,44 @@
     let currentSlide = 0;
     const slides = document.querySelectorAll('.trip-card');
     const totalSlides = slides.length;
+    const slidesInView = 3.5; // Set this to the number of visible slides in the container
+    const slideWidth = slides[0].offsetWidth + 20; // Including margin
+    const maxTranslateX = (totalSlides - slidesInView) * slideWidth;
 
     function updateCarousel() {
       const carousel = document.getElementById('trip-carousel');
-      const slideWidth = slides[0].offsetWidth + 20; // Including margin
-      carousel.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+      const translateX = -currentSlide * slideWidth;
+      carousel.style.transform = `translateX(${Math.max(translateX,     -maxTranslateX)}px)`;
+    }
+
+    function updateArrows() {
+      document.getElementById('prev-btn').disabled = currentSlide === 0;
+      document.getElementById('next-btn').disabled = currentSlide >=    totalSlides - slidesInView;
     }
 
     function prevSlide() {
       if (currentSlide > 0) {
         currentSlide--;
         updateCarousel();
+        updateArrows();
       }
     }
 
     function nextSlide() {
-      if (currentSlide < totalSlides - 1) {
+      if (currentSlide < totalSlides - slidesInView) {
         currentSlide++;
         updateCarousel();
+        updateArrows();
       }
     }
 
     window.addEventListener('resize', updateCarousel);
-    document.addEventListener('DOMContentLoaded', updateCarousel);
+    document.addEventListener('DOMContentLoaded', function() {
+      updateCarousel();
+      updateArrows();
+    });
+
+
   </script>
 </body>
 </html>
