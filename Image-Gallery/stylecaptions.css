@@ -1,20 +1,27 @@
-/* contribution-namefeature enhancement GSSOC */
-
-
 .image-container {
-    display: inline-block; 
-    position: relative;
-    text-align: center; 
-    font-weight: bolder;
-    
-    margin: 20px;
-  }
-  
-  figcaption {
-    display: block; 
-    margin-top: 8px; 
-    margin-bottom: 20px;
-  }
-  
+  display: inline-block; 
+  position: relative;
+  text-align: center; 
+  font-weight: bolder;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #6a0dad, #2f73d9); /* Purple to dark blue gradient */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a 3D effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
- 
+/* Add a subtle hover effect to the image container */
+.image-container:hover {
+  transform: translateY(-5px); /* Lifts the image container on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhances shadow on hover */
+}
+
+figcaption {
+  display: block; 
+  margin-top: 8px; 
+  margin-bottom: 20px;
+  color: #ffffff; /* White text for contrast against the dark theme */
+  font-size: 16px; /* Adjust the font size for better readability */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Add a subtle text shadow for depth */
+}

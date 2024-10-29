@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
     <style>
         :root {
             --primary-color: #d6eaf7;
@@ -406,37 +407,58 @@
     </video>
     <div class="video-overlay"></div>
     <header>
-        <nav>
-            <div class="container">
-                <a href="#" class="nav__logo">
-                    <img src="logo.png" alt="Logo" class="sitelogo" />
-                    Trip & Hotel Packages
-                </a>
-                <div class="navigationbar_package">
-                    <ul>
-                        <li class="link"><a href="#">Home</a></li>
-                        <li class="link"><a href="#">About Us</a></li>
-                        <li class="link dropdown">
-                            <a href="#">Packages</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Package 1</a></li>
-                                <li><a href="#">Package 2</a></li>
-                                <li><a href="#">Package 3</a></li>
-                            </ul>
-                        </li>
-                        <li class="link"><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="toggle-container">
-                    <button id="themeToggle" class="btn">Toggle Theme</button>
-                </div>
-                <div class="hamburger">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
+        <div class="nav-container" id="top">
+            <nav class="newNav">
+              <div style="display: flex; flex-direction: row; align-items: center;">
+              <img src="/favicon.ico" class="sitelogo">
+              
+              <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
             </div>
-        </nav>
+      
+              <ul class="navLinks">
+                <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
+                <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
+                <li class="link" data-aos=""><a href="#Home">Home</a></li>
+                <li class="link" data-aos=""><a href="./about.html">About</a></li>
+                <li class="link dropdown" data-aos="">
+                    <a href="#Services" class="dropdown">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#Destinations">Destination</a></li>
+                        <li><a href="#trip">Prices</a></li>
+                        <li><a href="#ReviewGallery">Trip Gallery</a></li>
+                        <li><a href="#tourist">Tourist Guide</a></li>
+                        <li><a href="#hotel">Hotel & Resort</a></li>
+                    </ul>
+                </li>
+                <li class="link" data-aos=""><a href="./topdeals/topdeals.html">Top Deals</a></li>
+                <li class="link" data-aos=""><a href="./packages.html">Packages</a></li>
+                <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
+                <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+                <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
+            </ul>
+      
+              <a href="newLogin.html" class="contact-btn" id="nav-login-btn"><button class="btn login" id="btn-style"
+                  data-aos="fade-down">Login/SignUp</button></a>
+              <a href="mapa.html" class="contact-btn" id="nav-view-btn"><button class="btn" id="btn-style" style="margin: 0;"
+                  data-aos="fade-down">view <map name=""></map></button></a>
+      
+              <a href="loginPage.html" class="contact-btn"><button class="btn" id="logout-btn"
+                  style="margin: 0; display: none;" data-aos="fade-down" disabled>Log Out</button></a>
+      
+              <!-- <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
+                  style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a> -->
+      
+              <div class="toggle-container" data-aos="fade-down">
+                <input id="themeToggle" class="toggle" type="checkbox">
+              </div>
+              <div class="hamburger" data-aos="fade-down">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+            </nav>
+          </div>
+    
     </header>
     <main class="main-content">
         <section class="hotel-packages">
