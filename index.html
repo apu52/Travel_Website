@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,8 +42,8 @@
   <title>Tourguide</title>
   <!-- adding a fav-icon -->
 
-   <img src="Untitled (1).mp4" alt="">
-  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <img src="Untitled (1).mp4" alt="">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
   <link rel="stylesheet" href="tilt.css">
   <script src="tilt.js"></script>
@@ -84,19 +83,22 @@
       scroll-behavior: smooth;
       font-family: "Afacad Flux", sans-serif;
       font-optical-sizing: auto;
-      font-weight:100;
+      font-weight: 100;
       font-style: normal;
       font-variation-settings: "slnt" 0;
       width: 100vw;
+
     }
-  </style> 
+  </style>
   <style>
-    .goupbtn{
+    .goupbtn {
       z-index: 10;
     }
+
     .active {
       color: red !important;
     }
+
     @media screen and (max-width:390px) {
       .nav__logo {
         position: relative;
@@ -201,232 +203,243 @@
       pointer-events: none;
       z-index: 9999;
     }
- 
+
     /* cookie-consent */
     #cookie-consent {
-  position: fixed;
-  bottom: 10px;
-  left: 70px;
-  background-color: #e3e4fc;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 300px;
-  height: fit-content;
-  z-index: 10000;
-  border-radius: 10px;
-  margin-bottom: 5px;
-  margin: 20px;
-  border-right: 4px solid transparent;
-  border-bottom: 4px solid transparent;
-  transition: border-color 0.3s;
-  border: 1px solid rgb(4, 4, 215);
-  border-bottom: #3950ac;
-}
+      position: fixed;
+      bottom: 10px;
+      left: 70px;
+      background-color: #e3e4fc;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 300px;
+      height: fit-content;
+      z-index: 10000;
+      border-radius: 10px;
+      margin-bottom: 5px;
+      margin: 20px;
+      border-right: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      transition: border-color 0.3s;
+      border: 1px solid rgb(4, 4, 215);
+      border-bottom: #3950ac;
+    }
 
-#cookie-consent:hover {
-  border-right:6px solid #0207a3;
-  border-bottom:6px solid #3202a3;
-}
+    #cookie-consent:hover {
+      border-right: 6px solid #0207a3;
+      border-bottom: 6px solid #3202a3;
+    }
 
-#cookie-consent p {
-  color: black;  /* Make the text black for better visibility */
-  text-align: center;  /* Center align the text */
-}
+    #cookie-consent p {
+      color: black;
+      /* Make the text black for better visibility */
+      text-align: center;
+      /* Center align the text */
+    }
 
-.accept-cookies,
-.reject-cookies {
-  width: 260px;  /* Decrease the button width */
-  height: 35px;  /* Decrease the button height */
-  color: white;
-  background-color: #150267;
-  border: none;
-  border-radius: 5px;  /* Add rounded corners */
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;  /* Smooth transition for effects */
-}
+    .accept-cookies,
+    .reject-cookies {
+      width: 260px;
+      /* Decrease the button width */
+      height: 35px;
+      /* Decrease the button height */
+      color: white;
+      background-color: #150267;
+      border: none;
+      border-radius: 5px;
+      /* Add rounded corners */
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+      /* Smooth transition for effects */
+    }
 
-.reject-cookies {
-  margin-top: 10px;
-}
+    .reject-cookies {
+      margin-top: 10px;
+    }
 
-.accept-cookies:hover,
-.reject-cookies:hover {
-  transform: scale(0.95);
-  box-shadow: 0 0 15px rgb(75, 215, 239,0.6);  /* Reduce the shadow size */
-}
+    .accept-cookies:hover,
+    .reject-cookies:hover {
+      transform: scale(0.95);
+      box-shadow: 0 0 15px rgb(75, 215, 239, 0.6);
+      /* Reduce the shadow size */
+    }
 
-.accept-cookies:hover {
-  background-color: rgb(57, 159, 222);
-  color: #0d0b0b;
-  border: 1px solid rgb(2, 2, 53);
-}
+    .accept-cookies:hover {
+      background-color: rgb(57, 159, 222);
+      color: #0d0b0b;
+      border: 1px solid rgb(2, 2, 53);
+    }
 
-.reject-cookies:hover {
-  background-color: rgb(57, 159, 222);
-  color: #0d0b0b;
-  border: 1px solid rgb(2, 2, 53);
-}
+    .reject-cookies:hover {
+      background-color: rgb(57, 159, 222);
+      color: #0d0b0b;
+      border: 1px solid rgb(2, 2, 53);
+    }
 
-#learn-more-link,
-#show-less-link {
-  color: #f90814;  
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 16px;
-}
-.header__image{
-  margin-right: 15rem;
-}
+    #learn-more-link,
+    #show-less-link {
+      color: #f90814;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
 
-#cookie-content {
-  display: none;
-  margin-top: 10px;
-} 
+    .header__image {
+      margin-right: 15rem;
+    }
 
-
-@media (max-width: 725px) {
-  .circle-container{
-    display: none;
-  }
-  .header__image{
-    margin-right: 1rem;
-  }
-}
-/* testimonials */
-  .card1 {
-  width: 330px;
-  height: 450px;
-  transition: opacity 0.5s ease;
-}
-
-.card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transform-style: preserve-3d;
-  transition: transform 0.8s;
-}
-
-.card1:hover .card-inner {
-  transform: rotateY(180deg);
-}
-
-.card-front,
-.card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-.card-back {
-  transform: rotateY(180deg);
-  background-color: rgb(228, 224, 238);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: black;
-}
-
-.card-img-top {
-  height: 300px;
-  width: 100%;
-  object-fit: cover;
-}
+    #cookie-content {
+      display: none;
+      margin-top: 10px;
+    }
 
 
-@media (max-width: 995px) {
-  .row1 {
-    flex-direction: column;
-    align-items: center;
-  }
+    @media (max-width: 725px) {
+      .circle-container {
+        display: none;
+      }
 
-  .card1 {
-    width: 80%;
-    margin-bottom: 20px;
-  }
-}
+      .header__image {
+        margin-right: 1rem;
+      }
+    }
 
+    /* testimonials */
+    .card1 {
+      width: 330px;
+      height: 450px;
+      transition: opacity 0.5s ease;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transform-style: preserve-3d;
+      transition: transform 0.8s;
+    }
+
+    .card1:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+      background-color: rgb(228, 224, 238);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: black;
+    }
+
+    .card-img-top {
+      height: 300px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+
+    @media (max-width: 995px) {
+      .row1 {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card1 {
+        width: 80%;
+        margin-bottom: 20px;
+      }
+    }
   </style>
   <style>
     #progress-container {
-    position: fixed ;
-    top: 0px;
-    left: 0;
-    width: 100%;
-    height: 15px;
-    z-index: 99990;
-    /* background: #f3f3f3; */
-}
+      position: fixed;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      height: 15px;
+      z-index: 99990;
+      /* background: #f3f3f3; */
+    }
 
-#progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 7px;
-    width: 0;
-    background: linear-gradient(90deg, rgb(0, 72, 255) 0%, rgb(153, 187, 255) 50%, rgb(0, 184, 250) 100%);
-    box-shadow: 0 0 4px rgba(0, 166, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.7);
-    transition: width 0.09s ease-in-out;
-    border-radius: 10px;
-}
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 7px;
+      width: 0;
+      background: linear-gradient(90deg, rgb(0, 72, 255) 0%, rgb(153, 187, 255) 50%, rgb(0, 184, 250) 100%);
+      box-shadow: 0 0 4px rgba(0, 166, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.7);
+      transition: width 0.09s ease-in-out;
+      border-radius: 10px;
+    }
 
-/* tour guide section */
-.center-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
+    /* tour guide section */
+    .center-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
 
-.image-container {
-  margin-top: 80px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  overflow: hidden; 
-  width: 1200px; 
-  height: 400px; 
-}
+    .image-container {
+      margin-top: 80px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      overflow: hidden;
+      width: 1200px;
+      height: 400px;
+    }
 
-.carousel-images {
-  display: flex;
-  transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
-  gap: 10px;
-}
+    .carousel-images {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      /* Smooth transition for sliding */
+      gap: 10px;
+    }
 
-.carousell-item {
-  min-width: 50%; 
-  max-width: 50%;
-  height: 450px; 
-  
-}
+    .carousell-item {
+      min-width: 50%;
+      max-width: 50%;
+      height: 450px;
 
-.prev, .next {
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  cursor: pointer;
-  padding: 10px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-}
+    }
 
-.prev {
-  left: 0;
-}
+    .prev,
+    .next {
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      cursor: pointer;
+      padding: 10px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
 
-.next {
-  right: 0;
-}
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
   </style>
 
   <link rel="stylesheet" href="imstyle.css">
@@ -512,13 +525,13 @@
 
     </script>
 
-  <!-- sticky animation  -->
- <script type="text/javascript">
-  window.addEventListener("scroll", function () {
-    var header = document.querySelector("nav");
-    header.classList.toggle("sticky", window.scrollY > 50)
-  })
-</script>
+    <!-- sticky animation  -->
+    <script type="text/javascript">
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("nav");
+        header.classList.toggle("sticky", window.scrollY > 50)
+      })
+    </script>
 
     <div id="pre-loader">
       <h1>TourGuide . . .</h1>
@@ -529,220 +542,328 @@
       <canvas></canvas>
     </div>
     <nav class="newNav">
-        <div style="display: flex; align-items: center;">
-            <img src="/favicon.ico" class="sitelogo">
-            <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
-        </div>
+      <div style="display: flex; align-items: center;">
+        <img src="/favicon.ico" class="sitelogo">
+        <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+      </div>
 
-        <ul class="navLinks">
-            <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
-            <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
-            <li class="link" data-aos=""><a href="#Home">Home</a></li>
-            <li class="link" data-aos=""><a href="./about.html">About</a></li>
-            <li class="link dropdown" data-aos="">
-                <a href="#Services" class="dropdown">Services</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#Destinations" style="color: #000;">Destination</a></li>
-                    <li><a href="#trip" style="color: #000;">Prices</a></li>
-                    <li><a href="#ReviewGallery" style="color: #000;">Trip Gallery</a></li>
-                    <li><a href="#tourist" style="color: #000;">Tourist Guide</a></li>
-                    <li><a href="#hotel" style="color: #000;">Hotel & Resort</a></li>
-                </ul>
-            </li>
-            <li class="link" data-aos=""><a href="./topdeals/topdeals.html">Top Deals</a></li>
-            <li class="link" data-aos=""><a href="./packages.html">Packages</a></li>
-            <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
-            <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
-            <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
-        </ul>
+      <ul class="navLinks">
+        <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
+        <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
+        <li class="link" data-aos=""><a href="#Home">Home</a></li>
+        <li class="link" data-aos=""><a href="./about.html">About</a></li>
+        <li class="link dropdown" data-aos="">
+          <a href="#Services" class="dropdown">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="#Destinations">Destination</a></li>
+            <li><a href="#trip">Prices</a></li>
+            <li><a href="#ReviewGallery">Trip Gallery</a></li>
+            <li><a href="#tourist">Tourist Guide</a></li>
+            <li><a href="#hotel">Hotel & Resort</a></li>
+          </ul>
+        </li>
+        <li class="link" data-aos=""><a href="./topdeals/topdeals.html">Top Deals</a></li>
+        <li class="link" data-aos=""><a href="./packages.html">Packages</a></li>
+        <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
+        <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+        <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
+      </ul>
 
-        <div class="contact-btns">
-            <a href="newLogin.html" class="contact-btn" id="nav-login-btn">
-                <button class="btn login" id="btn-style" data-aos="fade-down">Login/<br>SignUp</button>
-            </a>
-            <a href="mapa.html" class="contact-btn" id="nav-view-btn">
-                <button class="btn" id="btn-style" style="margin: 0;" data-aos="fade-down">View <map name=""></map></button>
-            </a>
-            <a href="loginPage.html" class="contact-btn">
-                <button class="btn" id="logout-btn" style="margin: 0; display: none;" data-aos="fade-down" disabled>Log Out</button>
-            </a>
-        </div>
+      <div class="contact-btns">
+        <a href="newLogin.html" class="contact-btn" id="nav-login-btn">
+          <button class="btn login" id="btn-style" data-aos="fade-down">Login/<br>SignUp</button>
+        </a>
+        <a href="mapa.html" class="contact-btn" id="nav-view-btn">
+          <button class="btn" id="btn-style" style="margin: 0;" data-aos="fade-down">View <map name=""></map></button>
+        </a>
+        <a href="loginPage.html" class="contact-btn">
+          <button class="btn" id="logout-btn" style="margin: 0; display: none;" data-aos="fade-down" disabled>Log
+            Out</button>
+        </a>
+      </div>
 
-        <div class="toggle-container" data-aos="fade-down" style="margin-right: 28px;">
-            <input id="themeToggle" class="toggle" type="checkbox">
-        </div>
+      <div class="toggle-container" data-aos="fade-down" style="margin-right: 28px;">
+        <input id="themeToggle" class="toggle" type="checkbox">
+      </div>
 
-        <div class="hamburger" id="hamburger" data-aos="fade-down">
-            <div class="line" style="margin-bottom: 5px;"></div>
-            <div class="line" style="margin-bottom: 5px;"></div>
-            <div class="line" style="margin-bottom: 5px;"></div>
-            <div class="line" style="margin-bottom: 5px;"></div>
-        </div>
+      <div class="hamburger" id="hamburger" data-aos="fade-down">
+        <div class="line" style="margin-bottom: 5px;"></div>
+        <div class="line" style="margin-bottom: 5px;"></div>
+        <div class="line" style="margin-bottom: 5px;"></div>
+        <div class="line" style="margin-bottom: 5px;"></div>
+      </div>
     </nav>
 
-<style>
-  /* General Styles for the Navigation */
-.nav-container {
-    background-color: #ffffff; /* Background color */
-    padding: 5px 20px; /* Reduced padding for smaller height */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    <style>
+      /* General Styles for the Navigation */
+      .nav-container {
+        background-color: #ffffff;
+        /* Background color */
+        padding: 5px 20px;
+        /* Reduced padding for smaller height */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-.newNav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
+      .newNav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
 
-.sitelogo {
-    height: 35px; /* Slightly smaller logo */
-    width: 35px;
-    margin-right: 10px; /* Reduced space between logo and title */
-}
+      .sitelogo {
+        height: 35px;
+        /* Slightly smaller logo */
+        width: 35px;
+        margin-right: 10px;
+        /* Reduced space between logo and title */
+      }
 
-.nav__logo {
-    font-size: 28px; /* Adjust font size */
-    color: #ece6e6; /* Logo color */
-    text-decoration: none; /* Remove underline */
-}
+      .nav__logo {
+        font-size: 28px;
+        /* Adjust font size */
+        color: #ece6e6;
+        /* Logo color */
+        text-decoration: none;
+        /* Remove underline */
+      }
 
-.navLinks {
-    list-style: none; /* Remove bullet points */
-    display: flex; /* Display items in a row */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-}
-.navLinks.active {
-    display: flex; /* Show links when the 'active' class is applied */
-}
+      .navLinks {
+        list-style: none;
+        /* Remove bullet points */
+        display: flex;
+        /* Display items in a row */
+        margin: 0;
+        /* Remove default margin */
+        padding: 0;
+        /* Remove default padding */
+      }
+
+      .navLinks.active {
+        display: flex;
+        /* Show links when the 'active' class is applied */
+      }
 
 
-.link {
-    margin: 0 10px; /* Reduced space between links */
-}
+      .link {
+        margin: 0 10px;
+        /* Reduced space between links */
+      }
 
-.link a {
-    font-size: 18px; /* Increased font size */
-    text-decoration: none; /* Remove underline */
-    color: #d8d4d4; /* Link color */
-    transition: color 0.3s ease; /* Smooth color transition */
-}
+      .link a {
+        font-size: 18px;
+        /* Increased font size */
+        text-decoration: none;
+        /* Remove underline */
+        color: #d8d4d4;
+        /* Link color */
+        transition: color 0.3s ease;
+        /* Smooth color transition */
+      }
 
-.link a:hover {
-    color: #007BFF; /* Change color on hover */
-}
+      .link a:hover {
+        color: #007BFF;
+        /* Change color on hover */
+      }
 
-.dropdown-menu {
-    display: none; /* Hide dropdown initially */
-    position: absolute; /* Position dropdown below the parent */
-    background-color: #fff; /* Dropdown background */
-    border: 1px solid #ccc; /* Border for dropdown */
-    z-index: 1000; /* Ensure dropdown appears above other content */
-}
+      .dropdown-menu {
+        display: none;
+        /* Hide dropdown initially */
+        position: absolute;
+        /* Position dropdown below the parent */
+        background-color: #fff;
+        /* Dropdown background */
+        border: 1px solid #ccc;
+        /* Border for dropdown */
+        z-index: 1000;
+        /* Ensure dropdown appears above other content */
+      }
+      .dropdown-menu a{
+        color: black;
+      }
 
-.dropdown:hover .dropdown-menu {
-    display: block; /* Show dropdown on hover */
-}
+      .dropdown:hover .dropdown-menu {
+        display: block;
+        /* Show dropdown on hover */
+      }
 
-.contact-btns {
-    display: flex; /* Align buttons side by side */
-    align-items: center;
-    gap: 10px; /* Small gap between the buttons */
-}
+      .contact-btns {
+        display: flex;
+        /* Align buttons side by side */
+        align-items: center;
+        gap: 10px;
+        /* Small gap between the buttons */
+      }
 
-.contact-btn {
-    margin: 0; /* Remove extra space between buttons */
-}
+      .contact-btn {
+        margin: 0;
+        /* Remove extra space between buttons */
+      }
 
-.btn {
-    padding: 8px 12px; /* Adjusted padding for smaller height */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-}
+      .btn {
+        padding: 8px 12px;
+        /* Adjusted padding for smaller height */
+        border: none;
+        /* Remove border */
+        border-radius: 5px;
+        /* Rounded corners */
+        cursor: pointer;
+        /* Pointer cursor on hover */
+      }
 
-/* Hamburger Menu Styles */
-.hamburger {
-    display: none; /* Hide on larger screens */
-}
+      /* Hamburger Menu Styles */
+      .hamburger {
+        display: none;
+        /* Hide on larger screens */
+      }
 
-/* Toggle Theme Container */
-.toggle-container {
-    display: flex;
-    align-items: center; /* Center vertically */
-}
+      /* Toggle Theme Container */
+      .toggle-container {
+        display: flex;
+        align-items: center;
+        /* Center vertically */
+      }
 
-/* Responsive Styles */
-@media (max-width: 1168px) {
-  .hamburger {
-                display: block; /* Show hamburger on small screens */
-            }
-
-  .navLinks {
-                display: none; /* Hide nav links on small screens */
-                flex-direction: column; /* Stack links vertically */
-                position: absolute; /* Position over content */
-                top: 60px; /* Adjusted position below navbar */
-                left: 0;
-                background-color: #ffffff; /* Background color */
-                width: 100%; /* Full width */
-                z-index: 1000; /* Stack above other content */
-                padding: 10px 0; /* Padding for spacing */
-            }
-
-            .navLinks.active {
-                display: flex; /* Show links when active */
-                padding: 10px; /* Padding around links */
-            }
-
-            .link {
-                margin: 10px 0; /* Space between links */
-                text-align: center; /* Center align links */
-            }
-
-            .dropdown {
-                position: center; /* Position for dropdown menu */
-            }
+      /* Responsive Styles */
+      @media (max-width: 1168px) {
+        .hamburger {
+          display: block;
+          /* Show hamburger on small screens */
         }
 
-</style>
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.querySelector('.navLinks');
-  const dropdownToggles = document.querySelectorAll('.dropdown');
+        .navLinks {
+          display: none;
+          /* Hide nav links on small screens */
+          flex-direction: column;
+          /* Stack links vertically */
+          position: absolute;
+          /* Position over content */
+          top: 60px;
+          /* Adjusted position below navbar */
+          left: 0;
+          background-color: #ffffff;
+          /* Background color */
+          width: 100%;
+          /* Full width */
+          z-index: 1000;
+          /* Stack above other content */
+          padding: 10px 0;
+          /* Padding for spacing */
+        }
 
-  hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active'); // Toggles the 'active' class
-  });
-</script>
+        .navLinks.active {
+          display: flex;
+          /* Show links when active */
+          padding: 10px;
+          /* Padding around links */
+        }
+
+        .link {
+          margin: 10px 0;
+          /* Space between links */
+          text-align: center;
+          /* Center align links */
+        }
+
+        .dropdown-menu {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: static;
+          /* Keeps it positioned in-line with other elements */
+          background-color: #000;
+          /* Dark background for better contrast */
+          color: #ffffff;
+          /* White text color */
+          padding: 10px 0;
+          width: 100%;
+          /* Full width to match the navbar on small screens */
+        }
+
+        .dropdown-menu a {
+          color: #ffffff;
+          /* Ensure text color is white */
+          padding: 8px 0;
+          /* Padding for each dropdown item */
+          text-align: center;
+          width: 100%;
+          transition: color 0.3s ease;
+        }
+
+        .dropdown-menu a:hover {
+          color: #007BFF;
+          /* Highlight color on hover */
+        }
+
+        /* Initially hide the dropdown menu */
+        .dropdown-menu {
+          display: none;
+        }
+
+        /* Show the dropdown menu when 'active' class is applied */
+        .dropdown-menu.active {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: white;
+          /* Dark background for contrast */
+          padding: 10px 0;
+          width: 100%;
+        }
+
+        .dropdown-menu a {
+
+          color: #ffffff;
+          /* White text color */
+          padding: 8px 0;
+          text-align: center;
+          width: 100%;
+          transition: color 0.3s ease;
+        }
+
+        .dropdown-menu a:hover {
+          color: #007BFF;
+          /* Hover color */
+        }
+
+      }
+    </style>
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.querySelector('.navLinks');
+      const dropdownToggles = document.querySelectorAll('.dropdown');
+
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active'); // Toggles the 'active' class
+      });
+    </script>
 
     <header>
       <div class="nav-wrapperr">
         <div id="progress-container">
           <div id="progress-bar"></div>
         </div>
-    
+
         <script>
-        window.addEventListener('scroll', function() {
-    // Get the current scroll position
-    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
-    
-    // Get the total scrollable height
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    
-    // Calculate the percentage scrolled
-    const scrolled = (winScroll / height) * 100;
-    
-    // Set the progress bar width
-    document.getElementById('progress-bar').style.width = scrolled + '%';
-});
+          window.addEventListener('scroll', function () {
+            // Get the current scroll position
+            const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+            // Get the total scrollable height
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+            // Calculate the percentage scrolled
+            const scrolled = (winScroll / height) * 100;
+
+            // Set the progress bar width
+            document.getElementById('progress-bar').style.width = scrolled + '%';
+          });
 
         </script>
       </div>
-      
+
       <section class="section__container header__container" id="Home">
         <div class="header__image" data-aos="fade-down-right">
           <img src="https://i.ibb.co/88Qnjxg/pexels-josh-hild-2422259.jpg" alt="header" />
@@ -762,9 +883,10 @@
               <a href="membership.html"><button class="btn" data-aos="fade-in"
                   style="box-shadow: 2px 2px 8px red;">Membership</button></a>
 
-              <a href="plantrip.html"><button class="btn" data-aos="fade-in" style="box-shadow: 2px 2px 8px red;">Plan a Trip</button></a>
-              <a href="./payment.html"><button class="btn" data-aos="fade-in" 
-                  style="box-shadow: 2px 2px 8px red;">Book Now</button></a>
+              <a href="plantrip.html"><button class="btn" data-aos="fade-in" style="box-shadow: 2px 2px 8px red;">Plan a
+                  Trip</button></a>
+              <a href="./payment.html"><button class="btn" data-aos="fade-in" style="box-shadow: 2px 2px 8px red;">Book
+                  Now</button></a>
             </div>
 
 
@@ -778,7 +900,7 @@
                   <span><i class="ri-play-fill"></i></span>
                 </a>
               </div>
-               
+
             </div>
             <br>
             <span data-aos="fade-in" style="color: #5755b6; font-weight: 600;">Watch our story</span>
@@ -795,7 +917,8 @@
           <!-- Left background color column -->
           <div class="col-8 bg primary"></div>
           <!-- Right content container -->
-          <div class="section__container gallary__container relative z-10 max-w-screen-xl px-4 mx-auto text-center pb-14">
+          <div
+            class="section__container gallary__container relative z-10 max-w-screen-xl px-4 mx-auto text-center pb-14">
             <div class="aboutcon">
               <div class="col-span-2 mx-auto lg:mx-0 lg:text-left">
                 <h1 class="headingofAbout section__title" data-aos="fade-in"><b>About Us</b></h1>
@@ -808,12 +931,14 @@
                       transform: scale(1.05);
                       transition: transform 0.5s ease;
                     }
+
                     .video-container {
                       display: flex;
                       align-items: center;
                       justify-content: center;
                       height: 30vh;
                     }
+
                     iframe {
                       width: 100%;
                       height: 100%;
@@ -825,10 +950,13 @@
                   </style>
                   <br>
                   <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/veULUjsSrPg?si=eq3sDAt3-yZnZUme" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/veULUjsSrPg?si=eq3sDAt3-yZnZUme"
+                      allowfullscreen></iframe>
                   </div>
                   <p class="aboutcontent" data-aos="fade-in" style="text-align: justify;">
-                    Welcome to TourGuide, your trusted companion in discovering the wonders of the world. We provide unparalleled assistance, offering curated itineraries, local guides, and unforgettable experiences tailored just for you. Join our growing community and let your journey become a story worth sharing!
+                    Welcome to TourGuide, your trusted companion in discovering the wonders of the world. We provide
+                    unparalleled assistance, offering curated itineraries, local guides, and unforgettable experiences
+                    tailored just for you. Join our growing community and let your journey become a story worth sharing!
                   </p>
                 </article>
               </div>
@@ -837,7 +965,7 @@
         </div>
       </div>
     </section>
-    
+
 
 
     </div>
@@ -1008,7 +1136,7 @@
       </div>
     </div>
 
-<!--  <section class="section__container destination__container" id="Destinations" data-aos="fade-up">
+    <!--  <section class="section__container destination__container" id="Destinations" data-aos="fade-up">
       <div class="section__header">
         <div>
           <h2 class="section__title" data-aos="fade-in"><span style="margin-left: 300px;"></span>Explore top
@@ -1124,8 +1252,10 @@
             <img src="./img/eiffelTower2.webp" class="card-img" alt="Eiffel Tower">
             <div class="card-body">
               <h1 class="card-title">Eiffel Tower</h1>
-              <p class="card-info">The Eiffel Tower is an iconic iron lattice tower in Paris, built for the 1889 World's Fair, standing at 324 meters tall.</p>
-              <button class="card-btn" onclick="window.open('./dedicated-destinations/Paris/start.html', '_blank')">Book Tour</button>
+              <p class="card-info">The Eiffel Tower is an iconic iron lattice tower in Paris, built for the 1889 World's
+                Fair, standing at 324 meters tall.</p>
+              <button class="card-btn" onclick="window.open('./dedicated-destinations/Paris/start.html', '_blank')">Book
+                Tour</button>
             </div>
           </div>
 
@@ -1133,8 +1263,10 @@
             <img src="./img/giantWheel.webp" class="card-img" alt="The London Eye">
             <div class="card-body">
               <h1 class="card-title">The London Eye</h1>
-              <p class="card-info">The London Eye, a striking 135-meter tall observation wheel on the South Bank of the Thames, offers panoramic views of the city's landmarks.</p>
-                <button class="card-btn" onclick="window.open('./dedicated-destinations/London/start.html', '_blank')">Book Tour</button>
+              <p class="card-info">The London Eye, a striking 135-meter tall observation wheel on the South Bank of the
+                Thames, offers panoramic views of the city's landmarks.</p>
+              <button class="card-btn"
+                onclick="window.open('./dedicated-destinations/London/start.html', '_blank')">Book Tour</button>
             </div>
           </div>
 
@@ -1142,8 +1274,10 @@
             <img src="./img/maldives.jpg" class="card-img" alt="Male Beach">
             <div class="card-body">
               <h1 class="card-title">Male Beach</h1>
-              <p class="card-info">Male Beach, the pristine stretch of golden sand on Malé Atoll, offers a serene escape with crystal-clear waters and vibrant marine life.</p>
-              <button class="card-btn" onclick="window.open('./dedicated-destinations/Maldives/start.html', '_blank')">Book Tour</button>
+              <p class="card-info">Male Beach, the pristine stretch of golden sand on Malé Atoll, offers a serene escape
+                with crystal-clear waters and vibrant marine life.</p>
+              <button class="card-btn"
+                onclick="window.open('./dedicated-destinations/Maldives/start.html', '_blank')">Book Tour</button>
             </div>
           </div>
 
@@ -1151,8 +1285,10 @@
             <img src="./img/MuseumofFuture.jpg" class="card-img" alt="Museum of the Future">
             <div class="card-body">
               <h1 class="card-title">Museum of the Future</h1>
-              <p class="card-info">The Museum of the Future in Dubai is a visionary architectural gem that explores cutting-edge innovations and the potential of tomorrow's technology.</p>
-              <button class="card-btn" onclick="window.open('./dedicated-destinations/Dubai/start.html', '_blank')">Book Tour</button>
+              <p class="card-info">The Museum of the Future in Dubai is a visionary architectural gem that explores
+                cutting-edge innovations and the potential of tomorrow's technology.</p>
+              <button class="card-btn" onclick="window.open('./dedicated-destinations/Dubai/start.html', '_blank')">Book
+                Tour</button>
             </div>
           </div>
 
@@ -1160,8 +1296,10 @@
             <img src="./img/TajMahal.jpg" class="card-img" alt="Taj Mahal">
             <div class="card-body">
               <h1 class="card-title">Taj Mahal</h1>
-              <p class="card-info">The Taj Mahal, a majestic white marble mausoleum in Agra, is a timeless symbol of love and architectural brilliance.</p>
-           <button class="card-btn" onclick="window.open('./dedicated destinations/Taj_Mahal/Taj.html', '_blank')">Book Tour</button>
+              <p class="card-info">The Taj Mahal, a majestic white marble mausoleum in Agra, is a timeless symbol of
+                love and architectural brilliance.</p>
+              <button class="card-btn"
+                onclick="window.open('./dedicated destinations/Taj_Mahal/Taj.html', '_blank')">Book Tour</button>
             </div>
           </div>
 
@@ -1169,8 +1307,10 @@
             <img src="./img/lehLadakh.jpg" class="card-img" alt="Leh Ladakh">
             <div class="card-body">
               <h1 class="card-title">Leh Ladakh</h1>
-              <p class="card-info">Leh Ladakh, a breathtaking high-altitude region in northern India, captivates with its rugged landscapes, serene monasteries, and vibrant cultural heritage.</p>
-              <button class="card-btn" onclick="window.open('./dedicated destinations/Ladakh/ladakh.html', '_blank')">Book Tour</button>
+              <p class="card-info">Leh Ladakh, a breathtaking high-altitude region in northern India, captivates with
+                its rugged landscapes, serene monasteries, and vibrant cultural heritage.</p>
+              <button class="card-btn"
+                onclick="window.open('./dedicated destinations/Ladakh/ladakh.html', '_blank')">Book Tour</button>
             </div>
           </div>
 
@@ -1178,321 +1318,328 @@
             <img src="./img/TimesSquare.jpg" class="card-img" alt="Times Square">
             <div class="card-body">
               <h1 class="card-title">Times Square</h1>
-              <p class="card-info">Times Square is a vibrant commercial and entertainment hub in New York City, renowned for its bright lights, Broadway theaters, and bustling atmosphere.</p>
-              <button class="card-btn" onclick="window.open('./dedicated-destinations/new-york/start.html', '_blank')">Book Tour</button>
+              <p class="card-info">Times Square is a vibrant commercial and entertainment hub in New York City, renowned
+                for its bright lights, Broadway theaters, and bustling atmosphere.</p>
+              <button class="card-btn"
+                onclick="window.open('./dedicated-destinations/new-york/start.html', '_blank')">Book Tour</button>
             </div>
           </div>
         </div>
         <button class="swiper-button-prev"></button>
-        <button class="swiper-button-next"></button>  
+        <button class="swiper-button-next"></button>
       </div>
 
       <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
       <script src="explore.js"></script>
-    </section>
-  <!-- End Destination Section -->
+      </section>
+      <!-- End Destination Section -->
 
-    <section class="trip" id="trip" data-aos="zoom-in" data-aos-offset="100">
-      <div class="section__container trip__container">
-        <h2 class="section__title">Best trip packages</h2>
-        <p class="section__subtitle" style="margin-left: 280px;">
-          Top trip deals curated for you. Get the best package for your adventure and save more.
-        </p>
-        <div class="trip__grid">
-          <div class="trip__card cardd tilt-effect">
-            <img src="https://i.ibb.co/60nvYwQ/Screenshot-2023-07-14-173347.png" alt="trip" height="250" width="45" />
-            <div class="trip__details">
-              <p>Santorini, Aegean Sea</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $300</div>
-                <a href="./dedicated-destinations/santorini-aegean-sea/start.html"><button class="book__now btn-style"
-                    style="box-shadow: 2px 2px 8px red;">Book
-                    Now</button></a>
+      <section class="trip" id="trip" data-aos="zoom-in" data-aos-offset="100">
+        <div class="section__container trip__container">
+          <h2 class="section__title">Best trip packages</h2>
+          <p class="section__subtitle" style="margin-left: 280px;">
+            Top trip deals curated for you. Get the best package for your adventure and save more.
+          </p>
+          <div class="trip__grid">
+            <div class="trip__card cardd tilt-effect">
+              <img src="https://i.ibb.co/60nvYwQ/Screenshot-2023-07-14-173347.png" alt="trip" height="250" width="45" />
+              <div class="trip__details">
+                <p>Santorini, Aegean Sea</p>
+                <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+                <div class="booking__price">
+                  <div class="price"><span>From</span> $300</div>
+                  <a href="./dedicated-destinations/santorini-aegean-sea/start.html"><button class="book__now btn-style"
+                      style="box-shadow: 2px 2px 8px red;">Book
+                      Now</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="trip__card cardd tilt-effect">
+              <img src="https://i.ibb.co/h1WgH8B/Screenshot-2023-07-14-173807.png" alt="trip" height="250" width="45" />
+              <div class="trip__details">
+                <p>Machu Picchu, Peru</p>
+                <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+                <div class="booking__price">
+                  <div class="price"><span>From</span> $450</div>
+                  <a href="./dedicated-destinations/machu-picchu-peru/Machu_start.html"><button
+                      class="book__now btn-style" style="box-shadow: 2px 2px 8px red;">Book
+                      Now</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="trip__card cardd tilt-effect">
+              <img src="https://i.ibb.co/vc2W0wN/Screenshot-2023-07-14-174151.png" alt="trip" height="250" width="45" />
+              <div class="trip__details">
+                <p>Grand Canyon National Park, Arizona</p>
+                <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+                <div class="booking__price">
+                  <div class="price"><span>From</span> $400</div>
+                  <a href="./dedicated-destinations/grand-canyon-national-park-arizona/Grand_start.html"><button
+                      class="book__now btn-style" style="box-shadow: 2px 2px 8px red;">Book Now</button></a>
+                </div>
               </div>
             </div>
           </div>
-          <div class="trip__card cardd tilt-effect">
-            <img src="https://i.ibb.co/h1WgH8B/Screenshot-2023-07-14-173807.png" alt="trip" height="250" width="45" />
-            <div class="trip__details">
-              <p>Machu Picchu, Peru</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $450</div>
-                <a href="./dedicated-destinations/machu-picchu-peru/Machu_start.html"><button
-                    class="book__now btn-style" style="box-shadow: 2px 2px 8px red;">Book
-                    Now</button></a>
-              </div>
-            </div>
+          <div class="view__all">
+            <a href="./package.html"><button class="btn" id="btn-style" style="box-shadow: 2px 2px 8px red;">View
+                All</button></a>
+            <br>
+            <br>
+            <a href="trending.html"><button class="btn" id="btn-style" style="box-shadow: 2px 2px 8px red;">View
+                Trending</button></a>
           </div>
-          <div class="trip__card cardd tilt-effect">
-            <img src="https://i.ibb.co/vc2W0wN/Screenshot-2023-07-14-174151.png" alt="trip" height="250" width="45" />
-            <div class="trip__details">
-              <p>Grand Canyon National Park, Arizona</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $400</div>
-                <a href="./dedicated-destinations/grand-canyon-national-park-arizona/Grand_start.html"><button
-                    class="book__now btn-style" style="box-shadow: 2px 2px 8px red;">Book Now</button></a>
+        </div>
+      </section>
+      <div class="hero">
+        <div class="carousel">
+          <ul>
+            <li><img src="https://i.ibb.co/ZYDJ6vv/pexels-spencer-davis-4356144.jpg"></li>
+            <li><img src="https://i.ibb.co/W3HTbYG/pexels-zakaria-boumliha-2827374.jpg"></li>
+            <li><img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg"></li>
+            <li><img
+                src="https://www.shutterstock.com/image-photo/attractive-young-female-tourist-exploring-260nw-2206967581.jpg">
+            </li>
+            <li><img
+                src="https://thumbs.dreamstime.com/b/young-man-tourist-sail-long-tail-thailand-boat-ocean-sea-vacation-travel-trip-beautiful-nature-87331931.jpg">
+            </li>
+            <li><img src="https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/Feature-Akshardham-Temple.jpg">
+            </li>
+            <li><img src="https://etimg.etb2bimg.com/photo/106124800.cms"></li>
+            <li><img src="https://i.insider.com/5dcc2f02e94e860aff271137?width=700"></li>
+            <li><img
+                src="https://static01.nyt.com/images/2022/03/23/multimedia/23-virus-briefing-capitol/23-virus-briefing-capitol-articleLarge.jpg?quality=75&auto=webp&disable=upscale">
+            </li>
+            <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWh9aGHycWhRya4V6ZiJFL26LyIHheiu-EoQ&s">
+            </li>
+
+          </ul>
+        </div>
+
+
+
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+      <script src="jquery.flipster.min.js"></script>
+      <script>
+        $('.carousel').flipster({
+          style: 'carousel',
+          spacing: -0.3,
+        });
+      </script>
+      <section class="gallary" id="ReviewGallery">
+        <div class="section__container gallary__container">
+          <div class="section__container gallary__container" id="originalDiv">
+            <div class="gallary__content">
+              <div>
+                <h2 class="section__title" data-aos="zoom-in" style="text-align: center;">
+                  Our trip gallery that will inspire you
+                </h2>
+                <p class="section__subtitle" data-aos="zoom-in">
+                  Visual Stories of Adventure to Spark Your Imagination.<br>
+                  Get inspired for your next journey.
+                </p>
+                <button class="btn btn-style" id="btn-page" onclick="replaceDivs()" data-aos="zoom-in"
+                  style="box-shadow: 2px 2px 8px rgb(0, 191, 255);">View All</button>
               </div>
             </div>
           </div>
         </div>
-        <div class="view__all">
-          <a href="./package.html"><button class="btn" id="btn-style" style="box-shadow: 2px 2px 8px red;">View
-              All</button></a>
-          <br>
-          <br>
-          <a href="trending.html"><button class="btn" id="btn-style" style="box-shadow: 2px 2px 8px red;">View
-              Trending</button></a>
-        </div>
-      </div>
-    </section>
-    <div class="hero">
-      <div class="carousel">
-        <ul>
-          <li><img src="https://i.ibb.co/ZYDJ6vv/pexels-spencer-davis-4356144.jpg"></li>
-          <li><img src="https://i.ibb.co/W3HTbYG/pexels-zakaria-boumliha-2827374.jpg"></li>
-          <li><img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg"></li>
-          <li><img
-              src="https://www.shutterstock.com/image-photo/attractive-young-female-tourist-exploring-260nw-2206967581.jpg">
-          </li>
-          <li><img
-              src="https://thumbs.dreamstime.com/b/young-man-tourist-sail-long-tail-thailand-boat-ocean-sea-vacation-travel-trip-beautiful-nature-87331931.jpg">
-          </li>
-          <li><img src="https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/Feature-Akshardham-Temple.jpg">
-          </li>
-          <li><img src="https://etimg.etb2bimg.com/photo/106124800.cms"></li>
-          <li><img src="https://i.insider.com/5dcc2f02e94e860aff271137?width=700"></li>
-          <li><img
-              src="https://static01.nyt.com/images/2022/03/23/multimedia/23-virus-briefing-capitol/23-virus-briefing-capitol-articleLarge.jpg?quality=75&auto=webp&disable=upscale">
-          </li>
-          <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWh9aGHycWhRya4V6ZiJFL26LyIHheiu-EoQ&s">
-          </li>
+        <br><br>
+        <!-- New div components (hidden initially) -->
+        <div id="newDiv" style="display: none;" data-aos="zoom-in">
+          <!-- Sliding Animated Gallery -->
+          <div class="gallery-rotate-image">
+            <div class="image-container">
+              <span style="--i : 1">
+                <img src="./img/pexels-ajay-donga-2174656.jpg">
+              </span>
+              <span style="--i : 2">
+                <img src="./img/pexels-alex-azabache-3214958.jpg">
+              </span>
+              <span style="--i : 3">
+                <img src="./img/pexels-andrei-tanase-1271619.jpg">
+              </span>
+              <span style="--i : 4">
+                <img src="./img/pexels-josh-hild-2422259.jpg">
+              </span>
+              <span style="--i : 5">
+                <img src="./img/pexels-paulo-marcelo-martins-2412606.jpg">
+              </span>
+              <span style="--i : 6">
+                <img src="./img/pexels-quang-nguyen-vinh-2132126.jpg">
+              </span>
+              <span style="--i : 7">
+                <img src="./img/pexels-sam-kolder-2387871.jpg">
+              </span>
+              <span style="--i : 8">
+                <img src="./img/pexels-spencer-davis-4356144.jpg">
+              </span>
+              <span style="--i : 9">
+                <img src="./img/pexels-stijn-dijkstra-2499699.jpg">
+              </span>
+              <span style="--i : 10">
+                <img src="./img/pexels-zakaria-boumliha-2827374.jpg">
+              </span>
+            </div>
+          </div>
+          <div class="btn-container">
+            <button class="btn btn-style" id="prev">Prev</button>
+            <button class="btn btn-style" id="next">Next</button>
+          </div>
+          <br></br>
 
-        </ul>
-      </div>
 
 
 
-    </div>
+          <!-- Trip Photo Gallery -->
+          <div class="trip-gallery-container">
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="jquery.flipster.min.js"></script>
-    <script>
-      $('.carousel').flipster({
-        style: 'carousel',
-        spacing: -0.3,
-      });
-    </script>
-    <section class="gallary" id="ReviewGallery">
-      <div class="section__container gallary__container">
-        <div class="section__container gallary__container" id="originalDiv">
-          <div class="gallary__content">
-            <div>
-              <h2 class="section__title" data-aos="zoom-in" style="text-align: center;">
-                Our trip gallery that will inspire you
-              </h2>
-              <p class="section__subtitle" data-aos="zoom-in">
-                Visual Stories of Adventure to Spark Your Imagination.<br>
-                Get inspired for your next journey.
+            <figure class="image-container">
+              <img src="./img/Trip_Photos/photo1.png" height="250" width="200">
+              <p><a href="https://maps.app.goo.gl/4ULWYJxSVD8AcUin6" target="_blank">LADAKH</a></p>
+            </figure>
+            <figure class="image-container">
+              <img src="./img/Trip_Photos/photo2.png" height="250" width="200">
+              <p><a href="https://maps.app.goo.gl/zrA5UgDQoeUtRhhn7" target="_blank">RANNERDALE KNOTTS</a></p>
+            </figure>
+            <figure class="image-container">
+              <img src="./img/Trip_Photos/photo3.jpg" height="250" width="200">
+              <p><a href="https://maps.app.goo.gl/eTfvw4peKN3AcMUy8" target="_blank">AMALPHI COAST</a></p>
+            </figure>
+            <figure class="image-container">
+              <img src="./img/Trip_Photos/photo4.png" height="220" width="230">
+              <p><a href="https://maps.app.goo.gl/tBZLQcZbCHRWsgGX7" target="_blank">THE GOLDEN TEMPLE,PERIYAPATTNA</a>
               </p>
-              <button class="btn btn-style" id="btn-page" onclick="replaceDivs()" data-aos="zoom-in"
-                style="box-shadow: 2px 2px 8px rgb(0, 191, 255);">View All</button>
-            </div>
+            </figure>
+            <figure class="image-container">
+              <img src="./img/Trip_Photos/photo5.jpg" height="220" width="230">
+              <p><a href="https://maps.app.goo.gl/8Y3rnjtxU563KVvE9" target="_blank">MALSHEJ GHAT</a></p>
+            </figure>
+            <figure class="image-container">
+              <img src="./img/Trip_Photos/photo6.png" height="220" width="230">
+              <p><a href="https://maps.app.goo.gl/cj2UZZoyCTzeoQjEA" target="_blank">SAHARA DESERT</a></p>
+            </figure>
+            <figure class="image-container">
+              <img src="./img/Trip_Photos/photo7.png" height="220" width="230">
+              <p><a href="https://maps.app.goo.gl/Gk1fQts4zeVRdAWu6" target="_blank">MALDIVES</a></p>
+            </figure>
+            <figure class="image-container">
+              <img src="./img/Trip_Photos/photo8.jpg" height="220" width="230">
+              <p><a href="https://maps.app.goo.gl/DbWvrFgfwwwTWuBT8" target="_blank">PUNAKHA SUSPENSION BRIDGE</a></p>
+            </figure>
+            <figure class="image-container">
+              <img src="./img/Trip_Photos/photo9.jpg" height="220" width="230">
+              <p><a href="https://maps.app.goo.gl/gBGuxUNXXemiZ2Td8" target="_blank">ARU VALLEY</a></p>
+            </figure>
+            <figure class="image-container">
+              <img src="./img/Trip_Photos/photo10.jpg" height="220" width="230">
+              <p><a href="https://maps.app.goo.gl/tQ4BT4gDoFtauReM9" target="_blank">THE GOLDEN BRIDGE</a></p>
+            </figure>
+            <figure class="image-container">
+              <img src="./img/Trip_Photos/photo11.jpg" height="220" width="230">
+              <p><a href="https://maps.app.goo.gl/oqDnmF2pCqRxV5Cp6" target="_blank">LAKE DISTRICT</a></p>
+            </figure>
+            <figure class="image-container">
+              <img src="./img/Trip_Photos/photo13.jpg" height="220" width="230">
+              <p><a href="https://maps.app.goo.gl/pHjaA4aqP41JxdAh9" target="_blank">MUNNAR</a></p>
+            </figure>
+            <figure class="image-container">
+              <img src="./img/Trip_Photos/photo19.jpg" height="220" width="230">
+              <p><a href="https://maps.app.goo.gl/84rV6GhhginGXgbc8" target="_blank">STATUE OF LIBERTY</a></p>
+            </figure>
+            <figure class="image-container">
+              <img src="./img/Trip_Photos/photo20.png" height="220" width="230">
+              <p><a href="https://maps.app.goo.gl/GzVALHoLp4MgFmgw5" target="_blank">NAKKI LAKE</a></p>
+            </figure>
+
+            <!-- <img src="./img/Trip_Photos/photo3.jpg" height="240" width="200"> -->
+
           </div>
         </div>
-      </div>
-      <br><br>
-      <!-- New div components (hidden initially) -->
-      <div id="newDiv" style="display: none;" data-aos="zoom-in">
-        <!-- Sliding Animated Gallery -->
-        <div class="gallery-rotate-image">
-          <div class="image-container">
-            <span style="--i : 1">
-              <img src="./img/pexels-ajay-donga-2174656.jpg">
-            </span>
-            <span style="--i : 2">
-              <img src="./img/pexels-alex-azabache-3214958.jpg">
-            </span>
-            <span style="--i : 3">
-              <img src="./img/pexels-andrei-tanase-1271619.jpg">
-            </span>
-            <span style="--i : 4">
-              <img src="./img/pexels-josh-hild-2422259.jpg">
-            </span>
-            <span style="--i : 5">
-              <img src="./img/pexels-paulo-marcelo-martins-2412606.jpg">
-            </span>
-            <span style="--i : 6">
-              <img src="./img/pexels-quang-nguyen-vinh-2132126.jpg">
-            </span>
-            <span style="--i : 7">
-              <img src="./img/pexels-sam-kolder-2387871.jpg">
-            </span>
-            <span style="--i : 8">
-              <img src="./img/pexels-spencer-davis-4356144.jpg">
-            </span>
-            <span style="--i : 9">
-              <img src="./img/pexels-stijn-dijkstra-2499699.jpg">
-            </span>
-            <span style="--i : 10">
-              <img src="./img/pexels-zakaria-boumliha-2827374.jpg">
-            </span>
-          </div>
-        </div>
-        <div class="btn-container">
-          <button class="btn btn-style" id="prev">Prev</button>
-          <button class="btn btn-style" id="next">Next</button>
-        </div>
-<br></br>
- 
+      </section>
+      <script>
+        function replaceDivs() {
+          document.querySelector('.hero').style.display = 'none';
+          document.getElementById('originalDiv').style.display = 'none';
+          document.getElementById('newDiv').style.display = 'block';
+        }
+      </script>
+      <br /><br />
 
-  
+      <!--Local Events -->
+      <section class="hotel" id="hotel">
+        <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Local Events and Festival
+        </h2>
 
-        <!-- Trip Photo Gallery -->
-        <div class="trip-gallery-container">
-
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo1.png" height="250" width="200">
-            <p><a href="https://maps.app.goo.gl/4ULWYJxSVD8AcUin6" target="_blank">LADAKH</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo2.png" height="250" width="200">
-            <p><a href="https://maps.app.goo.gl/zrA5UgDQoeUtRhhn7" target="_blank">RANNERDALE KNOTTS</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo3.jpg" height="250" width="200">
-            <p><a href="https://maps.app.goo.gl/eTfvw4peKN3AcMUy8" target="_blank">AMALPHI COAST</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo4.png" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/tBZLQcZbCHRWsgGX7" target="_blank">THE GOLDEN TEMPLE,PERIYAPATTNA</a>
-            </p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo5.jpg" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/8Y3rnjtxU563KVvE9" target="_blank">MALSHEJ GHAT</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo6.png" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/cj2UZZoyCTzeoQjEA" target="_blank">SAHARA DESERT</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo7.png" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/Gk1fQts4zeVRdAWu6" target="_blank">MALDIVES</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo8.jpg" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/DbWvrFgfwwwTWuBT8" target="_blank">PUNAKHA SUSPENSION BRIDGE</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo9.jpg" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/gBGuxUNXXemiZ2Td8" target="_blank">ARU VALLEY</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo10.jpg" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/tQ4BT4gDoFtauReM9" target="_blank">THE GOLDEN BRIDGE</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo11.jpg" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/oqDnmF2pCqRxV5Cp6" target="_blank">LAKE DISTRICT</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo13.jpg" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/pHjaA4aqP41JxdAh9" target="_blank">MUNNAR</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo19.jpg" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/84rV6GhhginGXgbc8" target="_blank">STATUE OF LIBERTY</a></p>
-          </figure>
-          <figure class="image-container">
-            <img src="./img/Trip_Photos/photo20.png" height="220" width="230">
-            <p><a href="https://maps.app.goo.gl/GzVALHoLp4MgFmgw5" target="_blank">NAKKI LAKE</a></p>
-          </figure>
-
-          <!-- <img src="./img/Trip_Photos/photo3.jpg" height="240" width="200"> -->
+        <br></br>
+        <h3
+          style="color: rgb(20, 80, 234); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+          Explore uniques culture and Festivals</h3>
+        <br></br>
+        <div class="center-card">
+          <img src="./loc.jpg" alt="hr1" />
+          <br>
+          <a class="btn btn-primary" href="./loc.html" role="button" class="book__now btn-style"
+            style="box-shadow: 2px 2px 8px red;">View Now</a>
+          <br>
 
         </div>
-      </div>
-    </section>
-    <script>
-      function replaceDivs() {
-        document.querySelector('.hero').style.display = 'none';
-        document.getElementById('originalDiv').style.display = 'none';
-        document.getElementById('newDiv').style.display = 'block';
-      }
-    </script>
-    <br /><br />
-
-    <!--Local Events -->
-    <section class="hotel" id ="hotel">
-      <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Local Events and Festival</h2>
-      
-       <br></br>
-       <h3 style="color: rgb(20, 80, 234); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Explore uniques culture and Festivals</h3>
-       <br></br>
-       <div class="center-card">
-       <img src="./loc.jpg" alt="hr1"/>
-       <br>
-       <a class="btn btn-primary" href="./loc.html" role="button" class="book__now btn-style" style="box-shadow: 2px 2px 8px red;">View Now</a>
-       <br>
-       
-      </div>
       </section>
       <br></br>
-    <!-- Toursit Guide Section -->
-    <section class="tourist" id="tourist">
-      <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Tourist Guide</h2>
-      <h4 style="color: rgb(231, 62, 118); font-style: italic; font-family: cursive;">
-        Have an amazing trip and explore the destiny
-      </h4>
-      <br />
-      <h3 style="color: rgb(6, 151, 241); font-style: inherit; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-        Connect with the Guide
-      </h3>
-      <br />
-      <div class="center-card">
-        <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
-        <div class="image-container">
-          <div class="carousel-images">
-            <img src="./tg1.jpg" alt="guide1" class="carousell-item" />
-            <img src="./tg2.jpg" alt="guide2" class="carousell-item" />
-            <img src="./tg3.jpg" alt="guide3" class="carousell-item" />
-            <img src="./tg1.jpg" alt="guide1" class="carousell-item" />
-            <img src="./tg2.jpg" alt="guide2" class="carousell-item" />
-            <img src="./tg3.jpg" alt="guide3" class="carousell-item" />
+      <!-- Toursit Guide Section -->
+      <section class="tourist" id="tourist">
+        <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Tourist Guide</h2>
+        <h4 style="color: rgb(231, 62, 118); font-style: italic; font-family: cursive;">
+          Have an amazing trip and explore the destiny
+        </h4>
+        <br />
+        <h3
+          style="color: rgb(6, 151, 241); font-style: inherit; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+          Connect with the Guide
+        </h3>
+        <br />
+        <div class="center-card">
+          <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+          <div class="image-container">
+            <div class="carousel-images">
+              <img src="./tg1.jpg" alt="guide1" class="carousell-item" />
+              <img src="./tg2.jpg" alt="guide2" class="carousell-item" />
+              <img src="./tg3.jpg" alt="guide3" class="carousell-item" />
+              <img src="./tg1.jpg" alt="guide1" class="carousell-item" />
+              <img src="./tg2.jpg" alt="guide2" class="carousell-item" />
+              <img src="./tg3.jpg" alt="guide3" class="carousell-item" />
+            </div>
           </div>
+          <button class="next" onclick="moveCarousel(1)">&#10095;</button>
         </div>
-        <button class="next" onclick="moveCarousel(1)">&#10095;</button>
-      </div>
-    </section>
-    <br /><br /><br /><br />
+      </section>
+      <br /><br /><br /><br />
 
-<script>
-  let currentSlide = 0;
+      <script>
+        let currentSlide = 0;
 
-function moveCarousel(step) {
-  const carousellItems = document.querySelectorAll('.carousell-item');
-  const itemsPerView = 2;
-  const totalItems = carousellItems.length;
-  const maxSlide = Math.ceil(totalItems / itemsPerView) - 1;
+        function moveCarousel(step) {
+          const carousellItems = document.querySelectorAll('.carousell-item');
+          const itemsPerView = 2;
+          const totalItems = carousellItems.length;
+          const maxSlide = Math.ceil(totalItems / itemsPerView) - 1;
 
-  currentSlide = (currentSlide + step + maxSlide + 1) % (maxSlide + 1);
-  const offset = -currentSlide * 100 / itemsPerView;
+          currentSlide = (currentSlide + step + maxSlide + 1) % (maxSlide + 1);
+          const offset = -currentSlide * 100 / itemsPerView;
 
-  document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
-}
+          document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+        }
 
-// Optional: Auto-rotate carousel every 3 seconds
-setInterval(() => {
-  moveCarousel(1);
-}, 3000);
+        // Optional: Auto-rotate carousel every 3 seconds
+        setInterval(() => {
+          moveCarousel(1);
+        }, 3000);
 
-</script>    
-   
-    <!-- <section class="tourist" id="tourist">
+      </script>
+
+      <!-- <section class="tourist" id="tourist">
       <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Tourist Guide</h2>
       <h4 style="color: rgb(231, 62, 118); font-style: italic;font-family: cursive;">Have an amazing trip and explore
         the destiny</h4>
@@ -1511,180 +1658,223 @@ setInterval(() => {
 
 
 
-    <!-- Hotel & Resort Section -->
-    <section class="hotel" id ="hotel">
-      <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Hotels & Resorts</h2>
-      
-       <br></br>
-       <h3 style="color: rgb(151, 6, 241); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Best Place for Beautiful Trip</h3>
-       <br></br>
-       <div class="center-card">
-       <img src="./h1.png" alt="hr1"/>
-       <br>
-       <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
-       <br>
-       <button class="btn btn-style" id="btn-page" onclick="window.location.href='packages.html'" style="box-shadow: 2px 2px 8px rgb(0, 191, 255); padding: 10px 20px; font-size: 16px; cursor: pointer;">View All</button>
-      </div>
+      <!-- Hotel & Resort Section -->
+      <section class="hotel" id="hotel">
+        <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Hotels & Resorts</h2>
+
+        <br></br>
+        <h3
+          style="color: rgb(151, 6, 241); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+          Best Place for Beautiful Trip</h3>
+        <br></br>
+        <div class="center-card">
+          <img src="./h1.png" alt="hr1" />
+          <br>
+          <a class="btn btn-primary" href="./hotel.html" role="button">Book Now</a>
+          <br>
+          <button class="btn btn-style" id="btn-page" onclick="window.location.href='packages.html'"
+            style="box-shadow: 2px 2px 8px rgb(0, 191, 255); padding: 10px 20px; font-size: 16px; cursor: pointer;">View
+            All</button>
+        </div>
       </section>
-    <br /><br /><br />
-<!--Packaging List-->
-<section class="hotel" id ="hotel">
-  <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Packaging List</h2>
-  
-   <br></br>
-   <h3 style="color: rgb(9, 27, 186); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">List for Trip</h3>
-   <br></br>
-   <div class="center-card">
-   <img src="./pack.jpg" alt="hr1"/>
-   <br>
-   <a class="btn btn-primary" href="./Pack.html" role="button" class="book__now btn-style" style="box-shadow: 2px 2px 8px red;">View Now</a>
-   <br>
-   
-  </div>
-  </section>
-  <br /><br />
-  <!--Travel Books-->
-<section class="hotel" id ="hotel">
-  <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Travel Books</h2>
-  
-   <br></br>
-   <h3 style="color: rgb(104, 5, 218); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Your Travel Time Companion</h3>
-   <br></br>
-   <div class="center-card">
-   <img src="./read.jpg" alt="hr1"/>
-   <br>
-   <a class="btn btn-primary" href="./read.html" role="button" class="book__now btn-style" style="box-shadow: 2px 2px 8px red;">View Now</a>
-   
-   
-  </div>
-  </section>
-  <br /><br />
-  
-   <!--Health and safety-->
-<section class="hotel" id ="hotel">
-  <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Health and Safety Alerts</h2>
-  
-   <br></br>
-   <h3 style="color: rgb(20, 80, 234); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Healthy life for better Journey</h3>
-   <br></br>
-   <div class="center-card">
-   <img src="./hs.jpg" alt="hr1"/>
-   <br>
-   <a class="btn btn-primary" href="./healt.html" role="button" class="book__now btn-style" style="box-shadow: 2px 2px 8px red;">View Now</a>
-   <br>
-   
-  </div>
-  </section>
-<br /><br />
-    <!--Accessibility for Special People-->
-<section class="hotel" id ="hotel">
-  <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Help for Special People</h2>
-  
-   <br></br>
-   <h3 style="color: rgb(20, 80, 234); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Your Support for your Journey</h3>
-   <br></br>
-   <div class="center-card">
-   <img src="./dis.jpg" alt="hr1"/>
-   <br>
-   <a class="btn btn-primary" href="./acce.html" role="button" class="book__now btn-style" style="box-shadow: 2px 2px 8px red;">View Now</a>
-   <br>
-   
-  </div>
-  </section>
-<br /><br /><br /><br />
+      <br /><br /><br />
+      <!--Packaging List-->
+      <section class="hotel" id="hotel">
+        <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Packaging List</h2>
 
-    <!-- Testimonials Section -->
-    <section style="    width: 100%;
+        <br></br>
+        <h3
+          style="color: rgb(9, 27, 186); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+          List for Trip</h3>
+        <br></br>
+        <div class="center-card">
+          <img src="./pack.jpg" alt="hr1" />
+          <br>
+          <a class="btn btn-primary" href="./Pack.html" role="button" class="book__now btn-style"
+            style="box-shadow: 2px 2px 8px red;">View Now</a>
+          <br>
+
+        </div>
+      </section>
+      <br /><br />
+      <!--Travel Books-->
+      <section class="hotel" id="hotel">
+        <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Travel Books</h2>
+
+        <br></br>
+        <h3
+          style="color: rgb(104, 5, 218); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+          Your Travel Time Companion</h3>
+        <br></br>
+        <div class="center-card">
+          <img src="./read.jpg" alt="hr1" />
+          <br>
+          <a class="btn btn-primary" href="./read.html" role="button" class="book__now btn-style"
+            style="box-shadow: 2px 2px 8px red;">View Now</a>
+
+
+        </div>
+      </section>
+      <br /><br />
+
+      <!--Health and safety-->
+      <section class="hotel" id="hotel">
+        <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Health and Safety Alerts</h2>
+
+        <br></br>
+        <h3
+          style="color: rgb(20, 80, 234); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+          Healthy life for better Journey</h3>
+        <br></br>
+        <div class="center-card">
+          <img src="./hs.jpg" alt="hr1" />
+          <br>
+          <a class="btn btn-primary" href="./healt.html" role="button" class="book__now btn-style"
+            style="box-shadow: 2px 2px 8px red;">View Now</a>
+          <br>
+
+        </div>
+      </section>
+      <br /><br />
+      <!--Accessibility for Special People-->
+      <section class="hotel" id="hotel">
+        <h2 class="tourist-heading section__title" align-items="center" data-aos="fade-in">Help for Special People</h2>
+
+        <br></br>
+        <h3
+          style="color: rgb(20, 80, 234); font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+          Your Support for your Journey</h3>
+        <br></br>
+        <div class="center-card">
+          <img src="./dis.jpg" alt="hr1" />
+          <br>
+          <a class="btn btn-primary" href="./acce.html" role="button" class="book__now btn-style"
+            style="box-shadow: 2px 2px 8px red;">View Now</a>
+          <br>
+
+        </div>
+      </section>
+      <br /><br /><br /><br />
+
+      <!-- Testimonials Section -->
+      <section style="    width: 100%;
     height: 100%;" id="testimo" class="testimo">
-      <h2 class="testimonial-heading section__title" align-items="center" data-aos="fade-in">Testimonials</h2>
-      <div class="container" style="display: flex; flex-wrap: wrap; justify-content: center;">
-        
-        <!-- Testimonial Card 1 -->
-        <div class="card text-center card1" style="height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
-          <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
-            <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
-              <img src="./img/testimonial1.jpg" class="card-img-top" alt="Broccoli" style="width: 100%; height: 100%; object-fit: cover" />
-            </div>
-            <div class="card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: rgb(228, 224, 238); display: flex; flex-direction: column; justify-content: center; align-items: center; color: black;">
-              <p><sup><i class="fas fa-quote-left"></i></sup>TourGuide made our dream vacation a reality! From the breathtaking landscapes to the seamless logistics, every moment was a new adventure. The personalized itinerary and expert guides added a special touch to our journey. We can't wait to book our next trip with TourGuide!<sup><i class="fas fa-quote-right"></i></sup></p>
-              <div class="user-info">
-                <h3>Joseph</h3>
-                <div class="star-rating">
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star"></span>
+        <h2 class="testimonial-heading section__title" align-items="center" data-aos="fade-in">Testimonials</h2>
+        <div class="container" style="display: flex; flex-wrap: wrap; justify-content: center;">
+
+          <!-- Testimonial Card 1 -->
+          <div class="card text-center card1"
+            style="height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
+            <div class="card-inner"
+              style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
+              <div class="card-front"
+                style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
+                <img src="./img/testimonial1.jpg" class="card-img-top" alt="Broccoli"
+                  style="width: 100%; height: 100%; object-fit: cover" />
+              </div>
+              <div class="card-back"
+                style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: rgb(228, 224, 238); display: flex; flex-direction: column; justify-content: center; align-items: center; color: black;">
+                <p><sup><i class="fas fa-quote-left"></i></sup>TourGuide made our dream vacation a reality! From the
+                  breathtaking landscapes to the seamless logistics, every moment was a new adventure. The personalized
+                  itinerary and expert guides added a special touch to our journey. We can't wait to book our next trip
+                  with TourGuide!<sup><i class="fas fa-quote-right"></i></sup></p>
+                <div class="user-info">
+                  <h3>Joseph</h3>
+                  <div class="star-rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        
-        <!-- Testimonial Card 2 -->
-        <div class="card text-center card1" style="height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
-          <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
-            <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
-              <img src="./img/testimonial2.jpg" class="card-img-top" alt="Tomato" style="width: 100%; height: 100%; object-fit: cover" />
-            </div>
-            <div class="card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: rgb(228, 224, 238); display: flex; flex-direction: column; justify-content: center; align-items: center; color: black;">
-              <p><sup><i class="fas fa-quote-left"></i></sup>Traveling with the family has never been easier! TourGuide took care of every detail, ensuring a stress-free and enjoyable vacation for all. The kid-friendly activities and family-oriented guides made our trip unforgettable.<sup><i class="fas fa-quote-right"></i></sup></p>
-              <div class="user-info">
-                <h3>Katie</h3>
-                <div class="star-rating">
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
+
+          <!-- Testimonial Card 2 -->
+          <div class="card text-center card1"
+            style="height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
+            <div class="card-inner"
+              style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
+              <div class="card-front"
+                style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
+                <img src="./img/testimonial2.jpg" class="card-img-top" alt="Tomato"
+                  style="width: 100%; height: 100%; object-fit: cover" />
+              </div>
+              <div class="card-back"
+                style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: rgb(228, 224, 238); display: flex; flex-direction: column; justify-content: center; align-items: center; color: black;">
+                <p><sup><i class="fas fa-quote-left"></i></sup>Traveling with the family has never been easier!
+                  TourGuide took care of every detail, ensuring a stress-free and enjoyable vacation for all. The
+                  kid-friendly activities and family-oriented guides made our trip unforgettable.<sup><i
+                      class="fas fa-quote-right"></i></sup></p>
+                <div class="user-info">
+                  <h3>Katie</h3>
+                  <div class="star-rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        
-        <!-- Testimonial Card 3 -->
-        <div class="card text-center card1" style="height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
-          <div class="card-inner" style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
-            <div class="card-front" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
-              <img src="./img/testimonial3.jpg" class="card-img-top" alt="Broccoli" style="width: 100%; height: 100%; object-fit: cover" />
-            </div>
-            <div class="card-back" style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: rgb(228, 224, 238); display: flex; flex-direction: column; justify-content: center; align-items: center; color: black;">
-              <p><sup><i class="fas fa-quote-left"></i></sup>Our cultural tour with TourGuide exceeded all expectations. The immersive experiences, knowledgeable guides, and carefully curated activities allowed us to connect with the local culture in a way we never thought possible. Thanks to TourGuide.<sup><i class="fas fa-quote-right"></i></sup></p>
-              <div class="user-info">
-                <h3>Charles</h3>
-                <div class="star-rating">
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
+
+          <!-- Testimonial Card 3 -->
+          <div class="card text-center card1"
+            style="height: 450px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 10px; perspective: 1000px; transition: transform 0.8s;">
+            <div class="card-inner"
+              style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
+              <div class="card-front"
+                style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
+                <img src="./img/testimonial3.jpg" class="card-img-top" alt="Broccoli"
+                  style="width: 100%; height: 100%; object-fit: cover" />
+              </div>
+              <div class="card-back"
+                style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: rgb(228, 224, 238); display: flex; flex-direction: column; justify-content: center; align-items: center; color: black;">
+                <p><sup><i class="fas fa-quote-left"></i></sup>Our cultural tour with TourGuide exceeded all
+                  expectations. The immersive experiences, knowledgeable guides, and carefully curated activities
+                  allowed us to connect with the local culture in a way we never thought possible. Thanks to
+                  TourGuide.<sup><i class="fas fa-quote-right"></i></sup></p>
+                <div class="user-info">
+                  <h3>Charles</h3>
+                  <div class="star-rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
-    
-      </div>
-    </section>
-<style>
-  .star-rating {
-  display: flex;
-  justify-content: center;
-  margin: 10px 0;
-}
+      </section>
+      <style>
+        .star-rating {
+          display: flex;
+          justify-content: center;
+          margin: 10px 0;
+        }
 
-.star-rating .fa-star {
-  font-size: 20px; /* Adjust the size of the stars */
-  color: lightgray; /* Default color for unselected stars */
-}
+        .star-rating .fa-star {
+          font-size: 20px;
+          /* Adjust the size of the stars */
+          color: lightgray;
+          /* Default color for unselected stars */
+        }
 
-.star-rating .fa-star.checked {
-  color: gold; /* Color for selected stars */
-}
-</style>     
+        .star-rating .fa-star.checked {
+          color: gold;
+          /* Color for selected stars */
+        }
+      </style>
 
-    <!-- <section class="testimonials" id="testimonials">
+      <!-- <section class="testimonials" id="testimonials">
       <h2 class="testimonial-heading section__title" align-items="center" data-aos="fade-in">Testimonials</h2>
       <div class="marquee">
         <div class="track">
@@ -1788,71 +1978,75 @@ setInterval(() => {
 
     </section> -->
 
-    <!----------------------------------------------------- FAQ section ---------------------- -->
+      <!----------------------------------------------------- FAQ section ---------------------- -->
 
-    <section>
-      <h2 class="section__title" data-aos="zoom-in">
-        Frequently asked questions
-      </h2>
-      <div class="accordion faq-container faq">
-        <div class="accordion__header" data-aos="zoom-in">
-          <h3 class="accordion__question faq-title">How do I book my travel arrangements through your website?</h3>
-          <span class="accordion__icon">
-            <i id="accordion-icon" class="ri-add-line"></i>
-          </span>
+      <section>
+        <h2 class="section__title" data-aos="zoom-in">
+          Frequently asked questions
+        </h2>
+        <div class="accordion faq-container faq">
+          <div class="accordion__header" data-aos="zoom-in">
+            <h3 class="accordion__question faq-title">How do I book my travel arrangements through your website?</h3>
+            <span class="accordion__icon">
+              <i id="accordion-icon" class="ri-add-line"></i>
+            </span>
+          </div>
+          <div class="accordion__content">
+            <p class="faq-text accordion__answer">Booking your travel with us is simple and convenient. Start by
+              entering
+              your destination,
+              travel dates, and other relevant details on our homepage. Browse through the available options, including
+              flights, hotels, and car rentals. Once you find the perfect combination for your trip, follow the easy
+              step-by-step process to confirm your booking. If you encounter any issues or have questions during the
+              booking process, our customer support team is available 24/7 to assist you.</p>
+
+          </div>
         </div>
-        <div class="accordion__content">
-          <p class="faq-text accordion__answer">Booking your travel with us is simple and convenient. Start by entering
-            your destination,
-            travel dates, and other relevant details on our homepage. Browse through the available options, including
-            flights, hotels, and car rentals. Once you find the perfect combination for your trip, follow the easy
-            step-by-step process to confirm your booking. If you encounter any issues or have questions during the
-            booking process, our customer support team is available 24/7 to assist you.</p>
 
+        <div class="accordion faq-container faq">
+          <div class="accordion__header" data-aos="zoom-in">
+            <h3 class="accordion__question faq-title">What measures are in place to ensure the safety of my personal
+              information?</h3>
+            <span class="accordion__icon">
+              <i id="accordion-icon" class="ri-add-line"></i>
+            </span>
+          </div>
+          <div class="accordion__content">
+            <p class="faq-text accordion__answer">We take the security of your personal information seriously. Our
+              website
+              employs
+              state-of-the-art encryption technology to safeguard your data during the booking process. Additionally, we
+              adhere to strict privacy policies and comply with industry standards to protect your information. Rest
+              assured that your details are used solely for the purpose of facilitating your travel arrangements, and we
+              do not share your information with third parties without your consent. For more details, please refer to
+              our
+              Privacy Policy.</p>
+
+          </div>
         </div>
-      </div>
 
-      <div class="accordion faq-container faq">
-        <div class="accordion__header" data-aos="zoom-in">
-          <h3 class="accordion__question faq-title">What measures are in place to ensure the safety of my personal
-            information?</h3>
-          <span class="accordion__icon">
-            <i id="accordion-icon" class="ri-add-line"></i>
-          </span>
+        <div class="accordion faq-container faq">
+          <div class="accordion__header" data-aos="zoom-in">
+            <h3 class="accordion__question faq-title">Can I make changes to my booking or cancel it if needed?</h3>
+            <span class="accordion__icon">
+              <i id="accordion-icon" class="ri-add-line"></i>
+            </span>
+          </div>
+          <div class="accordion__content">
+            <p class="faq-text accordion__answer">Yes, we understand that plans can change. Depending on the terms and
+              conditions of your
+              specific booking, you may be able to make modifications or cancel your reservation. Log in to your account
+              on our website, navigate to the "Manage Booking" section, and follow the provided instructions. Keep in
+              mind
+              that there may be associated fees or restrictions depending on the type of booking and the time of the
+              requested changes. For further assistance, feel free to contact our customer support team, and they will
+              guide you through the process.</p>
+
+          </div>
         </div>
-        <div class="accordion__content">
-          <p class="faq-text accordion__answer">We take the security of your personal information seriously. Our website
-            employs
-            state-of-the-art encryption technology to safeguard your data during the booking process. Additionally, we
-            adhere to strict privacy policies and comply with industry standards to protect your information. Rest
-            assured that your details are used solely for the purpose of facilitating your travel arrangements, and we
-            do not share your information with third parties without your consent. For more details, please refer to our
-            Privacy Policy.</p>
-
-        </div>
-      </div>
-
-      <div class="accordion faq-container faq">
-        <div class="accordion__header" data-aos="zoom-in">
-          <h3 class="accordion__question faq-title">Can I make changes to my booking or cancel it if needed?</h3>
-          <span class="accordion__icon">
-            <i id="accordion-icon" class="ri-add-line"></i>
-          </span>
-        </div>
-        <div class="accordion__content">
-          <p class="faq-text accordion__answer">Yes, we understand that plans can change. Depending on the terms and
-            conditions of your
-            specific booking, you may be able to make modifications or cancel your reservation. Log in to your account
-            on our website, navigate to the "Manage Booking" section, and follow the provided instructions. Keep in mind
-            that there may be associated fees or restrictions depending on the type of booking and the time of the
-            requested changes. For further assistance, feel free to contact our customer support team, and they will
-            guide you through the process.</p>
-
-        </div>
-      </div>
 
 
-      </div>
+    </div>
     </section>
 
     <!-- Swiper JS -->
@@ -1980,50 +2174,54 @@ setInterval(() => {
         </div>
         <div class="subscribe__form" data-aos="fade-up">
           <form id="subscriptionForm">
-            <input type="email" style="border: none; font-size: 15px; margin: auto;" placeholder="Your email here" id="emailInput" required />
-            <button class="btn-send" id="send" type="submit" style="box-shadow: 0px 4px 8px blue; font-weight:530; font-size: medium; padding-left: 13px;">Subscribe</button>
+            <input type="email" style="border: none; font-size: 15px; margin: auto;" placeholder="Your email here"
+              id="emailInput" required />
+            <button class="btn-send" id="send" type="submit"
+              style="box-shadow: 0px 4px 8px blue; font-weight:530; font-size: medium; padding-left: 13px;">Subscribe</button>
           </form>
-          <p id="subscriptionMessage" style="display: none; color: green; margin-top: 10px;">Subscription successful! 🎉</p>
-          <p id="errorMessage" style="display: none; color: red; margin-top: 10px;">Please enter a valid email address.</p>
+          <p id="subscriptionMessage" style="display: none; color: green; margin-top: 10px;">Subscription successful! 🎉
+          </p>
+          <p id="errorMessage" style="display: none; color: red; margin-top: 10px;">Please enter a valid email address.
+          </p>
         </div>
       </div>
     </section>
-    
+
     <script>
       document.getElementById('subscriptionForm').addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent form submission
-    
+
         var emailInput = document.getElementById('emailInput').value;
         var emailPattern = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/; // Improved regex to check for valid domain
-    
+
         if (emailPattern.test(emailInput)) {
           showSubscriptionMessage(); // Show success message if email is valid
         } else {
           showErrorMessage(); // Show error message if email is invalid
         }
       });
-    
+
       function showSubscriptionMessage() {
         var messageElement = document.getElementById('subscriptionMessage');
         messageElement.style.display = 'block';
-    
+
         // Hide message after 4 seconds
         setTimeout(function () {
           messageElement.style.display = 'none';
         }, 4000);
       }
-    
+
       function showErrorMessage() {
         var errorElement = document.getElementById('errorMessage');
         errorElement.style.display = 'block';
-    
+
         // Hide error message after 4 seconds
         setTimeout(function () {
           errorElement.style.display = 'none';
         }, 4000);
       }
     </script>
-    
+
     <footer class="footer" data-aos="fade-up">
       <div class=" footer__container">
         <div class="footer__col">
@@ -2088,15 +2286,22 @@ setInterval(() => {
           <div class="footer__area">
             <h4>Contact Us</h4>
             <div class="d-flex align-items-center mb-2">
-              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M14.851 11.923c-.179-.641-.521-1.246-1.025-1.749-1.562-1.562-4.095-1.563-5.657 0l-4.998 4.998c-1.562 1.563-1.563 4.095 0 5.657 1.562 1.563 4.096 1.561 5.656 0l3.842-3.841.333.009c.404 0 .802-.04 1.189-.117l-4.657 4.656c-.975.976-2.255 1.464-3.535 1.464-1.28 0-2.56-.488-3.535-1.464-1.952-1.951-1.952-5.12 0-7.071l4.998-4.998c.975-.976 2.256-1.464 3.536-1.464 1.279 0 2.56.488 3.535 1.464.493.493.861 1.063 1.105 1.672l-.787.784zm-5.703.147c.178.643.521 1.25 1.026 1.756 1.562 1.563 4.096 1.561 5.656 0l4.999-4.998c1.563-1.562 1.563-4.095 0-5.657-1.562-1.562-4.095-1.563-5.657 0l-3.841 3.841-.333-.009c-.404 0-.802.04-1.189.117l4.656-4.656c.975-.976 2.256-1.464 3.536-1.464 1.279 0 2.56.488 3.535 1.464 1.951 1.951 1.951 5.119 0 7.071l-4.999 4.998c-.975.976-2.255 1.464-3.535 1.464-1.28 0-2.56-.488-3.535-1.464-.494-.495-.863-1.067-1.107-1.678l.788-.785z"/></svg>
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                <path
+                  d="M14.851 11.923c-.179-.641-.521-1.246-1.025-1.749-1.562-1.562-4.095-1.563-5.657 0l-4.998 4.998c-1.562 1.563-1.563 4.095 0 5.657 1.562 1.563 4.096 1.561 5.656 0l3.842-3.841.333.009c.404 0 .802-.04 1.189-.117l-4.657 4.656c-.975.976-2.255 1.464-3.535 1.464-1.28 0-2.56-.488-3.535-1.464-1.952-1.951-1.952-5.12 0-7.071l4.998-4.998c.975-.976 2.256-1.464 3.536-1.464 1.279 0 2.56.488 3.535 1.464.493.493.861 1.063 1.105 1.672l-.787.784zm-5.703.147c.178.643.521 1.25 1.026 1.756 1.562 1.563 4.096 1.561 5.656 0l4.999-4.998c1.563-1.562 1.563-4.095 0-5.657-1.562-1.562-4.095-1.563-5.657 0l-3.841 3.841-.333-.009c-.404 0-.802.04-1.189.117l4.656-4.656c.975-.976 2.256-1.464 3.536-1.464 1.279 0 2.56.488 3.535 1.464 1.951 1.951 1.951 5.119 0 7.071l-4.999 4.998c-.975.976-2.255 1.464-3.535 1.464-1.28 0-2.56-.488-3.535-1.464-.494-.495-.863-1.067-1.107-1.678l.788-.785z" />
+              </svg>
               <a href="mailto:tour@tourguide.com" class="text-nowrap">tour@tourguide.com</a>
             </div>
             <div class="d-flex align-items-center">
-              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M8.26 1.289l-1.564.772c-5.793 3.02 2.798 20.944 9.31 20.944.46 0 .904-.094 1.317-.284l1.542-.755-2.898-5.594-1.54.754c-.181.087-.384.134-.597.134-2.561 0-6.841-8.204-4.241-9.596l1.546-.763-2.875-5.612zm7.746 22.711c-5.68 0-12.221-11.114-12.221-17.832 0-2.419.833-4.146 2.457-4.992l2.382-1.176 3.857 7.347-2.437 1.201c-1.439.772 2.409 8.424 3.956 7.68l2.399-1.179 3.816 7.36s-2.36 1.162-2.476 1.215c-.547.251-1.129.376-1.733.376"/></svg>
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                <path
+                  d="M8.26 1.289l-1.564.772c-5.793 3.02 2.798 20.944 9.31 20.944.46 0 .904-.094 1.317-.284l1.542-.755-2.898-5.594-1.54.754c-.181.087-.384.134-.597.134-2.561 0-6.841-8.204-4.241-9.596l1.546-.763-2.875-5.612zm7.746 22.711c-5.68 0-12.221-11.114-12.221-17.832 0-2.419.833-4.146 2.457-4.992l2.382-1.176 3.857 7.347-2.437 1.201c-1.439.772 2.409 8.424 3.956 7.68l2.399-1.179 3.816 7.36s-2.36 1.162-2.476 1.215c-.547.251-1.129.376-1.733.376" />
+              </svg>
               <a href="tel:8562145852" class="text-nowrap">+91 8562145852</a>
             </div>
             <div class="icons">
-              <a href="https://www.linkedin.com/in/arpan-chowdhury-775294251/?original_referer=https%3A%2F%2Fin%2Esearch%2Eyahoo%2Ecom%2F&originalSubdomain=in">
+              <a
+                href="https://www.linkedin.com/in/arpan-chowdhury-775294251/?original_referer=https%3A%2F%2Fin%2Esearch%2Eyahoo%2Ecom%2F&originalSubdomain=in">
                 <div class="icon">
                   <i class="fab fa-linkedin" title="linkedin" style="cursor: pointer;"></i>
                 </div>
@@ -2131,15 +2336,21 @@ setInterval(() => {
             <!-- Visitor Widget -->
             <div class="visitor-widget mt-3">
               <a>
-                <img alt="Hits" src="https://hits.sh/apu52.github.io/Travel_Website.svg?style=for-the-badge&label=Visitors&extraCount=786&color=526180&labelColor=9bbbff"/>
+                <img alt="Hits"
+                  src="https://hits.sh/apu52.github.io/Travel_Website.svg?style=for-the-badge&label=Visitors&extraCount=786&color=526180&labelColor=9bbbff" />
               </a>
             </div>
           </div>
 
         </div>
-        <div style="padding: 32px; background-color: transparent; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-          <label for="google_translate_element" style="display: block; font-weight: bold; margin-bottom: 10px; font-size: 20px; color: #123456;">Select Language:</label>
-          <div id="google_translate_element" style="display: inline-block; margin-top: 10px; padding: 20px; border: 1px solid #ff9fcf; border-radius: 5px; background-color: #fff;"></div>
+        <div
+          style="padding: 32px; background-color: transparent; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+          <label for="google_translate_element"
+            style="display: block; font-weight: bold; margin-bottom: 10px; font-size: 20px; color: #123456;">Select
+            Language:</label>
+          <div id="google_translate_element"
+            style="display: inline-block; margin-top: 10px; padding: 20px; border: 1px solid #ff9fcf; border-radius: 5px; background-color: #fff;">
+          </div>
         </div>
       </div>
 
@@ -2149,19 +2360,20 @@ setInterval(() => {
           <li>Copyright &copy;<span id="year"></span> </span> Arpan Chowdhury. All rights reserved. </li>
         </div>
       </div>
-      
-      
-      
-      
+
+
+
+
       <script type="text/javascript">
         function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+          new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
         }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    
+      </script>
+      <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-        <!-- <div class="footer__col">
+
+      <!-- <div class="footer__col">
           <label for="google_translate_element" style="display: block; font-weight: bold; margin-bottom: 5px;">Select Language:</label>
           <div id="google_translate_element" style="display: inline-block; margin-top: 10px;"></div>
         </div>
@@ -2197,16 +2409,16 @@ setInterval(() => {
             }, 100); // Check every 100ms
           });
         </script> -->
-        
+
 
     </footer>
-    
-  
+
+
     <a class="goupbtn" href="#" onclick="goToTop()"><i class="fa-solid fa-arrow-up"></i></a>
 
     <script>
       var mybutton = document.querySelector(".goupbtn");
-    
+
       window.addEventListener("scroll", function () {
         if (window.scrollY > 20) {
           mybutton.style.display = "block";
@@ -2214,32 +2426,32 @@ setInterval(() => {
           mybutton.style.display = "none";
         }
       });
-    
+
       function goToTop() {
         const currentScroll = window.scrollY;
         const startTime = performance.now();
         const duration = 500;
-    
+
         function scrollAnimation(currentTime) {
           const elapsedTime = currentTime - startTime;
           const progress = Math.min(elapsedTime / duration, 1);
           const easeOut = progress * (2 - progress);
           const scrollPosition = currentScroll * (1 - easeOut);
-    
+
           window.scrollTo(0, scrollPosition);
-    
+
           if (progress < 1) {
             requestAnimationFrame(scrollAnimation);
           }
         }
-    
+
         requestAnimationFrame(scrollAnimation);
       }
-    
+
       mybutton.addEventListener('click', goToTop);
     </script>
-    
-    
+
+
 
 
 
@@ -2331,24 +2543,24 @@ setInterval(() => {
     <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
     <script>
       window.botpressWebChat.init({
-          "composerPlaceholder": "Ask me anything!",
-          "botConversationDescription": "TourGuide",
-          "botId": "7d93db89-5ddd-48ac-91c7-d5f35eae9bdc",
-          "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
-          "messagingUrl": "https://messaging.botpress.cloud",
-          "clientId": "7d93db89-5ddd-48ac-91c7-d5f35eae9bdc",
-          "webhookId": "c874de53-fdf6-4bee-bd45-30a736b1a42e",
-          "lazySocket": true,
-          "themeName": "prism",
-          "botName": "TourGuide",
-          "avatarUrl": "https://previews.123rf.com/images/hgucuk/hgucuk2012/hgucuk201200075/161468561-world-tourism-the-tour-guide-%C3%A4%C2%B0con-design.jpg",
-          "stylesheet": "https://webchat-styler-css.botpress.app/prod/28032111-a170-4e9e-be60-9c9222f20935/v72246/style.css",
-          "frontendVersion": "v1",
-          "useSessionStorage": true,
-          "enableConversationDeletion": true,
-          "theme": "prism",
-          "themeColor": "#2563eb",
-          "allowedOrigins": []
+        "composerPlaceholder": "Ask me anything!",
+        "botConversationDescription": "TourGuide",
+        "botId": "7d93db89-5ddd-48ac-91c7-d5f35eae9bdc",
+        "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+        "messagingUrl": "https://messaging.botpress.cloud",
+        "clientId": "7d93db89-5ddd-48ac-91c7-d5f35eae9bdc",
+        "webhookId": "c874de53-fdf6-4bee-bd45-30a736b1a42e",
+        "lazySocket": true,
+        "themeName": "prism",
+        "botName": "TourGuide",
+        "avatarUrl": "https://previews.123rf.com/images/hgucuk/hgucuk2012/hgucuk201200075/161468561-world-tourism-the-tour-guide-%C3%A4%C2%B0con-design.jpg",
+        "stylesheet": "https://webchat-styler-css.botpress.app/prod/28032111-a170-4e9e-be60-9c9222f20935/v72246/style.css",
+        "frontendVersion": "v1",
+        "useSessionStorage": true,
+        "enableConversationDeletion": true,
+        "theme": "prism",
+        "themeColor": "#2563eb",
+        "allowedOrigins": []
       });
     </script>
 
@@ -2679,7 +2891,7 @@ setInterval(() => {
         // Initialize AOS library
         AOS.init();
       });</script>
-    
+
 
 
 
@@ -2750,39 +2962,39 @@ setInterval(() => {
   </script>
 
 
-<script>
+  <script>
 
-  document.addEventListener('DOMContentLoaded', function() {
-    function animateValue(id, start, end, duration) {
-      const obj = document.getElementById(id);
-      const startTime = performance.now();
+    document.addEventListener('DOMContentLoaded', function () {
+      function animateValue(id, start, end, duration) {
+        const obj = document.getElementById(id);
+        const startTime = performance.now();
 
-      function updateValue(timestamp) {
-        const elapsedTime = timestamp - startTime;
-        const progress = Math.min(elapsedTime / duration, 1);
-        const currentValue = Math.floor(progress * (end - start) + start);
-        obj.textContent = currentValue;
-        if (progress < 1) {
+        function updateValue(timestamp) {
+          const elapsedTime = timestamp - startTime;
+          const progress = Math.min(elapsedTime / duration, 1);
+          const currentValue = Math.floor(progress * (end - start) + start);
+          obj.textContent = currentValue;
+          if (progress < 1) {
+            requestAnimationFrame(updateValue);
+          }
           requestAnimationFrame(updateValue);
         }
-        requestAnimationFrame(updateValue);
       }
-    }
-  })
-</script>
+    })
+  </script>
 
 
-<script>
-    
+  <script>
+
 
     window.addEventListener('scroll', fillscrollline);
 
 
-      // Call the function for each count-up element
-      animateValue("guidesCount", 0, 25000, 20000);
-      animateValue("toursCount", 0, 20000, 20000);
-      animateValue("destinationsCount", 0, 10994, 20000);
-  
+    // Call the function for each count-up element
+    animateValue("guidesCount", 0, 25000, 20000);
+    animateValue("toursCount", 0, 20000, 20000);
+    animateValue("destinationsCount", 0, 10994, 20000);
+
 
 
   </script>
