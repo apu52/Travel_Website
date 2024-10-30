@@ -11,8 +11,9 @@
   
   .img-box img{
     width:100%;
-    border: #575050 solid 3px;
-    box-shadow: 5px 5px 60px #575050 ;
+    /* border: #575050 solid 3px; */
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px #5fddeb ;
   }
 
   .bttn{
