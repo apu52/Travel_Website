@@ -1274,8 +1274,7 @@ body, html {
 }
 
 .footer__col p {
-  font-size: 0.8rem;
-  font-weight: 100;
+  font-size: 0.9rem;
 }
 
 .footer__container {
@@ -1286,7 +1285,7 @@ body, html {
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
-  grid-template-columns: repeat(3, 1fr);
+  /*grid-template-columns: repeat(3, 1fr);*/
   gap: 20px;
   color: var(--secondary-color);
   margin: 0;
@@ -1315,7 +1314,7 @@ body, html {
 }
 
 .footer__col h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 20px;
   color: #123456;
@@ -1340,12 +1339,12 @@ body, html {
   font-weight: 600;
 }
 
-.footer__col h4 {
+/*.footer__col h4 {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 15px;
   color: #123456;
-}
+}*/
 
 .footer__bar {
   max-width: var(--max-width);
@@ -1367,6 +1366,7 @@ body, html {
 
 .footer__area a {
   color: white;
+  font-size: 0.9rem;
 }
 
 .footer__area a:hover {

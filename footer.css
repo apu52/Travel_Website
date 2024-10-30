@@ -1,13 +1,14 @@
 .footer__container {
     width: 100%;
+    height: 320px;
     /* max-width: 1800px; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-between;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    justify-content: space-evenly;
+    /*grid-template-columns: repeat(3, 1fr);*/
+    gap: 25px;
     color: var(--secondary-color);
     margin: 0;
     padding: 0;
@@ -41,5 +42,6 @@
 
 .footer_text a{
     color: white;
+    font-size: 0.9rem;
     /* margin-top: 10px; */
 }
