@@ -151,6 +151,49 @@
     .sec1{
       margin-top: 100px;
     }
+    .error-message {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+      display: none;
+    }
+
+   
+    .autocomplete {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .autocomplete-items {
+      position: absolute;
+      border: 1px solid #d4d4d4;
+      border-bottom: none;
+      border-top: none;
+      z-index: 99;
+      top: 100%;
+      left: 0;
+      right: 0;
+      max-height: 200px;
+      overflow-y: auto;
+      text-align: left;
+    }
+
+    .autocomplete-items div {
+      padding: 10px;
+      cursor: pointer;
+      background-color: #fff;
+      border-bottom: 1px solid #d4d4d4;
+    }
+
+    .autocomplete-items div:hover {
+      background-color: #e9e9e9;
+    }
+
+    .autocomplete-active {
+      background-color: DodgerBlue !important;
+      color: #ffffff;
+    }
   </style>
   
   <!-- sticky animation  -->
@@ -207,12 +250,15 @@
     </div>
   </nav>
 
+
   <div class="container sec1">
     <h1>Plan a Trip</h1>
     <form id="trip-form">
       <div class="form-group">
         <label for="destination">Destination</label>
-        <input type="text" id="destination" name="destination" required>
+        <div class="autocomplete">
+          <input type="text" id="destination" name="destination" required>
+        </div>
       </div>
       <div class="form-group">
         <label for="start-date">Start Date</label>
@@ -238,6 +284,7 @@
     </form>
     <div class="message" id="message"></div>
   </div>
+
   <div class="container trip-suggestions">
     <h1>Trip Suggestions</h1>
     <div class="trip-carousel" id="trip-carousel">
