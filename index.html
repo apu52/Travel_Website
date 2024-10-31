@@ -2184,8 +2184,8 @@ setInterval(() => {
     </footer>
     
   
-    <a class="goupbtn" href="#" title="Back to top" onclick="goToTop()"><i class="fa-solid fa-arrow-up"></i></a>
-
+    <a class="goupbtn" href="#" onclick="goToTop()"><i class="fa-solid fa-arrow-up"></i></a>
+  
     <script>
       // Get the button
       var mybutton = document.querySelector(".goupbtn");
@@ -2198,6 +2198,11 @@ setInterval(() => {
           mybutton.style.display = "none";
         }
       });
+      let btn1 = document.querySelector(".goupbtn");
+      btn1.addEventListener("mouseover", () => {
+        btn1.setAttribute("title", "Back to top");
+      });
+
 
       // When the user clicks on the button, scroll to the top of the document
       function goToTop() {
