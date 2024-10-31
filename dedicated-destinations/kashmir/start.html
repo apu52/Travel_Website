@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tourguide</title>
-    <!-- change -->
-    <link rel="stylesheet" href="./kashmir.css">
+    <link rel="stylesheet" href="../kashmir/kashmir.css">
     <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -14,12 +13,25 @@
     <script src="../../Theme.js" defer></script>
 </head>
 
-
 <body>
+    <!--<nav>
+        <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+        <ul class="nav__links">
+          <li class="link" data-aos="fade-down"><a href="/index.html#Home">Home</a></li>
+          <li class="link" data-aos="fade-down"><a href="/index.html#Destinations">Destinations</a></li>
+          <li class="link" data-aos="fade-down"><a href="/index.html#trip">Pricing</a></li>
+          <li class="link" data-aos="fade-down"><a href="/index.html#testimonials">Testimonials</a></li>
+          <li class="link" data-aos="fade-down"><a href="/index.html#ReviewGallery">Reviews</a></li>
+          <li class="link" data-aos="fade-down"><a href="/index.htmlfeedback.html">Rate Us?</a></li>
+          <li class="link" data-aos="fade-down"><a href="/index.htmllogin.html">Login</a></li>
+        </ul>
+        <button id="toggle" data-aos="fade-down">Dark Theme</button>
+        <a href="/index.html#contact" data-aos="fade-down"><button class="btn">Contact Us</button></a>
+      </nav>
+    --->
     <div class="nav-container">
         <nav class="newNav">
-            <a href="#" class="nav__logo" data-aos="fade-right"
-                style="text-decoration: none;">Tourguide<span>.</span></a>
+            <a href="#" class="nav__logo" data-aos="fade-right" style="text-decoration: none;">Tourguide<span>.</span></a>
 
             <ul class="navLinks">
                 <li class="link home" data-aos="fade-down"><a href="../../index.html">Home</a></li>
@@ -32,8 +44,7 @@
             </ul>
 
             <a href="../../index.html#cnt-form" class="contact-btn">
-                <button class="btn aos-init aos-animate" id="btn-style" style="margin: 0;" data-aos="fade-down"
-                    fdprocessedid="kglas">Contact Us</button>
+                <button class="btn aos-init aos-animate" id="btn-style" style="margin: 0;" data-aos="fade-down" fdprocessedid="kglas">Contact Us</button>
             </a>
             <div class="toggle-container" data-aos="fade-down">
                 <input id="themeToggle" class="toggle" type="checkbox">
@@ -48,176 +59,145 @@
 
     <section class="middle">
         <!---Image Slider----->
-        <div class="image-container">
+        <div class="slider">
             <div class="img-box">
-                <!-- change -->
-                <img src="./gallery/kashmir1.png" alt="">
+                <img src="./gallery/kashmir1.png" alt="" class="slider-img">
             </div>
 
-            <div class="abcd">
-                <div class="relative_image">
-                    <div class="slider-container">
-                        <!-- change -->
-                        <img id="slider-image" class="slider-image" src="./gallery/kashmir1.png"
-                            alt="Slider Image">
-                        <div class="thumb">
-                            <button class="arrow left" onclick="moveSlide(-1)">&#8249;</button>
-                            <div class="thumbnails" id="thumbnails-container">
-                              
-                            </div>
-                            <button class="arrow right" onclick="moveSlide(1)">&#8250;</button>
-                          </div>
-                          
-                    </div>
-                </div>
+            <!--Next and Previous Buttons-->
+            <button class="bttn" id="btns" onclick="prev()">Prev</button>
+            <button class="bttn" id="btns" onclick="next()">Next</button>
+            <a href="../../payment.html"><button class="bttn" id="btnss">CHECK OUT</button></a>
 
-                
-                <div class="HeadingText">
-                    <p id="p-text"></p>
-                    <div>
-                        <a href="../../payment.html"><button class="bttn btn-style"  id="btnss">Check-Out</button></a>
-                    </div>
-                </div>
+            <div class="features">
+                <h3><i title="BBQ meal included" class="fa fal fa-utensils"></i> BBQ meal included</h3>
+                <p>Main menu: Fresh fish, grilled chicken, pork chops, pasta with red sauce. Appetizers: Greek salad, shrimp saganaki, roasted vegetables, stuffed vine leaves. Vegetarian meal included</p>
             </div>
 
-            <div class="main-container">
+            <div class="features">
+                <h3><i class="fa-solid fa-bus"></i> Free pickup & drop-off</h3>
+                <p>You will be picked up from your stay or the nearest accessible point, by minibus</p>
+            </div>
+
+            <div class="features">
+                <h3><i class="fa fa-undo"></i> Free cancellation</h3>
+                <p>Up to 100% refund according to the cancellation policy</p>
+            </div>
+
+        </div>
+
+        <div class="right-section">
+            <div class="check-in-out">
+
+                <div class="check-in">
+                    <label for="">CHECK IN :</label>
+                    <input type="datetime-local" name="" id="chk-design">
+                </div>
+                <div class="check-out">
+                    <label for="">CHECK OUT :</label>
+                    <input type="datetime-local" name="" id="chk-design">
+                </div>
+
+            </div>
+
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3409223.777239477!2d70.51733100654995!3d33.44096611315532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e1092499ffa89d%3A0x6567a6d4697e7f1!2sJammu%20and%20Kashmir!5e0!3m2!1sen!2sin!4v1708024233393!5m2!1sen!2sin"
+                    width="800" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
 
 
-                <div class="slider">
-
-                    <div class="features">
-                        <h3><i title="BBQ meal included" class="fa fal fa-utensils"></i> BBQ meal included</h3>
-                        <p>Main menu: Fresh fish, grilled chicken, pork chops, pasta with red sauce. Appetizers: Greek
-                            salad,
-                            shrimp saganaki, roasted vegetables, stuffed vine leaves. Vegetarian meal included.</p>
-                    </div>
-
-                    <div class="features">
-                        <h3><i class="fa-solid fa-bus"></i> Free pickup & drop-off</h3>
-                        <p>You will be picked up from your stay or the nearest accessible point, by minibus.</p>
-                    </div>
-
-
-                    <div class="features">
-                        <h3><i class="fa fa-undo"></i> Free cancellation</h3>
-                        <p>Up to 100% refund according to the cancellation policy.</p>
-                    </div>
-                    
-                    <div class="Info-container">
-
-                        <div class="check-in-out">
-                            <h3>Book Your Stay</h3>
-    
-                            <div class="check-in">
-                                <label for="check-in">Check In:</label>
-                                <input type="datetime-local" id="check-in">
-                            </div>
-    
-                            <div class="check-out">
-                                <label for="check-out">Check Out:</label>
-                                <input type="datetime-local" id="check-out">
-                            </div>
-    
-                            <div class="btn-container">
-                                <button class="btn">Submit</button>
-                                <button class="btn">Cancel</button>
-                            </div>
-                        </div>
-    
-                        <div id="weatherInfo">
-                            <h3>Climate Info </h3>
-                            <div>Max Temp: <span class="max"></span>°C <span><i style="font-size:1.5rem;color: red;" class="fa">&#xf2c7;</i></span></div>
-                            <div>Min Temp: <span class="min"></span>°C <span><i style="font-size:1.5rem;color: blue;" class="fa">&#xf76b;</i></span></div>
-                            <div>Humidity: <span class="humidity"></span>% </div>
-                            <!-- Weather information will be inserted here -->
-                        </div>
-                        
-                    </div>
+            <!-- Menu Container -->
+            <div class="w3-container" id="menu">
+                <div class="w3-content" style="max-width:700px">
 
                     <br>
-                    <div class="transport-container">
-                                <div class="single-list-topics-content">
-                                    <div class="icon1"><i style="font-size:2rem" class="fa">&#xf072;</i></div>
-                                    <button class="btn-style">Flight</button>
-                                </div>
-
-                                <div class="single-list-topics-content">
-                                    <div class="icon2"><i style="font-size:2rem" class="fa">&#xf238;</i></div>
-                                    <button class="btn-style">Train</button>
-                                </div>
-                                <div class="single-list-topics-content">
-                                    <div class="icon3"><i style="font-size:2rem" class="fa">&#xf207;</i></div>
-                                    <button class="btn-style">Bus</button>
-                                    <div> </div>
-                                </div>
-
-                               
-                                
+                    <div class="w3-row w3-center w3-card w3-padding">
+                        <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+                            <div class="w3-col s6 tablink">Description</div>
+                        </a>
+                        <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+                            <div class="w3-col s6 tablink">Things To Do</div>
+                        </a>
                     </div>
-                </div>
 
-                <div class="right-section">
-                    <!-- Menu Container -->
-                    <div class="w3-container " id="menu">
-                        <div class="w3-content" style="max-width:700px">
+                    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
 
-                            <br>
-                            <div class="w3-row w3-center w3-card w3-padding descriptionContainer">
-                                <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
-                                    <div class="w3-col s6 tablink Description">Description</div>
-                                </a>
-                                <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
-                                    <div class="w3-col s6 tablink Description">Things To Do</div>
-                                </a>
-                            </div>
+                        <p class="w3-text-grey">
+                            <p>Kashmir is the northernmost geographical region of the Indian subcontinent. Until the mid-19th century, the term "Kashmir" denoted only the Kashmir Valley between the Great Himalayas and the Pir Panjal Range.Here's a comprehensive
+                                overview of tourism in Kashmir:
+                                <br><br>
+                                <b>Climate </b>: The climate of Jammu and Kashmir varies with altitude and across regions. Southern and southwestern areas have a sub tropical climate, with hot summers and cool winters. This region receives most of its
+                                rainfall during the monsoon season. In the east and north, summers are usually pleasant. The effect of the monsoon diminishes in areas lying to the leeward side of the Pir Panjal, such as the Kashmir valley, and much of
+                                the rainfall happens in the spring season due to western disturbances. Winters are cold, with temperatures reaching sub-zero levels. Snowfall is common in the valley and the mountain areas.
+                                <br><br>
+                                <b>Best place</b>:Some major tourist attractions in Jammu and Kashmir are Srinagar, the Mughal Gardens, Gulmarg, Pahalgam, Patnitop, Bhaderwah and Jammu. Every year, thousands of Hindu pilgrims visit holy shrines of Vaishno
+                                Devi and Amarnath which has had significant impact on the state's economy.[107]
 
-                            <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
-                                <!-- change -->
-                                <p id="description-text">  Kashmir is the northernmost geographical region of the Indian subcontinent. Until the mid-19th century, the term "Kashmir" denoted only the Kashmir Valley between the Great Himalayas and the Pir Panjal Range.Here's a comprehensive
-                                    overview of tourism in Kashmir:
-                                    <br><br>
-                                    <b>Climate </b>: The climate of Jammu and Kashmir varies with altitude and across regions. Southern and southwestern areas have a sub tropical climate, with hot summers and cool winters. This region receives most of its
-                                    rainfall during the monsoon season. In the east and north, summers are usually pleasant. The effect of the monsoon diminishes in areas lying to the leeward side of the Pir Panjal, such as the Kashmir valley, and much of
-                                    the rainfall happens in the spring season due to western disturbances. Winters are cold, with temperatures reaching sub-zero levels. Snowfall is common in the valley and the mountain areas.
-                                    <br><br>
-                                    <b>Best place</b>:Some major tourist attractions in Jammu and Kashmir are Srinagar, the Mughal Gardens, Gulmarg, Pahalgam, Patnitop, Bhaderwah and Jammu. Every year, thousands of Hindu pilgrims visit holy shrines of Vaishno
-                                    Devi and Amarnath which has had significant impact on the state's economy.[107]
-    
-                                </p>
-                            </div>
 
-                            <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
-                                <h3>Restaurants</h3>
-                                <p>Find the best restaurant around while traveling.</p><br>
+                            </p>
 
-                                <h3>Attractions</h3>
-                                <p>Find the best tourist attractions in the city.</p><br>
 
-                                <h3>Rooms</h3>
-                                <p>Finds room nearby</p><br>
+                    </div>
 
-                                <h3>Offers</h3>
-                                <p>Find the best offer and discount on tourguide.</p>
+                    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+                        <h5>Restaurants</h5>
+                        <p class="w3-text-grey">Find the best restaurant around while traveling.</p><br>
 
-                            </div>
-                               
+                        <h5>Attractions</h5>
+                        <p class="w3-text-grey">Find the best tourist attractions in the city.</p><br>
+
+                        <h5>Rooms</h5>
+                        <p class="w3-text-grey">Finds room nearby</p><br>
+
+                        <h5>Offers</h5>
+                        <p class="w3-text-grey">Find the best offer and discount on tourguide.</p>
+                    </div><br>
+
+                    <div class="transport-container">
+                        <div class="single-list-topics-content">
+                            <div class="icon1"></div>
+                            <button class="bttnn">Flight</button>
+                        </div>
+
+                        <div class="single-list-topics-content">
+                            <div class="icon2"></div>
+                            <button class="bttnn">Train</button>
+                        </div>
+                        <div class="single-list-topics-content">
+                            <div class="icon3"></div>
+                            <button class="bttnn">Bus</button>
+                            <div> </div>
+                        </div>
+
+                        <script>
+                            function openMenu(evt, menuName) {
+                                var i, x, tablinks;
+                                x = document.getElementsByClassName("menu");
+                                for (i = 0; i < x.length; i++) {
+                                    x[i].style.display = "none";
+                                }
+                                tablinks = document.getElementsByClassName("tablink");
+                                for (i = 0; i < x.length; i++) {
+                                    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+                                }
+                                document.getElementById(menuName).style.display = "block";
+                                evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+                            }
+                            document.getElementById("myLink").click();
+                        </script>
+
+                        <div id="weatherInfo">
+                            <h2>Climate Info </h2>
+                            <div>Maximum Temperature:<span class="max"></span>°C</div>
+                            <div>Minimum Temperature:<span class="min"></span>°C</div>
+                            <div>Humidity:<span class="humidity"></span>%</div>
+                            <!-- Weather information will be inserted here -->
                         </div>
                     </div>
-                    
-                    <!-- change -->
-                    <div class="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3409223.777239477!2d70.51733100654995!3d33.44096611315532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e1092499ffa89d%3A0x6567a6d4697e7f1!2sJammu%20and%20Kashmir!5e0!3m2!1sen!2sin!4v1708024233393!5m2!1sen!2sin"
-                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-                    </div>
-
-
-
                 </div>
-            </div>
-        </div>
-    </section>
 
+
+    </section>
 
     <footer class="footer" data-aos="fade-up">
         <div class="section__container footer__container">
@@ -245,10 +225,7 @@
             <div class="footer__col">
                 <h4>Address</h4>
                 <div class="mapouter">
-                    <div class="gmap_canvas"><iframe width="200" height="200" id="gmap_canvas"
-                            src="https://maps.google.com/maps?q=wellington%20street%20kolkata&t=k&z=11&ie=UTF8&iwloc=&output=embed"
-                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
-                            href="https://embedgooglemap.net/124/">invincible 123movies</a><br>
+                    <div class="gmap_canvas"><iframe width="200" height="200" id="gmap_canvas" src="https://maps.google.com/maps?q=wellington%20street%20kolkata&t=k&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://embedgooglemap.net/124/">invincible 123movies</a><br>
                         <style>
                             .mapouter {
                                 position: relative;
@@ -279,22 +256,7 @@
         </div>
     </footer>
 
-    <script>
-        function openMenu(evt, menuName) {
-            var i, x, tablinks;
-            x = document.getElementsByClassName("menu");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablink");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
-            }
-            document.getElementById(menuName).style.display = "block";
-            evt.currentTarget.firstElementChild.className += " w3-dark-grey";
-        }
-        document.getElementById("myLink").click();
-    </script>
+
     <script src="main.js"></script>
 
 </html>

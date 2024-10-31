@@ -86,7 +86,7 @@
       font-weight: 100;
       font-style: normal;
       font-variation-settings: "slnt" 0;
-      width: 100vw;
+
     }
   </style>
   <style>
@@ -540,306 +540,82 @@
       <canvas></canvas>
       <canvas></canvas>
     </div>
-    
-    <nav class="newNav">
-      <div style="display: flex; align-items: center;">
-        <img src="/favicon.ico" class="sitelogo">
-        <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
-      </div>
-
-      <ul class="navLinks">
-        <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
-        <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
-        <li class="link" data-aos=""><a href="#Home">Home</a></li>
-        <li class="link" data-aos=""><a href="./about.html">About</a></li>
-        <li class="link dropdown" data-aos="">
-          <a href="#Services" class="dropdown">Services</a>
-          <ul class="dropdown-menu">
-            <li><a href="#Destinations">Destination</a></li>
-            <li><a href="#trip">Prices</a></li>
-            <li><a href="#ReviewGallery">Trip Gallery</a></li>
-            <li><a href="#tourist">Tourist Guide</a></li>
-            <li><a href="#hotel">Hotel & Resort</a></li>
-          </ul>
-        </li>
-        <li class="link" data-aos=""><a href="./topdeals/topdeals.html">Top Deals</a></li>
-        <li class="link" data-aos=""><a href="./packages.html">Packages</a></li>
-        <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
-        <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
-        <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
-      </ul>
-
-      <div class="contact-btns">
-        <a href="newLogin.html" class="contact-btn" id="nav-login-btn">
-          <button class="btn login" id="btn-style" data-aos="fade-down">Login/<br>SignUp</button>
-        </a>
-        <a href="mapa.html" class="contact-btn" id="nav-view-btn">
-          <button class="btn" id="btn-style" style="margin: 0;" data-aos="fade-down">View <map name=""></map></button>
-        </a>
-        <a href="loginPage.html" class="contact-btn">
-          <button class="btn" id="logout-btn" style="margin: 0; display: none;" data-aos="fade-down" disabled>Log
-            Out</button>
-        </a>
-      </div>
-
-      <div class="toggle-container" data-aos="fade-down" style="margin-right: 28px;">
-        <input id="themeToggle" class="toggle" type="checkbox">
-      </div>
-
-      <div class="hamburger" id="hamburger" data-aos="fade-down">
-        <div class="line" style="margin-bottom: 5px;"></div>
-        <div class="line" style="margin-bottom: 5px;"></div>
-        <div class="line" style="margin-bottom: 5px;"></div>
-        <div class="line" style="margin-bottom: 5px;"></div>
-      </div>
-    </nav>
-
-    <style>
-      /* General Styles for the Navigation */
-      .nav-container {
-        background-color: #ffffff;
-        /* Background color */
-        padding: 5px 20px;
-        /* Reduced padding for smaller height */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .newNav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-      }
-
-      .sitelogo {
-        height: 35px;
-        /* Slightly smaller logo */
-        width: 35px;
-        margin-right: 10px;
-        /* Reduced space between logo and title */
-      }
-
-      .nav__logo {
-        font-size: 28px;
-        /* Adjust font size */
-        color: #ece6e6;
-        /* Logo color */
-        text-decoration: none;
-        /* Remove underline */
-      }
-
-      .navLinks {
-        list-style: none;
-        /* Remove bullet points */
-        display: flex;
-        /* Display items in a row */
-        margin: 0;
-        /* Remove default margin */
-        padding: 0;
-        /* Remove default padding */
-      }
-
-      .navLinks.active {
-        display: flex;
-        /* Show links when the 'active' class is applied */
-      }
 
 
-      .link {
-        margin: 0 10px;
-        /* Reduced space between links */
-      }
+    <!-- <div id="progressbar"></div> -->
 
-      .link a {
-        font-size: 18px;
-        /* Increased font size */
-        text-decoration: none;
-        /* Remove underline */
-        color: #d8d4d4;
-        /* Link color */
-        transition: color 0.3s ease;
-        /* Smooth color transition */
-      }
+    <!-- <div id="scrollPath"></div> -->
 
-      .link a:hover {
-        color: #007BFF;
-        /* Change color on hover */
-      }
+    <!-- <canvas id="canvas"></canvas> -->
+    <!-- <nav>
 
-      .dropdown-menu {
-        display: none;
-        /* Hide dropdown initially */
-        position: absolute;
-        /* Position dropdown below the parent */
-        background-color: #fff;
-        /* Dropdown background */
-        border: 1px solid #ccc;
-        /* Border for dropdown */
-        z-index: 1000;
-        /* Ensure dropdown appears above other content */
-      }
-      .dropdown-menu a{
-        color: black;
-      }
+    <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+    <ul class="nav__links">
+      <li class="link" data-aos="fade-down"><a href="#Home">Home</a></li>
+      <li class="link" data-aos="fade-down"><a href="#AboutUs">About Us</a></li>
+      <li class="link" data-aos="fade-down"><a href="#Destinations">Destinations</a></li>
+      <li class="link" data-aos="fade-down"><a href="#trip">Pricing</a></li>
+      <li class="link" data-aos="fade-down"><a href="#testimonials">Testimonials</a></li>
+      <li class="link" data-aos="fade-down"><a href="#ReviewGallery">Reviews</a></li>
+      <li class="link" data-aos="fade-down"><a href="feedback.html">Rate Us?</a></li>
+      <li class="link" data-aos="fade-down"><a href="login.html">Login</a></li>
 
-      .dropdown:hover .dropdown-menu {
-        display: block;
-        /* Show dropdown on hover */
-      }
+    </ul>
+    <button id="toggle" data-aos="fade-down">Dark Theme</button>
+    <a href="#contact"><button class="btn" id="btn-style">Contact Us</button></a>
+  </nav> -->
 
-      .contact-btns {
-        display: flex;
-        /* Align buttons side by side */
-        align-items: center;
-        gap: 10px;
-        /* Small gap between the buttons */
-      }
+    <div class="nav-container" id="top">
+      <nav class="newNav">
+        <div style="display: flex; flex-direction: row; align-items: center;">
+          <img src="/favicon.ico" class="sitelogo">
 
-      .contact-btn {
-        margin: 0;
-        /* Remove extra space between buttons */
-      }
+          <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+        </div>
 
-      .btn {
-        padding: 8px 12px;
-        /* Adjusted padding for smaller height */
-        border: none;
-        /* Remove border */
-        border-radius: 5px;
-        /* Rounded corners */
-        cursor: pointer;
-        /* Pointer cursor on hover */
-      }
+        <ul class="navLinks">
+          <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
+          <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
+          <li class="link" data-aos=""><a href="#Home">Home</a></li>
+          <li class="link" data-aos=""><a href="./about.html">About</a></li>
+          <li class="link dropdown" data-aos="">
+            <a href="#Services" class="dropdown">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="#Destinations">Destination</a></li>
+              <li><a href="#trip">Prices</a></li>
+              <li><a href="#ReviewGallery">Trip Gallery</a></li>
+              <li><a href="#tourist">Tourist Guide</a></li>
+              <li><a href="#hotel">Hotel & Resort</a></li>
+            </ul>
+          </li>
+          <li class="link" data-aos=""><a href="./topdeals/topdeals.html">Top Deals</a></li>
+          <li class="link" data-aos=""><a href="./packages.html">Packages</a></li>
+          <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
+          <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+          <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
+        </ul>
 
-      /* Hamburger Menu Styles */
-      .hamburger {
-        display: none;
-        /* Hide on larger screens */
-      }
+        <a href="newLogin.html" class="contact-btn" id="nav-login-btn"><button class="btn login" id="btn-style"
+            data-aos="fade-down">Login/SignUp</button></a>
+        <a href="mapa.html" class="contact-btn" id="nav-view-btn"><button class="btn" id="btn-style" style="margin: 0;"
+            data-aos="fade-down">view <map name=""></map></button></a>
 
-      /* Toggle Theme Container */
-      .toggle-container {
-        display: flex;
-        align-items: center;
-        /* Center vertically */
-      }
+        <a href="loginPage.html" class="contact-btn"><button class="btn" id="logout-btn"
+            style="margin: 0; display: none;" data-aos="fade-down" disabled>Log Out</button></a>
 
-      /* Responsive Styles */
-      @media (max-width: 1168px) {
-        .hamburger {
-          display: block;
-          /* Show hamburger on small screens */
-        }
+        <!-- <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
+            style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a> -->
 
-        .navLinks {
-          display: none;
-          /* Hide nav links on small screens */
-          flex-direction: column;
-          /* Stack links vertically */
-          position: absolute;
-          /* Position over content */
-          top: 60px;
-          /* Adjusted position below navbar */
-          left: 0;
-          background-color: #ffffff;
-          /* Background color */
-          width: 100%;
-          /* Full width */
-          z-index: 1000;
-          /* Stack above other content */
-          padding: 10px 0;
-          /* Padding for spacing */
-        }
-
-        .navLinks.active {
-          display: flex;
-          /* Show links when active */
-          padding: 10px;
-          /* Padding around links */
-        }
-
-        .link {
-          margin: 10px 0;
-          /* Space between links */
-          text-align: center;
-          /* Center align links */
-        }
-
-        .dropdown-menu {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          position: static;
-          /* Keeps it positioned in-line with other elements */
-          background-color: #000;
-          /* Dark background for better contrast */
-          color: #ffffff;
-          /* White text color */
-          padding: 10px 0;
-          width: 100%;
-          /* Full width to match the navbar on small screens */
-        }
-
-        .dropdown-menu a {
-          color: #ffffff;
-          /* Ensure text color is white */
-          padding: 8px 0;
-          /* Padding for each dropdown item */
-          text-align: center;
-          width: 100%;
-          transition: color 0.3s ease;
-        }
-
-        .dropdown-menu a:hover {
-          color: #007BFF;
-          /* Highlight color on hover */
-        }
-
-        /* Initially hide the dropdown menu */
-        .dropdown-menu {
-          display: none;
-        }
-
-        /* Show the dropdown menu when 'active' class is applied */
-        .dropdown-menu.active {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          background-color: white;
-          /* Dark background for contrast */
-          padding: 10px 0;
-          width: 100%;
-        }
-
-        .dropdown-menu a {
-
-          color: #ffffff;
-          /* White text color */
-          padding: 8px 0;
-          text-align: center;
-          width: 100%;
-          transition: color 0.3s ease;
-        }
-
-        .dropdown-menu a:hover {
-          color: #007BFF;
-          /* Hover color */
-        }
-
-      }
-    </style>
-    <script>
-      const hamburger = document.getElementById('hamburger');
-      const navLinks = document.querySelector('.navLinks');
-      const dropdownToggles = document.querySelectorAll('.dropdown');
-
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active'); // Toggles the 'active' class
-      });
-    </script>
-
+        <div class="toggle-container" data-aos="fade-down" style="margin-right: 28px;">
+          <input id="themeToggle" class="toggle" type="checkbox">
+        </div>
+        <div class="hamburger" data-aos="fade-down">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+    </div>
     <header>
       <div class="nav-wrapperr">
         <div id="progress-container">
@@ -882,11 +658,8 @@
             <div class="action__btns">
               <a href="membership.html"><button class="btn" data-aos="fade-in"
                   style="box-shadow: 2px 2px 8px red;">Membership</button></a>
-
-
-              <a href="plantrip.html"><button class="btn" data-aos="fade-in" style="box-shadow: 2px 2px 8px red;">Plan a
-                  Trip</button></a>
-
+              <button class="btn" data-aos="fade-in" onclick="planTrip()" style="box-shadow: 2px 2px 8px red;">Plan a
+                Trip</button>
               <a href="./payment.html"><button class="btn" data-aos="fade-in" style="box-shadow: 2px 2px 8px red;">Book
                   Now</button></a>
             </div>
@@ -1678,7 +1451,6 @@
             style="box-shadow: 2px 2px 8px rgb(0, 191, 255); padding: 10px 20px; font-size: 16px; cursor: pointer;">View
             All</button>
         </div>
-
       </section>
       <br /><br /><br />
       <!--Packaging List-->
@@ -1738,7 +1510,6 @@
 
         </div>
       </section>
-
       <br /><br />
       <!--Accessibility for Special People-->
       <section class="hotel" id="hotel">
@@ -2248,7 +2019,6 @@
         </div>
         <div class="footer__col">
           <div class="footer__area">
-
             <h3 class="footer-head" class="footer__title" style="cursor: default;">Support<span></span></h3>
             <p class="footer__text footer_text">
               <a href="./blog.html" class="footer__link">Our Blogs</a>
@@ -2295,18 +2065,14 @@
                 <path
                   d="M14.851 11.923c-.179-.641-.521-1.246-1.025-1.749-1.562-1.562-4.095-1.563-5.657 0l-4.998 4.998c-1.562 1.563-1.563 4.095 0 5.657 1.562 1.563 4.096 1.561 5.656 0l3.842-3.841.333.009c.404 0 .802-.04 1.189-.117l-4.657 4.656c-.975.976-2.255 1.464-3.535 1.464-1.28 0-2.56-.488-3.535-1.464-1.952-1.951-1.952-5.12 0-7.071l4.998-4.998c.975-.976 2.256-1.464 3.536-1.464 1.279 0 2.56.488 3.535 1.464.493.493.861 1.063 1.105 1.672l-.787.784zm-5.703.147c.178.643.521 1.25 1.026 1.756 1.562 1.563 4.096 1.561 5.656 0l4.999-4.998c1.563-1.562 1.563-4.095 0-5.657-1.562-1.562-4.095-1.563-5.657 0l-3.841 3.841-.333-.009c-.404 0-.802.04-1.189.117l4.656-4.656c.975-.976 2.256-1.464 3.536-1.464 1.279 0 2.56.488 3.535 1.464 1.951 1.951 1.951 5.119 0 7.071l-4.999 4.998c-.975.976-2.255 1.464-3.535 1.464-1.28 0-2.56-.488-3.535-1.464-.494-.495-.863-1.067-1.107-1.678l.788-.785z" />
               </svg>
-
               <a href="mailto:tour@tourguide.com" class="text-nowrap" style="margin-left: 0.5rem;">tour@tourguide.com</a>
-
             </div>
             <div class="d-flex align-items-center">
               <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
                 <path
                   d="M8.26 1.289l-1.564.772c-5.793 3.02 2.798 20.944 9.31 20.944.46 0 .904-.094 1.317-.284l1.542-.755-2.898-5.594-1.54.754c-.181.087-.384.134-.597.134-2.561 0-6.841-8.204-4.241-9.596l1.546-.763-2.875-5.612zm7.746 22.711c-5.68 0-12.221-11.114-12.221-17.832 0-2.419.833-4.146 2.457-4.992l2.382-1.176 3.857 7.347-2.437 1.201c-1.439.772 2.409 8.424 3.956 7.68l2.399-1.179 3.816 7.36s-2.36 1.162-2.476 1.215c-.547.251-1.129.376-1.733.376" />
               </svg>
-
               <a href="tel:8562145852" class="text-nowrap" style="margin-left: 0.5rem;">+91 8562145852</a>
-
             </div>
             <div class="icons">
               <a
@@ -2346,21 +2112,19 @@
             <div class="visitor-widget mt-3">
               <a>
                 <img alt="Hits"
-
                   src="https://hits.sh/apu52.github.io/Travel_Website.svg?style=for-the-badge&label=Visitors&extraCount=786&color=526180&labelColor=9bbbff"  style="border-radius: 5px;"/>
-
               </a>
             </div>
           </div>
 
         </div>
-        <div style="padding: 25px; background-color: transparent; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-
+        <div
+          style="padding: 25px; background-color: transparent; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
           <label for="google_translate_element"
             style="display: block; font-weight: bold; margin-bottom: 10px; font-size: 20px; color: #123456;">Select
             Language:</label>
-          <div id="google_translate_element" style="display: inline-block; margin-top: 10px; padding: 18px; border: 1px solid #ff9fcf; border-radius: 5px; background-color: #fff;">
-
+          <div id="google_translate_element"
+            style="display: inline-block; margin-top: 10px; padding: 18px; border: 1px solid #ff9fcf; border-radius: 5px; background-color: #fff;">
           </div>
         </div>
       </div>

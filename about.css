@@ -40,7 +40,6 @@ body, html {
 
 header {
     margin-bottom: 30px;
-    background: transparent;
 }
 
 .heading {
@@ -184,5 +183,3 @@ header {
         padding: 12px 25px;
     }
 }
-
-/* */

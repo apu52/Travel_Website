@@ -1,71 +1,25 @@
-const images = [
-  // changes
-  "./gallery_Machu/Machu Picchu ,Peru.1.jpg",
-  "./gallery_Machu/Machu Picchu ,Peru.2.jpg",
-  "./gallery_Machu/Machu Picchu ,Peru.3.jpg",
-  "./gallery_Machu/Machu Picchu ,Peru.4.jpg",
-  "./gallery_Machu/Machu Picchu ,Peru.5.jpg",
-  "./gallery_Machu/Machu Picchu ,Peru.6.jpg",
-  "./gallery_Machu/Machu Picchu ,Peru.7.jpg",
-];
+// 'js/mian.js'
 
-let currentIndex = 0;
-const sliderImage = document.getElementById("slider-image");
-const thumbnailsContainer = document.getElementById("thumbnails-container");
-const descriptionText = document.getElementById("description-text");
-const ptext = document.getElementById("p-text");
+let slider_img = document.querySelector('.slider-img');
+let images = ['Machu Picchu ,Peru.1.jpg', 'Machu Picchu ,Peru.2.jpg', 'Machu Picchu ,Peru.3.jpg', 'Machu Picchu ,Peru.4.jpg', 'Machu Picchu ,Peru.5.jpg', 'Machu Picchu ,Peru.6.jpg', 'Machu Picchu ,Peru.7.jpg', 'Machu Picchu ,Peru.8.jpg'];
+let i = 0;
 
-let dtext = descriptionText.innerText;
-// console.log(dtext);
-let text = dtext.slice(0, 100);
-console.log(text);
-ptext.innerText = text + "...";
-
-// Generate Thumbnails Dynamically
-images.forEach((src, index) => {
-  const thumbnail = document.createElement("img");
-  thumbnail.src = src;
-  thumbnail.onclick = () => selectSlide(index);
-  thumbnailsContainer.appendChild(thumbnail);
-});
-
-function updateImage() {
-  // sliderImage.style.opacity = 0;
-  sliderImage.classList.remove("show");
-  sliderImage.style.opacity = 0;
-  setTimeout(() => {
-    sliderImage.src = images[currentIndex];
-    sliderImage.style.opacity = 1;
-    sliderImage.classList.add("show");
-  }, 500);
-
-  // Update Active Thumbnail
-  const thumbnails = thumbnailsContainer.querySelectorAll("img");
-  thumbnails.forEach((thumbnail, index) => {
-    thumbnail.classList.toggle("active", index === currentIndex);
-  });
+function prev(){
+	if(i <= 0) i = images.length;	
+	i--;
+	return setImg();			 
 }
 
-function moveSlide(step) {
-  currentIndex = (currentIndex + step + images.length) % images.length;
-  updateImage();
+function next(){
+	if(i >= images.length-1) i = -1;
+	i++;
+	return setImg();			 
 }
 
-function selectSlide(index) {
-  currentIndex = index;
-  updateImage();
+function setImg(){
+	return slider_img.setAttribute('src', "./gallery_Machu/"+images[i]);
+	
 }
-
-// Auto-Slide Every 5 Seconds
-setInterval(() => {
-  moveSlide(1);
-}, 5000);
-
-// Initialize the First Image
-updateImage();
-
-
-// change
 const url =
   "https://api.shecodes.io/weather/v1/forecast?query=Peru&key=057314561f8344abb8d5d80t6761o6ae&units=metric";
 axios.get(url).then(weather);
@@ -112,5 +66,3 @@ fetch(url, options)
     })
     .catch(error => console.error('Error fetching weather data:', error));
     */
-
-    

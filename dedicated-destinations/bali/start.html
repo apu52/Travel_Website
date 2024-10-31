@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tourguide</title>
-    <!-- change -->
     <link rel="stylesheet" href="./bali.css">
     <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -14,15 +13,28 @@
     <script src="../../Theme.js" defer></script>
 </head>
 
-
 <body>
+    <!--<nav>
+        <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+        <ul class="nav__links">
+          <li class="link" data-aos="fade-down"><a href="/index.html#Home">Home</a></li>
+          <li class="link" data-aos="fade-down"><a href="/index.html#Destinations">Destinations</a></li>
+          <li class="link" data-aos="fade-down"><a href="/index.html#trip">Pricing</a></li>
+          <li class="link" data-aos="fade-down"><a href="/index.html#testimonials">Testimonials</a></li>
+          <li class="link" data-aos="fade-down"><a href="/index.html#ReviewGallery">Reviews</a></li>
+          <li class="link" data-aos="fade-down"><a href="/index.htmlfeedback.html">Rate Us?</a></li>
+          <li class="link" data-aos="fade-down"><a href="/index.htmllogin.html">Login</a></li>
+        </ul>
+        <button id="toggle" data-aos="fade-down">Dark Theme</button>
+        <a href="/index.html#contact" data-aos="fade-down"><button class="btn">Contact Us</button></a>
+      </nav>
+    --->
     <div class="nav-container">
         <nav class="newNav">
-            <a href="#" class="nav__logo" data-aos="fade-right"
-                style="text-decoration: none;">Tourguide<span>.</span></a>
+            <a href="#" class="nav__logo" data-aos="fade-right" style="text-decoration: none;">Tourguide<span>.</span></a>
 
             <ul class="navLinks">
-                <li class="link home" data-aos="fade-down"><a href="../../index.html">Home</a></li>
+                <li class="link home" data-aos="fade-down"><a href="../../index.html#Home">Home</a></li>
                 <li class="link" data-aos="fade-down"><a href="../../index.html#Destinations">Destinations</a></li>
                 <li class="link" data-aos="fade-down"><a href="../../index.html#trip">Pricing</a></li>
                 <li class="link" data-aos="fade-down"><a href="../../index.html#testimonials">Testimonials</a></li>
@@ -30,13 +42,12 @@
                 <li class="link" data-aos="fade-down"><a href="../../feedback.html">Rate Us?</a></li>
                 <li class="link" data-aos="fade-down"><a href="../../login.html">Login</a></li>
             </ul>
-
+  
             <a href="../../index.html#cnt-form" class="contact-btn">
-                <button class="btn aos-init aos-animate" id="btn-style" style="margin: 0;" data-aos="fade-down"
-                    fdprocessedid="kglas">Contact Us</button>
+                <button class="btn aos-init aos-animate" id="btn-style" style="margin: 0;" data-aos="fade-down" fdprocessedid="kglas">Contact Us</button>
             </a>
             <div class="toggle-container" data-aos="fade-down">
-                <input id="themeToggle" class="toggle" type="checkbox">
+              <input id="themeToggle" class="toggle" type="checkbox">
             </div>
             <div class="hamburger" data-aos="fade-down">
                 <div class="line"></div>
@@ -48,256 +59,214 @@
 
     <section class="middle">
         <!---Image Slider----->
-        <div class="image-container">
+        <div class="slider">
             <div class="img-box">
-                <!-- change -->
-                <img src="./gallery/bali3.png" alt="">
+                <img src="./gallery/bali1.png" alt="" class="slider-img">
             </div>
 
-            <div class="abcd">
-                <div class="relative_image">
-                    <div class="slider-container">
-                        <!-- change -->
-                        <img id="slider-image" class="slider-image" src="./gallery/bali1.png"
-                            alt="Slider Image">
-                        <div class="thumb">
-                            <button class="arrow left" onclick="moveSlide(-1)">&#8249;</button>
-                            <div class="thumbnails" id="thumbnails-container">
-                              
-                            </div>
-                            <button class="arrow right" onclick="moveSlide(1)">&#8250;</button>
-                          </div>
-                          
-                    </div>
-                </div>
+            <!--Next and Previous Buttons-->
+            <button class="bttn" id="btns" onclick="prev()">Prev</button>
+            <button class="bttn" id="btns" onclick="next()">Next</button>
+            <a href="../../payment.html"><button class="bttn" id="btnss">CHECK OUT</button></a>
 
-                
-                <div class="HeadingText">
-                    <p id="p-text"></p>
-                    <div>
-                        <a href="../../payment.html"><button class="bttn btn-style"  id="btnss">Check-Out</button></a>
-                    </div>
-                </div>
+            <div class="features">
+                <h3><i title="BBQ meal included" class="fa fal fa-utensils"></i> BBQ meal included</h3>
+                <p>Main menu: Fresh fish, grilled chicken, pork chops, pasta with red sauce. Appetizers: Greek salad, shrimp saganaki, roasted vegetables, stuffed vine leaves. Vegetarian meal included</p>
             </div>
 
-            <div class="main-container">
+            <div class="features">
+                <h3><i class="fa-solid fa-bus"></i> Free pickup & drop-off</h3>
+                <p>You will be picked up from your stay or the nearest accessible point, by minibus</p>
+            </div>
 
+            <div class="features">
+                <h3><i class="fa fa-undo"></i> Free cancellation</h3>
+                <p>Up to 100% refund according to the cancellation policy</p>
+            </div>
 
-                <div class="slider">
+        </div>
 
-                    <div class="features">
-                        <h3><i title="BBQ meal included" class="fa fal fa-utensils"></i> BBQ meal included</h3>
-                        <p>Main menu: Fresh fish, grilled chicken, pork chops, pasta with red sauce. Appetizers: Greek
-                            salad,
-                            shrimp saganaki, roasted vegetables, stuffed vine leaves. Vegetarian meal included.</p>
-                    </div>
+        <div class="right-section">
+            <div class="check-in-out">
 
-                    <div class="features">
-                        <h3><i class="fa-solid fa-bus"></i> Free pickup & drop-off</h3>
-                        <p>You will be picked up from your stay or the nearest accessible point, by minibus.</p>
-                    </div>
+                <div class="check-in">
+                    <label for="">CHECK IN :</label>
+                    <input type="datetime-local" name="" id="chk-design">
+                </div>
+                <div class="check-out">
+                    <label for="">CHECK OUT :</label>
+                    <input type="datetime-local" name="" id="chk-design">
+                </div>
 
+            </div>
 
-                    <div class="features">
-                        <h3><i class="fa fa-undo"></i> Free cancellation</h3>
-                        <p>Up to 100% refund according to the cancellation policy.</p>
-                    </div>
-                    
-                    <div class="Info-container">
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1010292.8431987982!2d114.4106463031851!3d-8.454916970517566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd141d3e8100fa1%3A0x24910fb14b24e690!2sBali%2C%20Indonesia!5e0!3m2!1sen!2sin!4v1708025741250!5m2!1sen!2sin"
+                    width="800" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
 
-                        <div class="check-in-out">
-                            <h3>Book Your Stay</h3>
-    
-                            <div class="check-in">
-                                <label for="check-in">Check In:</label>
-                                <input type="datetime-local" id="check-in">
-                            </div>
-    
-                            <div class="check-out">
-                                <label for="check-out">Check Out:</label>
-                                <input type="datetime-local" id="check-out">
-                            </div>
-    
-                            <div class="btn-container">
-                                <button class="btn">Submit</button>
-                                <button class="btn">Cancel</button>
-                            </div>
-                        </div>
-    
-                        <div id="weatherInfo">
-                            <h3>Climate Info </h3>
-                            <div>Max Temp: <span class="max"></span>°C <span><i style="font-size:1.5rem;color: red;" class="fa">&#xf2c7;</i></span></div>
-                            <div>Min Temp: <span class="min"></span>°C <span><i style="font-size:1.5rem;color: blue;" class="fa">&#xf76b;</i></span></div>
-                            <div>Humidity: <span class="humidity"></span>% </div>
-                            <!-- Weather information will be inserted here -->
-                        </div>
-                        
-                    </div>
+            <!-- Menu Container -->
+            <div class="w3-container" id="menu">
+                <div class="w3-content" style="max-width:700px">
 
                     <br>
-                    <div class="transport-container">
-                                <div class="single-list-topics-content">
-                                    <div class="icon1"><i style="font-size:2rem" class="fa">&#xf072;</i></div>
-                                    <button class="btn-style">Flight</button>
-                                </div>
-
-                                <div class="single-list-topics-content">
-                                    <div class="icon2"><i style="font-size:2rem" class="fa">&#xf238;</i></div>
-                                    <button class="btn-style">Train</button>
-                                </div>
-                                <div class="single-list-topics-content">
-                                    <div class="icon3"><i style="font-size:2rem" class="fa">&#xf207;</i></div>
-                                    <button class="btn-style">Bus</button>
-                                    <div> </div>
-                                </div>
-
-                               
-                                
-                    </div>
-                </div>
-
-                <div class="right-section">
-                    <!-- Menu Container -->
-                    <div class="w3-container " id="menu">
-                        <div class="w3-content" style="max-width:700px">
-
-                            <br>
-                            <div class="w3-row w3-center w3-card w3-padding descriptionContainer">
-                                <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
-                                    <div class="w3-col s6 tablink Description">Description</div>
-                                </a>
-                                <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
-                                    <div class="w3-col s6 tablink Description">Things To Do</div>
-                                </a>
-                            </div>
-
-                            <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
-                                <!-- change -->
-                                <p id="description-text"> Bali is a province of Indonesia and the westernmost of the Lesser Sunda Islands. East of Java and west of Lombok, the province includes the island of Bali and a few smaller offshore islands, notably Nusa Penida, Nusa Lembongan, and Nusa Ceningan to the
-                                  southeast. Here's a comprehensive overview of tourism in Bali:
-                                  <br><br>
-                                  <b>
-                      <h3>Climate</h3>
-                    </b>Being just 8 degrees south of the equator, Bali has a fairly even climate all year round. Average year-round temperature stands at around 30 °C (86 °F) with a humidity level of about 85%. The west monsoon
-                                  is in place from approximately October to April, and this can bring significant rain, particularly from December to March. During the rainy season, there are comparatively fewer tourists seen in Bali. During the Easter and
-                                  Christmas holidays, the weather is very unpredictable. Outside of the monsoon period, humidity is relatively low and any rain is unlikely in lowland areas.
-                                  <br><br>
-                                  <b>
-      
-      
-      
-      
-                                </p>
-                            </div>
-
-                            <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
-                                <h3>Restaurants</h3>
-                                <p>Find the best restaurant around while traveling.</p><br>
-
-                                <h3>Attractions</h3>
-                                <p>Find the best tourist attractions in the city.</p><br>
-
-                                <h3>Rooms</h3>
-                                <p>Finds room nearby</p><br>
-
-                                <h3>Offers</h3>
-                                <p>Find the best offer and discount on tourguide.</p>
-
-                            </div>
-                               
-                        </div>
-                    </div>
-                    
-
-                    <div class="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1010292.8431987982!2d114.4106463031851!3d-8.454916970517566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd141d3e8100fa1%3A0x24910fb14b24e690!2sBali%2C%20Indonesia!5e0!3m2!1sen!2sin!4v1708025741250!5m2!1sen!2sin"
-                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="w3-row w3-center w3-card w3-padding">
+                        <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+                            <div class="w3-col s6 tablink">Description</div>
+                        </a>
+                        <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+                            <div class="w3-col s6 tablink">Things To Do</div>
+                        </a>
                     </div>
 
+                    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+
+                        <p class="w3-text-grey">
+                            Bali is a province of Indonesia and the westernmost of the Lesser Sunda Islands. East of Java and west of Lombok, the province includes the island of Bali and a few smaller offshore islands, notably Nusa Penida, Nusa Lembongan, and Nusa Ceningan to the
+                            southeast. Here's a comprehensive overview of tourism in Bali:
+                            <br><br>
+                            <b>
+                <h3>Climate</h3>
+              </b>Being just 8 degrees south of the equator, Bali has a fairly even climate all year round. Average year-round temperature stands at around 30 °C (86 °F) with a humidity level of about 85%. The west monsoon
+                            is in place from approximately October to April, and this can bring significant rain, particularly from December to March. During the rainy season, there are comparatively fewer tourists seen in Bali. During the Easter and
+                            Christmas holidays, the weather is very unpredictable. Outside of the monsoon period, humidity is relatively low and any rain is unlikely in lowland areas.
+                            <br><br>
+                            <b>
 
 
-                </div>
-            </div>
+
+            </p>
+
+
+          </div>
+
+          <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+            <h5>Restaurants</h5>
+            <p class="w3-text-grey">Find the best restaurant around while traveling.</p><br>
+
+            <h5>Attractions</h5>
+            <p class="w3-text-grey">Find the best tourist attractions in the city.</p><br>
+
+            <h5>Rooms</h5>
+            <p class="w3-text-grey">Finds room nearby</p><br>
+
+            <h5>Offers</h5>
+            <p class="w3-text-grey">Find the best offer and discount on tourguide.</p>
+
+
+          </div>
+          <br>
+
+
         </div>
-    </section>
+        <br>
+        <div class="transport-container">
+          <div class="single-list-topics-content">
+            <div class="icon1"></div>
+            <button class="bttnn">Flight</button>
+          </div>
 
+          <div class="single-list-topics-content">
+            <div class="icon2"></div>
+            <button class="bttnn">Train</button>
+          </div>
+          <div class="single-list-topics-content">
+            <div class="icon3"></div>
+            <button class="bttnn">Bus</button>
+            <div> </div>
+          </div>
 
-    <footer class="footer" data-aos="fade-up">
-        <div class="section__container footer__container">
-            <div class="footer__col">
-                <h3>Tourguide<span>.</span></h3>
-                <p>
-                    Explore your suitable and dream places around the world. Here you can find your right destination.
-                </p>
-            </div>
-            <div class="footer__col">
-                <h4>Support</h4>
-                <a href="../../faq.html" style="color: inherit; text-decoration: none;">
-                    <p style="color: inherit;">FAQs</p>
-                </a>
-                <a href="../../tnc.html" style="color: inherit; text-decoration: none;">
-                    <p>Terms & Conditions</p>
-                </a>
-                <a href="../../privacy.html" style="color: inherit; text-decoration: none;">
-                    <p>Privacy Policy</p>
-                </a>
-                <a href="../../index.html#cnt-form" style="color: inherit; text-decoration: none;">
-                    <p>Contact us</p>
-                </a>
-            </div>
-            <div class="footer__col">
-                <h4>Address</h4>
-                <div class="mapouter">
-                    <div class="gmap_canvas"><iframe width="200" height="200" id="gmap_canvas"
-                        src="https://maps.google.com/maps?q=wellington%20street%20kolkata&t=k&z=11&ie=UTF8&iwloc=&output=embed"
-                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
-                        href="https://embedgooglemap.net/124/">invincible 123movies</a><br>
-                        <style>
-                            .mapouter {
-                                position: relative;
-                                text-align: right;
-                                height: 200px;
-                                width: 200px;
-                            }
-                        </style><a href="https://www.embedgooglemap.net">embed google map on website</a>
-                        <style>
-                            .gmap_canvas {
-                                overflow: hidden;
-                                background: none !important;
-                                height: 200px;
-                                width: 200px;
-                            }
-                        </style>
-                    </div>
-                </div>
-            </div>
-            <div class="footer__col">
-                <h4>Reach Out To Us</h4>
-                <p><span>Email:</span> tour@tourguide.com</p>
-                <p><span>Phone:</span> +91 8562145852</p>
-            </div>
-        </div>
-        <div class="footer__bar">
-            Copyright © 2023 Arpan Chowdhury. All rights reserved.
-        </div>
-    </footer>
-
-    <script>
-        function openMenu(evt, menuName) {
-            var i, x, tablinks;
-            x = document.getElementsByClassName("menu");
-            for (i = 0; i < x.length; i++) {
+          <script>
+            function openMenu(evt, menuName) {
+              var i, x, tablinks;
+              x = document.getElementsByClassName("menu");
+              for (i = 0; i < x.length; i++) {
                 x[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablink");
-            for (i = 0; i < tablinks.length; i++) {
+              }
+              tablinks = document.getElementsByClassName("tablink");
+              for (i = 0; i < x.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+              }
+              document.getElementById(menuName).style.display = "block";
+              evt.currentTarget.firstElementChild.className += " w3-dark-grey";
             }
-            document.getElementById(menuName).style.display = "block";
-            evt.currentTarget.firstElementChild.className += " w3-dark-grey";
-        }
-        document.getElementById("myLink").click();
-    </script>
-    <script src="main.js"></script>
+            document.getElementById("myLink").click();
+          </script>
+            <div id="weatherInfo">
+              <h2>Climate Info </h2>
+              <div>Maximum Temperature:<span class="max"></span>°C</div>
+              <div>Minimum Temperature:<span class="min"></span>°C</div>
+              <div>Humidity:<span class="humidity"></span>%</div>
+              <!-- Weather information will be inserted here -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+  </section>
+
+  <footer class="footer" data-aos="fade-up">
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <h3>Tourguide<span>.</span></h3>
+        <p>
+          Explore your suitable and dream places around the world. Here you
+          can find your right destination.
+        </p>
+      </div>
+      <div class="footer__col">
+        <h4>Support</h4>
+        <a href="../../faq.html" style="color: inherit; text-decoration: none;">
+          <p style="color: inherit;">FAQs</p>
+        </a>
+        <a href="../../tnc.html" style="color: inherit; text-decoration: none;">
+          <p>Terms & Conditions</p>
+        </a>
+        <a href="../../privacy.html" style="color: inherit; text-decoration: none;">
+          <p>Privacy Policy</p>
+        </a>
+        <a href="../../index.html#cnt-form" style="color: inherit; text-decoration: none;"><p>Contact us</p></a>
+      </div>
+      <div class="footer__col">
+        <h4>Address</h4>
+        <div class="mapouter">
+          <div class="gmap_canvas"><iframe width="200" height="200" id="gmap_canvas"
+              src="https://maps.google.com/maps?q=wellington%20street%20kolkata&t=k&z=11&ie=UTF8&iwloc=&output=embed"
+              frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+              href="https://embedgooglemap.net/124/">invincible 123movies</a><br>
+            <style>
+              .mapouter {
+                position: relative;
+                text-align: right;
+                height: 200px;
+                width: 200px;
+              }
+            </style><a href="https://www.embedgooglemap.net">embed google map on website</a>
+            <style>
+              .gmap_canvas {
+                overflow: hidden;
+                background: none !important;
+                height: 200px;
+                width: 200px;
+              }
+            </style>
+          </div>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Reach Out To Us</h4>
+        <p><span>Email:</span> tour@tourguide.com</p>
+        <p><span>Phone:</span> +91 8562145852</p>
+      </div>
+    </div>
+    <div class="footer__bar">
+      Copyright © 2023 Arpan Chowdhury. All rights reserved.
+    </div>
+  </footer>
+
+
+  <script src="main.js"></script>
 
 </html>
