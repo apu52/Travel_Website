@@ -541,6 +541,112 @@
       <canvas></canvas>
     </div>
 
+    <nav class="newNav">
+      <div style="display: flex; align-items: center;">
+        <img src="/favicon.ico" class="sitelogo">
+        <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+    </div>
+
+      <ul class="navLinks">
+        <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
+        <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
+        <li class="link" data-aos=""><a href="#Home">Home</a></li>
+        <li class="link" data-aos=""><a href="./about.html">About</a></li>
+        <li class="link dropdown" data-aos="">
+          <a href="#Services" class="dropdown">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="/trending.html">Destination</a></li>
+                    <li><a href="/packages.html">Prices</a></li>
+                    <li><a href="/index.html">Trip Gallery</a></li>
+                    <li><a href="/index.html">Tourist Guide</a></li>
+                    <li><a href="/hotel.html">Hotel & Resort</a></li>
+          </ul>
+        </li>
+        <li class="link" data-aos=""><a href="./topdeals/topdeals.html">Top Deals</a></li>
+        <li class="link" data-aos=""><a href="./packages.html">Packages</a></li>
+        <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
+        <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+        <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
+      </ul>
+
+      <div class="contact-btns">
+        <a href="newLogin.html" class="contact-btn" id="nav-login-btn">
+          <button class="btn login" id="btn-style" data-aos="fade-down">Login/<br>SignUp</button>
+        </a>
+        <a href="mapa.html" class="contact-btn" id="nav-view-btn">
+          <button class="btn" id="btn-style" style="margin: 0;" data-aos="fade-down">View <map name=""></map></button>
+        </a>
+        <a href="loginPage.html" class="contact-btn">
+          <button class="btn" id="logout-btn" style="margin: 0; display: none;" data-aos="fade-down" disabled>Log
+            Out</button>
+        </a>
+      </div>
+
+      <div class="toggle-container" data-aos="fade-down" style="margin-right: 28px;">
+        <input id="themeToggle" class="toggle" type="checkbox">
+      </div>
+
+      <div class="hamburger" id="hamburger" data-aos="fade-down">
+        <div class="line" style="margin-bottom: 5px;"></div>
+        <div class="line" style="margin-bottom: 5px;"></div>
+        <div class="line" style="margin-bottom: 5px;"></div>
+        <div class="line" style="margin-bottom: 5px;"></div>
+      </div>
+    </nav>
+
+    <style>
+      /* General Styles for the Navigation */
+      .nav-container {
+        background-color: #ffffff;
+        /* Background color */
+        padding: 5px 20px;
+        /* Reduced padding for smaller height */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .newNav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+
+      .sitelogo {
+        height: 35px;
+        /* Slightly smaller logo */
+        width: 35px;
+        margin-right: 10px;
+        /* Reduced space between logo and title */
+      }
+
+      .nav__logo {
+        font-size: 28px;
+        /* Adjust font size */
+        color: #ece6e6;
+        /* Logo color */
+        text-decoration: none;
+        /* Remove underline */
+      }
+
+      .navLinks {
+        list-style: none;
+        /* Remove bullet points */
+        display: flex;
+        /* Display items in a row */
+        margin: 0;
+        /* Remove default margin */
+        padding: 0;
+        /* Remove default padding */
+      }
+
+      .navLinks.active {
+        display: flex;
+        /* Show links when the 'active' class is applied */
+      }
+
+
 
     <!-- <div id="progressbar"></div> -->
 
@@ -2233,7 +2339,7 @@
 
 
     <script>
-      let hamburger = document.querySelector('.hamburger');
+      hamburger = document.querySelector('.hamburger');
       hamburger.addEventListener('click', () => {
         let list = document.querySelector('.navLinks');
         list.classList.toggle('activeHamburger');
