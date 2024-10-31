@@ -1,0 +1,275 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>SiteMap</title>
+    <meta name="author" content="Xmartlabs" />
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="./sitemap.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+
+<style>
+    .circle {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      pointer-events: none;
+      background: radial-gradient(circle, rgba(71, 240, 255, 0.3), rgba(0, 119, 255, 0.3));
+      transition: transform 0.1s, left 0.1s, top 0.1s;
+    }
+
+    .circle-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    @media screen and (max-width: 768px){
+      .circle-container {
+        display: none;
+      }
+
+    }
+
+</style>
+   
+  </head>
+
+  <body id="sitemap">
+
+    <body id="sitemap">
+      <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+      <div class="circle-container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <a>
+        <div class="theme-toggle">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+        </div>
+       </a>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const coords = { x: 0, y: 0 };
+          const circles = document.querySelectorAll(".circle");
+  
+          circles.forEach(function (circle) {
+            circle.x = 0;
+            circle.y = 0;
+          });
+  
+          window.addEventListener("mousemove", function (e) {
+            coords.x = e.pageX;
+            coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
+          });
+  
+          function animateCircles() {
+            let x = coords.x;
+            let y = coords.y;
+  
+            circles.forEach(function (circle, index) {
+              circle.style.left = `${x - 12}px`;
+              circle.style.top = `${y - 12}px`;
+              circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
+  
+              const nextCircle = circles[index + 1] || circles[0];
+              circle.x = x;
+              circle.y = y;
+  
+              x += (nextCircle.x - x) * 0.3;
+              y += (nextCircle.y - y) * 0.3;
+            });
+  
+            requestAnimationFrame(animateCircles);
+          }
+  
+          animateCircles();
+        });
+  
+      </script>
+    
+    <a href="index.html"><img src="./img/Screenshot 2024-01-23 003448.png" style="width: 130px; border-radius: 6px; margin-top: 20px; margin-left: 20px;"></a>
+  
+  <video autoplay muted loop class="video-background">
+    <source src="./img/bg video term2.mp4" type="video/mp4">
+     the video tag.
+  </video>
+    <div class="container-fluid">
+        <div class="row sitemap-section">
+            <div class="col-xs-12 text-center">
+                <h1 class="title">SiteMap</h1>
+                <hr>
+              </div>
+              
+              <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+
+                    <h2 class="section-title"><a href="./index.html">Home</a></h2>
+                    <ul>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="plantrip.html">Plan a Trip</a></li>
+                        <li><a href="./payment.html">Book Now</a></li>
+                        <li><a href="./index.html#trip">Best trip packages</a></li>
+                        <li><a href="./index.html#ReviewGallery">Gallery</a></li>
+                        <li><a href="./index.html#hotel">Local Events and Festival</a></li>
+                        <li><a href="./index.html#tourist">Tourist Guide</a></li>
+                        <li><a href="./index.html#hotel">Hotels & Resorts</a></li>
+                        <li><a href="./index.html#hotel">Packaging List</a></li>
+                        <li><a href="./index.html#hotel">Travel Books</a></li>
+                        <li><a href="./index.html#hotel">Health and Safety Alerts</a></li>
+                        <li><a href="./index.html#testimo">Testimonials</a></li>
+                    </ul>
+
+                    <h2 class="section-title"><a href="about.html">About Us</a></h2>
+
+                    <h2 class="section-title"><a href="#Services">Services</a></h2>
+                    <ul >
+                        <li><a href="#Destinations">Destination</a></li>
+                        <li><a href="#trip">Prices</a></li>
+                        <li><a href="#ReviewGallery">Trip Gallery</a></li>
+                        <li><a href="#tourist">Tourist Guide</a></li>
+                        <li><a href="#hotel">Hotel & Resort</a></li>
+                    </ul>
+
+                    <h2 class="section-title"><a href="topdeals/topdeals.html">Top Deals</a></h2>
+                    <h2 class="section-title"><a href="packages.html">Packages</a></h2>
+                    <h2 class="section-title"><a href="feedback.html">Rate Us?</a></h2>
+                    <h2 class="section-title"><a href="#cnt-form">Contact Us</a></h2>
+                    <h2 class="section-title"><a href="newLogin.html">Login/SignUp</a></h2>
+                    <h2 class="section-title"><a href="mapa.html">View</a></h2>
+                    <h2 class="section-title"><a href="">Support</a></h2>
+                    <ul >
+                        <li><a href="./blog.html">Our Blogs</a></li>
+                        <li><a href="./tnc.html">Terms & Conditions</a></li>
+                        <li><a href="./privacy.html">Privacy Policy</a></li>
+                        <li><a href="./Licensing.html">Licensing</a></li>
+                        <li><a href="contributors.html">Our Contributors</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      </div>
+      <button class="top-btn" id="goToTopBtn" onclick="goToTop()"><i class="fa-solid fa-chevron-up"
+        style="color: #ffffff;"></i></button>
+      <script>
+            // Get the button
+        var mybutton = document.getElementById("goToTopBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+          scrollFunction();
+        };
+    
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+    
+        // When the user clicks on the button, scroll to the top of the document
+        function goToTop() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+      </script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const themeToggle = document.querySelector(".theme-toggle");
+        const body = document.body;
+
+        // Load the saved theme from local storage and apply it
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme && savedTheme === "dark") {
+          body.classList.add("dark-theme");
+        }
+
+        themeToggle.addEventListener("click", function () {
+          body.classList.toggle("dark-theme");
+
+          // Save the current theme in local storage
+          if (body.classList.contains("dark-theme")) {
+            localStorage.setItem("theme", "dark");
+          } else {
+            localStorage.setItem("theme", "light");
+          }
+        });
+      });
+      </script>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          setTimeout(() => {
+            const loader = document.getElementById("loader");
+            if (loader) {
+              loader.style.display = "none";
+            } else {
+              console.error("Element with ID 'loader' not found.");
+            }
+          }, 500);
+        });
+      </script>
+
+  <script>
+
+  window.addEventListener('scroll', function() {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+  });
+  </script>
+
+
+      <div>
+       <div  class="copyright-footer"> Copyright &copy;<span id="year"></span> </span> Arpan Chowdhury. All rights reserved. </div>
+      </div>
+    
+  </body>
+</html>

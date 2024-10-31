@@ -2092,9 +2092,9 @@ body {
 .sticky{
   /* margin: 10px 5px; */
   border-radius: 10px;
-  margin-top: 0.5rem;
+  padding-top: 0.5rem;
   background: linear-gradient(#002152, #271050);
-  scale:0.99;
+  /* scale:0.99; */
   
   /* padding: 0rem 1rem;
   margin-top: 0.5rem;
@@ -3069,6 +3069,21 @@ a:hover::after {
   background-color: red;
 }
 
+.trip{
+  .view__all{
+    a::after{
+      bottom: -18px;
+      }
+  }
+}
+
+.section__container{
+  .header__content{
+    a::after{
+      bottom: -18px;
+    }
+  }
+}
 
 .categories{
   margin-left: auto;
