@@ -3069,6 +3069,21 @@ a:hover::after {
   background-color: red;
 }
 
+.trip{
+  .view__all{
+    a::after{
+      bottom: -18px;
+      }
+  }
+}
+
+.section__container{
+  .header__content{
+    a::after{
+      bottom: -18px;
+    }
+  }
+}
 
 .categories{
   margin-left: auto;
