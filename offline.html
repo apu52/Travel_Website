@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You're Offline - Travel Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f9fafb;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .offline-container {
+            background: white;
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            text-align: center;
+            max-width: 32rem;
+            width: 100%;
+        }
+
+        .icon-container {
+            background-color: #eef2ff;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            transition: transform 0.2s;
+        }
+
+        .icon-container:hover {
+            transform: scale(1.05);
+        }
+
+        .icon {
+            width: 3rem;
+            height: 3rem;
+            color: #4f46e5;
+        }
+
+        h1 {
+            color: #1f2937;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        p {
+            color: #6b7280;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .primary-button {
+            background-color: #4f46e5;
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.875rem;
+        }
+
+        .primary-button:hover {
+            background-color: #4338ca;
+            transform: translateY(-1px);
+        }
+
+        .secondary-button {
+            background-color: white;
+            color: #4f46e5;
+            border: 1px solid #e5e7eb;
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.875rem;
+        }
+
+        .secondary-button:hover {
+            background-color: #f9fafb;
+            color: #4338ca;
+            transform: translateY(-1px);
+        }
+
+        .status-text {
+            margin-top: 2rem;
+            font-size: 0.875rem;
+            color: #9ca3af;
+        }
+
+        .pulse {
+            display: inline-block;
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: #4f46e5;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0.95);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(0.95);
+                opacity: 0.5;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .offline-container {
+                padding: 2rem;
+            }
+
+            .button-container {
+                flex-direction: column;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-container">
+        <div class="icon-container">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414" />
+            </svg>
+        </div>
+        <h1>You're Currently Offline</h1>
+        <p>Don't worry! You can still access previously loaded content. We'll automatically reconnect when your internet connection is restored.</p>
+        <div class="button-container">
+            <button onclick="window.location.reload()" class="primary-button">
+                Try Again
+            </button>
+            <button onclick="window.history.back()" class="secondary-button">
+                Go Back
+            </button>
+        </div>
+        <div class="status-text">
+            <span class="pulse"></span>
+            Checking connection status...
+        </div>
+    </div>
+    <script>
+        // Check if we're back online
+        window.addEventListener('online', function() {
+            window.location.reload();
+        });
+
+        // Update status text when offline
+        window.addEventListener('offline', function() {
+            document.querySelector('.status-text').innerHTML = '<span class="pulse"></span>Waiting for connection...';
+        });
+    </script>
+</body>
+</html>
