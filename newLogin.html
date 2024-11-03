@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+
+<head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +10,15 @@
   <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/f2e55912f8.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./login/login.css">
-  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
+
 <body>
   <div id="loginSuccessBanner" class="success-banner">Logged in successfully</div>
   <div id="loginDeclineBanner" class="decline-banner">Logged in Blocked <br> credentials didn't match</div>
   <div id="registerSuccessBanner" class="success-banner">Registered successfully</div>
   <div id="registerDeclineBanner" class="decline-banner">Registered Blocked <br> Same email address</div>
-  
+
   <div>
     <a href="index.html">
       <button style="padding: 25px 25px 25px 25px; border-radius: 40px; font-size: 20px;">
@@ -24,7 +26,7 @@
       </button>
     </a>
   </div>
-  
+
   <div class="main-container">
     <div class="container" id="container">
       <div class="form-container register-container">
@@ -33,14 +35,14 @@
           <input type="text" placeholder="Name" id="registerName">
           <input type="email" placeholder="Email" id="registerEmail">
           <div id="register-section" class="input-container">
-              <input type="password" placeholder="Password" id="registerPassword" oninput="checkPasswordStrength()">
-              <button type="button" id="toggleRegisterPassword">
-                <i id="registerIcon" class="fas fa-eye"></i>
-              </button>
+            <input type="password" placeholder="Password" id="registerPassword" oninput="checkPasswordStrength()">
+            <button type="button" id="toggleRegisterPassword">
+              <i id="registerIcon" class="fas fa-eye"></i>
+            </button>
           </div>
           <small id="passwordStrengthMsg" style="color: red;"></small>
           <button type="submit">Register</button>
-          
+
           <div class="social-container">
             <a class="fb" href="www.facebook.com" class="social"><i class="lni lni-facebook-fill"></i></a>
             <a class="goog" href="www.google.com" class="social"><i class="lni lni-google"></i></a>
@@ -65,7 +67,7 @@
               <label>Remember me</label>
             </div>
             <div class="pass-link">
-              <a href="#">Forgot password?</a>
+              <a href="forgotPassword.html">Forgot password?</a>
             </div>
           </div>
           <button type="submit">Login</button>
@@ -106,7 +108,7 @@
       const strengthMsg = document.getElementById("passwordStrengthMsg");
       let strength = "Weak";
       let color = "red";
-      
+
       if (password.length >= 8 && /[A-Z]/.test(password) && /[a-z]/.test(password) && /[0-9]/.test(password) && /[!@#\$%\^\&*\)\(+=._-]/.test(password)) {
         strength = "Strong";
         color = "green";
@@ -144,12 +146,11 @@
 
       //Form validation for registration name
       document.getElementById("registerName").addEventListener("keypress", function (event) {
-      var char = String.fromCharCode(event.which);
+        var char = String.fromCharCode(event.which);
         if (!(/[a-zA-Z]/.test(char))) {
-            event.preventDefault();
+          event.preventDefault();
         }
       });
-
 
       document.getElementById("loginForm").addEventListener("submit", function (event) {
         event.preventDefault();
@@ -236,4 +237,5 @@
     });
   </script>
 </body>
+
 </html>

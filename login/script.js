@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const registerButton = document.getElementById("register");
   const loginButton = document.getElementById("login");
   const container = document.getElementById("container");
@@ -35,23 +35,22 @@ function togglePasswordVisibility(buttonId, inputId, iconId) {
   const icon = document.getElementById(iconId);
 
   toggleButton.addEventListener('click', function (e) {
-      // Toggle the type attribute
-      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-      passwordInput.setAttribute('type', type);
+    // Toggle the type attribute
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
 
-      // Toggle the icon
-      if (type === 'password') {
-          icon.classList.remove('fa-eye-slash');
-          icon.classList.add('fa-eye');
-      } else {
-          icon.classList.remove('fa-eye');
-          icon.classList.add('fa-eye-slash');
-      }
+    // Toggle the icon
+    if (type === 'password') {
+      icon.classList.remove('fa-eye-slash');
+      icon.classList.add('fa-eye');
+    } else {
+      icon.classList.remove('fa-eye');
+      icon.classList.add('fa-eye-slash');
+    }
   });
 }
 
 togglePasswordVisibility('toggleLoginPassword', 'loginPassword', 'loginIcon');
 togglePasswordVisibility('toggleRegisterPassword', 'registerPassword', 'registerIcon');
- 
 
- 
+

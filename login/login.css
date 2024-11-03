@@ -18,6 +18,7 @@ body {
   opacity: 1.2;
 
 }
+
 h1 {
   font-weight: 700;
   letter-spacing: -1.5px;
@@ -116,26 +117,26 @@ button.ghost {
   color: #fff;
 }
 
-button.ghost i{
+button.ghost i {
   position: absolute;
   opacity: 0;
   transition: 0.3s ease-in-out;
 }
 
-button.ghost i.register{
+button.ghost i.register {
   right: 70px;
 }
 
-button.ghost i.login{
+button.ghost i.login {
   left: 70px;
 }
 
-button.ghost:hover i.register{
+button.ghost:hover i.register {
   right: 40px;
   opacity: 1;
 }
 
-button.ghost:hover i.login{
+button.ghost:hover i.login {
   left: 40px;
   opacity: 1;
 }
@@ -204,6 +205,7 @@ input {
 }
 
 @keyframes show {
+
   0%,
   49.99% {
     opacity: 0;
@@ -253,11 +255,9 @@ input {
   right: 0;
   top: 0;
   bottom: 0;
-  background: linear-gradient(
-    to top,
-    rgba(46, 94, 109, 0.4) 40%,
-    rgba(46, 94, 109, 0)
-  );
+  background: linear-gradient(to top,
+      rgba(46, 94, 109, 0.4) 40%,
+      rgba(46, 94, 109, 0));
 }
 
 .container.right-panel-active .overlay {
@@ -314,60 +314,60 @@ input {
 
 
 
-#login-section{
+#login-section {
   display: flex;
   align-items: center;
   width: 100%;
- }
+}
 
- #loginPassword{
+#loginPassword {
   position: relative;
- }
+}
 
- #toggleLoginPassword{
+#toggleLoginPassword {
   position: absolute;
   background: transparent;
   border: none;
   color: #505050;
   right: 15%;
-  padding:2px;
+  padding: 2px;
   transition: 0.3s ease-in-out;
- }
+}
 
- 
- #register-section{
+
+#register-section {
   display: flex;
   align-items: center;
   width: 100%;
- }
+}
 
- #registerPassword{
+#registerPassword {
   position: relative;
- }
+}
 
- #toggleRegisterPassword{
+#toggleRegisterPassword {
   position: absolute;
   background: transparent;
   border: none;
   color: #505050;
   right: 15%;
-  padding:2px;
+  padding: 2px;
   transition: 0.3s ease-in-out;
- }
+}
 
 
-      /* Add styles for the success banners */
-      .success-banner {
-        display: none;
-        background-color: #4CAF50;
-        color: white;
-        padding: 15px;
-        text-align: center;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 10000;
-    }
+/* Add styles for the success banners */
+.success-banner {
+  display: none;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+}
 
 /* Add styles for the success banners */
 .decline-banner {
@@ -387,12 +387,13 @@ input {
   color: white;
   background-color: #1877F2;
 }
+
 .social-container .goog:hover {
   color: white;
   background-color: #DB4437;
 }
+
 .social-container .lin:hover {
   color: white;
   background-color: #0A66C2;
 }
-
