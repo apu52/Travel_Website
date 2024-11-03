@@ -1103,8 +1103,8 @@ header {
 }
 
 .book__now:hover {
-  /* color: var(--extra-light);
-  background-color: var(--primary-color); */
+  color: var(--extra-light);
+  background-color: var(--primary-color);
 }
 
 .gallary__container {
