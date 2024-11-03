@@ -92,7 +92,7 @@
             background-color: #f7b731;
             color: #fff;
         }
-        .book-now a {
+        /* .book-now a {
             display: block;
             text-align: center;
             background-color: #ff5a5f;
@@ -104,7 +104,64 @@
         }
         .book-now a:hover {
             background-color: #ff787d;
-        }
+        } */
+
+
+
+        ul{
+    list-style: none;
+}
+.book-now a {
+    color: white; /* Text color for the link */
+    font-weight: normal; /* Normal font weight */
+    line-height: 45px; /* Line height for vertical centering */
+    perspective: 1000px; /* Perspective for 3D effect */
+    
+}
+
+.book-now a span {
+    position: relative; /* Positioning context for the span */
+    display: inline-block; /* Allow block-like behavior */
+    font-size: 18px; /* Font size for the text */
+    font-weight: normal; /* Normal font weight */
+    letter-spacing: 0.5px; /* Slightly increased letter spacing */
+    padding: 2px 27px; /* Padding around the text */
+    background: #ff5a5f; /* Background color of the span */
+    border-radius: 1px; /* Rounded corners */
+    transition: transform 0.3s; /* Smooth transition for transformation */
+    transform-origin: 50% 0; /* Set transform origin to the center top */
+    transform-style: preserve-3d; /* Preserve 3D transformations */
+}
+
+.book-now a span::before {
+    position: absolute; /* Position the pseudo-element */
+    top: 100%; /* Position it just below the span */
+    left: 0; /* Align to the left */
+    height: 100%; /* Match the height of the span */
+    width: 100%; /* Match the width of the span */
+    color: white; /* Text color for the pseudo-element */
+    background: black; /* Background color for the hover text */
+    border-radius: 1px; /* Match rounded corners */
+  text-align: center;
+    transition: background 0.3s; /* Smooth transition for background color */
+    transform: rotateX(-90deg); /* Hide it initially by rotating */
+    content: attr(data-hover); /* Set content to the value of data-hover attribute */
+    transform-origin: 50% 0; /* Set transform origin for the rotation */
+}
+
+.book-now a:hover span, .section-btn a:focus span {
+    transform: rotateX(90deg) translateY(-22px); /* Flip the text on hover */
+}
+
+
+.book-now a::after {
+    width: 0 !important; /* Remove the underline */
+}
+.book-now li{
+    display: flex;
+    justify-content: center;
+}
+
         /* navbar styles */
       body {
     margin: 0;
@@ -370,7 +427,12 @@
                         <span>$404/night</span>
                     </div>
                     <div class="book-now">
-                        <a href="../payment.html">Book now</a>
+                        <!-- <a href="../payment.html">Book now</a> -->
+                        <ul class="section-btn">
+                            <li>
+                                <a href="../payment.html"><span data-hover="Book Now">Book Now</span></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -390,7 +452,11 @@
                         <span>$404/night</span>
                     </div>
                     <div class="book-now">
-                        <a href="../payment.html">Book now</a>
+                        <ul class="section-btn">
+                            <li>
+                                <a href="../payment.html"><span data-hover="Book Now">Book Now</span></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -410,7 +476,11 @@
                         <span>$404/night</span>
                     </div>
                     <div class="book-now">
-                        <a href="../payment.html">Book now</a>
+                        <ul class="section-btn">
+                            <li>
+                                <a href="../payment.html"><span data-hover="Book Now">Book Now</span></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -430,12 +500,16 @@
                         <span>$404/night</span>
                     </div>
                     <div class="book-now">
-                        <a href="../payment.html">Book now</a>
+                        <ul class="section-btn">
+                            <li>
+                                <a href="../payment.html"><span data-hover="Book Now">Book Now</span></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <div class="card">
-                <img src="hotel5.jpg" alt="Hotel 3">
+                <img src="hotel5.jpg" alt="Hotel 3" style="height: 16.3rem;">
                 <div class="card-content">
                     <h2>Luxuriouslodge Retreats</h2>
                     <div class="tags">
@@ -450,7 +524,11 @@
                         <span>$404/night</span>
                     </div>
                     <div class="book-now">
-                        <a href="../payment.html">Book now</a>
+                        <ul class="section-btn">
+                            <li>
+                                <a href="../payment.html"><span data-hover="Book Now">Book Now</span></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -470,7 +548,11 @@
                         <span>$404/night</span>
                     </div>
                     <div class="book-now">
-                        <a href="../payment.html">Book now</a>
+                        <ul class="section-btn">
+                            <li>
+                                <a href="../payment.html"><span data-hover="Book Now">Book Now</span></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
