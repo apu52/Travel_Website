@@ -248,32 +248,34 @@
             </div>
     
             <ul class="navLinks">
-                <!-- <li class="link"><a href="/mapa.html">View</a></li>
-                <li class="link"><a href="/newLogin.html">Log In</a></li> -->
-                <li class="link"><a href="/index.html#Home">Home</a></li>
+                <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
+                <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
+                <li class="link" data-aos=""><a href="./index.html">Home</a></li>
                 <li class="link"><a href="/about.html">About</a></li>
-                <li class="link dropdown">
-                    <a href="/index.html#Services">Services</a>
+                <li class="link dropdown" data-aos="">
+                    <a href="#Services" class="dropdown">Services</a>
                     <ul class="dropdown-menu">
-                        <li><a href="/index.html#Destinations">Destination</a></li>
-                        <li><a href="/index.html#trip">Prices</a></li>
-                        <li><a href="/index.html#ReviewGallery">Trip Gallery</a></li>
-                        <li><a href="/index.html#tourist">Tourist Guide</a></li>
-                        <li><a href="/index.html#hotel">Hotel & Resort</a></li>
+                        <li><a href="#Destinations">Destination</a></li>
+                        <li><a href="#trip">Prices</a></li>
+                        <li><a href="#ReviewGallery">Trip Gallery</a></li>
+                        <li><a href="#tourist">Tourist Guide</a></li>
+                        <li><a href="#hotel">Hotel & Resort</a></li>
                     </ul>
                 </li>
-                <li class="link"><a href="/topdeals/topdeals.html">Top Deals</a></li>
-                <li class="link"><a href="/packages.html">Packages</a></li>
-                <li class="link"><a href="/index.html#testimonials">Testimonial</a></li>
-                <li class="link"><a href="/feedback.html">Rate Us?</a></li>
-                <li class="link"><a href="/index.html#cnt-form">Contact Us</a></li>
+                <li class="link" data-aos=""><a href="./topdeals/topdeals.html">Top Deals</a></li>
+                <li class="link" data-aos=""><a href="./packages.html">Packages</a></li>
+                <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
+                <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+                <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
             </ul>
-    
-            <div class="btn-container">
-                <a href="/newLogin.html" class="contact-btn"><button class="btn login">Login/SignUp</button></a>
-                <a href="/mapa.html" class="contact-btn"><button class="btn">View</button></a>
-                <!-- <a href="/newLogin.html" class="contact-btn"><button class="btn" id="logout-btn" disabled>Log Out</button></a> -->
-            </div>
+      
+              <a href="newLogin.html" class="contact-btn" id="nav-login-btn"><button class="btn login" id="btn-style"
+                  data-aos="fade-down">Login/SignUp</button></a>
+              <a href="mapa.html" class="contact-btn" id="nav-view-btn"><button class="btn" id="btn-style" style="margin: 0;"
+                  data-aos="fade-down">view <map name=""></map></button></a>
+      
+              <a href="loginPage.html" class="contact-btn"><button class="btn" id="logout-btn"
+                  style="margin: 0; display: none;" data-aos="fade-down" disabled>Log Out</button></a>
     
             <div class="toggle-container">
                 <input id="themeToggle" class="toggle" type="checkbox">

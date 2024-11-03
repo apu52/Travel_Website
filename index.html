@@ -545,7 +545,7 @@
       <div style="display: flex; align-items: center;">
         <img src="favicon.ico" class="sitelogo">
         <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
-      </div>
+    </div>
 
       <ul class="navLinks">
         <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
@@ -555,11 +555,11 @@
         <li class="link dropdown" data-aos="">
           <a href="#Services" class="dropdown">Services</a>
           <ul class="dropdown-menu">
-            <li><a href="#Destinations">Destination</a></li>
-            <li><a href="#trip">Prices</a></li>
-            <li><a href="#ReviewGallery">Trip Gallery</a></li>
-            <li><a href="#tourist">Tourist Guide</a></li>
-            <li><a href="#hotel">Hotel & Resort</a></li>
+            <li><a href="/trending.html">Destination</a></li>
+                    <li><a href="/packages.html">Prices</a></li>
+                    <li><a href="/index.html">Trip Gallery</a></li>
+                    <li><a href="/index.html">Tourist Guide</a></li>
+                    <li><a href="/hotel.html">Hotel & Resort</a></li>
           </ul>
         </li>
         <li class="link" data-aos=""><a href="./topdeals/topdeals.html">Top Deals</a></li>
@@ -2459,7 +2459,7 @@
 
 
     <script>
-      let hamburger = document.querySelector('.hamburger');
+      hamburger = document.querySelector('.hamburger');
       hamburger.addEventListener('click', () => {
         let list = document.querySelector('.navLinks');
         list.classList.toggle('activeHamburger');
@@ -2998,6 +2998,21 @@
 
 
 
+  </script>
+
+  <!-- Offline Status Indicator -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js')
+              .then(registration => {
+                  console.log('ServiceWorker registration successful');
+              })
+              .catch(err => {
+                  console.log('ServiceWorker registration failed: ', err);
+              });
+      });
+    }
   </script>
 
 
