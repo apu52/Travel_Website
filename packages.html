@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico"/>
     <style>
-        /* currently mostly css written in style tag after html is used */
         :root {
             --primary-color: #d6eaf7;
             --secondary-color: #e73e76;
@@ -202,7 +201,6 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             transition: transform 0.3s ease;
-            margin-bottom: 1rem;
         }
 
         .package-card:hover {
@@ -405,7 +403,7 @@
 
 <body>
     <video autoplay muted loop id="background-video">
-        <source src="packages_bg.mp4" type="video/mp4">
+        <source src="background-video.mp4" type="video/mp4">
     </video>
     <div class="video-overlay"></div>
     <header>
@@ -449,7 +447,8 @@
               <a href="loginPage.html" class="contact-btn"><button class="btn" id="logout-btn"
                   style="margin: 0; display: none;" data-aos="fade-down" disabled>Log Out</button></a>
       
-             
+              <!-- <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
+                  style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a> -->
       
               <div class="toggle-container" data-aos="fade-down">
                 <input id="themeToggle" class="toggle" type="checkbox">
@@ -463,32 +462,27 @@
           </div>
     
     </header>
-
-
-
-
     <main class="main-content">
         <section class="hotel-packages">
             <h2 class="section-title">Our Packages</h2>
-            <div class="line"></div>
             <p class="subtitle">Find the best deals and offers for your next adventure!</p>
             <div class="package-grid">
                 <div class="package-card">
-                    <img src="https://images.unsplash.com/photo-1560457079-9a6532ccb118?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80" alt="Package 1">
+                    <img src="image1.jpg" alt="Package 1">
                     <div class="package-info">
                         <h3>Package 1</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
                 <div class="package-card">
-                    <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80" alt="Package 2">
+                    <img src="image2.jpg" alt="Package 2">
                     <div class="package-info">
                         <h3>Package 2</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
                 <div class="package-card">
-                    <img src="https://images.unsplash.com/photo-1521185496955-15097b20c5fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80" alt="Package 3">
+                    <img src="image3.jpg" alt="Package 3">
                     <div class="package-info">
                         <h3>Package 3</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -498,7 +492,6 @@
         </section>
         <section class="pricing-section">
             <h2 class="section-title">Pricing</h2>
-            <div class="line"></div>
             <p class="subtitle">Choose the perfect plan for your needs</p>
             <div class="pricing-container">
                 <div class="pricing-card">
@@ -511,7 +504,8 @@
                     </ul>
                     <a href="payment.html">
                         <button class="btn">Book Now</button>
-                    </a>
+                      </a>
+                      
                 </div>
                 <div class="pricing-card">
                     <h3>Premium Plan</h3>
@@ -523,7 +517,8 @@
                     </ul>
                     <a href="payment.html">
                         <button class="btn">Book Now</button>
-                    </a>
+                      </a>
+                      
                 </div>
                 <div class="pricing-card">
                     <h3>Luxury Plan</h3>
@@ -535,220 +530,12 @@
                     </ul>
                     <a href="payment.html">
                         <button class="btn">Book Now</button>
-                    </a>
+                      </a>
+                      
                 </div>
             </div>
         </section>
     </main>
-    
-
-
-
-    <style>
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    color: var(--text-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#background-video {
-    position: fixed; /* Fixes the video to the background */
-    top: 0; /* Position to the top */
-    left: 0; /* Position to the left */
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Makes the video cover the entire screen */
-    z-index: -1; /* Sends video behind other content */
-}
-
-.video-overlay {
-    position: fixed; /* Position overlay over the video */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional overlay color */
-    z-index: 1; /* Ensure overlay is above the video */
-}
-
-
-
-:root {
-    --primary-color: #d6eaf7;
-    --secondary-color: #e73e76;
-    --bg-color: #f4f4f9;
-    --text-color: #333;
-    --card-bg: #ffffff;
-}
-
-/* Main Content */
-.main-content {
-    margin-top: 40rem;
-    padding: 40px;
-    font-family: Arial, sans-serif;
-    background-color:transparent
-}
-
-/* Section Titles */
-.section-title {
-    font-size: 2em;
-    text-align: center;
-    margin-bottom: 10px;
-    color: var(--secondary-color); /* Orange Color */
-}
-
-/* Line after Heading */
-.line {
-    width: 60%;
-    height: 2px;
-    background-color: var(--secondary-color); /* Use the same orange color */
-    margin: 10px auto;
-}
-
-/* Subtitle Styling */
-.subtitle {
-    text-align: center;
-    margin-bottom: 20px;
-    color: var(--text-color); /* Change color according to your theme */
-}
-
-/* Package Grid Styling */
-.package-grid {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.package-card {
-    width: 300px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.package-card:hover {
-    transform: translateY(-5px);
-}
-
-.package-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.package-info {
-    padding: 20px;
-    background-color: var(--card-bg);
-}
-
-.package-info h3 {
-    font-size: 1.5em;
-    margin: 0;
-    color: var(--text-color);
-}
-
-.package-info p {
-    color: #555;
-}
-
-/* Pricing Section */
-.pricing-container {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.pricing-card {
-    width: 300px;
-    border-radius: 8px;
-    padding: 20px;
-    background-color: var(--primary-color);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-.pricing-card h3 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    color: var(--text-color);
-}
-
-.pricing-card p {
-    font-size: 1.2em;
-    color: var(--text-color);
-}
-
-.pricing-card ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 20px 0;
-}
-
-.pricing-card ul li {
-    margin-bottom: 10px;
-    font-size: 1em;
-    color: #555;
-}
-
-.pricing-card .btn {
-    background-color: #ff6347;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.pricing-card .btn:hover {
-    background-color: #ff4500;
-}
-
- a:hover::after, .link a:hover::after {
-  width: 0%;
-  background-color: transparent;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </style>
 </body>
 
 </html>
