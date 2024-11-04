@@ -113,8 +113,8 @@
       .toggle-container {
         position: relative;
         right: 2.5rem;
-
       }
+     
 
       .toggle {
         width: 130%;
@@ -1107,7 +1107,7 @@
     <div class="modal-container">
       <div class="modal-wrapper">
         <div class="cross-container">
-          <i class="fas fa-times close-btn" onclick="closeModal()"></i>
+          <i class="fas fa-times close-btn" onclick="closeModal()" title="Close"></i>
         </div>
         <div class="modal-newsletter">
           <div class="modal-header">
@@ -2416,7 +2416,7 @@
 
 
     <a class="goupbtn" href="#" onclick="goToTop()"><i class="fa-solid fa-arrow-up"></i></a>
-
+  
     <script>
       var mybutton = document.querySelector(".goupbtn");
 
@@ -2427,6 +2427,11 @@
           mybutton.style.display = "none";
         }
       });
+      let btn1 = document.querySelector(".goupbtn");
+      btn1.addEventListener("mouseover", () => {
+        btn1.setAttribute("title", "Back to top");
+      });
+
 
       function goToTop() {
         const currentScroll = window.scrollY;

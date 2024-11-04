@@ -5,6 +5,20 @@ const closeBtn = document.querySelector(".close-btn");
 const subscribeBtn = document.querySelector("#news-subscribe");
 const form = document.querySelector("#modal-form");
 
+// const toggleContainer = document.querySelector('.toggle-container');
+//     const hoverText = document.querySelector('.hover-txt');
+//     // Show hover text on mouseover
+//     toggleContainer.addEventListener('mouseover', () => {
+//       hoverText.style.display = 'block';
+//       hoverText.style.color = 'white';
+//     });
+
+//     // Hide hover text on mouseout
+//     toggleContainer.addEventListener('mouseout', () => {
+//       hoverText.style.display = 'none';
+//     });
+
+
 function openModal() {
   modalContainer.style.display = "flex";
 }

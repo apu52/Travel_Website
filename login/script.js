@@ -38,14 +38,17 @@ function togglePasswordVisibility(buttonId, inputId, iconId) {
       // Toggle the type attribute
       const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
       passwordInput.setAttribute('type', type);
+      
 
       // Toggle the icon
       if (type === 'password') {
           icon.classList.remove('fa-eye-slash');
           icon.classList.add('fa-eye');
+          toggleButton.setAttribute('title', 'Show');
       } else {
           icon.classList.remove('fa-eye');
           icon.classList.add('fa-eye-slash');
+          toggleButton.setAttribute('title', 'Hide');
       }
   });
 }
