@@ -34,6 +34,7 @@ body, html {
     align-items: center;
     min-height: 100vh;
     padding: 40px;
+    padding-top: 110px;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.6);
 }
