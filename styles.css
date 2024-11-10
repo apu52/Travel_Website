@@ -15,7 +15,6 @@
   --max-width: 1200px;
   --img-color: white;
   --head-text: #6a5acd;
-
   --bubble-color: #6a5acd;
 
   --testimonials-img-border: #6a5acd;
@@ -1091,21 +1090,52 @@ header {
   color: var(--text-light);
 }
 
-.book__now {
-  padding: 0.5rem 1.5rem;
+/* .book__now {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem 2rem; 
+  background-color: #3c009d;
   color: var(--primary-color);
-  outline: none;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
   border: 1px solid var(--primary-color);
   border-radius: 5rem;
   background-color: transparent;
-  cursor: pointer;
-  transition: 0.3s;
 }
 
 .book__now:hover {
+  background-color: #eaeaea;
   color: var(--extra-light);
-  background-color: var(--primary-color);
+  border: 2px solid #323232;
+  transform: scale(1.05);
+} */
+
+.book__now {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px; /* Similar width */
+  height: 50px; /* Similar height */
+  background-color: #3c009d;
+  color: #fff; /* Matching color */
+  font-weight: 500;
+  border: none;
+  border-radius: 50px; /* Matching border-radius */
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
+
+.book__now:hover {
+  background-color: #eaeaea;
+  color: black;
+  font-weight: 600;
+  border: 2px solid #323232;
+}
+
+
 
 .gallary__container {
   display: flex;
