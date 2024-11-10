@@ -925,3 +925,9 @@ body.dark-theme #Drinks, body.dark-theme #Eat  {
   border-color: #888888;
   color: rgb(151, 6, 241);
 }
+
+.sitelogo {
+    height: 35px;
+    width: 35px;
+    margin-right: 10px;
+}

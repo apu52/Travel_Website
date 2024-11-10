@@ -11,7 +11,11 @@ body {
   width: 40%;
 }
 
-
+.sitelogo {
+  height: 35px;
+  width: 35px;
+  margin-right: 10px;
+}
 .menu {
   
   background-color: rgb(251, 248, 242);

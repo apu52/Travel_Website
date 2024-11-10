@@ -36,6 +36,7 @@ body{
  text-align: center;
  font-weight: 600;
   background: -webkit-linear-gradient(#3d00a5, #000000);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -79,6 +80,7 @@ body{
 }
 body.dark-mode .heading h1{
   background: -webkit-linear-gradient(#686868, #fff);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
