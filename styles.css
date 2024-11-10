@@ -409,6 +409,7 @@ body {
   justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap;
+  padding-top: 40px;
 }
 
 .section__title {
@@ -431,6 +432,7 @@ body {
     #7644ff 50.19%,
     #fd4766 79.69%
   );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -511,16 +513,21 @@ body.dark-theme #send {
   background-color: var(--primary-color-dark);
 }
 
+#btn-style:hover {
+  background-color: #ff0000;
+  border-color: #f5f2f2;
+  color: #fff;
+}
 #btn-style {
   /* display: inline-block; */
   border-radius: 50px;
-  transition: all 0.4s ease-in-out;
+  transition: all .4s ease-in-out;
   padding-left: 20px;
   padding-right: 20px;
   width: auto;
-  background-color: transparent;
-  border: 2px solid rgb(41, 0, 128);
-  color: red;
+  background: linear-gradient(45deg, #6a0dad, #2f73d9); /* Gradient background */
+  border: 2px solid transparent; /* Remove solid border, keep gradient */
+  color: white;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 2px;

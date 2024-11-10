@@ -18,9 +18,10 @@
 <body>
     <div class="nav-container">
         <nav class="newNav">
-            <a href="#" class="nav__logo" data-aos="fade-right"
-                style="text-decoration: none;">Tourguide<span>.</span></a>
-
+            <div style="display: flex; align-items: center;">
+                <img src="./gallery/favicon.ico" class="sitelogo">
+                <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+            </div>
             <ul class="navLinks">
                 <li class="link home" data-aos="fade-down"><a href="../../index.html">Home</a></li>
                 <li class="link" data-aos="fade-down"><a href="../../index.html#Destinations">Destinations</a></li>
@@ -58,24 +59,23 @@
                 <div class="relative_image">
                     <div class="slider-container">
                         <!-- change -->
-                        <img id="slider-image" class="slider-image" src="./gallery/Paris1.jpg"
-                            alt="Slider Image">
+                        <img id="slider-image" class="slider-image" src="./gallery/Paris1.jpg" alt="Slider Image">
                         <div class="thumb">
                             <button class="arrow left" onclick="moveSlide(-1)">&#8249;</button>
                             <div class="thumbnails" id="thumbnails-container">
-                              
+
                             </div>
                             <button class="arrow right" onclick="moveSlide(1)">&#8250;</button>
-                          </div>
-                          
+                        </div>
+
                     </div>
                 </div>
 
-                
+
                 <div class="HeadingText">
                     <p id="p-text"></p>
                     <div>
-                        <a href="../../payment.html"><button class="bttn btn-style"  id="btnss">Check-Out</button></a>
+                        <a href="../../payment.html"><button class="bttn btn-style" id="btnss">Check-Out</button></a>
                     </div>
                 </div>
             </div>
@@ -102,57 +102,59 @@
                         <h3><i class="fa fa-undo"></i> Free cancellation</h3>
                         <p>Up to 100% refund according to the cancellation policy.</p>
                     </div>
-                    
+
                     <div class="Info-container">
 
                         <div class="check-in-out">
                             <h3>Book Your Stay</h3>
-    
+
                             <div class="check-in">
                                 <label for="check-in">Check In:</label>
                                 <input type="datetime-local" id="check-in">
                             </div>
-    
+
                             <div class="check-out">
                                 <label for="check-out">Check Out:</label>
                                 <input type="datetime-local" id="check-out">
                             </div>
-    
+
                             <div class="btn-container">
                                 <button class="btn">Submit</button>
                                 <button class="btn">Cancel</button>
                             </div>
                         </div>
-    
+
                         <div id="weatherInfo">
                             <h3>Climate Info </h3>
-                            <div>Max Temp: <span class="max"></span>°C <span><i style="font-size:1.5rem;color: red;" class="fa">&#xf2c7;</i></span></div>
-                            <div>Min Temp: <span class="min"></span>°C <span><i style="font-size:1.5rem;color: blue;" class="fa">&#xf76b;</i></span></div>
+                            <div>Max Temp: <span class="max"></span>°C <span><i style="font-size:1.5rem;color: red;"
+                                        class="fa">&#xf2c7;</i></span></div>
+                            <div>Min Temp: <span class="min"></span>°C <span><i style="font-size:1.5rem;color: blue;"
+                                        class="fa">&#xf76b;</i></span></div>
                             <div>Humidity: <span class="humidity"></span>% </div>
                             <!-- Weather information will be inserted here -->
                         </div>
-                        
+
                     </div>
 
                     <br>
                     <div class="transport-container">
-                                <div class="single-list-topics-content">
-                                    <div class="icon1"><i style="font-size:2rem" class="fa">&#xf072;</i></div>
-                                    <button class="btn-style">Flight</button>
-                                </div>
+                        <div class="single-list-topics-content">
+                            <div class="icon1"><i style="font-size:2rem" class="fa">&#xf072;</i></div>
+                            <button class="btn-style">Flight</button>
+                        </div>
 
-                                <div class="single-list-topics-content">
-                                    <div class="icon2"><i style="font-size:2rem" class="fa">&#xf238;</i></div>
-                                    <button class="btn-style">Train</button>
-                                </div>
-                                <div class="single-list-topics-content">
-                                    <div class="icon3"><i style="font-size:2rem" class="fa">&#xf207;</i></div>
-                                    <button class="btn-style">Bus</button>
-                                    <div> </div>
-                                </div>
+                        <div class="single-list-topics-content">
+                            <div class="icon2"><i style="font-size:2rem" class="fa">&#xf238;</i></div>
+                            <button class="btn-style">Train</button>
+                        </div>
+                        <div class="single-list-topics-content">
+                            <div class="icon3"><i style="font-size:2rem" class="fa">&#xf207;</i></div>
+                            <button class="btn-style">Bus</button>
+                            <div> </div>
+                        </div>
 
-                               
-                                
+
+
                     </div>
                 </div>
 
@@ -173,11 +175,22 @@
 
                             <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
                                 <!-- change -->
-                                <p id="description-text">Paris is not just the capital of France; it’s the capital of fashion and the city of love. Located by the River Seine in the north of France, Paris is reputed for being the most beautiful and romantic city in the world. <br><br>                            It is overwhelmed with culture, history, iconic architecture, arty treasures, delicious food and exciting fashion. Europe’s most enchanting city, Paris is known for its many monuments, especially the Eiffel Tower, Notre-Dame
+                                <p id="description-text">Paris is not just the capital of France; it’s the capital of
+                                    fashion and the city of love. Located by the River Seine in the north of France,
+                                    Paris is reputed for being the most beautiful and romantic city in the world.
+                                    <br><br> It is overwhelmed with culture, history, iconic architecture, arty
+                                    treasures, delicious food and exciting fashion. Europe’s most enchanting city, Paris
+                                    is known for its many monuments, especially the Eiffel Tower, Notre-Dame
                                     Cathedral, Arc de Triomphe, Opéra Garnier, Les Invalides, etc.
-                                    <br><br>Paris was home to some of the best artists through history; hence, it harbors treasures and antiques from the masters like Picasso, Van Gogh, Monet, Dalí, and Renoir. Paris (and the whole of France) is famous for its
-                                    food and drinks; from cozy little cafes to one of its many Michelin-starred restaurants – the food is prepared and presented with perfection here.<br><br> Whether you’re a first-timer or regular visitor, Paris always seems
-                                    magical as there are so many places to explore. It’s no wonder that the city is one of the most popular tourist destinations in the world and welcomes over 45 million visitors every year.    
+                                    <br><br>Paris was home to some of the best artists through history; hence, it
+                                    harbors treasures and antiques from the masters like Picasso, Van Gogh, Monet, Dalí,
+                                    and Renoir. Paris (and the whole of France) is famous for its
+                                    food and drinks; from cozy little cafes to one of its many Michelin-starred
+                                    restaurants – the food is prepared and presented with perfection here.<br><br>
+                                    Whether you’re a first-timer or regular visitor, Paris always seems
+                                    magical as there are so many places to explore. It’s no wonder that the city is one
+                                    of the most popular tourist destinations in the world and welcomes over 45 million
+                                    visitors every year.
                                 </p>
                             </div>
 
@@ -195,21 +208,23 @@
                                 <p>Find the best offer and discount on tourguide.</p>
 
                             </div>
-                               
+
                         </div>
                     </div>
-                    
+
                     <!-- change -->
                     <div class="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.96777879319!2d2.264634775972664!3d48.85882549227066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sen!2sin!4v1706388784229!5m2!1sen!2sin"
-                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.96777879319!2d2.264634775972664!3d48.85882549227066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sen!2sin!4v1706388784229!5m2!1sen!2sin"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-
-
-
                 </div>
+
+
+
             </div>
+        </div>
         </div>
     </section>
 

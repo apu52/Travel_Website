@@ -10,7 +10,11 @@ body {
   /* margin-left: 5rem; */
   width: 40%;
 }
-
+.sitelogo {
+  height: 35px;
+  width: 35px;
+  margin-right: 10px;
+}
 
 .menu {
   
