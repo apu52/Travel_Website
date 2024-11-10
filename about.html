@@ -8,78 +8,71 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="about.css">
-
     <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-
 </head>
 <body>
 
-
+    <!-- Navigation Bar -->
     <div class="nav-container" id="top">
         <nav class="newNav">
-          <div style="display: flex; flex-direction: row; align-items: center;">
-          <img src="/favicon.ico" class="sitelogo">
-          
-          <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
-        </div>
-  
-          <ul class="navLinks">
-            <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
-            <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
-            <li class="link" data-aos=""><a href="./index.html">Home</a></li>
-            <li class="link" data-aos=""><a href="about.html">About</a></li>
-            <li class="link dropdown" data-aos="">
-                <a href="#Services" class="dropdown">Services</a>
-                <ul class="dropdown-menu">
-                    <li><a href="index.html#Destinations">Destination</a></li>
-                    <li><a href="index.html#trip">Prices</a></li>
-                    <li><a href="index.html#ReviewGallery">Trip Gallery</a></li>
-                    <li><a href="index.html#tourist">Tourist Guide</a></li>
-                    <li><a href="index.html#hotel">Hotel & Resort</a></li>
-                </ul>
-            </li>
-            <li class="link" data-aos=""><a href="./topdeals/topdeals.html">Top Deals</a></li>
-            <li class="link" data-aos=""><a href="./packages.html">Packages</a></li>
-            <li class="link" data-aos=""><a href="index.html#testimo">Testimonial</a></li>
-            <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
-            <li class="link" data-aos=""><a href="index.html#cnt-form">Contact Us</a></li>
-        </ul>
-  
-          <a href="newLogin.html" class="contact-btn" id="nav-login-btn"><button class="btn login" id="btn-style"
-              data-aos="fade-down">Login/SignUp</button></a>
-          <a href="mapa.html" class="contact-btn" id="nav-view-btn"><button class="btn" id="btn-style" style="margin: 0;"
-              data-aos="fade-down">view <map name=""></map></button></a>
-  
-          <a href="loginPage.html" class="contact-btn"><button class="btn" id="logout-btn"
-              style="margin: 0; display: none;" data-aos="fade-down" disabled>Log Out</button></a>
-  
-          <!-- <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
-              style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a> -->
-  
-          <div class="toggle-container" data-aos="fade-down">
-            <input id="themeToggle" class="toggle" type="checkbox">
-          </div>
-          <div class="hamburger" data-aos="fade-down">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-          </div>
+            <div class="nav-logo-container">
+                <img src="/favicon.ico" class="sitelogo">
+                <a href="#" class="nav__logo">Tourguide<span>.</span></a>
+            </div>
+            <ul class="navLinks">
+                <li class="link"><a href="mapa.html">View</a></li>
+                <li class="link"><a href="newLogin.html">Log In</a></li>
+                <li class="link"><a href="./index.html">Home</a></li>
+                <li class="link"><a href="about.html">About</a></li>
+                <li class="link dropdown">
+                    <a href="#Services">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#Destinations">Destination</a></li>
+                        <li><a href="index.html#trip">Prices</a></li>
+                        <li><a href="index.html#ReviewGallery">Trip Gallery</a></li>
+                        <li><a href="index.html#tourist">Tourist Guide</a></li>
+                        <li><a href="index.html#hotel">Hotel & Resort</a></li>
+                    </ul>
+                </li>
+                <li class="link"><a href="./topdeals/topdeals.html">Top Deals</a></li>
+                <li class="link"><a href="./packages.html">Packages</a></li>
+                <li class="link"><a href="index.html#testimo">Testimonial</a></li>
+                <li class="link"><a href="feedback.html">Rate Us?</a></li>
+                <li class="link"><a href="index.html#cnt-form">Contact Us</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="newLogin.html" class="btn login">Login/SignUp</a>
+                <a href="mapa.html" class="btn">View Map</a>
+                <button class="btn logout-btn" id="logout-btn" style="display: none;" disabled>Log Out</button>
+            </div>
+            <div class="toggle-container">
+                <input id="themeToggle" class="toggle" type="checkbox">
+            </div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </nav>
-      </div>
+    </div>
 
+    <!-- Background Video Section -->
     <div class="background">
         <video autoplay muted loop playsinline>
             <source src="./about.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+        <div class="overlay"></div>
     </div>
 
+    <!-- Content Wrapper -->
     <div class="content-wrapper">
         <header>
             <h1 class="heading">About Us</h1>
             <p class="subheading">Discover Your Purpose Through Travel</p>
         </header>
 
+        <!-- Main Content Section -->
         <div class="content-block">
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/veULUjsSrPg?si=eq3sDAt3-yZnZUme" allowfullscreen></iframe>
@@ -97,18 +90,28 @@
                 <div class="feature">
                     <i class="fas fa-map-marked-alt"></i>
                     <h3>Curated Itineraries</h3>
+                    <p>Personalized and meticulously planned trips tailored to your desires.</p>
                 </div>
                 <div class="feature">
                     <i class="fas fa-users"></i>
                     <h3>Local Guides</h3>
+                    <p>Experience authenticity with trusted guides who know the place best.</p>
                 </div>
                 <div class="feature">
                     <i class="fas fa-star"></i>
                     <h3>Unforgettable Experiences</h3>
+                    <p>Make memories that last a lifetime with unique travel experiences.</p>
                 </div>
             </div>
             <a href="newLogin.html" class="cta-button">Start Your Journey</a>
         </div>
     </div>
+
+    <!-- Custom Script for Interactivity -->
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.navLinks').classList.toggle('open');
+        });
+    </script>
 </body>
 </html>
