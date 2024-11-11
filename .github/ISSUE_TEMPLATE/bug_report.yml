@@ -51,9 +51,7 @@ body:
       options:
         - label: "I have read the Contributing Guidelines"
           required: true
-        - label: "I'm a GSSOC'24 Extended contributor"
-          required: False
-        - label: "I'm a Hacktoberfest'24  contributor"
+        - label: "I'm a  IEEE-IGDTUW Open Source Week 2024 contributor"
           required: False
         - label: "I have starred the repository"
           required: true
