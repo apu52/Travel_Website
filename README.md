@@ -98,7 +98,8 @@ Check out the live project [here](https://apu52.github.io/Travel_Website/).
 
  ### This project is now OFFICIALLY accepted for
 
- 
+ ![image](https://github.com/user-attachments/assets/50649a4b-669d-4d32-b771-200da207d853)
+
 
 ### This project was part of following Open Source Programs
 
