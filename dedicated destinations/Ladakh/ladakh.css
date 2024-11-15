@@ -348,3 +348,111 @@
     font-size: 0.6rem;
   }
 } 
+
+/* #weather-widget {
+  border: 1px solid #ddd;
+  margin-top: 80px; 
+  background: linear-gradient(135deg, #4a90e2, #1c1e21);
+  color: #fff;
+  padding: 15px;
+  height: 900px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#weather-widget h3 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  color: #ffeb3b;
+}
+
+#weather-widget .weather-description {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffdd57;
+}
+
+#weather-widget .temperature {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+#weather-widget .humidity {
+  font-size: 0.9rem;
+  color: #b3e5fc;
+}
+
+#weather-widget .icon {
+  margin-top: 10px;
+} */
+#weather-widget .heading {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #d4f3c5; /* Yellow for headings */
+}
+
+#weather-widget .value {
+  font-size: 1 rem;
+  font-weight: bold;
+  color: #b3e5fc; /* Light blue for values */
+}
+#weather-widget {
+  margin-top: 80px;
+  padding: 15px;
+  background: linear-gradient(135deg, #4a90e2, #1c1e21);
+  color: #d4f3c5;
+  font-weight: bold;
+  font-size: 1 rem;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  height: 750px;
+  border-radius: 12px;
+  position: relative;
+  border: 2px solid;
+  border-image-slice: 1;
+  border-width: 3px;
+  border-image-source: linear-gradient(to right, #7688e3, #2e023b);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: glowing 2s infinite alternate;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 10px #7688e3, 0 0 20px #7688e3;
+  }
+  100% {
+    box-shadow: 0 0 20px #7688e3, 0 0 30px #7688e3;
+  }
+}
+
+#weather-widget h3 {
+  font-size: 1.3rem;
+  color: #ffeb3b;
+  margin: 0;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+#weather-widget:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
