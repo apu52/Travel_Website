@@ -53,7 +53,7 @@ fetch(url, options)
 
     
 const apiKey = 'e4636933701791149c0636b03c135f71';
-const cityName = 'Ladakh';
+const cityName = 'Thailand';
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=15.8700&lon=100.9925&appid=e4636933701791149c0636b03c135f71&units=metric`;
 
 // Function to fetch weather data
