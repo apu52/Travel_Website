@@ -1,20 +1,42 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Simple Map</title>
-
-    <link rel="stylesheet" type="text/css" href="maps.css" />
-    <script async
-    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&loading=async&callback=initMap"
-    
-    defer>
-</script>
+    <title>Tourism Map</title>
+    <!-- Include Leaflet.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+      /* Set the height and width for the map container */
+      #map {
+        height: 100vh; /* Full viewport height */
+        width: 100%; /* Full width */
+      }
+    </style>
   </head>
   <body>
     <div id="map"></div>
 
-    <!-- prettier-ignore -->
-    
-  </body>
-  <script type="module" src="maps.js"></script>
+    <!-- Include Leaflet.js JavaScript -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+      // Initialize the map and set its view to a chosen location and zoom level
+      const map = L.map('map').setView([20.5937, 78.9629], 5); // Coordinates for India (latitude, longitude)
 
+      // Add a tile layer to the map (OpenStreetMap tiles)
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap contributors',
+      }).addTo(map);
+
+      // Add a marker for a tourism site (e.g., Taj Mahal)
+      const marker = L.marker([27.1751, 78.0421]).addTo(map);
+      marker.bindPopup('<b>Taj Mahal</b><br>A UNESCO World Heritage Site.').openPopup();
+
+      // Add more markers as needed for other sites
+      const qutubMinar = L.marker([28.5245, 77.1855]).addTo(map);
+      qutubMinar.bindPopup('<b>Qutub Minar</b><br>A historical monument in Delhi.');
+
+      const gatewayOfIndia = L.marker([18.922, 72.8347]).addTo(map);
+      gatewayOfIndia.bindPopup('<b>Gateway of India</b><br>Iconic tourist attraction in Mumbai.');
+    </script>
+  </body>
 </html>
