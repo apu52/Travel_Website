@@ -879,15 +879,42 @@
               agency and we are providing the best travel services for our
               clients.
             </p>
-            <div class="action__btns">
-              <a href="membership.html"><button class="btn" data-aos="fade-in"
-                  style="box-shadow: 2px 2px 8px red;">Membership</button></a>
-
-              <a href="plantrip.html"><button class="btn" data-aos="fade-in" style="box-shadow: 2px 2px 8px red;">Plan a
-                  Trip</button></a>
-              <a href="./payment.html"><button class="btn" data-aos="fade-in" style="box-shadow: 2px 2px 8px red;">Book
-                  Now</button></a>
-            </div>
+            <style>
+              .action__btns {
+                  display: flex;
+                  gap: 15px; /* Space between buttons */
+              }
+          
+              .btn {
+                  background-color: #ff4757; /* Button background color */
+                  color: white; /* Button text color */
+                  border: none; /* Remove default border */
+                  border-radius: 5px; /* Rounded corners */
+                  padding: 12px 20px; /* Padding for the button */
+                  font-size: 16px; /* Font size */
+                  cursor: pointer; /* Pointer on hover */
+                  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
+                  box-shadow: 2px 2px 8px red; /* Initial shadow effect */
+              }
+          
+              .btn:hover {
+                  font-size: 18px;
+                  background-color: #ff6b81; /* Darker shade on hover */
+                  transform: scale(1.1); /* Slight lift effect on hover */
+                  box-shadow: 0 10px 20px rgba(255, 0, 0, 0.5); /* Enhanced shadow effect on hover */
+              }
+          
+              .btn:active {
+                  transform: translateY(2px); /* Press effect */
+                  box-shadow: 2px 2px 8px red; /* Reset shadow effect on press */
+              }
+          </style>
+          
+          <div class="action__btns">
+              <a href="membership.html"><button class="btn" data-aos="fade-in">Membership</button></a>
+              <a href="plantrip.html"><button class="btn" data-aos="fade-in">Plan a Trip</button></a>
+              <a href="./payment.html"><button class="btn" data-aos="fade-in">Book Now</button></a>
+          </div>
 
 
             <br>
@@ -908,6 +935,8 @@
         </div>
       </section>
     </header>
+ 
+
 
     <br>
     <!-- Section of About Us -->
