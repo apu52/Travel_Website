@@ -116,6 +116,21 @@
 
         </div>
 
+        <div id="weather-widget">
+            <h3>Weather in <span id="city-name"></span></h3>
+            <p id="temperature">Temperature: --°C</p>
+            <p id="feels-like">Feels Like: --°C</p>
+            <p id="humidity">Humidity: --%</p>
+            <p id="weather-description">Condition: --</p>
+            <p id="wind-speed">Wind Speed: -- m/s</p>
+            <p id="wind-gust">Wind Gust: -- m/s</p>
+            <p id="cloudiness">Cloudiness: --%</p>
+            <p id="pressure">Pressure: -- hPa</p>
+            <p id="sea-level-pressure">Sea Level Pressure: -- hPa</p>
+            <p id="snow-volume">Snow Volume (1h): -- mm</p>
+            <div id="weather-icon"></div>
+        </div>      
+
 
     </section>
 
@@ -178,5 +193,10 @@
 
 
     <script src="Taj.js"></script>
+    <script>
+        const cityName = "Taj Mahal";
+        fetchWeather(cityName); 
+
+    </script>
 
 </html>
