@@ -44,7 +44,7 @@ Close #<issue_no>
 ##Are you contributing under any Open-source programme?
 <!--Mention it here-->
 
-- [ ] I am contributing under ` IEEE-IGDTUW Open Source Week 2024`
+- [ ] I am contributing under ` KWOC 2024`
 
 
 <!-- [X] - put a cross/X inside [] to check the box -->
