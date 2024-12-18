@@ -5,63 +5,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRENDING DESTINATIONS</title>
-    <link rel="stylesheet" href="trending.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f0f0f0, #ffffff);
+            color: #333;
+        }
 
+        /* .bottom-background {
+            background: url('https://via.placeholder.com/1920x500') no-repeat center center/cover;
+            height: 300px;
+        } */
 
+        #heading2 {
+            text-align: center;
+            font-size: 3rem;
+            margin: 20px 0;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .headingfonts {
+            text-align: center;
+            color: #34495e;
+            margin-bottom: 30px;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cards {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transform: scale(1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cards:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .cards p {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #2c3e50;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #2c3e50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin: 10px auto 20px;
+            text-transform: uppercase;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .buttons:hover {
+            background: #1abc9c;
+            transform: translateY(-3px);
+        }
+
+        .buttons a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .button1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 30px auto;
+            text-transform: uppercase;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .button1:hover {
+            background: #c0392b;
+            transform: translateY(-5px);
+        }
+
+        .button1 a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cards {
+            animation: fadeInUp 0.5s ease forwards;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="bottom-background">
-
-    </div>
+    <div class="bottom-background"></div>
     <div>
-        <h1 id="heading2" style="color:black">TRENDING TOURS</h1>
-        <pre class=" headingfonts" style="font-size: x-large;" style="color:black">Explore the world with confidence through our selection
-            popular tours crafted for those seek
-            a perfect blend of discovery and relaxation."
-            </pre>
-
+        <h1 id="heading2">TRENDING TOURS</h1>
+        <pre class="headingfonts">Explore the world with confidence through our selection
+popular tours crafted for those who seek
+a perfect blend of discovery and relaxation.</pre>
     </div>
     <div class="card-container">
         <div class="cards">
             <div class="card-image">
                 <img src="https://www.pariaoutdoorproducts.com/cdn/shop/articles/Kesugi_Ridge_Trail.jpg?v=1483048098"
-                    alt="Placeholder image" width="250px" height="350px">
+                    alt="Placeholder image">
             </div>
-            <p text-align="center">The Kesugi Ridge Trail </p>
+            <p>The Kesugi Ridge Trail</p>
             <button class="buttons">
                 <a href="Blog/kesugi.html">Blog Page</a>
             </button>
         </div>
-        <br>
         <div class="cards">
             <div class="card-image">
                 <img src="https://plutoniclove.files.wordpress.com/2019/03/39223328504_a7dc3c9054_o.jpg?w=1280"
-                    alt="Placeholder image" width="250px" height="350px">
+                    alt="Placeholder image">
             </div>
-            <p text-align="center">Kepler Track </p>
+            <p>Kepler Track</p>
             <button class="buttons">
                 <a href="Blog/kesugi.html">Blog Page</a>
             </button>
         </div>
-        <br>
         <div class="cards">
             <div class="card-image">
                 <img src="https://cdn.bookatrekking.com/data/images/2020/06/shutterstock-1013024953.jpg"
-                    alt="Placeholder image" width="250px" height="350px">
+                    alt="Placeholder image">
             </div>
-            <p text-align="center">Du Mont Blanc </p>
+            <p>Du Mont Blanc</p>
             <button class="buttons">
                 <a href="Blog/kesugi.html">Blog Page</a>
             </button>
         </div>
-        <br>
         <div class="cards">
             <div class="card-image">
                 <img src="https://media.cntraveler.com/photos/643d5d0a5722b1af03793a06/16:9/w_2560%2Cc_limit/Dal%2520Lake_GettyImages-1323846766.jpg"
-                    alt="Placeholder image" width="250px" height="350px">
+                    alt="Placeholder image">
             </div>
-            <p text-align="center">Kashmir </p>
+            <p>Kashmir</p>
             <button class="buttons">
                 <a href="Blog/kesugi.html">Blog Page</a>
             </button>
@@ -69,9 +193,9 @@
         <div class="cards">
             <div class="card-image">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPF21UstFZ23Hy_Kfnad_8zlAcnMohJLuoBg&s"
-                    alt="Placeholder image" width="250px" height="350px">
+                    alt="Placeholder image">
             </div>
-            <p text-align="center">Varanasi </p>
+            <p>Varanasi</p>
             <button class="buttons">
                 <a href="Blog/kesugi.html">Blog Page</a>
             </button>
@@ -83,3 +207,6 @@
 </body>
 
 </html>
+
+
+
