@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Maldives</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('maldives-background.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: black;
+        }
+        .tourist-photos img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .photo-caption {
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #01080f;
+        }
+        h3 {
+            color: #0a0a0a;
+            margin-top: 30px;
+        }
+        .tourist-card {
+            margin-bottom: 30px;
+        }
+        .tourist-card img {
+            border-radius: 8px;
+            max-height: 300px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <!-- Page Title -->
+        <h1 class="text-center">Explore Maldives</h1>
+        <p class="lead text-center">The Maldives is a tropical paradise known for its crystal-clear waters, white sandy beaches, and luxurious overwater bungalows.</p>
+        
+        <!-- Popular Tourist Places -->
+        <h3>Popular Tourist Places:</h3>
+        <ul class="list-group mb-5">
+            <li class="list-group-item">Maafushi Island</li>
+            <li class="list-group-item">Male City</li>
+            <li class="list-group-item">Banana Reef</li>
+            <li class="list-group-item">Vaadhoo Island (Sea of Stars)</li>
+            <li class="list-group-item">Addu Atoll</li>
+        </ul>
+        
+        <!-- Tourist Photos -->
+        <h3>Tourist Photos:</h3>
+        <div class="row">
+            <!-- Maafushi Island -->
+            <div class="col-md-4 tourist-card">
+                <img src="maafushi-island.jpeg" alt="Maafushi Island" class="img-fluid">
+                <div class="photo-caption">Maafushi Island</div>
+            </div>
+            
+            <!-- Male City -->
+            <div class="col-md-4 tourist-card">
+                <img src="male-city.jpeg" alt="Male City" class="img-fluid">
+                <div class="photo-caption">Male City</div>
+            </div>
+            
+            <!-- Banana Reef -->
+            <div class="col-md-4 tourist-card">
+                <img src="banana-reef.jpeg" alt="Banana Reef" class="img-fluid">
+                <div class="photo-caption">Banana Reef</div>
+            </div>
+        </div>
+        
+        <!-- Additional Photos -->
+        <div class="row mt-4">
+            <!-- Vaadhoo Island -->
+            <div class="col-md-4 tourist-card">
+                <img src="vaadhoo-island.jpeg" alt="Vaadhoo Island" class="img-fluid">
+                <div class="photo-caption">Vaadhoo Island (Sea of Stars)</div>
+            </div>
+            
+            <!-- Addu Atoll -->
+            <div class="col-md-4 tourist-card">
+                <img src="addu-atoll.jpeg" alt="Addu Atoll" class="img-fluid">
+                <div class="photo-caption">Addu Atoll</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

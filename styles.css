@@ -1082,6 +1082,44 @@ header {
   cursor: pointer;
 }
 
+/* styles.css */
+.trip-card {
+    background-color: #f9fcff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.trip-card img {
+    width: 100%;
+    border-radius: 8px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.trip-card h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.trip-card p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+
 .rating {
   color: goldenrod;
 }
