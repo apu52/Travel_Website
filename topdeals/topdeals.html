@@ -1,68 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/x-icon" href="favi.ico"/>
+    <link rel="icon" type="image/x-icon" href="favi.ico" />
 
     <title>Top Deals</title>
     <link rel="stylesheet" href="../styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Image-Gallery/style.css">
+    <!-- <link rel="stylesheet" href="../about.css"> -->
+    <link rel="stylesheet" href="../navLinks.css" />
+    <script src="Theme.js" defer></script>
     <style>
-
-
-
         body {
             font-family: Arial, sans-serif;
-            background:url("bestdeals.jpg");
+            background: url("bestdeals.jpg");
             margin: 0;
             padding: 20px;
             background-size: cover;
             background-attachment: fixed;
         }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
         }
+
         .header {
             text-align: center;
             margin-bottom: 40px;
         }
+
         .header h1 {
             font-size: 76px;
             margin: 0;
             color: white;
         }
+
         .header p {
             font-size: 18px;
             color: #0a0a0a;
             width: 800px;
             margin-left: 210px;
         }
+
         .deals {
             display: flex;
             justify-content: space-between;
-             /* display: grid;
+            /* display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
             flex-wrap: wrap;
-          
-            
+
+
 
         }
+
         .card {
             background-color: rgba(255, 255, 255, 0.8);
-         
+
             border-radius: 15px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             width: 32%;
             margin-bottom: 30px;
             flex-wrap: wrap;
-       
+
 
         }
 
-        .card:hover{
+        .card:hover {
             transform: scale(1.035);
         }
 
@@ -70,28 +80,39 @@
             width: 100%;
             height: auto;
         }
+
         .card-content {
             padding: 20px;
         }
+
         .card-content h2 {
             font-size: 22px;
             margin: 0;
             margin-bottom: 10px;
         }
-        .tags, .location, .price, .book-now {
+
+        .tags,
+        .location,
+        .price,
+        .book-now {
             margin-bottom: 10px;
         }
-        .tags span, .location span, .price span {
+
+        .tags span,
+        .location span,
+        .price span {
             background-color: #eee;
             border-radius: 3px;
             padding: 5px 10px;
             font-size: 14px;
             color: #555;
         }
+
         .price span {
             background-color: #f7b731;
             color: #fff;
         }
+
         /* .book-now a {
             display: block;
             text-align: center;
@@ -108,303 +129,286 @@
 
 
 
-        ul{
-    list-style: none;
-}
-.book-now a {
-    color: white; /* Text color for the link */
-    font-weight: normal; /* Normal font weight */
-    line-height: 45px; /* Line height for vertical centering */
-    perspective: 1000px; /* Perspective for 3D effect */
-    
-}
+        ul {
+            list-style: none;
+        }
 
-.book-now a span {
-    position: relative; /* Positioning context for the span */
-    display: inline-block; /* Allow block-like behavior */
-    font-size: 18px; /* Font size for the text */
-    font-weight: normal; /* Normal font weight */
-    letter-spacing: 0.5px; /* Slightly increased letter spacing */
-    padding: 2px 27px; /* Padding around the text */
-    background: #ff5a5f; /* Background color of the span */
-    border-radius: 1px; /* Rounded corners */
-    transition: transform 0.3s; /* Smooth transition for transformation */
-    transform-origin: 50% 0; /* Set transform origin to the center top */
-    transform-style: preserve-3d; /* Preserve 3D transformations */
-}
+        .book-now a {
+            color: white;
+            /* Text color for the link */
+            font-weight: normal;
+            /* Normal font weight */
+            line-height: 45px;
+            /* Line height for vertical centering */
+            perspective: 1000px;
+            /* Perspective for 3D effect */
 
-.book-now a span::before {
-    position: absolute; /* Position the pseudo-element */
-    top: 100%; /* Position it just below the span */
-    left: 0; /* Align to the left */
-    height: 100%; /* Match the height of the span */
-    width: 100%; /* Match the width of the span */
-    color: white; /* Text color for the pseudo-element */
-    background: black; /* Background color for the hover text */
-    border-radius: 1px; /* Match rounded corners */
-  text-align: center;
-    transition: background 0.3s; /* Smooth transition for background color */
-    transform: rotateX(-90deg); /* Hide it initially by rotating */
-    content: attr(data-hover); /* Set content to the value of data-hover attribute */
-    transform-origin: 50% 0; /* Set transform origin for the rotation */
-}
+        }
 
-.book-now a:hover span, .section-btn a:focus span {
-    transform: rotateX(90deg) translateY(-22px); /* Flip the text on hover */
-}
+        .book-now a span {
+            position: relative;
+            /* Positioning context for the span */
+            display: inline-block;
+            /* Allow block-like behavior */
+            font-size: 18px;
+            /* Font size for the text */
+            font-weight: normal;
+            /* Normal font weight */
+            letter-spacing: 0.5px;
+            /* Slightly increased letter spacing */
+            padding: 2px 27px;
+            /* Padding around the text */
+            background: #ff5a5f;
+            /* Background color of the span */
+            border-radius: 1px;
+            /* Rounded corners */
+            transition: transform 0.3s;
+            /* Smooth transition for transformation */
+            transform-origin: 50% 0;
+            /* Set transform origin to the center top */
+            transform-style: preserve-3d;
+            /* Preserve 3D transformations */
+        }
+
+        .book-now a span::before {
+            position: absolute;
+            /* Position the pseudo-element */
+            top: 100%;
+            /* Position it just below the span */
+            left: 0;
+            /* Align to the left */
+            height: 100%;
+            /* Match the height of the span */
+            width: 100%;
+            /* Match the width of the span */
+            color: white;
+            /* Text color for the pseudo-element */
+            background: black;
+            /* Background color for the hover text */
+            border-radius: 1px;
+            /* Match rounded corners */
+            text-align: center;
+            transition: background 0.3s;
+            /* Smooth transition for background color */
+            transform: rotateX(-90deg);
+            /* Hide it initially by rotating */
+            content: attr(data-hover);
+            /* Set content to the value of data-hover attribute */
+            transform-origin: 50% 0;
+            /* Set transform origin for the rotation */
+        }
+
+        .book-now a:hover span,
+        .section-btn a:focus span {
+            transform: rotateX(90deg) translateY(-22px);
+            /* Flip the text on hover */
+        }
 
 
-.book-now a::after {
-    width: 0 !important; /* Remove the underline */
-}
-.book-now li{
-    display: flex;
-    justify-content: center;
-}
+        .book-now a::after {
+            width: 0 !important;
+            /* Remove the underline */
+        }
+
+        .book-now li {
+            display: flex;
+            justify-content: center;
+        }
 
         /* navbar styles */
-      body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
-.nav-container {
-    height: auto;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    background-color: #0a1e3f;
-    padding: 1rem 1rem; 
-}
+        /* .nav-container {
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            background-color: #0a1e3f;
+            padding: 1rem 1rem;
+        }
 
-.newNav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
+        .newNav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-}
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
 
-.sitelogo {
-    width: 40px;
-    height: auto;
-}
+        .sitelogo {
+            width: 40px;
+            height: auto;
+        }
 
-.nav__logo {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 24px;
-    margin-left: 10px;
-}
+        .nav__logo {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 24px;
+            margin-left: 10px;
+        }
 
-.navLinks {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    gap: 1.2rem;
-    white-space: nowrap; 
-}
+        .navLinks {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            gap: 1.2rem;
+            white-space: nowrap;
+        }
 
-.navLinks .link {
-    position: relative;
-}
+        .navLinks .link {
+            position: relative;
+        }
 
-.navLinks a {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 10px 15px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
+        .navLinks a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-.navLinks a:hover {
-    background-color: rgba(238, 130, 238, 0.8);
-    color: #ff6347;
-}
+        .navLinks a:hover {
+            background-color: rgba(238, 130, 238, 0.8);
+            color: #ff6347;
+        }
 
-.active {
-    color: red !important;
-}
+        .active {
+            color: red !important;
+        }
 
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    background-color: #1f2532;
-    z-index: 999;
-    padding: 10px;
-}
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            background-color: #1f2532;
+            z-index: 999;
+            padding: 10px;
+        }
 
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
 
-.btn {
-    background-color: #ff6347;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 40px;
-    transition: background-color 0.3s ease;
-}
+        .btn {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 40px;
+            transition: background-color 0.3s ease;
+        }
 
-.btn:hover {
-    background-color: #ff4500;
-}
+        .btn:hover {
+            background-color: #ff4500;
+        }
 
-.hamburger {
-    display: none;
-}
+        .hamburger {
+            display: none;
+        }
 
-.line {
-    height: 3px;
-    width: 25px;
-    background-color: white;
-    margin: 4px 0;
-}
+        .line {
+            height: 3px;
+            width: 25px;
+            background-color: white;
+            margin: 4px 0;
+        }
 
-@media (max-width: 768px) {
-    .navLinks {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: #0a1e3f;
-    }
+        @media (max-width: 768px) {
+            .navLinks {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: #0a1e3f;
+            }
 
-    .navLinks.active {
-        display: flex;
-    }
+            .navLinks.active {
+                display: flex;
+            }
 
-    .hamburger {
-        display: block;
-    }
-}
-
+            .hamburger {
+                display: block;
+            }
+        } */
     </style>
-     
+
 </head>
+
 <body>
     <!-- adding nav bar -->
-    <div class="nav-container" id="top">
-        <nav class="newNav">
-            <div class="logo-container" style="display: flex; align-items: center;">
-                <img src="./topdeals/favi.ico" class="sitelogo">
-                <a href="/index.html" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
-            </div>
-    
-            <ul class="navLinks">
-                <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
-                <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
-                <li class="link" data-aos=""><a href="./index.html">Home</a></li>
-                <li class="link"><a href="/about.html">About</a></li>
-                <li class="link dropdown" data-aos="">
-                    <a href="#Services" class="dropdown">Services</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#Destinations">Destination</a></li>
-                        <li><a href="#trip">Prices</a></li>
-                        <li><a href="#ReviewGallery">Trip Gallery</a></li>
-                        <li><a href="#tourist">Tourist Guide</a></li>
-                        <li><a href="#hotel">Hotel & Resort</a></li>
-                    </ul>
-                </li>
-                <li class="link" data-aos=""><a href="./topdeals/topdeals.html">Top Deals</a></li>
-                <li class="link" data-aos=""><a href="./packages.html">Packages</a></li>
-                <li class="link" data-aos=""><a href="#testimonials">Testimonial</a></li>
-                <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
-                <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
-            </ul>
-      
-              <a href="newLogin.html" class="contact-btn" id="nav-login-btn"><button class="btn login" id="btn-style"
-                  data-aos="fade-down">Login/SignUp</button></a>
-              <a href="mapa.html" class="contact-btn" id="nav-view-btn"><button class="btn" id="btn-style" style="margin: 0;"
-                  data-aos="fade-down">view <map name=""></map></button></a>
-      
-              <a href="loginPage.html" class="contact-btn"><button class="btn" id="logout-btn"
-                  style="margin: 0; display: none;" data-aos="fade-down" disabled>Log Out</button></a>
-    
-            <div class="toggle-container">
-                <input id="themeToggle" class="toggle" type="checkbox">
-            </div>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-        </nav>
-    </div>    
-    
-
-    <div class="nav-container" id="top" style="margin-bottom: 10rem;">
-        <nav class="newNav">
-          <div style="display: flex; flex-direction: row; align-items: center;">
-          <img src="favi.ico" class="sitelogo">
-          
-          <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+    <nav class="newNav">
+        <div style="display: flex; align-items: center;">
+          <img src="../favicon.ico" class="sitelogo">
+          <a href="../index.html" class="nav__logo" data-aos="fade-right">Tourguide<span style="margin-right: 0.5vw;">.</span></a>
         </div>
-  
-          <ul class="navLinks">
-            <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
-            <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
-            <li class="link" data-aos=""><a href="../index.html">Home</a></li>
-            <li class="link" data-aos=""><a href="../about.html">About</a></li>
-            <li class="link dropdown" data-aos="">
-                <a href="#Services" class="dropdown">Services</a>
-                <ul class="dropdown-menu">
-                    <li><a href="../index.html#Destinations" onclick="console.log('Destinations clicked')">Destination</a></li>
-                    <li><a href="../index.html#trip" onclick="console.log('Prices clicked')">Prices</a></li>
-                    <li><a href="../index.html#ReviewGallery" onclick="console.log('Gallery clicked')">Trip Gallery</a></li>
-                    <li><a href="../index.html#tourist" onclick="console.log('Tourist clicked')">Tourist Guide</a></li>
-                    <li><a href="../index.html#hotel" onclick="console.log('Hotel clicked')">Hotel & Resort</a></li>
-                </ul>
-            </li>
-            <li class="link" data-aos=""><a href="../topdeals/topdeals.html">Top Deals</a></li>
-            <li class="link" data-aos=""><a href="../packages.html">Packages</a></li>
-            <li class="link" data-aos=""><a href="../index.html#testimo">Testimonial</a></li>
-            <li class="link" data-aos=""><a href="../feedback.html">Rate Us?</a></li>
-            <li class="link" data-aos=""><a href="../index.html#cnt-form">Contact Us</a></li>
+        <ul class="navLinks">
+          <!-- <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
+          <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li> -->
+          <li class="link" data-aos=""><a href="../index.html">Home</a></li>
+          <li class="link" data-aos=""><a href="../about.html">About</a></li>
+          <li class="link dropdown" data-aos="">
+            <a href="index.html#Services" class="dropdown">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="../index.html#Destinations">Destination</a></li>
+              <li><a href="../index.html#trip">Prices</a></li>
+              <li><a href="../index.html#ReviewGallery">Trip Gallery</a></li>
+              <li><a href="../index.html#tourist">Tourist Guide</a></li>
+              <li><a href="../index.html#hotel">Hotel & Resort</a></li>
+            </ul>
+          </li>
+          <li class="link" data-aos=""><a href="#">Top Deals</a></li>
+          <li class="link" data-aos=""><a href="../package.html">Packages</a></li>
+          <!-- <li class="link" data-aos=""><a href="#testimonial">Testimonial</a></li> -->
+          <li class="link" data-aos=""><a href="../feedback.html">Rate Us?</a></li>
+          <!-- <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li> -->
         </ul>
   
-          <a href="../newLogin.html" class="contact-btn" id="nav-login-btn"><button class="btn login" id="btn-style"
-              data-aos="fade-down">Login/SignUp</button></a>
-          <a href="../mapa.html" class="contact-btn" id="nav-view-btn"><button class="btn" id="btn-style" style="margin: 0;"
-              data-aos="fade-down">view <map name=""></map></button></a>
+        <div class="contact-btns">
+          <a href="../newLogin.html" class="contact-btn" id="nav-login-btn">
+            <button class="btn login" data-aos="fade-down">Login/<br>SignUp</button>
+          </a>
+          <a href="../mapa.html" class="contact-btn" id="nav-view-btn">
+            <button class="btn" style="margin: 0;" data-aos="fade-down">View <map name=""></map></button>
+          </a>
+          <!-- <a href="loginPage.html" class="contact-btn">
+            <button class="btn" id="logout-btn" style="margin: 0; display: none;" data-aos="fade-down" disabled>Log
+              Out</button>
+          </a> -->
+        </div>
   
-          <a href="loginPage.html" class="contact-btn"><button class="btn" id="logout-btn"
-              style="margin: 0; display: none;" data-aos="fade-down" disabled>Log Out</button></a>
+        <div class="toggle-container" data-aos="fade-down" style="margin-right: 28px;">
+          <input id="themeToggle" class="toggle" type="checkbox">
+        </div>
   
-          <!-- <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
-              style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a> -->
-  
-          <div class="toggle-container" data-aos="fade-down">
-            <input id="themeToggle" class="toggle" type="checkbox">
-          </div>
-          <div class="hamburger" data-aos="fade-down">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-          </div>
-        </nav>
-      </div>
-
-
+        <div class="hamburger" id="hamburger" data-aos="fade-down">
+          <div class="line" style="margin-bottom: 5px;"></div>
+          <div class="line" style="margin-bottom: 5px;"></div>
+          <div class="line" style="margin-bottom: 5px;"></div>
+          <!-- <div class="line" style="margin-bottom: 5px;"></div> -->
+        </div>
+      </nav>
 
 
     <div class="container" style="margin-top: 8rem;">
         <div class="header">
             <br><br><br><br>
-           <p style="color: #0c0c0c;font-weight: bold;">"Don’t miss out on our exclusive top deals of the season! Whether you’re looking to upgrade your tech, refresh your wardrobe, or find the perfect gift, we’ve got you covered with unbeatable discounts across all categories. "</p>
+            <p style="color: #0c0c0c;font-weight: bold;">"Don’t miss out on our exclusive top deals of the season!
+                Whether you’re looking to upgrade your tech, refresh your wardrobe, or find the perfect gift, we’ve got
+                you covered with unbeatable discounts across all categories. "</p>
         </div>
         <div class="deals">
             <div class="card">
@@ -554,5 +558,7 @@
             </div>
         </div>
     </div>
+    <script src="../navbarToggle.js"></script>
 </body>
+
 </html>

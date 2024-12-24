@@ -1,0 +1,436 @@
+/* General Styles for the Navigation */
+nav {
+  background-color: #ffffff;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #123456;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1001;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  height: auto;
+  width: 100%;
+  /* padding: 0.4rem 1rem; */
+  z-index: 10000;
+  transition: all 0.6s;
+}
+
+.sitelogo {
+  height: 35px;
+  /* Slightly smaller logo */
+  width: 35px;
+  margin-right: 10px;
+  /* Reduced space between logo and title */
+}
+
+
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  top: 0;
+  z-index: 10;
+}
+
+.navLinks.active {
+  display: flex;
+  /* Show links when the 'active' class is applied */
+}
+
+.link a {
+  /* font-size: 14px; */
+  /* Increased font size */
+  text-decoration: none;
+  /* Remove underline */
+  color: #d8d4d4;
+  /* Link color */
+  transition: color 0.3s ease;
+  /* Smooth color transition */
+}
+
+.link a:hover {
+  color: #007bff;
+  /* Change color on hover */
+}
+
+.dropdown-menu {
+  display: none;
+  /* Hide dropdown initially */
+  position: absolute;
+  /* Position dropdown below the parent */
+  background-color: #fff;
+  /* Dropdown background */
+  border: 1px solid #ccc;
+  /* Border for dropdown */
+  z-index: 1000;
+  /* Ensure dropdown appears above other content */
+}
+
+.dropdown-menu a {
+  color: black;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  /* Show dropdown on hover */
+}
+
+.contact-btns {
+  display: flex;
+  /* Align buttons side by side */
+  align-items: center;
+  gap: 10px;
+  /* Small gap between the buttons */
+}
+
+.contact-btn {
+  margin: 0;
+  /* Remove extra space between buttons */
+}
+
+
+/* Toggle Theme Container */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  /* Center vertically */
+  --size: 2rem;
+  /* display: none; */
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #123456;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-menu > li {
+  float: none;
+}
+
+.dropdown-menu > li > a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-menu > li > a:hover {
+  background-color: #575757;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.navLinks:active {
+  color: rgb(169, 35, 252);
+}
+
+.navLinks.activeHamburger {
+  width: 100%;
+}
+
+/* Initially the Login Button and View button are not in Hamburger Menu */
+.navLinks #LogIn-link,
+.navLinks #View-link {
+  display: none;
+}
+
+/* For removing the red line that appears on the navbar of navlink section */
+.navLinks a,
+.link a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  background-color: 'green'
+}
+
+.navLinks a::after,
+.link a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 0px;
+  bottom: -5px;
+  left: 0;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.navLinks a:hover,
+.link a:hover {
+  color: red;
+}
+
+.navLinks a:hover::after,
+.link a:hover::after {
+  width: 0%;
+  background-color: transparent;
+}
+
+
+#hamburger, .hamburger {
+  height: 2rem;
+  width: 1.7rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  display: none;
+  transition: 0.2s;
+}
+
+#hamburger > .line, .hamburger > .line {
+  height: 5px;
+  width: 100%;
+  background-color: white;
+  border:1px solid white;
+  border-radius: 2px;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1168px) {
+  #hamburger , .hamburger {
+    display: block;
+    /* Show hamburger on small screens */
+  }
+
+  .navLinks {
+    display: none;
+    /* Hide nav links on small screens */
+    flex-direction: column;
+    /* Stack links vertically */
+    position: absolute;
+    /* Position over content */
+    top: 60px;
+    /* Adjusted position below navbar */
+    left: 0;
+    background-color: #ffffff;
+    /* Background color */
+    width: 100%;
+    /* Full width */
+    z-index: 1000;
+    /* Stack above other content */
+    padding: 10px 0;
+    /* Padding for spacing */
+  }
+
+  .navLinks.active {
+    display: flex;
+    /* Show links when active */
+    padding: 10px;
+    /* Padding around links */
+  }
+
+  .link {
+    margin: 10px 0;
+    /* Space between links */
+    text-align: center;
+    /* Center align links */
+  }
+
+  .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: static;
+    /* Keeps it positioned in-line with other elements */
+    background-color: #000;
+    /* Dark background for better contrast */
+    color: #ffffff;
+    /* White text color */
+    padding: 10px 0;
+    width: 100%;
+    /* Full width to match the navbar on small screens */
+  }
+
+  .dropdown-menu a {
+    color: #ffffff;
+    /* Ensure text color is white */
+    padding: 8px 0;
+    /* Padding for each dropdown item */
+    text-align: center;
+    width: 100%;
+    transition: color 0.3s ease;
+  }
+
+  .dropdown-menu a:hover {
+    color: #007bff;
+    /* Highlight color on hover */
+  }
+
+  /* Initially hide the dropdown menu */
+  .dropdown-menu {
+    display: none;
+  }
+
+  /* Show the dropdown menu when 'active' class is applied */
+  .dropdown-menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    /* Dark background for contrast */
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .dropdown-menu a {
+    color: #ffffff;
+    /* White text color */
+    padding: 8px 0;
+    text-align: center;
+    width: 100%;
+    transition: color 0.3s ease;
+  }
+
+  .dropdown-menu a:hover {
+    color: #007bff;
+    /* Hover color */
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+  .nav__logo {
+    margin-left: 0px;
+  }
+  .navLinks {
+    position: absolute;
+    top: 70px;
+    display: none;
+    background-color: #091020;
+    /* width: 0%; */
+    width: 100%;
+    left: 0;
+    /* height: 100vh; */
+    height: auto;
+    padding: 2rem 0;
+    flex-direction: column;
+    transition: 0.2s;
+    overflow: hidden;
+  }
+
+  .active {
+    display: block;
+  }
+
+  .navLinks li {
+    width: 100%;
+    padding: 0.5rem 0;
+    background-color: #1f2532;
+    z-index: 10;
+  }
+
+  #toggle {
+    font-size: 0.6rem;
+  }
+}
+
+.nav__logo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 14px;
+  /* Adjust font size */
+  color: #ece6e6;
+  /* Logo color */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav__logo span {
+  color: #3685fb;
+  /* Assuming this is your primary color */
+}
+
+.link a {
+  color: #fff; /* Sets text color to white */
+  /* padding-top: 1.75rem; Equivalent to py-7 in Tailwind, adjust according to your base font size */
+  /* padding-bottom: 1.75rem; Equivalent to py-7 in Tailwind */
+  transition: color 0.3s; /* Transition effect for color change */
+  font-size: 0.8rem !important;
+  font-weight: 600; /* Sets font weight to 600 */
+}
+
+link a:hover {
+  color: #60a5fa;
+  background-color: rgb(169, 35, 252);
+}
+
+@media (max-width: 768px) {
+  .toggle-container {
+    --size: 2rem;
+    display: block;
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+  }
+}
+
+.toggle {
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
+  border-radius: 999px;
+  color: hsl(240, 100%, 95%);
+  transition: all 500ms;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &:checked {
+    --ray-size: calc(var(--size) * -0.4);
+    --offset-orthogonal: calc(var(--size) * 0.65);
+    --offset-diagonal: calc(var(--size) * 0.45);
+    transform: scale(0.75);
+    color: hsl(40, 100%, 50%);
+    box-shadow: inset 0 0 0 var(--size),
+      calc(var(--offset-orthogonal) * -1) 0 0 var(--ray-size),
+      var(--offset-orthogonal) 0 0 var(--ray-size),
+      0 calc(var(--offset-orthogonal) * -1) 0 var(--ray-size),
+      0 var(--offset-orthogonal) 0 var(--ray-size),
+      calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0
+        var(--ray-size),
+      var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size),
+      calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size),
+      var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
+  }
+}
+
+/* Apply fade-down animation to the toggle container */
+.toggle-container[data-aos="fade-down"] {
+  transition: opacity 500ms ease-in-out;
+  opacity: 0;
+}
+
+.toggle-container[data-aos="fade-down"].aos-animate {
+  opacity: 1;
+}

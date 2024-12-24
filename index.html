@@ -27,9 +27,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="counter.css" class="rel href">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -39,6 +39,8 @@
   <link rel="stylesheet" href="./Image-Gallery/style.css">
   <link rel="stylesheet" href="./Image-Gallery/stylecaptions.css">
   <link rel="stylesheet" href="explore.css">
+  <link rel="stylesheet" href="./navLinks.css"></link>
+  <link rel="stylesheet" href="counter.css" class="rel href">
   <title>Tourguide</title>
   <!-- adding a fav-icon -->
 
@@ -54,8 +56,6 @@
   <link rel="stylesheet" href="mouseEffect.css">
   <script src="Theme.js" defer></script>
 
-
-  <link rel="stylesheet" href="path/to/aos.css">
   <script src="path/to/aos.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
   </script>
@@ -129,16 +129,6 @@
         right: 1rem;
       }
 
-    }
-
-    @media screen and (max-width:364px) {
-      .toggle {
-        width: 190%;
-      }
-
-      .line {
-        width: 190%;
-      }
     }
 
     .gallery-rotate-image .image-container {
@@ -485,53 +475,7 @@
       <div class="circle"></div>
       <div class="circle"></div>
     </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const coords = { x: 0, y: 0 };
-        const circles = document.querySelectorAll(".circle");
 
-        circles.forEach(function (circle) {
-          circle.x = 0;
-          circle.y = 0;
-        });
-
-        window.addEventListener("mousemove", function (e) {
-          coords.x = e.pageX;
-          coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
-        });
-
-        function animateCircles() {
-          let x = coords.x;
-          let y = coords.y;
-
-          circles.forEach(function (circle, index) {
-            circle.style.left = `${x - 12}px`;
-            circle.style.top = `${y - 12}px`;
-            circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
-
-            const nextCircle = circles[index + 1] || circles[0];
-            circle.x = x;
-            circle.y = y;
-
-            x += (nextCircle.x - x) * 0.3;
-            y += (nextCircle.y - y) * 0.3;
-          });
-
-          requestAnimationFrame(animateCircles);
-        }
-
-        animateCircles();
-      });
-
-    </script>
-
-    <!-- sticky animation  -->
-    <script type="text/javascript">
-      window.addEventListener("scroll", function () {
-        var header = document.querySelector("nav");
-        header.classList.toggle("sticky", window.scrollY > 50)
-      })
-    </script>
 
     <div id="pre-loader">
       <h1>TourGuide . . .</h1>
@@ -545,8 +489,7 @@
       <div style="display: flex; align-items: center;">
         <img src="favicon.ico" class="sitelogo">
         <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span style="margin-right: 0.5vw;">.</span></a>
-    </div>
-
+      </div>
       <ul class="navLinks">
         <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
         <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
@@ -555,31 +498,31 @@
         <li class="link dropdown" data-aos="">
           <a href="#Services" class="dropdown">Services</a>
           <ul class="dropdown-menu">
-                  <li><a href="#Destinations">Destination</a></li>
-                  <li><a href="#trip">Prices</a></li>
-                  <li><a href="#ReviewGallery">Trip Gallery</a></li>
-                  <li><a href="#tourist">Tourist Guide</a></li>
-                  <li><a href="#hotel">Hotel & Resort</a></li>
+            <li><a href="#Destinations">Destination</a></li>
+            <li><a href="#trip">Prices</a></li>
+            <li><a href="#ReviewGallery">Trip Gallery</a></li>
+            <li><a href="#tourist">Tourist Guide</a></li>
+            <li><a href="#hotel">Hotel & Resort</a></li>
           </ul>
         </li>
         <li class="link" data-aos=""><a href="./topdeals/topdeals.html">Top Deals</a></li>
         <li class="link" data-aos=""><a href="./packages.html">Packages</a></li>
-        <li class="link" data-aos=""><a href="#testimo">Testimonial</a></li>
+        <li class="link" data-aos=""><a href="#testimonial">Testimonial</a></li>
         <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
         <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
       </ul>
 
       <div class="contact-btns">
         <a href="newLogin.html" class="contact-btn" id="nav-login-btn">
-          <button class="btn login" id="btn-style" data-aos="fade-down">Login/<br>SignUp</button>
+          <button class="btn login" data-aos="fade-down">Login/<br>SignUp</button>
         </a>
         <a href="mapa.html" class="contact-btn" id="nav-view-btn">
-          <button class="btn" id="btn-style" style="margin: 0;" data-aos="fade-down">View <map name=""></map></button>
+          <button class="btn" style="margin: 0;" data-aos="fade-down">View <map name=""></map></button>
         </a>
-        <a href="loginPage.html" class="contact-btn">
+        <!-- <a href="loginPage.html" class="contact-btn">
           <button class="btn" id="logout-btn" style="margin: 0; display: none;" data-aos="fade-down" disabled>Log
             Out</button>
-        </a>
+        </a> -->
       </div>
 
       <div class="toggle-container" data-aos="fade-down" style="margin-right: 28px;">
@@ -590,255 +533,10 @@
         <div class="line" style="margin-bottom: 5px;"></div>
         <div class="line" style="margin-bottom: 5px;"></div>
         <div class="line" style="margin-bottom: 5px;"></div>
-        <div class="line" style="margin-bottom: 5px;"></div>
+        <!-- <div class="line" style="margin-bottom: 5px;"></div> -->
       </div>
     </nav>
 
-    <style>
-      /* General Styles for the Navigation */
-      .nav-container {
-        background-color: #ffffff;
-        /* Background color */
-        padding: 5px 20px;
-        /* Reduced padding for smaller height */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .newNav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-      }
-
-      .sitelogo {
-        height: 35px;
-        /* Slightly smaller logo */
-        width: 35px;
-        margin-right: 10px;
-        /* Reduced space between logo and title */
-      }
-
-      .nav__logo {
-        font-size: 28px;
-        /* Adjust font size */
-        color: #ece6e6;
-        /* Logo color */
-        text-decoration: none;
-        /* Remove underline */
-      }
-
-      .navLinks {
-        list-style: none;
-        /* Remove bullet points */
-        display: flex;
-        /* Display items in a row */
-        margin: 0;
-        /* Remove default margin */
-        padding: 0;
-        /* Remove default padding */
-      }
-
-      .navLinks.active {
-        display: flex;
-        /* Show links when the 'active' class is applied */
-      }
-
-
-      .link {
-        margin: 0 10px;
-        /* Reduced space between links */
-      }
-
-      .link a {
-        font-size: 18px;
-        /* Increased font size */
-        text-decoration: none;
-        /* Remove underline */
-        color: #d8d4d4;
-        /* Link color */
-        transition: color 0.3s ease;
-        /* Smooth color transition */
-      }
-
-      .link a:hover {
-        color: #007BFF;
-        /* Change color on hover */
-      }
-
-      .dropdown-menu {
-        display: none;
-        /* Hide dropdown initially */
-        position: absolute;
-        /* Position dropdown below the parent */
-        background-color: #fff;
-        /* Dropdown background */
-        border: 1px solid #ccc;
-        /* Border for dropdown */
-        z-index: 1000;
-        /* Ensure dropdown appears above other content */
-      }
-      .dropdown-menu a{
-        color: black;
-      }
-
-      .dropdown:hover .dropdown-menu {
-        display: block;
-        /* Show dropdown on hover */
-      }
-
-      .contact-btns {
-        display: flex;
-        /* Align buttons side by side */
-        align-items: center;
-        gap: 10px;
-        /* Small gap between the buttons */
-      }
-
-      .contact-btn {
-        margin: 0;
-        /* Remove extra space between buttons */
-      }
-
-      .btn {
-        padding: 8px 12px;
-        /* Adjusted padding for smaller height */
-        border: none;
-        /* Remove border */
-        border-radius: 5px;
-        /* Rounded corners */
-        cursor: pointer;
-        /* Pointer cursor on hover */
-      }
-
-      /* Hamburger Menu Styles */
-      .hamburger {
-        display: none;
-        /* Hide on larger screens */
-      }
-
-      /* Toggle Theme Container */
-      .toggle-container {
-        display: flex;
-        align-items: center;
-        /* Center vertically */
-      }
-
-      /* Responsive Styles */
-      @media (max-width: 1168px) {
-        .hamburger {
-          display: block;
-          /* Show hamburger on small screens */
-        }
-
-        .navLinks {
-          display: none;
-          /* Hide nav links on small screens */
-          flex-direction: column;
-          /* Stack links vertically */
-          position: absolute;
-          /* Position over content */
-          top: 60px;
-          /* Adjusted position below navbar */
-          left: 0;
-          background-color: #ffffff;
-          /* Background color */
-          width: 100%;
-          /* Full width */
-          z-index: 1000;
-          /* Stack above other content */
-          padding: 10px 0;
-          /* Padding for spacing */
-        }
-
-        .navLinks.active {
-          display: flex;
-          /* Show links when active */
-          padding: 10px;
-          /* Padding around links */
-        }
-
-        .link {
-          margin: 10px 0;
-          /* Space between links */
-          text-align: center;
-          /* Center align links */
-        }
-
-        .dropdown-menu {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          position: static;
-          /* Keeps it positioned in-line with other elements */
-          background-color: #000;
-          /* Dark background for better contrast */
-          color: #ffffff;
-          /* White text color */
-          padding: 10px 0;
-          width: 100%;
-          /* Full width to match the navbar on small screens */
-        }
-
-        .dropdown-menu a {
-          color: #ffffff;
-          /* Ensure text color is white */
-          padding: 8px 0;
-          /* Padding for each dropdown item */
-          text-align: center;
-          width: 100%;
-          transition: color 0.3s ease;
-        }
-
-        .dropdown-menu a:hover {
-          color: #007BFF;
-          /* Highlight color on hover */
-        }
-
-        /* Initially hide the dropdown menu */
-        .dropdown-menu {
-          display: none;
-        }
-
-        /* Show the dropdown menu when 'active' class is applied */
-        .dropdown-menu.active {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          background-color: white;
-          /* Dark background for contrast */
-          padding: 10px 0;
-          width: 100%;
-        }
-
-        .dropdown-menu a {
-
-          color: #ffffff;
-          /* White text color */
-          padding: 8px 0;
-          text-align: center;
-          width: 100%;
-          transition: color 0.3s ease;
-        }
-
-        .dropdown-menu a:hover {
-          color: #007BFF;
-          /* Hover color */
-        }
-
-      }
-    </style>
-    <script>
-      const hamburger = document.getElementById('hamburger');
-      const navLinks = document.querySelector('.navLinks');
-      const dropdownToggles = document.querySelectorAll('.dropdown');
-
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active'); // Toggles the 'active' class
-      });
-    </script>
 
     <header>
       <div class="nav-wrapperr">
@@ -879,42 +577,57 @@
               agency and we are providing the best travel services for our
               clients.
             </p>
-            <style>
+            <!-- <style>
               .action__btns {
-                  display: flex;
-                  gap: 15px; /* Space between buttons */
+                display: flex;
+                gap: 15px;
+                /* Space between buttons */
               }
-          
+
               .btn {
-                  background-color: #ff4757; /* Button background color */
-                  color: white; /* Button text color */
-                  border: none; /* Remove default border */
-                  border-radius: 5px; /* Rounded corners */
-                  padding: 12px 20px; /* Padding for the button */
-                  font-size: 16px; /* Font size */
-                  cursor: pointer; /* Pointer on hover */
-                  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
-                  box-shadow: 2px 2px 8px red; /* Initial shadow effect */
+                background-color: #ff4757;
+                /* Button background color */
+                color: white;
+                /* Button text color */
+                border: none;
+                /* Remove default border */
+                border-radius: 5px;
+                /* Rounded corners */
+                padding: 12px 20px;
+                /* Padding for the button */
+                font-size: 16px;
+                /* Font size */
+                cursor: pointer;
+                /* Pointer on hover */
+                transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+                /* Transition for hover effects */
+                box-shadow: 2px 2px 8px red;
+                /* Initial shadow effect */
               }
-          
+
               .btn:hover {
-                  font-size: 18px;
-                  background-color: #ff6b81; /* Darker shade on hover */
-                  transform: scale(1.1); /* Slight lift effect on hover */
-                  box-shadow: 0 10px 20px rgba(255, 0, 0, 0.5); /* Enhanced shadow effect on hover */
+                font-size: 18px;
+                background-color: #ff6b81;
+                /* Darker shade on hover */
+                transform: scale(1.1);
+                /* Slight lift effect on hover */
+                box-shadow: 0 10px 20px rgba(255, 0, 0, 0.5);
+                /* Enhanced shadow effect on hover */
               }
-          
+
               .btn:active {
-                  transform: translateY(2px); /* Press effect */
-                  box-shadow: 2px 2px 8px red; /* Reset shadow effect on press */
+                transform: translateY(2px);
+                /* Press effect */
+                box-shadow: 2px 2px 8px red;
+                /* Reset shadow effect on press */
               }
-          </style>
-          
-          <div class="action__btns">
-              <a href="membership.html"><button class="btn" data-aos="fade-in">Membership</button></a>
-              <a href="plantrip.html"><button class="btn" data-aos="fade-in">Plan a Trip</button></a>
-              <a href="./payment.html"><button class="btn" data-aos="fade-in">Book Now</button></a>
-          </div>
+            </style> -->
+
+            <div class="action__btns">
+              <a href="membership.html"><button class="btn" >Membership</button></a>
+              <a href="plantrip.html"><button class="btn" >Plan a Trip</button></a>
+              <a href="./payment.html"><button class="btn" >Book Now</button></a>
+            </div>
 
 
             <br>
@@ -935,7 +648,7 @@
         </div>
       </section>
     </header>
- 
+
 
 
     <br>
@@ -1107,24 +820,7 @@
 
       </div>
     </section>
-
-    <script>
-      let valueDisplays = document.querySelectorAll(".num");
-      let interval = 4000;
-      valueDisplays.forEach((valueDisplay) => {
-        let startValue = 0;
-        let endValue = parseInt(valueDisplay.getAttribute("data-val"));
-        let duration = Math.floor(interval / endValue);
-        let counter = setInterval(function () {
-          startValue += 10;
-          valueDisplay.textContent = startValue;
-          if (startValue == endValue) {
-            clearInterval(counter);
-          }
-        }, duration);
-      });
-    </script>
-
+    
 
 
 
@@ -1360,7 +1056,7 @@
 
       <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
       <script src="explore.js"></script>
-    </section>
+      </section>
       <!-- End Destination Section -->
 
       <!-- Start Prices Section -->
@@ -1419,7 +1115,7 @@
                 Trending</button></a>
           </div>
         </div>
-      </section> 
+      </section>
       <div class="hero">
         <div class="carousel">
           <ul>
@@ -1788,7 +1484,7 @@
 
       <!-- Testimonials Section -->
       <section style="    width: 100%;
-    height: 100%;" id="testimo" class="testimo">
+    height: 100%;" id="testimonial" class="testimonial">
         <h2 class="testimonial-heading section__title" align-items="center" data-aos="fade-in">Testimonials</h2>
         <div class="container" style="display: flex; flex-wrap: wrap; justify-content: center;">
 
@@ -2079,26 +1775,7 @@
     </div>
     </section>
 
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".swiper-container", {
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        coverflowEffect: {
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 2,
-          slideShadows: true,
-        },
-        loop: true,
-      });
-    </script>
+    
 
 
 
@@ -2217,40 +1894,7 @@
       </div>
     </section>
 
-    <script>
-      document.getElementById('subscriptionForm').addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent form submission
-
-        var emailInput = document.getElementById('emailInput').value;
-        var emailPattern = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/; // Improved regex to check for valid domain
-
-        if (emailPattern.test(emailInput)) {
-          showSubscriptionMessage(); // Show success message if email is valid
-        } else {
-          showErrorMessage(); // Show error message if email is invalid
-        }
-      });
-
-      function showSubscriptionMessage() {
-        var messageElement = document.getElementById('subscriptionMessage');
-        messageElement.style.display = 'block';
-
-        // Hide message after 4 seconds
-        setTimeout(function () {
-          messageElement.style.display = 'none';
-        }, 4000);
-      }
-
-      function showErrorMessage() {
-        var errorElement = document.getElementById('errorMessage');
-        errorElement.style.display = 'block';
-
-        // Hide error message after 4 seconds
-        setTimeout(function () {
-          errorElement.style.display = 'none';
-        }, 4000);
-      }
-    </script>
+   
 
     <footer class="footer" data-aos="fade-up">
       <div class=" footer__container">
@@ -2275,26 +1919,26 @@
         </div>
         <div class="footer__col">
           <div class="footer__area">
-              <h3 class="footer-head footer__subtitle">Support</h3>
-              <p class="footer_link_text">
-                  <a href="./blog.html" class="footer__link">Our Blogs</a> <br>
-                  <a href="./faq.html" class="footer__link">FAQs</a> <br>
-                  <a href="./tnc.html" class="footer__link">Terms & Conditions</a> <br>
-                  <a href="./privacy.html" class="footer__link">Privacy Policy</a> <br>
-                  <a href="./Licensing.html" class="footer__link">Licensing</a> <br>
-                  <a href="#cnt-form" class="footer__link">Contact Us</a> <br>
-                  <a href="contributors.html" class="footer__link">Our Contributors</a> <br>
-                  <a href="sitemap.html" class="footer__link">SiteMap</a>
-              </p>
+            <h3 class="footer-head footer__subtitle">Support</h3>
+            <p class="footer_link_text">
+              <a href="./blog.html" class="footer__link">Our Blogs</a> <br>
+              <a href="./faq.html" class="footer__link">FAQs</a> <br>
+              <a href="./tnc.html" class="footer__link">Terms & Conditions</a> <br>
+              <a href="./privacy.html" class="footer__link">Privacy Policy</a> <br>
+              <a href="./Licensing.html" class="footer__link">Licensing</a> <br>
+              <a href="#cnt-form" class="footer__link">Contact Us</a> <br>
+              <a href="contributors.html" class="footer__link">Our Contributors</a> <br>
+              <a href="sitemap.html" class="footer__link">SiteMap</a>
+            </p>
           </div>
-      </div>
+        </div>
         <div class="footer__col">
           <h4 class="footer-head" style="padding-left: 35px; color: #123456;"> Address</h4>
           <div class="mapouter">
             <div class="gmap_canvas"><iframe width="200" height="200" id="gmap_canvas"
                 src="https://maps.google.com/maps?q=wellington%20street%20kolkata&t=k&z=11&ie=UTF8&iwloc=&output=embed"
                 frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-               
+
               <style>
                 .mapouter {
                   position: relative;
@@ -2351,21 +1995,21 @@
             <!-- Visitor Widget -->
             <div class="visitor-widget mt-3" style="display: flex; justify-content: center; margin-top: 20px;">
               <a>
-                <img 
-                  alt="Hits" 
-                  src="https://hits.sh/apu52.github.io/Travel_Website.svg?style=for-the-badge&label=Visitors&extraCount=786&color=526180&labelColor=9bbbff" 
-                  style="transform: scale(1.2);" 
-                />
+                <img alt="Hits"
+                  src="https://hits.sh/apu52.github.io/Travel_Website.svg?style=for-the-badge&label=Visitors&extraCount=786&color=526180&labelColor=9bbbff"
+                  style="transform: scale(1.2);" />
               </a>
             </div>
           </div>
 
         </div>
         <div style="padding: 32px; margin-top: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-          <label for="google_translate_element" style="display: block; font-weight: bold; font-size: 18px; color: #123456;">
+          <label for="google_translate_element"
+            style="display: block; font-weight: bold; font-size: 18px; color: #123456;">
             Select Language:
           </label>
-          <div id="google_translate_element" style="display: inline-block; padding: 15px; border: 1px solid var(--secondary-color); border-radius: 5px; background-color: #fff;">
+          <div id="google_translate_element"
+            style="display: inline-block; padding: 15px; border: 1px solid var(--secondary-color); border-radius: 5px; background-color: #fff;">
           </div>
         </div>
       </div>
@@ -2378,7 +2022,121 @@
       </div>
 
 
+ <!-- Swiper JS -->
+ <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+ <!-- Initialize Swiper -->
+ <script>
+   var swiper = new Swiper(".swiper-container", {
+     effect: 'coverflow',
+     grabCursor: true,
+     centeredSlides: true,
+     slidesPerView: 'auto',
+     coverflowEffect: {
+       rotate: 0,
+       stretch: 0,
+       depth: 100,
+       modifier: 2,
+       slideShadows: true,
+     },
+     loop: true,
+   });
+ </script>
+ <script>
+   document.addEventListener("DOMContentLoaded", function () {
+     const coords = { x: 0, y: 0 };
+     const circles = document.querySelectorAll(".circle");
+
+     circles.forEach(function (circle) {
+       circle.x = 0;
+       circle.y = 0;
+     });
+
+     window.addEventListener("mousemove", function (e) {
+       coords.x = e.pageX;
+       coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
+     });
+
+     function animateCircles() {
+       let x = coords.x;
+       let y = coords.y;
+
+       circles.forEach(function (circle, index) {
+         circle.style.left = `${x - 12}px`;
+         circle.style.top = `${y - 12}px`;
+         circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
+
+         const nextCircle = circles[index + 1] || circles[0];
+         circle.x = x;
+         circle.y = y;
+
+         x += (nextCircle.x - x) * 0.3;
+         y += (nextCircle.y - y) * 0.3;
+       });
+
+       requestAnimationFrame(animateCircles);
+     }
+
+     animateCircles();
+   });
+
+ </script>
+
+ <!-- sticky animation  -->
+ <script type="text/javascript">
+  
+ </script>
+ <script>
+   let valueDisplays = document.querySelectorAll(".num");
+   let interval = 4000;
+   valueDisplays.forEach((valueDisplay) => {
+     let startValue = 0;
+     let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+     let duration = Math.floor(interval / endValue);
+     let counter = setInterval(function () {
+       startValue += 10;
+       valueDisplay.textContent = startValue;
+       if (startValue == endValue) {
+         clearInterval(counter);
+       }
+     }, duration);
+   });
+ </script>
+
+ <script>
+   document.getElementById('subscriptionForm').addEventListener('submit', function (event) {
+     event.preventDefault(); // Prevent form submission
+
+     var emailInput = document.getElementById('emailInput').value;
+     var emailPattern = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/; // Improved regex to check for valid domain
+
+     if (emailPattern.test(emailInput)) {
+       showSubscriptionMessage(); // Show success message if email is valid
+     } else {
+       showErrorMessage(); // Show error message if email is invalid
+     }
+   });
+
+   function showSubscriptionMessage() {
+     var messageElement = document.getElementById('subscriptionMessage');
+     messageElement.style.display = 'block';
+
+     // Hide message after 4 seconds
+     setTimeout(function () {
+       messageElement.style.display = 'none';
+     }, 4000);
+   }
+
+   function showErrorMessage() {
+     var errorElement = document.getElementById('errorMessage');
+     errorElement.style.display = 'block';
+
+     // Hide error message after 4 seconds
+     setTimeout(function () {
+       errorElement.style.display = 'none';
+     }, 4000);
+   }
+ </script>
 
       <script type="text/javascript">
         function googleTranslateElementInit() {
@@ -2468,18 +2226,6 @@
     </script>
 
 
-
-
-
-
-
-    <script>
-      hamburger = document.querySelector('.hamburger');
-      hamburger.addEventListener('click', () => {
-        let list = document.querySelector('.navLinks');
-        list.classList.toggle('activeHamburger');
-      })
-    </script>
 
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -2869,6 +2615,8 @@
       })(jQuery);
     </script> -->
 
+    <script src="navbarToggle.js" defer></script>
+
     <script>
       let pre = document.querySelector('#pre-loader');
       window.addEventListener("load", function () {
@@ -2935,13 +2683,13 @@
   <script src="faq-website.js"></script>
 
   <script>
-    window.onload = function () {
-      var link = top.document.createElement("link");
-      link.type = "image/x-icon";
-      link.rel = "icon";
-      link.href = "favicon.ico?v=1";
-      top.document.getElementsByTagName("head")[0].appendChild(link);
-    }
+    // window.onload = function () {
+    //   var link = top.document.createElement("link");
+    //   link.type = "image/x-icon";
+    //   link.rel = "icon";
+    //   link.href = "favicon.ico?v=1";
+    //   top.document.getElementsByTagName("head")[0].appendChild(link);
+    // }
   </script>
 
   <script src="index.js"></script>
@@ -2980,23 +2728,23 @@
 
   <script>
 
-    document.addEventListener('DOMContentLoaded', function () {
-      function animateValue(id, start, end, duration) {
-        const obj = document.getElementById(id);
-        const startTime = performance.now();
 
-        function updateValue(timestamp) {
-          const elapsedTime = timestamp - startTime;
-          const progress = Math.min(elapsedTime / duration, 1);
-          const currentValue = Math.floor(progress * (end - start) + start);
-          obj.textContent = currentValue;
-          if (progress < 1) {
-            requestAnimationFrame(updateValue);
-          }
+
+    function animateValue(id, start, end, duration) {
+      const obj = document.getElementById(id);
+      const startTime = performance.now();
+
+      function updateValue(timestamp) {
+        const elapsedTime = timestamp - startTime;
+        const progress = Math.min(elapsedTime / duration, 1);
+        const currentValue = Math.floor(progress * (end - start) + start);
+        obj.textContent = currentValue;
+        if (progress < 1) {
           requestAnimationFrame(updateValue);
         }
+        requestAnimationFrame(updateValue);
       }
-    })
+    }
   </script>
 
 
@@ -3005,11 +2753,16 @@
 
     window.addEventListener('scroll', fillscrollline);
 
+    document.addEventListener('DOMContentLoaded', () => {
+      // Call the function for each count-up element
+      animateValue("guidesCount", 0, 25000, 20000)
+      animateValue("toursCount", 0, 20000, 20000);
+      animateValue("destinationsCount", 0, 10994, 20000);
+    })
 
-    // Call the function for each count-up element
-    animateValue("guidesCount", 0, 25000, 20000);
-    animateValue("toursCount", 0, 20000, 20000);
-    animateValue("destinationsCount", 0, 10994, 20000);
+
+
+
 
 
 
@@ -3019,13 +2772,13 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/service-worker.js')
-              .then(registration => {
-                  console.log('ServiceWorker registration successful');
-              })
-              .catch(err => {
-                  console.log('ServiceWorker registration failed: ', err);
-              });
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => {
+            console.log('ServiceWorker registration successful');
+          })
+          .catch(err => {
+            console.log('ServiceWorker registration failed: ', err);
+          });
       });
     }
   </script>
