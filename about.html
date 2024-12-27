@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - TourGuide</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./Image-Gallery/style.css">
     <link rel="stylesheet" href="about.css">
-
-    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-
+    <link rel="stylesheet" href="./navLinks.css" />
+    <script src="Theme.js" defer></script>
 </head>
+
 <body>
 
 
-    <div class="nav-container" id="top">
-        <nav class="newNav">
-          <div style="display: flex; flex-direction: row; align-items: center; ">
-          <img src="favicon.ico" class="sitelogo">
-          
-          <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
-          </div>
-  
-          <ul class="navLinks" style="gap: 1.2rem;">
+    <nav class="newNav">
+        <div style="display: flex; flex-direction: row; align-items: center; ">
+            <img src="favicon.ico" class="sitelogo">
+
+            <a href="index.html" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
+        </div>
+
+        <ul class="navLinks" id="navLinks">
             <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
             <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
             <li class="link" data-aos=""><a href="./index.html">Home</a></li>
             <li class="link" data-aos=""><a href="about.html">About</a></li>
             <li class="link dropdown" data-aos="">
-                <a href="#Services" class="dropdown">Services</a>
+                <a href="index.html#Services" class="dropdown">Services</a>
                 <ul class="dropdown-menu">
                     <li><a href="index.html#Destinations">Destination</a></li>
                     <li><a href="index.html#trip">Prices</a></li>
@@ -40,36 +44,38 @@
             </li>
             <li class="link" data-aos=""><a href="./topdeals/topdeals.html">Top Deals</a></li>
             <li class="link" data-aos=""><a href="./packages.html">Packages</a></li>
-            <li class="link" data-aos=""><a href="index.html#testimo">Testimonial</a></li>
+            <li class="link" data-aos=""><a href="index.html#testimonial">Testimonial</a></li>
             <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
             <li class="link" data-aos=""><a href="index.html#cnt-form">Contact Us</a></li>
         </ul>
         <div class="contact-btns" style="display: flex; gap: 10px; align-items: center;">
             <a href="newLogin.html" class="contact-btn" id="nav-login-btn">
-              <button class="btn login" id="btn-style" data-aos="fade-down">Login/<br>SignUp</button>
+                <button class="btn login aos-init aos-animate"  data-aos="fade-down">Login/<br>SignUp</button>
             </a>
             <a href="mapa.html" class="contact-btn" id="nav-view-btn">
-              <button class="btn" id="btn-style" style="margin: 0;" data-aos="fade-down">View <map name=""></map></button>
+                <button class="btn"  style="margin: 0;" data-aos="fade-down">View <map
+                        name=""></map></button>
             </a>
-            <a href="loginPage.html" class="contact-btn">
-              <button class="btn" id="logout-btn" style="margin: 0; display: none;" data-aos="fade-down" disabled>Log
-                Out</button>
-            </a>
-          </div>
-          <!-- <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
-              style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a> -->
-  
-          <div class="toggle-container" data-aos="fade-down">
+            <!-- <a href="loginPage.html" class="contact-btn">
+                <button class="btn" id="logout-btn" style="margin: 0; display: none;" data-aos="fade-down"
+                    disabled>Log
+                    Out</button>
+            </a> -->
+        </div>
+        <!-- <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
+          style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a> -->
+
+          <div class="toggle-container aos-init aos-animate" data-aos="fade-down" style="margin-right: 28px;">
             <input id="themeToggle" class="toggle" type="checkbox">
           </div>
-          <div class="hamburger" id="hamburger" data-aos="fade-down">
+
+        <div class="hamburger" id="hamburger" data-aos="fade-down">
             <div class="line" style="margin-bottom: 5px;"></div>
             <div class="line" style="margin-bottom: 5px;"></div>
             <div class="line" style="margin-bottom: 5px;"></div>
-            <div class="line" style="margin-bottom: 5px;"></div>
-          </div>
-        </nav>
-      </div>
+            <!-- <div class="line" style="margin-bottom: 5px;"></div> -->
+        </div>
+    </nav>
 
     <div class="background">
         <video autoplay muted loop playsinline>
@@ -89,13 +95,18 @@
                 <iframe src="https://www.youtube.com/embed/veULUjsSrPg?si=eq3sDAt3-yZnZUme" allowfullscreen></iframe>
             </div>
             <p class="summary">
-                Welcome to TourGuide, where life's purpose unfolds through exploration and the pursuit of the extraordinary. We empower you to navigate the world with unparalleled assistance, forging unforgettable memories.
+                Welcome to TourGuide, where life's purpose unfolds through exploration and the pursuit of the
+                extraordinary. We empower you to navigate the world with unparalleled assistance, forging unforgettable
+                memories.
             </p>
             <p class="summary">
-                Our local guides help you effortlessly navigate languages, customs, and traditions. We offer curated itineraries, once-in-a-lifetime experiences, and valuable travel advice, all customizable to your wishes.
+                Our local guides help you effortlessly navigate languages, customs, and traditions. We offer curated
+                itineraries, once-in-a-lifetime experiences, and valuable travel advice, all customizable to your
+                wishes.
             </p>
             <p class="summary">
-                Since 2024, TourGuide has grown to 30,000+ guides across 200+ countries. Join our family, where every journey becomes a story worth sharing!
+                Since 2024, TourGuide has grown to 30,000+ guides across 200+ countries. Join our family, where every
+                journey becomes a story worth sharing!
             </p>
             <div class="features">
                 <div class="feature">
@@ -114,5 +125,17 @@
             <a href="newLogin.html" class="cta-button">Start Your Journey</a>
         </div>
     </div>
+
+    <script>
+        let hamburger = document.getElementById("hamburger");
+        console.log(hamburger);
+        let navLinks = document.getElementById("navLinks");
+
+        hamburger.addEventListener("click", () => {
+            console.log("hamburger clicked")
+            navLinks.classList.toggle("active");
+        })
+    </script>
 </body>
+
 </html>
