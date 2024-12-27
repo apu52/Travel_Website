@@ -2864,6 +2864,12 @@ a:hover::after {
 
 .trip {
   .view__all {
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     a::after {
       bottom: -18px;
     }
