@@ -98,6 +98,9 @@ Check out the live project [here](https://apu52.github.io/Travel_Website/).
 
  ### This project is now OFFICIALLY accepted for
 
+![image](https://github.com/user-attachments/assets/4aa69dee-1d15-4d29-b5c8-f42613a925e9)
+
+
  <div align="center">
   <img src="https://github.com/user-attachments/assets/ee5c5ce7-b244-4e10-a91f-068f17a33609" alt="GSSOC" width="80%">
 </div>
