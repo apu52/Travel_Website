@@ -4,9 +4,9 @@
     color: #f0f0f0;
   }
 
-  body.dark-theme .container{
+  /* body.dark-theme .container{
     background: #333;
-  }
+  } */
 
   body.dark-theme .image{
     background-color: #555;
