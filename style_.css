@@ -4,7 +4,7 @@
 body {
   /* background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url("./img/sunset.jpg"); */
  background: linear-gradient(#D8E3FF, white);
-  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url("./img/greenbackgroung.jpeg");
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url("./img/greenbackground.jpeg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -25,9 +25,7 @@ body {
       #44107a 29%,
       #ff1361 67%,
       #510134 100%);
-
   background-size: auto auto;
-
   background-clip: border-box;
   color: #fff;
   background-clip: text;
@@ -44,34 +42,30 @@ body {
   }
 }
 
-.container {
+ .container {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
   justify-content: center;
-  align-items: center;
-  margin: 0px;
+  align-items: center; 
+   margin: 0px;
   padding: 0px;
-  background:linear-gradient(#D8E3FF, white);
-}
+  /* background:linear-gradient(#D8E3FF, white);  */
+ }
 
 .glassmorphism-container {
+  margin-top: 30px;
   background: rgba(46, 123, 225, 0.1);
   backdrop-filter: blur(10px);
   /* border-radius: 15px; */
   background-size: cover;
-
   border-radius: 15px;
-
-
   padding: 20px;
   /* margin-top: 102px;
   margin-bottom: 23px; */
-
   text-align: center;
-  max-width: 800px;
+  max-width: 600px;
   width: 100%;
-
 }
 
 p {
@@ -436,22 +430,27 @@ p {
 }
 .sidebyside {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Corrected from 's: 1fr 1fr;' */
+  display: flex;
+  flex-direction: column;
+ /* Corrected from 's: 1fr 1fr;' */
   margin: 0 auto;
   min-height: 80vh;
   width: 80vw;
   gap:0em;
   scale:0.8;
-  box-shadow: 0 2px 4px grey;
-  margin-top: 102px;
-  margin-bottom: 23px;
+  /* box-shadow: 0 2px 4px grey; */
+  margin-top: 30px;
+  /* margin-bottom: 23px; */
   /* margin:105px; */
 }
 
-.sidebyside .image {
-  background: url(./img/feedback_img.jpg) ;
+.sidebyside   .image {
+  margin-top: 12px;
+  margin-left: 110px;
+  height: 320px;
+  width: 312px;
+  /* background: url(./img/feedback_img.jpg) ; */
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: white;
-  background-position-y: center;
+  background-position: center;
 }
