@@ -39,7 +39,8 @@
   <link rel="stylesheet" href="./Image-Gallery/style.css">
   <link rel="stylesheet" href="./Image-Gallery/stylecaptions.css">
   <link rel="stylesheet" href="explore.css">
-  <link rel="stylesheet" href="./navLinks.css"></link>
+  <link rel="stylesheet" href="./navLinks.css">
+  </link>
   <link rel="stylesheet" href="counter.css" class="rel href">
   <title>Tourguide</title>
   <!-- adding a fav-icon -->
@@ -260,7 +261,7 @@
     .accept-cookies:hover {
       background-color: rgb(57, 159, 222);
       color: #0d0b0b;
-      border: 1px solid rgb(2, 2, 53);
+      border: 1px solid rgb(2, 2, 53);    
     }
 
     .reject-cookies:hover {
@@ -477,25 +478,29 @@
     </div>
 
 
-    <div id="pre-loader">
+    <!-- <div id="pre-loader">
       <h1>TourGuide . . .</h1>
     </div>
     <div id="bg">
       <canvas></canvas>
       <canvas></canvas>
       <canvas></canvas>
-    </div>
+    </div> -->
     <nav class="newNav">
+
       <div style="display: flex; align-items: center;">
         <img src="favicon.ico" class="sitelogo">
         <a href="#" class="nav__logo" data-aos="fade-right">Tourguide<span style="margin-right: 0.5vw;">.</span></a>
       </div>
+
       <ul class="navLinks">
         <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
         <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
         <li class="link" data-aos=""><a href="#Home">Home</a></li>
         <li class="link" data-aos=""><a href="./about.html">About</a></li>
+
         <li class="link dropdown" data-aos="">
+
           <a href="#Services" class="dropdown">Services</a>
           <ul class="dropdown-menu">
             <li><a href="#Destinations">Destination</a></li>
@@ -504,6 +509,7 @@
             <li><a href="#tourist">Tourist Guide</a></li>
             <li><a href="#hotel">Hotel & Resort</a></li>
           </ul>
+
         </li>
         <li class="link" data-aos=""><a href="./topdeals/topdeals.html">Top Deals</a></li>
         <li class="link" data-aos=""><a href="./packages.html">Packages</a></li>
@@ -624,9 +630,9 @@
             </style> -->
 
             <div class="action__btns">
-              <a href="membership.html"><button class="btn" >Membership</button></a>
-              <a href="plantrip.html"><button class="btn" >Plan a Trip</button></a>
-              <a href="./payment.html"><button class="btn" >Book Now</button></a>
+              <a href="membership.html"><button class="btn">Membership</button></a>
+              <a href="plantrip.html"><button class="btn">Plan a Trip</button></a>
+              <a href="./payment.html"><button class="btn">Book Now</button></a>
             </div>
 
 
@@ -820,7 +826,7 @@
 
       </div>
     </section>
-    
+
 
 
 
@@ -1775,7 +1781,7 @@
     </div>
     </section>
 
-    
+
 
 
 
@@ -1894,7 +1900,7 @@
       </div>
     </section>
 
-   
+
 
     <footer class="footer" data-aos="fade-up">
       <div class=" footer__container">
@@ -2022,121 +2028,121 @@
       </div>
 
 
- <!-- Swiper JS -->
- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <!-- Swiper JS -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
- <!-- Initialize Swiper -->
- <script>
-   var swiper = new Swiper(".swiper-container", {
-     effect: 'coverflow',
-     grabCursor: true,
-     centeredSlides: true,
-     slidesPerView: 'auto',
-     coverflowEffect: {
-       rotate: 0,
-       stretch: 0,
-       depth: 100,
-       modifier: 2,
-       slideShadows: true,
-     },
-     loop: true,
-   });
- </script>
- <script>
-   document.addEventListener("DOMContentLoaded", function () {
-     const coords = { x: 0, y: 0 };
-     const circles = document.querySelectorAll(".circle");
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".swiper-container", {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2,
+            slideShadows: true,
+          },
+          loop: true,
+        });
+      </script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const coords = { x: 0, y: 0 };
+          const circles = document.querySelectorAll(".circle");
 
-     circles.forEach(function (circle) {
-       circle.x = 0;
-       circle.y = 0;
-     });
+          circles.forEach(function (circle) {
+            circle.x = 0;
+            circle.y = 0;
+          });
 
-     window.addEventListener("mousemove", function (e) {
-       coords.x = e.pageX;
-       coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
-     });
+          window.addEventListener("mousemove", function (e) {
+            coords.x = e.pageX;
+            coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
+          });
 
-     function animateCircles() {
-       let x = coords.x;
-       let y = coords.y;
+          function animateCircles() {
+            let x = coords.x;
+            let y = coords.y;
 
-       circles.forEach(function (circle, index) {
-         circle.style.left = `${x - 12}px`;
-         circle.style.top = `${y - 12}px`;
-         circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
+            circles.forEach(function (circle, index) {
+              circle.style.left = `${x - 12}px`;
+              circle.style.top = `${y - 12}px`;
+              circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
 
-         const nextCircle = circles[index + 1] || circles[0];
-         circle.x = x;
-         circle.y = y;
+              const nextCircle = circles[index + 1] || circles[0];
+              circle.x = x;
+              circle.y = y;
 
-         x += (nextCircle.x - x) * 0.3;
-         y += (nextCircle.y - y) * 0.3;
-       });
+              x += (nextCircle.x - x) * 0.3;
+              y += (nextCircle.y - y) * 0.3;
+            });
 
-       requestAnimationFrame(animateCircles);
-     }
+            requestAnimationFrame(animateCircles);
+          }
 
-     animateCircles();
-   });
+          animateCircles();
+        });
 
- </script>
+      </script>
 
- <!-- sticky animation  -->
- <script type="text/javascript">
-  
- </script>
- <script>
-   let valueDisplays = document.querySelectorAll(".num");
-   let interval = 4000;
-   valueDisplays.forEach((valueDisplay) => {
-     let startValue = 0;
-     let endValue = parseInt(valueDisplay.getAttribute("data-val"));
-     let duration = Math.floor(interval / endValue);
-     let counter = setInterval(function () {
-       startValue += 10;
-       valueDisplay.textContent = startValue;
-       if (startValue == endValue) {
-         clearInterval(counter);
-       }
-     }, duration);
-   });
- </script>
+      <!-- sticky animation  -->
+      <script type="text/javascript">
 
- <script>
-   document.getElementById('subscriptionForm').addEventListener('submit', function (event) {
-     event.preventDefault(); // Prevent form submission
+      </script>
+      <script>
+        let valueDisplays = document.querySelectorAll(".num");
+        let interval = 4000;
+        valueDisplays.forEach((valueDisplay) => {
+          let startValue = 0;
+          let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+          let duration = Math.floor(interval / endValue);
+          let counter = setInterval(function () {
+            startValue += 10;
+            valueDisplay.textContent = startValue;
+            if (startValue == endValue) {
+              clearInterval(counter);
+            }
+          }, duration);
+        });
+      </script>
 
-     var emailInput = document.getElementById('emailInput').value;
-     var emailPattern = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/; // Improved regex to check for valid domain
+      <script>
+        document.getElementById('subscriptionForm').addEventListener('submit', function (event) {
+          event.preventDefault(); // Prevent form submission
 
-     if (emailPattern.test(emailInput)) {
-       showSubscriptionMessage(); // Show success message if email is valid
-     } else {
-       showErrorMessage(); // Show error message if email is invalid
-     }
-   });
+          var emailInput = document.getElementById('emailInput').value;
+          var emailPattern = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/; // Improved regex to check for valid domain
 
-   function showSubscriptionMessage() {
-     var messageElement = document.getElementById('subscriptionMessage');
-     messageElement.style.display = 'block';
+          if (emailPattern.test(emailInput)) {
+            showSubscriptionMessage(); // Show success message if email is valid
+          } else {
+            showErrorMessage(); // Show error message if email is invalid
+          }
+        });
 
-     // Hide message after 4 seconds
-     setTimeout(function () {
-       messageElement.style.display = 'none';
-     }, 4000);
-   }
+        function showSubscriptionMessage() {
+          var messageElement = document.getElementById('subscriptionMessage');
+          messageElement.style.display = 'block';
 
-   function showErrorMessage() {
-     var errorElement = document.getElementById('errorMessage');
-     errorElement.style.display = 'block';
+          // Hide message after 4 seconds
+          setTimeout(function () {
+            messageElement.style.display = 'none';
+          }, 4000);
+        }
 
-     // Hide error message after 4 seconds
-     setTimeout(function () {
-       errorElement.style.display = 'none';
-     }, 4000);
-   }
- </script>
+        function showErrorMessage() {
+          var errorElement = document.getElementById('errorMessage');
+          errorElement.style.display = 'block';
+
+          // Hide error message after 4 seconds
+          setTimeout(function () {
+            errorElement.style.display = 'none';
+          }, 4000);
+        }
+      </script>
 
       <script type="text/javascript">
         function googleTranslateElementInit() {
