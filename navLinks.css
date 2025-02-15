@@ -1,10 +1,10 @@
 /* General Styles for the Navigation */
 nav {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   padding: 5px 10px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  /* justify-content: space-between; */
+  /* align-items: center; */
   background-color: #123456;
   position: fixed;
   top: 0;
@@ -15,7 +15,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
-  height: auto;
+  height: 100px;
+  /* height: auto; */
   width: 100%;
   /* padding: 0.4rem 1rem; */
   z-index: 10000;
@@ -23,9 +24,9 @@ nav {
 }
 
 .sitelogo {
-  height: 35px;
+  height: 50px;
   /* Slightly smaller logo */
-  width: 35px;
+  width: 50px;
   margin-right: 10px;
   /* Reduced space between logo and title */
 }
@@ -62,7 +63,8 @@ nav {
 }
 
 .link a:hover {
-  color: #007bff;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); 
+  /* background: linear-gradient(90deg, rgb(0, 72, 255) 0%, rgb(153, 187, 255) 50%, rgb(0, 184, 250) 100%); */
   /* Change color on hover */
 }
 
@@ -142,9 +144,7 @@ nav {
   display: block;
 }
 
-.navLinks:active {
-  color: rgb(169, 35, 252);
-}
+
 
 .navLinks.activeHamburger {
   width: 100%;
@@ -180,7 +180,7 @@ nav {
 
 .navLinks a:hover,
 .link a:hover {
-  color: red;
+  color: white;
 }
 
 .navLinks a:hover::after,
@@ -276,7 +276,7 @@ nav {
   }
 
   .dropdown-menu a:hover {
-    color: #007bff;
+    color: white;
     /* Highlight color on hover */
   }
 
@@ -306,7 +306,7 @@ nav {
   }
 
   .dropdown-menu a:hover {
-    color: #007bff;
+    color: #ffffff;
     /* Hover color */
   }
 }
@@ -318,6 +318,7 @@ nav {
   }
   .nav__logo {
     margin-left: 0px;
+    
   }
   .navLinks {
     position: absolute;
@@ -357,11 +358,26 @@ nav {
   color: #ffffff;
   font-size: 14px;
   /* Adjust font size */
-  color: #ece6e6;
+  /* color: #ece6e6; */
   /* Logo color */
-  text-decoration: none;
+  /* text-decoration: none; */
   cursor: pointer;
+  height: 42px;
+  width: 95px;
+  align-items: center;
+  padding-left: 11px;
+  border-radius: 10px;
+  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); ; */
+  /* justify-content: center; */
+  display: flex;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); 
 }
+
+.nav__logo:hover {
+  color: white; /* Changes text color to white */
+  background: linear-gradient(135deg, #8e2cf7, #347dfa); 
+}
+
 
 .nav__logo span {
   color: #3685fb;
@@ -378,8 +394,9 @@ nav {
 }
 
 link a:hover {
-  color: #60a5fa;
-  background-color: rgb(169, 35, 252);
+  /* color: #60a5fa; */
+  background: linear-gradient(135deg, #6a11cb, #2575fc); 
+  /* background: linear-gradient(90deg, rgb(0, 72, 255) 0%, rgb(153, 187, 255) 50%, rgb(0, 184, 250) 100%); */
 }
 
 @media (max-width: 768px) {
