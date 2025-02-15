@@ -3,137 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health and Safety Alerts</title>
+    <title>Health & Safety Alerts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(109.5deg, rgb(13, 11, 136) 9.4%, rgb(86, 255, 248) 78.4%);
             margin: 0;
-            padding: 20px;
-        }
-
-        /* Modal Container */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
-            justify-content: center;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
             align-items: center;
-        }
-
-        /* Modal Content */
-        .modal-content {
-            background-color: #fff;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 90%;
-            max-width: 500px;
-            border-radius: 10px;
+            justify-content: center;
+            height: 100vh;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            color: #fff;
+            overflow: hidden;
+            position: relative;
         }
 
-        /* Close Button */
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
 
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .modal-header {
-            font-size: 24px;
+        p {
+            font-size: 1.2rem;
             margin-bottom: 20px;
         }
-
-        .modal-body {
-            font-size: 18px;
-            margin-bottom: 20px;
+        .alert-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            width: 100%;
+            margin-top: 20px;
         }
 
-        .modal-body img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-            border-radius: 10px;
-        }
-
-        .btn {
-            padding: 10px 20px;
-            font-size: 16px;
+        .alert-box {
+            background: #007BFF;
             color: white;
-            background-color: #f44336;
-            border: none;
+            padding: 10px;
             border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
             cursor: pointer;
+            transition: transform 0.3s ease;
+            position: relative;
+            min-height: 80px;
         }
 
-        .btn:hover {
-            background-color: #d32f2f;
+        .alert-box:hover {
+            transform: scale(1.1);
+            background-color:rgb(13, 11, 136);
+            display: block;
+        }
+
+        
+
+        .alert-details{
+            display:block;
+            font-size: 0.8rem;
+            color:whitesmoke;
+        }
+
+       
+
+        /* Mouse Move Animation - Multiple Circles */
+        .mouse-circle {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: rgba(0, 0, 255, 0.5);
+            border-radius: 50%;
+            pointer-events: none;
+            transition: transform 0.05s linear;
+            animation: fadeOut 1s forwards;
         }
     </style>
 </head>
 <body>
+    <h1>Health & Safety Alerts</h1>
+    <p>Please review the health and safety alerts before traveling. </p>
 
-    <h1>Health and Safety Alerts</h1>
-    <p>Click the button below to see different health and safety alerts.</p>
-
-    <button class="btn" onclick="showModal('Health Alert', 'High temperature detected! Take immediate action to cool down.', 'saf.png')">Show Health Alert</button>
-    <button class="btn" onclick="showModal('Safety Alert', 'Unsafe chemical detected! Evacuate the area immediately.', 'chem.jpg')">Show Safety Alert</button>
-
-    <!-- The Modal -->
-    <div id="alertModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <div class="modal-header" id="modalHeader">Alert Title</div>
-            <div class="modal-body">
-                <img id="modalImage" src="" alt="Alert Image">
-                <p id="modalMessage">This is the alert message.</p>
-            </div>
-            <button class="btn" onclick="closeModal()">Close Alert</button>
+    
+    <div class="alert-container">
+        <div class="alert-box">Disease Outbreaks
+            <div class="alert-details">Infectious diseases like COVID-19 or malaria may be present. Check vaccinations.</div>
         </div>
+        <div class="alert-box">Vaccination Requirements
+            <div class="alert-details">Some destinations require vaccines for yellow fever, typhoid, etc.</div>
+        </div>
+        <div class="alert-box">Food & Water Safety
+            <div class="alert-details">Avoid street food, drink bottled water, and be cautious of food hygiene.</div>
+        </div>
+        <div class="alert-box">Air Quality Alerts
+            <div class="alert-details">Poor air quality can affect breathing. Wear masks if needed.</div>
+        </div>
+        <div class="alert-box">Extreme Weather
+            <div class="alert-details">Heatwaves, cold snaps, and high humidity can be dangerous. Stay hydrated.</div>
+        </div>
+        <div class="alert-box">Road Safety Warnings
+            <div class="alert-details">Drive safely. Watch for accident-prone zones and bad roads.</div>
+        </div>
+        <div class="alert-box">Natural Disasters
+            <div class="alert-details">Check for risks like earthquakes, floods, hurricanes before travel.</div>
+        </div>
+        <div class="alert-box">Crime & Security Risks
+            <div class="alert-details">Avoid high-crime areas, beware of pickpockets and scams.</div>
+        </div>
+        <div class="alert-box">Transport Disruptions
+            <div class="alert-details">Flights, buses, or trains may be delayed due to strikes or technical issues.</div>
+        </div>
+        
     </div>
 
     <script>
-        function showModal(title, message, imageUrl) {
-            const modal = document.getElementById('alertModal');
-            const modalHeader = document.getElementById('modalHeader');
-            const modalMessage = document.getElementById('modalMessage');
-            const modalImage = document.getElementById('modalImage');
-
-            modalHeader.textContent = title;
-            modalMessage.textContent = message;
-            modalImage.src = imageUrl;
-
-            modal.style.display = 'flex';
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('alertModal');
-            modal.style.display = 'none';
-        }
-
-        // Close the modal if the user clicks outside the modal content
-        window.onclick = function(event) {
-            const modal = document.getElementById('alertModal');
-            if (event.target === modal) {
-                closeModal();
-            }
-        }
+        
+        // Mouse Move Animation - Multiple Circles
+        document.addEventListener('mousemove', function(e) {
+            const circle = document.createElement('div');
+            circle.classList.add('mouse-circle');
+            document.body.appendChild(circle);
+            circle.style.left = `${e.clientX}px`;
+            circle.style.top = `${e.clientY}px`;
+            setTimeout(() => {
+                circle.remove();
+            }, 1000);
+        });
     </script>
 </body>
 </html>
