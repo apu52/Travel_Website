@@ -98,17 +98,22 @@ Check out the live project [here](https://apu52.github.io/Travel_Website/).
 
  ### This project is now OFFICIALLY accepted for
 
+![image](https://github.com/user-attachments/assets/81a0a103-8946-4c3c-a393-b965438b5549)
+
+![image](https://github.com/user-attachments/assets/f6cb8621-38e0-48bd-a20d-5a406692d4af)
+
+
+### This project was part of following Open Source Programs
+
 ![image](https://github.com/user-attachments/assets/4aa69dee-1d15-4d29-b5c8-f42613a925e9)
+
+
+
 
 
  <div align="center">
   <img src="https://github.com/user-attachments/assets/ee5c5ce7-b244-4e10-a91f-068f17a33609" alt="GSSOC" width="80%">
 </div>
-
-
-### This project was part of following Open Source Programs
-
-
  
 <div align="center">
   <img src="https://github.com/user-attachments/assets/05ad17cd-64fe-4993-adfc-78c10071b688" alt="GSSOC" width="80%">
