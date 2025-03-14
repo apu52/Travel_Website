@@ -54,9 +54,9 @@ body:
       options:
         - label: "I have read the Contributing Guidelines"
           required: true
-        - label: "I'm a  KWOC 2024 contributor"
+        - label: "I'm a  APERTRE 2025 contributor"
           required: False
-        - label: "I'm a  SWOC 2025 contributor"
+        - label: "I'm a  CODEPEAK 2025 contributor"
           required: False
         - label: "I have starred the repository"
           required: true
