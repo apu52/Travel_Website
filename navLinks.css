@@ -5,7 +5,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #123456;
+ /* background-color: #123456;*/
   position: fixed;
   top: 0;
   left: 0;
@@ -20,7 +20,30 @@ nav {
   /* padding: 0.4rem 1rem; */
   z-index: 10000;
   transition: all 0.6s;
+
+/* adding effect to navbar*/
+  backdrop-filter: blur(12px);
+  background: rgba(15, 15, 25, 0.9);
+   
+  /* Semi-transparent glass effect */
+  background: rgba(14, 21, 37, 0.85); /* Mix of #0e1525 */
+  backdrop-filter: blur(12px);
+
+  /* 3D Glow Effect */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6), /* Soft shadow */
+              0px 0px 20px rgba(0, 183, 255, 0.5); /* Blue glow effect */
+
+  /* Subtle border for depth */
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease-in-out;
+
+  
 }
+
+
+body.light-mode .nav-container {
+  background: rgba(15, 15, 25, 0.9) !important;
+} 
 
 .sitelogo {
   height: 35px;
@@ -29,8 +52,6 @@ nav {
   margin-right: 10px;
   /* Reduced space between logo and title */
 }
-
-
 
 .navLinks {
   list-style: none;
@@ -60,10 +81,10 @@ nav {
   transition: color 0.3s ease;
   /* Smooth color transition */
 }
-
+/*changed color on hover*/
 .link a:hover {
-  color: #007bff;
-  /* Change color on hover */
+  color: #bd8eb6;
+  
 }
 
 .dropdown-menu {
@@ -77,6 +98,12 @@ nav {
   /* Border for dropdown */
   z-index: 1000;
   /* Ensure dropdown appears above other content */
+
+  /*added backdrop filter and translucent bg*/
+  background: rgba(15, 15, 25, 0.9); /* Translucent background */
+  backdrop-filter: blur(10px); /* Soft glassmorphism effect */
+  
+  
 }
 
 .dropdown-menu a {
@@ -117,10 +144,16 @@ nav {
 .dropdown-menu {
   display: none;
   position: absolute;
-  background-color: #123456;
+  /*background-color: #123456;*/
+  
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+
+  /*added transition and background*/
+  background: rgba(72, 48, 88, 0.85);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out, visibility 0.6s ease-in-out;
+  
 }
 
 .dropdown-menu > li {
@@ -132,10 +165,20 @@ nav {
   text-decoration: none;
   display: block;
   text-align: left;
+  /*added transition*/
+  transition: background 0.3s ease-in-out;
+  
 }
 
+/* Show Dropdown Smoothly */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); /* Moves into position smoothly */
+}
 .dropdown-menu > li > a:hover {
-  background-color: #575757;
+  /*background-color: #575757;*/
+  background-color: #74507c;/*change in color*/
 }
 
 .dropdown:hover .dropdown-menu {
@@ -143,7 +186,8 @@ nav {
 }
 
 .navLinks:active {
-  color: rgb(169, 35, 252);
+  /*color: rgb(169, 35,252);*/
+  color: rgb(118, 99, 130);/*color change*/
 }
 
 .navLinks.activeHamburger {
@@ -163,7 +207,11 @@ nav {
   text-decoration: none;
   color: white;
   font-size: 14px;
-  background-color: 'green'
+  background-color: 'green';
+ /*added padding and transition*/
+  padding: 10px 15px;
+  transition: all 0.3s ease-in-out;
+  
 }
 
 .navLinks a::after,
@@ -178,16 +226,45 @@ nav {
   transition: all 0.3s ease-in-out;
 }
 
+/* New Hover Effect */
+
 .navLinks a:hover,
 .link a:hover {
-  color: red;
+  /*color: red;*/
+  color: #f6ddff; /* Light purple text on hover */
+  text-shadow: 0px 0px 8px rgba(246, 221, 255, 0.8); /* Soft glow effect */
+  background: rgba(255, 255, 255, 0.1); /* Subtle translucent background */
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
 }
 
-.navLinks a:hover::after,
-.link a:hover::after {
+/* Underline Effect */
+.navLinks a::after,
+.link a::after {
+  content: "";
+  position: absolute;
   width: 0%;
-  background-color: transparent;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  background-color: #f6ddff;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
 }
+
+.navLinks a:hover,
+.link a:hover {
+  
+  color: #e0b3ff; /* Light purple glow effect */
+  text-shadow: 0px 0px 10px rgba(224, 179, 255, 0.8); /* Soft glow */
+}
+
+ .navLinks a:hover::after,
+.link a:hover::after {
+  
+  width: 100%;
+  background-color: transparent;
+} 
 
 
 #hamburger, .hamburger {
@@ -379,7 +456,8 @@ nav {
 
 link a:hover {
   color: #60a5fa;
-  background-color: rgb(169, 35, 252);
+ /* background-color: (169,35,252);*//*changed bg color*/
+  background-color: rgb(131, 102, 149);
 }
 
 @media (max-width: 768px) {
