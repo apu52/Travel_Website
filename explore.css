@@ -138,6 +138,7 @@
 }
 .section__title {
   margin: 10px;
+  padding:4px;
 }
 
 .section__subtitle {
