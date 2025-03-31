@@ -122,9 +122,37 @@
                     <h3>Unforgettable Experiences</h3>
                 </div>
             </div>
+            <!-- Growth Counter Enhancement -->
+            <div class="timeline-section">
+                <h2 class="timeline-heading">Our Journey Through the Years</h2>
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-content">
+                            <h3>2024 - The Beginning</h3>
+                            <p>TourGuide was founded with the vision to make traveling seamless and unforgettable.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-content">
+                            <h3>2025 - 30,000+ Guides</h3>
+                            <p>We expanded globally, reaching over 200+ countries with expert travel guides.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-content">
+                            <h3>2026 - AI-Powered Travel</h3>
+                            <p>We introduced AI-driven personalized itineraries for travelers worldwide.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- Growth Counter Enhancement closed -->
             <a href="newLogin.html" class="cta-button">Start Your Journey</a>
         </div>
     </div>
+
 
     <script>
         let hamburger = document.getElementById("hamburger");
@@ -135,6 +163,49 @@
             console.log("hamburger clicked")
             navLinks.classList.toggle("active");
         })
+
+
+
+    // JS for the growth counter
+    document.addEventListener("DOMContentLoaded", function () {
+        const timelineItems = document.querySelectorAll(".timeline-item");
+
+        // Function to check if an element is in the viewport
+        function isInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return rect.top < window.innerHeight - 100;
+        }
+
+        // Function to animate timeline items
+        function animateTimeline() {
+            timelineItems.forEach((item) => {
+                if (isInViewport(item)) {
+                    item.classList.add("show");
+                }
+            });
+        }
+
+        // Event listener for scrolling
+        window.addEventListener("scroll", animateTimeline);
+        animateTimeline(); // Initial check on page load
+
+        // Adding hover effects for milestones
+        const milestones = document.querySelectorAll(".timeline-item");
+
+        milestones.forEach((milestone) => {
+            milestone.addEventListener("mouseenter", () => {
+                milestone.style.transform = "scale(1.1)";
+                milestone.style.transition = "0.3s ease-in-out";
+            });
+
+            milestone.addEventListener("mouseleave", () => {
+                milestone.style.transform = "scale(1)";
+            });
+        });
+    });
+
+    // JS for the growth counter closed
+
     </script>
 </body>
 
