@@ -59,7 +59,7 @@ p {
   border: 3px solid rgb(0, 49, 79);
   border-radius: 5px;
   cursor: pointer;
-  background: linear-gradient(#227fdd, #860cf8);
+  background: linear-gradient(#2087ed, #860cf8);
   color: white;
   display: block;
   margin: 20px auto 0;
@@ -69,7 +69,7 @@ p {
 }
 
 .btn:hover {
-  background: linear-gradient(#010e10, #4a51df);
+  background: linear-gradient(#023138, #4a51df);
   transform: scale(1.1);
 }
 

@@ -94,7 +94,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #007bff;
+  color: #0033ff;
 }
 
 
@@ -357,6 +357,43 @@ input[type="submit"]{
   
   .navLinks.activeHamburger {
     width: 100%;
+  }
+
+  .chatbot-button {
+    display: inline-block;
+    padding: 15px 30px; /* Increased padding for a larger button */
+    border-radius: 50px; /* More rounded corners */
+    background: linear-gradient(45deg, #2b6fdd, #f3740c); /* Gradient background */
+    color: white; /* Text color */
+    font-size: 18px; /* Increased font size */
+    font-weight: bold; /* Bolder text */
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  }
+  
+  .bpw-chat-container {
+    background-color: #ffffff;
+    scrollbar-width: thin;
+    scrollbar-color: #cdd9e0 #ffffff;
+    border: none;
+  }
+
+  .bpw-widget-btn {
+    background-color:linear-gradient(#0983c1,#094ed8);
+    box-shadow: 2px solid black;
+    font-weight: 500;
+  }
+
+  .bpw-widget-btn:hover{
+    background-color: linear-gradient(#470de6,#6A0DAD);
+  }
+
+
+  .chatbot-button:hover {
+    background: linear-gradient(45deg, #ff0000, #6a5acd); /* Reverse gradient on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
   }
   
   /* New NAvbar CSS Ends Here*/

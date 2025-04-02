@@ -546,6 +546,25 @@ header img {
   border-radius: 6px;
   margin: 20px;
 }
+
+.chatbot-button {
+  display: inline-block;
+  padding: 15px 30px; /* Increased padding for a larger button */
+  border-radius: 50px; /* More rounded corners */
+  background: linear-gradient(45deg, #6a5acd, #ff0000); /* Gradient background */
+  color: white; /* Text color */
+  font-size: 18px; /* Increased font size */
+  font-weight: bold; /* Bolder text */
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.chatbot-button:hover {
+  background: linear-gradient(45deg, #ff0000, #6a5acd); /* Reverse gradient on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
 @media (min-width:320px) and (max-width:961px){
   .wrapper{
     flex-direction: column;
