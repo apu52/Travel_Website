@@ -237,10 +237,15 @@ nav {
   }
 
   .navLinks.active {
+    position: fixed;
     display: flex;
+    flex-direction: column;
     /* Show links when active */
     padding: 10px;
     /* Padding around links */
+    overflow-y: scroll !important;
+    height: 90vh !important;
+    top: 60px;
   }
 
   .link {
@@ -433,4 +438,18 @@ link a:hover {
 
 .toggle-container[data-aos="fade-down"].aos-animate {
   opacity: 1;
+}
+
+@media (max-width: 1168px) {
+  .navLinks.active {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    /* Show links when active */
+    padding: 10px;
+    /* Padding around links */
+    overflow-y: scroll !important;
+    height: 90vh !important;
+    top: 60px;
+  }
 }
