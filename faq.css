@@ -52,8 +52,10 @@ body {
   transition: 0.3s ease;
   cursor: pointer;
   opacity: 0;
+  -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
-  animation: slideInFromLeft 2s ease-in-out forwards; /* Animation duration is now 2 seconds */
+  -webkit-animation: slideInFromLeft 2s ease-in-out forwards;
+  animation: slideInFromLeft 2s ease-in-out forwards;
 }
 
 .faq.active {
@@ -89,6 +91,7 @@ body {
 
 .faq-title:hover {
   transform: scale(1.1);
+  -webkit-transform: scale(1.1);
 }
 
 .faq-text {
@@ -184,6 +187,7 @@ body {
 .accordion__content {
   overflow: hidden;
   height: 0;
+  -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 

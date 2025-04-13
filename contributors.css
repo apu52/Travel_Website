@@ -1,4 +1,4 @@
-  body {
+body {
   font-family: "Poppins";
   /* background-color: #c10f0f; */
   color: #333;
@@ -61,6 +61,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 16px;
+  -webkit-transition: transform 0.5s ease-in-out, -webkit-box-shadow 0.3s ease;
   transition: transform 0.5s ease-in-out, box-shadow 0.3s ease;
   text-decoration: none;
   color: inherit;
@@ -68,7 +69,9 @@
 }
 
 .contributor-card:hover {
+  -webkit-transform: scale(1.02);
   transform: scale(1.02);
+  -webkit-box-shadow: 1px 1px 23px rgba(0, 157, 255, 0.915);
   box-shadow: 1px 1px 23px rgba(0, 157, 255, 0.915);
   border: none;
   cursor: pointer;
@@ -100,6 +103,7 @@
   height: 100px;
   object-fit: cover;
   margin-bottom: 10px;
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out, border 0.1s ease-in-out;
   transition: box-shadow 0.3s ease-in-out, border 0.1s ease-in-out;
 }
 

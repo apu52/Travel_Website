@@ -3,7 +3,13 @@
 /* Google Fonts */
 body {
   /* background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url("./img/sunset.jpg"); */
- background: linear-gradient(#D8E3FF, white);
+  background: -webkit-linear-gradient(#D8E3FF, white);
+  background: -moz-linear-gradient(#D8E3FF, white);
+  background: -o-linear-gradient(#D8E3FF, white);
+  background: linear-gradient(#D8E3FF, white);
+  background-image: -webkit-linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url("./img/greenbackground.jpeg");
+  background-image: -moz-linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url("./img/greenbackground.jpeg");
+  background-image: -o-linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url("./img/greenbackground.jpeg");
   background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url("./img/greenbackground.jpeg");
   background-size: cover;
   background-position: center;

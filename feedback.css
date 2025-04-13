@@ -1,4 +1,4 @@
- /* Dark mode styles */
+/* Dark mode styles */
  body.dark-theme {
     background-color: #1a1a1a;
     color: #f0f0f0;
@@ -20,6 +20,7 @@
   body.dark-theme .glassmorphism-container {
     background-color: rgba(50, 50, 50, 1);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    -webkit-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   }
 
   /* Feedback heading */
@@ -62,6 +63,8 @@
 
   body.dark-theme input[type="submit"]:hover {
     background-color: #4a4a4a;
+    -webkit-transition: background-color 0.4s ease-in-out;
+    transition: background-color 0.4s ease-in-out;
   }
 
   /* Return to Home Page link */
