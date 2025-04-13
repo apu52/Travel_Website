@@ -5,6 +5,202 @@
   border: 1px solid red;
 } */
 
+/* Improving hover effect on navbar*/
+.nav-container {
+  height: auto;
+  width: 200%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  z-index: 9999;
+  
+
+}
+
+
+/* Glow Effect on Hover */
+.nav-container:hover {
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.7), 
+              0px 0px 30px rgba(0, 183, 255, 0.7); /* Brighter blue glow */
+  transition: all 0.4s ease-in-out;
+ 
+}
+
+.nav-container:hover {
+  background-color: rgba(12, 2, 11, 0.1); /* Subtle background change */
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.newNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  height: auto;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.navLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  list-style: none;
+  gap: 1.2rem;
+  position: relative;
+  top: 0.5rem;
+  z-index: 10;
+
+
+}
+
+.link a {
+  position: relative;
+  transition: color 0.3s ease-in-out;/*ashi */
+}
+
+.link a:hover {
+  /* Changes text color on hover */
+  text-shadow: 0 0 8px rgba(106, 96, 115, 0.8), 0 0 15px rgba(180, 148, 180, 0.6);
+}
+.link a::before {
+  /* position: absolute; */
+  /* content: ""; */
+  height: 2px;
+  width: 0%;
+  bottom: -5px;
+  left: 0;
+  background-color: red;
+ 
+}
+
+.link a::after {
+  /* position: absolute;
+  content: ""; */
+  height: 2px;
+  width: 0%;
+  top: -5px;
+  right: 0;
+  background-color: red;
+  transition: all 0.2s ease-in-out;
+}
+
+.link a::before {
+  bottom: -5px;
+  left: 0;
+}
+
+.link a::after {
+  top: -5px;
+  right: 0;
+}
+
+.link a:hover::before {
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.link a:hover::after {
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.hamburger {
+  height: 2rem;
+  width: 1.7rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  display: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.line {
+  height: 5px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 1220px) {
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .navLinks {
+    position: absolute;
+    top: 70px;
+    background-color: #091020;
+    width: 0%;
+    left: 0;
+    height: 100vh;
+    padding: 2rem 0;
+    flex-direction: column;
+    transition: 0.2s;
+    overflow: hidden;
+  }
+
+  .navLinks li {
+    width: 100%;
+    padding: 0.5rem 0;
+    background-color: #1f2532;
+    z-index: 10;
+  }
+
+  #toggle {
+    font-size: 0.6rem;
+  }
+
+  /*#btn-style {
+    font-size: 0.6rem;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease-in-out;
+
+  }*/
+  #btn-style:hover {
+    background: transparent; /* More translucent on hover */
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: white; /* Change text color for better contrast */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); /* Soft glow effect */
+  }
+}
+
+#btn-style {
+  display: inline-block;
+  border-radius: 50px;
+  transition: all .4s ease-in-out;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: auto;
+  background-color: transparent;
+  border: 2px solid rgba(122, 101, 168, 0.3);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 2px;
+  vertical-align: middle;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+}
+/* Smooth Gradient Hover */
+#btn-style:hover {
+  background: transparent; /* More translucent on hover */
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: white; /* Change text color for better contrast */
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); /* Soft glow effect */
+}
+#btn-style:hover::before {
+  opacity: 1;
+}
+
+.navLinks.activeHamburger {
+  width: 100%;
+}
+/*ashi*/
 :root {
   --primary-color: #3685fb;
   --primary-color-dark: #2f73d9;
@@ -2055,10 +2251,21 @@ body {
   transition: all 0.3s linear;
 }
 .link > a:hover {
-  background-color: #f6ddff;
+  background-color: transparent; /* Soft translucent hover effect */
   border-radius: 10px;
-  box-shadow: rgb(56, 0, 109) 0px 0px 8px 2px inset;
+  box-shadow: rgb(123, 88, 156) 0px 0px 8px 2px inset;
+  transition: background-color 0.7s ease-in-out, 
+              box-shadow 0.7s ease-in-out; /* Smooth transition */
+ color: white;
+
 }
+.link > a:hover {
+ 
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 12px 4px rgba(123, 88, 156, 0.6);
+  color: #d8b3ff; /* Light purple text on hover */
+}
+
 
 /* .link a::before {
   position: absolute;
@@ -2187,6 +2394,7 @@ body {
   }
   .newNav #nav-login-btn {
     display: inline;
+    
   }
 }
 
