@@ -7,9 +7,9 @@
     <title>About Us - TourGuide</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
-  
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="./Image-Gallery/style.css">
     <link rel="stylesheet" href="about.css">
@@ -50,11 +50,10 @@
         </ul>
         <div class="contact-btns" style="display: flex; gap: 10px; align-items: center;">
             <a href="newLogin.html" class="contact-btn" id="nav-login-btn">
-                <button class="btn login aos-init aos-animate"  data-aos="fade-down">Login/<br>SignUp</button>
+                <button class="btn login aos-init aos-animate" data-aos="fade-down">Login/<br>SignUp</button>
             </a>
             <a href="mapa.html" class="contact-btn" id="nav-view-btn">
-                <button class="btn"  style="margin: 0;" data-aos="fade-down">View <map
-                        name=""></map></button>
+                <button class="btn" style="margin: 0;" data-aos="fade-down">View <map name=""></map></button>
             </a>
             <!-- <a href="loginPage.html" class="contact-btn">
                 <button class="btn" id="logout-btn" style="margin: 0; display: none;" data-aos="fade-down"
@@ -65,9 +64,9 @@
         <!-- <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
           style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a> -->
 
-          <div class="toggle-container aos-init aos-animate" data-aos="fade-down" style="margin-right: 28px;">
+        <div class="toggle-container aos-init aos-animate" data-aos="fade-down" style="margin-right: 28px;">
             <input id="themeToggle" class="toggle" type="checkbox">
-          </div>
+        </div>
 
         <div class="hamburger" id="hamburger" data-aos="fade-down">
             <div class="line" style="margin-bottom: 5px;"></div>
@@ -122,9 +121,58 @@
                     <h3>Unforgettable Experiences</h3>
                 </div>
             </div>
+            <!-- Starting of Growth Counter Enhancement -->
+            <section class="timeline-section">
+                <h2 class="timeline-title">Our Journey</h2>
+                <div class="timeline">
+                    <div class="timeline-item" data-year="2024">
+                        <div class="timeline-icon">🚀</div>
+                        <div class="timeline-content">
+                            <h3>Founded</h3>
+                            <p>TourGuide began its journey to make travel seamless and memorable.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-year="2025">
+                        <div class="timeline-icon">🌍</div>
+                        <div class="timeline-content">
+                            <h3>Global Expansion</h3>
+                            <p>Expanded to 200+ countries with 30,000+ local guides worldwide.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-year="2026">
+                        <div class="timeline-icon">🏆</div>
+                        <div class="timeline-content">
+                            <h3>Milestone Achievement</h3>
+                            <p>Recognized as one of the top platforms for personalized travel experiences.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            
+            <section id="growth-section">
+                <h2 class="section-title">Our Growth</h2>
+                <div class="growth-counter">
+                    <div class="counter-item">
+                        <div class="icon-container">🌍</div>
+                        <div class="count" data-target="200">0</div>
+                        <p>Countries Expanded</p>
+                    </div>
+                    <div class="counter-item">
+                        <div class="icon-container">🏆</div>
+                        <div class="count" data-target="30000">0</div>
+                        <p>Miles Achievements</p>
+                    </div>
+                    </div>
+                    </section>
+
+
+
+            <!-- Ending of Growth Counter Enhancement closed -->
             <a href="newLogin.html" class="cta-button">Start Your Journey</a>
         </div>
     </div>
+
 
     <script>
         let hamburger = document.getElementById("hamburger");
@@ -135,6 +183,71 @@
             console.log("hamburger clicked")
             navLinks.classList.toggle("active");
         })
+
+
+
+                    // Starting of the js for the growth counter & Growth counter animation
+                
+
+
+            document.addEventListener("DOMContentLoaded", function () {
+            // Timeline animation on scroll
+            const items = document.querySelectorAll(".timeline-item");
+
+            function checkVisibility() {
+                const triggerBottom = window.innerHeight * 0.85;
+
+                items.forEach((item) => {
+                    const boxTop = item.getBoundingClientRect().top;
+
+                    if (boxTop < triggerBottom) {
+                        item.classList.add("show");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", checkVisibility);
+            checkVisibility();
+
+            // Growth counter animation
+            const counters = document.querySelectorAll(".count");
+            let hasAnimated = false;
+
+            function animateCounters() {
+                const growthSection = document.getElementById("growth-section");
+                const sectionTop = growthSection.getBoundingClientRect().top;
+
+                if (sectionTop < window.innerHeight && !hasAnimated) {
+                    counters.forEach(counter => {
+                        const target = +counter.getAttribute("data-target");
+                        let count = 0;
+                        const increment = target / 100;
+
+                        function updateCount() {
+                            count += increment;
+                            if (count < target) {
+                                counter.textContent = Math.ceil(count);
+                                requestAnimationFrame(updateCount);
+                            } else {
+                                counter.textContent = target;
+                            }
+                        }
+
+                        updateCount();
+                    });
+
+                    hasAnimated = true;
+                }
+            }
+
+            window.addEventListener("scroll", animateCounters);
+            animateCounters(); // Trigger on load
+        });
+
+
+
+                // Ending of the js for the growth counter & Growth counter animation
+
     </script>
 </body>
 

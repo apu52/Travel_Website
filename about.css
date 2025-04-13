@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -68,6 +69,7 @@ header {
     gap: 30px;
     max-width: 800px;
 }
+
 .video-container {
     width: 100%;
     max-width: 800px;
@@ -81,7 +83,8 @@ header {
 .video-container::before {
     content: '';
     display: block;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    padding-top: 56.25%;
+        /* 16:9 Aspect Ratio */
 }
 
 .video-container iframe {
@@ -150,7 +153,244 @@ header {
     box-shadow: 0 8px 20px rgba(255, 107, 107, 0.6);
 }
 
+/* Growth Counter Enhancement Style */
+/* =============================
+   Growth Counter Enhancement Style
+   ============================= */
+
+/* Timeline Container */
+.timeline {
+    position: relative;
+    max-width: 1000px;
+        margin: auto;
+    padding: 20px 0;
+}
+
+/* Timeline Tracking Line */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, #ff6b6b, #ffcc5c);
+    transform: translateX(-50%);
+    transition: height 0.5s ease-in-out;
+}
+
+/* Individual Event */
+.timeline-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+        margin-bottom: 60px;
+    opacity: 0;
+    transform: translateY(50px);
+        transition: all 0.6s ease-in-out;
+        width: 100%;
+}
+
+/* Alternating Position */
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Event Icons */
+.timeline-icon {
+    background-color: #fff;
+    color: #ff6b6b;
+    border-radius: 50%;
+    padding: 18px;
+    font-size: 1.8rem;
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.3);
+    z-index: 1;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Icon Hover Effect */
+.timeline-icon:hover {
+    background: #ffcc5c;
+    color: #fff;
+    transform: scale(1.2);
+}
+
+/* Timeline Event Box */
+.timeline-content {
+    width: 37%;
+        margin: 0 auto;
+        padding: 20px 30px;
+        background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    text-align: left;
+        box-shadow: 0 4px 15px rgba(255, 107, 107, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: transform 0.3s ease, background 0.3s ease;
+        position: relative;
+}
+
+/* Fix alternate alignment */
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-left: 30px;
+}
+
+/* Hover Effect */
+.timeline-content:hover {
+    background: rgba(255, 107, 107, 0.3);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+    }
+    
+    /* Title Styling */
+    .timeline-content h3 {
+        margin-top: 0;
+        font-size: 1.6rem;
+        color: #fff;
+    }
+    
+    /* Description Styling */
+    .timeline-content p {
+        font-size: 1rem;
+        color: #ddd;
+        margin-bottom: 0;
+    }
+    
+    /* Reveal Effect */
+    .timeline-item.show {
+        opacity: 1;
+        transform: translateY(0);
+}
+
+/* Scroll Animation Enhancements */
+.timeline-item {
+    opacity: 0;
+    transform: translateY(40px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+.timeline-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* =============================
+   Growth Counter Section
+   ============================= */
+
+.growth-counter {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.counter-item {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+    padding: 25px 30px;
+    border-radius: 20px;
+    text-align: center;
+    min-width: 220px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.counter-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Icon Styles */
+.icon-container {
+    font-size: 3rem;
+    color: #ff6b6b;
+    margin-bottom: 12px;
+    z-index: 1;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.counter-item:hover .icon-container {
+    color: #ffc107;
+}
+
+.count {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+    z-index: 1;
+    position: relative;
+}
+
+.counter-item p {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    margin-top: 10px;
+    z-index: 1;
+    position: relative;
+}
+
+/* =============================
+   Responsive Styles
+   ============================= */
+
 @media (max-width: 768px) {
+    .timeline::before {
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100%;
+        }
+    
+        .timeline-item {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+    
+        .timeline-content {
+            width: 85%;
+            margin: 20px auto;
+            text-align: center;
+            padding: 15px;
+        }
+    
+        .timeline-icon {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -10px;
+            background: #fff;
+            border-radius: 50%;
+            padding: 5px;
+            z-index: 10;
+        }
+    
+        .timeline-item:nth-child(odd) .timeline-icon {
+            top: -15px;
+        }
+    
+        .timeline-item:nth-child(even) .timeline-icon {
+            top: -10px;
+        }
+    
+        /* Growth Counter Enhancement Closed */
     .content-wrapper {
         padding: 20px;
     }
@@ -185,5 +425,3 @@ header {
         padding: 12px 25px;
     }
 }
-
-/* */
