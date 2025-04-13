@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - TourGuide</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css" />
@@ -13,13 +15,15 @@
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="./navLinks.css" />
     <script src="Theme.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
+
+
     <nav class="newNav">
         <div style="display: flex; flex-direction: row; align-items: center; ">
             <img src="favicon.ico" class="sitelogo">
+
             <a href="index.html" class="nav__logo" data-aos="fade-right">Tourguide<span>.</span></a>
         </div>
 
@@ -52,16 +56,24 @@
                 <button class="btn"  style="margin: 0;" data-aos="fade-down">View <map
                         name=""></map></button>
             </a>
+            <!-- <a href="loginPage.html" class="contact-btn">
+                <button class="btn" id="logout-btn" style="margin: 0; display: none;" data-aos="fade-down"
+                    disabled>Log
+                    Out</button>
+            </a> -->
         </div>
+        <!-- <a href="login-modified.html" class="contact-btn"><button class="btn" id="btn-style"
+          style="margin: 0; box-shadow:1.5px 1.5px 6px red;" data-aos="fade-down">Login</button></a> -->
 
-        <div class="toggle-container aos-init aos-animate" data-aos="fade-down" style="margin-right: 28px;">
+          <div class="toggle-container aos-init aos-animate" data-aos="fade-down" style="margin-right: 28px;">
             <input id="themeToggle" class="toggle" type="checkbox">
-        </div>
+          </div>
 
         <div class="hamburger" id="hamburger" data-aos="fade-down">
             <div class="line" style="margin-bottom: 5px;"></div>
             <div class="line" style="margin-bottom: 5px;"></div>
             <div class="line" style="margin-bottom: 5px;"></div>
+            <!-- <div class="line" style="margin-bottom: 5px;"></div> -->
         </div>
     </nav>
 
@@ -110,192 +122,6 @@
                     <h3>Unforgettable Experiences</h3>
                 </div>
             </div>
-            
-            <section class="timeline-section">
-                <h2 class="timeline-heading">Our Growth Journey</h2>
-                <div class="timeline-container">
-                    <div class="timeline-line"></div>
-                    
-                    <div class="timeline-item" data-year="The Beginning">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Our Vision</h3>
-                            <p>TourGuide was founded with a vision to help travelers unveil the true essence of travel.</p>
-                            <div class="timeline-details">
-                                <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="TourGuide founding team">
-                                <p>Our journey began with a small team of passionate explorers determined to transform how people experience the world.</p>
-                                <div class="timeline-stats">
-                                    <div class="stat">
-                                        <span class="stat-number">5</span>
-                                        <span class="stat-label">Team Members</span>
-                                    </div>
-                                    <div class="stat">
-                                        <span class="stat-number">3</span>
-                                        <span class="stat-label">Countries</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item" data-year="Phase Two">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Cultural Bridges</h3>
-                            <p>Developed our first network of local guides to help travelers navigate customs and traditions.</p>
-                            <div class="timeline-details">
-                                <img src="https://images.unsplash.com/photo-1528495612343-9ca9f4a4de28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Local guides">
-                                <p>Our guides became travelers' passports to authentic local experiences, breaking down language and cultural barriers.</p>
-                                <div class="timeline-stats">
-                                    <div class="stat">
-                                        <span class="stat-number">500+</span>
-                                        <span class="stat-label">Local Guides</span>
-                                    </div>
-                                    <div class="stat">
-                                        <span class="stat-number">25</span>
-                                        <span class="stat-label">Countries</span>
-                                    </div>
-                                </div>
-                                <div class="timeline-icon-container">
-                                    <i class="fas fa-language timeline-icon"></i>
-                                    <span>Cultural Navigation</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item" data-year="Growth Stage">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Curated Experiences</h3>
-                            <p>Launched our first set of curated itineraries and once-in-a-lifetime experiences.</p>
-                            <div class="timeline-details">
-                                <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1121&q=80" alt="Curated travel experiences">
-                                <p>We began crafting unique journeys tailored to travelers' wish lists, ensuring every adventure was truly extraordinary.</p>
-                                <div class="timeline-stats">
-                                    <div class="stat">
-                                        <span class="stat-number">5,000+</span>
-                                        <span class="stat-label">Local Guides</span>
-                                    </div>
-                                    <div class="stat">
-                                        <span class="stat-number">100+</span>
-                                        <span class="stat-label">Itineraries</span>
-                                    </div>
-                                </div>
-                                <div class="timeline-icon-container">
-                                    <i class="fas fa-route timeline-icon"></i>
-                                    <span>Custom Journeys</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item" data-year="Expansion">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Global Community</h3>
-                            <p>Expanded our network to create a dynamic travel community across continents.</p>
-                            <div class="timeline-details">
-                                <img src="https://images.unsplash.com/photo-1484712401471-05c7215830eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Global travel community">
-                                <p>Our community grew as travelers and guides connected to share authentic experiences and cultural insights.</p>
-                                <div class="timeline-stats">
-                                    <div class="stat">
-                                        <span class="stat-number">15,000+</span>
-                                        <span class="stat-label">Local Guides</span>
-                                    </div>
-                                    <div class="stat">
-                                        <span class="stat-number">120</span>
-                                        <span class="stat-label">Countries</span>
-                                    </div>
-                                </div>
-                                <div class="timeline-icon-container">
-                                    <i class="fas fa-globe-americas timeline-icon"></i>
-                                    <span>Global Network</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item" data-year="Innovation">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Personalized Guidance</h3>
-                            <p>Introduced advanced travel advice systems to elevate journey planning.</p>
-                            <div class="timeline-details">
-                                <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Travel planning">
-                                <p>Our expert advisors began offering personalized guidance to help travelers create journeys aligned perfectly with their dreams.</p>
-                                <div class="timeline-stats">
-                                    <div class="stat">
-                                        <span class="stat-number">20,000+</span>
-                                        <span class="stat-label">Local Guides</span>
-                                    </div>
-                                    <div class="stat">
-                                        <span class="stat-number">150+</span>
-                                        <span class="stat-label">Countries</span>
-                                    </div>
-                                </div>
-                                <div class="timeline-icon-container">
-                                    <i class="fas fa-compass timeline-icon"></i>
-                                    <span>Expert Guidance</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item" data-year="New Horizons">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Expanding Possibilities</h3>
-                            <p>Broadened our horizons to offer more extraordinary experiences worldwide.</p>
-                            <div class="timeline-details">
-                                <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1331&q=80" alt="World travel">
-                                <p>We continued to push boundaries, creating access to once-inaccessible destinations and experiences for intrepid travelers.</p>
-                                <div class="timeline-stats">
-                                    <div class="stat">
-                                        <span class="stat-number">25,000+</span>
-                                        <span class="stat-label">Local Guides</span>
-                                    </div>
-                                    <div class="stat">
-                                        <span class="stat-number">180+</span>
-                                        <span class="stat-label">Countries</span>
-                                    </div>
-                                </div>
-                                <div class="timeline-icon-container">
-                                    <i class="fas fa-mountain timeline-icon"></i>
-                                    <span>New Frontiers</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item" data-year="Present Day">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Today & Beyond</h3>
-                            <p>Now with 30,000+ guides across 200+ countries, we continue to expand the horizons of possibilities.</p>
-                            <div class="timeline-details">
-                                <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80" alt="Future of travel">
-                                <p>With TourGuide by your side, there's no limit to the unforgettable journeys you can embark on. Start your adventure today!</p>
-                                <div class="timeline-stats">
-                                    <div class="stat">
-                                        <span class="stat-number">30,000+</span>
-                                        <span class="stat-label">Local Guides</span>
-                                    </div>
-                                    <div class="stat">
-                                        <span class="stat-number">200+</span>
-                                        <span class="stat-label">Countries</span>
-                                    </div>
-                                </div>
-                                <div class="timeline-icon-container">
-                                    <i class="fas fa-paper-plane timeline-icon"></i>
-                                    <span>Unlimited Adventures</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
             <a href="newLogin.html" class="cta-button">Start Your Journey</a>
         </div>
     </div>
@@ -309,88 +135,6 @@
             console.log("hamburger clicked")
             navLinks.classList.toggle("active");
         })
-        
-        // Enhanced Timeline Animation with Intersection Observer
-        document.addEventListener('DOMContentLoaded', function() {
-            const timelineItems = document.querySelectorAll('.timeline-item');
-            const timelineLine = document.querySelector('.timeline-line');
-            
-            // Set initial height of timeline line
-            function setTimelineHeight() {
-                const container = document.querySelector('.timeline-container');
-                const containerHeight = container.offsetHeight;
-                timelineLine.style.height = containerHeight + 'px';
-            }
-            
-            setTimelineHeight();
-            window.addEventListener('resize', setTimelineHeight);
-            
-            // Animate timeline items when they come into view
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        
-                        // Animate the timeline dot after a short delay
-                        setTimeout(() => {
-                            const dot = entry.target.querySelector('.timeline-dot');
-                            dot.classList.add('pulse');
-                        }, 300);
-                        
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.2,
-                rootMargin: '0px 0px -100px 0px'
-            });
-            
-            timelineItems.forEach(item => {
-                observer.observe(item);
-            });
-            
-            // Toggle timeline details on click/tap for mobile and desktop
-            timelineItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    // Check if we're on mobile
-                    if (window.innerWidth <= 768) {
-                        this.classList.toggle('active');
-                    }
-                });
-                
-                // Hover effect for desktop
-                item.addEventListener('mouseenter', function() {
-                    if (window.innerWidth > 768) {
-                        this.classList.add('active');
-                    }
-                });
-                
-                item.addEventListener('mouseleave', function() {
-                    if (window.innerWidth > 768) {
-                        this.classList.remove('active');
-                    }
-                });
-            });
-            
-            // Animate stats when they become visible
-            const statsObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const stats = entry.target.querySelectorAll('.stat-number');
-                        stats.forEach(stat => {
-                            stat.classList.add('animate-number');
-                        });
-                        statsObserver.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.5
-            });
-            
-            document.querySelectorAll('.timeline-stats').forEach(statContainer => {
-                statsObserver.observe(statContainer);
-            });
-        });
     </script>
 </body>
 
