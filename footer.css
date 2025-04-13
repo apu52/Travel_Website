@@ -1,11 +1,19 @@
+.footer{
+    padding-bottom: 0.3em;
+    height: fit-content !important;
+    padding: 0 !important;
+    padding-top: 1.2em !important;
+    padding-bottom: 0.6em !important;
+}
+
 
 .footer__container {
     width: 100%;
     /* max-width: 1800px; */
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: flex-start !important;
     justify-content: space-between;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -13,23 +21,49 @@
     margin: 0;
     padding: 0;
   }
+
+  .footer_col_1, .footer_col_2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2.5em;
+  }
+
   .footer__area {
-    padding: 0 20px; /* Adjust padding as needed for left and right spacing */
+    padding: 0 10px; /* Adjust padding as needed for left and right spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   
   .d-flex {
     margin-bottom: 10px; /* Adjust vertical spacing between contact items */
   }
   .footer__col {
-    max-width: 600px; /* Adjust based on your layout */
-    margin: 0 auto; /* Center the content */
+    max-width: 300px;
+    width: 24vw !important;
+    margin: 0; /* Center the content */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
   }
   
-
+.footer-head{
+    margin: 0 !important;
+    margin-bottom: 1em !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+}
 
 .goog-te-combo{
-   
- 
     background: #B88BBA;
     color: white;
     height: 40px;
@@ -72,16 +106,18 @@
     color: white;
     font-size: 14px;
     font-family: Poppins, sans-serif;
-
 }
+
+.footer_link_text{
+    text-align: center;
+}
+
 .gmap_canvas {
     position: relative; /* Allows for positioning child elements */
     overflow: hidden; /* Prevents overflow of child elements */
     background: none !important; /* Ensure no background */
     height: 100%; /* Use 100% height of the parent container */
     width: 100%; /* Use 100% width of the parent container */
-    max-height: 400px; /* Set a maximum height for better responsiveness */
-    max-width: 130%; /* Set a maximum width for better responsiveness */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional: Add some shadow for better visibility */
     border-radius: 5px; /* Add rounded corners */
   
@@ -89,10 +125,32 @@
 .gmap_canvas {
     overflow: hidden;
     background: none !important;
-    height: 200px;
-    width: 200px;
- 
+  }
 
+  .map_col{
+    width: 60vw !important;
+    margin: 0; /* Center the content */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mapouter{
+    width: 100%;
+  }
+
+  .gmap_canvas, #gmap_canvas{
+    width: 100%;
+    width: 60vw !important;
+    height: 250px;
+  }
+
+  .footer-head-map{
+    text-align: left !important;
+    justify-content: left !important;
+    margin: 1em 20em !important;
   }
 
   .language-dropdown-container {
@@ -135,3 +193,50 @@
     width: 100%; /* Full width of the dropdown */
 }
 
+#google_translate_element a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#google_translate_element img{
+    width: auto !important;
+    height: 4em !important;
+    
+}
+
+.footer__bar{
+    margin-top: 1.5em !important;
+}
+
+@media (max-width: 900px) {
+    .footer_col_1, .footer_col_2{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer__col, .footer__area{
+        width: 48vw !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .map_col{
+        width: 58vw !important;
+    }
+
+    .gmap_canvas, #gmap_canvas{
+        width: 100%;
+        height: 250px;
+      }
+}
+
+@media (max-width: 500px) {
+    .footer_col_2{
+        padding: auto 0.2em !important;
+    }
+    .map_col{
+        width: 85vw !important;
+    }
+}
