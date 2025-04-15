@@ -175,6 +175,7 @@ body {
 .cards:hover {
     background: linear-gradient(to bottom, blue, white);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transform: scale(1.02);
 }
 
 .card-image {
