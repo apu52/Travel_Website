@@ -242,6 +242,9 @@ html {
     body {
       font-family: 'Lato', sans-serif;
       /* background-color: #0e1525; */
+      background: -webkit-linear-gradient(to top, #080f21, #06255b); /* Safari */
+      background: -moz-linear-gradient(to top, #080f21, #06255b); /* Firefox */
+      background: -o-linear-gradient(to top, #080f21, #06255b); /* Opera */
       background: linear-gradient(to top, #080f21, #06255b);
       color: #ffffff;
       margin: 0;
@@ -287,6 +290,9 @@ html {
         width: 0%;
         height: 7px;
         width: 0;
+        background: -webkit-linear-gradient(90deg, rgb(0, 72, 255) 0%, rgb(153, 187, 255) 50%, rgb(0, 184, 250) 100%); /* Safari */
+        background: -moz-linear-gradient(90deg, rgb(0, 72, 255) 0%, rgb(153, 187, 255) 50%, rgb(0, 184, 250) 100%); /* Firefox */
+        background: -o-linear-gradient(90deg, rgb(0, 72, 255) 0%, rgb(153, 187, 255) 50%, rgb(0, 184, 250) 100%); /* Opera */
         background: linear-gradient(90deg, rgb(0, 72, 255) 0%, rgb(153, 187, 255) 50%, rgb(0, 184, 250) 100%);
         box-shadow: 0 0 4px rgba(0, 166, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.7);
         transition: width 0.09s ease-in-out;
@@ -357,4 +363,3 @@ html {
     {
       color: blue;
     }
-    

@@ -22,8 +22,15 @@
 
 /* Glow Effect on Hover */
 .nav-container:hover {
+  -webkit-box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.7), 
+              0px 0px 30px rgba(0, 183, 255, 0.7); /* Safari */
+  -moz-box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.7), 
+              0px 0px 30px rgba(0, 183, 255, 0.7); /* Firefox */
   box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.7), 
               0px 0px 30px rgba(0, 183, 255, 0.7); /* Brighter blue glow */
+  -webkit-transition: all 0.4s ease-in-out; /* Safari */
+  -moz-transition: all 0.4s ease-in-out; /* Firefox */
+  -o-transition: all 0.4s ease-in-out; /* Opera */
   transition: all 0.4s ease-in-out;
  
 }
@@ -626,13 +633,10 @@ body {
   line-height: 34px;
   margin-bottom: 28px;
 
-  background: #fd4766;
-  background: linear-gradient(
-    120deg,
-    #1c99fe 20.69%,
-    #7644ff 50.19%,
-    #fd4766 79.69%
-  );
+  background: -webkit-linear-gradient(120deg, #1c99fe 20.69%, #7644ff 50.19%, #fd4766 79.69%); /* Safari */
+  background: -moz-linear-gradient(120deg, #1c99fe 20.69%, #7644ff 50.19%, #fd4766 79.69%); /* Firefox */
+  background: -o-linear-gradient(120deg, #1c99fe 20.69%, #7644ff 50.19%, #fd4766 79.69%); /* Opera */
+  background: linear-gradient(120deg, #1c99fe 20.69%, #7644ff 50.19%, #fd4766 79.69%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -659,6 +663,10 @@ body {
   border-radius: 5rem;
   cursor: pointer;
   transition: 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: -moz-transform 0.3s;
+  transition: -o-transform 0.3s;
+  transition: transform 0.3s;
 
   /* display: inline-block; */
   border-radius: 50px !important;

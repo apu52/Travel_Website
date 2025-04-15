@@ -112,18 +112,22 @@
     border: 2px solid var(--button-bg-hover);
     border-radius: 5px;
     cursor: pointer;
+    -webkit-transform: translate(-50%, -50%); /* Safari */
+    -ms-transform: translate(-50%, -50%); /* IE 9 */
     transform: translate(-50%, -50%); /* Ensure no diagonal shift */
+    -webkit-transition: all 0.2s ease-in-out; /* Safari */
+    -moz-transition: all 0.2s ease-in-out; /* Firefox */
+    -o-transition: all 0.2s ease-in-out; /* Opera */
     transition: all 0.2s ease-in-out;
-    /* -webkit-transition: background-color 0.3s ease, transform 0.3s ease;
-    -ms-transition: background-color 0.3s ease, transform 0.3s ease; */
-    /* transition: background-color 0.3s ease, transform 0.3s ease; */
   }
 
   #homeButton:hover {
+    -webkit-background: var(--button-bg-hover); /* Safari */
+    -moz-background: var(--button-bg-hover); /* Firefox */
+    -o-background: var(--button-bg-hover); /* Opera */
     background: var(--button-bg-hover);
     color: var(--button-text-hover);
     border-color: var(--button-border-hover);
-    /* transform: none; Remove diagonal shift on hover */
   }
 
   @keyframes drawLine1 {

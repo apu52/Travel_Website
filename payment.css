@@ -51,8 +51,11 @@ body {
   }
   /* Additional styles for other sections */
   .checkout-container {
+    display: -ms-grid; /* IE 11 */
     display: grid;
+    -ms-grid-columns: 1fr 1fr; /* IE 11 */
     grid-template-columns: 1fr 1fr;
+    -webkit-gap: 20px; /* Safari */
     gap: 20px;
     padding: 20px;
     max-width: 1200px;
@@ -89,12 +92,23 @@ body {
   }
   
   button {
-    background-color: #28a745;
+    background: -webkit-linear-gradient(#28a745, #218838);
+    background: -moz-linear-gradient(#28a745, #218838);
+    background: -o-linear-gradient(#28a745, #218838);
+    background: linear-gradient(#28a745, #218838);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Safari */
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Firefox */
+    -o-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opera */
     color: white;
     padding: 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    -webkit-transition: background-color 0.3s ease, transform 0.3s ease; /* Safari */
+    -moz-transition: background-color 0.3s ease, transform 0.3s ease; /* Firefox */
+    -o-transition: background-color 0.3s ease, transform 0.3s ease; /* Opera */
+    transition: background-color 0.3s ease, transform 0.3s ease;
   }
   
   button:hover {

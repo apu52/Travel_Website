@@ -7,7 +7,10 @@
 }
 body{
 
-  background: linear-gradient(#9d6de9, #190832) ;
+  background: -webkit-linear-gradient(#9d6de9, #190832);
+  background: -moz-linear-gradient(#9d6de9, #190832);
+  background: -o-linear-gradient(#9d6de9, #190832);
+  background: linear-gradient(#9d6de9, #190832);
 }
 
 .dark-theme {
@@ -18,6 +21,9 @@ body{
   --img-color: red;
   --head-text: red;
   --text-same: #0d213f;
+  --bubble-color: -webkit-linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, #FD4766 79.69%);
+  --bubble-color: -moz-linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, #FD4766 79.69%);
+  --bubble-color: -o-linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, #FD4766 79.69%);
   --bubble-color: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, #FD4766 79.69%);
   --testimonials-img-border: red;
   span.aos-init.aos-animate{
@@ -193,11 +199,17 @@ body.dark-mode .heading h1{
   outline: none;
   border-radius: 25px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease-in-out; /* Safari */
+  -moz-transition: all 0.3s ease-in-out; /* Firefox */
+  -o-transition: all 0.3s ease-in-out; /* Opera */
+  transition: all 0.3s ease-in-out;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 .table .purchase-btn button:hover{
   border-radius: 5px;
+  -webkit-transform: scale(1.1); /* Safari */
+  -ms-transform: scale(1.1); /* IE 9 */
+  transform: scale(1.1);
 }
 .basic .features li::selection{
   background: #ffd861;
