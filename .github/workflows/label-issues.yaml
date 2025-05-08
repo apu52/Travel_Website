@@ -13,18 +13,17 @@ jobs:
         id: check_label
         run: |
           echo "Checking labels for issue #${{ github.event.issue.number }}"
-
-          if [[ "${{ github.event.issue.body }}" == *"I'm a GSSOC'24 contributor"* ]]; then
-            echo "::set-output name=label::gssoc"
-          elif [[ "${{ github.event.issue.body }}" == *"I'm a VSOC'24 contributor"* ]]; then
-            echo "::set-output name=label::VSoC'24"
+          if [[ "${{ github.event.issue.body || '' }}" == *"I'm a GSSOC'24 contributor"* ]]; then
+            echo "label=gssoc" >> $GITHUB_ENV
+          elif [[ "${{ github.event.issue.body || '' }}" == *"I'm a VSOC'24 contributor"* ]]; then
+            echo "label=VSoC'24" >> $GITHUB_ENV
           else
-            echo "::set-output name=label::"
+            echo "label=" >> $GITHUB_ENV
           fi
 
       - name: Apply Label
-        if: steps.check_label.outputs.label != ''
+        if: env.label != ''
         uses: actions-ecosystem/action-add-labels@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          labels: ${{ steps.check_label.outputs.label }}
+          labels: ${{ env.label }}
