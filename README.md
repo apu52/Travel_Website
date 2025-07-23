@@ -69,29 +69,29 @@ Check out the live project [here](https://apu52.github.io/Travel_Website/).
 ## Features🌟
 
 
-- **🌐 Introductory Page** Welcomes visitors with an engaging overview, setting the tone for exploratio.
+- **🌐 Introductory Page:** Welcomes visitors with an engaging overview, setting the tone for exploration.
 
-- **📍 Top Destinations*: Highlights popular travel spots with captivating images and detailed descriptios.
+- **📍 Top Destinations:** Highlights popular travel spots with captivating images and detailed descriptions.
 
-- **✈️ Best Trip Packages*: Offers curated travel packages tailored to various interests and budgets, complete with itineraries and pricig.
+- **✈️ Best Trip Packages:** Offers curated travel packages tailored to various interests and budgets, complete with itineraries and pricing.
 
-- **📸 Trip Gallery*: Showcases memorable moments from past trips in a visually appealing gallry.
+- **📸 Trip Gallery:** Showcases memorable moments from past trips in a visually appealing gallery.
 
-- **📞 Contact Us Pag**: Provides essential contact information and inquiry forms for easy communicaion.
+- **📞 Contact Us Page:** Provides essential contact information and inquiry forms for easy communication.
 
-- **🗺️ Plan a Trp**: Assists users in planning their journeys with suggested destinations and pacages.
+- **🗺️ Plan a Trip:** Assists users in planning their journeys with suggested destinations and packages.
 
-- **🔐 Login/SigUp**: Enables users to create accounts and access personalized fetures.
+- **🔐 Login/SignUp:** Enables users to create accounts and access personalized features.
 
-- **🧭 Adventure & Cultural Experieces**: Offers specialized pages for adventure seekers and cultural enthsiasts.
+- **🧭 Adventure & Cultural Experiences:** Offers specialized pages for adventure seekers and cultural enthusiasts.
 
-- **💖 Honeymoon Pacages**: Presents romantic getaway options for nwlyweds.
+- **💖 Honeymoon Packages:** Presents romantic getaway options for newlyweds.
 
-- **💰 Pricin Page**: Details various pricing options for different travelpackages.
+- **💰 Pricing Page:** Details various pricing options for different travel packages.
 
-- **🧳 To Deals**: Highlights the best travel deals available, ensuring valuefor money.
+- **🧳 To Deals:** Highlights the best travel deals available, ensuring valuefor money.
 
-- **🌍 Dedicated Destnations**: Provides in-depth information on specific destinations to help travelers make infored choices.
+- **🌍 Dedicated Destinations:** Provides in-depth information on specific destinations to help travelers make informed choices.
 
 
 
