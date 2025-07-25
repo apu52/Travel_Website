@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TourGuide - Book Your Travel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #f8fafc;
+            --accent-color: #f97316;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --white: #ffffff;
+            --max-width: 1200px;
+            --border-radius: 1rem;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--text-dark);
+        }
+
+        .booking-container {
+            max-width: var(--max-width);
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .booking-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .tab-btn {
+            padding: 1rem 2rem;
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            position: relative;
+            color: var(--text-light);
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .booking-form {
+            background-color: #f8fafc;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+        }
+
+        .form-group label i {
+            margin-right: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 0.8rem 1rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+        }
+
+        .travelers-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .travelers-input {
+            display: flex;
+            align-items: center;
+            border: 1px solid #cbd5e1;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .travelers-input button {
+            width: 40px;
+            height: 100%;
+            background-color: #e2e8f0;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .travelers-input button:hover {
+            background-color: #cbd5e1;
+        }
+
+        .travelers-input input {
+            width: 50px;
+            text-align: center;
+            border: none;
+            background-color: transparent;
+            font-size: 1rem;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: var(--accent-color);
+            color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background-color: #ea580c;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(249, 115, 22, 0.3);
+        }
+
+        .benefits-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .benefit-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .travelers-group {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            .section-header h1 {
+                font-size: 2rem;
+            }
+            
+            .form-actions {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="booking-container">
+        <div class="section-header">
+            <h1>Plan Your Perfect Trip</h1>
+            <p>Book flights and hotels with ease. We'll redirect you to Google services with your information pre-filled for a seamless booking experience.</p>
+        </div>
+        
+        <div class="booking-tabs">
+            <button class="tab-btn active" data-tab="flights">Flights</button>
+            <button class="tab-btn" data-tab="hotels">Hotels</button>
+            <button class="tab-btn" data-tab="packages">Packages</button>
+        </div>
+        
+        <div class="booking-form">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="origin"><i class="fas fa-plane-departure"></i> Flying From</label>
+                    <input type="text" id="origin" placeholder="City or airport" value="New York (JFK)">
+                </div>
+                
+                <div class="form-group">
+                    <label for="destination"><i class="fas fa-plane-arrival"></i> Flying To</label>
+                    <input type="text" id="destination" placeholder="City or airport" value="London (LHR)">
+                </div>
+                
+                <div class="form-group">
+                    <label for="departure"><i class="fas fa-calendar-day"></i> Departure</label>
+                    <input type="date" id="departure" value="2024-07-15">
+                </div>
+                
+                <div class="form-group">
+                    <label for="return"><i class="fas fa-calendar-day"></i> Return</label>
+                    <input type="date" id="return" value="2024-07-25">
+                </div>
+            </div>
+            
+            <div class="travelers-group">
+                <div class="form-group">
+                    <label><i class="fas fa-user"></i> Travelers</label>
+                    <div class="travelers-input">
+                        <button id="decrement-adults">-</button>
+                        <input type="number" id="adults" min="1" value="2" readonly>
+                        <button id="increment-adults">+</button>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-child"></i> Children</label>
+                    <div class="travelers-input">
+                        <button id="decrement-children">-</button>
+                        <input type="number" id="children" min="0" value="0" readonly>
+                        <button id="increment-children">+</button>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-baby"></i> Infants</label>
+                    <div class="travelers-input">
+                        <button id="decrement-infants">-</button>
+                        <input type="number" id="infants" min="0" value="0" readonly>
+                        <button id="increment-infants">+</button>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cabin"><i class="fas fa-chair"></i> Cabin Class</label>
+                    <select id="cabin">
+                        <option value="economy">Economy</option>
+                        <option value="premium">Premium Economy</option>
+                        <option value="business">Business</option>
+                        <option value="first">First Class</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-actions">
+                <button class="btn btn-primary" id="search-flights">
+                    <i class="fas fa-search"></i> Search Flights
+                </button>
+                <button class="btn btn-secondary" id="search-hotels">
+                    <i class="fas fa-hotel"></i> Search Hotels
+                </button>
+            </div>
+        </div>
+        
+        <div class="benefits-section">
+            <div class="benefit-card">
+                <i class="fas fa-lock"></i>
+                <h3>Secure Booking</h3>
+                <p>Your information is protected with bank-level security. We don't store any payment details.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <i class="fas fa-percent"></i>
+                <h3>Best Price Guarantee</h3>
+                <p>We guarantee you'll find the best prices for your flights and hotels.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Our travel experts are available around the clock to assist you with your booking.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab functionality
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Here you would typically show the corresponding form
+                // For simplicity, we're just changing the button style in this example
+            });
+        });
+
+        // Traveler counter functionality
+        function setupCounter(buttonId, inputId, increment = true) {
+            const button = document.getElementById(buttonId);
+            const input = document.getElementById(inputId);
+            
+            button.addEventListener('click', () => {
+                let value = parseInt(input.value);
+                if (increment) {
+                    input.value = value + 1;
+                } else {
+                    input.value = value > (inputId === 'adults' ? 1 : 0) ? value - 1 : value;
+                }
+            });
+        }
+
+        // Set up all counters
+        setupCounter('increment-adults', 'adults', true);
+        setupCounter('decrement-adults', 'adults', false);
+        setupCounter('increment-children', 'children', true);
+        setupCounter('decrement-children', 'children', false);
+        setupCounter('increment-infants', 'infants', true);
+        setupCounter('decrement-infants', 'infants', false);
+
+        // Search flights function - redirects to Google Flights
+        document.getElementById('search-flights').addEventListener('click', () => {
+            const origin = document.getElementById('origin').value;
+            const destination = document.getElementById('destination').value;
+            const departure = document.getElementById('departure').value;
+            const returnDate = document.getElementById('return').value;
+            const adults = document.getElementById('adults').value;
+            const children = document.getElementById('children').value;
+            const infants = document.getElementById('infants').value;
+            const cabin = document.getElementById('cabin').value;
+            
+            // Format dates for URL (YYYY-MM-DD)
+            const depDate = new Date(departure);
+            const retDate = new Date(returnDate);
+            
+            const formattedDepDate = `${depDate.getFullYear()}-${(depDate.getMonth() + 1).toString().padStart(2, '0')}-${depDate.getDate().toString().padStart(2, '0')}`;
+            const formattedRetDate = `${retDate.getFullYear()}-${(retDate.getMonth() + 1).toString().padStart(2, '0')}-${retDate.getDate().toString().padStart(2, '0')}`;
+            
+            // Calculate total passengers
+            const totalPassengers = parseInt(adults) + parseInt(children) + parseInt(infants);
+            
+            // Create Google Flights URL
+            const baseUrl = 'https://www.google.com/travel/flights';
+            const params = new URLSearchParams({
+                q: `${origin} to ${destination}`,
+                tt: 'o',  // Round trip
+                out: formattedDepDate,
+                ret: formattedRetDate,
+                px: `${totalPassengers},${adults},${children},${infants}`,
+                c: cabin
+            });
+            
+            const url = `${baseUrl}?${params.toString()}`;
+            
+            // Open in new tab
+            window.open(url, '_blank');
+        });
+
+        // Search hotels function - redirects to Google Hotels
+        document.getElementById('search-hotels').addEventListener('click', () => {
+            const destination = document.getElementById('destination').value;
+            const departure = document.getElementById('departure').value;
+            const returnDate = document.getElementById('return').value;
+            const adults = document.getElementById('adults').value;
+            
+            // Format dates for URL (YYYY-MM-DD)
+            const depDate = new Date(departure);
+            const retDate = new Date(returnDate);
+            
+            const formattedDepDate = `${depDate.getFullYear()}-${(depDate.getMonth() + 1).toString().padStart(2, '0')}-${depDate.getDate().toString().padStart(2, '0')}`;
+            const formattedRetDate = `${retDate.getFullYear()}-${(retDate.getMonth() + 1).toString().padStart(2, '0')}-${retDate.getDate().toString().padStart(2, '0')}`;
+            
+            // Create Google Hotels URL
+            const baseUrl = 'https://www.google.com/travel/hotels';
+            const params = new URLSearchParams({
+                q: destination,
+                checkin: formattedDepDate,
+                checkout: formattedRetDate,
+                adults: adults
+            });
+            
+            const url = `${baseUrl}?${params.toString()}`;
+            
+            // Open in new tab
+            window.open(url, '_blank');
+        });
+
+        // Set min date to today for date inputs
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('departure').min = today;
+        document.getElementById('return').min = today;
+    </script>
+</body>
+</html>
