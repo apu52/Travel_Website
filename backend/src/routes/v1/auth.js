@@ -1,12 +1,12 @@
 const express = require('express');
-
-const { UserController } = require('../../controllers');
-const { UserMiddlewares } = require('../../middlewares');
-
 const router = express.Router();
+const { UserController } = require('../../controllers');
+const { verifyRecaptcha } = require('../../controllers/recaptcha-controller');
 
-router.post('/signup',UserController.signup );
-router.post('/login',UserController.login );
+// Signup route with reCAPTCHA middleware
+router.post('/signup', verifyRecaptcha, UserController.signup);
+// Optional: login with reCAPTCHA too
 router.get('/logout',UserMiddlewares.userAuthenticated,UserController.logout);
+router.post('/login', verifyRecaptcha, UserController.login);
 
 module.exports = router;

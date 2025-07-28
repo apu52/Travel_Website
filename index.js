@@ -126,14 +126,22 @@ function resetSlideInterval() {
 changeSlide(0);
 startSlideInterval();
 
-document.getElementById('emailInput').addEventListener('focus', function() {
-  document.getElementById('send').classList.add('focused');
-});
+const emailInput = document.getElementById('emailInput');
+const sendBtn = document.getElementById('send');
+
+if (emailInput && sendBtn) {
+  emailInput.addEventListener('focus', () => {
+    sendBtn.classList.add('focused');
+  });
+
+  emailInput.addEventListener('blur', () => {
+    sendBtn.classList.remove('focused');
+  });
+}
 
 document.getElementById('emailInput').addEventListener('blur', function() {
   document.getElementById('send').classList.remove('focused');
 });
-
 
 
 

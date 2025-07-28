@@ -11,6 +11,8 @@
   <script src="https://kit.fontawesome.com/f2e55912f8.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./login/login.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <!--  reCAPTCHA script -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -29,6 +31,7 @@
 
   <div class="main-container">
     <div class="container" id="container">
+      <!-- Register Form -->
       <div class="form-container register-container">
         <form id="registerForm">
           <h1>Tour Guide</h1>
@@ -41,16 +44,21 @@
             </button>
           </div>
           <small id="passwordStrengthMsg" style="color: red;"></small>
+
+          <!--  reCAPTCHA widget for Register -->
+          <div class="g-recaptcha" data-sitekey="Your_site_key"></div>
+
           <button type="submit">Register</button>
 
           <div class="social-container">
-            <a class="fb" href="www.facebook.com" class="social"><i class="lni lni-facebook-fill"></i></a>
-            <a class="goog" href="www.google.com" class="social"><i class="lni lni-google"></i></a>
-            <a class="lin" href="www.linkedin.com" class="social"><i class="lni lni-linkedin-original"></i></a>
+            <a class="fb" href="https://www.facebook.com" class="social"><i class="lni lni-facebook-fill"></i></a>
+            <a class="goog" href="https://www.google.com" class="social"><i class="lni lni-google"></i></a>
+            <a class="lin" href="https://www.linkedin.com" class="social"><i class="lni lni-linkedin-original"></i></a>
           </div>
         </form>
       </div>
 
+      <!-- Login Form -->
       <div class="form-container login-container">
         <form id="loginForm">
           <h1>Tour Guide</h1>
@@ -70,12 +78,16 @@
               <a href="forgotPassword.html">Forgot password?</a>
             </div>
           </div>
+
+          <!--  reCAPTCHA widget for Login -->
+          <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+
           <button type="submit">Login</button>
           <span>or use your account</span>
           <div class="social-container">
-            <a class="fb" href="www.facebook.com" class="social"><i class="lni lni-facebook-fill"></i></a>
-            <a class="goog" href="www.google.com" class="social"><i class="lni lni-google"></i></a>
-            <a class="lin" href="www.linkedin.com" class="social"><i class="lni lni-linkedin-original"></i></a>
+            <a class="fb" href="https://www.facebook.com" class="social"><i class="lni lni-facebook-fill"></i></a>
+            <a class="goog" href="https://www.google.com" class="social"><i class="lni lni-google"></i></a>
+            <a class="lin" href="https://www.linkedin.com" class="social"><i class="lni lni-linkedin-original"></i></a>
           </div>
         </form>
       </div>
@@ -85,16 +97,12 @@
           <div class="overlay-panel overlay-left">
             <h1 class="title">Hello <br> friends</h1>
             <p>If you have an account, login here and have fun</p>
-            <button class="ghost" id="login">Login
-              <i class="lni lni-arrow-left login"></i>
-            </button>
+            <button class="ghost" id="login">Login <i class="lni lni-arrow-left login"></i></button>
           </div>
           <div class="overlay-panel overlay-right">
             <h1 class="title">Start your <br> journey now</h1>
             <p>If you don't have an account yet, join us and start your journey.</p>
-            <button class="ghost" id="register">Register
-              <i class="lni lni-arrow-right register"></i>
-            </button>
+            <button class="ghost" id="register">Register <i class="lni lni-arrow-right register"></i></button>
           </div>
         </div>
       </div>
@@ -138,13 +146,11 @@
         document.getElementById("loginForm").scrollIntoView({ behavior: "smooth" });
       });
 
-      // Form validation and submission
       document.getElementById("registerForm").addEventListener("submit", function (event) {
         event.preventDefault();
         validateForm("register");
       });
 
-      //Form validation for registration name
       document.getElementById("registerName").addEventListener("keypress", function (event) {
         var char = String.fromCharCode(event.which);
         if (!(/[a-zA-Z]/.test(char))) {
@@ -160,6 +166,9 @@
       function validateForm(formType) {
         let email, password, name;
         const spcharRegex = /[<>"/]/;
+
+        //  Check reCAPTCHA
+
         if (formType === "register") {
           name = document.getElementById("registerName").value;
           email = document.getElementById("registerEmail").value;
@@ -182,6 +191,7 @@
             setTimeout(() => {
               registerDeclineBanner.style.display = "none";
             }, 6000);
+            return;
           }
 
           localStorage.setItem("name", name);
@@ -228,6 +238,9 @@
             }, 6000);
           }
         }
+        
+        // Reset reCAPTCHA after form handling
+        grecaptcha.reset();
       }
 
       function validateEmail(email) {
@@ -235,6 +248,12 @@
         return re.test(email);
       }
     });
+    function onSubmit(token) {
+  // Programmatically trigger form submission after reCAPTCHA success
+  const activeForm = document.querySelector('.right-panel-active') ? document.getElementById('registerForm') : document.getElementById('loginForm');
+  activeForm.submit(); // Now triggers the default 'submit' event listener
+}
+
   </script>
 </body>
 
