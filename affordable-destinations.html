@@ -205,11 +205,17 @@
                 <img src="${destination.imgSrc}" alt="${destination.name}">
                 <h2>${destination.name}</h2>
                 <p>Rating: <span class="rating">${destination.rating}</span></p>
-                <p class="price">From ${destination.price}</p>
+                <p class="price">From: ${destination.price}</p>
                 <a href="payment.html"><button
-                    class="book__now btn-style" style="box-shadow: 2px 2px 8px black;">Book
-                    Now</button></a>
-            `;
+                    class="book__now btn-style" style="margin-top: 10px;
+                                                       padding: 10px 20px;
+                                                       background-color: #007BFF;
+                                                       color: white;
+                                                       border: none;
+                                                       border-radius: 5px;
+                                                       cursor: pointer;
+                                                       transition: background-color 0.3s, box-shadow 0.3s;
+                                                       text-align: center;"> Book Now</button></a>`;
             destinationsList.appendChild(destinationItem);
         });
 
