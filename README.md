@@ -85,13 +85,13 @@ Check out the live project [here](https://apu52.github.io/Travel_Website/).
 
 - **🧭 Adventure & Cultural Experieces**: Offers specialized pages for adventure seekers and cultural enthsiasts.
 
-- **💖 Honeymoon Pacages**: Presents romantic getaway options for nwlyweds.
+- **💖 Honeymoon Packages**: Presents romantic getaway options for newly weds.
 
-- **💰 Pricin Page**: Details various pricing options for different travelpackages.
+- **💰 Pricin Page**: Details various pricing options for different travel packages.
 
-- **🧳 To Deals**: Highlights the best travel deals available, ensuring valuefor money.
+- **🧳 To Deals**: Highlights the best travel deals available, ensuring value for money.
 
-- **🌍 Dedicated Destnations**: Provides in-depth information on specific destinations to help travelers make infored choices.
+- **🌍 Dedicated Destinations**: Provides in-depth information on specific destinations to help travelers make infored choices.
 
 
 
