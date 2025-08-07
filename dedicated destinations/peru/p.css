@@ -15,6 +15,10 @@
     box-shadow: 5px 5px 60px #575050 ;
   }
 
+  .img-box img:hover{
+    transform: scale(1.02);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.6);
+  }
   .bttn{
     border:none;
     outline:none;
