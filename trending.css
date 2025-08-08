@@ -21,6 +21,78 @@ body {
     text-align: center;
 }
 
+.filter-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.filter-container button {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.filter-container button:hover {
+    background-color: #e0e0e0;
+}
+
+.cards {
+    background: #fff;
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Stronger shadow on hover */
+}
+
+.card-image img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Cover the area, cropping if necessary */
+    display: block;
+    transition: transform 0.3s ease; /* Smooth zoom on hover */
+}
+
+.cards:hover .card-image img {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.cards p {
+    text-align: center;
+    font-size: 1.3rem; /* Slightly larger font */
+    font-weight: 600; /* Semi-bold font */
+    margin: 15px 0;
+    color: #333; /* Darker text color */
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3498db; /* A more appealing blue */
+    color: #fff;
+    border: none;
+    padding: 12px 25px; /* Adjusted padding */
+    border-radius: 30px; /* More rounded corners */
+    font-size: 1.1rem; /* Slightly larger font */
+    cursor: pointer;
+    margin: 15px auto 25px;
+    text-transform: uppercase;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.buttons:hover {
+    background: #2980b9; /* Darker blue on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+}
 
 /* Typing Effect CSS */
 /* 

@@ -129,6 +129,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -137,6 +138,82 @@
 
         .cards {
             animation: fadeInUp 0.5s ease forwards;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        #search-input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-container button:hover {
+            background-color: #367c39;
+        }
+
+        .rating {
+            color: #ffc107;
+            /* Star color */
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .filter-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .filter-container button {
+            background: #2c3e50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background 0.3s ease;
+        }
+
+        .filter-container button:hover {
+            background: #1abc9c;
+        }
+
+        /* Back to Top Button */
+        #back-to-top-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #555;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            z-index: 1000;
+        }
+
+        #back-to-top-btn:hover {
+            background-color: #333;
         }
     </style>
 </head>
@@ -149,28 +226,45 @@
 popular tours crafted for those who seek
 a perfect blend of discovery and relaxation.</pre>
     </div>
+
+    <!-- Add Search Bar Here -->
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search for tours...">
+        <button onclick="searchTours()">Search</button>
+    </div>
+
+    <!-- Add Category Filter Here -->
+    <div class="filter-container">
+        <button onclick="filterTours('all')">All</button>
+        <button onclick="filterTours('adventure')">Adventure</button>
+        <button onclick="filterTours('cultural')">Cultural</button>
+        <button onclick="filterTours('relaxation')">Relaxation</button>
+    </div>
+
     <div class="card-container">
-        <div class="cards">
+        <div class="cards" data-category="adventure">
             <div class="card-image">
                 <img src="https://www.pariaoutdoorproducts.com/cdn/shop/articles/Kesugi_Ridge_Trail.jpg?v=1483048098"
                     alt="Placeholder image">
             </div>
             <p>The Kesugi Ridge Trail</p>
+
+            <!-- Add More Details Button Here -->
             <button class="buttons">
-                <a href="Blog/kesugi.html">Blog Page</a>
+                <a href="tour-details.html">More Details</a>
             </button>
         </div>
-        <div class="cards">
+        <div class="cards" data-category="cultural">
             <div class="card-image">
                 <img src="https://plutoniclove.files.wordpress.com/2019/03/39223328504_a7dc3c9054_o.jpg?w=1280"
                     alt="Placeholder image">
             </div>
             <p>Kepler Track</p>
             <button class="buttons">
-                <a href="Blog/kesugi.html">Blog Page</a>
+                <a href="tour-details.html">More Details</a>
             </button>
         </div>
-        <div class="cards">
+        <div class="cards" data-category="relaxation">
             <div class="card-image">
                 <img src="https://cdn.bookatrekking.com/data/images/2020/06/shutterstock-1013024953.jpg"
                     alt="Placeholder image">
@@ -180,7 +274,7 @@ a perfect blend of discovery and relaxation.</pre>
                 <a href="Blog/kesugi.html">Blog Page</a>
             </button>
         </div>
-        <div class="cards">
+        <div class="cards" data-category="cultural">
             <div class="card-image">
                 <img src="https://media.cntraveler.com/photos/643d5d0a5722b1af03793a06/16:9/w_2560%2Cc_limit/Dal%2520Lake_GettyImages-1323846766.jpg"
                     alt="Placeholder image">
@@ -190,7 +284,7 @@ a perfect blend of discovery and relaxation.</pre>
                 <a href="Blog/kesugi.html">Blog Page</a>
             </button>
         </div>
-        <div class="cards">
+        <div class="cards" data-category="adventure">
             <div class="card-image">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPF21UstFZ23Hy_Kfnad_8zlAcnMohJLuoBg&s"
                     alt="Placeholder image">
@@ -204,6 +298,53 @@ a perfect blend of discovery and relaxation.</pre>
     <button class="button1">
         <a href="./package.html">View all tours</a>
     </button>
+
+    <!-- Back to Top Button -->
+    <button onclick="scrollToTop()" id="back-to-top-btn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+
+    <script>
+    function searchTours() {
+        const searchTerm = document.getElementById('search-input').value.toLowerCase();
+        const cards = document.querySelectorAll('.cards');
+
+        cards.forEach(card => {
+            const tourName = card.querySelector('p').textContent.toLowerCase();
+            if (tourName.includes(searchTerm)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    function filterTours(category) {
+        const cards = document.querySelectorAll('.cards');
+
+        cards.forEach(card => {
+            if (category === 'all' || card.dataset.category === category) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    window.onscroll = function() {
+        const btn = document.getElementById('back-to-top-btn');
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            btn.style.display = 'block';
+        } else {
+            btn.style.display = 'none';
+        }
+    };
+    </script>
 </body>
 
 </html>
