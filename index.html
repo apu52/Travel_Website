@@ -383,6 +383,147 @@
       border-radius: 10px;
     }
 
+    /* Profile Section Styles */
+    .profile-section {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .profile-dropdown {
+      position: relative;
+    }
+
+    .profile-trigger {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .profile-trigger:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .profile-avatar i {
+      font-size: 24px;
+      color: #4bb6b7;
+    }
+
+    .profile-name {
+      color: var(--text-dark);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .profile-arrow {
+      font-size: 12px;
+      color: var(--text-light);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-dropdown.active .profile-arrow {
+      transform: rotate(180deg);
+    }
+
+    .profile-menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      min-width: 280px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      z-index: 1000;
+      margin-top: 8px;
+    }
+
+    .profile-dropdown.active .profile-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .profile-info {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .profile-avatar-large i {
+      font-size: 48px;
+      color: #4bb6b7;
+    }
+
+    .profile-details h4 {
+      margin: 0;
+      color: #333;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .profile-details p {
+      margin: 4px 0 0 0;
+      color: #666;
+      font-size: 14px;
+    }
+
+    .profile-menu hr {
+      margin: 0;
+      border: none;
+      border-top: 1px solid #eee;
+    }
+
+    .profile-options {
+      list-style: none;
+      padding: 10px 0;
+      margin: 0;
+    }
+
+    .profile-options li {
+      margin: 0;
+    }
+
+    .profile-options a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 20px;
+      color: #333;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+    }
+
+    .profile-options a:hover {
+      background-color: #f8f9fa;
+    }
+
+    .profile-options a i {
+      font-size: 16px;
+      width: 16px;
+      color: #666;
+    }
+
+    .profile-options a#logout-btn:hover {
+      background-color: #fee;
+      color: #dc3545;
+    }
+
+    .profile-options a#logout-btn:hover i {
+      color: #dc3545;
+    }
+
     /* tour guide section */
     .center-card {
       display: flex;
@@ -526,10 +667,37 @@
         <a href="mapa.html" class="contact-btn" id="nav-view-btn">
           <button class="btn" style="margin: 0;" data-aos="fade-down">View <map name=""></map></button>
         </a>
-        <!-- <a href="loginPage.html" class="contact-btn">
-          <button class="btn" id="logout-btn" style="margin: 0; display: none;" data-aos="fade-down" disabled>Log
-            Out</button>
-        </a> -->
+        
+        <!-- Profile Section (Hidden by default) -->
+        <div class="profile-section" id="profile-section" style="display: none;">
+          <div class="profile-dropdown">
+            <div class="profile-trigger" id="profile-trigger">
+              <div class="profile-avatar">
+                <i class="fas fa-user-circle"></i>
+              </div>
+              <span class="profile-name" id="profile-name">User</span>
+              <i class="fas fa-chevron-down profile-arrow"></i>
+            </div>
+            <div class="profile-menu" id="profile-menu">
+              <div class="profile-info">
+                <div class="profile-avatar-large">
+                  <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-details">
+                  <h4 id="profile-display-name">User Name</h4>
+                  <p id="profile-display-email">user@example.com</p>
+                </div>
+              </div>
+              <hr>
+              <ul class="profile-options">
+                <li><a href="#"><i class="fas fa-user"></i> My Profile</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="#"><i class="fas fa-history"></i> Booking History</a></li>
+                <li><a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="toggle-container" data-aos="fade-down" style="margin-right: 28px;">
@@ -2834,3 +3002,102 @@
 
 </div> -->
 <!-- New bubble background end --}
+<script
+>
+// Profile functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if user is logged in
+    checkLoginStatus();
+    
+    // Profile dropdown functionality
+    const profileTrigger = document.getElementById('profile-trigger');
+    const profileDropdown = document.querySelector('.profile-dropdown');
+    const profileMenu = document.getElementById('profile-menu');
+    const logoutBtn = document.getElementById('logout-btn');
+    
+    if (profileTrigger) {
+        profileTrigger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            profileDropdown.classList.toggle('active');
+        });
+    }
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!profileDropdown.contains(e.target)) {
+            profileDropdown.classList.remove('active');
+        }
+    });
+    
+    // Logout functionality
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            logout();
+        });
+    }
+});
+
+function checkLoginStatus() {
+    const userEmail = localStorage.getItem('email');
+    const userName = localStorage.getItem('name');
+    
+    if (userEmail && userName) {
+        // User is logged in
+        showProfile(userName, userEmail);
+    } else {
+        // User is not logged in
+        showLoginButton();
+    }
+}
+
+function showProfile(name, email) {
+    // Hide login button
+    const loginBtn = document.getElementById('nav-login-btn');
+    const loginLink = document.getElementById('LogIn-link');
+    const profileSection = document.getElementById('profile-section');
+    
+    if (loginBtn) loginBtn.style.display = 'none';
+    if (loginLink) loginLink.style.display = 'none';
+    if (profileSection) profileSection.style.display = 'block';
+    
+    // Update profile information
+    const profileName = document.getElementById('profile-name');
+    const profileDisplayName = document.getElementById('profile-display-name');
+    const profileDisplayEmail = document.getElementById('profile-display-email');
+    
+    // Get first name for display
+    const firstName = name.split(' ')[0];
+    
+    if (profileName) profileName.textContent = firstName;
+    if (profileDisplayName) profileDisplayName.textContent = name;
+    if (profileDisplayEmail) profileDisplayEmail.textContent = email;
+}
+
+function showLoginButton() {
+    // Show login button
+    const loginBtn = document.getElementById('nav-login-btn');
+    const loginLink = document.getElementById('LogIn-link');
+    const profileSection = document.getElementById('profile-section');
+    
+    if (loginBtn) loginBtn.style.display = 'block';
+    if (loginLink) loginLink.style.display = 'block';
+    if (profileSection) profileSection.style.display = 'none';
+}
+
+function logout() {
+    // Clear user data from localStorage
+    localStorage.removeItem('name');
+    localStorage.removeItem('email');
+    localStorage.removeItem('password');
+    
+    // Show success message
+    alert('Logged out successfully!');
+    
+    // Refresh the page to update the UI
+    window.location.reload();
+}
+</script>
+
+</body>
+</html>

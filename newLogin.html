@@ -182,6 +182,7 @@
             setTimeout(() => {
               registerDeclineBanner.style.display = "none";
             }, 6000);
+            return;
           }
 
           localStorage.setItem("name", name);
@@ -194,6 +195,11 @@
             document.getElementById("registerName").value = "";
             document.getElementById("registerEmail").value = "";
             document.getElementById("registerPassword").value = "";
+            document.getElementById("passwordStrengthMsg").textContent = "";
+
+            // Redirect to login section after successful registration
+            container.classList.remove("right-panel-active");
+            document.getElementById("loginForm").scrollIntoView({ behavior: "smooth" });
           }, 3000);
         } else {
           email = document.getElementById("loginEmail").value;
@@ -220,7 +226,10 @@
               loginSuccessBanner.style.display = "none";
               document.getElementById("loginEmail").value = "";
               document.getElementById("loginPassword").value = "";
-            }, 3000);
+
+              // Redirect to home page after successful login
+              window.location.href = "index.html";
+            }, 2000);
           } else {
             loginDeclineBanner.style.display = "block";
             setTimeout(() => {
