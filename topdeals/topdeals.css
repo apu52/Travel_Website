@@ -1,0 +1,146 @@
+   /* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: url("bestdeal.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 64px;
+  margin: 0;
+  color: white;
+}
+
+.header p {
+  font-size: 18px;
+  color: #0a0a0a;
+  max-width: 90%;
+  margin: 20px auto;
+}
+
+/* Deals Section */
+.deals {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+
+
+/* Card */
+.card {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* Card Images */
+.card img {
+  width: 100%;
+  height: 200px;      /* fixed height for uniform cards */
+  object-fit: cover;  /* maintain aspect ratio */
+  display: block;
+}
+
+/* Card Content */
+.card-content {
+  padding: 15px;
+}
+
+.card-content h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Tags, Location, Price */
+.tags,
+.location,
+.price,
+.book-now {
+  margin-bottom: 10px;
+}
+
+.tags span,
+.location span,
+.price span {
+  background-color: #eee;
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  justify-content: center;
+}
+
+.price span {
+  background-color: #f7b731;
+  color: #fff;
+}
+
+/* Book Now Button */
+.book-now li {
+  display: flex;
+  justify-content: center;
+    margin-left: -5px;
+}
+
+.book-now a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+
+}
+
+.book-now a span {
+  display: inline-block;
+  padding: 8px 20px;
+  background: #ff5a5f;
+  border-radius: 4px;
+  transition: 0.3s;
+ 
+}
+
+.book-now a:hover span {
+  background: #ff787d;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 42px;
+  }
+  .header p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 28px;
+  }
+  .header p {
+    font-size: 14px;
+  }
+}
+
