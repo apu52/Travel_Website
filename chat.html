@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Chat</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Chat page layout */
+    .chat-page-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 30px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* Left chat box */
+    .chat-box {
+      flex: 1;
+      min-width: 300px;
+      max-width: 400px;
+      border: 2px solid #333;
+      border-radius: 10px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .chat-header {
+      font-weight: bold;
+      background: #333;
+      color: #fff;
+      padding: 8px;
+      border-radius: 8px 8px 0 0;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    #chat-messages {
+      height: 300px;
+      overflow-y: auto;
+      padding: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      background: #f9f9f9;
+    }
+
+    #chat-input {
+      padding: 8px;
+      margin-bottom: 10px;
+      width: calc(100% - 16px);
+    }
+
+    #send-btn {
+      padding: 8px;
+      cursor: pointer;
+      background: #ff5a5f;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    /* Right image container */
+    .chat-image {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .chat-image img {
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Back link */
+    .back-link {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    body{
+    background-image: url('Background.jpg');
+  background-size: cover;    
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align:center; margin-top: 20px;">Travel Chat Room</h1>
+
+  <div style="text-align:center; font-style:italic; color:#bbdd10; margin-bottom:10px; font-size:24px;">
+  Make your plans here, and memories at the destination!
+  </div>
+
+
+  <div class="chat-page-container">
+    <!-- Left: Chat Box -->
+    <div class="chat-box">
+      <div class="chat-header">Chat with Fellow Travelers</div>
+      <div id="chat-messages"></div>
+      <input type="text" id="chat-input" placeholder="Type your message..." />
+      <button id="send-btn">Send</button>
+    </div>
+
+    <!-- Right: Travel Image -->
+    <div class="chat-image">
+      <img src="travelers.jpg" alt="Travelers Image">
+    </div>
+  </div>
+
+  <div class="back-link">
+    <a href="index.html">⬅ Back to Home</a>
+  </div>
+
+  <script src="chat.js"></script>
+</body>
+</html>
