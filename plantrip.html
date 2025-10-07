@@ -452,5 +452,48 @@
 
     autocomplete(document.getElementById("destination"), destinations);
   </script>
+  <script>
+const form = document.getElementById("trip-form");
+const startDateInput = document.getElementById("start-date");
+const endDateInput = document.getElementById("end-date");
+const messageDiv = document.getElementById("message");
+
+// Prevent past dates for start date
+const today = new Date().toISOString().split('T')[0];
+startDateInput.setAttribute('min', today);
+
+// Update end date min whenever start date changes
+startDateInput.addEventListener('change', () => {
+  const startDateValue = startDateInput.value;
+  if (startDateValue) {
+    endDateInput.setAttribute('min', startDateValue);
+  }
+});
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault(); // Stop default submit
+
+  const startDate = new Date(startDateInput.value);
+  const endDate = new Date(endDateInput.value);
+
+  if (!startDateInput.value || !endDateInput.value) {
+    messageDiv.textContent = "Please select both dates!";
+    messageDiv.style.color = "red";
+    return;
+  }
+
+  if (endDate <= startDate) {
+    messageDiv.textContent = "End date must be after the start date!";
+    messageDiv.style.color = "red";
+    return;
+  }
+
+  messageDiv.textContent = "Trip planned successfully!";
+  messageDiv.style.color = "green";
+
+  // form.submit(); // uncomment if you want actual submission
+});
+</script>
+
 </body>
 </html>
