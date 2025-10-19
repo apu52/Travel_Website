@@ -1,0 +1,66 @@
+/* =================================================== */
+/* FORMS STYLING MODULE - Login/Signup/Contact Forms */
+/* This file applies a modern look with shadows and transitions. */
+/* =================================================== */
+
+/* 1. Form Container Styles (Applies Box Shadow and Background) */
+.form-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow for visibility */
+    background-color: #ffffff;
+}
+
+/* 2. Input Field Styles (Applies Padding, Border, and Transitions) */
+.form-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Ensures padding doesn't affect the 100% width */
+    font-size: 1em;
+}
+
+/* 2a. Focus State: Change border color and add glow when active */
+.form-input:focus {
+    border-color: #007bff; /* Clear accent color (Blue) */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+    outline: none; /* Remove distracting default browser outline */
+}
+
+/* 3. Submit Button Styling */
+.form-submit-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #28a745; /* Primary action color (Green) */
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-submit-btn:hover {
+    background-color: #218838; /* Darken slightly on hover */
+}
+
+/* 4. Error State Styling (Used for JavaScript/validation feedback) */
+
+/* Styles applied to the input field when it has an error */
+.form-input.input-error {
+    border-color: #dc3545; /* Red border for errors */
+}
+
+/* Styles applied to the message below the input */
+.error-message {
+    color: #dc3545; /* Red text for error message */
+    font-size: 0.85em;
+    margin-top: -10px; /* Pulls the message closer to the input */
+    margin-bottom: 10px;
+}
