@@ -650,7 +650,8 @@ body {
   text-align: left;
 }
 
-.btn {
+
+ .btn {
   outline: none;
   border: none;
   font-size: 1rem;
@@ -671,7 +672,7 @@ body {
     #6a0dad,
     #2f73d9
   ); /* Gradient background */
-  border: 2px solid transparent; /* Remove solid border, keep gradient */
+  border: 2px solid transparent;  /* Remove solid border, keep gradient  */
   color: white;
   font-weight: 500;
   font-size: 14px;
@@ -679,14 +680,21 @@ body {
   vertical-align: middle;
   text-decoration: none;
   white-space: nowrap;
-
 }
+
 
 .btn:hover {
   background-color: #ff0000;
   border-color: #f5f2f2;
   color: #fff;
-}
+} 
+
+ #nav-login-btnn:hover, #nav-view-btnn:hover
+{
+   /* transition: all 0.3s ease;  */
+  transform: translateY(-8px) scale(1.05); /* bubble/float */
+  background: linear-gradient(135deg, #b51ead, #1515a4); /* new gradient */
+} 
 
 #send {
   border-top-right-radius: 5rem;
