@@ -10,93 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-    .newNav {
-      opacity: 1 !important;
-      translate: none !important;
-      rotate: none !important;
-      scale: none !important;
-      transform: none !important;
-    }
-
-    .top-btn {
-      display: none;
-      width: 50px;
-      height: 50px;
-      position: fixed;
-      bottom: 10px;
-      right: 0px;
-      background-color: #ab45e7;
-      color: #fff;
-      padding: 2px;
-      border: none;
-      margin-right: 36px;
-      border-radius: 50%;
-      cursor: pointer;
-    }
-
-    .top-btn:hover {
-      background-color: #0056b3;
-    }
-
-    .reveal {
-      position: relative;
-      opacity: 0;
-    }
-
-    .reveal.active {
-      opacity: 1;
-    }
-
-    .active.fade-bottom {
-      animation: fade-bottom 0.5s ease-in-out;
-    }
-
-    .active.fade-left {
-      animation: fade-left 0.5s ease-in-out;
-    }
-
-    .active.fade-right {
-      animation: fade-right 0.5s ease-in-out;
-    }
-
-    @keyframes fade-bottom {
-      0% {
-        transform: translateY(50px);
-        opacity: 0;
-      }
-
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    @keyframes fade-left {
-      0% {
-        transform: translateX(-100px);
-        opacity: 0;
-      }
-
-      100% {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-
-    @keyframes fade-right {
-      0% {
-        transform: translateX(100px);
-        opacity: 0;
-      }
-
-      100% {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-  </style>
-
+  
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="./navLinks.css" />
@@ -123,21 +37,6 @@
 </head>
 
 <body>
-  <!-- <nav>
-      <div class="nav__logo">Tourguide<span>.</span></div>
-      <ul class="nav__links">
-        <li class="link"><a href="./index.html">Home</a></li>
-        <li class="link"><a href="/index.html" >AboutUs</a></li>
-        <li class="link"><a href="./index.html">Destinations</a></li>
-        <li class="link"><a href="/index.html">Pricing</a></li>
-        <li class="link"><a href="/index.html">Testimonials</a></li>
-        <li class="link"><a href="/index.html">Reviews</a></li>
-        
-        <li class="link"><a href="login.html">Login</a></li>
-      </ul>
-      <a href="/index.html"><button class="btn">Contact Us</button></a>
-    </nav> -->
-  <!-- sticky animation  -->
   <script type="text/javascript">
     window.addEventListener("scroll", function () {
       var header = document.querySelector("nav");
@@ -145,60 +44,58 @@
     })
   </script>
   <nav class="newNav">
-    <div style="display: flex; align-items: center;">
-      <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
-          <img src="favicon.ico" class="sitelogo" alt="Site Logo">
-          <span class="nav__logo" data-aos="fade-right">Tourguide<span style="margin-right: 0.5vw;">.</span></span>
-      </a>
-  </div>
-  
-    <ul class="navLinks">
-      <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
-      <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
-      <li class="link" data-aos=""><a href="../index.html">Home</a></li>
-      <li class="link" data-aos=""><a href="./about.html">About</a></li>
-      <li class="link dropdown" data-aos="">
-        <a href="index.html#Services" class="dropdown">Services</a>
-        <ul class="dropdown-menu">
-          <li><a href="index.html#Destinations">Destination</a></li>
-          <li><a href="index.html#trip">Prices</a></li>
-          <li><a href="index.html#ReviewGallery">Trip Gallery</a></li>
-          <li><a href="index.html#tourist">Tourist Guide</a></li>
-          <li><a href="index.html#hotel">Hotel & Resort</a></li>
-        </ul>
-      </li>
-      <li class="link" data-aos=""><a href="./topdeals/topdeals.html">Top Deals</a></li>
-      <li class="link" data-aos=""><a href="./packages.html">Packages</a></li>
-      <li class="link" data-aos=""><a href="index.html#testimonial">Testimonial</a></li>
-      <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
-      <li class="link" data-aos=""><a href="index.html#cnt-form">Contact Us</a></li>
-    </ul>
-
-    <div class="contact-btns">
-      <a href="newLogin.html" class="contact-btn" id="nav-login-btn">
-        <button class="btn login" data-aos="fade-down">Login/<br>SignUp</button>
-      </a>
-      <a href="mapa.html" class="contact-btn" id="nav-view-btn">
-        <button class="btn" style="margin: 0;" data-aos="fade-down">View <map name=""></map></button>
-      </a>
-      <!-- <a href="loginPage.html" class="contact-btn">
-        <button class="btn" id="logout-btn" style="margin: 0; display: none;" data-aos="fade-down" disabled>Log
-          Out</button>
-      </a> -->
+      <div style="display: flex; align-items: center;">
+        <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+            <img src="favicon.ico" class="sitelogo" alt="Site Logo">
+            <span class="nav__logo" data-aos="fade-right">Tourguide<span style="margin-right: 0.5vw;">.</span></span>
+        </a>
     </div>
+      <ul class="navLinks">
+        <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
+        <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
+        <li class="link" data-aos=""><a href="index.html">Home</a></li>
+        <li class="link" data-aos=""><a href="about.html">About</a></li>
+        <li class="link dropdown" data-aos="">
+          <a href="#Services" class="dropdown">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="#Destinations">Destination</a></li>
+            <li><a href="#trip">Prices</a></li>
+            <li><a href="#ReviewGallery">Trip Gallery</a></li>
+            <li><a href="#tourist">Tourist Guide</a></li>
+            <li><a href="#hotel">Hotel & Resort</a></li>
+          </ul>
+        </li>
+        <li class="link" data-aos=""><a href="topdeals/topdeals.html">Top Deals</a></li>
+        <li class="link" data-aos=""><a href="packages.html">Packages</a></li>
+        <li class="link" data-aos=""><a href="#testimonial">Testimonial</a></li>
+        <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+        <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
+      </ul>
 
-    <div class="toggle-container" data-aos="fade-down" style="margin-right: 28px;">
-      <input id="themeToggle" class="toggle" type="checkbox">
-    </div>
+      <div class="contact-btns">
+        <a href="newLogin.html" class="contact-btn" id="nav-login-btn">
+          <button class="btn login" data-aos="fade-down">Login/<br>SignUp</button>
+        </a>
+        <a href="mapa.html" class="contact-btn" id="nav-view-btn">
+          <button class="btn" style="margin: 0;" data-aos="fade-down">View <map name=""></map></button>
+        </a>
+        <!-- <a href="loginPage.html" class="contact-btn">
+          <button class="btn" id="logout-btn" style="margin: 0; display: none;" data-aos="fade-down" disabled>Log
+            Out</button>
+        </a> -->
+      </div>
 
-    <div class="hamburger" id="hamburger" data-aos="fade-down">
-      <div class="line" style="margin-bottom: 5px;"></div>
-      <div class="line" style="margin-bottom: 5px;"></div>
-      <div class="line" style="margin-bottom: 5px;"></div>
-      <!-- <div class="line" style="margin-bottom: 5px;"></div> -->
-    </div>
-  </nav>
+      <div class="toggle-container" data-aos="fade-down" style="margin-right: 28px;">
+        <input id="themeToggle" class="toggle" type="checkbox">
+      </div>
 
+      <div class="hamburger" id="hamburger" data-aos="fade-down">
+        <div class="line" style="margin-bottom: 5px;"></div>
+        <div class="line" style="margin-bottom: 5px;"></div>
+        <div class="line" style="margin-bottom: 5px;"></div>
+        <!-- <div class="line" style="margin-bottom: 5px;"></div> -->
+      </div>
+    </nav>
 
   <section class="trip" id="trip">
     <div class="section__container trip__container">

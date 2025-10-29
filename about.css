@@ -8,6 +8,111 @@ html {
     color: #fff;
     overflow-x: hidden;
 }
+/* Improving hover effect on navbar*/
+.nav-container {
+  height: auto;
+  width: 200%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  z-index: 9999;
+  
+}
+
+/* Glow Effect on Hover */
+.nav-container:hover {
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.7), 
+              0px 0px 30px rgba(0, 183, 255, 0.7); /* Brighter blue glow */
+  transition: all 0.4s ease-in-out;
+ 
+}
+
+.nav-container:hover {
+  background-color: rgba(12, 2, 11, 0.1); /* Subtle background change */
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.newNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  height: auto;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.navLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  list-style: none;
+  gap: 1.2rem;
+  position: relative;
+  top: 0.5rem;
+  z-index: 10;
+
+
+}
+
+/* =============================
+   NAVBAR LINK STYLING (RED ACTIVE)
+============================= */
+
+.link a {
+  position: relative;
+  transition: color 0.3s ease-in-out;
+  text-decoration: none;
+  color: white;
+}
+
+/* Hover Effect - Red Glow */
+.link a:hover {
+  color: red;
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
+}
+
+/* Underline Animation on Hover */
+.link a::before,
+.link a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  background-color: red;
+  transition: width 0.2s ease-in-out;
+}
+
+.link a::before {
+  bottom: -5px;
+  left: 0;
+}
+
+.link a::after {
+  top: -5px;
+  right: 0;
+}
+
+.link a:hover::before,
+.link a:hover::after {
+  width: 100%;
+}
+
+/* Active (Current Page) Link */
+.link a.active {
+  color: red;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+.link a.active::before,
+.link a.active::after {
+  width: 100%;
+  background-color: red;
+}
 
 .background {
     position: fixed;
