@@ -1,0 +1,754 @@
+/* ================================
+   GLOBAL RESET & FONT IMPORTS
+================================= */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Oxygen:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: #d1e5ff;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, rgb(63, 120, 244), rgb(245, 89, 239));
+  border-radius: 10px;
+}
+
+/* ================================
+   ROOT COLOR VARIABLES
+================================= */
+:root {
+  --primary-color: #3685fb;
+  --primary-color-dark: #2f73d9;
+  --text-light: #767268;
+  --extra-light: #ffffff;
+  --foot-light: #0d213f;
+  --arr-light: #3685fb;
+  --body-light: #ffffff;
+  --secondary-color: #fafcff;
+  --text-dark: #0d213f;
+  --text-same: #0d213f;
+  --max-width: 1200px;
+  --img-color: white;
+  --head-text: #6a5acd;
+  --bubble-color: #6a5acd;
+  --testimonials-img-border: #6a5acd;
+}
+
+/* ================================
+   BODY & FONT BASE STYLING
+================================= */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0e1525;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.sitelogo {
+  width: 10%;
+  height: 10%;
+}
+
+/* ================================
+   NAVIGATION BAR STYLING
+================================= */
+
+.newNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  height: auto;
+  padding: 1rem 2rem;
+  background: transparent;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Navigation Links */
+.navLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  list-style: none;
+  gap: 1.2rem;
+  position: relative;
+  top: 0.5rem;
+  z-index: 10;
+}
+
+/* Link Styles */
+.link a {
+  position: relative;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.link a:hover {
+  text-shadow: 0 0 8px rgba(106, 96, 115, 0.8),
+               0 0 15px rgba(180, 148, 180, 0.6);
+}
+
+/* Underline Animation */
+.link a::before,
+.link a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  background-color: red;
+  transition: all 0.2s ease-in-out;
+}
+
+.link a::before {
+  bottom: -5px;
+  left: 0;
+}
+
+.link a::after {
+  top: -5px;
+  right: 0;
+}
+
+.link a:hover::before,
+.link a:hover::after {
+  width: 100%;
+}
+
+/* Active Link Highlight */
+.link a.active {
+  color: #00b7ff;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 183, 255, 0.9);
+}
+
+.link a.active::before,
+.link a.active::after {
+  width: 100%;
+  background-color: #00b7ff;
+  transition: none;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  height: 2rem;
+  width: 1.7rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.line {
+  height: 5px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 1220px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navLinks {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: #091020;
+    width: 0%;
+    height: 100vh;
+    padding: 2rem 0;
+    flex-direction: column;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+  }
+
+  .navLinks li {
+    width: 100%;
+    padding: 0.5rem 0;
+    background-color: #1f2532;
+  }
+
+  .navLinks.activeHamburger {
+    width: 100%;
+  }
+}
+
+/* ================================
+   BUTTONS & COMMON ELEMENTS
+================================= */
+
+/* General Button Style */
+.btn {
+  padding: 8px 20px;
+  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 0px 10px rgba(255, 65, 108, 0.6);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px rgba(255, 65, 108, 0.9);
+}
+
+/* Login Button */
+.btn.login {
+  background: linear-gradient(90deg, #3685fb, #2458c5);
+  box-shadow: 0 0 10px rgba(54, 133, 251, 0.7);
+}
+
+.btn.login:hover {
+  background: linear-gradient(90deg, #2f73d9, #1b4ca1);
+}
+
+/* Contact Buttons (Wrapper beside nav) */
+.contact-btns {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.contact-btn a {
+  text-decoration: none;
+}
+
+/* ================================
+   THEME TOGGLE SWITCH
+================================= */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle {
+  appearance: none;
+  width: 50px;
+  height: 25px;
+  background-color: #1e1e2f;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  border: 2px solid #00b7ff;
+}
+
+.toggle::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.toggle:checked {
+  background-color: #00b7ff;
+}
+
+.toggle:checked::before {
+  transform: translateX(23px);
+}
+
+/* ================================
+   HEADINGS & TEXT STYLING
+================================= */
+h1, h2, h3, h4, h5 {
+  color: white;
+  letter-spacing: 1px;
+}
+
+p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* ================================
+   ANIMATION UTILITIES
+================================= */
+[data-aos] {
+  transition: all 0.6s ease-in-out;
+}
+
+.fade-up {
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.fade-up.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ================================
+   PAGE LAYOUTS & SECTION STYLES
+================================= */
+
+/* Header / Hero Section */
+header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("images/banner.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #ddd;
+  width: 60%;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Section Titles */
+.section__title {
+  font-size: 2rem;
+  color: var(--head-text);
+  text-align: center;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Destinations Section */
+.destinations {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+}
+
+.destination-card {
+  background-color: #1f2532;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.destination-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(54, 133, 251, 0.6);
+}
+
+.destination-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.destination-card .content {
+  padding: 1rem;
+}
+
+.destination-card h3 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.destination-card p {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Trip Packages Section */
+.trip-section {
+  max-width: var(--max-width);
+  margin: 3rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.trip-card {
+  background: #182035;
+  border-radius: 20px;
+  overflow: hidden;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.trip-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.trip-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 75, 43, 0.7);
+}
+
+.trip-card .details {
+  padding: 1rem;
+}
+
+.trip-card h4 {
+  color: #00b7ff;
+  margin-bottom: 8px;
+}
+
+.trip-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background: linear-gradient(180deg, #0d213f, #182035);
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.testimonials h2 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-card {
+  background-color: #1f2532;
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  width: 80%;
+  color: white;
+  position: relative;
+  box-shadow: 0 0 20px rgba(106, 90, 205, 0.3);
+}
+
+.testimonial-card img {
+  border-radius: 50%;
+  border: 3px solid var(--testimonials-img-border);
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card p {
+  color: #ccc;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.testimonial-card h4 {
+  color: #00b7ff;
+  margin-top: 0.5rem;
+}
+
+/* Gallery Section */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.gallery img {
+  border-radius: 12px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 183, 255, 0.4);
+}
+
+/* Contact Section */
+.contact-section {
+  background: #0d213f;
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.contact-section h2 {
+  color: var(--head-text);
+  margin-bottom: 1.5rem;
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: 80%;
+  margin: 0.5rem 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.contact-section button {
+  margin-top: 10px;
+  background: var(--primary-color);
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+
+.contact-section button:hover {
+  background: var(--primary-color-dark);
+}
+
+/* ================================
+   FOOTER STYLING
+================================= */
+
+footer {
+  background-color: var(--foot-light);
+  color: #fff;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  margin-top: 2rem;
+  position: relative;
+}
+
+footer h3 {
+  color: var(--head-text);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+footer p {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+footer a {
+  color: var(--arr-light);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+  color: #00b7ff;
+  text-shadow: 0 0 6px rgba(0, 183, 255, 0.8);
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+footer .social-icons i {
+  font-size: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+footer .social-icons i:hover {
+  color: #00b7ff;
+  transform: scale(1.2);
+}
+
+/* ================================
+   DARK THEME SUPPORT
+================================= */
+
+body.dark-mode {
+  background-color: #0d0d0d;
+  color: #f0f0f0;
+}
+
+body.dark-mode .newNav {
+  background-color: #0d0d0d;
+}
+
+body.dark-mode .link a {
+  color: #ddd;
+}
+
+body.dark-mode .link a.active {
+  color: #00b7ff;
+}
+
+body.dark-mode footer {
+  background-color: #111;
+  color: #ccc;
+}
+
+body.dark-mode .btn {
+  background: linear-gradient(90deg, #1e90ff, #00b7ff);
+  box-shadow: 0px 0px 12px rgba(0, 183, 255, 0.5);
+}
+
+/* ================================
+   MODAL / POPUP STYLING
+================================= */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease-in-out;
+  z-index: 2000;
+}
+
+.modal.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-content {
+  background-color: #1f2532;
+  border-radius: 15px;
+  padding: 2rem;
+  width: 400px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 20px rgba(54, 133, 251, 0.4);
+}
+
+.modal-content h3 {
+  color: #00b7ff;
+  margin-bottom: 1rem;
+}
+
+.modal-content button {
+  margin-top: 1rem;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 8px;
+  background: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.modal-content button:hover {
+  background: var(--primary-color-dark);
+}
+
+/* ================================
+   SCROLL-TO-TOP BUTTON
+================================= */
+
+#scrollToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(54, 133, 251, 0.6);
+  transition: all 0.3s ease-in-out;
+  z-index: 1500;
+}
+
+#scrollToTop:hover {
+  background: var(--primary-color-dark);
+  transform: translateY(-5px);
+}
+
+/* ================================
+   RESPONSIVE FOOTER & ADJUSTMENTS
+================================= */
+
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 2rem 1rem;
+  }
+
+  footer .social-icons i {
+    font-size: 1.2rem;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  header p {
+    width: 85%;
+  }
+
+  .destination-card img,
+  .trip-card img,
+  .gallery img {
+    height: 180px;
+  }
+}

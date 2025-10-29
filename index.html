@@ -42,8 +42,6 @@
   <link rel="stylesheet" href="explore.css">
   <link rel="stylesheet" href="./navLinks.css">
 
-  </link>
-
   <link rel="stylesheet" href="counter.css" class="rel href">
   <title>Tourguide</title>
   <!-- adding a fav-icon -->
@@ -500,8 +498,8 @@
       <ul class="navLinks">
         <li class="link" id="View-link" data-aos=""><a href="mapa.html">View</a></li>
         <li class="link" id="LogIn-link" data-aos=""><a href="newLogin.html">Log In</a></li>
-        <li class="link" data-aos=""><a href="#Home">Home</a></li>
-        <li class="link" data-aos=""><a href="./about.html">About</a></li>
+        <li class="link" data-aos=""><a href="index.html">Home</a></li>
+        <li class="link" data-aos=""><a href="about.html">About</a></li>
         <li class="link dropdown" data-aos="">
           <a href="#Services" class="dropdown">Services</a>
           <ul class="dropdown-menu">
@@ -512,8 +510,8 @@
             <li><a href="#hotel">Hotel & Resort</a></li>
           </ul>
         </li>
-        <li class="link" data-aos=""><a href="./topdeals/topdeals.html">Top Deals</a></li>
-        <li class="link" data-aos=""><a href="./packages.html">Packages</a></li>
+        <li class="link" data-aos=""><a href="topdeals/topdeals.html">Top Deals</a></li>
+        <li class="link" data-aos=""><a href="packages.html">Packages</a></li>
         <li class="link" data-aos=""><a href="#testimonial">Testimonial</a></li>
         <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
         <li class="link" data-aos=""><a href="#cnt-form">Contact Us</a></li>
@@ -1827,7 +1825,7 @@
 
   </section> -->
 
-    <section>
+    <!-- <section>
       <div class="container" id="cnt-form">
         <div class="items">
           <div class="contact" data-aos="slide-right">
@@ -1872,8 +1870,48 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
+    <section>
+      <div class="container" id="cnt-form">
+      <div class="items">
+        <!-- Left Section -->
+        <div class="contact" data-aos="slide-right">
+          <div>
+            <h1 class="section__title">Contact Us</h1>
+            <p>
+              Feel free to drop us a message with any inquiries or feedback. We're here to assist you!
+            </p>
+            <div class="contact-img">
+              <img src="./img/flat-design-illustration-customer-support_23-2148887720.avif" alt="Customer Support">
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Section (Form) -->
+        <div class="contact-form" data-aos="fade-in">
+          <form id="contact-form" name="CalcDiverse Contact" autocomplete="off">
+            <div class="form-group">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" id="Name" placeholder="Name" required>
+            </div>
+
+            <div class="form-group">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" id="email" placeholder="Email" required>
+            </div>
+
+            <div class="form-group">
+              <i class="fa-solid fa-message"></i>
+              <textarea id="message" placeholder="Type your message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-style">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
     <section class="subscribe" id="Contact">
@@ -2159,7 +2197,7 @@
         src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
-      <!-- <div class="footer__col">
+      <div class="footer__col">
           <label for="google_translate_element" style="display: block; font-weight: bold; margin-bottom: 5px;">Select Language:</label>
           <div id="google_translate_element" style="display: inline-block; margin-top: 10px;"></div>
         </div>
@@ -2670,8 +2708,29 @@
 
 
 
+<button id="scrollToTopBtn" title="Go to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
 
+<script>
+   const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollToTopBtn.style.display = "block";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+});
+
+scrollToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
+</script>
   </body>
   <script>
     function replaceDivs() {
@@ -2794,6 +2853,63 @@
       });
     }
   </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".navLinks a");
+
+    // Function to update active link
+    function setActiveLink() {
+      const currentPage = window.location.pathname.split("/").pop() || "index.html";
+      const currentHash = window.location.hash;
+
+      // Clear all active links
+      navLinks.forEach(link => link.classList.remove("active"));
+
+      navLinks.forEach(link => {
+        const href = link.getAttribute("href");
+        const hrefPage = href.split("/").pop().split("#")[0];
+        const hrefHash = href.includes("#") ? "#" + href.split("#")[1] : "";
+
+        // 1️⃣ Exact page match (about.html, packages.html, etc.)
+        if (hrefPage === currentPage && !hrefHash && !currentHash) {
+          link.classList.add("active");
+        }
+
+        // 2️⃣ Section anchors on home page (like index.html#testimonial)
+        if (
+          (currentPage === "index.html" || currentPage === "") &&
+          hrefHash &&
+          currentHash === hrefHash
+        ) {
+          link.classList.add("active");
+        }
+
+        // 3️⃣ Fallback for internal sections (direct #hash match)
+        if (
+          (currentPage === "index.html" || currentPage === "") &&
+          hrefHash &&
+          window.location.href.includes(hrefHash)
+        ) {
+          link.classList.add("active");
+        }
+      });
+    }
+
+    // Run once on load
+    setActiveLink();
+
+    // Re-run when hash changes (user clicks on section link)
+    window.addEventListener("hashchange", setActiveLink);
+
+    // Re-run when user clicks any nav link (for instant update)
+    navLinks.forEach(link => {
+      link.addEventListener("click", function () {
+        setTimeout(setActiveLink, 100);
+      });
+    });
+  });
+</script>
 
 
 

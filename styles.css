@@ -16,9 +16,7 @@
   left: 0;
   z-index: 9999;
   
-
 }
-
 
 /* Glow Effect on Hover */
 .nav-container:hover {
@@ -57,35 +55,32 @@
 
 }
 
+/* =============================
+   NAVBAR LINK STYLING (RED ACTIVE)
+============================= */
+
 .link a {
   position: relative;
-  transition: color 0.3s ease-in-out;/*ashi */
+  transition: color 0.3s ease-in-out;
+  text-decoration: none;
+  color: white;
 }
 
+/* Hover Effect - Red Glow */
 .link a:hover {
-  /* Changes text color on hover */
-  text-shadow: 0 0 8px rgba(106, 96, 115, 0.8), 0 0 15px rgba(180, 148, 180, 0.6);
-}
-.link a::before {
-  /* position: absolute; */
-  /* content: ""; */
-  height: 2px;
-  width: 0%;
-  bottom: -5px;
-  left: 0;
-  background-color: red;
- 
+  color: red;
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
 }
 
+/* Underline Animation on Hover */
+.link a::before,
 .link a::after {
-  /* position: absolute;
-  content: ""; */
+  content: "";
+  position: absolute;
   height: 2px;
   width: 0%;
-  top: -5px;
-  right: 0;
   background-color: red;
-  transition: all 0.2s ease-in-out;
+  transition: width 0.2s ease-in-out;
 }
 
 .link a::before {
@@ -98,15 +93,24 @@
   right: 0;
 }
 
-.link a:hover::before {
-  width: 100%;
-  transition: all 0.2s ease-in-out;
-}
-
+.link a:hover::before,
 .link a:hover::after {
   width: 100%;
-  transition: all 0.2s ease-in-out;
 }
+
+/* Active (Current Page) Link */
+.link a.active {
+  color: red;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+.link a.active::before,
+.link a.active::after {
+  width: 100%;
+  background-color: red;
+}
+
 
 .hamburger {
   height: 2rem;
@@ -172,15 +176,15 @@
   display: inline-block;
   border-radius: 50px;
   transition: all .4s ease-in-out;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-top: 12px;
   padding-bottom: 12px;
   width: auto;
   background-color: transparent;
   border: 2px solid rgba(122, 101, 168, 0.3);
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 2px;
   vertical-align: middle;
   text-decoration: none;
@@ -196,6 +200,7 @@
 #btn-style:hover::before {
   opacity: 1;
 }
+
 
 .navLinks.activeHamburger {
   width: 100%;
@@ -1627,9 +1632,20 @@ html {
 /* Enhance the responsiveness of gap between Dark Theme button and Contact Us buttons of navbar.  */
 
 @media (width < 1000px) {
-  .nav__links {
-    display: none;
-  }
+  /* Highlight active nav link */
+.navLinks a.active {
+    color: #ff4b2b; /* Highlight color (change as you like) */
+    font-weight: bold;
+    border-bottom: 2px solid #ff4b2b;
+    transition: all 0.3s ease;
+}
+
+/* Optional hover effect for all links */
+.navLinks a:hover {
+    color: #ff4b2b;
+    transition: all 0.3s ease;
+}
+
 
   .header__container {
     grid-template-columns: repeat(1, 1fr);
@@ -1748,7 +1764,7 @@ html {
 /* }
 } */
 
-/* Updated Contact section */
+/* Updated Contact section
 .container {
   position: relative;
   width: 100%;
@@ -1774,10 +1790,10 @@ body.dark-theme .items {
   background: #0000001a;
   backdrop-filter: blur(10px);
   box-shadow: rgba(255, 255, 255, 0.25) 0px 50px 100px -20px,
-    /* Light shadow */ rgba(255, 255, 255, 0.3) 0px 30px 60px -30px;
+    Light shadow rgba(255, 255, 255, 0.3) 0px 30px 60px -30px;
   /* Light shadow / rgba(255, 255, 255, 0.35) 0px -2px 6px 0px inset; / Light inset shadow */
-}
-
+/* } */
+/* 
 .contact {
   background-color: var(--extra-light);
 }
@@ -1805,7 +1821,7 @@ body.dark-theme .items {
 .contact img {
   height: 400px;
   width: 400px;
-}
+} */
 
 /* .contact-form{
   position: relative;
@@ -1813,7 +1829,7 @@ body.dark-theme .items {
   align-items: center;
 } */
 
-.contact-form form {
+/* .contact-form form {
   padding: auto;
 }
 
@@ -1885,7 +1901,7 @@ body.dark-theme .items {
   top: calc(30%);
   left: 26.4%;
   color: grey;
-}
+}  */
 
 /* textarea::-webkit-scrollbar {
   width: 1em;
@@ -1921,6 +1937,152 @@ body.dark-theme .items {
   background-color: #ab45e7;
   color: var(--extra-light);
 } */
+
+/* Contact Section Layout */
+.container {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  margin: 50px auto;
+  max-width: 1100px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Left Side */
+.contact {
+  text-align: center;
+  padding: 30px;
+}
+
+.contact h1 {
+  font-family: "Noto Serif", serif;
+  font-size: 2.5rem;
+  color: #ab45e7;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  color: #dda0dde8;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.contact-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Right Side (Form) */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+.contact-form form {
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+}
+
+.form-group i {
+  color: grey;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  color: var(--text-dark, #333);
+  font-family: "Oxygen", sans-serif;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #999;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 100px;
+}
+
+.btn-style {
+  background: linear-gradient(90deg, #ab45e7, #ff4f81);
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-style:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(171, 69, 231, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .items {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-img img {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 390px) {
+  .items {
+    margin: 20px;
+  }
+
+  .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-group i {
+    margin-bottom: 5px;
+  }
+
+  .btn-style {
+    width: 100%;
+  }
+}
+
 
 @media (max-width: 920px) {
   .items {
@@ -3171,4 +3333,26 @@ a:hover::after {
   font-weight: 600;
 }
 
+/* #scrollToTopBtn {
+  position: fixed;
+  bottom: 105px; /* 👈 was 20px — move it up */
+  /* right: 42px;
+  z-index: 99; /* slightly lower than chatbot if needed */
+  /* background: linear-gradient(90deg, #ab45e7, #ff4f81);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 12px 18px;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(171, 69, 231, 0.4); */
+/* }
+} */ 
 
