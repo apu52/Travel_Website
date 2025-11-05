@@ -1,9 +1,9 @@
-# <p align="center">✨Travel Website✨</p>
+# <p align="center">✨Travel Website✨</h>
 <p align="center">
    
 <div align="center"> 
     <h1> 
-        <img src="https://readme-typing-svg.herokuapp.com?font=Jetbrains+mono&size=25&duration=3200&color=4FC3F7&center=true&vCenter=true&width=470&lines=Welcome+to+TOURGUIDE!;Explore+Your+Next+Adventure!;Find+The+Best+Travel+Destinations!;Discover+Hidden+Gems!;Plan+Your+Perfect+Getaway!;Travel+Smart+with+TOURGUIDE!;Unforgettable+Journeys+Await!" alt="Typing SVG"/> 
+        <img src="https://readme-typing-svg.herokuapp.com?font=Jetbrains+mono&size=25&duration=3200&color=4FC3F7&center=true&vCenter=true&width=470&lines=Welcome+to+TOURGURL!;Explore+Your+Next+Adventure!;Find+The+Best+Travel+Destinations!;Discover+Hidden+Gems!;Plan+Your+Perfect+Getaway!;Travel+Smart+with+TOURGURL!;Unforgettable+Journeys+Await!" alt="Typing SVG"/> 
     </h1>
 </div>
    
@@ -26,10 +26,10 @@
  </p>
  </div>
 
- <h2>Hi there👋, Enjoy the World of Open source contribution </h2>
+ <h2>Hi there👋, Enjoy the travel to our own </h2>
 
 
-<p>Hello Coders!!👨‍💻<br> I am Arpan Chowdhury, an aspiring Web developer🤖. Here is the project on front-end Web Development.</p>
+<p>Hello Coders!!👨‍💻<br> I am Fiza begum, an aspiring Web developer🤖. Here is the project on front-end Web Development.</h>
 
 
 
@@ -73,9 +73,9 @@ Check out the live project [here](https://apu52.github.io/Travel_Website/).
 
 - **📍 Top Destinations*: Highlights popular travel spots with captivating images and detailed descriptios.
 
-- **✈️ Best Trip Packages*: Offers curated travel packages tailored to various interests and budgets, complete with itineraries and pricig.
+- **✈️ Best Trip Packages*: Offers curated travel packages tailored to various interests and budgets, complete with itineraries and pricing.
 
-- **📸 Trip Gallery*: Showcases memorable moments from past trips in a visually appealing gallry.
+- **📸 Trip Gallery*: Showcases memorable moments from past trips in a visually appealing gallary.
 
 - **📞 Contact Us Pag**: Provides essential contact information and inquiry forms for easy communicaion.
 
@@ -85,7 +85,7 @@ Check out the live project [here](https://apu52.github.io/Travel_Website/).
 
 - **🧭 Adventure & Cultural Experieces**: Offers specialized pages for adventure seekers and cultural enthsiasts.
 
-- **💖 Honeymoon Pacages**: Presents romantic getaway options for nwlyweds.
+- **💖 Honeymoon Pacages**: Presents romantic getaway options for newlyweds.
 
 - **💰 Pricin Page**: Details various pricing options for different travelpackages.
 
