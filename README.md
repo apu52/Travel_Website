@@ -344,6 +344,20 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 <p align="right"><a href="#top"><img src="https://img.shields.io/badge/Move%20to%20top-Blue?style=plastic" alt="Back To Top"></a></p>
 
+### 🧭 How to View the Project Locally  
+To clone this repository: [https://github.com/pbahatipb/Travel_Website.git](https://github.com/pbahatipb/Travel_Website.git)  
+
+Then run:
+```bash
+git clone https://github.com/pbahatipb/Travel_Website.git
+
+That way:
+- The link is **clickable** above.
+- The command still looks like real code.
+
+Would you like me to rewrite your full README section with this fixed format and some natural polish (so it looks developer-level but still student-authentic)?
+
+
 
 
 
