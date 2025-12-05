@@ -71,11 +71,11 @@ Check out the live project [here](https://apu52.github.io/Travel_Website/).
 
 - **🌐 Introductory Page** Welcomes visitors with an engaging overview, setting the tone for exploratio.
 
-- **📍 Top Destinations*: Highlights popular travel spots with captivating images and detailed descriptios.
+- **📍 Top Destinations**: Highlights popular travel spots with captivating images and detailed descriptios.
 
-- **✈️ Best Trip Packages*: Offers curated travel packages tailored to various interests and budgets, complete with itineraries and pricig.
+- **✈️ Best Trip Packages**: Offers curated travel packages tailored to various interests and budgets, complete with itineraries and pricig.
 
-- **📸 Trip Gallery*: Showcases memorable moments from past trips in a visually appealing gallry.
+- **📸 Trip Gallery**: Showcases memorable moments from past trips in a visually appealing gallry.
 
 - **📞 Contact Us Pag**: Provides essential contact information and inquiry forms for easy communicaion.
 
