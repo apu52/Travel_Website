@@ -1,0 +1,240 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container styles */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+}
+
+/* Profile Card */
+.profile-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px;
+    padding: 20px;
+}
+
+/* Profile Header */
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-header .main-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-header .profile-image img {
+    width: 100px;
+    height: 100px;
+  
+    
+}
+
+.profile-header .profile-names {
+    margin-left: 15px;
+}
+
+.profile-header .profile-names .username {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.profile-header .profile-names .page-title {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Buttons */
+button {
+    border: none;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Bio Section */
+.bio {
+    margin-top: 20px;
+}
+
+.bio-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.bio-header i {
+    margin-right: 10px;
+}
+
+/* Account Info Section */
+.account-info {
+    margin-top: 30px;
+}
+
+.data {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.data-item {
+    text-align: center;
+}
+
+.data-item .value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.data-item .title {
+    font-size: 1rem;
+    color: #777;
+}
+
+.travel-history,
+.upcoming-trips,
+.rewards {
+    margin-bottom: 30px;
+}
+
+.travel-history ul,
+.upcoming-trips ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.travel-history li,
+.upcoming-trips li {
+    padding: 5px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.rewards {
+    text-align: center;
+}
+
+.rewards button {
+    background-color: #27ae60;
+    margin-top: 10px;
+}
+
+.rewards button:hover {
+    background-color: #2ecc71;
+}
+
+/* Social Media Section */
+.social-media {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-media .media-link {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.social-media .media-link:hover {
+    color: #3498db;
+}
+
+/* Last Post Section */
+.last-post {
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.last-post .post-cover {
+    background-color: #3498db;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.last-post .post-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.last-post .post-CTA {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.last-post .post-CTA:hover {
+    background-color: #2980b9;
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+    .profile-header .main-profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-header .profile-image img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-header .profile-names .username {
+        font-size: 1.5rem;
+    }
+
+    .profile-header .profile-names .page-title {
+        font-size: 0.9rem;
+    }
+
+    .data {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .data-item {
+        margin-bottom: 20px;
+    }
+
+    .social-media {
+        margin-top: 20px;
+    }
+}
