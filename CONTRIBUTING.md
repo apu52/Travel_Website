@@ -16,6 +16,7 @@ Contributors can enhance the project by implementing new features or improvement
  ## How to Contribute?
 - Drop a Star ⭐ in this repo
 - Take a look at the existing [Issues](https://github.com/apu52/Travel_Website/issues). 
+-  If u find a new ISSUE in the website & want to solve it then GO AHEAD & make your own NEW GOOD issue (**NEW ISSUES ARE ALWAYS WELCOME**)
 - Fork the Repo & create a branch for any issue that you are working on and commit your work.
 - At first raise an issue in which you want to work
 - Then after assigning only then work on that issue & make a PR 
