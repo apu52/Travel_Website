@@ -44,8 +44,8 @@ Close #<issue_no>
 ##Are you contributing under any Open-source programme?
 <!--Mention it here-->
 
-- [ ] I am contributing under ` APERTRE 2025`
-- [ ] I am contributing under ` CODEPEAK 2025`
+
+- [ ] I am contributing under ` KWOC 2025`
 
 
 <!-- [X] - put a cross/X inside [] to check the box -->
