@@ -173,6 +173,14 @@ main {
     padding: 1rem;
 }
 
+.blog-content p {
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.6;
+    max-width: 100%;
+}
+
 .blog-content h2 {
     margin-top: 0;
     font-size: 1.8rem;
