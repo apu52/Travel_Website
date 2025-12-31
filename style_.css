@@ -66,6 +66,61 @@ body {
   text-align: center;
   max-width: 600px;
   width: 100%;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
+  animation: borderGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes borderGlow {
+  0% {
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 
+      0 8px 32px 0 rgba(31, 38, 135, 0.37),
+      inset 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    border-color: rgba(84, 104, 255, 0.5);
+    box-shadow: 
+      0 8px 32px 0 rgba(31, 38, 135, 0.37),
+      0 0 20px rgba(84, 104, 255, 0.3),
+      inset 0 0 20px rgba(84, 104, 255, 0.1);
+  }
+  100% {
+    border-color: rgba(106, 90, 205, 0.5);
+    box-shadow: 
+      0 8px 32px 0 rgba(31, 38, 135, 0.37),
+      0 0 25px rgba(106, 90, 205, 0.3),
+      inset 0 0 25px rgba(106, 90, 205, 0.1);
+  }
+}
+
+.glassmorphism-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
 }
 
 p {
@@ -85,7 +140,17 @@ p {
   justify-content: space-between;
   align-items: baseline;
   padding-right: 20px;
+  transition: all 0.3s ease;
 }
+
+.rate:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 5px 0;
+}
+
 .rate p{
   text-align: center;
   color:#231557;
@@ -101,11 +166,29 @@ p {
   color: #f4df78;
   font-size: 2rem;
   cursor: pointer;
-  transition: color 0.2s ease-in-out;
+  transition: all 0.3s ease;
+  transform: scale(1);
+  text-shadow: 0 0 5px rgba(244, 223, 120, 0.3);
 }
 
 .star:hover {
   color: #ffa500;
+  transform: scale(1.2) rotate(10deg);
+  text-shadow: 0 0 15px rgba(255, 165, 0, 0.6);
+  filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.4));
+}
+
+.stars:hover .star {
+  animation: starPulse 1s ease-in-out infinite;
+}
+
+@keyframes starPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
 }
 
 #rating-text {
@@ -149,15 +232,45 @@ p {
   margin-bottom: 20px;
   padding: 8px;
   border: 1.5px solid #5468ff;
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: rgba(219, 230, 240, 0.402);
   box-sizing: border-box;
   font-size: 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+  animation: inputGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes inputGlow {
+  0% {
+    border-color: #5468ff;
+    box-shadow: 0 0 5px rgba(84, 104, 255, 0.2);
+  }
+  100% {
+    border-color: #6a5acd;
+    box-shadow: 0 0 10px rgba(106, 90, 205, 0.3);
+  }
+}
+
+#feedback-input:focus {
+  outline: none;
+  border-color: #6a5acd;
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 5px 15px rgba(106, 90, 205, 0.3),
+    0 0 20px rgba(106, 90, 205, 0.2);
 }
 
 #feedback-input:focus-visible{
   outline:2px solid #6a5acd ;
-  border-radius: 5px;
+  border-radius: 8px;
+}
+
+#feedback-input:hover {
+  border-color: #6a5acd;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
 }
 
 /*.submit-button {
