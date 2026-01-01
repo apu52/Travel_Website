@@ -409,3 +409,40 @@ body.dark-mode .price-section{
 body.dark-mode .list-name{
   color:#ccc;
 }
+
+
+.toggle {
+  display: none;
+}
+
+.theme-toggle {
+  width: 60px;     
+  height: 60px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;        
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+
+.theme-toggle .icon::before {
+  display: inline-block;
+  transition: transform 0.5s ease, rotate 0.5s ease; 
+}
+
+
+body:not(.dark-mode) .theme-toggle .icon::before {
+  content: "☀️";
+  transform: rotate(0deg) translateX(0);
+}
+
+
+body.dark-mode .theme-toggle .icon::before {
+  content: "🌙";
+  transform: rotate(360deg) translateX(2px);
+}
