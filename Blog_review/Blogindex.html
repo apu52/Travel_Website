@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Attractive Blog — Full Featured</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero" id="hero" role="banner">
+    <div class="hero-overlay">
+      <div class="hero-inner">
+        <h1 class="hero-title">My Traveling Journey Blog</h1>
+        <p class="lead">Create posts with images or videos — preview, edit, tag, categorize, export and import.</p>
+        <div class="hero-actions">
+          <button id="newPostBtn" class="btn primary">+ New Post</button>
+          <button id="exportBtn" class="btn">Export JSON</button>
+          <button id="importBtn" class="btn">Import JSON</button>
+          <input id="importFile" type="file" accept=".json" hidden>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+    <!-- Editor -->
+    <section id="editor" class="card hidden" aria-hidden="true">
+      <h2 id="editorTitle">Create New Post</h2>
+
+      <div class="editor-row">
+        <div class="uploader" id="dropArea" tabindex="0" aria-label="Upload area">
+          <input id="fileInput" type="file" accept="image/*,video/*" hidden>
+          <div class="upload-inner">
+            <div class="upload-icon">📤</div>
+            <div class="upload-text">Drag & drop image or video here<br>or click to choose</div>
+            <small class="muted">Supported: JPG/PNG/GIF/MP4/WebM — stored locally as data URLs</small>
+          </div>
+        </div>
+
+        <div class="editor-fields">
+          <input id="title" placeholder="Post title" maxlength="120" />
+          <div class="formatters">
+            <button class="fmt" data-ins="**" title="Bold"><strong>B</strong></button>
+            <button class="fmt" data-ins="_" title="Italic"><em>I</em></button>
+            <button class="fmt" data-ins="# " title="Heading">H</button>
+            <button id="addTagBtn" class="fmt tag-btn" title="Add tag">🏷</button>
+          </div>
+
+          <textarea id="content" rows="8" placeholder="Write your content..."></textarea>
+
+          <div class="meta-row">
+            <input id="tagInput" placeholder="Add tags (press Enter)" />
+            <select id="categorySelect" aria-label="Category">
+              <option value="">Category (optional)</option>
+              <option>Personal</option>
+              <option>Tech</option>
+              <option>Tutorial</option>
+              <option>News</option>
+            </select>
+          </div>
+
+          <div class="editor-controls">
+            <button id="publishBtn" class="btn primary">Publish</button>
+            <button id="cancelBtn" class="btn">Cancel</button>
+            <label class="btn file-btn">Attach (optional)
+              <input id="attachFile" type="file" accept="image/*,video/*" hidden>
+            </label>
+            <div id="previewThumb" class="preview-thumb hidden" title="Preview"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search & Filters -->
+    <section class="filters card">
+      <div class="filters-row">
+        <input id="search" placeholder="Search posts by title or content..." />
+        <select id="filterCategory">
+          <option value="">All Categories</option>
+          <option>Personal</option>
+          <option>Tech</option>
+          <option>Tutorial</option>
+          <option>News</option>
+        </select>
+        <input id="filterTag" placeholder="Filter by tag" />
+        <button id="clearFilters" class="btn">Clear</button>
+      </div>
+    </section>
+
+    <!-- Feed -->
+    <section id="feed" class="feed" aria-live="polite"></section>
+  </main>
+
+  <!-- post template -->
+  <template id="cardTemplate">
+    <article class="post-card" tabindex="0">
+      <div class="media-wrap"></div>
+      <div class="card-body">
+        <h3 class="post-title"></h3>
+        <div class="meta-row small post-meta"></div>
+        <p class="post-excerpt"></p>
+        <div class="full-content hidden"></div>
+        <div class="tag-row small"></div>
+        <div class="card-actions">
+          <button class="btn read-btn">Read</button>
+          <button class="btn edit-btn">Edit</button>
+          <button class="btn danger del-btn">Delete</button>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
