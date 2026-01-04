@@ -114,6 +114,8 @@ Check out the live project [here](https://apu52.github.io/Travel_Website/).
 
 <img width="686" height="386" alt="image" src="https://github.com/user-attachments/assets/86fdb212-c76f-41d0-baaf-a74b3e593b29" />
 
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/c98e2f25-f20e-469c-be0b-d6704edd017f" />
+
 
 ### This project was part of following Open Source Programs
 
