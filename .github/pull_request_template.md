@@ -41,11 +41,12 @@ Close #<issue_no>
 # Additional context:
 <!--Include any additional information or context that might be helpful for reviewers.-->
 
-##Are you contributing under any Open-source programme?
+##Are you contributing under any Open-source programme?(Mandatory)
 <!--Mention it here-->
 
 
-- [ ] I am contributing under ` KWOC 2025`
+- [ ] I am contributing under ` KWOC 2025-26`
+- [ ] I am contributing under ` SWOC 2026`
 
 
 <!-- [X] - put a cross/X inside [] to check the box -->
