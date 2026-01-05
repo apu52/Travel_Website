@@ -168,7 +168,7 @@
             margin-left: 15px;
         }
 
-       
+
 
         .main-content {
             position: relative;
@@ -225,7 +225,7 @@
                 display: none;
             }
 
-            body{
+            body {
                 padding-top: 10rem;
             }
 
@@ -249,8 +249,8 @@
             font-style: italic;
             font-family: 'Poppins', sans-serif;
             text-align: center;
-            font-weight: 800;
-            font-size: 1.2em;
+            font-weight: 1900;
+            font-size: 1.5em;
             margin-bottom: 30px;
             animation: fadeInUp 0.5s ease-out 0.2s both;
         }
@@ -384,6 +384,120 @@
             animation: fadeInUp 0.5s ease-out;
             margin-top: 20px;
         }
+
+        .card1 {
+            width: 300px;
+            height: 420px;
+            perspective: 1000px;
+            margin: 30px;
+            cursor: pointer;
+        }
+
+        .card1-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .card1:hover .card1-inner {
+            transform: rotateY(180deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+
+        .card1-front,
+        .card1-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+
+        .card1-front {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card1-img {
+            width: 100%;
+            height: 55%;
+            object-fit: cover;
+            border-bottom: 4px solid #006d9c;
+            transition: transform 0.8s ease;
+        }
+
+        .card1:hover .card1-img {
+            transform: scale(1.1);
+        }
+
+        .card1-title {
+            font-size: 1.5em;
+            margin: 20px 0 10px;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .card1-description {
+            padding: 0 20px;
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+
+        .card1-back {
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            border: 2px solid #03516e;
+            /* Pink Border for style */
+            background-color: #fff;
+            color: #333;
+        }
+
+        .card1-back h3 {
+            color: #00fbff;
+            /* Pink text */
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .card1-back p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .card1-link {
+            background-color: #00f7ff;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(4, 255, 247, 0.3);
+            margin-top: 15px;
+            border: none;
+        }
+
+        .card1-link:hover {
+            background-color: #000000;
+            transform: translateY(-2px);
+        }
     </style>
     <script src="navbarToggle.js" defer></script>
 </head>
@@ -454,7 +568,7 @@
         <section class="hotel-packages">
             <h2 class="section-title">Our Packages</h2>
             <div class="line"></div>
-            <p class="subtitle" style="color: #0697f1;">Find the best deals and offers for your next adventure!</p>
+            <p class="subtitle" style="color: #00e1ff;">Find the best deals and offers for your next adventure!</p>
             <div class="package-grid">
                 <div class="card1">
                     <div class="card1-inner">
@@ -760,6 +874,7 @@
                 padding-top: 20rem;
             }
         }
+
         .package-card {
             width: 300px;
             border-radius: 8px;
@@ -856,7 +971,7 @@
 
 
 
-/* 
+        /* 
         body {
             display: flex;
             justify-content: center;
