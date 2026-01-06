@@ -7,7 +7,6 @@
   /* body.dark-theme .container{
     background: #333;
   } */
-
   body.dark-theme .image{
     background-color: #555;
   }
@@ -67,4 +66,11 @@
   /* Return to Home Page link */
   body.dark-theme div:last-child {
     color: #4a90e2;
+  }
+
+
+  .sidebyside{
+     top: 300px;
+     position: relative;
+    
   }
