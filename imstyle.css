@@ -3,11 +3,15 @@
     height:90vh;
     background: white;
     overflow: hidden;
+    /* Allow vertical scrolling to pass through */
+    pointer-events: none;
 }
 .hero .carousel{
     width:300px;
     margin:100px auto 0;
     overflow:visible;
+    /* Re-enable pointer events for carousel interaction */
+    pointer-events: auto;
 }
 .carousel img{
     -webkit-box-reflect: below 20px linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.3));

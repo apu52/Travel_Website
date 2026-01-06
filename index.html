@@ -1158,6 +1158,33 @@
           style: 'carousel',
           spacing: -0.3,
         });
+        
+        // Fix scroll hijacking: Only allow horizontal scroll when user hovers over carousel
+        (function() {
+          const heroSection = document.querySelector('.hero');
+          const carouselElement = document.querySelector('.carousel');
+          
+          if (heroSection && carouselElement) {
+            let isHoveringCarousel = false;
+            
+            // Track when mouse is over carousel
+            carouselElement.addEventListener('mouseenter', function() {
+              isHoveringCarousel = true;
+            });
+            
+            carouselElement.addEventListener('mouseleave', function() {
+              isHoveringCarousel = false;
+            });
+            
+            // Prevent wheel event from being captured unless hovering over carousel
+            heroSection.addEventListener('wheel', function(e) {
+              if (!isHoveringCarousel) {
+                // Allow normal vertical scroll
+                e.stopPropagation();
+              }
+            }, { passive: false, capture: true });
+          }
+        })();
       </script>
       <section class="gallary" id="ReviewGallery">
         <div class="section__container gallary__container">
